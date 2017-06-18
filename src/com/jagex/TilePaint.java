@@ -63,7 +63,7 @@ public final class TilePaint {
         if (Class168.anInt2083 == 0 && Class168.anInt2077 == 0 && Class168.anInt2070 == 0 && Class168.anInt2087 == 0) {
             return true;
         }
-        if (Class168.aSocket2082 == null) {
+        if (Class168.aGameSocket2082 == null) {
             return false;
         }
         try {
@@ -77,7 +77,7 @@ public final class TilePaint {
                 var4 = new Buffer(4);
                 var4.method451(1);
                 var4.method867((int) var3.key);
-                Class168.aSocket2082.method885(var4.payload, 0, 4);
+                Class168.aGameSocket2082.method885(var4.payload, 0, 4);
                 Class168.aNodeTable2089.put(var3, var3.key);
                 --Class168.anInt2087;
                 ++Class168.anInt2077;
@@ -88,7 +88,7 @@ public final class TilePaint {
                 var4 = new Buffer(4);
                 var4.method451(0);
                 var4.method867((int) var3.key);
-                Class168.aSocket2082.method885(var4.payload, 0, 4);
+                Class168.aGameSocket2082.method885(var4.payload, 0, 4);
                 var3.method977();
                 Class168.aNodeTable2080.put(var3, var3.key);
                 --Class168.anInt2070;
@@ -96,7 +96,7 @@ public final class TilePaint {
             }
 
             for (int var5 = 0; var5 < 100; ++var5) {
-                int var6 = Class168.aSocket2082.method884();
+                int var6 = Class168.aGameSocket2082.method884();
                 if (var6 < 0) {
                     throw new IOException();
                 }
@@ -123,7 +123,7 @@ public final class TilePaint {
                         var8 = var6;
                     }
 
-                    Class168.aSocket2082.method883(Class168.aBuffer2074.payload, Class168.aBuffer2074.caret, var8);
+                    Class168.aGameSocket2082.method883(Class168.aBuffer2074.payload, Class168.aBuffer2074.caret, var8);
                     if (Class168.aByte2071 != 0) {
                         for (var9 = 0; var9 < var8; ++var9) {
                             Class168.aBuffer2074.payload[var9 + Class168.aBuffer2074.caret] ^= Class168.aByte2071;
@@ -179,7 +179,7 @@ public final class TilePaint {
                         var9 = var6;
                     }
 
-                    Class168.aSocket2082.method883(Class25.aBuffer177.payload, Class25.aBuffer177.caret, var9);
+                    Class168.aGameSocket2082.method883(Class25.aBuffer177.payload, Class25.aBuffer177.caret, var9);
                     if (Class168.aByte2071 != 0) {
                         for (var10 = 0; var10 < var9; ++var10) {
                             Class25.aBuffer177.payload[var10 + Class25.aBuffer177.caret] ^= Class168.aByte2071;
@@ -207,12 +207,12 @@ public final class TilePaint {
                             var10 = (int) Class168.aCRC32_2084.getValue();
                             if (Class19.aNode_Sub21_Sub6_137.anInt209 != var10) {
                                 try {
-                                    Class168.aSocket2082.method882();
+                                    Class168.aGameSocket2082.method882();
                                 } catch (Exception var20) {
                                 }
 
                                 ++Class168.anInt2088;
-                                Class168.aSocket2082 = null;
+                                Class168.aGameSocket2082 = null;
                                 Class168.aByte2071 = (byte) ((int) (Math.random() * 255.0D + 1.0D));
                                 return false;
                             }
@@ -245,12 +245,12 @@ public final class TilePaint {
             return true;
         } catch (IOException var21) {
             try {
-                Class168.aSocket2082.method882();
+                Class168.aGameSocket2082.method882();
             } catch (Exception var19) {
             }
 
             ++Class168.anInt2069;
-            Class168.aSocket2082 = null;
+            Class168.aGameSocket2082 = null;
             return false;
         }
     }

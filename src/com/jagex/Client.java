@@ -1002,23 +1002,23 @@ public final class Client extends Applet_Sub1 {
                     }
 
                     if (anInt1487 == 2) {
-                        Class51.aSocket380 = new Socket((java.net.Socket) Class33.aClass103_262.anObject1161, aClass108_301);
+                        Class51.aGameSocket380 = new GameSocket((java.net.Socket) Class33.aClass103_262.anObject1161, aClass108_301);
                         Buffer var1 = new Buffer(5);
                         var1.method451(15);
                         var1.method869(145);
-                        Class51.aSocket380.method885(var1.payload, 0, 5);
+                        Class51.aGameSocket380.method885(var1.payload, 0, 5);
                         ++anInt1487;
                         aLong1489 = Class124.currentTime();
                     }
 
                     if (anInt1487 == 3) {
-                        if (connectionState > 5 && Class51.aSocket380.method884() <= 0) {
+                        if (connectionState > 5 && Class51.aGameSocket380.method884() <= 0) {
                             if (Class124.currentTime() - aLong1489 > 30000L) {
                                 this.method901(-2);
                                 return;
                             }
                         } else {
-                            int var2 = Class51.aSocket380.method886();
+                            int var2 = Class51.aGameSocket380.method886();
                             if (var2 != 0) {
                                 this.method901(var2);
                                 return;
@@ -1029,9 +1029,9 @@ public final class Client extends Applet_Sub1 {
                     }
 
                     if (anInt1487 == 4) {
-                        Class105.method721(Class51.aSocket380, connectionState > 20);
+                        Class105.method721(Class51.aGameSocket380, connectionState > 20);
                         Class33.aClass103_262 = null;
-                        Class51.aSocket380 = null;
+                        Class51.aGameSocket380 = null;
                         anInt1487 = 0;
                         anInt1502 = 0;
                     }
@@ -1046,9 +1046,9 @@ public final class Client extends Applet_Sub1 {
     final void method889() {
         try {
             if (anInt1505 == 0) {
-                if (InterfaceNode.aSocket317 != null) {
-                    InterfaceNode.aSocket317.method882();
-                    InterfaceNode.aSocket317 = null;
+                if (InterfaceNode.aGameSocket317 != null) {
+                    InterfaceNode.aGameSocket317.method882();
+                    InterfaceNode.aGameSocket317 = null;
                 }
 
                 Class78.aClass103_839 = null;
@@ -1067,7 +1067,7 @@ public final class Client extends Applet_Sub1 {
                 }
 
                 if (Class78.aClass103_839.anInt1162 == 1) {
-                    InterfaceNode.aSocket317 = new Socket((java.net.Socket) Class78.aClass103_839.anObject1161, aClass108_301);
+                    InterfaceNode.aGameSocket317 = new GameSocket((java.net.Socket) Class78.aClass103_839.anObject1161, aClass108_301);
                     Class78.aClass103_839 = null;
                     anInt1505 = 2;
                 }
@@ -1076,7 +1076,7 @@ public final class Client extends Applet_Sub1 {
             if (anInt1505 == 2) {
                 packet.caret = 0;
                 packet.method451(14);
-                InterfaceNode.aSocket317.method885(packet.payload, 0, 1);
+                InterfaceNode.aGameSocket317.method885(packet.payload, 0, 1);
                 aPacket1521.caret = 0;
                 anInt1505 = 3;
             }
@@ -1091,7 +1091,7 @@ public final class Client extends Applet_Sub1 {
                     Player.aClass84_231.method488();
                 }
 
-                var1 = InterfaceNode.aSocket317.method886();
+                var1 = InterfaceNode.aGameSocket317.method886();
                 if (Class105.aClass84_1244 != null) {
                     Class105.aClass84_1244.method488();
                 }
@@ -1111,13 +1111,13 @@ public final class Client extends Applet_Sub1 {
 
             if (anInt1505 == 4) {
                 if (aPacket1521.caret < 8) {
-                    var1 = InterfaceNode.aSocket317.method884();
+                    var1 = InterfaceNode.aGameSocket317.method884();
                     if (var1 > 8 - aPacket1521.caret) {
                         var1 = 8 - aPacket1521.caret;
                     }
 
                     if (var1 > 0) {
-                        InterfaceNode.aSocket317.method883(aPacket1521.payload, aPacket1521.caret, var1);
+                        InterfaceNode.aGameSocket317.method883(aPacket1521.payload, aPacket1521.caret, var1);
                         aPacket1521.caret += var1;
                     }
                 }
@@ -1199,7 +1199,7 @@ public final class Client extends Applet_Sub1 {
                 aPacket1522.method869(Class73.aCacheReferenceTable740.anInt2048);
                 aPacket1522.method824(var2, var4, aPacket1522.caret);
                 aPacket1522.method866(aPacket1522.caret - var3);
-                InterfaceNode.aSocket317.method885(aPacket1522.payload, 0, aPacket1522.caret);
+                InterfaceNode.aGameSocket317.method885(aPacket1522.payload, 0, aPacket1522.caret);
                 packet.method787(var2);
 
                 for (int var6 = 0; var6 < 4; ++var6) {
@@ -1210,8 +1210,8 @@ public final class Client extends Applet_Sub1 {
                 anInt1505 = 6;
             }
 
-            if (anInt1505 == 6 && InterfaceNode.aSocket317.method884() > 0) {
-                var1 = InterfaceNode.aSocket317.method886();
+            if (anInt1505 == 6 && InterfaceNode.aGameSocket317.method884() > 0) {
+                var1 = InterfaceNode.aGameSocket317.method886();
                 if (var1 == 21 && connectionState == 20) {
                     anInt1505 = 7;
                 } else if (var1 == 2) {
@@ -1232,8 +1232,8 @@ public final class Client extends Applet_Sub1 {
                 }
             }
 
-            if (anInt1505 == 7 && InterfaceNode.aSocket317.method884() > 0) {
-                anInt1506 = (InterfaceNode.aSocket317.method886() + 3) * 60;
+            if (anInt1505 == 7 && InterfaceNode.aGameSocket317.method884() > 0) {
+                anInt1506 = (InterfaceNode.aGameSocket317.method886() + 3) * 60;
                 anInt1505 = 8;
             }
 
@@ -1246,9 +1246,9 @@ public final class Client extends Applet_Sub1 {
 
             } else {
                 boolean var14;
-                if (anInt1505 == 9 && InterfaceNode.aSocket317.method884() >= 13) {
-                    boolean var12 = InterfaceNode.aSocket317.method886() == 1;
-                    InterfaceNode.aSocket317.method883(aPacket1521.payload, 0, 4);
+                if (anInt1505 == 9 && InterfaceNode.aGameSocket317.method884() >= 13) {
+                    boolean var12 = InterfaceNode.aGameSocket317.method886() == 1;
+                    InterfaceNode.aGameSocket317.method883(aPacket1521.payload, 0, 4);
                     aPacket1521.caret = 0;
                     var14 = false;
                     if (var12) {
@@ -1267,16 +1267,16 @@ public final class Client extends Applet_Sub1 {
                         Class78.method467();
                     }
 
-                    rights = InterfaceNode.aSocket317.method886();
-                    aBoolean1636 = InterfaceNode.aSocket317.method886() == 1;
-                    playerIndex = InterfaceNode.aSocket317.method886();
+                    rights = InterfaceNode.aGameSocket317.method886();
+                    aBoolean1636 = InterfaceNode.aGameSocket317.method886() == 1;
+                    playerIndex = InterfaceNode.aGameSocket317.method886();
                     playerIndex <<= 8;
-                    playerIndex += InterfaceNode.aSocket317.method886();
-                    anInt1593 = InterfaceNode.aSocket317.method886();
-                    InterfaceNode.aSocket317.method883(aPacket1521.payload, 0, 1);
+                    playerIndex += InterfaceNode.aGameSocket317.method886();
+                    anInt1593 = InterfaceNode.aGameSocket317.method886();
+                    InterfaceNode.aGameSocket317.method883(aPacket1521.payload, 0, 1);
                     aPacket1521.caret = 0;
                     anInt1511 = aPacket1521.method784();
-                    InterfaceNode.aSocket317.method883(aPacket1521.payload, 0, 2);
+                    InterfaceNode.aGameSocket317.method883(aPacket1521.payload, 0, 2);
                     aPacket1521.caret = 0;
                     anInt1514 = aPacket1521.readUnsignedShort();
 
@@ -1290,17 +1290,17 @@ public final class Client extends Applet_Sub1 {
                 }
 
                 if (anInt1505 != 10) {
-                    if (anInt1505 == 11 && InterfaceNode.aSocket317.method884() >= 2) {
+                    if (anInt1505 == 11 && InterfaceNode.aGameSocket317.method884() >= 2) {
                         aPacket1521.caret = 0;
-                        InterfaceNode.aSocket317.method883(aPacket1521.payload, 0, 2);
+                        InterfaceNode.aGameSocket317.method883(aPacket1521.payload, 0, 2);
                         aPacket1521.caret = 0;
                         Class22.anInt148 = aPacket1521.readUnsignedShort();
                         anInt1505 = 12;
                     }
 
-                    if (anInt1505 == 12 && InterfaceNode.aSocket317.method884() >= Class22.anInt148) {
+                    if (anInt1505 == 12 && InterfaceNode.aGameSocket317.method884() >= Class22.anInt148) {
                         aPacket1521.caret = 0;
-                        InterfaceNode.aSocket317.method883(aPacket1521.payload, 0, Class22.anInt148);
+                        InterfaceNode.aGameSocket317.method883(aPacket1521.payload, 0, Class22.anInt148);
                         aPacket1521.caret = 0;
                         String var13 = aPacket1521.method819();
                         String var17 = aPacket1521.method819();
@@ -1311,17 +1311,17 @@ public final class Client extends Applet_Sub1 {
 
                     if (anInt1505 == 13) {
                         if (anInt1514 == -1) {
-                            if (InterfaceNode.aSocket317.method884() < 2) {
+                            if (InterfaceNode.aGameSocket317.method884() < 2) {
                                 return;
                             }
 
-                            InterfaceNode.aSocket317.method883(aPacket1521.payload, 0, 2);
+                            InterfaceNode.aGameSocket317.method883(aPacket1521.payload, 0, 2);
                             aPacket1521.caret = 0;
                             anInt1514 = aPacket1521.readUnsignedShort();
                         }
 
-                        if (InterfaceNode.aSocket317.method884() >= anInt1514) {
-                            InterfaceNode.aSocket317.method883(aPacket1521.payload, 0, anInt1514);
+                        if (InterfaceNode.aGameSocket317.method884() >= anInt1514) {
+                            InterfaceNode.aGameSocket317.method883(aPacket1521.payload, 0, anInt1514);
                             aPacket1521.caret = 0;
                             var1 = anInt1514;
                             Tile.method664();
@@ -1348,9 +1348,9 @@ public final class Client extends Applet_Sub1 {
                         }
                     }
                 } else {
-                    if (InterfaceNode.aSocket317.method884() >= anInt1514) {
+                    if (InterfaceNode.aGameSocket317.method884() >= anInt1514) {
                         aPacket1521.caret = 0;
-                        InterfaceNode.aSocket317.method883(aPacket1521.payload, 0, anInt1514);
+                        InterfaceNode.aGameSocket317.method883(aPacket1521.payload, 0, anInt1514);
                         aLong1465 = -1L;
                         anInt1480 = -1;
                         mouseRecorder.index = 0;
@@ -1913,7 +1913,7 @@ public final class Client extends Applet_Sub1 {
 
     void method901(int var1) {
         Class33.aClass103_262 = null;
-        Class51.aSocket380 = null;
+        Class51.aGameSocket380 = null;
         anInt1487 = 0;
         if (Class22.anInt151 == Buffer.anInt1363) {
             Buffer.anInt1363 = Class61.anInt632;
@@ -1953,9 +1953,9 @@ public final class Client extends Applet_Sub1 {
         }
 
         mouseRecorder = null;
-        if (InterfaceNode.aSocket317 != null) {
-            InterfaceNode.aSocket317.method882();
-            InterfaceNode.aSocket317 = null;
+        if (InterfaceNode.aGameSocket317 != null) {
+            InterfaceNode.aGameSocket317.method882();
+            InterfaceNode.aGameSocket317 = null;
         }
 
         Class94.method619();
@@ -1975,8 +1975,8 @@ public final class Client extends Applet_Sub1 {
             Player.aClass84_231.method490();
         }
 
-        if (Class168.aSocket2082 != null) {
-            Class168.aSocket2082.method882();
+        if (Class168.aGameSocket2082 != null) {
+            Class168.aGameSocket2082.method882();
         }
 
         NpcDefinition.method335();
@@ -1998,8 +1998,8 @@ public final class Client extends Applet_Sub1 {
                 TextureProviderImpl.method499();
             } else {
                 Class45.method304(40);
-                Class154.aSocket1833 = InterfaceNode.aSocket317;
-                InterfaceNode.aSocket317 = null;
+                Class154.aGameSocket1833 = InterfaceNode.aGameSocket317;
+                InterfaceNode.aGameSocket317 = null;
             }
 
         } else {
@@ -2277,8 +2277,8 @@ public final class Client extends Applet_Sub1 {
                             TextureProviderImpl.method499();
                         } else {
                             Class45.method304(40);
-                            Class154.aSocket1833 = InterfaceNode.aSocket317;
-                            InterfaceNode.aSocket317 = null;
+                            Class154.aGameSocket1833 = InterfaceNode.aGameSocket317;
+                            InterfaceNode.aGameSocket317 = null;
                         }
 
                     } else {
@@ -2712,8 +2712,8 @@ public final class Client extends Applet_Sub1 {
                                                             }
 
                                                             try {
-                                                                if (InterfaceNode.aSocket317 != null && packet.caret > 0) {
-                                                                    InterfaceNode.aSocket317.method885(packet.payload, 0, packet.caret);
+                                                                if (InterfaceNode.aGameSocket317 != null && packet.caret > 0) {
+                                                                    InterfaceNode.aGameSocket317.method885(packet.payload, 0, packet.caret);
                                                                     packet.caret = 0;
                                                                     audioEffectCount = 0;
                                                                 }
@@ -2722,8 +2722,8 @@ public final class Client extends Applet_Sub1 {
                                                                     TextureProviderImpl.method499();
                                                                 } else {
                                                                     Class45.method304(40);
-                                                                    Class154.aSocket1833 = InterfaceNode.aSocket317;
-                                                                    InterfaceNode.aSocket317 = null;
+                                                                    Class154.aGameSocket1833 = InterfaceNode.aGameSocket317;
+                                                                    InterfaceNode.aGameSocket317 = null;
                                                                 }
                                                             }
 
@@ -2774,19 +2774,19 @@ public final class Client extends Applet_Sub1 {
     }
 
     final boolean method902() {
-        if (InterfaceNode.aSocket317 == null) {
+        if (InterfaceNode.aGameSocket317 == null) {
             return false;
         }
         int var3;
         String var11;
         try {
-            int var1 = InterfaceNode.aSocket317.method884();
+            int var1 = InterfaceNode.aGameSocket317.method884();
             if (var1 == 0) {
                 return false;
             }
 
             if (anInt1511 == -1) {
-                InterfaceNode.aSocket317.method883(aPacket1521.payload, 0, 1);
+                InterfaceNode.aGameSocket317.method883(aPacket1521.payload, 0, 1);
                 aPacket1521.caret = 0;
                 anInt1511 = aPacket1521.method784();
                 anInt1514 = Class175.anIntArray2136[anInt1511];
@@ -2798,7 +2798,7 @@ public final class Client extends Applet_Sub1 {
                     return false;
                 }
 
-                InterfaceNode.aSocket317.method883(aPacket1521.payload, 0, 1);
+                InterfaceNode.aGameSocket317.method883(aPacket1521.payload, 0, 1);
                 anInt1514 = aPacket1521.payload[0] & 255;
                 --var1;
             }
@@ -2808,7 +2808,7 @@ public final class Client extends Applet_Sub1 {
                     return false;
                 }
 
-                InterfaceNode.aSocket317.method883(aPacket1521.payload, 0, 2);
+                InterfaceNode.aGameSocket317.method883(aPacket1521.payload, 0, 2);
                 aPacket1521.caret = 0;
                 anInt1514 = aPacket1521.readUnsignedShort();
                 var1 -= 2;
@@ -2819,7 +2819,7 @@ public final class Client extends Applet_Sub1 {
             }
 
             aPacket1521.caret = 0;
-            InterfaceNode.aSocket317.method883(aPacket1521.payload, 0, anInt1514);
+            InterfaceNode.aGameSocket317.method883(aPacket1521.payload, 0, anInt1514);
             anInt1518 = 0;
             anInt1517 = anInt1516;
             anInt1516 = anInt1520 * -1;
@@ -4674,8 +4674,8 @@ public final class Client extends Applet_Sub1 {
                 var3 = aPacket1521.method835();
                 var84.mask = var3;
                 Class45.method304(45);
-                InterfaceNode.aSocket317.method882();
-                InterfaceNode.aSocket317 = null;
+                InterfaceNode.aGameSocket317.method882();
+                InterfaceNode.aGameSocket317 = null;
                 Class51.method320(var84);
                 anInt1511 = -1;
                 return false;
@@ -4841,8 +4841,8 @@ public final class Client extends Applet_Sub1 {
                 TextureProviderImpl.method499();
             } else {
                 Class45.method304(40);
-                Class154.aSocket1833 = InterfaceNode.aSocket317;
-                InterfaceNode.aSocket317 = null;
+                Class154.aGameSocket1833 = InterfaceNode.aGameSocket317;
+                InterfaceNode.aGameSocket317 = null;
             }
         } catch (Exception var61) {
             var11 = "" + anInt1511 + "," + anInt1516 + "," + anInt1517 + "," + anInt1514 + "," + (player.anIntArray800[0] + Class62.anInt636) + "," + (Class49.anInt377 + player.anIntArray804[0]) + ",";

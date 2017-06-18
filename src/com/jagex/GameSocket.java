@@ -4,11 +4,12 @@ import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.Socket;
 
-public final class Socket implements Runnable {
+public final class GameSocket implements Runnable {
     InputStream anInputStream1415;
     Class103 aClass103_1422;
-    java.net.Socket base;
+    Socket base;
     boolean aBoolean1417 = false;
     Class108 aClass108_1420;
     OutputStream anOutputStream1424;
@@ -17,7 +18,7 @@ public final class Socket implements Runnable {
     int anInt1419 = 0;
     boolean aBoolean1416 = false;
 
-    public Socket(java.net.Socket socket, Class108 var2) throws IOException {
+    public GameSocket(Socket socket, Class108 var2) throws IOException {
         this.aClass108_1420 = var2;
         this.base = socket;
         this.base.setSoTimeout(30000);

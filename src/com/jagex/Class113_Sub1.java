@@ -8,11 +8,11 @@ public class Class113_Sub1 extends Class113 {
         ++Client.audioEffectCount;
         if (Client.audioEffectCount >= 50 || var0) {
             Client.audioEffectCount = 0;
-            if (!Client.aBoolean1512 && InterfaceNode.aSocket317 != null) {
+            if (!Client.aBoolean1512 && InterfaceNode.aGameSocket317 != null) {
                 Client.packet.writeHeader(71);
 
                 try {
-                    InterfaceNode.aSocket317.method885(Client.packet.payload, 0, Client.packet.caret);
+                    InterfaceNode.aGameSocket317.method885(Client.packet.payload, 0, Client.packet.caret);
                     Client.packet.caret = 0;
                 } catch (IOException var2) {
                     Client.aBoolean1512 = true;

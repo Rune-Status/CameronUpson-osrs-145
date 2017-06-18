@@ -15,9 +15,9 @@ public class Class45 {
                 Client.anInt1503 = 0;
             }
 
-            if (var0 != 20 && var0 != 40 && Class154.aSocket1833 != null) {
-                Class154.aSocket1833.method882();
-                Class154.aSocket1833 = null;
+            if (var0 != 20 && var0 != 40 && Class154.aGameSocket1833 != null) {
+                Class154.aGameSocket1833.method882();
+                Class154.aGameSocket1833 = null;
             }
 
             if (Client.connectionState == 25) {

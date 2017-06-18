@@ -4,7 +4,7 @@ public class Class154 {
     public static final boolean[] aBooleanArray1836 = new boolean[]{true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, false};
     public static int[] anIntArray1834 = new int[99];
     protected static boolean aBoolean1835;
-    static Socket aSocket1833;
+    static GameSocket aGameSocket1833;
 
     static {
         int var0 = 0;

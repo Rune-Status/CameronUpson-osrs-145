@@ -1370,8 +1370,8 @@ public class ScriptEvent extends Node {
                             TextureProviderImpl.method499();
                         } else {
                             Class45.method304(40);
-                            Class154.aSocket1833 = InterfaceNode.aSocket317;
-                            InterfaceNode.aSocket317 = null;
+                            Class154.aGameSocket1833 = InterfaceNode.aGameSocket317;
+                            InterfaceNode.aGameSocket317 = null;
                         }
                     }
 

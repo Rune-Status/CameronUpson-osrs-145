@@ -15,17 +15,17 @@ public class Class105 {
     static int anInt1247;
     static Class84 aClass84_1244;
 
-    public static void method721(Socket var0, boolean var1) {
-        if (Class168.aSocket2082 != null) {
+    public static void method721(GameSocket var0, boolean var1) {
+        if (Class168.aGameSocket2082 != null) {
             try {
-                Class168.aSocket2082.method882();
+                Class168.aGameSocket2082.method882();
             } catch (Exception var6) {
             }
 
-            Class168.aSocket2082 = null;
+            Class168.aGameSocket2082 = null;
         }
 
-        Class168.aSocket2082 = var0;
+        Class168.aGameSocket2082 = var0;
         Class123.method814(var1);
         Class168.aBuffer2074.caret = 0;
         Class19.aNode_Sub21_Sub6_137 = null;
@@ -44,15 +44,15 @@ public class Class105 {
                                 var7.method451(4);
                                 var7.method451(Class168.aByte2071);
                                 var7.method755(0);
-                                Class168.aSocket2082.method885(var7.payload, 0, 4);
+                                Class168.aGameSocket2082.method885(var7.payload, 0, 4);
                             } catch (IOException var5) {
                                 try {
-                                    Class168.aSocket2082.method882();
+                                    Class168.aGameSocket2082.method882();
                                 } catch (Exception var4) {
                                 }
 
                                 ++Class168.anInt2069;
-                                Class168.aSocket2082 = null;
+                                Class168.aGameSocket2082 = null;
                             }
                         }
 

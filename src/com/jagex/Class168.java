@@ -4,7 +4,7 @@ import java.awt.*;
 import java.util.zip.CRC32;
 
 public class Class168 {
-    public static Socket aSocket2082;
+    public static GameSocket aGameSocket2082;
     public static int anInt2070 = 0;
     public static int anInt2087 = 0;
     public static int anInt2083 = 0;

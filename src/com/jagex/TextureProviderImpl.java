@@ -64,9 +64,9 @@ public class TextureProviderImpl implements TextureProvider {
     }
 
     static void method499() {
-        if (InterfaceNode.aSocket317 != null) {
-            InterfaceNode.aSocket317.method882();
-            InterfaceNode.aSocket317 = null;
+        if (InterfaceNode.aGameSocket317 != null) {
+            InterfaceNode.aGameSocket317.method882();
+            InterfaceNode.aGameSocket317 = null;
         }
 
         ReferenceCache.clearCaches();

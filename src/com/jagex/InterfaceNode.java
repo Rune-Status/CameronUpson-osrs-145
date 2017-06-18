@@ -4,7 +4,7 @@ public class InterfaceNode extends Node {
     public static String aString319;
     static int[] anIntArray315;
     static byte[][] aByteArrayArray318;
-    static Socket aSocket317;
+    static GameSocket aGameSocket317;
     int state;
     boolean aBoolean316 = false;
     int id;

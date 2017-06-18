@@ -3,7 +3,7 @@ package com.jagex;
 final class Class51 implements Class66 {
     public static ReferenceTable aReferenceTable382;
     static int anInt381;
-    static Socket aSocket380;
+    static GameSocket aGameSocket380;
 
     static void method321(Packet var0, int var1) {
         boolean var2 = var0.method788(1) == 1;
