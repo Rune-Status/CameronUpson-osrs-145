@@ -78,7 +78,7 @@ public class Class2 {
                     Class22.aNode_Sub21_Sub26_Sub2Array147[1].method1155(var26 + 15, 4);
                 }
 
-                var0.method1170("com.jagex.World", var26 + 32, 17, 16777215, -1);
+                var0.method1170("World", var26 + 32, 17, 16777215, -1);
                 var5 = Login.anInt702 + 390;
                 if (World.anIntArray385[0] == 1 && World.anIntArray387[0] == 0) {
                     Class22.aNode_Sub21_Sub26_Sub2Array147[2].method1155(var5, 4);
@@ -270,7 +270,7 @@ public class Class2 {
                 var26 += 15;
                 var26 += 10;
                 if (Login.anInt701 != 4) {
-                    var0.method1170("com.jagex.Login: ", Login.anInt710 + 180 - 110, var26, 16777215, 0);
+                    var0.method1170("Login: ", Login.anInt710 + 180 - 110, var26, 16777215, 0);
                     var27 = 200;
 
                     for (var23 = Login.username; var0.getTextWidth(var23) > var27; var23 = var23.substring(0, var23.length() - 1)) {
@@ -324,7 +324,7 @@ public class Class2 {
                         var0.method1161(Login.loginResponseLine3, Login.anInt710 + 180, var26, 16776960, 0);
                         var26 += 15;
                         var26 += 10;
-                        var0.method1170("com.jagex.Login: ", Login.anInt710 + 180 - 110, var26, 16777215, 0);
+                        var0.method1170("Login: ", Login.anInt710 + 180 - 110, var26, 16777215, 0);
                         var27 = 200;
 
                         for (var23 = Login.username; var0.getTextWidth(var23) > var27; var23 = var23.substring(1)) {
@@ -337,7 +337,7 @@ public class Class2 {
                         var7 = Login.anInt710 + 180 - 80;
                         var8 = 321;
                         Login.aNode_Sub21_Sub26_Sub2_709.method1155(var7 - 73, var8 - 20);
-                        var0.method1161("com.jagex.Login", var7, var8 + 5, 16777215, 0);
+                        var0.method1161("Login", var7, var8 + 5, 16777215, 0);
                         var7 = Login.anInt710 + 180 + 80;
                         Login.aNode_Sub21_Sub26_Sub2_709.method1155(var7 - 73, var8 - 20);
                         var0.method1161("Cancel", var7, var8 + 5, 16777215, 0);
@@ -532,7 +532,7 @@ public class Class2 {
                     byte var32 = 100;
                     byte var31 = 35;
                     Class108.aNode_Sub21_Sub26_Sub2_1296.method1155(var26, var27);
-                    var0.method1161("com.jagex.World" + " " + Client.currentWorld, var32 / 2 + var26, var31 / 2 + var27 - 2, 16777215, 0);
+                    var0.method1161("World" + " " + Client.currentWorld, var32 / 2 + var26, var31 / 2 + var27 - 2, 16777215, 0);
                     if (World.aClass25_384 != null) {
                         var1.method1161("Loading...", var32 / 2 + var26, var31 / 2 + var27 + 12, 16777215, 0);
                     } else {

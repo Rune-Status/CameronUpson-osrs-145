@@ -105,9 +105,9 @@ public class Node_Sub21_Sub1 extends DoublyNode {
         } else if (var0 == 7) {
             Class22.setLoginResponse("This world is full.", "Please use a different world.", "");
         } else if (var0 == 8) {
-            Class22.setLoginResponse("Unable to connect.", "com.jagex.Login server offline.", "");
+            Class22.setLoginResponse("Unable to connect.", "Login server offline.", "");
         } else if (var0 == 9) {
-            Class22.setLoginResponse("com.jagex.Login limit exceeded.", "Too many connections from your address.", "");
+            Class22.setLoginResponse("Login limit exceeded.", "Too many connections from your address.", "");
         } else if (var0 == 10) {
             Class22.setLoginResponse("Unable to connect.", "Bad session id.", "");
         } else if (var0 == 11) {

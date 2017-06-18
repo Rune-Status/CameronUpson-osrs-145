@@ -119,7 +119,7 @@ public class GraphicDefinition extends DoublyNode {
         }
 
         if (scaleXZ != 128 || scaleY != 128) {
-            var5.rotate(scaleXZ, scaleY, scaleXZ);
+            var5.scale(scaleXZ, scaleY, scaleXZ); //TODO should be scale
         }
 
         if (orientation != 0) {
