@@ -1,9 +1,9 @@
 package com.jagex;
 
 public class ObjectNode extends Node {
-    public final Object anObject1720;
+    public final Object value;
 
     public ObjectNode(Object var1) {
-        this.anObject1720 = var1;
+        this.value = var1;
     }
 }

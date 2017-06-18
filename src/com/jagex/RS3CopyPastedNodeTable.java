@@ -26,7 +26,7 @@ public final class RS3CopyPastedNodeTable implements Iterable {
             return default_;
         } else {
             ObjectNode var3 = (ObjectNode) var0.lookup((long) key);
-            return var3 == null ? default_ : (String) var3.anObject1720;
+            return var3 == null ? default_ : (String) var3.value;
         }
     }
 
