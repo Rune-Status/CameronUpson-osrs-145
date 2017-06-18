@@ -53,7 +53,7 @@ public class Class20 implements Class16 {
         }
     }
 
-    public void method9(Buffer var1) {
+    public void decode(Buffer var1) {
         this.anInt1 = var1.readUnsignedByte();
         this.anInt6 = var1.readUnsignedByte();
         this.anInt3 = var1.readUnsignedShort();
@@ -67,13 +67,13 @@ public class Class20 implements Class16 {
         this.method8();
     }
 
-    public Class151 method7(int var1, int var2) {
+    public SceneOffset method7(int var1, int var2) {
         if (!this.method5(var1, var2)) {
             return null;
         } else {
             int var3 = this.anInt122 * 8 - this.anInt120 * 8 + this.anInt3 * 64 - this.anInt4 * 64 + var1;
             int var4 = this.anInt121 * 8 - this.anInt119 * 8 + var2 + (this.anInt2 * 64 - this.anInt5 * 64);
-            return new Class151(this.anInt1, var3, var4);
+            return new SceneOffset(this.anInt1, var3, var4);
         }
     }
 }

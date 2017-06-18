@@ -465,8 +465,8 @@ public final class Class7 {
 
                     while (var11.hasNext()) {
                         Class24 var12 = (Class24) var11.next();
-                        int var13 = var3 * (var12.aClass151_167.anInt1832 - this.anInt51) / this.anInt60;
-                        int var14 = var4 - var4 * (var12.aClass151_167.anInt1831 - this.anInt58) / this.anInt57;
+                        int var13 = var3 * (var12.aSceneOffset_167.x - this.anInt51) / this.anInt60;
+                        int var14 = var4 - var4 * (var12.aSceneOffset_167.y - this.anInt58) / this.anInt57;
                         Node_Sub21_Sub26.method1221(var13 + var1, var2 + var14, 2, 16776960, 256);
                     }
                 }

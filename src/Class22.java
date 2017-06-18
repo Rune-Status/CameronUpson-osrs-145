@@ -3,14 +3,14 @@ public class Class22 {
     static int anInt149;
     static Node_Sub21_Sub26_Sub2[] aNode_Sub21_Sub26_Sub2Array147;
     static int anInt148;
-    public Class151 aClass151_146;
-    public Class151 aClass151_150;
+    public SceneOffset aSceneOffset_146;
+    public SceneOffset aSceneOffset_150;
     public int anInt145;
 
-    public Class22(int var1, Class151 var2, Class151 var3) {
+    public Class22(int var1, SceneOffset var2, SceneOffset var3) {
         this.anInt145 = var1;
-        this.aClass151_150 = var2;
-        this.aClass151_146 = var3;
+        this.aSceneOffset_150 = var2;
+        this.aSceneOffset_146 = var3;
     }
 
     static void method147(int var0, int var1, int var2, int var3, int var4, int var5, SceneGraph var6, CollisionMap var7) {

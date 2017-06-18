@@ -34,7 +34,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
                         break;
                     }
 
-                    var0 = var0.substring(0, var3) + Class58.method361(Player.method190(var1, var2 - 1)) + var0.substring(var3 + 2);
+                    var0 = var0.substring(0, var3) + Key.method361(Player.method190(var1, var2 - 1)) + var0.substring(var3 + 2);
                 }
             }
 

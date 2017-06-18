@@ -7,7 +7,7 @@ public class Class12 {
     String aString86;
     int anInt94 = -1;
     String aString90;
-    Class151 aClass151_96 = null;
+    SceneOffset aSceneOffset_96 = null;
     int anInt88 = 0;
     int anInt87 = Integer.MAX_VALUE;
     int anInt92 = -1;
@@ -80,7 +80,7 @@ public class Class12 {
         this.anInt92 = var2;
         this.aString90 = var1.method819();
         this.aString86 = var1.method819();
-        this.aClass151_96 = new Class151(var1.method835());
+        this.aSceneOffset_96 = new SceneOffset(var1.method835());
         this.anInt94 = var1.method835();
         var1.readUnsignedByte();
         this.aBoolean91 = var1.readUnsignedByte() == 1;
@@ -136,7 +136,7 @@ public class Class12 {
     }
 
     public int method82() {
-        return this.aClass151_96.anInt1831;
+        return this.aSceneOffset_96.y;
     }
 
     public int method63() {
@@ -174,15 +174,15 @@ public class Class12 {
     }
 
     public int method71() {
-        return this.aClass151_96.anInt1832;
+        return this.aSceneOffset_96.x;
     }
 
     public int method64() {
-        return this.aClass151_96.anInt1830;
+        return this.aSceneOffset_96.z;
     }
 
-    public Class151 method62() {
-        return new Class151(this.aClass151_96);
+    public SceneOffset method62() {
+        return new SceneOffset(this.aSceneOffset_96);
     }
 
     public int method70() {
@@ -197,7 +197,7 @@ public class Class12 {
         return this.aString90;
     }
 
-    public Class151 method83(int var1, int var2) {
+    public SceneOffset method83(int var1, int var2) {
         Iterator var3 = this.aLinkedList93.iterator();
 
         Class16 var4;
@@ -253,7 +253,7 @@ public class Class12 {
                 throw new IllegalStateException("");
         }
 
-        ((Class16) var5).method9(var1);
+        ((Class16) var5).decode(var1);
         return (Class16) var5;
     }
 }

@@ -3,9 +3,9 @@ public interface Class16 {
 
     int[] method2(int var1, int var2, int var3);
 
-    Class151 method7(int var1, int var2);
+    SceneOffset method7(int var1, int var2);
 
-    void method9(Buffer var1);
+    void decode(Buffer var1);
 
     boolean method5(int var1, int var2);
 

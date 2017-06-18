@@ -4,12 +4,12 @@ public class Node_Sub21_Sub19 extends DoublyNode {
     public static ReferenceTable aReferenceTable2012;
     public int anInt206 = 0;
 
-    static void method1124(int var0, Class151 var1, boolean var2) {
+    static void method1124(int var0, SceneOffset var1, boolean var2) {
         Class12 var3 = InterfaceNode.method268().method1276(var0);
         int var4 = Client.player.combatLevel;
         int var5 = (Client.player.strictX >> 7) + Class62.anInt636;
         int var6 = (Client.player.strictY >> 7) + Class49.anInt377;
-        Class151 var7 = new Class151(var4, var5, var6);
+        SceneOffset var7 = new SceneOffset(var4, var5, var6);
         InterfaceNode.method268().method1299(var3, var7, var1, var2);
     }
 

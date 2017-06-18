@@ -652,7 +652,7 @@ public final class Client extends Applet_Sub1 {
                            membersWorld = var5.equalsIgnoreCase("true");
                             break;
                         case 9:
-                            aClass162_1468 = (Class162) Canvas.method185(Class58.method364(), Integer.parseInt(var5));
+                            aClass162_1468 = (Class162) Canvas.method185(Key.method364(), Integer.parseInt(var5));
                             if (Class162.aClass162_1956 == aClass162_1468) {
                                 Class2.aClass188_13 = Class188.aClass188_2190;
                             } else {

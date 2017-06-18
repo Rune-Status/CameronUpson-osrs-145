@@ -2,11 +2,11 @@ import java.io.IOException;
 
 public class Class74 {
     int anInt742;
-    Class151 aClass151_743;
+    SceneOffset aSceneOffset_743;
 
-    Class74(int var1, Class151 var2) {
+    Class74(int var1, SceneOffset var2) {
         this.anInt742 = var1;
-        this.aClass151_743 = var2;
+        this.aSceneOffset_743 = var2;
     }
 
     public static byte[] method437() {

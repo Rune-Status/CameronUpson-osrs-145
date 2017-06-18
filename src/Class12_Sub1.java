@@ -53,7 +53,7 @@ public class Class12_Sub1 extends Class12 {
 
         for (int var4 = 0; var4 < var3; ++var4) {
             int var5 = var1.readSmart32();
-            Class151 var6 = new Class151(var1.method835());
+            SceneOffset var6 = new SceneOffset(var1.method835());
             boolean var7 = var1.readUnsignedByte() == 1;
             if (var2 || !var7) {
                 this.aList112.add(new Class74(var5, var6));

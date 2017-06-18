@@ -1528,22 +1528,22 @@ public class ScriptEvent extends Node {
                                     Class63.anIntArray645[++Class63.anInt644 - 1] = InterfaceNode.method268().method1274() ? 1 : 0;
                                     var11 = 1;
                                 } else {
-                                    Class151 var36;
+                                    SceneOffset var36;
                                     if (var0 == 6606) {
-                                        var36 = new Class151(Class63.anIntArray645[--Class63.anInt644]);
-                                        InterfaceNode.method268().method1258(var36.anInt1832, var36.anInt1831);
+                                        var36 = new SceneOffset(Class63.anIntArray645[--Class63.anInt644]);
+                                        InterfaceNode.method268().method1258(var36.x, var36.y);
                                         var11 = 1;
                                     } else if (var0 == 6607) {
-                                        var36 = new Class151(Class63.anIntArray645[--Class63.anInt644]);
-                                        InterfaceNode.method268().method1257(var36.anInt1832, var36.anInt1831);
+                                        var36 = new SceneOffset(Class63.anIntArray645[--Class63.anInt644]);
+                                        InterfaceNode.method268().method1257(var36.x, var36.y);
                                         var11 = 1;
                                     } else if (var0 == 6608) {
-                                        var36 = new Class151(Class63.anIntArray645[--Class63.anInt644]);
-                                        InterfaceNode.method268().method1268(var36.anInt1830, var36.anInt1832, var36.anInt1831);
+                                        var36 = new SceneOffset(Class63.anIntArray645[--Class63.anInt644]);
+                                        InterfaceNode.method268().method1268(var36.z, var36.x, var36.y);
                                         var11 = 1;
                                     } else if (var0 == 6609) {
-                                        var36 = new Class151(Class63.anIntArray645[--Class63.anInt644]);
-                                        InterfaceNode.method268().method1263(var36.anInt1830, var36.anInt1832, var36.anInt1831);
+                                        var36 = new SceneOffset(Class63.anIntArray645[--Class63.anInt644]);
+                                        InterfaceNode.method268().method1263(var36.z, var36.x, var36.y);
                                         var11 = 1;
                                     } else if (var0 == 6610) {
                                         Class63.anIntArray645[++Class63.anInt644 - 1] = InterfaceNode.method268().method1264();
@@ -1557,7 +1557,7 @@ public class ScriptEvent extends Node {
                                             if (var42 == null) {
                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
                                             } else {
-                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.method62().method1006();
+                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.method62().getHash();
                                             }
 
                                             var11 = 1;
@@ -1605,8 +1605,8 @@ public class ScriptEvent extends Node {
                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                             } else {
-                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var36.anInt1832;
-                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var36.anInt1831;
+                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var36.x;
+                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var36.y;
                                             }
 
                                             var11 = 1;
@@ -1614,14 +1614,14 @@ public class ScriptEvent extends Node {
                                             Class63.anIntArray645[++Class63.anInt644 - 1] = InterfaceNode.method268().method1294();
                                             var11 = 1;
                                         } else if (var0 == 6617) {
-                                            var36 = new Class151(Class63.anIntArray645[--Class63.anInt644]);
+                                            var36 = new SceneOffset(Class63.anIntArray645[--Class63.anInt644]);
                                             var42 = InterfaceNode.method268().method1284();
                                             if (var42 == null) {
                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                 var11 = 1;
                                             } else {
-                                                int[] var43 = var42.method81(var36.anInt1830, var36.anInt1832, var36.anInt1831);
+                                                int[] var43 = var42.method81(var36.z, var36.x, var36.y);
                                                 if (var43 == null) {
                                                     Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                     Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
@@ -1633,53 +1633,53 @@ public class ScriptEvent extends Node {
                                                 var11 = 1;
                                             }
                                         } else {
-                                            Class151 var44;
+                                            SceneOffset var44;
                                             if (var0 == 6618) {
-                                                var36 = new Class151(Class63.anIntArray645[--Class63.anInt644]);
+                                                var36 = new SceneOffset(Class63.anIntArray645[--Class63.anInt644]);
                                                 var42 = InterfaceNode.method268().method1284();
                                                 if (var42 == null) {
                                                     Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                     Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                     var11 = 1;
                                                 } else {
-                                                    var44 = var42.method83(var36.anInt1832, var36.anInt1831);
+                                                    var44 = var42.method83(var36.x, var36.y);
                                                     if (var44 == null) {
                                                         Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                     } else {
-                                                        Class63.anIntArray645[++Class63.anInt644 - 1] = var44.method1006();
+                                                        Class63.anIntArray645[++Class63.anInt644 - 1] = var44.getHash();
                                                     }
 
                                                     var11 = 1;
                                                 }
                                             } else {
-                                                Class151 var46;
+                                                SceneOffset var46;
                                                 if (var0 == 6619) {
                                                     Class63.anInt644 -= 2;
                                                     var3 = Class63.anIntArray645[Class63.anInt644];
-                                                    var46 = new Class151(Class63.anIntArray645[Class63.anInt644 + 1]);
+                                                    var46 = new SceneOffset(Class63.anIntArray645[Class63.anInt644 + 1]);
                                                     var41 = InterfaceNode.method268().method1276(var3);
                                                     var47 = Client.player.combatLevel;
                                                     var16 = (Client.player.strictX >> 7) + Class62.anInt636;
                                                     var8 = Class49.anInt377 + (Client.player.strictY >> 7);
-                                                    Class151 var59 = new Class151(var47, var16, var8);
+                                                    SceneOffset var59 = new SceneOffset(var47, var16, var8);
                                                     InterfaceNode.method268().method1299(var41, var59, var46, false);
                                                     var11 = 1;
                                                 } else if (var0 == 6620) {
                                                     Class63.anInt644 -= 2;
                                                     var3 = Class63.anIntArray645[Class63.anInt644];
-                                                    var46 = new Class151(Class63.anIntArray645[Class63.anInt644 + 1]);
+                                                    var46 = new SceneOffset(Class63.anIntArray645[Class63.anInt644 + 1]);
                                                     Node_Sub21_Sub19.method1124(var3, var46, true);
                                                     var11 = 1;
                                                 } else if (var0 == 6621) {
                                                     Class63.anInt644 -= 2;
                                                     var3 = Class63.anIntArray645[Class63.anInt644];
-                                                    var46 = new Class151(Class63.anIntArray645[Class63.anInt644 + 1]);
+                                                    var46 = new SceneOffset(Class63.anIntArray645[Class63.anInt644 + 1]);
                                                     var41 = InterfaceNode.method268().method1276(var3);
                                                     if (var41 == null) {
                                                         Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
                                                         var11 = 1;
                                                     } else {
-                                                        Class63.anIntArray645[++Class63.anInt644 - 1] = var41.method65(var46.anInt1830, var46.anInt1832, var46.anInt1831) ? 1 : 0;
+                                                        Class63.anIntArray645[++Class63.anInt644 - 1] = var41.method65(var46.z, var46.x, var46.y) ? 1 : 0;
                                                         var11 = 1;
                                                     }
                                                 } else if (var0 == 6622) {
@@ -1687,8 +1687,8 @@ public class ScriptEvent extends Node {
                                                     Class63.anIntArray645[++Class63.anInt644 - 1] = InterfaceNode.method268().method1267();
                                                     var11 = 1;
                                                 } else if (var0 == 6623) {
-                                                    var36 = new Class151(Class63.anIntArray645[--Class63.anInt644]);
-                                                    var42 = InterfaceNode.method268().method1286(var36.anInt1830, var36.anInt1832, var36.anInt1831);
+                                                    var36 = new SceneOffset(Class63.anIntArray645[--Class63.anInt644]);
+                                                    var42 = InterfaceNode.method268().method1286(var36.z, var36.x, var36.y);
                                                     if (var42 == null) {
                                                         Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                     } else {
@@ -1755,12 +1755,12 @@ public class ScriptEvent extends Node {
                                                     } else if (var0 == 6638) {
                                                         Class63.anInt644 -= 2;
                                                         var3 = Class63.anIntArray645[Class63.anInt644];
-                                                        var46 = new Class151(Class63.anIntArray645[Class63.anInt644 + 1]);
+                                                        var46 = new SceneOffset(Class63.anIntArray645[Class63.anInt644 + 1]);
                                                         var44 = InterfaceNode.method268().method1279(var3, var46);
                                                         if (var44 == null) {
                                                             Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                         } else {
-                                                            Class63.anIntArray645[++Class63.anInt644 - 1] = var44.method1006();
+                                                            Class63.anIntArray645[++Class63.anInt644 - 1] = var44.getHash();
                                                         }
 
                                                         var11 = 1;
@@ -1773,7 +1773,7 @@ public class ScriptEvent extends Node {
                                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                             } else {
                                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = var39.anInt160;
-                                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var39.aClass151_167.method1006();
+                                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var39.aSceneOffset_167.getHash();
                                                             }
 
                                                             var11 = 1;
@@ -1784,7 +1784,7 @@ public class ScriptEvent extends Node {
                                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                             } else {
                                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = var39.anInt160;
-                                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var39.aClass151_167.method1006();
+                                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var39.aSceneOffset_167.getHash();
                                                             }
 
                                                             var11 = 1;
@@ -1829,10 +1829,10 @@ public class ScriptEvent extends Node {
                                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = Class125.aClass22_1366.anInt145;
                                                                 var11 = 1;
                                                             } else if (var0 == 6698) {
-                                                                Class63.anIntArray645[++Class63.anInt644 - 1] = Class125.aClass22_1366.aClass151_150.method1006();
+                                                                Class63.anIntArray645[++Class63.anInt644 - 1] = Class125.aClass22_1366.aSceneOffset_150.getHash();
                                                                 var11 = 1;
                                                             } else if (var0 == 6699) {
-                                                                Class63.anIntArray645[++Class63.anInt644 - 1] = Class125.aClass22_1366.aClass151_146.method1006();
+                                                                Class63.anIntArray645[++Class63.anInt644 - 1] = Class125.aClass22_1366.aSceneOffset_146.getHash();
                                                                 var11 = 1;
                                                             } else {
                                                                 var11 = 2;

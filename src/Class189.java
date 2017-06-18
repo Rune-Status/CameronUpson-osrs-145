@@ -69,7 +69,7 @@ public class Class189 {
                     var13 = (Class24) var12.next();
                     var11.add(var13);
                     var14 = new ScriptEvent();
-                    var15 = new Class22(var13.anInt160, var13.aClass151_162, var13.aClass151_167);
+                    var15 = new Class22(var13.anInt160, var13.aSceneOffset_162, var13.aSceneOffset_167);
                     var14.method270(new Object[]{var15, var1, var2});
                     if (this.aHashSet2238.contains(var13)) {
                         var14.method274(Class147.aClass147_1806);
@@ -84,7 +84,7 @@ public class Class189 {
                     var13 = (Class24) var12.next();
                     if (!var11.contains(var13)) {
                         var14 = new ScriptEvent();
-                        var15 = new Class22(var13.anInt160, var13.aClass151_162, var13.aClass151_167);
+                        var15 = new Class22(var13.anInt160, var13.aSceneOffset_162, var13.aSceneOffset_167);
                         var14.method270(new Object[]{var15, var1, var2});
                         var14.method274(Class147.aClass147_1807);
                         Class25.method174(var14);
@@ -371,7 +371,7 @@ public class Class189 {
         return this.aClass12_2234 == null ? -1 : this.anInt2212 + this.aClass12_2234.method70() * 64;
     }
 
-    public Class151 method1265() {
+    public SceneOffset method1265() {
         return this.aClass12_2234 == null ? null : this.aClass12_2234.method83(this.method1264(), this.method1254());
     }
 
@@ -491,7 +491,7 @@ public class Class189 {
 
                     for (int var14 = this.anIntArray2226.length - 1; var14 >= 0; --var14) {
                         if (var12.aStringArray2095[var14] != null) {
-                            Class12_Sub1.method125(var12.aStringArray2095[var14], var12.aString2094, this.anIntArray2226[var14], var11.anInt160, var11.aClass151_162.method1006(), var11.aClass151_167.method1006());
+                            Class12_Sub1.method125(var12.aStringArray2095[var14], var12.aString2094, this.anIntArray2226[var14], var11.anInt160, var11.aSceneOffset_162.getHash(), var11.aSceneOffset_167.getHash());
                             var13 = true;
                         }
                     }
@@ -501,12 +501,12 @@ public class Class189 {
         }
     }
 
-    public Class151 method1279(int var1, Class151 var2) {
+    public SceneOffset method1279(int var1, SceneOffset var2) {
         if (!this.aClass190_2229.method1309()) {
             return null;
         } else if (!this.aClass7_2217.method34()) {
             return null;
-        } else if (!this.aClass12_2234.method79(var2.anInt1832, var2.anInt1831)) {
+        } else if (!this.aClass12_2234.method79(var2.x, var2.y)) {
             return null;
         } else {
             HashMap var3 = this.aClass7_2217.method36();
@@ -521,15 +521,15 @@ public class Class189 {
                     int var11;
                     do {
                         if (!var7.hasNext()) {
-                            return var5.aClass151_167;
+                            return var5.aSceneOffset_167;
                         }
 
                         var8 = (Class24) var7.next();
-                        int var9 = var8.aClass151_167.anInt1832 - var2.anInt1832;
-                        int var10 = var8.aClass151_167.anInt1831 - var2.anInt1831;
+                        int var9 = var8.aSceneOffset_167.x - var2.x;
+                        int var10 = var8.aSceneOffset_167.y - var2.y;
                         var11 = var9 * var9 + var10 * var10;
                         if (var11 == 0) {
-                            return var8.aClass151_167;
+                            return var8.aSceneOffset_167;
                         }
                     } while (var11 >= var6 && var5 != null);
 
@@ -570,7 +570,7 @@ public class Class189 {
         }
     }
 
-    public void method1281(int var1, int var2, Class151 var3, Class151 var4) {
+    public void method1281(int var1, int var2, SceneOffset var3, SceneOffset var4) {
         ScriptEvent var5 = new ScriptEvent();
         Class22 var6 = new Class22(var2, var3, var4);
         var5.method270(new Object[]{var6});
@@ -664,16 +664,16 @@ public class Class189 {
         }
     }
 
-    public void method1299(Class12 var1, Class151 var2, Class151 var3, boolean var4) {
+    public void method1299(Class12 var1, SceneOffset var2, SceneOffset var3, boolean var4) {
         if (var1 != null) {
             if (this.aClass12_2234 == null || this.aClass12_2234 != var1) {
                 this.method1302(var1);
             }
 
-            if (!var4 && this.aClass12_2234.method65(var2.anInt1830, var2.anInt1832, var2.anInt1831)) {
-                this.method1291(var2.anInt1830, var2.anInt1832, var2.anInt1831);
+            if (!var4 && this.aClass12_2234.method65(var2.z, var2.x, var2.y)) {
+                this.method1291(var2.z, var2.x, var2.y);
             } else {
-                this.method1291(var3.anInt1830, var3.anInt1832, var3.anInt1831);
+                this.method1291(var3.z, var3.x, var3.y);
             }
 
         }

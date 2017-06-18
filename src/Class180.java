@@ -101,7 +101,7 @@ public class Class180 {
                         for (var17 = 0; var17 < Client.anInt1501; ++var17) {
                             var18 = Client.npcs[Client.npcIndices[var17]];
                             if (var18 != null && var18 != var23 && var18.definition.anInt221 == 1 && var23.strictX == var18.strictX && var23.strictY == var18.strictY) {
-                                Class58.method362(var18.definition, Client.npcIndices[var17], var8, var9);
+                                Key.method362(var18.definition, Client.npcIndices[var17], var8, var9);
                             }
                         }
 
@@ -116,7 +116,7 @@ public class Class180 {
                         }
                     }
 
-                    Class58.method362(var23.definition, var11, var8, var9);
+                    Key.method362(var23.definition, var11, var8, var9);
                 }
 
                 if (var10 == 0) {
@@ -129,7 +129,7 @@ public class Class180 {
                         for (var17 = 0; var17 < Client.anInt1501; ++var17) {
                             var18 = Client.npcs[Client.npcIndices[var17]];
                             if (var18 != null && var18.definition.anInt221 == 1 && var18.strictX == var24.strictX && var24.strictY == var18.strictY) {
-                                Class58.method362(var18.definition, Client.npcIndices[var17], var8, var9);
+                                Key.method362(var18.definition, Client.npcIndices[var17], var8, var9);
                             }
                         }
 

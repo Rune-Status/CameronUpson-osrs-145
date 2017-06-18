@@ -298,9 +298,9 @@ public final class Class5 {
                                                 if (var23 + 32 > var2 && var23 < var4 && var24 + 32 > var3 && var24 < var5 || Class118.anInterfaceComponent1348 == component && Client.anInt1588 == var22) {
                                                     Sprite var28;
                                                     if (Client.itemSelectionState == 1 && var22 == Class55.anInt421 && Class2.anInt15 == component.uid) {
-                                                        var28 = Class58.method365(var27, component.itemStackSizes[var22], 2, 0, 2, false);
+                                                        var28 = Key.method365(var27, component.itemStackSizes[var22], 2, 0, 2, false);
                                                     } else {
-                                                        var28 = Class58.method365(var27, component.itemStackSizes[var22], 1, 3153952, 2, false);
+                                                        var28 = Key.method365(var27, component.itemStackSizes[var22], 1, 3153952, 2, false);
                                                     }
 
                                                     if (var28 != null) {
@@ -468,7 +468,7 @@ public final class Class5 {
                                             }
                                         } else {
                                             if (component.itemId != -1) {
-                                                var37 = Class58.method365(component.itemId, component.itemStackSize, component.borderThickness, component.shadowColor, component.anInt777, false);
+                                                var37 = Key.method365(component.itemId, component.itemStackSize, component.borderThickness, component.shadowColor, component.anInt777, false);
                                             } else {
                                                 var37 = component.getMaterial(false);
                                             }

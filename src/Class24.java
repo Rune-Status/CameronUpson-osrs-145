@@ -1,17 +1,17 @@
 public class Class24 {
-    public final Class151 aClass151_167;
+    public final SceneOffset aSceneOffset_167;
     public final int anInt160;
-    public final Class151 aClass151_162;
+    public final SceneOffset aSceneOffset_162;
     final int anInt163;
     final int anInt161;
     final Class2 aClass2_166;
     int anInt165;
     int anInt164;
 
-    Class24(int var1, Class151 var2, Class151 var3, Class2 var4) {
+    Class24(int var1, SceneOffset var2, SceneOffset var3, Class2 var4) {
         this.anInt160 = var1;
-        this.aClass151_162 = var2;
-        this.aClass151_167 = var3;
+        this.aSceneOffset_162 = var2;
+        this.aSceneOffset_167 = var3;
         this.aClass2_166 = var4;
         Node_Sub21_Sub15 var5 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[this.anInt160];
         Sprite var6 = var5.method1117(false);

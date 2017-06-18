@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map.Entry;
 
 public class Class13 {
-    static final Class151 aClass151_100 = new Class151();
+    static final SceneOffset A_SCENE_OFFSET___100 = new SceneOffset();
     static int anInt102;
     final HashMap aHashMap97;
     int anInt107;
@@ -349,7 +349,7 @@ public class Class13 {
         for (int var6 = var1; var6 < var3 + var1; ++var6) {
             label55:
             for (int var7 = var2; var7 < var4 + var2; ++var7) {
-                Class151 var8 = new Class151(0, var6, var7);
+                SceneOffset var8 = new SceneOffset(0, var6, var7);
 
                 for (int var9 = 0; var9 < var5.anInt48; ++var9) {
                     Class11[] var10 = var5.aClass11ArrayArrayArrayArray50[var9][var6][var7];
@@ -359,13 +359,13 @@ public class Class13 {
                             Class11 var13 = var10[var12];
                             Node_Sub21_Sub15 var14 = this.method105(var13.anInt80);
                             if (var14 != null) {
-                                Class151 var15 = new Class151(var9, var6 + this.anInt107 * 64, this.anInt108 * 64 + var7);
-                                Class151 var16 = null;
+                                SceneOffset var15 = new SceneOffset(var9, var6 + this.anInt107 * 64, this.anInt108 * 64 + var7);
+                                SceneOffset var16 = null;
                                 if (this.aClass6_Sub2_109 != null) {
-                                    var16 = new Class151(var9 + this.aClass6_Sub2_109.anInt45, this.aClass6_Sub2_109.anInt40 * 64 + var6, this.aClass6_Sub2_109.anInt49 * 64 + var7);
+                                    var16 = new SceneOffset(var9 + this.aClass6_Sub2_109.anInt45, this.aClass6_Sub2_109.anInt40 * 64 + var6, this.aClass6_Sub2_109.anInt49 * 64 + var7);
                                 } else {
                                     Class6_Sub1 var17 = (Class6_Sub1) var5;
-                                    var16 = new Class151(var17.anInt45 + var9, var17.anInt40 * 64 + var6 + var17.method161() * 8, var7 + var17.anInt49 * 64 + var17.method160() * 8);
+                                    var16 = new SceneOffset(var17.anInt45 + var9, var17.anInt40 * 64 + var6 + var17.method161() * 8, var7 + var17.anInt49 * 64 + var17.method160() * 8);
                                 }
 
                                 Class24 var18 = new Class24(var14.anInt327, var16, var15, this.method84(var14));
@@ -385,8 +385,8 @@ public class Class13 {
 
         while (var2.hasNext()) {
             Class74 var3 = (Class74) var2.next();
-            if (this.anInt107 == var3.aClass151_743.anInt1832 >> 6 && var3.aClass151_743.anInt1831 >> 6 == this.anInt108) {
-                Class24 var4 = new Class24(var3.anInt742, var3.aClass151_743, var3.aClass151_743, this.method88(var3.anInt742));
+            if (this.anInt107 == var3.aSceneOffset_743.x >> 6 && var3.aSceneOffset_743.y >> 6 == this.anInt108) {
+                Class24 var4 = new Class24(var3.anInt742, var3.aSceneOffset_743, var3.aSceneOffset_743, this.method88(var3.anInt742));
                 this.aList106.add(var4);
             }
         }
@@ -684,9 +684,9 @@ public class Class13 {
 
         while (var7.hasNext()) {
             Entry var8 = (Entry) var7.next();
-            Class151 var9 = (Class151) var8.getKey();
-            int var10 = (int) (var5 * (float) var9.anInt1832 + (float) var1 - var6);
-            int var11 = (int) ((float) (var4 + var2) - var5 * (float) var9.anInt1831 - var6);
+            SceneOffset var9 = (SceneOffset) var8.getKey();
+            int var10 = (int) (var5 * (float) var9.x + (float) var1 - var6);
+            int var11 = (int) ((float) (var4 + var2) - var5 * (float) var9.y - var6);
             Class24 var12 = (Class24) var8.getValue();
             if (var12 != null) {
                 var12.anInt165 = var10;
@@ -883,7 +883,7 @@ public class Class13 {
     }
 
     void method85(int var1, int var2, Class6 var3) {
-        aClass151_100.method1004(0, var1, var2);
+        A_SCENE_OFFSET___100.set(0, var1, var2);
 
         for (int var4 = 0; var4 < var3.anInt48; ++var4) {
             Class11[] var5 = var3.aClass11ArrayArrayArrayArray50[var4][var1][var2];
@@ -893,31 +893,31 @@ public class Class13 {
                     Class11 var8 = var5[var7];
                     Node_Sub21_Sub15 var9 = this.method105(var8.anInt80);
                     if (var9 != null) {
-                        Class24 var10 = (Class24) this.aHashMap104.get(aClass151_100);
+                        Class24 var10 = (Class24) this.aHashMap104.get(A_SCENE_OFFSET___100);
                         if (var10 != null) {
                             if (var10.anInt160 != var9.anInt327) {
-                                Class24 var16 = new Class24(var9.anInt327, var10.aClass151_162, var10.aClass151_167, this.method84(var9));
-                                this.aHashMap104.put(new Class151(aClass151_100), var16);
+                                Class24 var16 = new Class24(var9.anInt327, var10.aSceneOffset_162, var10.aSceneOffset_167, this.method84(var9));
+                                this.aHashMap104.put(new SceneOffset(A_SCENE_OFFSET___100), var16);
                                 var10 = var16;
                             }
 
-                            int var12 = var10.aClass151_162.anInt1830 - var10.aClass151_167.anInt1830;
-                            var10.aClass151_167.anInt1830 = var4;
-                            var10.aClass151_162.anInt1830 = var12 + var4;
+                            int var12 = var10.aSceneOffset_162.z - var10.aSceneOffset_167.z;
+                            var10.aSceneOffset_167.z = var4;
+                            var10.aSceneOffset_162.z = var12 + var4;
                             return;
                         }
 
-                        Class151 var11 = new Class151(var4, this.anInt107 * 64 + var1, var2 + this.anInt108 * 64);
-                        Class151 var13 = null;
+                        SceneOffset var11 = new SceneOffset(var4, this.anInt107 * 64 + var1, var2 + this.anInt108 * 64);
+                        SceneOffset var13 = null;
                         if (this.aClass6_Sub2_109 != null) {
-                            var13 = new Class151(this.aClass6_Sub2_109.anInt45 + var4, this.aClass6_Sub2_109.anInt40 * 64 + var1, var2 + this.aClass6_Sub2_109.anInt49 * 64);
+                            var13 = new SceneOffset(this.aClass6_Sub2_109.anInt45 + var4, this.aClass6_Sub2_109.anInt40 * 64 + var1, var2 + this.aClass6_Sub2_109.anInt49 * 64);
                         } else {
                             Iterator var14 = this.aLinkedList103.iterator();
 
                             while (var14.hasNext()) {
                                 Class6_Sub1 var15 = (Class6_Sub1) var14.next();
                                 if (var15.method166(var1, var2)) {
-                                    var13 = new Class151(var15.anInt45 + var4, var1 + var15.anInt40 * 64 + var15.method161() * 8, var15.anInt49 * 64 + var2 + var15.method160() * 8);
+                                    var13 = new SceneOffset(var15.anInt45 + var4, var1 + var15.anInt40 * 64 + var15.method161() * 8, var15.anInt49 * 64 + var2 + var15.method160() * 8);
                                     break;
                                 }
                             }
@@ -925,7 +925,7 @@ public class Class13 {
 
                         if (var13 != null) {
                             var10 = new Class24(var9.anInt327, var13, var11, this.method84(var9));
-                            this.aHashMap104.put(new Class151(aClass151_100), var10);
+                            this.aHashMap104.put(new SceneOffset(A_SCENE_OFFSET___100), var10);
                             return;
                         }
                     }
@@ -933,7 +933,7 @@ public class Class13 {
             }
         }
 
-        this.aHashMap104.remove(aClass151_100);
+        this.aHashMap104.remove(A_SCENE_OFFSET___100);
     }
 
     boolean method107(int var1) {
@@ -1074,8 +1074,8 @@ public class Class13 {
 
         while (var6.hasNext()) {
             Class24 var7 = (Class24) var6.next();
-            int var8 = var7.aClass151_167.anInt1832 % 64;
-            int var9 = var7.aClass151_167.anInt1831 % 64;
+            int var8 = var7.aSceneOffset_167.x % 64;
+            int var9 = var7.aSceneOffset_167.y % 64;
             var7.anInt165 = (int) (var5 * (float) var8 + (float) var1);
             var7.anInt164 = (int) ((float) var2 + var5 * (float) (63 - var9));
             if (!var3.contains(var7.anInt160)) {

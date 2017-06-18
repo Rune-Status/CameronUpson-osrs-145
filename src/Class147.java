@@ -13,20 +13,20 @@ public class Class147 implements Class157 {
     static String aString1808;
 
     static {
-        aClass147_1815 = new Class147("", 15, new Class58[]{Class58.aClass58_521, Class58.aClass58_521}, null);
-        aClass147_1807 = new Class147("", 16, new Class58[]{Class58.aClass58_521, Class58.aClass58_521}, null);
-        aClass147_1806 = new Class147("", 17, new Class58[]{Class58.aClass58_521, Class58.aClass58_521}, null);
+        aClass147_1815 = new Class147("", 15, new Key[]{Key.aClass58_521, Key.aClass58_521}, null);
+        aClass147_1807 = new Class147("", 16, new Key[]{Key.aClass58_521, Key.aClass58_521}, null);
+        aClass147_1806 = new Class147("", 17, new Key[]{Key.aClass58_521, Key.aClass58_521}, null);
         aClass147_1805 = new Class147("", 73, true, true);
         aClass147_1803 = new Class147("", 76, true, false);
     }
 
     public final int anInt1811;
 
-    Class147(String var1, int var2, Class58[] var3, Class58[] var4) {
+    Class147(String var1, int var2, Key[] var3, Key[] var4) {
         this(var1, var2, var3 != null, var3, null != var4, var4);
     }
 
-    Class147(String var1, int var2, boolean var3, Class58[] var4, boolean var5, Class58[] var6) {
+    Class147(String var1, int var2, boolean var3, Key[] var4, boolean var5, Key[] var6) {
         this.anInt1811 = var2;
     }
 
