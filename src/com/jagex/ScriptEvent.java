@@ -198,7 +198,7 @@ public class ScriptEvent extends Node {
         if (var0 == 3923) {
             var3 = Class63.anIntArray645[--Class63.anInt644];
             var5 = (Class53) Client.aClass43_1459.aList359.get(var3);
-            long var6 = Class124.method873() - Tile.aLong1166 - var5.aLong412;
+            long var6 = Class124.currentTime() - Tile.aLong1166 - var5.aLong412;
             int var8 = (int) (var6 / 3600000L);
             int var9 = (int) ((var6 - (long) (var8 * 3600000)) / 60000L);
             int var10 = (int) ((var6 - (long) (var8 * 3600000) - (long) (var9 * '\uea60')) / 1000L);
@@ -1073,7 +1073,7 @@ public class ScriptEvent extends Node {
                 var24 = Class63.anIntArray645[Class63.anInt644];
                 var5 = Class63.anIntArray645[Class63.anInt644 + 1];
                 Client.packet.writeHeader(180);
-                Client.packet.method451(Class27.method179(var40) + 2);
+                Client.packet.method451(BefriendedPlayer.method179(var40) + 2);
                 Client.packet.method865(var40);
                 Client.packet.method451(var24 - 1);
                 Client.packet.method451(var5);
@@ -1312,9 +1312,9 @@ public class ScriptEvent extends Node {
                     Client.preferences.roofsHidden = !Client.preferences.roofsHidden;
                     Class78.method467();
                     if (Client.preferences.roofsHidden) {
-                        Class78.method469(99, "", "Roofs are now all hidden");
+                        Class78.addChatMessage(99, "", "Roofs are now all hidden");
                     } else {
-                        Class78.method469(99, "", "Roofs will only be removed selectively");
+                        Class78.addChatMessage(99, "", "Roofs will only be removed selectively");
                     }
                 }
 
@@ -1324,7 +1324,7 @@ public class ScriptEvent extends Node {
 
                 if (var40.equalsIgnoreCase("clickbox")) {
                     BoundingBoxInfo.useAxisAlignedBoundingBoxes = false;
-                    Class78.method469(99, "", "Clickbox Mode: " + (BoundingBoxInfo.useAxisAlignedBoundingBoxes ? "LEGACY_2D" : "Legacy"));
+                    Class78.addChatMessage(99, "", "Clickbox Mode: " + (BoundingBoxInfo.useAxisAlignedBoundingBoxes ? "LEGACY_2D" : "Legacy"));
                 }
 
                 if (Client.rights >= 2) {
@@ -1332,25 +1332,25 @@ public class ScriptEvent extends Node {
                         if (!BoundingBoxInfo.drawAxisAlignedBoundingBoxes) {
                             BoundingBoxInfo.drawAxisAlignedBoundingBoxes = true;
                             BoundingBoxInfo.currentBoundingBoxType = BoundingBoxType.LEGACY_2D;
-                            Class78.method469(99, "", "AABB boxes: All");
+                            Class78.addChatMessage(99, "", "AABB boxes: All");
                         } else if (BoundingBoxInfo.currentBoundingBoxType == BoundingBoxType.LEGACY_2D) {
                             BoundingBoxInfo.drawAxisAlignedBoundingBoxes = true;
                             BoundingBoxInfo.currentBoundingBoxType = BoundingBoxType.AABB;
-                            Class78.method469(99, "", "AABB boxes: Mouse Over");
+                            Class78.addChatMessage(99, "", "AABB boxes: Mouse Over");
                         } else {
                             BoundingBoxInfo.drawAxisAlignedBoundingBoxes = false;
-                            Class78.method469(99, "", "AABB boxes: Off");
+                            Class78.addChatMessage(99, "", "AABB boxes: Off");
                         }
                     }
 
                     if (var40.equalsIgnoreCase("legacyboxes")) {
                         BoundingBoxInfo.useLegacyClickBoxes = !BoundingBoxInfo.useLegacyClickBoxes;
-                        Class78.method469(99, "", "Show legacy boxes: " + BoundingBoxInfo.useLegacyClickBoxes);
+                        Class78.addChatMessage(99, "", "Show legacy boxes: " + BoundingBoxInfo.useLegacyClickBoxes);
                     }
 
                     if (var40.equalsIgnoreCase("geotests")) {
                         BoundingBoxInfo.drawLegacyClickBoxes = !BoundingBoxInfo.drawLegacyClickBoxes;
-                        Class78.method469(99, "", "Show geometry tests: " + BoundingBoxInfo.drawLegacyClickBoxes);
+                        Class78.addChatMessage(99, "", "Show geometry tests: " + BoundingBoxInfo.drawLegacyClickBoxes);
                     }
 
                     if (var40.equalsIgnoreCase("fpson")) {

@@ -25,7 +25,7 @@ public class Class123 {
 
     static void method813(String var0, int var1) {
         Client.packet.writeHeader(11);
-        Client.packet.method451(Class27.method179(var0) + 1);
+        Client.packet.method451(BefriendedPlayer.method179(var0) + 1);
         Client.packet.method865(var0);
         Client.packet.method836(var1);
     }

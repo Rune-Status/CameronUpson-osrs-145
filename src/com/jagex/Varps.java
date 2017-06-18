@@ -29,20 +29,20 @@ public class Varps {
         if (var0 != null) {
             String var1 = Class84.method484(var0, Class2.aClass188_13);
             if (var1 != null) {
-                for (int var2 = 0; var2 < Client.anInt1450; ++var2) {
+                for (int var2 = 0; var2 < Client.ignoredPlayerCount; ++var2) {
                     IgnoredPlayer var3 = Client.ignoredPlayers[var2];
-                    String var4 = var3.aString242;
+                    String var4 = var3.name;
                     String var5 = Class84.method484(var4, Class2.aClass188_13);
                     if (Class170.method1152(var0, var1, var4, var5)) {
-                        --Client.anInt1450;
+                        --Client.ignoredPlayerCount;
 
-                        for (int var6 = var2; var6 < Client.anInt1450; ++var6) {
+                        for (int var6 = var2; var6 < Client.ignoredPlayerCount; ++var6) {
                             Client.ignoredPlayers[var6] = Client.ignoredPlayers[var6 + 1];
                         }
 
                         Client.anInt1660 = Client.anInt1644;
                         Client.packet.writeHeader(163);
-                        Client.packet.method451(Class27.method179(var0));
+                        Client.packet.method451(BefriendedPlayer.method179(var0));
                         Client.packet.method865(var0);
                         break;
                     }

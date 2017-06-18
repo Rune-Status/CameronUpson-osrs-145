@@ -57,7 +57,7 @@ public class Class105 {
                         }
 
                         Class168.anInt2079 = 0;
-                        Class168.aLong2072 = Class124.method873();
+                        Class168.aLong2072 = Class124.currentTime();
                         return;
                     }
 

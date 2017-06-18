@@ -551,7 +551,7 @@ public class Class94 {
             if (var2 == 1005) {
                 var17 = InterfaceComponent.method1016(var1);
                 if (var17 != null && var17.itemStackSizes[var0] >= 100000) {
-                    Class78.method469(27, "", var17.itemStackSizes[var0] + " x " + Class149.method1001(var3).name);
+                    Class78.addChatMessage(27, "", var17.itemStackSizes[var0] + " x " + Class149.method1001(var3).name);
                 } else {
                     Client.packet.writeHeader(104);
                     Client.packet.method755(var3);

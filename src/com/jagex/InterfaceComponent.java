@@ -305,6 +305,47 @@ public class InterfaceComponent extends Node {
         }
     }
 
+    static void method215(InterfaceComponent[] var0, int var1) {
+        for (int var2 = 0; var2 < var0.length; ++var2) {
+            InterfaceComponent var3 = var0[var2];
+            if (var3 != null) {
+                if (var3.type == 0) {
+                    if (var3.components != null) {
+                        method215(var3.components, var1);
+                    }
+
+                    InterfaceNode var4 = Client.interfaceNodes.lookup((long) var3.uid);
+                    if (var4 != null) {
+                        Class76.method452(var4.id, var1);
+                    }
+                }
+
+                ScriptEvent var5;
+                if (var1 == 0 && var3.anObjectArray1912 != null) {
+                    var5 = new ScriptEvent();
+                    var5.source = var3;
+                    var5.args = var3.anObjectArray1912;
+                    Class25.method174(var5);
+                }
+
+                if (var1 == 1 && var3.anObjectArray1922 != null) {
+                    if (var3.componentIndex >= 0) {
+                        InterfaceComponent var6 = method1016(var3.uid);
+                        if (var6 == null || var6.components == null || var3.componentIndex >= var6.components.length || var6.components[var3.componentIndex] != var3) {
+                            continue;
+                        }
+                    }
+
+                    var5 = new ScriptEvent();
+                    var5.source = var3;
+                    var5.args = var3.anObjectArray1922;
+                    Class25.method174(var5);
+                }
+            }
+        }
+
+    }
+
     public Sprite method1017(int var1) {
         aBoolean1174 = false;
         if (var1 >= 0 && var1 < this.anIntArray1883.length) {

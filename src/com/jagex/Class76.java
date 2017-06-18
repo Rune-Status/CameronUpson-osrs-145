@@ -74,7 +74,7 @@ public class Class76 implements EnumOrdinal {
 
     static void method452(int var0, int var1) {
         if (Class33.method220(var0)) {
-            Class134_Sub1.method215(InterfaceComponent.interfaces[var0], var1);
+            InterfaceComponent.method215(InterfaceComponent.interfaces[var0], var1);
         }
     }
 

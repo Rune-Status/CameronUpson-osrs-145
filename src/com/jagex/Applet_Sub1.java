@@ -657,7 +657,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     }
 
     void method243() {
-        long var1 = Class124.method873();
+        long var1 = Class124.currentTime();
         long var3 = aLongArray310[Class138.anInt1760];
         aLongArray310[Class138.anInt1760] = var1;
         Class138.anInt1760 = Class138.anInt1760 + 1 & 31;
@@ -841,7 +841,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
             aClass122_303 = (Class122) var8;
 
-            while (aLong307 == 0L || Class124.method873() < aLong307) {
+            while (aLong307 == 0L || Class124.currentTime() < aLong307) {
                 anInt290 = aClass122_303.method666(anInt287, anInt284);
 
                 for (int var4 = 0; var4 < anInt290; ++var4) {
@@ -861,7 +861,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     void method231() {
         Container var1 = this.method244();
-        long var2 = Class124.method873();
+        long var2 = Class124.currentTime();
         long var4 = aLongArray282[AnimationSkin.anInt919];
         aLongArray282[AnimationSkin.anInt919] = var2;
         AnimationSkin.anInt919 = AnimationSkin.anInt919 + 1 & 31;
@@ -943,13 +943,13 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     public final void stop() {
         if (anApplet_Sub1_297 == this && !aBoolean312) {
-            aLong307 = Class124.method873() + 4000L;
+            aLong307 = Class124.currentTime() + 4000L;
         }
     }
 
     public final void destroy() {
         if (this == anApplet_Sub1_297 && !aBoolean312) {
-            aLong307 = Class124.method873();
+            aLong307 = Class124.currentTime();
             Class127.method875(5000L);
             this.method235();
         }
@@ -962,7 +962,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     public final synchronized void method225(Graphics var1) {
         if (anApplet_Sub1_297 == this && !aBoolean312) {
             this.aBoolean281 = true;
-            if (Class124.method873() - this.aLong280 > 1000L) {
+            if (Class124.currentTime() - this.aLong280 > 1000L) {
                 Rectangle var2 = var1.getClipBounds();
                 if (var2 == null || var2.width >= AxisAlignedBoundingBox.appletWidth && var2.height >= Class64.appletHeight) {
                     this.aBoolean283 = true;
@@ -1195,7 +1195,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         }
 
         this.aBoolean283 = false;
-        this.aLong280 = Class124.method873();
+        this.aLong280 = Class124.currentTime();
     }
 
     void method257() {

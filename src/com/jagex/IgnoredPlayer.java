@@ -2,7 +2,7 @@ package com.jagex;
 
 public class IgnoredPlayer {
     String aString243;
-    String aString242;
+    String name;
 
     static void method210(Class42 var0, int var1, int var2) {
         Class94.method620(var0.anInt352, var0.anInt357, var0.anInt354, var0.anInt355, var0.aString353, var0.aString353, var1, var2);

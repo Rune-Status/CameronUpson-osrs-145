@@ -52,7 +52,7 @@ public final class TilePaint {
     }
 
     public static boolean method662() {
-        long var0 = Class124.method873();
+        long var0 = Class124.currentTime();
         int var2 = (int) (var0 - Class168.aLong2072);
         Class168.aLong2072 = var0;
         if (var2 > 200) {

@@ -48,7 +48,7 @@ public final class Client extends Applet_Sub1 {
     static int anInt1430;
     static int[] menuOpcodes;
     static long aLong1489;
-    static Class27[] aClass27Array1449;
+    static BefriendedPlayer[] befriendedPlayers;
     static CacheReferenceTable aCacheReferenceTable1496;
     static int anInt1502;
     static int anInt1505;
@@ -86,7 +86,7 @@ public final class Client extends Applet_Sub1 {
     static int anInt1533;
     static int anInt1537;
     static int anInt1534;
-    static Class139 aClass139_1441;
+    static LinkableList friendLogins;
     static int anInt1535;
     static int anInt1538;
     static int mapScale;
@@ -282,11 +282,11 @@ public final class Client extends Applet_Sub1 {
     static int viewportWidth;
     static Class162 aClass162_1468;
     static int[] anIntArray1429;
-    static int anInt1431;
     static int friendCount;
+    static int wrongnamelol;
     static NodeDeque<Projectile> projectiles;
     static int[] anIntArray1659;
-    static int anInt1450;
+    static int ignoredPlayerCount;
     static int anInt1593;
     static PlayerAppearance aPlayerAppearance1455;
     static GrandExchangeOffer[] grandExchangeOffers;
@@ -543,11 +543,11 @@ public final class Client extends Applet_Sub1 {
         viewportWidth = 0;
         viewportHeight = 0;
         viewportScale = 0;
-        anInt1431 = 0;
         friendCount = 0;
-        aClass27Array1449 = new Class27[400];
-        aClass139_1441 = new Class139();
-        anInt1450 = 0;
+        wrongnamelol = 0;
+        befriendedPlayers = new BefriendedPlayer[400];
+        friendLogins = new LinkableList();
+        ignoredPlayerCount = 0;
         ignoredPlayers = new IgnoredPlayer[400];
         aPlayerAppearance1455 = new PlayerAppearance();
         anInt1440 = -1;
@@ -563,7 +563,7 @@ public final class Client extends Applet_Sub1 {
     static void method894(String var0) {
         if (Class126.aClanMateArray1370 != null) {
             packet.writeHeader(127);
-            packet.method451(Class27.method179(var0));
+            packet.method451(BefriendedPlayer.method179(var0));
             packet.method865(var0);
         }
     }
@@ -893,7 +893,7 @@ public final class Client extends Applet_Sub1 {
             Class105.aClass84_1244.method489();
         }
 
-        if ((connectionState == 10 || connectionState == 20 || connectionState == 30) && 0L != aLong1691 && Class124.method873() > aLong1691) {
+        if ((connectionState == 10 || connectionState == 20 || connectionState == 30) && 0L != aLong1691 && Class124.currentTime() > aLong1691) {
             Class1.method4(Node_Sub21_Sub20.method1126());
         }
 
@@ -1008,12 +1008,12 @@ public final class Client extends Applet_Sub1 {
                         var1.method869(145);
                         Class51.aSocket380.method885(var1.payload, 0, 5);
                         ++anInt1487;
-                        aLong1489 = Class124.method873();
+                        aLong1489 = Class124.currentTime();
                     }
 
                     if (anInt1487 == 3) {
                         if (connectionState > 5 && Class51.aSocket380.method884() <= 0) {
-                            if (Class124.method873() - aLong1489 > 30000L) {
+                            if (Class124.currentTime() - aLong1489 > 30000L) {
                                 this.method901(-2);
                                 return;
                             }
@@ -1415,9 +1415,9 @@ public final class Client extends Applet_Sub1 {
                         }
 
                         pendingSpawns = new NodeDeque<>();
+                        wrongnamelol = 0;
                         friendCount = 0;
-                        anInt1431 = 0;
-                        anInt1450 = 0;
+                        ignoredPlayerCount = 0;
 
                         for (var1 = 0; var1 < Node_Sub21_Sub20.anInt209; ++var1) {
                             Node_Sub21_Sub20 var8 = Class74.method436(var1);
@@ -1456,7 +1456,7 @@ public final class Client extends Applet_Sub1 {
                         }
 
                         for (InterfaceNode var11 = interfaceNodes.first(); var11 != null; var11 = interfaceNodes.next()) {
-                            Class134_Sub1.method216(var11, true);
+                            InterfaceNode.method216(var11, true);
                         }
 
                         anInt1632 = -1;
@@ -2137,7 +2137,7 @@ public final class Client extends Applet_Sub1 {
                     packet.writeHeader(172);
                     packet.method755(0);
                     var1 = packet.caret;
-                    long var13 = Class124.method873();
+                    long var13 = Class124.currentTime();
 
                     for (var5 = 0; var5 < Class4.anInt19; ++var5) {
                         long var15 = var13 - aLong1684;
@@ -2692,17 +2692,17 @@ public final class Client extends Applet_Sub1 {
                                                                 anInt1546 = -1;
                                                             }
 
-                                                            for (Class134_Sub1 var24 = (Class134_Sub1) aClass139_1441.method969(); var24 != null; var24 = (Class134_Sub1) aClass139_1441.method968()) {
-                                                                if ((long) var24.anInt251 < Class124.method873() / 1000L - 5L) {
-                                                                    if (var24.aShort252 > 0) {
-                                                                        Class78.method469(5, "", var24.aString253 + " has logged in.");
+                                                            for (FriendLogin var24 = (FriendLogin) friendLogins.head(); var24 != null; var24 = (FriendLogin) friendLogins.next()) {
+                                                                if ((long) var24.time < Class124.currentTime() / 1000L - 5L) {
+                                                                    if (var24.world > 0) {
+                                                                        Class78.addChatMessage(5, "", var24.name + " has logged in.");
                                                                     }
 
-                                                                    if (var24.aShort252 == 0) {
-                                                                        Class78.method469(5, "", var24.aString253 + " has logged out.");
+                                                                    if (var24.world == 0) {
+                                                                        Class78.addChatMessage(5, "", var24.name + " has logged out.");
                                                                     }
 
-                                                                    var24.method939();
+                                                                    var24.unlink();
                                                                 }
                                                             }
 
@@ -2873,7 +2873,7 @@ public final class Client extends Applet_Sub1 {
             if (anInt1511 == 101) {
                 var103 = aPacket1521.readUnsignedByte() == 1;
                 if (var103) {
-                    Tile.aLong1166 = Class124.method873() - aPacket1521.method837();
+                    Tile.aLong1166 = Class124.currentTime() - aPacket1521.method837();
                     aClass43_1459 = new Class43(aPacket1521, true);
                 } else {
                     aClass43_1459 = null;
@@ -2941,7 +2941,7 @@ public final class Client extends Applet_Sub1 {
             }
 
             if (anInt1511 == 42) {
-                friendCount = 1;
+                wrongnamelol = 1;
                 anInt1660 = anInt1644;
                 anInt1511 = -1;
                 return true;
@@ -3243,10 +3243,10 @@ public final class Client extends Applet_Sub1 {
                 var62 = aPacket1521.method834();
                 var110 = interfaceNodes.lookup((long) var2);
                 if (var110 != null) {
-                    Class134_Sub1.method216(var110, var3 != var110.id);
+                    InterfaceNode.method216(var110, var3 != var110.id);
                 }
 
-                Class134_Sub1.method214(var2, var3, var62);
+                InterfaceNode.method214(var2, var3, var62);
                 anInt1511 = -1;
                 return true;
             }
@@ -3283,30 +3283,29 @@ public final class Client extends Applet_Sub1 {
 
                     aPacket1521.method819();
 
-                    for (int var32 = 0; var32 < anInt1431; ++var32) {
-                        Class27 var17 = aClass27Array1449[var32];
+                    for (int var32 = 0; var32 < friendCount; ++var32) {
+                        BefriendedPlayer var17 = befriendedPlayers[var32];
                         if (!var103) {
-                            if (var83.equals(var17.aString198)) {
-                                if (var17.anInt200 != var63) {
+                            if (var83.equals(var17.name)) {
+                                if (var17.world != var63) {
                                     boolean var113 = true;
-
-                                    for (Class134_Sub1 var105 = (Class134_Sub1) aClass139_1441.method969(); var105 != null; var105 = (Class134_Sub1) aClass139_1441.method968()) {
-                                        if (var105.aString253.equals(var83)) {
-                                            if (var63 != 0 && var105.aShort252 == 0) {
-                                                var105.method939();
+                                    for (FriendLogin friendLogin = (FriendLogin) friendLogins.head(); friendLogin != null; friendLogin = (FriendLogin) friendLogins.next()) {
+                                        if (friendLogin.name.equals(var83)) {
+                                            if (var63 != 0 && friendLogin.world == 0) {
+                                                friendLogin.unlink();
                                                 var113 = false;
-                                            } else if (var63 == 0 && var105.aShort252 != 0) {
-                                                var105.method939();
+                                            } else if (var63 == 0 && friendLogin.world != 0) {
+                                                friendLogin.unlink();
                                                 var113 = false;
                                             }
                                         }
                                     }
 
                                     if (var113) {
-                                        aClass139_1441.method967(new Class134_Sub1(var83, var63));
+                                        friendLogins.add(new FriendLogin(var83, var63));
                                     }
 
-                                    var17.anInt200 = var63;
+                                    var17.world = var63;
                                 }
 
                                 var17.aString203 = var67;
@@ -3316,31 +3315,31 @@ public final class Client extends Applet_Sub1 {
                                 var83 = null;
                                 break;
                             }
-                        } else if (var67.equals(var17.aString198)) {
-                            var17.aString198 = var83;
+                        } else if (var67.equals(var17.name)) {
+                            var17.name = var83;
                             var17.aString203 = var67;
                             var83 = null;
                             break;
                         }
                     }
 
-                    if (var83 != null && anInt1431 < 400) {
-                        Class27 var96 = new Class27();
-                        aClass27Array1449[anInt1431] = var96;
-                        var96.aString198 = var83;
+                    if (var83 != null && friendCount < 400) {
+                        BefriendedPlayer var96 = new BefriendedPlayer();
+                        befriendedPlayers[friendCount] = var96;
+                        var96.name = var83;
                         var96.aString203 = var67;
-                        var96.anInt200 = var63;
+                        var96.world = var63;
                         var96.anInt199 = var68;
                         var96.aBoolean201 = var115;
                         var96.aBoolean202 = var95;
-                        ++anInt1431;
+                        ++friendCount;
                     }
                 }
 
-                friendCount = 2;
+                wrongnamelol = 2;
                 anInt1660 = anInt1644;
                 var103 = false;
-                var3 = anInt1431;
+                var3 = friendCount;
 
                 while (var3 > 0) {
                     var103 = true;
@@ -3348,13 +3347,13 @@ public final class Client extends Applet_Sub1 {
 
                     for (var62 = 0; var62 < var3; ++var62) {
                         var5 = false;
-                        Class27 var81 = aClass27Array1449[var62];
-                        Class27 var92 = aClass27Array1449[var62 + 1];
-                        if (var81.anInt200 != currentWorld && currentWorld == var92.anInt200) {
+                        BefriendedPlayer var81 = befriendedPlayers[var62];
+                        BefriendedPlayer var92 = befriendedPlayers[var62 + 1];
+                        if (var81.world != currentWorld && currentWorld == var92.world) {
                             var5 = true;
                         }
 
-                        if (!var5 && var81.anInt200 == 0 && var92.anInt200 != 0) {
+                        if (!var5 && var81.world == 0 && var92.world != 0) {
                             var5 = true;
                         }
 
@@ -3367,9 +3366,9 @@ public final class Client extends Applet_Sub1 {
                         }
 
                         if (var5) {
-                            Class27 var97 = aClass27Array1449[var62];
-                            aClass27Array1449[var62] = aClass27Array1449[var62 + 1];
-                            aClass27Array1449[var62 + 1] = var97;
+                            BefriendedPlayer var97 = befriendedPlayers[var62];
+                            befriendedPlayers[var62] = befriendedPlayers[var62 + 1];
+                            befriendedPlayers[var62 + 1] = var97;
                             var103 = false;
                         }
                     }
@@ -3453,7 +3452,7 @@ public final class Client extends Applet_Sub1 {
                     if (var11.length() == 0) {
                         var112 = var112 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     } else {
-                        var112 = var112 + "; Expires=" + Class94.method615(Class124.method873() + 94608000000L) + "; Max-Age=" + 94608000L;
+                        var112 = var112 + "; Expires=" + Class94.method615(Class124.currentTime() + 94608000000L) + "; Max-Age=" + 94608000L;
                     }
 
                     Client var79 = Class160.aClient1856;
@@ -3593,7 +3592,7 @@ public final class Client extends Applet_Sub1 {
                     }
                 }
 
-                long var34 = Class124.method873();
+                long var34 = Class124.currentTime();
                 var68 = -1;
                 if (Class60.aGarbageCollectorMXBean629 != null) {
                     var36 = Class60.aGarbageCollectorMXBean629.getCollectionTime();
@@ -3623,7 +3622,7 @@ public final class Client extends Applet_Sub1 {
                 Packet var72 = aPacket1521;
                 var83 = Class112.method772(var72, 32767);
                 var112 = Node_Sub21_Sub26_Sub3.method1177(Node_Sub21_Sub5.method1011(var83));
-                Class78.method469(6, var11, var112);
+                Class78.addChatMessage(6, var11, var112);
                 anInt1511 = -1;
                 return true;
             }
@@ -3637,29 +3636,29 @@ public final class Client extends Applet_Sub1 {
                     var112 = aPacket1521.method819();
                     aPacket1521.method819();
 
-                    for (var68 = 0; var68 < anInt1450; ++var68) {
+                    for (var68 = 0; var68 < ignoredPlayerCount; ++var68) {
                         IgnoredPlayer var89 = ignoredPlayers[var68];
                         if (var66) {
-                            if (var112.equals(var89.aString242)) {
-                                var89.aString242 = var67;
+                            if (var112.equals(var89.name)) {
+                                var89.name = var67;
                                 var89.aString243 = var112;
                                 var67 = null;
                                 break;
                             }
-                        } else if (var67.equals(var89.aString242)) {
-                            var89.aString242 = var67;
+                        } else if (var67.equals(var89.name)) {
+                            var89.name = var67;
                             var89.aString243 = var112;
                             var67 = null;
                             break;
                         }
                     }
 
-                    if (var67 != null && anInt1450 < 400) {
+                    if (var67 != null && ignoredPlayerCount < 400) {
                         IgnoredPlayer var77 = new IgnoredPlayer();
-                        ignoredPlayers[anInt1450] = var77;
-                        var77.aString242 = var67;
+                        ignoredPlayers[ignoredPlayerCount] = var77;
+                        var77.name = var67;
                         var77.aString243 = var112;
-                        ++anInt1450;
+                        ++ignoredPlayerCount;
                     }
                 }
 
@@ -3801,7 +3800,7 @@ public final class Client extends Applet_Sub1 {
                 var2 = aPacket1521.method835();
                 InterfaceNode var82 = interfaceNodes.lookup((long) var2);
                 if (var82 != null) {
-                    Class134_Sub1.method216(var82, true);
+                    InterfaceNode.method216(var82, true);
                 }
 
                 if (anInterfaceComponent1627 != null) {
@@ -4048,7 +4047,7 @@ public final class Client extends Applet_Sub1 {
 
                 String var71 = aPacket1521.method819();
                 if (!var5) {
-                    Class78.method469(var2, var67, var71);
+                    Class78.addChatMessage(var2, var67, var71);
                 }
 
                 anInt1511 = -1;
@@ -4220,9 +4219,9 @@ public final class Client extends Applet_Sub1 {
                     }
 
                     if (var93.anInt1852 != -1) {
-                        Class78.method469(var49, Canvas.method187(var93.anInt1852) + var11, var22);
+                        Class78.addChatMessage(var49, Canvas.method187(var93.anInt1852) + var11, var22);
                     } else {
-                        Class78.method469(var49, var11, var22);
+                        Class78.addChatMessage(var49, var11, var22);
                     }
                 }
 
@@ -4388,12 +4387,12 @@ public final class Client extends Applet_Sub1 {
                     var8 = aPacket1521.readUnsignedByte();
                     var13 = interfaceNodes.lookup((long) var63);
                     if (var13 != null && var13.id != var68) {
-                        Class134_Sub1.method216(var13, true);
+                        InterfaceNode.method216(var13, true);
                         var13 = null;
                     }
 
                     if (var13 == null) {
-                        var13 = Class134_Sub1.method214(var63, var68, var8);
+                        var13 = InterfaceNode.method214(var63, var68, var8);
                     }
                 }
 
@@ -4401,7 +4400,7 @@ public final class Client extends Applet_Sub1 {
                     if (var110.aBoolean316) {
                         var110.aBoolean316 = false;
                     } else {
-                        Class134_Sub1.method216(var110, true);
+                        InterfaceNode.method216(var110, true);
                     }
                 }
 
@@ -4600,7 +4599,7 @@ public final class Client extends Applet_Sub1 {
                 InterfaceNode var64 = interfaceNodes.lookup((long) var3);
                 var110 = interfaceNodes.lookup((long) var2);
                 if (var110 != null) {
-                    Class134_Sub1.method216(var110, var64 == null || var64.id != var110.id);
+                    InterfaceNode.method216(var110, var64 == null || var64.id != var110.id);
                 }
 
                 if (var64 != null) {
@@ -5016,7 +5015,7 @@ public final class Client extends Applet_Sub1 {
     }
 
     protected final void method259() {
-        aLong1691 = Class124.method873() + 500L;
+        aLong1691 = Class124.currentTime() + 500L;
         this.method903();
         if (anInt1632 != -1) {
             this.method896(true);

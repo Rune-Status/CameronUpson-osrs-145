@@ -45,7 +45,7 @@ public class Class165 implements Runnable {
         Class177.method1189(var5);
         var5.method861(var3.nextLong());
         var5.method830(Class61.aBigInteger633, Class61.aBigInteger634);
-        var7 = Class27.method179(var2);
+        var7 = BefriendedPlayer.method179(var2);
         if (var7 % 8 != 0) {
             var7 += 8 - var7 % 8;
         }

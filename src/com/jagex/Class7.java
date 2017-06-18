@@ -61,9 +61,9 @@ public final class Class7 {
             var2.aString752 = var0.method819();
             if (var2.aString752.charAt(0) == '~') {
                 var2.aString752 = var2.aString752.substring(1);
-                Class78.method469(2, var2.name, var2.aString752);
+                Class78.addChatMessage(2, var2.name, var2.aString752);
             } else if (var2 == Client.player) {
-                Class78.method469(2, var2.name, var2.aString752);
+                Class78.addChatMessage(2, var2.name, var2.aString752);
             }
 
             var2.aBoolean750 = false;
@@ -160,9 +160,9 @@ public final class Class7 {
                     }
 
                     if (var20.anInt1852 != -1) {
-                        Class78.method469(var18, Canvas.method187(var20.anInt1852) + var2.name, var17);
+                        Class78.addChatMessage(var18, Canvas.method187(var20.anInt1852) + var2.name, var17);
                     } else {
-                        Class78.method469(var18, var2.name, var17);
+                        Class78.addChatMessage(var18, var2.name, var17);
                     }
                 }
             }

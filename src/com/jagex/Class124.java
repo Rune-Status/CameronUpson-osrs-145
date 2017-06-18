@@ -12,7 +12,7 @@ public class Class124 {
     Class124(int var1, int var2, int var3) {
     }
 
-    public static synchronized long method873() {
+    public static synchronized long currentTime() {
         long var0 = System.currentTimeMillis();
         if (var0 < Class125.aLong1365) {
             Class125.aLong1367 += Class125.aLong1365 - var0;

@@ -227,8 +227,8 @@ public class Class112 {
         }
         String var2 = Class84.method484(var0, Class2.aClass188_13);
 
-        for (int var3 = 0; var3 < Client.anInt1431; ++var3) {
-            if (var2.equalsIgnoreCase(Class84.method484(Client.aClass27Array1449[var3].aString198, Class2.aClass188_13)) && (!var1 || Client.aClass27Array1449[var3].anInt200 != 0)) {
+        for (int var3 = 0; var3 < Client.friendCount; ++var3) {
+            if (var2.equalsIgnoreCase(Class84.method484(Client.befriendedPlayers[var3].name, Class2.aClass188_13)) && (!var1 || Client.befriendedPlayers[var3].world != 0)) {
                 return true;
             }
         }

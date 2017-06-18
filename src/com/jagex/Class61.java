@@ -32,9 +32,9 @@ public class Class61 {
         }
         String var1 = Class84.method484(var0, Class2.aClass188_13);
 
-        for (int var2 = 0; var2 < Client.anInt1450; ++var2) {
+        for (int var2 = 0; var2 < Client.ignoredPlayerCount; ++var2) {
             IgnoredPlayer var3 = Client.ignoredPlayers[var2];
-            if (var1.equalsIgnoreCase(Class84.method484(var3.aString242, Class2.aClass188_13))) {
+            if (var1.equalsIgnoreCase(Class84.method484(var3.name, Class2.aClass188_13))) {
                 return true;
             }
 

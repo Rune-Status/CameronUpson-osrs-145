@@ -12,56 +12,56 @@ public final class Class90 {
 
     static void method585(String var0, boolean var1) {
         if (var0 != null) {
-            if ((Client.anInt1450 < 100 || Client.anInt1593 == 1) && Client.anInt1450 < 400) {
+            if ((Client.ignoredPlayerCount < 100 || Client.anInt1593 == 1) && Client.ignoredPlayerCount < 400) {
                 String var2 = Class84.method484(var0, Class2.aClass188_13);
                 if (var2 != null) {
                     int var3;
                     String var5;
                     String var6;
-                    for (var3 = 0; var3 < Client.anInt1450; ++var3) {
+                    for (var3 = 0; var3 < Client.ignoredPlayerCount; ++var3) {
                         IgnoredPlayer var4 = Client.ignoredPlayers[var3];
-                        var5 = Class84.method484(var4.aString242, Class2.aClass188_13);
+                        var5 = Class84.method484(var4.name, Class2.aClass188_13);
                         if (var5 != null && var5.equals(var2)) {
-                            Class78.method469(31, "", var0 + " is already on your ignore list");
+                            Class78.addChatMessage(31, "", var0 + " is already on your ignore list");
                             return;
                         }
 
                         if (var4.aString243 != null) {
                             var6 = Class84.method484(var4.aString243, Class2.aClass188_13);
                             if (var6 != null && var6.equals(var2)) {
-                                Class78.method469(31, "", var0 + " is already on your ignore list");
+                                Class78.addChatMessage(31, "", var0 + " is already on your ignore list");
                                 return;
                             }
                         }
                     }
 
-                    for (var3 = 0; var3 < Client.anInt1431; ++var3) {
-                        Class27 var7 = Client.aClass27Array1449[var3];
-                        var5 = Class84.method484(var7.aString198, Class2.aClass188_13);
+                    for (var3 = 0; var3 < Client.friendCount; ++var3) {
+                        BefriendedPlayer var7 = Client.befriendedPlayers[var3];
+                        var5 = Class84.method484(var7.name, Class2.aClass188_13);
                         if (var5 != null && var5.equals(var2)) {
-                            Class78.method469(31, "", "Please remove " + var0 + " from your friend list first");
+                            Class78.addChatMessage(31, "", "Please remove " + var0 + " from your friend list first");
                             return;
                         }
 
                         if (var7.aString203 != null) {
                             var6 = Class84.method484(var7.aString203, Class2.aClass188_13);
                             if (var6 != null && var6.equals(var2)) {
-                                Class78.method469(31, "", "Please remove " + var0 + " from your friend list first");
+                                Class78.addChatMessage(31, "", "Please remove " + var0 + " from your friend list first");
                                 return;
                             }
                         }
                     }
 
                     if (Class84.method484(Client.player.name, Class2.aClass188_13).equals(var2)) {
-                        Class78.method469(31, "", "You can't insert yourself to your own ignore list");
+                        Class78.addChatMessage(31, "", "You can't insert yourself to your own ignore list");
                     } else {
                         Client.packet.writeHeader(148);
-                        Client.packet.method451(Class27.method179(var0));
+                        Client.packet.method451(BefriendedPlayer.method179(var0));
                         Client.packet.method865(var0);
                     }
                 }
             } else {
-                Class78.method469(31, "", "Your ignore list is full. Max of 100 for free users, and 400 for members");
+                Class78.addChatMessage(31, "", "Your ignore list is full. Max of 100 for free users, and 400 for members");
             }
         }
     }

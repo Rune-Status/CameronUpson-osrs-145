@@ -100,7 +100,7 @@ public class HealthBar extends Node {
     static void method344(String var0) {
         if (!var0.equals("")) {
             Client.packet.writeHeader(105);
-            Client.packet.method451(Class27.method179(var0));
+            Client.packet.method451(BefriendedPlayer.method179(var0));
             Client.packet.method865(var0);
         }
     }

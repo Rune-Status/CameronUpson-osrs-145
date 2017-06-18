@@ -273,7 +273,7 @@ final class Class78 implements Class66 {
         Class171.aReferenceTable2125 = var1;
     }
 
-    static void method469(int var0, String var1, String var2) {
+    static void addChatMessage(int var0, String var1, String var2) {
         Class75.method447(var0, var1, var2, null);
     }
 }

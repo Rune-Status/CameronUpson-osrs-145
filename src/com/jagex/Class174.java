@@ -6,7 +6,7 @@ public final class Class174 {
 
         for (InterfaceNode var0 = Client.interfaceNodes.first(); var0 != null; var0 = Client.interfaceNodes.next()) {
             if (var0.state == 0 || var0.state == 3) {
-                Class134_Sub1.method216(var0, true);
+                InterfaceNode.method216(var0, true);
             }
         }
 

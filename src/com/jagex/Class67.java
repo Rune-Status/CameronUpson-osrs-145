@@ -104,7 +104,7 @@ public class Class67 {
 
             for (int var5 = 0; var5 < this.aStringArray678.length; ++var5) {
                 if (this.aBooleanArray674[var5] && this.aStringArray678[var5] != null) {
-                    var2 += Class27.method179(this.aStringArray678[var5]) + 2;
+                    var2 += BefriendedPlayer.method179(this.aStringArray678[var5]) + 2;
                     ++var4;
                 }
             }
@@ -141,7 +141,7 @@ public class Class67 {
         }
 
         this.aBoolean679 = false;
-        this.aLong677 = Class124.method873();
+        this.aLong677 = Class124.currentTime();
     }
 
     void method400() {
@@ -214,7 +214,7 @@ public class Class67 {
     }
 
     void method407() {
-        if (this.aBoolean679 && this.aLong677 < Class124.method873() - 60000L) {
+        if (this.aBoolean679 && this.aLong677 < Class124.currentTime() - 60000L) {
             this.method404();
         }
 

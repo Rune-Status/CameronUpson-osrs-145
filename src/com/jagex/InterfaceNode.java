@@ -161,4 +161,67 @@ public class InterfaceNode extends Node {
         int var4 = var0.method1104(var3, var2);
         return Class18.method138(var0, var3, var4);
     }
+
+    static void method216(InterfaceNode var0, boolean var1) {
+        int var2 = var0.id;
+        int var3 = (int) var0.key;
+        var0.unlink();
+        if (var1 && var2 != -1 && Class70.aBooleanArray716[var2]) {
+            Class51.aReferenceTable382.method1089(var2);
+            if (InterfaceComponent.interfaces[var2] != null) {
+                boolean var5 = true;
+
+                for (int var6 = 0; var6 < InterfaceComponent.interfaces[var2].length; ++var6) {
+                    if (InterfaceComponent.interfaces[var2][var6] != null) {
+                        if (InterfaceComponent.interfaces[var2][var6].type != 2) {
+                            InterfaceComponent.interfaces[var2][var6] = null;
+                        } else {
+                            var5 = false;
+                        }
+                    }
+                }
+
+                if (var5) {
+                    InterfaceComponent.interfaces[var2] = null;
+                }
+
+                Class70.aBooleanArray716[var2] = false;
+            }
+        }
+
+        Class1.method11(var2);
+        InterfaceComponent var4 = InterfaceComponent.method1016(var3);
+        if (var4 != null) {
+            ItemTable.method284(var4);
+        }
+
+        DynamicObject.method295();
+        if (Client.anInt1632 != -1) {
+            Class76.method452(Client.anInt1632, 1);
+        }
+
+    }
+
+    static InterfaceNode method214(int var0, int var1, int var2) {
+        InterfaceNode var3 = new InterfaceNode();
+        var3.id = var1;
+        var3.state = var2;
+        Client.interfaceNodes.put(var3, (long) var0);
+        Class21.method144(var1);
+        InterfaceComponent var4 = InterfaceComponent.method1016(var0);
+        ItemTable.method284(var4);
+        if (Client.anInterfaceComponent1627 != null) {
+            ItemTable.method284(Client.anInterfaceComponent1627);
+            Client.anInterfaceComponent1627 = null;
+        }
+
+        DynamicObject.method295();
+        Class44.method303(InterfaceComponent.interfaces[var0 >> 16], var4, false);
+        Class35.method261(var1);
+        if (Client.anInt1632 != -1) {
+            Class76.method452(Client.anInt1632, 1);
+        }
+
+        return var3;
+    }
 }

@@ -18,7 +18,7 @@ public class Class25 {
     Class25(Class108 var1, URL var2) {
         this.aClass103_182 = var1.method752(var2);
         this.anInt174 = 0;
-        this.aLong179 = Class124.method873() + 30000L;
+        this.aLong179 = Class124.currentTime() + 30000L;
     }
 
     static int method175(int var0, int var1, int var2) {
@@ -93,7 +93,7 @@ public class Class25 {
     }
 
     byte[] method173() throws IOException {
-        if (Class124.method873() > this.aLong179) {
+        if (Class124.currentTime() > this.aLong179) {
             throw new IOException();
         }
         if (this.anInt174 == 0) {

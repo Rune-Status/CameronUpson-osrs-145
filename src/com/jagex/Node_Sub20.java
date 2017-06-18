@@ -25,12 +25,12 @@ public class Node_Sub20 extends Node {
 
     static int method972(int var0, RuneScript var1, boolean var2) {
         if (var0 == 3600) {
-            if (Client.friendCount == 0) {
+            if (Client.wrongnamelol == 0) {
                 Class63.anIntArray645[++Class63.anInt644 - 1] = -2;
-            } else if (Client.friendCount == 1) {
+            } else if (Client.wrongnamelol == 1) {
                 Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
             } else {
-                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.anInt1431;
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.friendCount;
             }
 
             return 1;
@@ -38,9 +38,9 @@ public class Node_Sub20 extends Node {
         int var3;
         if (var0 == 3601) {
             var3 = Class63.anIntArray645[--Class63.anInt644];
-            if (Client.friendCount == 2 && var3 < Client.anInt1431) {
-                Class63.aStringArray640[++Class77.anInt828 - 1] = Client.aClass27Array1449[var3].aString198;
-                Class63.aStringArray640[++Class77.anInt828 - 1] = Client.aClass27Array1449[var3].aString203;
+            if (Client.wrongnamelol == 2 && var3 < Client.friendCount) {
+                Class63.aStringArray640[++Class77.anInt828 - 1] = Client.befriendedPlayers[var3].name;
+                Class63.aStringArray640[++Class77.anInt828 - 1] = Client.befriendedPlayers[var3].aString203;
             } else {
                 Class63.aStringArray640[++Class77.anInt828 - 1] = "";
                 Class63.aStringArray640[++Class77.anInt828 - 1] = "";
@@ -50,8 +50,8 @@ public class Node_Sub20 extends Node {
         }
         if (var0 == 3602) {
             var3 = Class63.anIntArray645[--Class63.anInt644];
-            if (Client.friendCount == 2 && var3 < Client.anInt1431) {
-                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.aClass27Array1449[var3].anInt200;
+            if (Client.wrongnamelol == 2 && var3 < Client.friendCount) {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.befriendedPlayers[var3].world;
             } else {
                 Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
             }
@@ -60,8 +60,8 @@ public class Node_Sub20 extends Node {
         }
         if (var0 == 3603) {
             var3 = Class63.anIntArray645[--Class63.anInt644];
-            if (Client.friendCount == 2 && var3 < Client.anInt1431) {
-                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.aClass27Array1449[var3].anInt199;
+            if (Client.wrongnamelol == 2 && var3 < Client.friendCount) {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.befriendedPlayers[var3].anInt199;
             } else {
                 Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
             }
@@ -76,58 +76,58 @@ public class Node_Sub20 extends Node {
             return 1;
         }
         int var7;
-        Class27 var8;
+        BefriendedPlayer var8;
         String var10;
         String var14;
         String var16;
         if (var0 == 3605) {
             var4 = Class63.aStringArray640[--Class77.anInt828];
             if (var4 != null) {
-                if ((Client.anInt1431 < 200 || Client.anInt1593 == 1) && Client.anInt1431 < 400) {
+                if ((Client.friendCount < 200 || Client.anInt1593 == 1) && Client.friendCount < 400) {
                     var14 = Class84.method484(var4, Class2.aClass188_13);
                     if (var14 != null) {
                         var7 = 0;
 
                         while (true) {
-                            if (var7 >= Client.anInt1431) {
-                                for (var7 = 0; var7 < Client.anInt1450; ++var7) {
+                            if (var7 >= Client.friendCount) {
+                                for (var7 = 0; var7 < Client.ignoredPlayerCount; ++var7) {
                                     IgnoredPlayer var15 = Client.ignoredPlayers[var7];
-                                    var16 = Class84.method484(var15.aString242, Class2.aClass188_13);
+                                    var16 = Class84.method484(var15.name, Class2.aClass188_13);
                                     if (var16 != null && var16.equals(var14)) {
-                                        Class78.method469(30, "", "Please remove " + var4 + " from your ignore list first");
+                                        Class78.addChatMessage(30, "", "Please remove " + var4 + " from your ignore list first");
                                         return 1;
                                     }
 
                                     if (var15.aString243 != null) {
                                         var10 = Class84.method484(var15.aString243, Class2.aClass188_13);
                                         if (var10 != null && var10.equals(var14)) {
-                                            Class78.method469(30, "", "Please remove " + var4 + " from your ignore list first");
+                                            Class78.addChatMessage(30, "", "Please remove " + var4 + " from your ignore list first");
                                             return 1;
                                         }
                                     }
                                 }
 
                                 if (Class84.method484(Client.player.name, Class2.aClass188_13).equals(var14)) {
-                                    Class78.method469(30, "", "You can't insert yourself to your own friend list");
+                                    Class78.addChatMessage(30, "", "You can't insert yourself to your own friend list");
                                 } else {
                                     Client.packet.writeHeader(186);
-                                    Client.packet.method451(Class27.method179(var4));
+                                    Client.packet.method451(BefriendedPlayer.method179(var4));
                                     Client.packet.method865(var4);
                                 }
                                 break;
                             }
 
-                            var8 = Client.aClass27Array1449[var7];
-                            var16 = Class84.method484(var8.aString198, Class2.aClass188_13);
+                            var8 = Client.befriendedPlayers[var7];
+                            var16 = Class84.method484(var8.name, Class2.aClass188_13);
                             if (var16 != null && var16.equals(var14)) {
-                                Class78.method469(30, "", var4 + " is already on your friend list");
+                                Class78.addChatMessage(30, "", var4 + " is already on your friend list");
                                 break;
                             }
 
                             if (var8.aString203 != null) {
                                 var10 = Class84.method484(var8.aString203, Class2.aClass188_13);
                                 if (var10 != null && var10.equals(var14)) {
-                                    Class78.method469(30, "", var4 + " is already on your friend list");
+                                    Class78.addChatMessage(30, "", var4 + " is already on your friend list");
                                     break;
                                 }
                             }
@@ -136,7 +136,7 @@ public class Node_Sub20 extends Node {
                         }
                     }
                 } else {
-                    Class78.method469(30, "", "Your friend list is full. Max of 200 for free users, and 400 for members");
+                    Class78.addChatMessage(30, "", "Your friend list is full. Max of 200 for free users, and 400 for members");
                 }
             }
 
@@ -147,20 +147,20 @@ public class Node_Sub20 extends Node {
             if (var4 != null) {
                 var14 = Class84.method484(var4, Class2.aClass188_13);
                 if (var14 != null) {
-                    for (var7 = 0; var7 < Client.anInt1431; ++var7) {
-                        var8 = Client.aClass27Array1449[var7];
-                        var16 = var8.aString198;
+                    for (var7 = 0; var7 < Client.friendCount; ++var7) {
+                        var8 = Client.befriendedPlayers[var7];
+                        var16 = var8.name;
                         var10 = Class84.method484(var16, Class2.aClass188_13);
                         if (Class170.method1152(var4, var14, var16, var10)) {
-                            --Client.anInt1431;
+                            --Client.friendCount;
 
-                            for (int var11 = var7; var11 < Client.anInt1431; ++var11) {
-                                Client.aClass27Array1449[var11] = Client.aClass27Array1449[var11 + 1];
+                            for (int var11 = var7; var11 < Client.friendCount; ++var11) {
+                                Client.befriendedPlayers[var11] = Client.befriendedPlayers[var11 + 1];
                             }
 
                             Client.anInt1660 = Client.anInt1644;
                             Client.packet.writeHeader(22);
-                            Client.packet.method451(Class27.method179(var4));
+                            Client.packet.method451(BefriendedPlayer.method179(var4));
                             Client.packet.method865(var4);
                             break;
                         }
@@ -265,18 +265,18 @@ public class Node_Sub20 extends Node {
             return 1;
         }
         if (var0 == 3621) {
-            if (Client.friendCount == 0) {
+            if (Client.wrongnamelol == 0) {
                 Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
             } else {
-                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.anInt1450;
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.ignoredPlayerCount;
             }
 
             return 1;
         }
         if (var0 == 3622) {
             var3 = Class63.anIntArray645[--Class63.anInt644];
-            if (Client.friendCount != 0 && var3 < Client.anInt1450) {
-                Class63.aStringArray640[++Class77.anInt828 - 1] = Client.ignoredPlayers[var3].aString242;
+            if (Client.wrongnamelol != 0 && var3 < Client.ignoredPlayerCount) {
+                Class63.aStringArray640[++Class77.anInt828 - 1] = Client.ignoredPlayers[var3].name;
                 Class63.aStringArray640[++Class77.anInt828 - 1] = Client.ignoredPlayers[var3].aString243;
             } else {
                 Class63.aStringArray640[++Class77.anInt828 - 1] = "";

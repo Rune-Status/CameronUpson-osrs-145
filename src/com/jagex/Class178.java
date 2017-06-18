@@ -17,7 +17,7 @@ public class Class178 {
         String var3;
         if (var0 == 3100) {
             var3 = Class63.aStringArray640[--Class77.anInt828];
-            Class78.method469(0, "", var3);
+            Class78.addChatMessage(0, "", var3);
             return 1;
         }
         if (var0 == 3101) {
@@ -113,7 +113,7 @@ public class Class178 {
                     return 1;
                 }
                 Client.packet.writeHeader(49);
-                Client.packet.method755(Class27.method179(var6) + 1 + Class27.method179(var12));
+                Client.packet.method755(BefriendedPlayer.method179(var6) + 1 + BefriendedPlayer.method179(var12));
                 Client.packet.method865(var12);
                 Client.packet.method823(var5);
                 Client.packet.method865(var6);
@@ -158,7 +158,7 @@ public class Class178 {
         }
 
         if (!var9) {
-            Class78.method469(4, "", "Unable to find " + var6);
+            Class78.addChatMessage(4, "", "Unable to find " + var6);
         }
 
         return 1;

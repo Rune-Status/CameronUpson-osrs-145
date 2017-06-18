@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class122_Sub1 extends Class122 {
     static String aString1184;
-    long aLong1179 = Class124.method873();
+    long aLong1179 = Class124.currentTime();
     int anInt1183 = 256;
     int anInt1181 = 0;
     long[] aLongArray1178 = new long[10];
@@ -28,7 +28,7 @@ public class Class122_Sub1 extends Class122 {
         int var4 = this.anInt1180;
         this.anInt1183 = 300;
         this.anInt1180 = 1;
-        this.aLong1179 = Class124.method873();
+        this.aLong1179 = Class124.currentTime();
         if (this.aLongArray1178[this.anInt1182] == 0L) {
             this.anInt1183 = var3;
             this.anInt1180 = var4;
