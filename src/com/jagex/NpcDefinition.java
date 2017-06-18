@@ -247,7 +247,7 @@ public class NpcDefinition extends DoublyNode {
         }
 
         if (this.scaleXZ != 128 || this.scaleY != 128) {
-            var8.rotate(this.scaleXZ, this.scaleY, this.scaleXZ);
+            var8.scale(this.scaleXZ, this.scaleY, this.scaleXZ);
         }
 
         return var8;

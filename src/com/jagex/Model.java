@@ -740,7 +740,7 @@ public class Model extends Entity {
         this.method572();
     }
 
-    public void rotate(int var1, int var2, int var3) {
+    public void scale(int var1, int var2, int var3) {
         for (int var4 = 0; var4 < this.anInt327; ++var4) {
             this.zVertices[var4] = this.zVertices[var4] * var1 / 128;
             this.yVertices[var4] = this.yVertices[var4] * var2 / 128;
