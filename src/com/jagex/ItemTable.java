@@ -1,9 +1,12 @@
 package com.jagex;
 
 public class ItemTable extends Node {
+
     static int anInt328;
     static int[][] anIntArrayArray341;
+
     static NodeTable<ItemTable> itemTables = new NodeTable<>(32);
+
     int[] ids = new int[]{-1};
     int[] stackSizes = new int[]{0};
 

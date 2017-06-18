@@ -13,7 +13,7 @@ public final class EntityMarker {
     int sceneY;
     int anInt1129;
     int anInt1131;
-    int anInt1121 = 0;
+    int config = 0;
     int anInt1127;
 
     static void method652(int var0) {

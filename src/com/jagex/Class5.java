@@ -542,7 +542,7 @@ public final class Class5 {
                                                 if (component.modelId == 0) {
                                                     var42 = Client.aPlayerAppearance1455.getModel(null, -1, null, -1);
                                                 } else {
-                                                    var42 = Client.player.method191();
+                                                    var42 = Client.player.getModel();
                                                 }
                                             } else if (var20 == -1) {
                                                 var42 = component.method1019(null, -1, var39, Client.player.appearance);
@@ -550,7 +550,7 @@ public final class Class5 {
                                                     ItemTable.method284(component);
                                                 }
                                             } else {
-                                                AnimationSequence var45 = Applet_Sub1.method251(var20);
+                                                AnimationSequence var45 = AnimationSequence.get(var20);
                                                 var42 = component.method1019(var45, component.anInt1932, var39, Client.player.appearance);
                                                 if (var42 == null && InterfaceComponent.aBoolean1174) {
                                                     ItemTable.method284(component);
@@ -703,11 +703,11 @@ public final class Class5 {
     }
 
     public static ObjectDefinition method17(int var0) {
-        ObjectDefinition var1 = (ObjectDefinition) ObjectDefinition.aReferenceCache2013.method973((long) var0);
+        ObjectDefinition var1 = (ObjectDefinition) ObjectDefinition.aReferenceCache2013.get((long) var0);
         if (var1 != null) {
             return var1;
         }
-        byte[] var2 = ObjectDefinition.aReferenceTable2017.method1085(6, var0);
+        byte[] var2 = ObjectDefinition.aReferenceTable2017.unpack(6, var0);
         var1 = new ObjectDefinition();
         var1.id = var0;
         if (var2 != null) {
@@ -720,7 +720,7 @@ public final class Class5 {
             var1.aBoolean223 = false;
         }
 
-        ObjectDefinition.aReferenceCache2013.method975(var1, (long) var0);
+        ObjectDefinition.aReferenceCache2013.put(var1, (long) var0);
         return var1;
     }
 

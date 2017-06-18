@@ -57,7 +57,7 @@ public class Node_Sub21_Sub21 extends DoublyNode {
 
         if (this.aShortArray2009 != null) {
             for (var5 = 0; var5 < this.aShortArray2009.length; ++var5) {
-                var4.method573(this.aShortArray2009[var5], this.aShortArray2007[var5]);
+                var4.retexture(this.aShortArray2009[var5], this.aShortArray2007[var5]);
             }
         }
 
@@ -145,7 +145,7 @@ public class Node_Sub21_Sub21 extends DoublyNode {
 
         if (this.aShortArray2009 != null) {
             for (var4 = 0; var4 < this.aShortArray2009.length; ++var4) {
-                var3.method573(this.aShortArray2009[var4], this.aShortArray2007[var4]);
+                var3.retexture(this.aShortArray2009[var4], this.aShortArray2007[var4]);
             }
         }
 

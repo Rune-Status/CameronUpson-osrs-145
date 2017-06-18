@@ -338,7 +338,7 @@ public class Class189 {
         this.aHashMap2202 = new HashMap(var6.length);
 
         for (int var7 = 0; var7 < var6.length; ++var7) {
-            Buffer var8 = new Buffer(this.aReferenceTable2215.method1085(var5, var6[var7]));
+            Buffer var8 = new Buffer(this.aReferenceTable2215.unpack(var5, var6[var7]));
             WorldMapTransportation var9 = new WorldMapTransportation();
             var9.read(var8, var6[var7]);
             this.aHashMap2202.put(var9.getFileName(), var9);

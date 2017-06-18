@@ -20,7 +20,7 @@ public class AudioEffect {
     }
 
     public static AudioEffect method606(ReferenceTable var0, int var1, int var2) {
-        byte[] var3 = var0.method1085(var1, var2);
+        byte[] var3 = var0.unpack(var1, var2);
         return var3 == null ? null : new AudioEffect(new Buffer(var3));
     }
 

@@ -97,7 +97,7 @@ public class Class118 {
         int var1;
         for (var1 = 0; var1 < InterfaceNode.aByteArrayArray318.length; ++var1) {
             if (Boundary.anIntArray1148[var1] != -1 && InterfaceNode.aByteArrayArray318[var1] == null) {
-                InterfaceNode.aByteArrayArray318[var1] = Class126.aCacheReferenceTable1368.method1085(Boundary.anIntArray1148[var1], 0);
+                InterfaceNode.aByteArrayArray318[var1] = Class126.aCacheReferenceTable1368.unpack(Boundary.anIntArray1148[var1], 0);
                 if (InterfaceNode.aByteArrayArray318[var1] == null) {
                     var0 = false;
                     ++Client.anInt1510;

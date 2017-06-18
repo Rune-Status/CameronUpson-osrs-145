@@ -10,7 +10,7 @@ public final class Boundary {
     int anInt1144;
     int sceneX;
     int sceneY;
-    int anInt1143 = 0;
+    int config = 0;
     int level;
     int anInt1141;
 

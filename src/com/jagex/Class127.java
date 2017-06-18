@@ -53,7 +53,7 @@ public final class Class127 {
     }
 
     public static InterfaceComponent method877(int var0, int var1) {
-        InterfaceComponent var2 = Class161.method1016(var0);
+        InterfaceComponent var2 = InterfaceComponent.method1016(var0);
         if (var1 == -1) {
             return var2;
         }

@@ -18,7 +18,7 @@ public class Class76 implements EnumOrdinal {
             if (Client.menuRowCount < 400) {
                 String var4;
                 if (var0.totalLevel == 0) {
-                    var4 = var0.aStringArray238[0] + var0.name + var0.aStringArray238[1] + Class152.method1007(var0.anInt221, Client.player.anInt221) + " " + " (" + "level-" + var0.anInt221 + ")" + var0.aStringArray238[2];
+                    var4 = var0.aStringArray238[0] + var0.name + var0.aStringArray238[1] + method1007(var0.anInt221, Client.player.anInt221) + " " + " (" + "level-" + var0.anInt221 + ")" + var0.aStringArray238[2];
                 } else {
                     var4 = var0.aStringArray238[0] + var0.name + var0.aStringArray238[1] + " " + " (" + "skill-" + var0.totalLevel + ")" + var0.aStringArray238[2];
                 }
@@ -76,6 +76,32 @@ public class Class76 implements EnumOrdinal {
         if (Class33.method220(var0)) {
             Class134_Sub1.method215(InterfaceComponent.interfaces[var0], var1);
         }
+    }
+
+    static String method1007(int var0, int var1) {
+        int var2 = var1 - var0;
+        if (var2 < -9) {
+            return Class75.method449(16711680);
+        }
+        if (var2 < -6) {
+            return Class75.method449(16723968);
+        }
+        if (var2 < -3) {
+            return Class75.method449(16740352);
+        }
+        if (var2 < 0) {
+            return Class75.method449(16756736);
+        }
+        if (var2 > 9) {
+            return Class75.method449(65280);
+        }
+        if (var2 > 6) {
+            return Class75.method449(4259584);
+        }
+        if (var2 > 3) {
+            return Class75.method449(8453888);
+        }
+        return var2 > 0 ? Class75.method449(12648192) : Class75.method449(16776960);
     }
 
     public int ordinal() {

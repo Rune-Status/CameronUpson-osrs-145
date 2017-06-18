@@ -136,7 +136,7 @@ public class PlayerAppearance {
 
     public Model getModel(AnimationSequence var1, int var2, AnimationSequence var3, int var4) {
         if (this.transformedNpcId != -1) {
-            return Class122.getNpcDefinition(this.transformedNpcId).method1058(var1, var2, var3, var4);
+            return NpcDefinition.get(this.transformedNpcId).method1058(var1, var2, var3, var4);
         }
         long var5 = this.aLong1989;
         int[] var7 = this.equipmentIds;
@@ -158,7 +158,7 @@ public class PlayerAppearance {
             }
         }
 
-        Model var9 = (Model) aReferenceCache1985.method973(var5);
+        Model var9 = (Model) aReferenceCache1985.get(var5);
         if (var9 == null) {
             boolean var10 = false;
 
@@ -176,7 +176,7 @@ public class PlayerAppearance {
 
             if (var10) {
                 if (-1L != this.aLong1990) {
-                    var9 = (Model) aReferenceCache1985.method973(this.aLong1990);
+                    var9 = (Model) aReferenceCache1985.get(this.aLong1990);
                 }
 
                 if (var9 == null) {
@@ -220,7 +220,7 @@ public class PlayerAppearance {
                 }
 
                 var9 = var18.light(64, 850, -30, -50, -30);
-                aReferenceCache1985.method975(var9, var5);
+                aReferenceCache1985.put(var9, var5);
                 this.aLong1990 = var5;
             }
         }
@@ -242,7 +242,7 @@ public class PlayerAppearance {
 
     ModelHeader method1032() {
         if (this.transformedNpcId != -1) {
-            return Class122.getNpcDefinition(this.transformedNpcId).method1059();
+            return NpcDefinition.get(this.transformedNpcId).method1059();
         }
         boolean var1 = false;
 
@@ -328,6 +328,6 @@ public class PlayerAppearance {
     }
 
     public int method1036() {
-        return this.transformedNpcId == -1 ? (this.equipmentIds[11] << 5) + (this.ids[4] << 20) + (this.ids[0] << 25) + (this.equipmentIds[0] << 15) + (this.equipmentIds[8] << 10) + this.equipmentIds[1] : Class122.getNpcDefinition(this.transformedNpcId).id + 305419896;
+        return this.transformedNpcId == -1 ? (this.equipmentIds[11] << 5) + (this.ids[4] << 20) + (this.ids[0] << 25) + (this.equipmentIds[0] << 15) + (this.equipmentIds[8] << 10) + this.equipmentIds[1] : NpcDefinition.get(this.transformedNpcId).id + 305419896;
     }
 }

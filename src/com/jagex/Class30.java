@@ -8,7 +8,7 @@ public class Class30 {
     }
 
     public static void method202(ReferenceTable var0) {
-        Varpbit.aReferenceTable2012 = var0;
+        Varpbit.varpbitTable = var0;
     }
 
     static boolean method205(InterfaceComponent var0) {

@@ -3,6 +3,7 @@ package com.jagex;
 import java.util.Date;
 
 public class ScriptEvent extends Node {
+    public static ReferenceTable aReferenceTable1843;
     static Class176 aClass176_329;
     static CacheReferenceTable aCacheReferenceTable322;
     static Class103 aClass103_330;
@@ -24,17 +25,17 @@ public class ScriptEvent extends Node {
     }
 
     public static Node_Sub21_Sub21 method269(int var0) {
-        Node_Sub21_Sub21 var1 = (Node_Sub21_Sub21) Node_Sub21_Sub21.aReferenceCache2013.method973((long) var0);
+        Node_Sub21_Sub21 var1 = (Node_Sub21_Sub21) Node_Sub21_Sub21.aReferenceCache2013.get((long) var0);
         if (var1 != null) {
             return var1;
         }
-        byte[] var2 = Node_Sub21_Sub21.aReferenceTable2012.method1085(3, var0);
+        byte[] var2 = Node_Sub21_Sub21.aReferenceTable2012.unpack(3, var0);
         var1 = new Node_Sub21_Sub21();
         if (var2 != null) {
             var1.method1052(new Buffer(var2));
         }
 
-        Node_Sub21_Sub21.aReferenceCache2013.method975(var1, (long) var0);
+        Node_Sub21_Sub21.aReferenceCache2013.put(var1, (long) var0);
         return var1;
     }
 
@@ -252,7 +253,7 @@ public class ScriptEvent extends Node {
                     throw new RuntimeException();
                 }
 
-                var29 = Class161.method1016(var3);
+                var29 = InterfaceComponent.method1016(var3);
                 if (var29.components == null) {
                     var29.components = new InterfaceComponent[var5 + 1];
                 }
@@ -287,12 +288,12 @@ public class ScriptEvent extends Node {
                 var11 = 1;
             } else if (var0 == 101) {
                 var67 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
-                InterfaceComponent var65 = Class161.method1016(var67.uid);
+                InterfaceComponent var65 = InterfaceComponent.method1016(var67.uid);
                 var65.components[var67.componentIndex] = null;
                 ItemTable.method284(var65);
                 var11 = 1;
             } else if (var0 == 102) {
-                var67 = Class161.method1016(Class63.anIntArray645[--Class63.anInt644]);
+                var67 = InterfaceComponent.method1016(Class63.anIntArray645[--Class63.anInt644]);
                 var67.components = null;
                 ItemTable.method284(var67);
                 var11 = 1;
@@ -314,7 +315,7 @@ public class ScriptEvent extends Node {
 
                 var11 = 1;
             } else if (var0 == 201) {
-                var67 = Class161.method1016(Class63.anIntArray645[--Class63.anInt644]);
+                var67 = InterfaceComponent.method1016(Class63.anIntArray645[--Class63.anInt644]);
                 if (var67 != null) {
                     Class63.anIntArray645[++Class63.anInt644 - 1] = 1;
                     if (var2) {
@@ -494,7 +495,7 @@ public class ScriptEvent extends Node {
             return TileDecor.method613(var0, var1, var2);
         }
         if (var0 < 2600) {
-            var67 = Class161.method1016(Class63.anIntArray645[--Class63.anInt644]);
+            var67 = InterfaceComponent.method1016(Class63.anIntArray645[--Class63.anInt644]);
             if (var0 == 2500) {
                 Class63.anIntArray645[++Class63.anInt644 - 1] = var67.relativeX;
                 var11 = 1;
@@ -520,7 +521,7 @@ public class ScriptEvent extends Node {
             return var11;
         }
         if (var0 < 2700) {
-            var67 = Class161.method1016(Class63.anIntArray645[--Class63.anInt644]);
+            var67 = InterfaceComponent.method1016(Class63.anIntArray645[--Class63.anInt644]);
             if (var0 == 2600) {
                 Class63.anIntArray645[++Class63.anInt644 - 1] = var67.insetX;
                 var11 = 1;
@@ -571,11 +572,11 @@ public class ScriptEvent extends Node {
         }
         if (var0 < 2800) {
             if (var0 == 2700) {
-                var67 = Class161.method1016(Class63.anIntArray645[--Class63.anInt644]);
+                var67 = InterfaceComponent.method1016(Class63.anIntArray645[--Class63.anInt644]);
                 Class63.anIntArray645[++Class63.anInt644 - 1] = var67.itemId;
                 var11 = 1;
             } else if (var0 == 2701) {
-                var67 = Class161.method1016(Class63.anIntArray645[--Class63.anInt644]);
+                var67 = InterfaceComponent.method1016(Class63.anIntArray645[--Class63.anInt644]);
                 if (var67.itemId != -1) {
                     Class63.anIntArray645[++Class63.anInt644 - 1] = var67.itemStackSize;
                 } else {
@@ -603,7 +604,7 @@ public class ScriptEvent extends Node {
             return var11;
         }
         if (var0 < 2900) {
-            var67 = Class161.method1016(Class63.anIntArray645[--Class63.anInt644]);
+            var67 = InterfaceComponent.method1016(Class63.anIntArray645[--Class63.anInt644]);
             if (var0 == 2800) {
                 Class63.anIntArray645[++Class63.anInt644 - 1] = Class15.method130(Class75.method448(var67));
                 var11 = 1;
@@ -773,7 +774,7 @@ public class ScriptEvent extends Node {
                     Class63.anInt644 -= 2;
                     var24 = Class63.anIntArray645[Class63.anInt644];
                     var5 = Class63.anIntArray645[Class63.anInt644 + 1];
-                    var27 = Class2.aCacheReferenceTable8.method1085(var5, 0);
+                    var27 = Class2.aCacheReferenceTable8.unpack(var5, 0);
                     var32 = new Font(var27);
                     Class63.anIntArray645[++Class63.anInt644 - 1] = var32.method1168(var40, var24);
                     var11 = 1;
@@ -782,7 +783,7 @@ public class ScriptEvent extends Node {
                     Class63.anInt644 -= 2;
                     var24 = Class63.anIntArray645[Class63.anInt644];
                     var5 = Class63.anIntArray645[Class63.anInt644 + 1];
-                    var27 = Class2.aCacheReferenceTable8.method1085(var5, 0);
+                    var27 = Class2.aCacheReferenceTable8.unpack(var5, 0);
                     var32 = new Font(var27);
                     Class63.anIntArray645[++Class63.anInt644 - 1] = var32.method1178(var40, var24);
                     var11 = 1;
@@ -832,7 +833,7 @@ public class ScriptEvent extends Node {
                         var11 = 1;
                     } else if (var0 == 4115) {
                         var3 = Class63.anIntArray645[--Class63.anInt644];
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = Class130.method888((char) var3) ? 1 : 0;
+                        Class63.anIntArray645[++Class63.anInt644 - 1] = Key.method888((char) var3) ? 1 : 0;
                         var11 = 1;
                     } else if (var0 == 4116) {
                         var3 = Class63.anIntArray645[--Class63.anInt644];
@@ -1905,7 +1906,7 @@ public class ScriptEvent extends Node {
             if (var0 == 6501) {
                 World.anInt389 = 0;
                 if (World.anInt389 < World.anInt397) {
-                    var10 = World.aWorldArray396[++World.anInt389 - 1];
+                    var10 = World.worlds[++World.anInt389 - 1];
                 } else {
                     var10 = null;
                 }
@@ -1930,7 +1931,7 @@ public class ScriptEvent extends Node {
             } else if (var0 == 6502) {
                 World var9;
                 if (World.anInt389 < World.anInt397) {
-                    var9 = World.aWorldArray396[++World.anInt389 - 1];
+                    var9 = World.worlds[++World.anInt389 - 1];
                 } else {
                     var9 = null;
                 }
@@ -1957,8 +1958,8 @@ public class ScriptEvent extends Node {
                 var10 = null;
 
                 for (var5 = 0; var5 < World.anInt397; ++var5) {
-                    if (World.aWorldArray396[var5].id == var3) {
-                        var10 = World.aWorldArray396[var5];
+                    if (World.worlds[var5].id == var3) {
+                        var10 = World.worlds[var5];
                         break;
                     }
                 }
@@ -1986,15 +1987,15 @@ public class ScriptEvent extends Node {
                 var4 = Class63.anIntArray645[Class63.anInt644 + 1] == 1;
                 var5 = Class63.anIntArray645[Class63.anInt644 + 2];
                 var15 = Class63.anIntArray645[Class63.anInt644 + 3] == 1;
-                if (World.aWorldArray396 != null) {
-                    Class159.method1014(0, World.aWorldArray396.length - 1, var3, var4, var5, var15);
+                if (World.worlds != null) {
+                    World.method1014(0, World.worlds.length - 1, var3, var4, var5, var15);
                 }
 
                 var11 = 1;
             } else if (var0 == 6511) {
                 var3 = Class63.anIntArray645[--Class63.anInt644];
                 if (var3 >= 0 && var3 < World.anInt397) {
-                    var10 = World.aWorldArray396[var3];
+                    var10 = World.worlds[var3];
                     Class63.anIntArray645[++Class63.anInt644 - 1] = var10.id;
                     Class63.anIntArray645[++Class63.anInt644 - 1] = var10.mask;
                     Class63.aStringArray640[++Class77.anInt828 - 1] = var10.activity;
@@ -2022,9 +2023,9 @@ public class ScriptEvent extends Node {
                     var24 = Class63.anIntArray645[Class63.anInt644 + 1];
                     var12 = Class158.method1012(var24);
                     if (var12.isString()) {
-                        Class63.aStringArray640[++Class77.anInt828 - 1] = Class122.getNpcDefinition(var3).getOrDefault(var24, var12.defaultString);
+                        Class63.aStringArray640[++Class77.anInt828 - 1] = NpcDefinition.get(var3).getOrDefault(var24, var12.defaultString);
                     } else {
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = Class122.getNpcDefinition(var3).getOrDefault(var24, var12.defaultInteger);
+                        Class63.anIntArray645[++Class63.anInt644 - 1] = NpcDefinition.get(var3).getOrDefault(var24, var12.defaultInteger);
                     }
 
                     var11 = 1;
@@ -2063,18 +2064,18 @@ public class ScriptEvent extends Node {
                     if (var12.isString()) {
                         String[] var6 = Class63.aStringArray640;
                         var16 = ++Class77.anInt828 - 1;
-                        var19 = (Node_Sub21_Sub10) Node_Sub21_Sub10.aReferenceCache2025.method973((long) var3);
+                        var19 = (Node_Sub21_Sub10) Node_Sub21_Sub10.aReferenceCache2025.get((long) var3);
                         if (var19 != null) {
                             var23 = var19;
                         } else {
-                            var18 = Class156.aReferenceTable1843.method1085(34, var3);
+                            var18 = aReferenceTable1843.unpack(34, var3);
                             var19 = new Node_Sub21_Sub10();
                             if (var18 != null) {
                                 var19.method1066(new Buffer(var18));
                             }
 
                             var19.method756();
-                            Node_Sub21_Sub10.aReferenceCache2025.method975(var19, (long) var3);
+                            Node_Sub21_Sub10.aReferenceCache2025.put(var19, (long) var3);
                             var23 = var19;
                         }
 
@@ -2082,18 +2083,18 @@ public class ScriptEvent extends Node {
                     } else {
                         int[] var25 = Class63.anIntArray645;
                         var16 = ++Class63.anInt644 - 1;
-                        var19 = (Node_Sub21_Sub10) Node_Sub21_Sub10.aReferenceCache2025.method973((long) var3);
+                        var19 = (Node_Sub21_Sub10) Node_Sub21_Sub10.aReferenceCache2025.get((long) var3);
                         if (var19 != null) {
                             var23 = var19;
                         } else {
-                            var18 = Class156.aReferenceTable1843.method1085(34, var3);
+                            var18 = aReferenceTable1843.unpack(34, var3);
                             var19 = new Node_Sub21_Sub10();
                             if (var18 != null) {
                                 var19.method1066(new Buffer(var18));
                             }
 
                             var19.method756();
-                            Node_Sub21_Sub10.aReferenceCache2025.method975(var19, (long) var3);
+                            Node_Sub21_Sub10.aReferenceCache2025.put(var19, (long) var3);
                             var23 = var19;
                         }
 
@@ -2114,7 +2115,7 @@ public class ScriptEvent extends Node {
         InterfaceComponent var3;
         if (var0 >= 2000) {
             var0 -= 1000;
-            var3 = Class161.method1016(Class63.anIntArray645[--Class63.anInt644]);
+            var3 = InterfaceComponent.method1016(Class63.anIntArray645[--Class63.anInt644]);
         } else {
             var3 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
         }

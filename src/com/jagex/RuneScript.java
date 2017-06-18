@@ -1,6 +1,7 @@
 package com.jagex;
 
 public class RuneScript extends DoublyNode {
+
     static ReferenceCache aReferenceCache664 = new ReferenceCache(128);
     static int anInt226;
     static int[] anIntArray666;

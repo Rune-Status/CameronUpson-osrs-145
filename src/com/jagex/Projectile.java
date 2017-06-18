@@ -41,9 +41,9 @@ public final class Projectile extends Entity {
         this.targetIndex = var10;
         this.anInt328 = var11;
         this.inMotion = false;
-        int var12 = Node_Sub21_Sub15.method1115(this.id).anInt221;
+        int var12 = GraphicDefinition.get(this.id).animation;
         if (var12 != -1) {
-            this.anAnimationSequence817 = Applet_Sub1.method251(var12);
+            this.anAnimationSequence817 = AnimationSequence.get(var12);
         } else {
             this.anAnimationSequence817 = null;
         }
@@ -102,9 +102,9 @@ public final class Projectile extends Entity {
         }
     }
 
-    protected final Model method191() {
-        Node_Sub21_Sub7 var1 = Node_Sub21_Sub15.method1115(this.id);
-        Model var2 = var1.method1050(this.anInt213);
+    protected final Model getModel() {
+        GraphicDefinition var1 = GraphicDefinition.get(this.id);
+        Model var2 = var1.getModel(this.anInt213);
         if (var2 == null) {
             return null;
         }

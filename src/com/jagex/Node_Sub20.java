@@ -108,7 +108,7 @@ public class Node_Sub20 extends Node {
                                 }
 
                                 if (Class84.method484(Client.player.name, Class2.aClass188_13).equals(var14)) {
-                                    Class78.method469(30, "", "You can't add yourself to your own friend list");
+                                    Class78.method469(30, "", "You can't insert yourself to your own friend list");
                                 } else {
                                     Client.packet.writeHeader(186);
                                     Client.packet.method451(Class27.method179(var4));
@@ -252,7 +252,7 @@ public class Node_Sub20 extends Node {
             return 1;
         }
         if (var0 == 3618) {
-            Class63.anIntArray645[++Class63.anInt644 - 1] = Class150.aByte1826;
+            Class63.anIntArray645[++Class63.anInt644 - 1] = Client.aByte1826;
             return 1;
         }
         if (var0 == 3619) {

@@ -103,7 +103,7 @@ public final class Canvas extends java.awt.Canvas {
             }
 
             if (Login.anInt684 != -1) {
-                World var5 = World.aWorldArray396[Login.anInt684];
+                World var5 = World.worlds[Login.anInt684];
                 Class51.method320(var5);
                 Login.aBoolean694 = false;
                 Class3.aSprite17.method1242(Login.anInt702, 0);

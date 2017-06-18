@@ -15,12 +15,12 @@ public final class AxisAlignedBoundingBox extends BoundingBox {
     static int[] anIntArray669;
 
     public AxisAlignedBoundingBox(Model model, int x, int z, int y, int color) {
-        this.x1 = x + model.anInt754 - model.anInt760;
-        this.z1 = z + model.anInt745 - model.anInt757;
-        this.y1 = y + model.anInt755 - model.anInt746;
-        this.x2 = x + model.anInt760 + model.anInt754;
-        this.z2 = z + model.anInt745 + model.anInt757;
-        this.y2 = y + model.anInt755 + model.anInt746;
+        x1 = x + model.anInt754 - model.anInt760;
+        z1 = z + model.anInt745 - model.anInt757;
+        y1 = y + model.anInt755 - model.anInt746;
+        x2 = x + model.anInt760 + model.anInt754;
+        z2 = z + model.anInt745 + model.anInt757;
+        y2 = y + model.anInt755 + model.anInt746;
         this.color = color;
     }
 

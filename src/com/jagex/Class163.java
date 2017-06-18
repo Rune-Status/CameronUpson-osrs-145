@@ -32,17 +32,17 @@ public class Class163 implements EnumOrdinal {
     }
 
     public static Node_Sub21_Sub16 method1031(int var0) {
-        Node_Sub21_Sub16 var1 = (Node_Sub21_Sub16) Node_Sub21_Sub16.aReferenceCache2025.method973((long) var0);
+        Node_Sub21_Sub16 var1 = (Node_Sub21_Sub16) Node_Sub21_Sub16.aReferenceCache2025.get((long) var0);
         if (var1 != null) {
             return var1;
         }
-        byte[] var2 = Node_Sub21_Sub16.aReferenceTable2012.method1085(19, var0);
+        byte[] var2 = Node_Sub21_Sub16.aReferenceTable2012.unpack(19, var0);
         var1 = new Node_Sub21_Sub16();
         if (var2 != null) {
             var1.method1052(new Buffer(var2));
         }
 
-        Node_Sub21_Sub16.aReferenceCache2025.method975(var1, (long) var0);
+        Node_Sub21_Sub16.aReferenceCache2025.put(var1, (long) var0);
         return var1;
     }
 

@@ -64,7 +64,7 @@ public final class Loader extends JFrame {
                             }
 
                             for (int i = 0; i < Short.MAX_VALUE; i++) {
-                                NpcDefinition def = Class122.getNpcDefinition(i);
+                                NpcDefinition def = NpcDefinition.get(i);
                                 if (def != null && def.name != null && def.name.equalsIgnoreCase(name)) {
                                     System.out.println(def.name + ": " + def.id);
                                     break;

@@ -1,6 +1,7 @@
 package com.jagex;
 
 public final class NodeQueue<T extends DoublyNode> {
+
     DoublyNode root = new DoublyNode();
 
     public NodeQueue() {
@@ -8,7 +9,7 @@ public final class NodeQueue<T extends DoublyNode> {
         this.root.previousDoubly = this.root;
     }
 
-    T method942() {
+    T pop() {
         DoublyNode var1 = this.root.nextDoubly;
         if (var1 == this.root) {
             return null;
@@ -17,12 +18,12 @@ public final class NodeQueue<T extends DoublyNode> {
         return (T) var1;
     }
 
-    public T method941() {
+    public T head() {
         DoublyNode var1 = this.root.nextDoubly;
         return var1 == this.root ? null : (T) var1;
     }
 
-    public void method944(T var1) {
+    public void insert(T var1) {
         if (var1.previousDoubly != null) {
             var1.method977();
         }
@@ -44,7 +45,7 @@ public final class NodeQueue<T extends DoublyNode> {
         }
     }
 
-    public void method940(T var1) {
+    public void add(T var1) {
         if (var1.previousDoubly != null) {
             var1.method977();
         }

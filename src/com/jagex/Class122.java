@@ -28,21 +28,6 @@ public abstract class Class122 {
         return (var0 >> 24 & 255) + "." + (var0 >> 16 & 255) + "." + (var0 >> 8 & 255) + "." + (var0 & 255);
     }
 
-    public static NpcDefinition getNpcDefinition(int var0) {
-        NpcDefinition var1 = (NpcDefinition) NpcDefinition.aReferenceCache2008.method973((long) var0);
-        if (var1 != null) {
-            return var1;
-        }
-        byte[] var2 = NpcDefinition.aReferenceTable2012.method1085(9, var0);
-        var1 = new NpcDefinition();
-        var1.id = var0;
-        if (var2 != null) {
-            var1.method1056(new Buffer(var2));
-        }
-        NpcDefinition.aReferenceCache2008.method975(var1, (long) var0);
-        return var1;
-    }
-
     public static int method809(int var0) {
         int var1 = 0;
         if (var0 < 0 || var0 >= 65536) {

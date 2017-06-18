@@ -38,6 +38,32 @@ public abstract class ReferenceTable {
         Class85.method497();
     }
 
+    static byte[] method1003(byte[] var0) {
+        Buffer var1 = new Buffer(var0);
+        int var2 = var1.readUnsignedByte();
+        int var3 = var1.method835();
+        if (var3 < 0 || anInt2060 != 0 && var3 > anInt2060) {
+            throw new RuntimeException();
+        }
+        if (var2 == 0) {
+            byte[] var4 = new byte[var3];
+            var1.method826(var4, 0, var3);
+            return var4;
+        }
+        int var5 = var1.method835();
+        if (var5 >= 0 && (anInt2060 == 0 || var5 <= anInt2060)) {
+            byte[] var6 = new byte[var5];
+            if (var2 == 1) {
+                Class114.method776(var6, var5, var0, var3, 9);
+            } else {
+                aClass124_2056.method874(var1, var6);
+            }
+
+            return var6;
+        }
+        throw new RuntimeException();
+    }
+
     void method1094(byte[] var1) {
         int var2 = var1.length;
         int var3 = -1;
@@ -49,7 +75,7 @@ public abstract class ReferenceTable {
 
         var3 = ~var3;
         this.anInt2048 = var3;
-        Buffer var7 = new Buffer(Class150.method1003(var1));
+        Buffer var7 = new Buffer(method1003(var1));
         var3 = var7.readUnsignedByte();
         if (var3 >= 5 && var3 <= 7) {
             if (var3 >= 6) {
@@ -244,10 +270,10 @@ public abstract class ReferenceTable {
 
     public byte[] method1093(int var1) {
         if (this.buffer.length == 1) {
-            return this.method1085(0, var1);
+            return this.unpack(0, var1);
         }
         if (this.buffer[var1].length == 1) {
-            return this.method1085(var1, 0);
+            return this.unpack(var1, 0);
         }
         throw new RuntimeException();
     }
@@ -338,7 +364,7 @@ public abstract class ReferenceTable {
             var8 = Class148.method1000(this.anObjectArray2057[var1], false);
         }
 
-        byte[] var20 = Class150.method1003(var8);
+        byte[] var20 = method1003(var8);
         if (this.aBoolean2052) {
             this.anObjectArray2057[var1] = null;
         }
@@ -400,7 +426,7 @@ public abstract class ReferenceTable {
         return true;
     }
 
-    public byte[] method1085(int var1, int var2) {
+    public byte[] unpack(int var1, int var2) {
         return this.unpack(var1, var2, null);
     }
 
@@ -420,7 +446,7 @@ public abstract class ReferenceTable {
         var2 = var2.toLowerCase();
         int var3 = this.entry.method913(ScriptEvent.method271(var1));
         int var4 = this.children[var3].method913(ScriptEvent.method271(var2));
-        return this.method1085(var3, var4);
+        return this.unpack(var3, var4);
     }
 
     public boolean method1099(String var1) {

@@ -30,7 +30,7 @@ public class Class15 implements Class16 {
             var0.anInt801 = 0;
             var0.orientation = var0.anInt788;
         } else if (var0.anInt777 >= Client.engineCycle) {
-            if (var0.anInt777 == Client.engineCycle || var0.animation == -1 || var0.anInt791 != 0 || var0.anInt790 + 1 > Applet_Sub1.method251(var0.animation).frameLengths[var0.animationFrame]) {
+            if (var0.anInt777 == Client.engineCycle || var0.animation == -1 || var0.anInt791 != 0 || var0.anInt790 + 1 > AnimationSequence.get(var0.animation).frameLengths[var0.animationFrame]) {
                 var2 = var0.anInt777 - var0.anInt775;
                 var3 = Client.engineCycle - var0.anInt775;
                 var4 = var0.anInt753 * 64 + var0.anInt778 * 128;
@@ -72,7 +72,7 @@ public class Class15 implements Class16 {
         var0.aBoolean758 = false;
         AnimationSequence var8;
         if (var0.anInt768 != -1) {
-            var8 = Applet_Sub1.method251(var0.anInt768);
+            var8 = AnimationSequence.get(var0.anInt768);
             if (var8 != null && var8.frames != null) {
                 ++var0.anInt781;
                 if (var0.subAnimationFrame < var8.frames.length && var0.anInt781 > var8.frameLengths[var0.subAnimationFrame]) {
@@ -96,9 +96,9 @@ public class Class15 implements Class16 {
                 var0.anInt782 = 0;
             }
 
-            var2 = Node_Sub21_Sub15.method1115(var0.anInt771).anInt221;
+            var2 = GraphicDefinition.get(var0.anInt771).animation;
             if (var2 != -1) {
-                AnimationSequence var9 = Applet_Sub1.method251(var2);
+                AnimationSequence var9 = AnimationSequence.get(var2);
                 if (var9 != null && var9.frames != null) {
                     ++var0.anInt780;
                     if (var0.anInt782 < var9.frames.length && var0.anInt780 > var9.frameLengths[var0.anInt782]) {
@@ -119,7 +119,7 @@ public class Class15 implements Class16 {
         }
 
         if (var0.animation != -1 && var0.anInt791 <= 1) {
-            var8 = Applet_Sub1.method251(var0.animation);
+            var8 = AnimationSequence.get(var0.animation);
             if (var8.animatingPrecedence == 1 && var0.anInt799 > 0 && var0.anInt775 <= Client.engineCycle && var0.anInt777 < Client.engineCycle) {
                 var0.anInt791 = 1;
                 return;
@@ -127,7 +127,7 @@ public class Class15 implements Class16 {
         }
 
         if (var0.animation != -1 && var0.anInt791 == 0) {
-            var8 = Applet_Sub1.method251(var0.animation);
+            var8 = AnimationSequence.get(var0.animation);
             if (var8 != null && var8.frames != null) {
                 ++var0.anInt790;
                 if (var0.animationFrame < var8.frames.length && var0.anInt790 > var8.frameLengths[var0.animationFrame]) {

@@ -165,7 +165,7 @@ public class Class183 {
                                         }
                                     }
 
-                                    Class141.method978(var21.id, var12, var13, var14, var15, var10, var11);
+                                    InterfaceComponent.method978(var21.id, var12, var13, var14, var15, var10, var11);
                                 }
                             }
 

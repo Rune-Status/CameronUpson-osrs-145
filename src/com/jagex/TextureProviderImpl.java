@@ -23,7 +23,7 @@ public class TextureProviderImpl implements TextureProvider {
         this.aNode_Sub16Array879 = new Node_Sub16[var1.method1101(0)];
 
         for (int var9 = 0; var9 < var8; ++var9) {
-            Buffer var10 = new Buffer(var1.method1085(0, var7[var9]));
+            Buffer var10 = new Buffer(var1.unpack(0, var7[var9]));
             this.aNode_Sub16Array879[var7[var9]] = new Node_Sub16(var10);
         }
 

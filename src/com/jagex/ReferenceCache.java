@@ -30,15 +30,15 @@ public final class ReferenceCache<T extends DoublyNode> { //TODO generics here a
         ItemDefinition.aReferenceCache2115.clear();
         ItemDefinition.aReferenceCache2116.clear();
         ItemDefinition.aReferenceCache1891.clear();
-        AnimationSequence.aReferenceCache2013.clear();
+        AnimationSequence.sequenceCache.clear();
         AnimationSequence.aReferenceCache2045.clear();
-        Node_Sub21_Sub7.aReferenceCache2008.clear();
-        Node_Sub21_Sub7.aReferenceCache2013.clear();
-        Varpbit.aReferenceCache2025.clear();
+        GraphicDefinition.definitionCache.clear();
+        GraphicDefinition.modelCache.clear();
+        Varpbit.varpbitCache.clear();
         Node_Sub21_Sub20.aReferenceCache2008.clear();
-        HitsplatDefinition.aReferenceCache2013.clear();
-        HitsplatDefinition.aReferenceCache2045.clear();
-        HitsplatDefinition.aReferenceCache2047.clear();
+        HitsplatDefinition.definitionCache.clear();
+        HitsplatDefinition.spriteCache.clear();
+        HitsplatDefinition.fontCache.clear();
         HealthBarDefinition.aReferenceCache2008.clear();
         HealthBarDefinition.aReferenceCache2013.clear();
         Class40.method288();
@@ -75,13 +75,13 @@ public final class ReferenceCache<T extends DoublyNode> { //TODO generics here a
 
     }
 
-    public void method975(T var1, long var2) {
+    public void put(T var1, long var2) {
         if (this.anInt1777 == 0) {
-            T var4 = this.nodeQueue.method942();
+            T var4 = this.nodeQueue.pop();
             var4.unlink();
             var4.method977();
             if (var4 == this.aDoublyNode1775) {
-                var4 = this.nodeQueue.method942();
+                var4 = this.nodeQueue.pop();
                 var4.unlink();
                 var4.method977();
             }
@@ -90,7 +90,7 @@ public final class ReferenceCache<T extends DoublyNode> { //TODO generics here a
         }
 
         this.table.put(var1, var2);
-        this.nodeQueue.method940(var1);
+        this.nodeQueue.add(var1);
     }
 
     public void clear() {
@@ -100,10 +100,10 @@ public final class ReferenceCache<T extends DoublyNode> { //TODO generics here a
         this.anInt1777 = this.anInt1779;
     }
 
-    public T method973(long var1) {
+    public T get(long var1) {
         T var3 = this.table.lookup(var1);
         if (var3 != null) {
-            this.nodeQueue.method940(var3);
+            this.nodeQueue.add(var3);
         }
 
         return var3;

@@ -64,7 +64,7 @@ public class CacheReferenceTable extends ReferenceTable {
                         Class168.aNodeTable2086.put(var8, var6);
                         ++Class168.anInt2087;
                     } else {
-                        Class168.aNodeQueue2076.method940(var8);
+                        Class168.aNodeQueue2076.add(var8);
                         Class168.aNodeTable2073.put(var8, var6);
                         ++Class168.anInt2070;
                     }
@@ -94,7 +94,7 @@ public class CacheReferenceTable extends ReferenceTable {
         long var3 = (long) (var1 + (var2 << 16));
         Node_Sub21_Sub6 var5 = Class168.aNodeTable2073.lookup(var3);
         if (var5 != null) {
-            Class168.aNodeQueue2076.method944(var5);
+            Class168.aNodeQueue2076.insert(var5);
         }
 
     }
@@ -147,7 +147,7 @@ public class CacheReferenceTable extends ReferenceTable {
             aCRC32_2103.reset();
             aCRC32_2103.update(var3, 0, var3.length);
             var5 = (int) aCRC32_2103.getValue();
-            Buffer var7 = new Buffer(Class150.method1003(var3));
+            Buffer var7 = new Buffer(ReferenceTable.method1003(var3));
             int var8 = var7.readUnsignedByte();
             if (var8 != 5 && var8 != 6) {
                 throw new RuntimeException(var8 + "," + this.anInt2101 + "," + var2);

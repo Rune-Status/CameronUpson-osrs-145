@@ -28,7 +28,7 @@ public final class PickableNode extends Entity {
 
     }
 
-    protected final Model method191() {
+    protected final Model getModel() {
         return Class149.method1001(this.id).method1141(this.stackSize);
     }
 }

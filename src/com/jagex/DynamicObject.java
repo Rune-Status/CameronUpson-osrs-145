@@ -19,7 +19,7 @@ public class DynamicObject extends Entity {
         this.sceneX = var5;
         this.sceneY = var6;
         if (var7 != -1) {
-            this.anAnimationSequence358 = Applet_Sub1.method251(var7);
+            this.anAnimationSequence358 = AnimationSequence.get(var7);
             this.anInt220 = 0;
             this.anInt217 = Client.engineCycle - 1;
             if (this.anAnimationSequence358.replayMode == 0 && var9 != null && var9 instanceof DynamicObject) {
@@ -119,7 +119,7 @@ public class DynamicObject extends Entity {
         return var24 + (var22 << 16) + (var23 << 8);
     }
 
-    protected final Model method191() {
+    protected final Model getModel() {
         if (this.anAnimationSequence358 != null) {
             int var1 = Client.engineCycle - this.anInt217;
             if (var1 > 100 && this.anAnimationSequence358.loopOffset > 0) {

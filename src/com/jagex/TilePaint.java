@@ -84,7 +84,7 @@ public final class TilePaint {
             }
 
             while (Class168.anInt2083 < 20 && Class168.anInt2070 > 0) {
-                var3 = Class168.aNodeQueue2076.method941();
+                var3 = Class168.aNodeQueue2076.head();
                 var4 = new Buffer(4);
                 var4.method451(0);
                 var4.method867((int) var3.key);

@@ -61,7 +61,7 @@ public class Class105 {
                         return;
                     }
 
-                    Class168.aNodeQueue2076.method944(var2);
+                    Class168.aNodeQueue2076.insert(var2);
                     Class168.aNodeTable2073.put(var2, var2.key);
                     ++Class168.anInt2070;
                     --Class168.anInt2083;

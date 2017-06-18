@@ -2,14 +2,14 @@ package com.jagex;
 
 public class Varps {
     public static int[] anIntArray2000;
-    public static int[] anIntArray1998 = new int[32];
+    public static int[] masks = new int[32];
     public static int[] values;
 
     static {
         int var0 = 2;
 
         for (int var1 = 0; var1 < 32; ++var1) {
-            anIntArray1998[var1] = var0 - 1;
+            masks[var1] = var0 - 1;
             var0 += var0;
         }
 

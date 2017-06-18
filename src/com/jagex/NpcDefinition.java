@@ -2,8 +2,8 @@ package com.jagex;
 
 public class NpcDefinition extends DoublyNode {
     static ReferenceTable aReferenceTable2017;
-    static ReferenceTable aReferenceTable2012;
-    static ReferenceCache aReferenceCache2008 = new ReferenceCache(64);
+    static ReferenceTable definitionTable;
+    static ReferenceCache definitionCache = new ReferenceCache(64);
     static ReferenceCache aReferenceCache2013 = new ReferenceCache(50);
     public boolean aBoolean215 = true;
     public int id;
@@ -25,16 +25,16 @@ public class NpcDefinition extends DoublyNode {
     public int[] transformIds;
     public boolean aBoolean2014 = true;
     public boolean aBoolean2016 = true;
-    short[] aShortArray938;
-    short[] aShortArray947;
+    short[] replacementTextures;
+    short[] originalTextures;
     int varpIndex = -1;
     int[] anIntArray932;
-    short[] aShortArray2020;
+    short[] originalColors;
     int[] anIntArray1319;
     int varpbitIndex = -1;
-    short[] aShortArray936;
-    int anInt213 = 128;
-    int anInt818 = 128;
+    short[] replacementColors;
+    int scaleXZ = 128;
+    int scaleY = 128;
     int anInt234 = 0;
     int anInt765 = 0;
     RS3CopyPastedNodeTable properties;
@@ -52,7 +52,22 @@ public class NpcDefinition extends DoublyNode {
         }
     }
 
-    void method1057(Buffer var1, int var2) {
+    public static NpcDefinition get(int id) {
+        NpcDefinition var1 = (NpcDefinition) definitionCache.get((long) id);
+        if (var1 != null) {
+            return var1;
+        }
+        byte[] var2 = definitionTable.unpack(9, id);
+        var1 = new NpcDefinition();
+        var1.id = id;
+        if (var2 != null) {
+            var1.decode(new Buffer(var2));
+        }
+        definitionCache.put(var1, (long) id);
+        return var1;
+    }
+
+    void decode(Buffer var1, int var2) {
         int var3;
         int var4;
         if (var2 == 1) {
@@ -86,21 +101,21 @@ public class NpcDefinition extends DoublyNode {
             }
         } else if (var2 == 40) {
             var3 = var1.readUnsignedByte();
-            this.aShortArray2020 = new short[var3];
-            this.aShortArray936 = new short[var3];
+            this.originalColors = new short[var3];
+            this.replacementColors = new short[var3];
 
             for (var4 = 0; var4 < var3; ++var4) {
-                this.aShortArray2020[var4] = (short) var1.readUnsignedShort();
-                this.aShortArray936[var4] = (short) var1.readUnsignedShort();
+                this.originalColors[var4] = (short) var1.readUnsignedShort();
+                this.replacementColors[var4] = (short) var1.readUnsignedShort();
             }
         } else if (var2 == 41) {
             var3 = var1.readUnsignedByte();
-            this.aShortArray947 = new short[var3];
-            this.aShortArray938 = new short[var3];
+            this.originalTextures = new short[var3];
+            this.replacementTextures = new short[var3];
 
             for (var4 = 0; var4 < var3; ++var4) {
-                this.aShortArray947[var4] = (short) var1.readUnsignedShort();
-                this.aShortArray938[var4] = (short) var1.readUnsignedShort();
+                this.originalTextures[var4] = (short) var1.readUnsignedShort();
+                this.replacementTextures[var4] = (short) var1.readUnsignedShort();
             }
         } else if (var2 == 60) {
             var3 = var1.readUnsignedByte();
@@ -114,9 +129,9 @@ public class NpcDefinition extends DoublyNode {
         } else if (var2 == 95) {
             this.anInt236 = var1.readUnsignedShort();
         } else if (var2 == 97) {
-            this.anInt213 = var1.readUnsignedShort();
+            this.scaleXZ = var1.readUnsignedShort();
         } else if (var2 == 98) {
-            this.anInt818 = var1.readUnsignedShort();
+            this.scaleY = var1.readUnsignedShort();
         } else if (var2 == 99) {
             this.aBoolean2021 = true;
         } else if (var2 == 100) {
@@ -173,10 +188,10 @@ public class NpcDefinition extends DoublyNode {
 
     public final Model method1058(AnimationSequence var1, int var2, AnimationSequence var3, int var4) {
         if (this.transformIds != null) {
-            NpcDefinition var12 = this.method1055();
+            NpcDefinition var12 = this.transform();
             return var12 == null ? null : var12.method1058(var1, var2, var3, var4);
         }
-        Model var5 = (Model) aReferenceCache2013.method973((long) this.id);
+        Model var5 = (Model) aReferenceCache2013.get((long) this.id);
         if (var5 == null) {
             boolean var6 = false;
 
@@ -204,20 +219,20 @@ public class NpcDefinition extends DoublyNode {
                 var11 = new ModelHeader(var9, var9.length);
             }
 
-            if (this.aShortArray2020 != null) {
-                for (var10 = 0; var10 < this.aShortArray2020.length; ++var10) {
-                    var11.recolor(this.aShortArray2020[var10], this.aShortArray936[var10]);
+            if (this.originalColors != null) {
+                for (var10 = 0; var10 < this.originalColors.length; ++var10) {
+                    var11.recolor(this.originalColors[var10], this.replacementColors[var10]);
                 }
             }
 
-            if (this.aShortArray947 != null) {
-                for (var10 = 0; var10 < this.aShortArray947.length; ++var10) {
-                    var11.method573(this.aShortArray947[var10], this.aShortArray938[var10]);
+            if (this.originalTextures != null) {
+                for (var10 = 0; var10 < this.originalTextures.length; ++var10) {
+                    var11.retexture(this.originalTextures[var10], this.replacementTextures[var10]);
                 }
             }
 
             var5 = var11.light(this.anInt234 + 64, this.anInt765 + 850, -30, -50, -30);
-            aReferenceCache2013.method975(var5, (long) this.id);
+            aReferenceCache2013.put(var5, (long) this.id);
         }
 
         Model var8;
@@ -231,20 +246,20 @@ public class NpcDefinition extends DoublyNode {
             var8 = var5.method726(true);
         }
 
-        if (this.anInt213 != 128 || this.anInt818 != 128) {
-            var8.method531(this.anInt213, this.anInt818, this.anInt213);
+        if (this.scaleXZ != 128 || this.scaleY != 128) {
+            var8.rotate(this.scaleXZ, this.scaleY, this.scaleXZ);
         }
 
         return var8;
     }
 
-    public boolean method1061() {
+    public boolean transforms() {
         if (this.transformIds == null) {
             return true;
         }
         int var1 = -1;
         if (this.varpbitIndex != -1) {
-            var1 = Class4.getVarpbitValue(this.varpbitIndex);
+            var1 = Varpbit.getValue(this.varpbitIndex);
         } else if (this.varpIndex != -1) {
             var1 = Varps.values[this.varpIndex];
         }
@@ -265,7 +280,7 @@ public class NpcDefinition extends DoublyNode {
 
     public final ModelHeader method1059() {
         if (this.transformIds != null) {
-            NpcDefinition var1 = this.method1055();
+            NpcDefinition var1 = this.transform();
             return var1 == null ? null : var1.method1059();
         }
         if (this.anIntArray1319 == null) {
@@ -296,25 +311,25 @@ public class NpcDefinition extends DoublyNode {
         }
 
         int var7;
-        if (this.aShortArray2020 != null) {
-            for (var7 = 0; var7 < this.aShortArray2020.length; ++var7) {
-                var6.recolor(this.aShortArray2020[var7], this.aShortArray936[var7]);
+        if (this.originalColors != null) {
+            for (var7 = 0; var7 < this.originalColors.length; ++var7) {
+                var6.recolor(this.originalColors[var7], this.replacementColors[var7]);
             }
         }
 
-        if (this.aShortArray947 != null) {
-            for (var7 = 0; var7 < this.aShortArray947.length; ++var7) {
-                var6.method573(this.aShortArray947[var7], this.aShortArray938[var7]);
+        if (this.originalTextures != null) {
+            for (var7 = 0; var7 < this.originalTextures.length; ++var7) {
+                var6.retexture(this.originalTextures[var7], this.replacementTextures[var7]);
             }
         }
 
         return var6;
     }
 
-    public final NpcDefinition method1055() {
+    public final NpcDefinition transform() {
         int var1 = -1;
         if (this.varpbitIndex != -1) {
-            var1 = Class4.getVarpbitValue(this.varpbitIndex);
+            var1 = Varpbit.getValue(this.varpbitIndex);
         } else if (this.varpIndex != -1) {
             var1 = Varps.values[this.varpIndex];
         }
@@ -326,17 +341,16 @@ public class NpcDefinition extends DoublyNode {
             var2 = this.transformIds[this.transformIds.length - 1];
         }
 
-        return var2 != -1 ? Class122.getNpcDefinition(var2) : null;
+        return var2 != -1 ? get(var2) : null;
     }
 
-    void method1056(Buffer var1) {
+    void decode(Buffer buffer) {
         while (true) {
-            int var2 = var1.readUnsignedByte();
-            if (var2 == 0) {
+            int opcode = buffer.readUnsignedByte();
+            if (opcode == 0) {
                 return;
             }
-
-            this.method1057(var1, var2);
+            decode(buffer, opcode);
         }
     }
 }

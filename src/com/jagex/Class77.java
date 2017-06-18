@@ -213,11 +213,11 @@ public class Class77 {
                             Node_Sub21_Sub19.aBoolean2098 = var13;
                             Class120.anInt1358 = Class55.aReferenceTable424.method1101(10);
                             Class53.aFont413 = var14;
-                            GraphicsObject.method456(Class73.aCacheReferenceTable741, Client.aCacheReferenceTable1493, Client.aCacheReferenceTable1496);
+                            AnimationSequence.setTables(Class73.aCacheReferenceTable741, Client.aCacheReferenceTable1493, Client.aCacheReferenceTable1496);
                             CacheReferenceTable var15 = Class73.aCacheReferenceTable741;
                             CacheReferenceTable var16 = Class76.aCacheReferenceTable823;
-                            Node_Sub21_Sub7.aReferenceTable2012 = var15;
-                            Class156.aReferenceTable1844 = var16;
+                            GraphicDefinition.definitionTable = var15;
+                            ModelHeader.aReferenceTable1844 = var16;
                             Class30.method202(Class73.aCacheReferenceTable741);
                             Node_Sub21_Sub20.aReferenceTable2012 = Class73.aCacheReferenceTable741;
                             Node_Sub21_Sub20.anInt209 = Node_Sub21_Sub20.aReferenceTable2012.method1101(16);
@@ -231,9 +231,9 @@ public class Class77 {
                             CacheReferenceTable var20 = Class73.aCacheReferenceTable741;
                             CacheReferenceTable var21 = Class21.aCacheReferenceTable139;
                             CacheReferenceTable var22 = Class2.aCacheReferenceTable8;
-                            HitsplatDefinition.aReferenceTable2012 = var20;
-                            HitsplatDefinition.aReferenceTable2017 = var21;
-                            HitsplatDefinition.aReferenceTable2039 = var22;
+                            HitsplatDefinition.definitionTable = var20;
+                            HitsplatDefinition.spriteTable = var21;
+                            HitsplatDefinition.fontTable = var22;
                             Class78.method466(Class73.aCacheReferenceTable741, Class21.aCacheReferenceTable139);
                             Class6_Sub1.method159(Class73.aCacheReferenceTable741, Class21.aCacheReferenceTable139);
                             Login.aString686 = "Loaded config";
@@ -260,8 +260,8 @@ public class Class77 {
                             ++var0;
                         }
 
-                        if (Class150.aSpriteArray1827 == null) {
-                            Class150.aSpriteArray1827 = RuntimeException_Sub1.method742(Class21.aCacheReferenceTable139, "headicons_pk", "");
+                        if (Hitbar.aSpriteArray1827 == null) {
+                            Hitbar.aSpriteArray1827 = RuntimeException_Sub1.method742(Class21.aCacheReferenceTable139, "headicons_pk", "");
                         } else {
                             ++var0;
                         }
@@ -405,21 +405,6 @@ public class Class77 {
                 Client.anInt1492 = 30;
             }
         }
-    }
-
-    public static HitsplatDefinition getHitsplatDefinition(int var0) {
-        HitsplatDefinition var1 = (HitsplatDefinition) HitsplatDefinition.aReferenceCache2013.method973((long) var0);
-        if (var1 != null) {
-            return var1;
-        }
-        byte[] var2 = HitsplatDefinition.aReferenceTable2012.method1085(32, var0);
-        var1 = new HitsplatDefinition();
-        if (var2 != null) {
-            var1.decode(new Buffer(var2));
-        }
-
-        HitsplatDefinition.aReferenceCache2013.method975(var1, (long) var0);
-        return var1;
     }
 
     boolean method461(float var1) {

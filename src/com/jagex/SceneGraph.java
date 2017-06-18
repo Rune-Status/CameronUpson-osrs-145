@@ -315,7 +315,7 @@ public class SceneGraph {
         Tile var11 = this.tiles[var1][var2][var3];
         if (var11 != null) {
             for (int var12 = 0; var12 < var11.anInt226; ++var12) {
-                if ((var11.markers[var12].anInt1121 & 256) == 256 && var11.markers[var12].entity instanceof Model) {
+                if ((var11.markers[var12].config & 256) == 256 && var11.markers[var12].entity instanceof Model) {
                     Model var13 = (Model) var11.markers[var12].entity;
                     var13.method724();
                     if (var13.height > var10) {
@@ -337,7 +337,7 @@ public class SceneGraph {
         if (var5 != null || var6 != null) {
             Boundary var11 = new Boundary();
             var11.uid = var9;
-            var11.anInt1143 = var10;
+            var11.config = var10;
             var11.sceneX = var2 * 128 + 64;
             var11.sceneY = var3 * 128 + 64;
             var11.level = var4;
@@ -432,7 +432,7 @@ public class SceneGraph {
 
         EntityMarker var17 = new EntityMarker();
         var17.uid = var12;
-        var17.anInt1121 = var13;
+        var17.config = var13;
         var17.level = var1;
         var17.endSceneX = var6;
         var17.endSceneY = var7;
@@ -1494,7 +1494,7 @@ public class SceneGraph {
             var8.sceneY = var3 * 128 + 64;
             var8.level = var4;
             var8.uid = var6;
-            var8.anInt1039 = var7;
+            var8.config = var7;
             if (this.tiles[var1][var2][var3] == null) {
                 this.tiles[var1][var2][var3] = new Tile(var1, var2, var3);
             }
@@ -2143,7 +2143,7 @@ public class SceneGraph {
         if (var5 != null) {
             BoundaryDecor var13 = new BoundaryDecor();
             var13.uid = var11;
-            var13.anInt1116 = var12;
+            var13.config = var12;
             var13.sceneX = var2 * 128 + 64;
             var13.sceneY = var3 * 128 + 64;
             var13.level = var4;
@@ -2237,17 +2237,17 @@ public class SceneGraph {
             return -1;
         }
         if (var5.boundary != null && var5.boundary.uid == var4) {
-            return var5.boundary.anInt1143 & 255;
+            return var5.boundary.config & 255;
         }
         if (var5.boundaryDecor != null && var5.boundaryDecor.uid == var4) {
-            return var5.boundaryDecor.anInt1116 & 255;
+            return var5.boundaryDecor.config & 255;
         }
         if (var5.decor != null && var5.decor.uid == var4) {
-            return var5.decor.anInt1039 & 255;
+            return var5.decor.config & 255;
         }
         for (int var6 = 0; var6 < var5.anInt226; ++var6) {
             if (var5.markers[var6].uid == var4) {
-                return var5.markers[var6].anInt1121 & 255;
+                return var5.markers[var6].config & 255;
             }
         }
 

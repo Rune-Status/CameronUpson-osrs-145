@@ -11,7 +11,7 @@ public class Class160 {
         if (!Class64.method381(var0, var4, var5)) {
             var6 = null;
         } else {
-            var6 = Class65.loadFont(var1.method1085(var4, var5));
+            var6 = Class65.loadFont(var1.unpack(var4, var5));
         }
 
         return var6;

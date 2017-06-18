@@ -40,7 +40,7 @@ public class InterfaceNode extends Node {
                         }
                     }
 
-                    var3.definition = Class122.getNpcDefinition(Client.aPacket1521.method788(14));
+                    var3.definition = NpcDefinition.get(Client.aPacket1521.method788(14));
                     int var5 = Client.aPacket1521.method788(1);
                     if (var5 == 1) {
                         Client.anIntArray1507[++Client.anInt1508 - 1] = var1;

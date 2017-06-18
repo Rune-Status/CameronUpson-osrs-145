@@ -124,7 +124,7 @@ public class ObjectDefinition extends DoublyNode {
             var7 = (long) ((var1 << 3) + (this.id << 10) + var2);
         }
 
-        Object var9 = aReferenceCache2047.method973(var7);
+        Object var9 = aReferenceCache2047.get(var7);
         if (var9 == null) {
             ModelHeader var10 = this.method1076(var1, var2);
             if (var10 == null) {
@@ -140,7 +140,7 @@ public class ObjectDefinition extends DoublyNode {
                 var9 = var10;
             }
 
-            aReferenceCache2047.method975((DoublyNode) var9, var7);
+            aReferenceCache2047.put((DoublyNode) var9, var7);
         }
 
         if (this.aBoolean2046) {
@@ -166,7 +166,7 @@ public class ObjectDefinition extends DoublyNode {
             var7 = (long) ((var1 << 3) + (this.id << 10) + var2);
         }
 
-        Model var9 = (Model) aReferenceCache2042.method973(var7);
+        Model var9 = (Model) aReferenceCache2042.get(var7);
         if (var9 == null) {
             ModelHeader var10 = this.method1076(var1, var2);
             if (var10 == null) {
@@ -174,7 +174,7 @@ public class ObjectDefinition extends DoublyNode {
             }
 
             var9 = var10.light(this.anInt234 + 64, this.anInt765 + 768, -50, -10, -50);
-            aReferenceCache2042.method975(var9, var7);
+            aReferenceCache2042.put(var9, var7);
         }
 
         if (this.clipType >= 0) {
@@ -192,7 +192,7 @@ public class ObjectDefinition extends DoublyNode {
             var9 = (long) ((this.id << 10) + (var1 << 3) + var2);
         }
 
-        Model var11 = (Model) aReferenceCache2042.method973(var9);
+        Model var11 = (Model) aReferenceCache2042.get(var9);
         if (var11 == null) {
             ModelHeader var12 = this.method1076(var1, var2);
             if (var12 == null) {
@@ -200,7 +200,7 @@ public class ObjectDefinition extends DoublyNode {
             }
 
             var11 = var12.light(this.anInt234 + 64, this.anInt765 + 768, -50, -10, -50);
-            aReferenceCache2042.method975(var11, var9);
+            aReferenceCache2042.put(var11, var9);
         }
 
         if (var7 == null && this.clipType == -1) {
@@ -246,7 +246,7 @@ public class ObjectDefinition extends DoublyNode {
                     var8 += 65536;
                 }
 
-                var3 = (ModelHeader) aReferenceCache2045.method973((long) var8);
+                var3 = (ModelHeader) aReferenceCache2045.get((long) var8);
                 if (var3 == null) {
                     var3 = ModelHeader.method571(aReferenceTable2039, var8 & '\uffff', 0);
                     if (var3 == null) {
@@ -257,7 +257,7 @@ public class ObjectDefinition extends DoublyNode {
                         var3.method540();
                     }
 
-                    aReferenceCache2045.method975(var3, (long) var8);
+                    aReferenceCache2045.put(var3, (long) var8);
                 }
 
                 if (var5 > 1) {
@@ -288,7 +288,7 @@ public class ObjectDefinition extends DoublyNode {
                 var5 += 65536;
             }
 
-            var3 = (ModelHeader) aReferenceCache2045.method973((long) var5);
+            var3 = (ModelHeader) aReferenceCache2045.get((long) var5);
             if (var3 == null) {
                 var3 = ModelHeader.method571(aReferenceTable2039, var5 & '\uffff', 0);
                 if (var3 == null) {
@@ -299,7 +299,7 @@ public class ObjectDefinition extends DoublyNode {
                     var3.method540();
                 }
 
-                aReferenceCache2045.method975(var3, (long) var5);
+                aReferenceCache2045.put(var3, (long) var5);
             }
         }
 
@@ -331,7 +331,7 @@ public class ObjectDefinition extends DoublyNode {
 
         if (this.aShortArray2040 != null) {
             for (var8 = 0; var8 < this.aShortArray2040.length; ++var8) {
-                var7.method573(this.aShortArray2040[var8], this.aShortArray2044[var8]);
+                var7.retexture(this.aShortArray2040[var8], this.aShortArray2044[var8]);
             }
         }
 
@@ -525,7 +525,7 @@ public class ObjectDefinition extends DoublyNode {
     public final ObjectDefinition method1073() {
         int var1 = -1;
         if (this.varpbitIndex != -1) {
-            var1 = Class4.getVarpbitValue(this.varpbitIndex);
+            var1 = Varpbit.getValue(this.varpbitIndex);
         } else if (this.varpIndex != -1) {
             var1 = Varps.values[this.varpIndex];
         }

@@ -628,7 +628,7 @@ public class Class13 {
 
                 for (int var7 = 0; var7 < var5.length; ++var7) {
                     MapTile var8 = var5[var7];
-                    if (Class116.method795(var8.x)) {
+                    if (IsaacCipher.method795(var8.x)) {
                         ObjectDefinition var9 = Class5.method17(var8.z);
                         int var10 = var9.anInt219 != 0 ? -3407872 : -3355444;
                         if (Class163.aClass163_1975.anInt1960 == var8.x) {

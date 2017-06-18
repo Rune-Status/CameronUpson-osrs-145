@@ -321,7 +321,7 @@ public class Node_Sub26 extends Node {
     }
 
     public static Node_Sub26 method1044(ReferenceTable var0, int var1, int var2) {
-        byte[] var3 = var0.method1085(var1, var2);
+        byte[] var3 = var0.unpack(var1, var2);
         return var3 == null ? null : new Node_Sub26(new Buffer(var3));
     }
 

@@ -40,7 +40,7 @@ public final class GraphicsProvider extends Class186 {
         try {
             Graphics paint = image.getGraphics().create();
             if (Client.connectionState == 30 && Client.player != null) {
-                Model model = Client.player.method191();
+                Model model = Client.player.getModel();
                 if (model != null) {
                     BoundingBox bb = model.boundingBox;
                     if (bb != null) {

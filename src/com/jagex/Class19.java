@@ -27,13 +27,13 @@ public class Class19 implements Class48 {
     }
 
     static AnimationFrame method143(int var0) {
-        AnimationFrame var1 = (AnimationFrame) AnimationSequence.aReferenceCache2045.method973((long) var0);
+        AnimationFrame var1 = (AnimationFrame) AnimationSequence.aReferenceCache2045.get((long) var0);
         if (var1 != null) {
             return var1;
         }
         var1 = Class77.method462(AnimationSequence.aReferenceTable2017, AnimationSequence.aReferenceTable2039, var0, false);
         if (var1 != null) {
-            AnimationSequence.aReferenceCache2045.method975(var1, (long) var0);
+            AnimationSequence.aReferenceCache2045.put(var1, (long) var0);
         }
 
         return var1;

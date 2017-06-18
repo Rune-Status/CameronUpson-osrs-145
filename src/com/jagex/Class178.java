@@ -64,7 +64,7 @@ public class Class178 {
                 var5 = Class63.anIntArray645[Class63.anInt644];
                 var13 = Class63.anIntArray645[Class63.anInt644 + 1];
                 var7 = Class63.anIntArray645[Class63.anInt644 + 2];
-                InterfaceComponent var14 = Class161.method1016(var7);
+                InterfaceComponent var14 = InterfaceComponent.method1016(var7);
                 Class38.method283(var14, var5, var13);
                 return 1;
             }

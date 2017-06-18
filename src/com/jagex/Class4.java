@@ -129,29 +129,6 @@ public final class Class4 implements KeyListener, FocusListener {
         var0.anInt328 = var4;
     }
 
-    public static int getVarpbitValue(int var0) {
-        Varpbit var1 = (Varpbit) Varpbit.aReferenceCache2025.method973((long) var0);
-        Varpbit var2;
-        if (var1 != null) {
-            var2 = var1;
-        } else {
-            byte[] var7 = Varpbit.aReferenceTable2012.method1085(14, var0);
-            var1 = new Varpbit();
-            if (var7 != null) {
-                var1.method1052(new Buffer(var7));
-            }
-
-            Varpbit.aReferenceCache2025.method975(var1, (long) var0);
-            var2 = var1;
-        }
-
-        int var3 = var2.varpIndex;
-        int var4 = var2.lower;
-        int var5 = var2.upper;
-        int var6 = Varps.anIntArray1998[var5 - var4];
-        return Varps.values[var3] >> var4 & var6;
-    }
-
     public final synchronized void keyPressed(KeyEvent var1) {
         if (aClass4_26 != null) {
             int var2 = var1.getKeyCode();

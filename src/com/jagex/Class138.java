@@ -29,6 +29,6 @@ public class Class138 {
 
         World.anIntArray385 = var2;
         World.anIntArray387 = var3;
-        Player.method192(World.aWorldArray396, 0, World.aWorldArray396.length - 1, World.anIntArray385, World.anIntArray387);
+        Player.method192(World.worlds, 0, World.worlds.length - 1, World.anIntArray385, World.anIntArray387);
     }
 }

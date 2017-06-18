@@ -2,6 +2,7 @@ package com.jagex;
 
 public class Hitbar extends Node {
     static int anInt221;
+    static Sprite[] aSpriteArray1827;
     int health;
     int anInt232;
     int anInt206;
@@ -19,7 +20,7 @@ public class Hitbar extends Node {
             if (var0 instanceof Npc) {
                 NpcDefinition var6 = ((Npc) var0).definition;
                 if (var6.transformIds != null) {
-                    var6 = var6.method1055();
+                    var6 = var6.transform();
                 }
 
                 if (var6 == null) {
@@ -129,7 +130,7 @@ public class Hitbar extends Node {
                     Node_Sub20.method971(var0, var0.anInt803 + 15);
                     if (Client.anInt1561 > -1) {
                         if (var85.prayerIcon != -1) {
-                            Class150.aSpriteArray1827[var85.prayerIcon].method1230(var2 + Client.anInt1561 - 12, Client.anInt1571 + var3 - var9);
+                            aSpriteArray1827[var85.prayerIcon].method1230(var2 + Client.anInt1561 - 12, Client.anInt1571 + var3 - var9);
                             var9 += 25;
                         }
 
@@ -149,7 +150,7 @@ public class Hitbar extends Node {
             } else {
                 NpcDefinition var86 = ((Npc) var0).definition;
                 if (var86.transformIds != null) {
-                    var86 = var86.method1055();
+                    var86 = var86.transform();
                 }
 
                 if (var86.anInt749 >= 0 && var86.anInt749 < Class169.aSpriteArray2119.length) {
@@ -192,7 +193,7 @@ public class Hitbar extends Node {
                         continue;
                     }
 
-                    var87 = Class77.getHitsplatDefinition(var0.hitsplatTypes[var24]);
+                    var87 = HitsplatDefinition.get(var0.hitsplatTypes[var24]);
                     var27 = var87.duration;
                     if (var87 != null && var87.transformIds != null) {
                         var87 = var87.transform();
@@ -208,7 +209,7 @@ public class Hitbar extends Node {
                 var16 = var0.hitsplatIds[var24];
                 HitsplatDefinition var28 = null;
                 if (var16 >= 0) {
-                    var28 = Class77.getHitsplatDefinition(var16);
+                    var28 = HitsplatDefinition.get(var16);
                     if (var28 != null && var28.transformIds != null) {
                         var28 = var28.transform();
                     }

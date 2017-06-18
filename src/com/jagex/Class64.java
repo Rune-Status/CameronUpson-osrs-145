@@ -88,7 +88,7 @@ public class Class64 {
             }
 
             if ((var4 & 1) != 0) {
-                var3.definition = Class122.getNpcDefinition(Client.aPacket1521.method856());
+                var3.definition = NpcDefinition.get(Client.aPacket1521.method856());
                 var3.anInt753 = var3.definition.anInt221;
                 var3.anInt795 = var3.definition.anInt748;
                 var3.anInt760 = var3.definition.anInt225;
@@ -136,7 +136,7 @@ public class Class64 {
 
                 var6 = Client.aPacket1521.method822();
                 if (var3.animation == var5 && var5 != -1) {
-                    var7 = Applet_Sub1.method251(var5).replayMode;
+                    var7 = AnimationSequence.get(var5).replayMode;
                     if (var7 == 1) {
                         var3.animationFrame = 0;
                         var3.anInt790 = 0;
@@ -147,7 +147,7 @@ public class Class64 {
                     if (var7 == 2) {
                         var3.anInt784 = 0;
                     }
-                } else if (var5 == -1 || var3.animation == -1 || Applet_Sub1.method251(var5).priority >= Applet_Sub1.method251(var3.animation).priority) {
+                } else if (var5 == -1 || var3.animation == -1 || AnimationSequence.get(var5).priority >= AnimationSequence.get(var3.animation).priority) {
                     var3.animation = var5;
                     var3.animationFrame = 0;
                     var3.anInt790 = 0;
@@ -288,11 +288,11 @@ public class Class64 {
     }
 
     public static boolean method381(ReferenceTable var0, int var1, int var2) {
-        byte[] var3 = var0.method1085(var1, var2);
+        byte[] var3 = var0.unpack(var1, var2);
         if (var3 == null) {
             return false;
         }
-        Class116.method794(var3);
+        IsaacCipher.method794(var3);
         return true;
     }
 }

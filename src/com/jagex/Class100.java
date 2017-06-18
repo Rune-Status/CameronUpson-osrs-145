@@ -28,7 +28,7 @@ public class Class100 {
     }
 
     public static void method650() {
-        NpcDefinition.aReferenceCache2008.clear();
+        NpcDefinition.definitionCache.clear();
         NpcDefinition.aReferenceCache2013.clear();
     }
 }

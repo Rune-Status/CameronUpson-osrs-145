@@ -13,7 +13,7 @@ public class ClanMate extends Node {
             var0.anInt801 = 0;
         } else {
             if (var0.animation != -1 && var0.anInt791 == 0) {
-                AnimationSequence var1 = Applet_Sub1.method251(var0.animation);
+                AnimationSequence var1 = AnimationSequence.get(var0.animation);
                 if (var0.anInt799 > 0 && var1.animatingPrecedence == 0) {
                     ++var0.anInt801;
                     return;
@@ -167,7 +167,7 @@ public class ClanMate extends Node {
         for (int var5 = 0; var5 < var0.length; ++var5) {
             InterfaceComponent var6 = var0[var5];
             if (var6 != null && var1 == var6.parentUid) {
-                Node_Sub21_Sub7.method1053(var6, var2, var3, var4);
+                InterfaceComponent.method1053(var6, var2, var3, var4);
                 RuntimeException_Sub1.method743(var6, var2, var3);
                 if (var6.insetX > var6.viewportWidth - var6.width) {
                     var6.insetX = var6.viewportWidth - var6.width;

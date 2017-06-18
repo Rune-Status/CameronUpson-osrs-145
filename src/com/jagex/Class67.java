@@ -24,18 +24,18 @@ public class Class67 {
         this.aBooleanArray674 = new boolean[this.aStringArray678.length];
 
         for (var1 = 0; var1 < this.aStringArray678.length; ++var1) {
-            Node_Sub21_Sub22 var3 = (Node_Sub21_Sub22) Node_Sub21_Sub22.aReferenceCache2025.method973((long) var1);
+            Node_Sub21_Sub22 var3 = (Node_Sub21_Sub22) Node_Sub21_Sub22.aReferenceCache2025.get((long) var1);
             Node_Sub21_Sub22 var5;
             if (var3 != null) {
                 var5 = var3;
             } else {
-                byte[] var4 = Class49.aReferenceTable374.method1085(15, var1);
+                byte[] var4 = Class49.aReferenceTable374.unpack(15, var1);
                 var3 = new Node_Sub21_Sub22();
                 if (var4 != null) {
                     var3.method1052(new Buffer(var4));
                 }
 
-                Node_Sub21_Sub22.aReferenceCache2025.method975(var3, (long) var1);
+                Node_Sub21_Sub22.aReferenceCache2025.put(var3, (long) var1);
                 var5 = var3;
             }
 

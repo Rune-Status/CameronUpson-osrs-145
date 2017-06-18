@@ -2,11 +2,14 @@ package com.jagex;
 
 import java.io.File;
 import java.io.RandomAccessFile;
+import java.util.Hashtable;
 import java.util.Iterator;
 
 public class MouseRecorder implements Runnable {
     protected static String aString248;
     static int anInt249;
+    static boolean aBoolean1425 = false;
+    static Hashtable aHashtable1426 = new Hashtable(16);
     boolean enabled = true;
     Object anObject250 = new Object();
     int[] anIntArray245 = new int[500];
@@ -19,7 +22,7 @@ public class MouseRecorder implements Runnable {
         if (var0 >= 2000) {
             var0 -= 1000;
             var3 = Class63.anIntArray645[--Class63.anInt644];
-            var4 = Class161.method1016(var3);
+            var4 = InterfaceComponent.method1016(var3);
         } else {
             var4 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
         }
@@ -213,10 +216,10 @@ public class MouseRecorder implements Runnable {
     }
 
     static File method211(String var0) {
-        if (!Class130.aBoolean1425) {
+        if (!aBoolean1425) {
             throw new RuntimeException("");
         }
-        File var1 = (File) Class130.aHashtable1426.get(var0);
+        File var1 = (File) aHashtable1426.get(var0);
         if (var1 != null) {
             return var1;
         }
@@ -234,7 +237,7 @@ public class MouseRecorder implements Runnable {
             var3.write(var5);
             var3.seek(0L);
             var3.close();
-            Class130.aHashtable1426.put(var0, var2);
+            aHashtable1426.put(var0, var2);
             return var2;
         } catch (Exception var8) {
             try {

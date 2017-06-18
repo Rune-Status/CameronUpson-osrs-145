@@ -255,7 +255,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
         if (!Class78.aFile841.exists()) {
             throw new RuntimeException("");
         }
-        Class130.aBoolean1425 = true;
+        MouseRecorder.aBoolean1425 = true;
 
         try {
             var21 = new File(Class10.aString76, "random.dat");
@@ -315,7 +315,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
 
         for (int var2 = 0; var2 < var1; ++var2) {
             if (InterfaceComponent.interfaces[var0][var2] == null) {
-                byte[] var3 = Class51.aReferenceTable382.method1085(var0, var2);
+                byte[] var3 = Class51.aReferenceTable382.unpack(var0, var2);
                 if (var3 != null) {
                     InterfaceComponent.interfaces[var0][var2] = new InterfaceComponent();
                     InterfaceComponent.interfaces[var0][var2].uid = var2 + (var0 << 16);

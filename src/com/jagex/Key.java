@@ -422,7 +422,7 @@ public class Key implements EnumOrdinal, Class187 {
         long var6 = ((long) var3 << 42) + (long) var0 + ((long) var1 << 16) + ((long) var2 << 38) + ((long) var4 << 40);
         Sprite var8;
         if (!var5) {
-            var8 = (Sprite) ItemDefinition.aReferenceCache1891.method973(var6);
+            var8 = (Sprite) ItemDefinition.aReferenceCache1891.get(var6);
             if (var8 != null) {
                 return var8;
             }
@@ -517,7 +517,7 @@ public class Key implements EnumOrdinal, Class187 {
         }
 
         if (!var5) {
-            ItemDefinition.aReferenceCache1891.method975(var8, var6);
+            ItemDefinition.aReferenceCache1891.put(var8, var6);
         }
 
         Node_Sub21_Sub26.method1211(var14, var15, var16);
@@ -530,7 +530,7 @@ public class Key implements EnumOrdinal, Class187 {
     static void method362(NpcDefinition var0, int var1, int var2, int var3) {
         if (Client.menuRowCount < 400) {
             if (var0.transformIds != null) {
-                var0 = var0.method1055();
+                var0 = var0.transform();
             }
 
             if (var0 != null) {
@@ -538,7 +538,7 @@ public class Key implements EnumOrdinal, Class187 {
                     if (!var0.aBoolean2019 || var1 == Client.anInt1641) {
                         String var4 = var0.name;
                         if (var0.anInt236 != 0) {
-                            var4 = var4 + Class152.method1007(var0.anInt236, Client.player.anInt221) + " " + " (" + "level-" + var0.anInt236 + ")";
+                            var4 = var4 + Class76.method1007(var0.anInt236, Client.player.anInt221) + " " + " (" + "level-" + var0.anInt236 + ")";
                         }
 
                         if (var0.aBoolean2019 && Client.resizableMode) {
@@ -634,6 +634,10 @@ public class Key implements EnumOrdinal, Class187 {
                 }
             }
         }
+    }
+
+    public static boolean method888(char var0) {
+        return var0 >= 'A' && var0 <= 'Z' || var0 >= 'a' && var0 <= 'z';
     }
 
     public int ordinal() {

@@ -301,6 +301,7 @@ public final class Client extends Applet_Sub1 {
     static Player player;
     static long aLong682;
     static ClientPreferences preferences;
+    static byte aByte1826;
 
     static {
         aClass55_1491 = Class55.aClass55_422;
@@ -1592,7 +1593,7 @@ public final class Client extends Applet_Sub1 {
                             if (var3 == 39 || var3 == 40 || var3 == 41 || var3 == 42 || var3 == 43 || var3 == 33 || var3 == 34 || var3 == 35 || var3 == 36 || var3 == 37 || var3 == 38 || var3 == 1005) {
                                 var4 = menuSecondaryArgs[var2];
                                 var5 = menuTertiaryArgs[var2];
-                                InterfaceComponent var10 = Class161.method1016(var5);
+                                InterfaceComponent var10 = InterfaceComponent.method1016(var5);
                                 var8 = Class75.method448(var10);
                                 boolean var7 = (var8 >> 28 & 1) != 0;
                                 if (var7) {
@@ -1663,7 +1664,7 @@ public final class Client extends Applet_Sub1 {
                     ItemTable.method284(Class118.anInterfaceComponent1348);
                 }
 
-                Class118.anInterfaceComponent1348 = Class161.method1016(var5);
+                Class118.anInterfaceComponent1348 = InterfaceComponent.method1016(var5);
                 anInt1588 = var4;
                 anInt1579 = Class33.anInt255;
                 anInt1592 = Class33.anInt259;
@@ -1726,7 +1727,7 @@ public final class Client extends Applet_Sub1 {
     }
 
     void method900(InterfaceComponent var1) {
-        InterfaceComponent var2 = var1.parentUid == -1 ? null : Class161.method1016(var1.parentUid);
+        InterfaceComponent var2 = var1.parentUid == -1 ? null : InterfaceComponent.method1016(var1.parentUid);
         int var3;
         int var4;
         if (var2 == null) {
@@ -1737,7 +1738,7 @@ public final class Client extends Applet_Sub1 {
             var4 = var2.height;
         }
 
-        Node_Sub21_Sub7.method1053(var1, var3, var4, false);
+        InterfaceComponent.method1053(var1, var3, var4, false);
         RuntimeException_Sub1.method743(var1, var3, var4);
     }
 
@@ -2352,7 +2353,7 @@ public final class Client extends Applet_Sub1 {
                         }
 
                         if (anInt1632 != -1) {
-                            Class141.method978(anInt1632, 0, 0, AxisAlignedBoundingBox.appletWidth, Class64.appletHeight, 0, 0);
+                            InterfaceComponent.method978(anInt1632, 0, 0, AxisAlignedBoundingBox.appletWidth, Class64.appletHeight, 0, 0);
                         }
 
                         ++anInt1644;
@@ -2734,7 +2735,7 @@ public final class Client extends Applet_Sub1 {
                                                             break;
                                                         }
 
-                                                        var39 = Class161.method1016(var38.parentUid);
+                                                        var39 = InterfaceComponent.method1016(var38.parentUid);
                                                     }
                                                     while (var39 == null || var39.components == null || var38.componentIndex >= var39.components.length || var39.components[var38.componentIndex] != var38);
 
@@ -2747,7 +2748,7 @@ public final class Client extends Applet_Sub1 {
                                                 break;
                                             }
 
-                                            var39 = Class161.method1016(var38.parentUid);
+                                            var39 = InterfaceComponent.method1016(var38.parentUid);
                                         }
                                         while (var39 == null || var39.components == null || var38.componentIndex >= var39.components.length || var38 != var39.components[var38.componentIndex]);
 
@@ -2760,7 +2761,7 @@ public final class Client extends Applet_Sub1 {
                                     break;
                                 }
 
-                                var39 = Class161.method1016(var38.parentUid);
+                                var39 = InterfaceComponent.method1016(var38.parentUid);
                             }
                             while (var39 == null || var39.components == null || var38.componentIndex >= var39.components.length || var39.components[var38.componentIndex] != var38);
 
@@ -2907,7 +2908,7 @@ public final class Client extends Applet_Sub1 {
                 }
 
                 if (var2 >= 0) {
-                    var6 = Class161.method1016(var2);
+                    var6 = InterfaceComponent.method1016(var2);
                 } else {
                     var6 = null;
                 }
@@ -2952,7 +2953,7 @@ public final class Client extends Applet_Sub1 {
                 var3 = aPacket1521.method856();
                 var62 = aPacket1521.method849();
                 var63 = aPacket1521.method848();
-                var70 = Class161.method1016(var63);
+                var70 = InterfaceComponent.method1016(var63);
                 if (var3 != var70.xRotation || var2 != var70.zRotation || var62 != var70.modelZoom) {
                     var70.xRotation = var3;
                     var70.zRotation = var2;
@@ -3255,7 +3256,7 @@ public final class Client extends Applet_Sub1 {
                 var2 = aPacket1521.readUnsignedShort();
                 var3 = aPacket1521.method846();
                 var62 = aPacket1521.method840();
-                var31 = Class161.method1016(var3);
+                var31 = InterfaceComponent.method1016(var3);
                 var31.anInt792 = var62 + (var2 << 16);
                 anInt1511 = -1;
                 return true;
@@ -3385,7 +3386,7 @@ public final class Client extends Applet_Sub1 {
             InterfaceComponent var78;
             if (anInt1511 == 127) {
                 var2 = aPacket1521.method852();
-                var78 = Class161.method1016(var2);
+                var78 = InterfaceComponent.method1016(var2);
                 var78.modelType = 3;
                 var78.modelId = player.appearance.method1036();
                 ItemTable.method284(var78);
@@ -3396,7 +3397,7 @@ public final class Client extends Applet_Sub1 {
             if (anInt1511 == 31) {
                 var11 = aPacket1521.method819();
                 var3 = aPacket1521.method848();
-                var6 = Class161.method1016(var3);
+                var6 = InterfaceComponent.method1016(var3);
                 if (!var11.equals(var6.text)) {
                     var6.text = var11;
                     ItemTable.method284(var6);
@@ -3472,7 +3473,7 @@ public final class Client extends Applet_Sub1 {
                 var63 = var2 >> 5 & 31;
                 var68 = var2 & 31;
                 var8 = (var62 << 19) + (var63 << 11) + (var68 << 3);
-                InterfaceComponent var94 = Class161.method1016(var3);
+                InterfaceComponent var94 = InterfaceComponent.method1016(var3);
                 if (var94.textColor != var8) {
                     var94.textColor = var8;
                     ItemTable.method284(var94);
@@ -3485,7 +3486,7 @@ public final class Client extends Applet_Sub1 {
             if (anInt1511 == 15) {
                 var2 = aPacket1521.method840();
                 var3 = aPacket1521.method846();
-                var6 = Class161.method1016(var3);
+                var6 = InterfaceComponent.method1016(var3);
                 if (var6 != null && var6.type == 0) {
                     if (var2 > var6.viewportHeight - var6.height) {
                         var2 = var6.viewportHeight - var6.height;
@@ -3513,7 +3514,7 @@ public final class Client extends Applet_Sub1 {
                 }
 
                 if (var2 >= 0) {
-                    var6 = Class161.method1016(var2);
+                    var6 = InterfaceComponent.method1016(var2);
                 } else {
                     var6 = null;
                 }
@@ -3766,7 +3767,7 @@ public final class Client extends Applet_Sub1 {
                     var111[var68].rank = aPacket1521.method870();
                     aPacket1521.method819();
                     if (var111[var68].aString227.equals(player.name)) {
-                        Class150.aByte1826 = var111[var68].rank;
+                        aByte1826 = var111[var68].rank;
                     }
                 }
 
@@ -3815,7 +3816,7 @@ public final class Client extends Applet_Sub1 {
             if (anInt1511 == 64) {
                 var2 = aPacket1521.method856();
                 var3 = aPacket1521.method846();
-                var6 = Class161.method1016(var3);
+                var6 = InterfaceComponent.method1016(var3);
                 if (var6.modelType != 1 || var6.modelId != var2) {
                     var6.modelType = 1;
                     var6.modelId = var2;
@@ -3927,7 +3928,7 @@ public final class Client extends Applet_Sub1 {
             if (anInt1511 == 210) {
                 var2 = aPacket1521.method835();
                 var66 = aPacket1521.method834() == 1;
-                var6 = Class161.method1016(var2);
+                var6 = InterfaceComponent.method1016(var2);
                 if (var6.explicitlyHidden != var66) {
                     var6.explicitlyHidden = var66;
                     ItemTable.method284(var6);
@@ -3951,7 +3952,7 @@ public final class Client extends Applet_Sub1 {
 
                 var3 = aPacket1521.method835();
                 var62 = aPacket1521.method848();
-                var31 = Class161.method1016(var3);
+                var31 = InterfaceComponent.method1016(var3);
                 ItemDefinition var73;
                 if (!var31.aBoolean1173) {
                     if (var2 == -1) {
@@ -4056,7 +4057,7 @@ public final class Client extends Applet_Sub1 {
 
             if (anInt1511 == 59) {
                 var2 = aPacket1521.method852();
-                var78 = Class161.method1016(var2);
+                var78 = InterfaceComponent.method1016(var2);
 
                 for (var62 = 0; var62 < var78.itemIds.length; ++var62) {
                     var78.itemIds[var62] = -1;
@@ -4607,12 +4608,12 @@ public final class Client extends Applet_Sub1 {
                     interfaceNodes.put(var64, (long) var2);
                 }
 
-                var70 = Class161.method1016(var3);
+                var70 = InterfaceComponent.method1016(var3);
                 if (var70 != null) {
                     ItemTable.method284(var70);
                 }
 
-                var70 = Class161.method1016(var2);
+                var70 = InterfaceComponent.method1016(var2);
                 if (var70 != null) {
                     ItemTable.method284(var70);
                     Class44.method303(InterfaceComponent.interfaces[var70.uid >>> 16], var70, true);
@@ -4656,7 +4657,7 @@ public final class Client extends Applet_Sub1 {
             if (anInt1511 == 86) {
                 var2 = aPacket1521.method852();
                 var3 = aPacket1521.method840();
-                var6 = Class161.method1016(var2);
+                var6 = InterfaceComponent.method1016(var2);
                 if (var6.modelType != 2 || var3 != var6.modelId) {
                     var6.modelType = 2;
                     var6.modelId = var3;
@@ -4684,7 +4685,7 @@ public final class Client extends Applet_Sub1 {
             if (anInt1511 == 62) {
                 var2 = aPacket1521.method841();
                 var3 = aPacket1521.method835();
-                var6 = Class161.method1016(var3);
+                var6 = InterfaceComponent.method1016(var3);
                 if (var2 != var6.anInt784 || var2 == -1) {
                     var6.anInt784 = var2;
                     var6.anInt1932 = 0;
@@ -4700,7 +4701,7 @@ public final class Client extends Applet_Sub1 {
                 var2 = aPacket1521.method851();
                 var3 = aPacket1521.method846();
                 var62 = aPacket1521.method847();
-                var31 = Class161.method1016(var3);
+                var31 = InterfaceComponent.method1016(var3);
                 if (var31.anInt234 != var62 || var31.anInt765 != var2 || var31.anInt236 != 0 || var31.anInt213 != 0) {
                     var31.anInt234 = var62;
                     var31.anInt765 = var2;
@@ -4789,7 +4790,7 @@ public final class Client extends Applet_Sub1 {
                             Class126.aClanMateArray1370[var8].world = var3;
                             Class126.aClanMateArray1370[var8].rank = var4;
                             if (var11.equals(player.name)) {
-                                Class150.aByte1826 = var4;
+                                aByte1826 = var4;
                             }
 
                             anInt1657 = anInt1644;
@@ -4818,7 +4819,7 @@ public final class Client extends Applet_Sub1 {
                     Class126.aClanMateArray1370[var8 + 1] = var9;
                     ++GrandExchangeOffer.anInt738;
                     if (var11.equals(player.name)) {
-                        Class150.aByte1826 = var4;
+                        aByte1826 = var4;
                     }
                 }
 

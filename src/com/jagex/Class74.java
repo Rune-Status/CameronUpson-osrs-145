@@ -52,17 +52,17 @@ public class Class74 {
     }
 
     public static Node_Sub21_Sub20 method436(int var0) {
-        Node_Sub21_Sub20 var1 = (Node_Sub21_Sub20) Node_Sub21_Sub20.aReferenceCache2008.method973((long) var0);
+        Node_Sub21_Sub20 var1 = (Node_Sub21_Sub20) Node_Sub21_Sub20.aReferenceCache2008.get((long) var0);
         if (var1 != null) {
             return var1;
         }
-        byte[] var2 = Node_Sub21_Sub20.aReferenceTable2012.method1085(16, var0);
+        byte[] var2 = Node_Sub21_Sub20.aReferenceTable2012.unpack(16, var0);
         var1 = new Node_Sub21_Sub20();
         if (var2 != null) {
             var1.method1052(new Buffer(var2));
         }
 
-        Node_Sub21_Sub20.aReferenceCache2008.method975(var1, (long) var0);
+        Node_Sub21_Sub20.aReferenceCache2008.put(var1, (long) var0);
         return var1;
     }
 }

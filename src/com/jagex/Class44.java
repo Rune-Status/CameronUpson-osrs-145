@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 final class Class44 implements Comparator {
     public static ReferenceTable aReferenceTable369;
-    static ReferenceTable aReferenceTable368;
+    static ReferenceTable sequenceTable;
     // $FF: synthetic field
     final boolean aBoolean367;
 

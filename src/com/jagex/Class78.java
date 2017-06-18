@@ -67,18 +67,18 @@ final class Class78 implements Class66 {
             var3 = Class63.anIntArray645[--Class63.anInt644];
             int[] var9 = Class63.anIntArray645;
             var10 = ++Class63.anInt644 - 1;
-            Node_Sub21_Sub19 var11 = (Node_Sub21_Sub19) Node_Sub21_Sub19.aReferenceCache2025.method973((long) var3);
+            Node_Sub21_Sub19 var11 = (Node_Sub21_Sub19) Node_Sub21_Sub19.aReferenceCache2025.get((long) var3);
             Node_Sub21_Sub19 var12;
             if (var11 != null) {
                 var12 = var11;
             } else {
-                byte[] var13 = Node_Sub21_Sub19.aReferenceTable2012.method1085(5, var3);
+                byte[] var13 = Node_Sub21_Sub19.aReferenceTable2012.unpack(5, var3);
                 var11 = new Node_Sub21_Sub19();
                 if (var13 != null) {
                     var11.method1052(new Buffer(var13));
                 }
 
-                Node_Sub21_Sub19.aReferenceCache2025.method975(var11, (long) var3);
+                Node_Sub21_Sub19.aReferenceCache2025.put(var11, (long) var3);
                 var12 = var11;
             }
 
@@ -226,7 +226,7 @@ final class Class78 implements Class66 {
         for (int var1 = 0; var1 < Client.anInt1501; ++var1) {
             Npc var2 = Client.npcs[Client.npcIndices[var1]];
             int var3 = (Client.npcIndices[var1] << 14) + 536870912;
-            if (var2 != null && var2.method194() && var0 == var2.definition.aBoolean2021 && var2.definition.method1061()) {
+            if (var2 != null && var2.method194() && var0 == var2.definition.aBoolean2021 && var2.definition.transforms()) {
                 int var4 = var2.strictX >> 7;
                 int var5 = var2.strictY >> 7;
                 if (var4 >= 0 && var4 < 104 && var5 >= 0 && var5 < 104) {

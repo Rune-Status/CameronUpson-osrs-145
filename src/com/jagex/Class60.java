@@ -39,11 +39,11 @@ final class Class60 implements Comparator {
                 if (var0 != null) {
                     Buffer var1 = new Buffer(var0);
                     World.anInt397 = var1.readUnsignedShort();
-                    World.aWorldArray396 = new World[World.anInt397];
+                    World.worlds = new World[World.anInt397];
 
                     World var3;
                     for (int var2 = 0; var2 < World.anInt397; var3.anInt394 = var2++) {
-                        var3 = World.aWorldArray396[var2] = new World();
+                        var3 = World.worlds[var2] = new World();
                         var3.id = var1.readUnsignedShort();
                         var3.mask = var1.method835();
                         var3.domain = var1.method819();
@@ -52,7 +52,7 @@ final class Class60 implements Comparator {
                         var3.population = var1.readShort();
                     }
 
-                    Player.method192(World.aWorldArray396, 0, World.aWorldArray396.length - 1, World.anIntArray385, World.anIntArray387);
+                    Player.method192(World.worlds, 0, World.worlds.length - 1, World.anIntArray385, World.anIntArray387);
                     World.aClass25_384 = null;
                     return true;
                 }

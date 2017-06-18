@@ -21,16 +21,16 @@ public class Class6_Sub1 extends Class6 {
     }
 
     static RuneScript method158(int var0) {
-        RuneScript var1 = (RuneScript) RuneScript.aReferenceCache664.method973((long) var0);
+        RuneScript var1 = (RuneScript) RuneScript.aReferenceCache664.get((long) var0);
         if (var1 != null) {
             return var1;
         }
-        byte[] var2 = ScriptEvent.aCacheReferenceTable322.method1085(var0, 0);
+        byte[] var2 = ScriptEvent.aCacheReferenceTable322.unpack(var0, 0);
         if (var2 == null) {
             return null;
         }
         var1 = Class22.method150(var2);
-        RuneScript.aReferenceCache664.method975(var1, (long) var0);
+        RuneScript.aReferenceCache664.put(var1, (long) var0);
         return var1;
     }
 
@@ -43,7 +43,7 @@ public class Class6_Sub1 extends Class6 {
         Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093 = new Node_Sub21_Sub15[Class126.anInt1369];
 
         for (int var2 = 0; var2 < Class126.anInt1369; ++var2) {
-            byte[] var3 = var0.method1085(35, var2);
+            byte[] var3 = var0.unpack(35, var2);
             if (var3 != null) {
                 Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var2] = new Node_Sub21_Sub15(var2);
                 Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var2].method1052(new Buffer(var3));

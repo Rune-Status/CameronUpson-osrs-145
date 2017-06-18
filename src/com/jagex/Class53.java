@@ -56,7 +56,7 @@ public class Class53 {
         if (var0 >= 2000) {
             var0 -= 1000;
             var3 = Class63.anIntArray645[--Class63.anInt644];
-            var4 = Class161.method1016(var3);
+            var4 = InterfaceComponent.method1016(var3);
         } else {
             var4 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
         }

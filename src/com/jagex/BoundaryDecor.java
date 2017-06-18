@@ -12,7 +12,7 @@ public final class BoundaryDecor {
     int anInt1114;
     int anInt1108;
     int level;
-    int anInt1116 = 0;
+    int config = 0;
 
     static void method649(long var0) {
         try {

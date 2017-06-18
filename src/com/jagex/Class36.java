@@ -47,7 +47,7 @@ public final class Class36 {
             return null;
         }
         for (int var2 = 0; var2 < var1; ++var2) {
-            var0 = Class161.method1016(var0.parentUid);
+            var0 = InterfaceComponent.method1016(var0.parentUid);
             if (var0 == null) {
                 return null;
             }

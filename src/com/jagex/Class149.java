@@ -2,11 +2,11 @@ package com.jagex;
 
 public class Class149 {
     public static ItemDefinition method1001(int var0) {
-        ItemDefinition var1 = (ItemDefinition) ItemDefinition.aReferenceCache2115.method973((long) var0);
+        ItemDefinition var1 = (ItemDefinition) ItemDefinition.aReferenceCache2115.get((long) var0);
         if (var1 != null) {
             return var1;
         }
-        byte[] var2 = Class55.aReferenceTable424.method1085(10, var0);
+        byte[] var2 = Class55.aReferenceTable424.unpack(10, var0);
         var1 = new ItemDefinition();
         var1.id = var0;
         if (var2 != null) {
@@ -51,7 +51,7 @@ public class Class149 {
             }
         }
 
-        ItemDefinition.aReferenceCache2115.method975(var1, (long) var0);
+        ItemDefinition.aReferenceCache2115.put(var1, (long) var0);
         return var1;
     }
 

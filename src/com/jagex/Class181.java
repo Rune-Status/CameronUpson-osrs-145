@@ -9,7 +9,7 @@ public class Class181 {
         if (var2 == null) {
             var3 = false;
         } else {
-            Class116.method794(var2);
+            IsaacCipher.method794(var2);
             var3 = true;
         }
 

@@ -47,7 +47,7 @@ public class Class9 {
             var7 = var5.anInt327;
             var8 = var5.anInt236;
             var9 = Class60.method370(var7, var6);
-            RuneScript var10 = (RuneScript) RuneScript.aReferenceCache664.method973((long) (var9 << 16));
+            RuneScript var10 = (RuneScript) RuneScript.aReferenceCache664.get((long) (var9 << 16));
             RuneScript var11;
             if (var10 != null) {
                 var11 = var10;
@@ -68,7 +68,7 @@ public class Class9 {
 
                             var10 = Class22.method150(var18);
                             if (var10 != null) {
-                                RuneScript.aReferenceCache664.method975(var10, (long) (var9 << 16));
+                                RuneScript.aReferenceCache664.put(var10, (long) (var9 << 16));
                                 var11 = var10;
                                 break label597;
                             }
@@ -84,7 +84,7 @@ public class Class9 {
                 var12 = var11;
             } else {
                 var17 = var6.anInt1811 + (var8 + '鱀' << 8);
-                RuneScript var38 = (RuneScript) RuneScript.aReferenceCache664.method973((long) (var17 << 16));
+                RuneScript var38 = (RuneScript) RuneScript.aReferenceCache664.get((long) (var17 << 16));
                 RuneScript var19;
                 if (var38 != null) {
                     var19 = var38;
@@ -105,7 +105,7 @@ public class Class9 {
 
                                 var38 = Class22.method150(var28);
                                 if (var38 != null) {
-                                    RuneScript.aReferenceCache664.method975(var38, (long) (var17 << 16));
+                                    RuneScript.aReferenceCache664.put(var38, (long) (var17 << 16));
                                     var19 = var38;
                                     break label531;
                                 }
@@ -396,25 +396,25 @@ public class Class9 {
                                                                                                                                                                         } else {
                                                                                                                                                                             var16 = var32[var14];
                                                                                                                                                                             var17 = Class63.anIntArray645[--Class63.anInt644];
-                                                                                                                                                                            Varpbit var39 = (Varpbit) Varpbit.aReferenceCache2025.method973((long) var16);
+                                                                                                                                                                            Varpbit var39 = (Varpbit) Varpbit.varpbitCache.get((long) var16);
                                                                                                                                                                             Varpbit var41;
                                                                                                                                                                             if (var39 != null) {
                                                                                                                                                                                 var41 = var39;
                                                                                                                                                                             } else {
-                                                                                                                                                                                byte[] var44 = Varpbit.aReferenceTable2012.method1085(14, var16);
+                                                                                                                                                                                byte[] var44 = Varpbit.varpbitTable.unpack(14, var16);
                                                                                                                                                                                 var39 = new Varpbit();
                                                                                                                                                                                 if (var44 != null) {
-                                                                                                                                                                                    var39.method1052(new Buffer(var44));
+                                                                                                                                                                                    var39.decode(new Buffer(var44));
                                                                                                                                                                                 }
 
-                                                                                                                                                                                Varpbit.aReferenceCache2025.method975(var39, (long) var16);
+                                                                                                                                                                                Varpbit.varpbitCache.put(var39, (long) var16);
                                                                                                                                                                                 var41 = var39;
                                                                                                                                                                             }
 
                                                                                                                                                                             var20 = var41.varpIndex;
                                                                                                                                                                             var21 = var41.lower;
                                                                                                                                                                             int var22 = var41.upper;
-                                                                                                                                                                            int var23 = Varps.anIntArray1998[var22 - var21];
+                                                                                                                                                                            int var23 = Varps.masks[var22 - var21];
                                                                                                                                                                             if (var17 < 0 || var17 > var23) {
                                                                                                                                                                                 var17 = 0;
                                                                                                                                                                             }
@@ -424,7 +424,7 @@ public class Class9 {
                                                                                                                                                                         }
                                                                                                                                                                     } else {
                                                                                                                                                                         var16 = var32[var14];
-                                                                                                                                                                        Class63.anIntArray645[++Class63.anInt644 - 1] = Class4.getVarpbitValue(var16);
+                                                                                                                                                                        Class63.anIntArray645[++Class63.anInt644 - 1] = Varpbit.getValue(var16);
                                                                                                                                                                     }
                                                                                                                                                                 } else {
                                                                                                                                                                     if (Class63.anInt648 == 0) {

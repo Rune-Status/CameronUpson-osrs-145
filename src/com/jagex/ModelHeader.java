@@ -1,6 +1,7 @@
 package com.jagex;
 
 public class ModelHeader extends Entity {
+    public static ReferenceTable aReferenceTable1844;
     static int[] anIntArray930;
     static int[] anIntArray944 = new int[10000];
     static int[] anIntArray948 = new int[10000];
@@ -308,7 +309,7 @@ public class ModelHeader extends Entity {
     }
 
     public static ModelHeader method571(ReferenceTable var0, int var1, int var2) {
-        byte[] var3 = var0.method1085(var1, var2);
+        byte[] var3 = var0.unpack(var1, var2);
         return var3 == null ? null : new ModelHeader(var3);
     }
 
@@ -1140,7 +1141,7 @@ public class ModelHeader extends Entity {
         this.method562();
     }
 
-    public void method573(short var1, short var2) {
+    public void retexture(short var1, short var2) {
         if (this.aShortArray921 != null) {
             for (int var3 = 0; var3 < this.anInt327; ++var3) {
                 if (this.aShortArray921[var3] == var1) {

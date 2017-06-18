@@ -56,7 +56,7 @@ public class Node_Sub13 extends Node {
 
     static boolean method589(ReferenceTable var0) {
         if (!aBoolean980) {
-            byte[] var1 = var0.method1085(0, 0);
+            byte[] var1 = var0.unpack(0, 0);
             if (var1 == null) {
                 return false;
             }
@@ -73,7 +73,7 @@ public class Node_Sub13 extends Node {
             var0.method1102(var1, var2);
             return null;
         }
-        byte[] var3 = var0.method1085(var1, var2);
+        byte[] var3 = var0.unpack(var1, var2);
         return var3 == null ? null : new Node_Sub13(var3);
     }
 

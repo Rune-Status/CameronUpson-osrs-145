@@ -85,7 +85,7 @@ public abstract class PathingEntity extends Entity {
         int var10 = -1;
         int var11 = 0;
         if (var1 >= 0) {
-            HitsplatDefinition var12 = Class77.getHitsplatDefinition(var1);
+            HitsplatDefinition var12 = HitsplatDefinition.get(var1);
             var10 = var12.comparisonType;
             var11 = var12.duration;
         }
@@ -144,18 +144,18 @@ public abstract class PathingEntity extends Entity {
     }
 
     final void method439(int var1, int var2, int var3, int var4, int var5, int var6) {
-        HealthBarDefinition var7 = (HealthBarDefinition) HealthBarDefinition.aReferenceCache2008.method973((long) var1);
+        HealthBarDefinition var7 = (HealthBarDefinition) HealthBarDefinition.aReferenceCache2008.get((long) var1);
         HealthBarDefinition var8;
         if (var7 != null) {
             var8 = var7;
         } else {
-            byte[] var9 = HealthBarDefinition.aReferenceTable2012.method1085(33, var1);
+            byte[] var9 = HealthBarDefinition.aReferenceTable2012.unpack(33, var1);
             var7 = new HealthBarDefinition();
             if (var9 != null) {
                 var7.method1052(new Buffer(var9));
             }
 
-            HealthBarDefinition.aReferenceCache2008.method975(var7, (long) var1);
+            HealthBarDefinition.aReferenceCache2008.put(var7, (long) var1);
             var8 = var7;
         }
 
@@ -200,18 +200,18 @@ public abstract class PathingEntity extends Entity {
     }
 
     final void method442(int var1) {
-        HealthBarDefinition var2 = (HealthBarDefinition) HealthBarDefinition.aReferenceCache2008.method973((long) var1);
+        HealthBarDefinition var2 = (HealthBarDefinition) HealthBarDefinition.aReferenceCache2008.get((long) var1);
         HealthBarDefinition var3;
         if (var2 != null) {
             var3 = var2;
         } else {
-            byte[] var4 = HealthBarDefinition.aReferenceTable2012.method1085(33, var1);
+            byte[] var4 = HealthBarDefinition.aReferenceTable2012.unpack(33, var1);
             var2 = new HealthBarDefinition();
             if (var4 != null) {
                 var2.method1052(new Buffer(var4));
             }
 
-            HealthBarDefinition.aReferenceCache2008.method975(var2, (long) var1);
+            HealthBarDefinition.aReferenceCache2008.put(var2, (long) var1);
             var3 = var2;
         }
 

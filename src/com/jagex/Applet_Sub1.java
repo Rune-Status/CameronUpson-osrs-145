@@ -55,22 +55,6 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         method356(new Class19());
     }
 
-    public static AnimationSequence method251(int var0) {
-        AnimationSequence var1 = (AnimationSequence) AnimationSequence.aReferenceCache2013.method973((long) var0);
-        if (var1 != null) {
-            return var1;
-        }
-        byte[] var2 = Class44.aReferenceTable368.method1085(12, var0);
-        var1 = new AnimationSequence();
-        if (var2 != null) {
-            var1.method1066(new Buffer(var2));
-        }
-
-        var1.method556();
-        AnimationSequence.aReferenceCache2013.method975(var1, (long) var0);
-        return var1;
-    }
-
     static void method233() {
         for (InterfaceNode var0 = Client.interfaceNodes.first(); var0 != null; var0 = Client.interfaceNodes.next()) {
             int var1 = var0.id;
@@ -88,7 +72,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
                 if (!var2) {
                     var4 = (int) var0.key;
-                    InterfaceComponent var5 = Class161.method1016(var4);
+                    InterfaceComponent var5 = InterfaceComponent.method1016(var4);
                     if (var5 != null) {
                         ItemTable.method284(var5);
                     }

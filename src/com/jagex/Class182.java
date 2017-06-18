@@ -48,7 +48,7 @@ public class Class182 {
                     if (var14 != null && var14.method194()) {
                         NpcDefinition var20 = var14.definition;
                         if (var20 != null && var20.transformIds != null) {
-                            var20 = var20.method1055();
+                            var20 = var20.transform();
                         }
 
                         if (var20 != null && var20.aBoolean215 && var20.aBoolean2014) {

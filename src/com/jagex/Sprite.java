@@ -13,12 +13,12 @@ public final class Sprite extends Node_Sub21_Sub26 {
         this(new int[var1 * var2], var1, var2);
     }
 
-    public Sprite(int[] var1, int var2, int var3) {
-        this.pixels = var1;
-        this.width = this.anInt328 = var2;
-        this.height = this.anInt221 = var3;
-        this.anInt327 = 0;
-        this.anInt232 = 0;
+    public Sprite(int[] pixels, int width, int height) {
+        this.pixels = pixels;
+        this.width = this.anInt328 = width;
+        this.height = this.anInt221 = height;
+        anInt327 = 0;
+        anInt232 = 0;
     }
 
     Sprite() {

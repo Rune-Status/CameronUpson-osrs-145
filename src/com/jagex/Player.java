@@ -159,7 +159,7 @@ public final class Player extends PathingEntity {
                     if (var6 == 4) {
                         var9 = var2[var4++] << 16;
                         var9 += var2[var4++];
-                        var10 = Class161.method1016(var9);
+                        var10 = InterfaceComponent.method1016(var9);
                         var11 = var2[var4++];
                         if (var11 != -1 && (!Class149.method1001(var11).aBoolean1731 || Client.membersWorld)) {
                             for (var12 = 0; var12 < var10.itemIds.length; ++var12) {
@@ -197,7 +197,7 @@ public final class Player extends PathingEntity {
                     if (var6 == 10) {
                         var9 = var2[var4++] << 16;
                         var9 += var2[var4++];
-                        var10 = Class161.method1016(var9);
+                        var10 = InterfaceComponent.method1016(var9);
                         var11 = var2[var4++];
                         if (var11 != -1 && (!Class149.method1001(var11).aBoolean1731 || Client.membersWorld)) {
                             for (var12 = 0; var12 < var10.itemIds.length; ++var12) {
@@ -225,7 +225,7 @@ public final class Player extends PathingEntity {
 
                     if (var6 == 14) {
                         var9 = var2[var4++];
-                        var7 = Class4.getVarpbitValue(var9);
+                        var7 = Varpbit.getValue(var9);
                     }
 
                     if (var6 == 15) {
@@ -420,7 +420,7 @@ public final class Player extends PathingEntity {
 
     static void method394(Player var0, int var1, int var2) {
         if (var1 == var0.animation && var1 != -1) {
-            int var3 = Applet_Sub1.method251(var1).replayMode;
+            int var3 = AnimationSequence.get(var1).replayMode;
             if (var3 == 1) {
                 var0.animationFrame = 0;
                 var0.anInt790 = 0;
@@ -431,7 +431,7 @@ public final class Player extends PathingEntity {
             if (var3 == 2) {
                 var0.anInt784 = 0;
             }
-        } else if (var1 == -1 || var0.animation == -1 || Applet_Sub1.method251(var1).priority >= Applet_Sub1.method251(var0.animation).priority) {
+        } else if (var1 == -1 || var0.animation == -1 || AnimationSequence.get(var1).priority >= AnimationSequence.get(var0.animation).priority) {
             var0.animation = var1;
             var0.animationFrame = 0;
             var0.anInt790 = 0;
@@ -442,12 +442,12 @@ public final class Player extends PathingEntity {
 
     }
 
-    protected final Model method191() {
+    protected final Model getModel() {
         if (this.appearance == null) {
             return null;
         }
-        AnimationSequence var1 = this.animation != -1 && this.anInt791 == 0 ? Applet_Sub1.method251(this.animation) : null;
-        AnimationSequence var2 = this.anInt768 == -1 || this.aBoolean223 || this.anInt754 == this.anInt768 && var1 != null ? null : Applet_Sub1.method251(this.anInt768);
+        AnimationSequence var1 = this.animation != -1 && this.anInt791 == 0 ? AnimationSequence.get(this.animation) : null;
+        AnimationSequence var2 = this.anInt768 == -1 || this.aBoolean223 || this.anInt754 == this.anInt768 && var1 != null ? null : AnimationSequence.get(this.anInt768);
         Model var3 = this.appearance.getModel(var1, this.animationFrame, var2, this.subAnimationFrame);
         if (var3 == null) {
             return null;
@@ -457,7 +457,7 @@ public final class Player extends PathingEntity {
         Model var4;
         Model[] var5;
         if (!this.aBoolean223 && this.anInt771 != -1 && this.anInt782 != -1) {
-            var4 = Node_Sub21_Sub15.method1115(this.anInt771).method1050(this.anInt782);
+            var4 = GraphicDefinition.get(this.anInt771).getModel(this.anInt782);
             if (var4 != null) {
                 var4.method738(0, -this.anInt787, 0);
                 var5 = new Model[]{var3, var4};
@@ -506,7 +506,7 @@ public final class Player extends PathingEntity {
     }
 
     final void method199(int var1, int var2, byte var3) {
-        if (this.animation != -1 && Applet_Sub1.method251(this.animation).walkingPrecedence == 1) {
+        if (this.animation != -1 && AnimationSequence.get(this.animation).walkingPrecedence == 1) {
             this.animation = -1;
         }
 
@@ -528,7 +528,7 @@ public final class Player extends PathingEntity {
     }
 
     int method195() {
-        return this.appearance != null && this.appearance.transformedNpcId != -1 ? Class122.getNpcDefinition(this.appearance.transformedNpcId).anInt221 : 1;
+        return this.appearance != null && this.appearance.transformedNpcId != -1 ? NpcDefinition.get(this.appearance.transformedNpcId).anInt221 : 1;
     }
 
     final void method201(int var1, int var2, byte var3) {

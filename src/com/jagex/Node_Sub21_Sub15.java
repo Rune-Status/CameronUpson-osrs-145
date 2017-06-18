@@ -30,22 +30,6 @@ public class Node_Sub21_Sub15 extends DoublyNode {
         this.anInt327 = var1;
     }
 
-    public static Node_Sub21_Sub7 method1115(int var0) {
-        Node_Sub21_Sub7 var1 = (Node_Sub21_Sub7) Node_Sub21_Sub7.aReferenceCache2008.method973((long) var0);
-        if (var1 != null) {
-            return var1;
-        }
-        byte[] var2 = Node_Sub21_Sub7.aReferenceTable2012.method1085(13, var0);
-        var1 = new Node_Sub21_Sub7();
-        var1.anInt327 = var0;
-        if (var2 != null) {
-            var1.method1052(new Buffer(var2));
-        }
-
-        Node_Sub21_Sub7.aReferenceCache2008.method975(var1, (long) var0);
-        return var1;
-    }
-
     static String method1116(int var0) {
         if (var0 < 100000) {
             return "<col=ffff00>" + var0 + "</col>";
@@ -173,13 +157,13 @@ public class Node_Sub21_Sub15 extends DoublyNode {
         if (var1 < 0) {
             return null;
         }
-        Sprite var2 = (Sprite) aReferenceCache2013.method973((long) var1);
+        Sprite var2 = (Sprite) aReferenceCache2013.get((long) var1);
         if (var2 != null) {
             return var2;
         }
         var2 = Class176.method1188(aReferenceTable2012, var1, 0);
         if (var2 != null) {
-            aReferenceCache2013.method975(var2, (long) var1);
+            aReferenceCache2013.put(var2, (long) var1);
         }
 
         return var2;

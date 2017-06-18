@@ -7,13 +7,13 @@ public final class TileDecor {
     int level;
     int sceneY;
     int sceneX;
-    int anInt1039;
+    int config;
 
     static int method613(int var0, RuneScript var1, boolean var2) {
         InterfaceComponent var3;
         if (var0 >= 2000) {
             var0 -= 1000;
-            var3 = Class161.method1016(Class63.anIntArray645[--Class63.anInt644]);
+            var3 = InterfaceComponent.method1016(Class63.anIntArray645[--Class63.anInt644]);
         } else {
             var3 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
         }

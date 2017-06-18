@@ -276,7 +276,7 @@ public class ItemDefinition extends DoublyNode {
 
         if (this.aShortArray947 != null) {
             for (var3 = 0; var3 < this.aShortArray947.length; ++var3) {
-                var4.method573(this.aShortArray947[var3], this.aShortArray938[var3]);
+                var4.retexture(this.aShortArray947[var3], this.aShortArray938[var3]);
             }
         }
 
@@ -355,7 +355,7 @@ public class ItemDefinition extends DoublyNode {
 
         if (this.aShortArray947 != null) {
             for (var9 = 0; var9 < this.aShortArray947.length; ++var9) {
-                var5.method573(this.aShortArray947[var9], this.aShortArray938[var9]);
+                var5.retexture(this.aShortArray947[var9], this.aShortArray938[var9]);
             }
         }
 
@@ -412,7 +412,7 @@ public class ItemDefinition extends DoublyNode {
 
         if (this.aShortArray947 != null) {
             for (var7 = 0; var7 < this.aShortArray947.length; ++var7) {
-                var4.method573(this.aShortArray947[var7], this.aShortArray938[var7]);
+                var4.retexture(this.aShortArray947[var7], this.aShortArray938[var7]);
             }
         }
 
@@ -489,7 +489,7 @@ public class ItemDefinition extends DoublyNode {
             }
         }
 
-        Model var4 = (Model) aReferenceCache2116.method973((long) this.id);
+        Model var4 = (Model) aReferenceCache2116.get((long) this.id);
         if (var4 != null) {
             return var4;
         }
@@ -510,13 +510,13 @@ public class ItemDefinition extends DoublyNode {
 
         if (this.aShortArray947 != null) {
             for (var6 = 0; var6 < this.aShortArray947.length; ++var6) {
-                var5.method573(this.aShortArray947[var6], this.aShortArray938[var6]);
+                var5.retexture(this.aShortArray947[var6], this.aShortArray938[var6]);
             }
         }
 
         var4 = var5.light(this.anInt1868 + 64, this.anInt1867 + 768, -50, -10, -50);
         var4.aBoolean1259 = true;
-        aReferenceCache2116.method975(var4, (long) this.id);
+        aReferenceCache2116.put(var4, (long) this.id);
         return var4;
     }
 }

@@ -1,7 +1,7 @@
 package com.jagex;
 
 public class AnimationSequence extends DoublyNode {
-    public static ReferenceCache aReferenceCache2013 = new ReferenceCache(64);
+    public static ReferenceCache sequenceCache = new ReferenceCache(64);
     public static ReferenceCache aReferenceCache2045 = new ReferenceCache(100);
     static ReferenceTable aReferenceTable2039;
     static ReferenceTable aReferenceTable2017;
@@ -21,18 +21,40 @@ public class AnimationSequence extends DoublyNode {
     int[] interleaveOrder;
     int[] anIntArray934;
 
-    void method1066(Buffer var1) {
+    public static AnimationSequence get(int id) {
+        AnimationSequence var1 = (AnimationSequence) sequenceCache.get((long) id);
+        if (var1 != null) {
+            return var1;
+        }
+        byte[] buffer = Class44.sequenceTable.unpack(12, id);
+        var1 = new AnimationSequence();
+        if (buffer != null) {
+            var1.decode(new Buffer(buffer));
+        }
+
+        var1.method556();
+        sequenceCache.put(var1, (long) id);
+        return var1;
+    }
+
+    public static void setTables(ReferenceTable var0, ReferenceTable var1, ReferenceTable var2) {
+        Class44.sequenceTable = var0;
+        aReferenceTable2017 = var1;
+        aReferenceTable2039 = var2;
+    }
+
+    void decode(Buffer var1) {
         while (true) {
             int var2 = var1.readUnsignedByte();
             if (var2 == 0) {
                 return;
             }
 
-            this.method1065(var1, var2);
+            this.decode(var1, var2);
         }
     }
 
-    void method1065(Buffer var1, int var2) {
+    void decode(Buffer var1, int var2) {
         int var3;
         int var4;
         if (var2 == 1) {
@@ -132,16 +154,16 @@ public class AnimationSequence extends DoublyNode {
         return var4;
     }
 
-    Model method1194(Model var1, int var2) {
-        var2 = this.frames[var2];
-        AnimationFrame var3 = Class19.method143(var2 >> 16);
-        var2 &= 65535;
-        if (var3 == null) {
-            return var1.method732(true);
+    Model getAnimatedModel(Model base, int frameId) {
+        frameId = this.frames[frameId];
+        AnimationFrame frame = Class19.method143(frameId >> 16);
+        frameId &= 65535;
+        if (frame == null) {
+            return base.method732(true);
         }
-        Model var4 = var1.method732(!var3.method626(var2));
-        var4.method727(var3, var2);
-        return var4;
+        Model animated = base.method732(!frame.method626(frameId));
+        animated.method727(frame, frameId);
+        return animated;
     }
 
     public Model method1193(Model var1, int var2) {

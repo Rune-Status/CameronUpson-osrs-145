@@ -69,7 +69,7 @@ public class Class94 {
         int var6 = Class141.aCalendar1783.get(11);
         int var7 = Class141.aCalendar1783.get(12);
         int var8 = Class141.aCalendar1783.get(13);
-        return Class141.aStringArray1785[var2 - 1] + ", " + var3 / 10 + var3 % 10 + "-" + Class141.aStringArrayArray1782[0][var4] + "-" + var5 + " " + var6 / 10 + var6 % 10 + ":" + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + " GMT";
+        return Class141.days[var2 - 1] + ", " + var3 / 10 + var3 % 10 + "-" + Class141.months[0][var4] + "-" + var5 + " " + var6 / 10 + var6 % 10 + ":" + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + " GMT";
     }
 
     static void method620(int var0, int var1, int var2, int var3, String var4, String var5, int var6, int var7) {
@@ -135,7 +135,7 @@ public class Class94 {
             Client.packet.method853(Client.anInt1629);
             Client.packet.method850(var1);
             Client.anInt1587 = 0;
-            Class33.anInterfaceComponent264 = Class161.method1016(var1);
+            Class33.anInterfaceComponent264 = InterfaceComponent.method1016(var1);
             Client.anInt1581 = var0;
         }
 
@@ -144,7 +144,7 @@ public class Class94 {
         if (var2 == 29) {
             Client.packet.writeHeader(26);
             Client.packet.method869(var1);
-            var17 = Class161.method1016(var1);
+            var17 = InterfaceComponent.method1016(var1);
             if (var17.functionOpcodes != null && var17.functionOpcodes[0][0] == 5) {
                 var9 = var17.functionOpcodes[0][1];
                 if (Varps.values[var9] != var17.anIntArray1940[0]) {
@@ -175,7 +175,7 @@ public class Class94 {
         if (var2 == 28) {
             Client.packet.writeHeader(26);
             Client.packet.method869(var1);
-            var17 = Class161.method1016(var1);
+            var17 = InterfaceComponent.method1016(var1);
             if (var17.functionOpcodes != null && var17.functionOpcodes[0][0] == 5) {
                 var9 = var17.functionOpcodes[0][1];
                 Varps.values[var9] = 1 - Varps.values[var9];
@@ -308,7 +308,7 @@ public class Class94 {
                 Client.packet.method842(var1);
                 Client.packet.method843(var0);
                 Client.anInt1587 = 0;
-                Class33.anInterfaceComponent264 = Class161.method1016(var1);
+                Class33.anInterfaceComponent264 = InterfaceComponent.method1016(var1);
                 Client.anInt1581 = var0;
             }
 
@@ -348,7 +348,7 @@ public class Class94 {
                 Client.packet.method845(var3);
                 Client.packet.method842(var1);
                 Client.anInt1587 = 0;
-                Class33.anInterfaceComponent264 = Class161.method1016(var1);
+                Class33.anInterfaceComponent264 = InterfaceComponent.method1016(var1);
                 Client.anInt1581 = var0;
             }
 
@@ -373,7 +373,7 @@ public class Class94 {
                 Client.packet.method843(var3);
                 Client.packet.method843(var0);
                 Client.anInt1587 = 0;
-                Class33.anInterfaceComponent264 = Class161.method1016(var1);
+                Class33.anInterfaceComponent264 = InterfaceComponent.method1016(var1);
                 Client.anInt1581 = var0;
             }
 
@@ -398,7 +398,7 @@ public class Class94 {
                 Client.packet.method755(var3);
                 Client.packet.method845(var0);
                 Client.anInt1587 = 0;
-                Class33.anInterfaceComponent264 = Class161.method1016(var1);
+                Class33.anInterfaceComponent264 = InterfaceComponent.method1016(var1);
                 Client.anInt1581 = var0;
             }
 
@@ -447,7 +447,7 @@ public class Class94 {
             }
 
             if (var2 == 24) {
-                var17 = Class161.method1016(var1);
+                var17 = InterfaceComponent.method1016(var1);
                 boolean var19 = true;
                 if (var17.contentType > 0) {
                     var19 = Class26.method178(var17);
@@ -477,7 +477,7 @@ public class Class94 {
                 Client.packet.method845(GrandExchangeOffer.anInt731);
                 Client.packet.method755(var3);
                 Client.anInt1587 = 0;
-                Class33.anInterfaceComponent264 = Class161.method1016(var1);
+                Class33.anInterfaceComponent264 = InterfaceComponent.method1016(var1);
                 Client.anInt1581 = var0;
             }
 
@@ -544,12 +544,12 @@ public class Class94 {
                 Client.packet.method755(var0);
                 Client.packet.method869(var1);
                 Client.anInt1587 = 0;
-                Class33.anInterfaceComponent264 = Class161.method1016(var1);
+                Class33.anInterfaceComponent264 = InterfaceComponent.method1016(var1);
                 Client.anInt1581 = var0;
             }
 
             if (var2 == 1005) {
-                var17 = Class161.method1016(var1);
+                var17 = InterfaceComponent.method1016(var1);
                 if (var17 != null && var17.itemStackSizes[var0] >= 100000) {
                     Class78.method469(27, "", var17.itemStackSizes[var0] + " x " + Class149.method1001(var3).name);
                 } else {
@@ -558,7 +558,7 @@ public class Class94 {
                 }
 
                 Client.anInt1587 = 0;
-                Class33.anInterfaceComponent264 = Class161.method1016(var1);
+                Class33.anInterfaceComponent264 = InterfaceComponent.method1016(var1);
                 Client.anInt1581 = var0;
             }
 
@@ -597,7 +597,7 @@ public class Class94 {
                 Client.packet.method869(var1);
                 Client.packet.method843(var0);
                 Client.anInt1587 = 0;
-                Class33.anInterfaceComponent264 = Class161.method1016(var1);
+                Class33.anInterfaceComponent264 = InterfaceComponent.method1016(var1);
                 Client.anInt1581 = var0;
             }
 
@@ -622,7 +622,7 @@ public class Class94 {
                 Client.packet.method845(var3);
                 Client.packet.method842(var1);
                 Client.anInt1587 = 0;
-                Class33.anInterfaceComponent264 = Class161.method1016(var1);
+                Class33.anInterfaceComponent264 = InterfaceComponent.method1016(var1);
                 Client.anInt1581 = var0;
             }
 
@@ -632,7 +632,7 @@ public class Class94 {
                 Client.packet.method869(var1);
                 Client.packet.method843(var3);
                 Client.anInt1587 = 0;
-                Class33.anInterfaceComponent264 = Class161.method1016(var1);
+                Class33.anInterfaceComponent264 = InterfaceComponent.method1016(var1);
                 Client.anInt1581 = var0;
             }
 
@@ -657,7 +657,7 @@ public class Class94 {
                 Client.packet.method855(var1);
                 Client.packet.method845(var0);
                 Client.anInt1587 = 0;
-                Class33.anInterfaceComponent264 = Class161.method1016(var1);
+                Class33.anInterfaceComponent264 = InterfaceComponent.method1016(var1);
                 Client.anInt1581 = var0;
             }
 
@@ -725,7 +725,7 @@ public class Class94 {
                 Client.packet.method869(var1);
                 Client.packet.method845(var0);
                 Client.anInt1587 = 0;
-                Class33.anInterfaceComponent264 = Class161.method1016(var1);
+                Class33.anInterfaceComponent264 = InterfaceComponent.method1016(var1);
                 Client.anInt1581 = var0;
             }
 
@@ -803,7 +803,7 @@ public class Class94 {
 
             if (var2 == 38) {
                 ClientPreferences.method290();
-                var17 = Class161.method1016(var1);
+                var17 = InterfaceComponent.method1016(var1);
                 Client.itemSelectionState = 1;
                 Class55.anInt421 = var0;
                 Class2.anInt15 = var1;
@@ -832,7 +832,7 @@ public class Class94 {
                     if (var8 != null) {
                         NpcDefinition var10 = var8.definition;
                         if (var10.transformIds != null) {
-                            var10 = var10.method1055();
+                            var10 = var10.transform();
                         }
 
                         if (var10 != null) {
@@ -944,7 +944,7 @@ public class Class94 {
 
                 if (Client.itemSelectionState != 0) {
                     Client.itemSelectionState = 0;
-                    ItemTable.method284(Class161.method1016(Class2.anInt15));
+                    ItemTable.method284(InterfaceComponent.method1016(Class2.anInt15));
                 }
 
                 if (Client.spellSelected) {

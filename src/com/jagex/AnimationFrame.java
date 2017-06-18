@@ -10,7 +10,7 @@ public class AnimationFrame extends DoublyNode {
         int[] var7 = var1.method1087(var3);
 
         for (int var8 = 0; var8 < var7.length; ++var8) {
-            byte[] var9 = var1.method1085(var3, var7[var8]);
+            byte[] var9 = var1.unpack(var3, var7[var8]);
             AnimationSkin var10 = null;
             int var11 = (var9[0] & 255) << 8 | var9[1] & 255;
 

@@ -38,7 +38,7 @@ public class Class134_Sub1 extends Class134 {
         }
 
         Class1.method11(var2);
-        InterfaceComponent var4 = Class161.method1016(var3);
+        InterfaceComponent var4 = InterfaceComponent.method1016(var3);
         if (var4 != null) {
             ItemTable.method284(var4);
         }
@@ -56,7 +56,7 @@ public class Class134_Sub1 extends Class134 {
         var3.state = var2;
         Client.interfaceNodes.put(var3, (long) var0);
         Class21.method144(var1);
-        InterfaceComponent var4 = Class161.method1016(var0);
+        InterfaceComponent var4 = InterfaceComponent.method1016(var0);
         ItemTable.method284(var4);
         if (Client.anInterfaceComponent1627 != null) {
             ItemTable.method284(Client.anInterfaceComponent1627);
@@ -98,7 +98,7 @@ public class Class134_Sub1 extends Class134 {
 
                 if (var1 == 1 && var3.anObjectArray1922 != null) {
                     if (var3.componentIndex >= 0) {
-                        InterfaceComponent var6 = Class161.method1016(var3.uid);
+                        InterfaceComponent var6 = InterfaceComponent.method1016(var3.uid);
                         if (var6 == null || var6.components == null || var3.componentIndex >= var6.components.length || var6.components[var3.componentIndex] != var3) {
                             continue;
                         }

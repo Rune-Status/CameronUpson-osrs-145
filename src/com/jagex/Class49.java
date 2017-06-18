@@ -111,10 +111,10 @@ public class Class49 {
         }
 
         for (GraphicsObject var36 = Client.graphicsObjects.method995(); var36 != null; var36 = Client.graphicsObjects.next()) {
-            if (var36.level == Player.floorLevel && !var36.aBoolean824) {
-                if (Client.engineCycle >= var36.anInt209) {
-                    var36.method454(Client.anInt1544);
-                    if (var36.aBoolean824) {
+            if (var36.level == Player.floorLevel && !var36.inanimate) {
+                if (Client.engineCycle >= var36.endCycle) {
+                    var36.update(Client.anInt1544);
+                    if (var36.inanimate) {
                         var36.unlink();
                     } else {
                         Class60.aSceneGraph631.method698(var36.level, var36.sceneX, var36.sceneY, var36.height, 60, var36, 0, -1, false);

@@ -1,6 +1,7 @@
 package com.jagex;
 
-public final class Class116 {
+public final class IsaacCipher {
+
     int[] anIntArray1342 = new int[256];
     int[] anIntArray1340 = new int[256];
     int anInt1338;
@@ -8,7 +9,7 @@ public final class Class116 {
     int anInt1341;
     int anInt1339;
 
-    Class116(int[] var1) {
+    IsaacCipher(int[] var1) {
         for (int var2 = 0; var2 < var1.length; ++var2) {
             this.anIntArray1340[var2] = var1[var2];
         }

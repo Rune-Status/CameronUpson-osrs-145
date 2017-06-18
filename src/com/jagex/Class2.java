@@ -167,7 +167,7 @@ public class Class2 {
 
                 int var16;
                 for (var16 = 0; var16 < World.anInt397; ++var16) {
-                    World var17 = World.aWorldArray396[var16];
+                    World var17 = World.worlds[var16];
                     boolean var18 = true;
                     String var19 = Integer.toString(var17.population);
                     if (var17.population == -1) {
@@ -229,11 +229,11 @@ public class Class2 {
                 }
 
                 if (var15) {
-                    var16 = var1.getTextWidth(World.aWorldArray396[Login.anInt684].activity) + 6;
+                    var16 = var1.getTextWidth(World.worlds[Login.anInt684].activity) + 6;
                     int var22 = var1.anInt221 + 8;
                     Node_Sub21_Sub26.method1223(Class33.anInt261 - var16 / 2, Class33.anInt260 + 20 + 5, var16, var22, 16777120);
                     Node_Sub21_Sub26.method1208(Class33.anInt261 - var16 / 2, Class33.anInt260 + 20 + 5, var16, var22, 0);
-                    var1.method1161(World.aWorldArray396[Login.anInt684].activity, Class33.anInt261, Class33.anInt260 + 20 + 5 + var1.anInt221 + 4, 0, -1);
+                    var1.method1161(World.worlds[Login.anInt684].activity, Class33.anInt261, Class33.anInt260 + 20 + 5 + var1.anInt221 + 4, 0, -1);
                 }
             }
 

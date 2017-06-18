@@ -37,7 +37,7 @@ public class Class102 {
                         }
 
                         if (var5 != -1) {
-                            AnimationSequence var7 = Applet_Sub1.method251(var5);
+                            AnimationSequence var7 = AnimationSequence.get(var5);
 
                             for (var3.anInt1929 += Client.anInt1544; var3.anInt1929 > var7.frameLengths[var3.anInt1932]; ItemTable.method284(var3)) {
                                 var3.anInt1929 -= var7.frameLengths[var3.anInt1932];
