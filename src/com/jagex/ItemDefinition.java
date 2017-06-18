@@ -263,25 +263,24 @@ public class ItemDefinition extends DoublyNode {
         ModelHeader var4 = ModelHeader.method571(Class44.aReferenceTable369, this.anInt919, 0);
         if (var4 == null) {
             return null;
-        } else {
-            if (this.anInt1860 != 128 || this.anInt1859 != 128 || this.anInt2112 != 128) {
-                var4.method564(this.anInt1860, this.anInt1859, this.anInt2112);
-            }
-
-            if (this.aShortArray2020 != null) {
-                for (var3 = 0; var3 < this.aShortArray2020.length; ++var3) {
-                    var4.recolor(this.aShortArray2020[var3], this.aShortArray936[var3]);
-                }
-            }
-
-            if (this.aShortArray947 != null) {
-                for (var3 = 0; var3 < this.aShortArray947.length; ++var3) {
-                    var4.method573(this.aShortArray947[var3], this.aShortArray938[var3]);
-                }
-            }
-
-            return var4;
         }
+        if (this.anInt1860 != 128 || this.anInt1859 != 128 || this.anInt2112 != 128) {
+            var4.method564(this.anInt1860, this.anInt1859, this.anInt2112);
+        }
+
+        if (this.aShortArray2020 != null) {
+            for (var3 = 0; var3 < this.aShortArray2020.length; ++var3) {
+                var4.recolor(this.aShortArray2020[var3], this.aShortArray936[var3]);
+            }
+        }
+
+        if (this.aShortArray947 != null) {
+            for (var3 = 0; var3 < this.aShortArray947.length; ++var3) {
+                var4.method573(this.aShortArray947[var3], this.aShortArray938[var3]);
+            }
+        }
+
+        return var4;
     }
 
     public final boolean method1137(boolean var1) {
@@ -296,22 +295,21 @@ public class ItemDefinition extends DoublyNode {
 
         if (var2 == -1) {
             return true;
-        } else {
-            boolean var5 = true;
-            if (!Class44.aReferenceTable369.method1102(var2, 0)) {
-                var5 = false;
-            }
-
-            if (var3 != -1 && !Class44.aReferenceTable369.method1102(var3, 0)) {
-                var5 = false;
-            }
-
-            if (var4 != -1 && !Class44.aReferenceTable369.method1102(var4, 0)) {
-                var5 = false;
-            }
-
-            return var5;
         }
+        boolean var5 = true;
+        if (!Class44.aReferenceTable369.method1102(var2, 0)) {
+            var5 = false;
+        }
+
+        if (var3 != -1 && !Class44.aReferenceTable369.method1102(var3, 0)) {
+            var5 = false;
+        }
+
+        if (var4 != -1 && !Class44.aReferenceTable369.method1102(var4, 0)) {
+            var5 = false;
+        }
+
+        return var5;
     }
 
     public final ModelHeader getEquipmentModel(boolean var1) {
@@ -326,43 +324,42 @@ public class ItemDefinition extends DoublyNode {
 
         if (var2 == -1) {
             return null;
-        } else {
-            ModelHeader var5 = ModelHeader.method571(Class44.aReferenceTable369, var2, 0);
-            if (var3 != -1) {
-                ModelHeader var6 = ModelHeader.method571(Class44.aReferenceTable369, var3, 0);
-                if (var4 != -1) {
-                    ModelHeader var7 = ModelHeader.method571(Class44.aReferenceTable369, var4, 0);
-                    ModelHeader[] var8 = new ModelHeader[]{var5, var6, var7};
-                    var5 = new ModelHeader(var8, 3);
-                } else {
-                    ModelHeader[] var10 = new ModelHeader[]{var5, var6};
-                    var5 = new ModelHeader(var10, 2);
-                }
-            }
-
-            if (!var1 && this.anInt760 != 0) {
-                var5.method574(0, this.anInt760, 0);
-            }
-
-            if (var1 && this.anInt744 != 0) {
-                var5.method574(0, this.anInt744, 0);
-            }
-
-            int var9;
-            if (this.aShortArray2020 != null) {
-                for (var9 = 0; var9 < this.aShortArray2020.length; ++var9) {
-                    var5.recolor(this.aShortArray2020[var9], this.aShortArray936[var9]);
-                }
-            }
-
-            if (this.aShortArray947 != null) {
-                for (var9 = 0; var9 < this.aShortArray947.length; ++var9) {
-                    var5.method573(this.aShortArray947[var9], this.aShortArray938[var9]);
-                }
-            }
-
-            return var5;
         }
+        ModelHeader var5 = ModelHeader.method571(Class44.aReferenceTable369, var2, 0);
+        if (var3 != -1) {
+            ModelHeader var6 = ModelHeader.method571(Class44.aReferenceTable369, var3, 0);
+            if (var4 != -1) {
+                ModelHeader var7 = ModelHeader.method571(Class44.aReferenceTable369, var4, 0);
+                ModelHeader[] var8 = new ModelHeader[]{var5, var6, var7};
+                var5 = new ModelHeader(var8, 3);
+            } else {
+                ModelHeader[] var10 = new ModelHeader[]{var5, var6};
+                var5 = new ModelHeader(var10, 2);
+            }
+        }
+
+        if (!var1 && this.anInt760 != 0) {
+            var5.method574(0, this.anInt760, 0);
+        }
+
+        if (var1 && this.anInt744 != 0) {
+            var5.method574(0, this.anInt744, 0);
+        }
+
+        int var9;
+        if (this.aShortArray2020 != null) {
+            for (var9 = 0; var9 < this.aShortArray2020.length; ++var9) {
+                var5.recolor(this.aShortArray2020[var9], this.aShortArray936[var9]);
+            }
+        }
+
+        if (this.aShortArray947 != null) {
+            for (var9 = 0; var9 < this.aShortArray947.length; ++var9) {
+                var5.method573(this.aShortArray947[var9], this.aShortArray938[var9]);
+            }
+        }
+
+        return var5;
     }
 
     public final boolean method1144(boolean var1) {
@@ -375,18 +372,17 @@ public class ItemDefinition extends DoublyNode {
 
         if (var2 == -1) {
             return true;
-        } else {
-            boolean var4 = true;
-            if (!Class44.aReferenceTable369.method1102(var2, 0)) {
-                var4 = false;
-            }
-
-            if (var3 != -1 && !Class44.aReferenceTable369.method1102(var3, 0)) {
-                var4 = false;
-            }
-
-            return var4;
         }
+        boolean var4 = true;
+        if (!Class44.aReferenceTable369.method1102(var2, 0)) {
+            var4 = false;
+        }
+
+        if (var3 != -1 && !Class44.aReferenceTable369.method1102(var3, 0)) {
+            var4 = false;
+        }
+
+        return var4;
     }
 
     public final ModelHeader method1139(boolean var1) {
@@ -399,29 +395,28 @@ public class ItemDefinition extends DoublyNode {
 
         if (var2 == -1) {
             return null;
-        } else {
-            ModelHeader var4 = ModelHeader.method571(Class44.aReferenceTable369, var2, 0);
-            if (var3 != -1) {
-                ModelHeader var5 = ModelHeader.method571(Class44.aReferenceTable369, var3, 0);
-                ModelHeader[] var6 = new ModelHeader[]{var4, var5};
-                var4 = new ModelHeader(var6, 2);
-            }
-
-            int var7;
-            if (this.aShortArray2020 != null) {
-                for (var7 = 0; var7 < this.aShortArray2020.length; ++var7) {
-                    var4.recolor(this.aShortArray2020[var7], this.aShortArray936[var7]);
-                }
-            }
-
-            if (this.aShortArray947 != null) {
-                for (var7 = 0; var7 < this.aShortArray947.length; ++var7) {
-                    var4.method573(this.aShortArray947[var7], this.aShortArray938[var7]);
-                }
-            }
-
-            return var4;
         }
+        ModelHeader var4 = ModelHeader.method571(Class44.aReferenceTable369, var2, 0);
+        if (var3 != -1) {
+            ModelHeader var5 = ModelHeader.method571(Class44.aReferenceTable369, var3, 0);
+            ModelHeader[] var6 = new ModelHeader[]{var4, var5};
+            var4 = new ModelHeader(var6, 2);
+        }
+
+        int var7;
+        if (this.aShortArray2020 != null) {
+            for (var7 = 0; var7 < this.aShortArray2020.length; ++var7) {
+                var4.recolor(this.aShortArray2020[var7], this.aShortArray936[var7]);
+            }
+        }
+
+        if (this.aShortArray947 != null) {
+            for (var7 = 0; var7 < this.aShortArray947.length; ++var7) {
+                var4.method573(this.aShortArray947[var7], this.aShortArray938[var7]);
+            }
+        }
+
+        return var4;
     }
 
     public String getOrDefault(int key, String default_) {
@@ -473,12 +468,10 @@ public class ItemDefinition extends DoublyNode {
         if (this.anInt754 != -1 && this.actions != null) {
             if (this.anInt754 >= 0) {
                 return this.actions[this.anInt754] != null ? this.anInt754 : -1;
-            } else {
-                return "Drop".equalsIgnoreCase(this.actions[4]) ? 4 : -1;
             }
-        } else {
-            return -1;
+            return "Drop".equalsIgnoreCase(this.actions[4]) ? 4 : -1;
         }
+        return -1;
     }
 
     public final Model method1141(int var1) {
@@ -499,33 +492,31 @@ public class ItemDefinition extends DoublyNode {
         Model var4 = (Model) aReferenceCache2116.method973((long) this.id);
         if (var4 != null) {
             return var4;
-        } else {
-            ModelHeader var5 = ModelHeader.method571(Class44.aReferenceTable369, this.anInt919, 0);
-            if (var5 == null) {
-                return null;
-            } else {
-                if (this.anInt1860 != 128 || this.anInt1859 != 128 || this.anInt2112 != 128) {
-                    var5.method564(this.anInt1860, this.anInt1859, this.anInt2112);
-                }
+        }
+        ModelHeader var5 = ModelHeader.method571(Class44.aReferenceTable369, this.anInt919, 0);
+        if (var5 == null) {
+            return null;
+        }
+        if (this.anInt1860 != 128 || this.anInt1859 != 128 || this.anInt2112 != 128) {
+            var5.method564(this.anInt1860, this.anInt1859, this.anInt2112);
+        }
 
-                int var6;
-                if (this.aShortArray2020 != null) {
-                    for (var6 = 0; var6 < this.aShortArray2020.length; ++var6) {
-                        var5.recolor(this.aShortArray2020[var6], this.aShortArray936[var6]);
-                    }
-                }
-
-                if (this.aShortArray947 != null) {
-                    for (var6 = 0; var6 < this.aShortArray947.length; ++var6) {
-                        var5.method573(this.aShortArray947[var6], this.aShortArray938[var6]);
-                    }
-                }
-
-                var4 = var5.light(this.anInt1868 + 64, this.anInt1867 + 768, -50, -10, -50);
-                var4.aBoolean1259 = true;
-                aReferenceCache2116.method975(var4, (long) this.id);
-                return var4;
+        int var6;
+        if (this.aShortArray2020 != null) {
+            for (var6 = 0; var6 < this.aShortArray2020.length; ++var6) {
+                var5.recolor(this.aShortArray2020[var6], this.aShortArray936[var6]);
             }
         }
+
+        if (this.aShortArray947 != null) {
+            for (var6 = 0; var6 < this.aShortArray947.length; ++var6) {
+                var5.method573(this.aShortArray947[var6], this.aShortArray938[var6]);
+            }
+        }
+
+        var4 = var5.light(this.anInt1868 + 64, this.anInt1867 + 768, -50, -10, -50);
+        var4.aBoolean1259 = true;
+        aReferenceCache2116.method975(var4, (long) this.id);
+        return var4;
     }
 }

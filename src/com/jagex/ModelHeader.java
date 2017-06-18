@@ -1501,88 +1501,86 @@ public class ModelHeader extends Entity {
             var10 = var10 + 127 >> 7;
             if (var1[var7][var9] == var3 && var1[var8][var9] == var3 && var1[var7][var10] == var3 && var1[var8][var10] == var3) {
                 return this;
+            }
+            ModelHeader var11 = new ModelHeader();
+            var11.anInt204 = this.anInt204;
+            var11.anInt327 = this.anInt327;
+            var11.anInt235 = this.anInt235;
+            var11.xVertices = this.xVertices;
+            var11.zVertices = this.zVertices;
+            var11.anIntArray957 = this.anIntArray957;
+            var11.anIntArray934 = this.anIntArray934;
+            var11.anIntArray932 = this.anIntArray932;
+            var11.aByteArray927 = this.aByteArray927;
+            var11.aByteArray923 = this.aByteArray923;
+            var11.aByteArray943 = this.aByteArray943;
+            var11.aByteArray945 = this.aByteArray945;
+            var11.aShortArray940 = this.aShortArray940;
+            var11.aShortArray921 = this.aShortArray921;
+            var11.defaultRenderPriority = this.defaultRenderPriority;
+            var11.aByteArray949 = this.aByteArray949;
+            var11.aShortArray936 = this.aShortArray936;
+            var11.aShortArray947 = this.aShortArray947;
+            var11.aShortArray938 = this.aShortArray938;
+            var11.aShortArray931 = this.aShortArray931;
+            var11.aShortArray924 = this.aShortArray924;
+            var11.aShortArray954 = this.aShortArray954;
+            var11.aShortArray922 = this.aShortArray922;
+            var11.aByteArray951 = this.aByteArray951;
+            var11.aShortArray955 = this.aShortArray955;
+            var11.aShortArray952 = this.aShortArray952;
+            var11.anIntArray953 = this.anIntArray953;
+            var11.anIntArray926 = this.anIntArray926;
+            var11.anIntArrayArray925 = this.anIntArrayArray925;
+            var11.anIntArrayArray942 = this.anIntArrayArray942;
+            var11.aShort939 = this.aShort939;
+            var11.aShort946 = this.aShort946;
+            var11.yVertices = new int[var11.anInt204];
+            int var12;
+            int var13;
+            int var14;
+            int var15;
+            int var16;
+            int var17;
+            int var18;
+            int var19;
+            int var20;
+            int var21;
+            if (var6 == 0) {
+                for (var12 = 0; var12 < var11.anInt204; ++var12) {
+                    var13 = this.xVertices[var12] + var2;
+                    var14 = this.zVertices[var12] + var4;
+                    var15 = var13 & 127;
+                    var16 = var14 & 127;
+                    var17 = var13 >> 7;
+                    var18 = var14 >> 7;
+                    var19 = var1[var17][var18] * (128 - var15) + var1[var17 + 1][var18] * var15 >> 7;
+                    var20 = var1[var17][var18 + 1] * (128 - var15) + var1[var17 + 1][var18 + 1] * var15 >> 7;
+                    var21 = var19 * (128 - var16) + var20 * var16 >> 7;
+                    var11.yVertices[var12] = this.yVertices[var12] + var21 - var3;
+                }
             } else {
-                ModelHeader var11 = new ModelHeader();
-                var11.anInt204 = this.anInt204;
-                var11.anInt327 = this.anInt327;
-                var11.anInt235 = this.anInt235;
-                var11.xVertices = this.xVertices;
-                var11.zVertices = this.zVertices;
-                var11.anIntArray957 = this.anIntArray957;
-                var11.anIntArray934 = this.anIntArray934;
-                var11.anIntArray932 = this.anIntArray932;
-                var11.aByteArray927 = this.aByteArray927;
-                var11.aByteArray923 = this.aByteArray923;
-                var11.aByteArray943 = this.aByteArray943;
-                var11.aByteArray945 = this.aByteArray945;
-                var11.aShortArray940 = this.aShortArray940;
-                var11.aShortArray921 = this.aShortArray921;
-                var11.defaultRenderPriority = this.defaultRenderPriority;
-                var11.aByteArray949 = this.aByteArray949;
-                var11.aShortArray936 = this.aShortArray936;
-                var11.aShortArray947 = this.aShortArray947;
-                var11.aShortArray938 = this.aShortArray938;
-                var11.aShortArray931 = this.aShortArray931;
-                var11.aShortArray924 = this.aShortArray924;
-                var11.aShortArray954 = this.aShortArray954;
-                var11.aShortArray922 = this.aShortArray922;
-                var11.aByteArray951 = this.aByteArray951;
-                var11.aShortArray955 = this.aShortArray955;
-                var11.aShortArray952 = this.aShortArray952;
-                var11.anIntArray953 = this.anIntArray953;
-                var11.anIntArray926 = this.anIntArray926;
-                var11.anIntArrayArray925 = this.anIntArrayArray925;
-                var11.anIntArrayArray942 = this.anIntArrayArray942;
-                var11.aShort939 = this.aShort939;
-                var11.aShort946 = this.aShort946;
-                var11.yVertices = new int[var11.anInt204];
-                int var12;
-                int var13;
-                int var14;
-                int var15;
-                int var16;
-                int var17;
-                int var18;
-                int var19;
-                int var20;
-                int var21;
-                if (var6 == 0) {
-                    for (var12 = 0; var12 < var11.anInt204; ++var12) {
-                        var13 = this.xVertices[var12] + var2;
-                        var14 = this.zVertices[var12] + var4;
-                        var15 = var13 & 127;
+                for (var12 = 0; var12 < var11.anInt204; ++var12) {
+                    var13 = (-this.yVertices[var12] << 16) / this.height;
+                    if (var13 < var6) {
+                        var14 = this.xVertices[var12] + var2;
+                        var15 = this.zVertices[var12] + var4;
                         var16 = var14 & 127;
-                        var17 = var13 >> 7;
+                        var17 = var15 & 127;
                         var18 = var14 >> 7;
-                        var19 = var1[var17][var18] * (128 - var15) + var1[var17 + 1][var18] * var15 >> 7;
-                        var20 = var1[var17][var18 + 1] * (128 - var15) + var1[var17 + 1][var18 + 1] * var15 >> 7;
-                        var21 = var19 * (128 - var16) + var20 * var16 >> 7;
-                        var11.yVertices[var12] = this.yVertices[var12] + var21 - var3;
-                    }
-                } else {
-                    for (var12 = 0; var12 < var11.anInt204; ++var12) {
-                        var13 = (-this.yVertices[var12] << 16) / this.height;
-                        if (var13 < var6) {
-                            var14 = this.xVertices[var12] + var2;
-                            var15 = this.zVertices[var12] + var4;
-                            var16 = var14 & 127;
-                            var17 = var15 & 127;
-                            var18 = var14 >> 7;
-                            var19 = var15 >> 7;
-                            var20 = var1[var18][var19] * (128 - var16) + var1[var18 + 1][var19] * var16 >> 7;
-                            var21 = var1[var18][var19 + 1] * (128 - var16) + var1[var18 + 1][var19 + 1] * var16 >> 7;
-                            int var22 = var20 * (128 - var17) + var21 * var17 >> 7;
-                            var11.yVertices[var12] = this.yVertices[var12] + (var22 - var3) * (var6 - var13) / var6;
-                        }
+                        var19 = var15 >> 7;
+                        var20 = var1[var18][var19] * (128 - var16) + var1[var18 + 1][var19] * var16 >> 7;
+                        var21 = var1[var18][var19 + 1] * (128 - var16) + var1[var18 + 1][var19 + 1] * var16 >> 7;
+                        int var22 = var20 * (128 - var17) + var21 * var17 >> 7;
+                        var11.yVertices[var12] = this.yVertices[var12] + (var22 - var3) * (var6 - var13) / var6;
                     }
                 }
-
-                var11.method562();
-                return var11;
             }
-        } else {
-            return this;
+
+            var11.method562();
+            return var11;
         }
+        return this;
     }
 
     void method563() {

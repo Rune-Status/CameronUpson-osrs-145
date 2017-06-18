@@ -71,18 +71,17 @@ public final class NodeTable<T extends Node> {
             var1 = this.tail;
             this.tail = var1.next;
             return (T) var1;
-        } else {
-            do {
-                if (this.index >= this.size) {
-                    return null;
-                }
-
-                var1 = this.buckets[this.index++].next;
-            } while (var1 == this.buckets[this.index - 1]);
-
-            this.tail = var1.next;
-            return (T) var1;
         }
+        do {
+            if (this.index >= this.size) {
+                return null;
+            }
+
+            var1 = this.buckets[this.index++].next;
+        } while (var1 == this.buckets[this.index - 1]);
+
+        this.tail = var1.next;
+        return (T) var1;
     }
 
     public T first() {

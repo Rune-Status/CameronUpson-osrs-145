@@ -84,27 +84,28 @@ public class Class165 implements Runnable {
                     String var16 = new String(var9.payload);
                     if (var16.startsWith("OFFLINE")) {
                         return 4;
-                    } else if (var16.startsWith("WRONG")) {
-                        return 7;
-                    } else if (var16.startsWith("RELOAD")) {
-                        return 3;
-                    } else if (var16.startsWith("Not permitted for social network accounts.")) {
-                        return 6;
-                    } else {
-                        var9.method838(var6);
-
-                        while (var9.caret > 0 && var9.payload[var9.caret - 1] == 0) {
-                            --var9.caret;
-                        }
-
-                        var16 = new String(var9.payload, 0, var9.caret);
-                        if (Class173.method1185(var16)) {
-                            Class54.method348(var16, true, false);
-                            return 2;
-                        } else {
-                            return 5;
-                        }
                     }
+                    if (var16.startsWith("WRONG")) {
+                        return 7;
+                    }
+                    if (var16.startsWith("RELOAD")) {
+                        return 3;
+                    }
+                    if (var16.startsWith("Not permitted for social network accounts.")) {
+                        return 6;
+                    }
+                    var9.method838(var6);
+
+                    while (var9.caret > 0 && var9.payload[var9.caret - 1] == 0) {
+                        --var9.caret;
+                    }
+
+                    var16 = new String(var9.payload, 0, var9.caret);
+                    if (Class173.method1185(var16)) {
+                        Class54.method348(var16, true, false);
+                        return 2;
+                    }
+                    return 5;
                 }
 
                 var9.caret += var15;

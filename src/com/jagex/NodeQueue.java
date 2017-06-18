@@ -12,10 +12,9 @@ public final class NodeQueue<T extends DoublyNode> {
         DoublyNode var1 = this.root.nextDoubly;
         if (var1 == this.root) {
             return null;
-        } else {
-            var1.method977();
-            return (T) var1;
         }
+        var1.method977();
+        return (T) var1;
     }
 
     public T method941() {

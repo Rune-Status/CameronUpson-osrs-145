@@ -222,84 +222,82 @@ public class Model extends Entity {
             var10 = var10 + 127 >> 7;
             if (var1[var7][var9] == var3 && var1[var8][var9] == var3 && var1[var7][var10] == var3 && var1[var8][var10] == var3) {
                 return this;
-            } else {
-                Model var11;
-                if (var5) {
-                    var11 = new Model();
-                    var11.anInt327 = this.anInt327;
-                    var11.anInt217 = this.anInt217;
-                    var11.vertexCount = this.vertexCount;
-                    var11.zVertices = this.zVertices;
-                    var11.anIntArray932 = this.anIntArray932;
-                    var11.xTriangles = this.xTriangles;
-                    var11.yTriangles = this.yTriangles;
-                    var11.zTriangles = this.zTriangles;
-                    var11.anIntArray1171 = this.anIntArray1171;
-                    var11.anIntArray315 = this.anIntArray315;
-                    var11.anIntArray1273 = this.anIntArray1273;
-                    var11.aByteArray1280 = this.aByteArray1280;
-                    var11.aByteArray949 = this.aByteArray949;
-                    var11.aByteArray1274 = this.aByteArray1274;
-                    var11.aShortArray947 = this.aShortArray947;
-                    var11.aByte1275 = this.aByte1275;
-                    var11.anIntArray240 = this.anIntArray240;
-                    var11.anIntArray1281 = this.anIntArray1281;
-                    var11.anIntArray1081 = this.anIntArray1081;
-                    var11.anIntArrayArray1282 = this.anIntArrayArray1282;
-                    var11.anIntArrayArray1279 = this.anIntArrayArray1279;
-                    var11.aBoolean1259 = this.aBoolean1259;
-                    var11.yVertices = new int[var11.anInt327];
-                } else {
-                    var11 = this;
-                }
-
-                int var12;
-                int var13;
-                int var14;
-                int var15;
-                int var16;
-                int var17;
-                int var18;
-                int var19;
-                int var20;
-                int var21;
-                if (var6 == 0) {
-                    for (var12 = 0; var12 < var11.anInt327; ++var12) {
-                        var13 = this.zVertices[var12] + var2;
-                        var14 = this.anIntArray932[var12] + var4;
-                        var15 = var13 & 127;
-                        var16 = var14 & 127;
-                        var17 = var13 >> 7;
-                        var18 = var14 >> 7;
-                        var19 = var1[var17][var18] * (128 - var15) + var1[var17 + 1][var18] * var15 >> 7;
-                        var20 = var1[var17][var18 + 1] * (128 - var15) + var1[var17 + 1][var18 + 1] * var15 >> 7;
-                        var21 = var19 * (128 - var16) + var20 * var16 >> 7;
-                        var11.yVertices[var12] = this.yVertices[var12] + var21 - var3;
-                    }
-                } else {
-                    for (var12 = 0; var12 < var11.anInt327; ++var12) {
-                        var13 = (-this.yVertices[var12] << 16) / this.height;
-                        if (var13 < var6) {
-                            var14 = this.zVertices[var12] + var2;
-                            var15 = this.anIntArray932[var12] + var4;
-                            var16 = var14 & 127;
-                            var17 = var15 & 127;
-                            var18 = var14 >> 7;
-                            var19 = var15 >> 7;
-                            var20 = var1[var18][var19] * (128 - var16) + var1[var18 + 1][var19] * var16 >> 7;
-                            var21 = var1[var18][var19 + 1] * (128 - var16) + var1[var18 + 1][var19 + 1] * var16 >> 7;
-                            int var22 = var20 * (128 - var17) + var21 * var17 >> 7;
-                            var11.yVertices[var12] = this.yVertices[var12] + (var22 - var3) * (var6 - var13) / var6;
-                        }
-                    }
-                }
-
-                var11.method572();
-                return var11;
             }
-        } else {
-            return this;
+            Model var11;
+            if (var5) {
+                var11 = new Model();
+                var11.anInt327 = this.anInt327;
+                var11.anInt217 = this.anInt217;
+                var11.vertexCount = this.vertexCount;
+                var11.zVertices = this.zVertices;
+                var11.anIntArray932 = this.anIntArray932;
+                var11.xTriangles = this.xTriangles;
+                var11.yTriangles = this.yTriangles;
+                var11.zTriangles = this.zTriangles;
+                var11.anIntArray1171 = this.anIntArray1171;
+                var11.anIntArray315 = this.anIntArray315;
+                var11.anIntArray1273 = this.anIntArray1273;
+                var11.aByteArray1280 = this.aByteArray1280;
+                var11.aByteArray949 = this.aByteArray949;
+                var11.aByteArray1274 = this.aByteArray1274;
+                var11.aShortArray947 = this.aShortArray947;
+                var11.aByte1275 = this.aByte1275;
+                var11.anIntArray240 = this.anIntArray240;
+                var11.anIntArray1281 = this.anIntArray1281;
+                var11.anIntArray1081 = this.anIntArray1081;
+                var11.anIntArrayArray1282 = this.anIntArrayArray1282;
+                var11.anIntArrayArray1279 = this.anIntArrayArray1279;
+                var11.aBoolean1259 = this.aBoolean1259;
+                var11.yVertices = new int[var11.anInt327];
+            } else {
+                var11 = this;
+            }
+
+            int var12;
+            int var13;
+            int var14;
+            int var15;
+            int var16;
+            int var17;
+            int var18;
+            int var19;
+            int var20;
+            int var21;
+            if (var6 == 0) {
+                for (var12 = 0; var12 < var11.anInt327; ++var12) {
+                    var13 = this.zVertices[var12] + var2;
+                    var14 = this.anIntArray932[var12] + var4;
+                    var15 = var13 & 127;
+                    var16 = var14 & 127;
+                    var17 = var13 >> 7;
+                    var18 = var14 >> 7;
+                    var19 = var1[var17][var18] * (128 - var15) + var1[var17 + 1][var18] * var15 >> 7;
+                    var20 = var1[var17][var18 + 1] * (128 - var15) + var1[var17 + 1][var18 + 1] * var15 >> 7;
+                    var21 = var19 * (128 - var16) + var20 * var16 >> 7;
+                    var11.yVertices[var12] = this.yVertices[var12] + var21 - var3;
+                }
+            } else {
+                for (var12 = 0; var12 < var11.anInt327; ++var12) {
+                    var13 = (-this.yVertices[var12] << 16) / this.height;
+                    if (var13 < var6) {
+                        var14 = this.zVertices[var12] + var2;
+                        var15 = this.anIntArray932[var12] + var4;
+                        var16 = var14 & 127;
+                        var17 = var15 & 127;
+                        var18 = var14 >> 7;
+                        var19 = var15 >> 7;
+                        var20 = var1[var18][var19] * (128 - var16) + var1[var18 + 1][var19] * var16 >> 7;
+                        var21 = var1[var18][var19 + 1] * (128 - var16) + var1[var18 + 1][var19 + 1] * var16 >> 7;
+                        int var22 = var20 * (128 - var17) + var21 * var17 >> 7;
+                        var11.yVertices[var12] = this.yVertices[var12] + (var22 - var3) * (var6 - var13) / var6;
+                    }
+                }
+            }
+
+            var11.method572();
+            return var11;
         }
+        return this;
     }
 
     public Model method726(boolean var1) {

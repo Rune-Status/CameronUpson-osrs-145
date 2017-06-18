@@ -870,51 +870,49 @@ public class Node_Sub10_Sub2 extends Node_Sub10 {
                 this.anInt328 = 0;
                 this.unlink();
                 return true;
-            } else {
-                this.method556();
-                return false;
             }
-        } else {
-            if (this.anInt328 < var1) {
-                this.anInt212 = 1;
-                this.anInt225 = var1 - this.anInt328;
-            } else if (this.anInt328 > var1) {
-                this.anInt212 = -1;
-                this.anInt225 = this.anInt328 - var1;
-            } else {
-                this.anInt212 = 0;
-            }
-
-            if (this.anInt221 < var3) {
-                this.anInt919 = 1;
-                if (this.anInt225 == 0 || this.anInt225 > var3 - this.anInt221) {
-                    this.anInt225 = var3 - this.anInt221;
-                }
-            } else if (this.anInt221 > var3) {
-                this.anInt919 = -1;
-                if (this.anInt225 == 0 || this.anInt225 > this.anInt221 - var3) {
-                    this.anInt225 = this.anInt221 - var3;
-                }
-            } else {
-                this.anInt919 = 0;
-            }
-
-            if (this.anInt220 < var2) {
-                this.anInt235 = 1;
-                if (this.anInt225 == 0 || this.anInt225 > var2 - this.anInt220) {
-                    this.anInt225 = var2 - this.anInt220;
-                }
-            } else if (this.anInt220 > var2) {
-                this.anInt235 = -1;
-                if (this.anInt225 == 0 || this.anInt225 > this.anInt220 - var2) {
-                    this.anInt225 = this.anInt220 - var2;
-                }
-            } else {
-                this.anInt235 = 0;
-            }
-
+            this.method556();
             return false;
         }
+        if (this.anInt328 < var1) {
+            this.anInt212 = 1;
+            this.anInt225 = var1 - this.anInt328;
+        } else if (this.anInt328 > var1) {
+            this.anInt212 = -1;
+            this.anInt225 = this.anInt328 - var1;
+        } else {
+            this.anInt212 = 0;
+        }
+
+        if (this.anInt221 < var3) {
+            this.anInt919 = 1;
+            if (this.anInt225 == 0 || this.anInt225 > var3 - this.anInt221) {
+                this.anInt225 = var3 - this.anInt221;
+            }
+        } else if (this.anInt221 > var3) {
+            this.anInt919 = -1;
+            if (this.anInt225 == 0 || this.anInt225 > this.anInt221 - var3) {
+                this.anInt225 = this.anInt221 - var3;
+            }
+        } else {
+            this.anInt919 = 0;
+        }
+
+        if (this.anInt220 < var2) {
+            this.anInt235 = 1;
+            if (this.anInt225 == 0 || this.anInt225 > var2 - this.anInt220) {
+                this.anInt225 = var2 - this.anInt220;
+            }
+        } else if (this.anInt220 > var2) {
+            this.anInt235 = -1;
+            if (this.anInt225 == 0 || this.anInt225 > this.anInt220 - var2) {
+                this.anInt225 = this.anInt220 - var2;
+            }
+        } else {
+            this.anInt235 = 0;
+        }
+
+        return false;
     }
 
     protected Node_Sub10 method434() {
@@ -992,7 +990,8 @@ public class Node_Sub10_Sub2 extends Node_Sub10 {
                         this.anInt204 = var5 + var5 - 1 - this.anInt204;
                         this.anInt209 = -this.anInt209;
                     }
-                } else if (this.anInt209 < 0) {
+                }
+                if (this.anInt209 < 0) {
                     while (true) {
                         var9 = this.method548(var1, var9, var5, var3, var4.aByteArray846[this.anInt226 - 1]);
                         if (this.anInt204 >= var5) {
@@ -1001,112 +1000,110 @@ public class Node_Sub10_Sub2 extends Node_Sub10 {
 
                         this.anInt204 = var6 - 1 - (var6 - 1 - this.anInt204) % var8;
                     }
-                } else {
-                    while (true) {
-                        var9 = this.method532(var1, var9, var6, var3, var4.aByteArray846[this.anInt214]);
-                        if (this.anInt204 < var6) {
-                            return;
-                        }
-
-                        this.anInt204 = var5 + (this.anInt204 - var5) % var8;
-                    }
                 }
-            } else {
-                if (this.anInt217 > 0) {
-                    if (this.aBoolean813) {
-                        label142:
-                        {
-                            if (this.anInt209 < 0) {
-                                var9 = this.method548(var1, var2, var5, var3, var4.aByteArray846[this.anInt214]);
-                                if (this.anInt204 >= var5) {
-                                    return;
-                                }
+                while (true) {
+                    var9 = this.method532(var1, var9, var6, var3, var4.aByteArray846[this.anInt214]);
+                    if (this.anInt204 < var6) {
+                        return;
+                    }
 
-                                this.anInt204 = var5 + var5 - 1 - this.anInt204;
-                                this.anInt209 = -this.anInt209;
-                                if (--this.anInt217 == 0) {
-                                    break label142;
-                                }
+                    this.anInt204 = var5 + (this.anInt204 - var5) % var8;
+                }
+            }
+            if (this.anInt217 > 0) {
+                if (this.aBoolean813) {
+                    label142:
+                    {
+                        if (this.anInt209 < 0) {
+                            var9 = this.method548(var1, var2, var5, var3, var4.aByteArray846[this.anInt214]);
+                            if (this.anInt204 >= var5) {
+                                return;
                             }
 
-                            do {
-                                var9 = this.method532(var1, var9, var6, var3, var4.aByteArray846[this.anInt226 - 1]);
-                                if (this.anInt204 < var6) {
-                                    return;
-                                }
+                            this.anInt204 = var5 + var5 - 1 - this.anInt204;
+                            this.anInt209 = -this.anInt209;
+                            if (--this.anInt217 == 0) {
+                                break label142;
+                            }
+                        }
 
-                                this.anInt204 = var6 + var6 - 1 - this.anInt204;
-                                this.anInt209 = -this.anInt209;
-                                if (--this.anInt217 == 0) {
-                                    break;
-                                }
+                        do {
+                            var9 = this.method532(var1, var9, var6, var3, var4.aByteArray846[this.anInt226 - 1]);
+                            if (this.anInt204 < var6) {
+                                return;
+                            }
 
-                                var9 = this.method548(var1, var9, var5, var3, var4.aByteArray846[this.anInt214]);
-                                if (this.anInt204 >= var5) {
-                                    return;
-                                }
+                            this.anInt204 = var6 + var6 - 1 - this.anInt204;
+                            this.anInt209 = -this.anInt209;
+                            if (--this.anInt217 == 0) {
+                                break;
+                            }
 
-                                this.anInt204 = var5 + var5 - 1 - this.anInt204;
-                                this.anInt209 = -this.anInt209;
-                            } while (--this.anInt217 != 0);
+                            var9 = this.method548(var1, var9, var5, var3, var4.aByteArray846[this.anInt214]);
+                            if (this.anInt204 >= var5) {
+                                return;
+                            }
+
+                            this.anInt204 = var5 + var5 - 1 - this.anInt204;
+                            this.anInt209 = -this.anInt209;
+                        } while (--this.anInt217 != 0);
+                    }
+                } else {
+                    int var10;
+                    if (this.anInt209 < 0) {
+                        while (true) {
+                            var9 = this.method548(var1, var9, var5, var3, var4.aByteArray846[this.anInt226 - 1]);
+                            if (this.anInt204 >= var5) {
+                                return;
+                            }
+
+                            var10 = (var6 - 1 - this.anInt204) / var8;
+                            if (var10 >= this.anInt217) {
+                                this.anInt204 += var8 * this.anInt217;
+                                this.anInt217 = 0;
+                                break;
+                            }
+
+                            this.anInt204 += var8 * var10;
+                            this.anInt217 -= var10;
                         }
                     } else {
-                        int var10;
-                        if (this.anInt209 < 0) {
-                            while (true) {
-                                var9 = this.method548(var1, var9, var5, var3, var4.aByteArray846[this.anInt226 - 1]);
-                                if (this.anInt204 >= var5) {
-                                    return;
-                                }
-
-                                var10 = (var6 - 1 - this.anInt204) / var8;
-                                if (var10 >= this.anInt217) {
-                                    this.anInt204 += var8 * this.anInt217;
-                                    this.anInt217 = 0;
-                                    break;
-                                }
-
-                                this.anInt204 += var8 * var10;
-                                this.anInt217 -= var10;
+                        while (true) {
+                            var9 = this.method532(var1, var9, var6, var3, var4.aByteArray846[this.anInt214]);
+                            if (this.anInt204 < var6) {
+                                return;
                             }
-                        } else {
-                            while (true) {
-                                var9 = this.method532(var1, var9, var6, var3, var4.aByteArray846[this.anInt214]);
-                                if (this.anInt204 < var6) {
-                                    return;
-                                }
 
-                                var10 = (this.anInt204 - var5) / var8;
-                                if (var10 >= this.anInt217) {
-                                    this.anInt204 -= var8 * this.anInt217;
-                                    this.anInt217 = 0;
-                                    break;
-                                }
-
-                                this.anInt204 -= var8 * var10;
-                                this.anInt217 -= var10;
+                            var10 = (this.anInt204 - var5) / var8;
+                            if (var10 >= this.anInt217) {
+                                this.anInt204 -= var8 * this.anInt217;
+                                this.anInt217 = 0;
+                                break;
                             }
+
+                            this.anInt204 -= var8 * var10;
+                            this.anInt217 -= var10;
                         }
                     }
                 }
-
-                if (this.anInt209 < 0) {
-                    this.method548(var1, var9, 0, var3, 0);
-                    if (this.anInt204 < 0) {
-                        this.anInt204 = -1;
-                        this.method534();
-                        this.unlink();
-                    }
-                } else {
-                    this.method532(var1, var9, var7, var3, 0);
-                    if (this.anInt204 >= var7) {
-                        this.anInt204 = var7;
-                        this.method534();
-                        this.unlink();
-                    }
-                }
-
             }
+
+            if (this.anInt209 < 0) {
+                this.method548(var1, var9, 0, var3, 0);
+                if (this.anInt204 < 0) {
+                    this.anInt204 = -1;
+                    this.method534();
+                    this.unlink();
+                }
+            } else {
+                this.method532(var1, var9, var7, var3, 0);
+                if (this.anInt204 >= var7) {
+                    this.anInt204 = var7;
+                    this.method534();
+                    this.unlink();
+                }
+            }
+
         }
     }
 

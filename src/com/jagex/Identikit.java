@@ -74,20 +74,19 @@ public class Identikit {
 
         if (var4.caret != var1.length) {
             throw new RuntimeException();
-        } else {
-            this.id = var7;
-            this.anIntArray1315 = new int[var7];
-            this.anIntArray1313 = new int[var7];
-            this.anIntArray1311 = new int[var7];
-            this.anIntArray1308 = new int[var7];
-
-            for (var8 = 0; var8 < var7; ++var8) {
-                this.anIntArray1315[var8] = anIntArray1307[var8];
-                this.anIntArray1313[var8] = anIntArray1316[var8];
-                this.anIntArray1311[var8] = anIntArray1310[var8];
-                this.anIntArray1308[var8] = anIntArray1309[var8];
-            }
-
         }
+        this.id = var7;
+        this.anIntArray1315 = new int[var7];
+        this.anIntArray1313 = new int[var7];
+        this.anIntArray1311 = new int[var7];
+        this.anIntArray1308 = new int[var7];
+
+        for (var8 = 0; var8 < var7; ++var8) {
+            this.anIntArray1315[var8] = anIntArray1307[var8];
+            this.anIntArray1313[var8] = anIntArray1316[var8];
+            this.anIntArray1311[var8] = anIntArray1310[var8];
+            this.anIntArray1308[var8] = anIntArray1309[var8];
+        }
+
     }
 }

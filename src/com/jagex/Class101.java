@@ -28,19 +28,18 @@ public class Class101 {
         if (var0 == 1927) {
             if (Class63.anInt647 >= 10) {
                 throw new RuntimeException();
-            } else if (var3.anObjectArray1920 == null) {
-                return 0;
-            } else {
-                ScriptEvent var4 = new ScriptEvent();
-                var4.source = var3;
-                var4.args = var3.anObjectArray1920;
-                var4.anInt226 = Class63.anInt647 + 1;
-                Client.aNodeDeque1661.method997(var4);
-                return 1;
             }
-        } else {
-            return 2;
+            if (var3.anObjectArray1920 == null) {
+                return 0;
+            }
+            ScriptEvent var4 = new ScriptEvent();
+            var4.source = var3;
+            var4.args = var3.anObjectArray1920;
+            var4.anInt226 = Class63.anInt647 + 1;
+            Client.aNodeDeque1661.method997(var4);
+            return 1;
         }
+        return 2;
     }
 
     public static int method653(String var0) {

@@ -19,8 +19,7 @@ public class Class59 {
 
         if (var1.length() > 9) {
             return " " + Class75.method449(65408) + var1.substring(0, var1.length() - 8) + "M" + " " + " (" + var1 + ")" + "</col>";
-        } else {
-            return var1.length() > 6 ? " " + Class75.method449(16777215) + var1.substring(0, var1.length() - 4) + "K" + " " + " (" + var1 + ")" + "</col>" : " " + Class75.method449(16776960) + var1 + "</col>";
         }
+        return var1.length() > 6 ? " " + Class75.method449(16777215) + var1.substring(0, var1.length() - 4) + "K" + " " + " (" + var1 + ")" + "</col>" : " " + Class75.method449(16776960) + var1 + "</col>";
     }
 }

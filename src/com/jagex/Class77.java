@@ -51,12 +51,11 @@ public class Class77 {
 
         if (!var4) {
             return null;
-        } else {
-            try {
-                return new AnimationFrame(var0, var1, var2, var3);
-            } catch (Exception var11) {
-                return null;
-            }
+        }
+        try {
+            return new AnimationFrame(var0, var1, var2, var3);
+        } catch (Exception var11) {
+            return null;
         }
     }
 
@@ -412,16 +411,15 @@ public class Class77 {
         HitsplatDefinition var1 = (HitsplatDefinition) HitsplatDefinition.aReferenceCache2013.method973((long) var0);
         if (var1 != null) {
             return var1;
-        } else {
-            byte[] var2 = HitsplatDefinition.aReferenceTable2012.method1085(32, var0);
-            var1 = new HitsplatDefinition();
-            if (var2 != null) {
-                var1.decode(new Buffer(var2));
-            }
-
-            HitsplatDefinition.aReferenceCache2013.method975(var1, (long) var0);
-            return var1;
         }
+        byte[] var2 = HitsplatDefinition.aReferenceTable2012.method1085(32, var0);
+        var1 = new HitsplatDefinition();
+        if (var2 != null) {
+            var1.decode(new Buffer(var2));
+        }
+
+        HitsplatDefinition.aReferenceCache2013.method975(var1, (long) var0);
+        return var1;
     }
 
     boolean method461(float var1) {

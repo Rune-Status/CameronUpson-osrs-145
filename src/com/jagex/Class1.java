@@ -77,9 +77,8 @@ public class Class1 implements Class16 {
     public int[] method2(int var1, int var2, int var3) {
         if (!this.method10(var1, var2, var3)) {
             return null;
-        } else {
-            return new int[]{var2 + (this.anInt4 * 64 - this.anInt3 * 64), this.anInt5 * 64 - this.anInt2 * 64 + var3};
         }
+        return new int[]{var2 + (this.anInt4 * 64 - this.anInt3 * 64), this.anInt5 * 64 - this.anInt2 * 64 + var3};
     }
 
     void method8() {
@@ -88,9 +87,8 @@ public class Class1 implements Class16 {
     public boolean method10(int var1, int var2, int var3) {
         if (var1 >= this.anInt1 && var1 < this.anInt1 + this.anInt6) {
             return var2 >> 6 == this.anInt3 && this.anInt2 == var3 >> 6;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public void decode(Buffer var1) {
@@ -106,10 +104,9 @@ public class Class1 implements Class16 {
     public SceneOffset method7(int var1, int var2) {
         if (!this.method5(var1, var2)) {
             return null;
-        } else {
-            int var3 = this.anInt3 * 64 - this.anInt4 * 64 + var1;
-            int var4 = this.anInt2 * 64 - this.anInt5 * 64 + var2;
-            return new SceneOffset(this.anInt1, var3, var4);
         }
+        int var3 = this.anInt3 * 64 - this.anInt4 * 64 + var1;
+        int var4 = this.anInt2 * 64 - this.anInt5 * 64 + var2;
+        return new SceneOffset(this.anInt1, var3, var4);
     }
 }

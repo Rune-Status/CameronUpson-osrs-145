@@ -228,107 +228,104 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                 var6 += var20;
                                 var0 += anInt749;
                             }
-                        } else {
-                            var2 -= var1;
-                            var1 -= var0;
-                            var0 = anIntArray1082[var0];
+                        }
+                        var2 -= var1;
+                        var1 -= var0;
+                        var0 = anIntArray1082[var0];
 
+                        while (true) {
+                            --var1;
+                            if (var1 < 0) {
+                                while (true) {
+                                    --var2;
+                                    if (var2 < 0) {
+                                        return;
+                                    }
+
+                                    method636(anIntArray953, var0, 0, 0, var5 >> 14, var4 >> 14, var6, var19);
+                                    var5 += var17;
+                                    var4 += var15;
+                                    var6 += var20;
+                                    var0 += anInt749;
+                                }
+                            }
+
+                            method636(anIntArray953, var0, 0, 0, var5 >> 14, var3 >> 14, var6, var19);
+                            var5 += var17;
+                            var3 += var16;
+                            var6 += var20;
+                            var0 += anInt749;
+                        }
+                    }
+                    var4 = var3 <<= 14;
+                    if (var0 < 0) {
+                        var4 -= var17 * var0;
+                        var3 -= var16 * var0;
+                        var6 -= var20 * var0;
+                        var0 = 0;
+                    }
+
+                    var5 <<= 14;
+                    if (var2 < 0) {
+                        var5 -= var15 * var2;
+                        var2 = 0;
+                    }
+
+                    if (var0 != var2 && var17 < var16 || var0 == var2 && var15 > var16) {
+                        var1 -= var2;
+                        var2 -= var0;
+                        var0 = anIntArray1082[var0];
+
+                        while (true) {
+                            --var2;
+                            if (var2 < 0) {
+                                while (true) {
+                                    --var1;
+                                    if (var1 < 0) {
+                                        return;
+                                    }
+
+                                    method636(anIntArray953, var0, 0, 0, var5 >> 14, var3 >> 14, var6, var19);
+                                    var5 += var15;
+                                    var3 += var16;
+                                    var6 += var20;
+                                    var0 += anInt749;
+                                }
+                            }
+
+                            method636(anIntArray953, var0, 0, 0, var4 >> 14, var3 >> 14, var6, var19);
+                            var4 += var17;
+                            var3 += var16;
+                            var6 += var20;
+                            var0 += anInt749;
+                        }
+                    }
+                    var1 -= var2;
+                    var2 -= var0;
+                    var0 = anIntArray1082[var0];
+
+                    while (true) {
+                        --var2;
+                        if (var2 < 0) {
                             while (true) {
                                 --var1;
                                 if (var1 < 0) {
-                                    while (true) {
-                                        --var2;
-                                        if (var2 < 0) {
-                                            return;
-                                        }
-
-                                        method636(anIntArray953, var0, 0, 0, var5 >> 14, var4 >> 14, var6, var19);
-                                        var5 += var17;
-                                        var4 += var15;
-                                        var6 += var20;
-                                        var0 += anInt749;
-                                    }
+                                    return;
                                 }
 
-                                method636(anIntArray953, var0, 0, 0, var5 >> 14, var3 >> 14, var6, var19);
-                                var5 += var17;
+                                method636(anIntArray953, var0, 0, 0, var3 >> 14, var5 >> 14, var6, var19);
+                                var5 += var15;
                                 var3 += var16;
                                 var6 += var20;
                                 var0 += anInt749;
                             }
                         }
-                    } else {
-                        var4 = var3 <<= 14;
-                        if (var0 < 0) {
-                            var4 -= var17 * var0;
-                            var3 -= var16 * var0;
-                            var6 -= var20 * var0;
-                            var0 = 0;
-                        }
 
-                        var5 <<= 14;
-                        if (var2 < 0) {
-                            var5 -= var15 * var2;
-                            var2 = 0;
-                        }
-
-                        if (var0 != var2 && var17 < var16 || var0 == var2 && var15 > var16) {
-                            var1 -= var2;
-                            var2 -= var0;
-                            var0 = anIntArray1082[var0];
-
-                            while (true) {
-                                --var2;
-                                if (var2 < 0) {
-                                    while (true) {
-                                        --var1;
-                                        if (var1 < 0) {
-                                            return;
-                                        }
-
-                                        method636(anIntArray953, var0, 0, 0, var5 >> 14, var3 >> 14, var6, var19);
-                                        var5 += var15;
-                                        var3 += var16;
-                                        var6 += var20;
-                                        var0 += anInt749;
-                                    }
-                                }
-
-                                method636(anIntArray953, var0, 0, 0, var4 >> 14, var3 >> 14, var6, var19);
-                                var4 += var17;
-                                var3 += var16;
-                                var6 += var20;
-                                var0 += anInt749;
-                            }
-                        } else {
-                            var1 -= var2;
-                            var2 -= var0;
-                            var0 = anIntArray1082[var0];
-
-                            while (true) {
-                                --var2;
-                                if (var2 < 0) {
-                                    while (true) {
-                                        --var1;
-                                        if (var1 < 0) {
-                                            return;
-                                        }
-
-                                        method636(anIntArray953, var0, 0, 0, var3 >> 14, var5 >> 14, var6, var19);
-                                        var5 += var15;
-                                        var3 += var16;
-                                        var6 += var20;
-                                        var0 += anInt749;
-                                    }
-                                }
-
-                                method636(anIntArray953, var0, 0, 0, var3 >> 14, var4 >> 14, var6, var19);
-                                var4 += var17;
-                                var3 += var16;
-                                var6 += var20;
-                                var0 += anInt749;
-                            }
-                        }
+                        method636(anIntArray953, var0, 0, 0, var3 >> 14, var4 >> 14, var6, var19);
+                        var4 += var17;
+                        var3 += var16;
+                        var6 += var20;
+                        var0 += anInt749;
                     }
                 }
             } else if (var1 <= var2) {
@@ -385,107 +382,104 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                 var7 += var20;
                                 var1 += anInt749;
                             }
-                        } else {
-                            var0 -= var2;
-                            var2 -= var1;
-                            var1 = anIntArray1082[var1];
+                        }
+                        var0 -= var2;
+                        var2 -= var1;
+                        var1 = anIntArray1082[var1];
 
+                        while (true) {
+                            --var2;
+                            if (var2 < 0) {
+                                while (true) {
+                                    --var0;
+                                    if (var0 < 0) {
+                                        return;
+                                    }
+
+                                    method636(anIntArray953, var1, 0, 0, var3 >> 14, var5 >> 14, var7, var19);
+                                    var3 += var16;
+                                    var5 += var17;
+                                    var7 += var20;
+                                    var1 += anInt749;
+                                }
+                            }
+
+                            method636(anIntArray953, var1, 0, 0, var3 >> 14, var4 >> 14, var7, var19);
+                            var3 += var16;
+                            var4 += var15;
+                            var7 += var20;
+                            var1 += anInt749;
+                        }
+                    }
+                    var5 = var4 <<= 14;
+                    if (var1 < 0) {
+                        var5 -= var16 * var1;
+                        var4 -= var15 * var1;
+                        var7 -= var20 * var1;
+                        var1 = 0;
+                    }
+
+                    var3 <<= 14;
+                    if (var0 < 0) {
+                        var3 -= var17 * var0;
+                        var0 = 0;
+                    }
+
+                    if (var16 < var15) {
+                        var2 -= var0;
+                        var0 -= var1;
+                        var1 = anIntArray1082[var1];
+
+                        while (true) {
+                            --var0;
+                            if (var0 < 0) {
+                                while (true) {
+                                    --var2;
+                                    if (var2 < 0) {
+                                        return;
+                                    }
+
+                                    method636(anIntArray953, var1, 0, 0, var3 >> 14, var4 >> 14, var7, var19);
+                                    var3 += var17;
+                                    var4 += var15;
+                                    var7 += var20;
+                                    var1 += anInt749;
+                                }
+                            }
+
+                            method636(anIntArray953, var1, 0, 0, var5 >> 14, var4 >> 14, var7, var19);
+                            var5 += var16;
+                            var4 += var15;
+                            var7 += var20;
+                            var1 += anInt749;
+                        }
+                    }
+                    var2 -= var0;
+                    var0 -= var1;
+                    var1 = anIntArray1082[var1];
+
+                    while (true) {
+                        --var0;
+                        if (var0 < 0) {
                             while (true) {
                                 --var2;
                                 if (var2 < 0) {
-                                    while (true) {
-                                        --var0;
-                                        if (var0 < 0) {
-                                            return;
-                                        }
-
-                                        method636(anIntArray953, var1, 0, 0, var3 >> 14, var5 >> 14, var7, var19);
-                                        var3 += var16;
-                                        var5 += var17;
-                                        var7 += var20;
-                                        var1 += anInt749;
-                                    }
+                                    return;
                                 }
 
-                                method636(anIntArray953, var1, 0, 0, var3 >> 14, var4 >> 14, var7, var19);
-                                var3 += var16;
+                                method636(anIntArray953, var1, 0, 0, var4 >> 14, var3 >> 14, var7, var19);
+                                var3 += var17;
                                 var4 += var15;
                                 var7 += var20;
                                 var1 += anInt749;
                             }
                         }
-                    } else {
-                        var5 = var4 <<= 14;
-                        if (var1 < 0) {
-                            var5 -= var16 * var1;
-                            var4 -= var15 * var1;
-                            var7 -= var20 * var1;
-                            var1 = 0;
-                        }
 
-                        var3 <<= 14;
-                        if (var0 < 0) {
-                            var3 -= var17 * var0;
-                            var0 = 0;
-                        }
-
-                        if (var16 < var15) {
-                            var2 -= var0;
-                            var0 -= var1;
-                            var1 = anIntArray1082[var1];
-
-                            while (true) {
-                                --var0;
-                                if (var0 < 0) {
-                                    while (true) {
-                                        --var2;
-                                        if (var2 < 0) {
-                                            return;
-                                        }
-
-                                        method636(anIntArray953, var1, 0, 0, var3 >> 14, var4 >> 14, var7, var19);
-                                        var3 += var17;
-                                        var4 += var15;
-                                        var7 += var20;
-                                        var1 += anInt749;
-                                    }
-                                }
-
-                                method636(anIntArray953, var1, 0, 0, var5 >> 14, var4 >> 14, var7, var19);
-                                var5 += var16;
-                                var4 += var15;
-                                var7 += var20;
-                                var1 += anInt749;
-                            }
-                        } else {
-                            var2 -= var0;
-                            var0 -= var1;
-                            var1 = anIntArray1082[var1];
-
-                            while (true) {
-                                --var0;
-                                if (var0 < 0) {
-                                    while (true) {
-                                        --var2;
-                                        if (var2 < 0) {
-                                            return;
-                                        }
-
-                                        method636(anIntArray953, var1, 0, 0, var4 >> 14, var3 >> 14, var7, var19);
-                                        var3 += var17;
-                                        var4 += var15;
-                                        var7 += var20;
-                                        var1 += anInt749;
-                                    }
-                                }
-
-                                method636(anIntArray953, var1, 0, 0, var4 >> 14, var5 >> 14, var7, var19);
-                                var5 += var16;
-                                var4 += var15;
-                                var7 += var20;
-                                var1 += anInt749;
-                            }
-                        }
+                        method636(anIntArray953, var1, 0, 0, var4 >> 14, var5 >> 14, var7, var19);
+                        var5 += var16;
+                        var4 += var15;
+                        var7 += var20;
+                        var1 += anInt749;
                     }
                 }
             } else if (var2 < anInt235) {
@@ -541,107 +535,104 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                             var8 += var20;
                             var2 += anInt749;
                         }
-                    } else {
-                        var1 -= var0;
-                        var0 -= var2;
-                        var2 = anIntArray1082[var2];
+                    }
+                    var1 -= var0;
+                    var0 -= var2;
+                    var2 = anIntArray1082[var2];
 
+                    while (true) {
+                        --var0;
+                        if (var0 < 0) {
+                            while (true) {
+                                --var1;
+                                if (var1 < 0) {
+                                    return;
+                                }
+
+                                method636(anIntArray953, var2, 0, 0, var3 >> 14, var4 >> 14, var8, var19);
+                                var4 += var15;
+                                var3 += var16;
+                                var8 += var20;
+                                var2 += anInt749;
+                            }
+                        }
+
+                        method636(anIntArray953, var2, 0, 0, var5 >> 14, var4 >> 14, var8, var19);
+                        var4 += var15;
+                        var5 += var17;
+                        var8 += var20;
+                        var2 += anInt749;
+                    }
+                }
+                var3 = var5 <<= 14;
+                if (var2 < 0) {
+                    var3 -= var15 * var2;
+                    var5 -= var17 * var2;
+                    var8 -= var20 * var2;
+                    var2 = 0;
+                }
+
+                var4 <<= 14;
+                if (var1 < 0) {
+                    var4 -= var16 * var1;
+                    var1 = 0;
+                }
+
+                if (var15 < var17) {
+                    var0 -= var1;
+                    var1 -= var2;
+                    var2 = anIntArray1082[var2];
+
+                    while (true) {
+                        --var1;
+                        if (var1 < 0) {
+                            while (true) {
+                                --var0;
+                                if (var0 < 0) {
+                                    return;
+                                }
+
+                                method636(anIntArray953, var2, 0, 0, var4 >> 14, var5 >> 14, var8, var19);
+                                var4 += var16;
+                                var5 += var17;
+                                var8 += var20;
+                                var2 += anInt749;
+                            }
+                        }
+
+                        method636(anIntArray953, var2, 0, 0, var3 >> 14, var5 >> 14, var8, var19);
+                        var3 += var15;
+                        var5 += var17;
+                        var8 += var20;
+                        var2 += anInt749;
+                    }
+                }
+                var0 -= var1;
+                var1 -= var2;
+                var2 = anIntArray1082[var2];
+
+                while (true) {
+                    --var1;
+                    if (var1 < 0) {
                         while (true) {
                             --var0;
                             if (var0 < 0) {
-                                while (true) {
-                                    --var1;
-                                    if (var1 < 0) {
-                                        return;
-                                    }
-
-                                    method636(anIntArray953, var2, 0, 0, var3 >> 14, var4 >> 14, var8, var19);
-                                    var4 += var15;
-                                    var3 += var16;
-                                    var8 += var20;
-                                    var2 += anInt749;
-                                }
+                                return;
                             }
 
                             method636(anIntArray953, var2, 0, 0, var5 >> 14, var4 >> 14, var8, var19);
-                            var4 += var15;
+                            var4 += var16;
                             var5 += var17;
                             var8 += var20;
                             var2 += anInt749;
                         }
                     }
-                } else {
-                    var3 = var5 <<= 14;
-                    if (var2 < 0) {
-                        var3 -= var15 * var2;
-                        var5 -= var17 * var2;
-                        var8 -= var20 * var2;
-                        var2 = 0;
-                    }
 
-                    var4 <<= 14;
-                    if (var1 < 0) {
-                        var4 -= var16 * var1;
-                        var1 = 0;
-                    }
-
-                    if (var15 < var17) {
-                        var0 -= var1;
-                        var1 -= var2;
-                        var2 = anIntArray1082[var2];
-
-                        while (true) {
-                            --var1;
-                            if (var1 < 0) {
-                                while (true) {
-                                    --var0;
-                                    if (var0 < 0) {
-                                        return;
-                                    }
-
-                                    method636(anIntArray953, var2, 0, 0, var4 >> 14, var5 >> 14, var8, var19);
-                                    var4 += var16;
-                                    var5 += var17;
-                                    var8 += var20;
-                                    var2 += anInt749;
-                                }
-                            }
-
-                            method636(anIntArray953, var2, 0, 0, var3 >> 14, var5 >> 14, var8, var19);
-                            var3 += var15;
-                            var5 += var17;
-                            var8 += var20;
-                            var2 += anInt749;
-                        }
-                    } else {
-                        var0 -= var1;
-                        var1 -= var2;
-                        var2 = anIntArray1082[var2];
-
-                        while (true) {
-                            --var1;
-                            if (var1 < 0) {
-                                while (true) {
-                                    --var0;
-                                    if (var0 < 0) {
-                                        return;
-                                    }
-
-                                    method636(anIntArray953, var2, 0, 0, var5 >> 14, var4 >> 14, var8, var19);
-                                    var4 += var16;
-                                    var5 += var17;
-                                    var8 += var20;
-                                    var2 += anInt749;
-                                }
-                            }
-
-                            method636(anIntArray953, var2, 0, 0, var5 >> 14, var3 >> 14, var8, var19);
-                            var3 += var15;
-                            var5 += var17;
-                            var8 += var20;
-                            var2 += anInt749;
-                        }
-                    }
+                    method636(anIntArray953, var2, 0, 0, var5 >> 14, var3 >> 14, var8, var19);
+                    var3 += var15;
+                    var5 += var17;
+                    var8 += var20;
+                    var2 += anInt749;
                 }
             }
         }
@@ -761,33 +752,109 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     var35 += var37;
                                     var38 += var40;
                                 }
-                            } else {
-                                var2 -= var1;
-                                var1 -= var0;
-                                var0 = anIntArray1082[var0];
+                            }
+                            var2 -= var1;
+                            var1 -= var0;
+                            var0 = anIntArray1082[var0];
 
+                            while (true) {
+                                --var1;
+                                if (var1 < 0) {
+                                    while (true) {
+                                        --var2;
+                                        if (var2 < 0) {
+                                            return;
+                                        }
+
+                                        method640(anIntArray953, var19, 0, 0, var0, var4 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                        var5 += var28;
+                                        var4 += var27;
+                                        var6 += var31;
+                                        var0 += anInt749;
+                                        var32 += var34;
+                                        var35 += var37;
+                                        var38 += var40;
+                                    }
+                                }
+
+                                method640(anIntArray953, var19, 0, 0, var0, var3 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                var5 += var28;
+                                var3 += var26;
+                                var6 += var31;
+                                var0 += anInt749;
+                                var32 += var34;
+                                var35 += var37;
+                                var38 += var40;
+                            }
+                        }
+                        var4 = var3 <<= 14;
+                        if (var0 < 0) {
+                            var4 -= var28 * var0;
+                            var3 -= var26 * var0;
+                            var6 -= var31 * var0;
+                            var0 = 0;
+                        }
+
+                        var5 <<= 14;
+                        if (var2 < 0) {
+                            var5 -= var27 * var2;
+                            var2 = 0;
+                        }
+
+                        var41 = var0 - viewportCenterY;
+                        var32 += var34 * var41;
+                        var35 += var37 * var41;
+                        var38 += var40 * var41;
+                        if (var0 != var2 && var28 < var26 || var0 == var2 && var27 > var26) {
+                            var1 -= var2;
+                            var2 -= var0;
+                            var0 = anIntArray1082[var0];
+
+                            while (true) {
+                                --var2;
+                                if (var2 < 0) {
+                                    while (true) {
+                                        --var1;
+                                        if (var1 < 0) {
+                                            return;
+                                        }
+
+                                        method640(anIntArray953, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                        var5 += var27;
+                                        var3 += var26;
+                                        var6 += var31;
+                                        var0 += anInt749;
+                                        var32 += var34;
+                                        var35 += var37;
+                                        var38 += var40;
+                                    }
+                                }
+
+                                method640(anIntArray953, var19, 0, 0, var0, var4 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                var4 += var28;
+                                var3 += var26;
+                                var6 += var31;
+                                var0 += anInt749;
+                                var32 += var34;
+                                var35 += var37;
+                                var38 += var40;
+                            }
+                        }
+                        var1 -= var2;
+                        var2 -= var0;
+                        var0 = anIntArray1082[var0];
+
+                        while (true) {
+                            --var2;
+                            if (var2 < 0) {
                                 while (true) {
                                     --var1;
                                     if (var1 < 0) {
-                                        while (true) {
-                                            --var2;
-                                            if (var2 < 0) {
-                                                return;
-                                            }
-
-                                            method640(anIntArray953, var19, 0, 0, var0, var4 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
-                                            var5 += var28;
-                                            var4 += var27;
-                                            var6 += var31;
-                                            var0 += anInt749;
-                                            var32 += var34;
-                                            var35 += var37;
-                                            var38 += var40;
-                                        }
+                                        return;
                                     }
 
                                     method640(anIntArray953, var19, 0, 0, var0, var3 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
-                                    var5 += var28;
+                                    var5 += var27;
                                     var3 += var26;
                                     var6 += var31;
                                     var0 += anInt749;
@@ -796,94 +863,15 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     var38 += var40;
                                 }
                             }
-                        } else {
-                            var4 = var3 <<= 14;
-                            if (var0 < 0) {
-                                var4 -= var28 * var0;
-                                var3 -= var26 * var0;
-                                var6 -= var31 * var0;
-                                var0 = 0;
-                            }
 
-                            var5 <<= 14;
-                            if (var2 < 0) {
-                                var5 -= var27 * var2;
-                                var2 = 0;
-                            }
-
-                            var41 = var0 - viewportCenterY;
-                            var32 += var34 * var41;
-                            var35 += var37 * var41;
-                            var38 += var40 * var41;
-                            if (var0 != var2 && var28 < var26 || var0 == var2 && var27 > var26) {
-                                var1 -= var2;
-                                var2 -= var0;
-                                var0 = anIntArray1082[var0];
-
-                                while (true) {
-                                    --var2;
-                                    if (var2 < 0) {
-                                        while (true) {
-                                            --var1;
-                                            if (var1 < 0) {
-                                                return;
-                                            }
-
-                                            method640(anIntArray953, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
-                                            var5 += var27;
-                                            var3 += var26;
-                                            var6 += var31;
-                                            var0 += anInt749;
-                                            var32 += var34;
-                                            var35 += var37;
-                                            var38 += var40;
-                                        }
-                                    }
-
-                                    method640(anIntArray953, var19, 0, 0, var0, var4 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
-                                    var4 += var28;
-                                    var3 += var26;
-                                    var6 += var31;
-                                    var0 += anInt749;
-                                    var32 += var34;
-                                    var35 += var37;
-                                    var38 += var40;
-                                }
-                            } else {
-                                var1 -= var2;
-                                var2 -= var0;
-                                var0 = anIntArray1082[var0];
-
-                                while (true) {
-                                    --var2;
-                                    if (var2 < 0) {
-                                        while (true) {
-                                            --var1;
-                                            if (var1 < 0) {
-                                                return;
-                                            }
-
-                                            method640(anIntArray953, var19, 0, 0, var0, var3 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
-                                            var5 += var27;
-                                            var3 += var26;
-                                            var6 += var31;
-                                            var0 += anInt749;
-                                            var32 += var34;
-                                            var35 += var37;
-                                            var38 += var40;
-                                        }
-                                    }
-
-                                    method640(anIntArray953, var19, 0, 0, var0, var3 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
-                                    var4 += var28;
-                                    var3 += var26;
-                                    var6 += var31;
-                                    var0 += anInt749;
-                                    var32 += var34;
-                                    var35 += var37;
-                                    var38 += var40;
-                                }
-                            }
+                            method640(anIntArray953, var19, 0, 0, var0, var3 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                            var4 += var28;
+                            var3 += var26;
+                            var6 += var31;
+                            var0 += anInt749;
+                            var32 += var34;
+                            var35 += var37;
+                            var38 += var40;
                         }
                     }
                 } else if (var1 <= var2) {
@@ -950,33 +938,109 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     var35 += var37;
                                     var38 += var40;
                                 }
-                            } else {
-                                var0 -= var2;
-                                var2 -= var1;
-                                var1 = anIntArray1082[var1];
+                            }
+                            var0 -= var2;
+                            var2 -= var1;
+                            var1 = anIntArray1082[var1];
 
+                            while (true) {
+                                --var2;
+                                if (var2 < 0) {
+                                    while (true) {
+                                        --var0;
+                                        if (var0 < 0) {
+                                            return;
+                                        }
+
+                                        method640(anIntArray953, var19, 0, 0, var1, var5 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                        var3 += var26;
+                                        var5 += var28;
+                                        var7 += var31;
+                                        var1 += anInt749;
+                                        var32 += var34;
+                                        var35 += var37;
+                                        var38 += var40;
+                                    }
+                                }
+
+                                method640(anIntArray953, var19, 0, 0, var1, var4 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                var3 += var26;
+                                var4 += var27;
+                                var7 += var31;
+                                var1 += anInt749;
+                                var32 += var34;
+                                var35 += var37;
+                                var38 += var40;
+                            }
+                        }
+                        var5 = var4 <<= 14;
+                        if (var1 < 0) {
+                            var5 -= var26 * var1;
+                            var4 -= var27 * var1;
+                            var7 -= var31 * var1;
+                            var1 = 0;
+                        }
+
+                        var3 <<= 14;
+                        if (var0 < 0) {
+                            var3 -= var28 * var0;
+                            var0 = 0;
+                        }
+
+                        var41 = var1 - viewportCenterY;
+                        var32 += var34 * var41;
+                        var35 += var37 * var41;
+                        var38 += var40 * var41;
+                        if (var26 < var27) {
+                            var2 -= var0;
+                            var0 -= var1;
+                            var1 = anIntArray1082[var1];
+
+                            while (true) {
+                                --var0;
+                                if (var0 < 0) {
+                                    while (true) {
+                                        --var2;
+                                        if (var2 < 0) {
+                                            return;
+                                        }
+
+                                        method640(anIntArray953, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                        var3 += var28;
+                                        var4 += var27;
+                                        var7 += var31;
+                                        var1 += anInt749;
+                                        var32 += var34;
+                                        var35 += var37;
+                                        var38 += var40;
+                                    }
+                                }
+
+                                method640(anIntArray953, var19, 0, 0, var1, var5 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                var5 += var26;
+                                var4 += var27;
+                                var7 += var31;
+                                var1 += anInt749;
+                                var32 += var34;
+                                var35 += var37;
+                                var38 += var40;
+                            }
+                        }
+                        var2 -= var0;
+                        var0 -= var1;
+                        var1 = anIntArray1082[var1];
+
+                        while (true) {
+                            --var0;
+                            if (var0 < 0) {
                                 while (true) {
                                     --var2;
                                     if (var2 < 0) {
-                                        while (true) {
-                                            --var0;
-                                            if (var0 < 0) {
-                                                return;
-                                            }
-
-                                            method640(anIntArray953, var19, 0, 0, var1, var5 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
-                                            var3 += var26;
-                                            var5 += var28;
-                                            var7 += var31;
-                                            var1 += anInt749;
-                                            var32 += var34;
-                                            var35 += var37;
-                                            var38 += var40;
-                                        }
+                                        return;
                                     }
 
                                     method640(anIntArray953, var19, 0, 0, var1, var4 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
-                                    var3 += var26;
+                                    var3 += var28;
                                     var4 += var27;
                                     var7 += var31;
                                     var1 += anInt749;
@@ -985,94 +1049,15 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     var38 += var40;
                                 }
                             }
-                        } else {
-                            var5 = var4 <<= 14;
-                            if (var1 < 0) {
-                                var5 -= var26 * var1;
-                                var4 -= var27 * var1;
-                                var7 -= var31 * var1;
-                                var1 = 0;
-                            }
 
-                            var3 <<= 14;
-                            if (var0 < 0) {
-                                var3 -= var28 * var0;
-                                var0 = 0;
-                            }
-
-                            var41 = var1 - viewportCenterY;
-                            var32 += var34 * var41;
-                            var35 += var37 * var41;
-                            var38 += var40 * var41;
-                            if (var26 < var27) {
-                                var2 -= var0;
-                                var0 -= var1;
-                                var1 = anIntArray1082[var1];
-
-                                while (true) {
-                                    --var0;
-                                    if (var0 < 0) {
-                                        while (true) {
-                                            --var2;
-                                            if (var2 < 0) {
-                                                return;
-                                            }
-
-                                            method640(anIntArray953, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
-                                            var3 += var28;
-                                            var4 += var27;
-                                            var7 += var31;
-                                            var1 += anInt749;
-                                            var32 += var34;
-                                            var35 += var37;
-                                            var38 += var40;
-                                        }
-                                    }
-
-                                    method640(anIntArray953, var19, 0, 0, var1, var5 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
-                                    var5 += var26;
-                                    var4 += var27;
-                                    var7 += var31;
-                                    var1 += anInt749;
-                                    var32 += var34;
-                                    var35 += var37;
-                                    var38 += var40;
-                                }
-                            } else {
-                                var2 -= var0;
-                                var0 -= var1;
-                                var1 = anIntArray1082[var1];
-
-                                while (true) {
-                                    --var0;
-                                    if (var0 < 0) {
-                                        while (true) {
-                                            --var2;
-                                            if (var2 < 0) {
-                                                return;
-                                            }
-
-                                            method640(anIntArray953, var19, 0, 0, var1, var4 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
-                                            var3 += var28;
-                                            var4 += var27;
-                                            var7 += var31;
-                                            var1 += anInt749;
-                                            var32 += var34;
-                                            var35 += var37;
-                                            var38 += var40;
-                                        }
-                                    }
-
-                                    method640(anIntArray953, var19, 0, 0, var1, var4 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
-                                    var5 += var26;
-                                    var4 += var27;
-                                    var7 += var31;
-                                    var1 += anInt749;
-                                    var32 += var34;
-                                    var35 += var37;
-                                    var38 += var40;
-                                }
-                            }
+                            method640(anIntArray953, var19, 0, 0, var1, var4 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                            var5 += var26;
+                            var4 += var27;
+                            var7 += var31;
+                            var1 += anInt749;
+                            var32 += var34;
+                            var35 += var37;
+                            var38 += var40;
                         }
                     }
                 } else if (var2 < anInt235) {
@@ -1138,33 +1123,109 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                 var35 += var37;
                                 var38 += var40;
                             }
-                        } else {
-                            var1 -= var0;
-                            var0 -= var2;
-                            var2 = anIntArray1082[var2];
+                        }
+                        var1 -= var0;
+                        var0 -= var2;
+                        var2 = anIntArray1082[var2];
 
+                        while (true) {
+                            --var0;
+                            if (var0 < 0) {
+                                while (true) {
+                                    --var1;
+                                    if (var1 < 0) {
+                                        return;
+                                    }
+
+                                    method640(anIntArray953, var19, 0, 0, var2, var3 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                    var4 += var27;
+                                    var3 += var26;
+                                    var8 += var31;
+                                    var2 += anInt749;
+                                    var32 += var34;
+                                    var35 += var37;
+                                    var38 += var40;
+                                }
+                            }
+
+                            method640(anIntArray953, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                            var4 += var27;
+                            var5 += var28;
+                            var8 += var31;
+                            var2 += anInt749;
+                            var32 += var34;
+                            var35 += var37;
+                            var38 += var40;
+                        }
+                    }
+                    var3 = var5 <<= 14;
+                    if (var2 < 0) {
+                        var3 -= var27 * var2;
+                        var5 -= var28 * var2;
+                        var8 -= var31 * var2;
+                        var2 = 0;
+                    }
+
+                    var4 <<= 14;
+                    if (var1 < 0) {
+                        var4 -= var26 * var1;
+                        var1 = 0;
+                    }
+
+                    var41 = var2 - viewportCenterY;
+                    var32 += var34 * var41;
+                    var35 += var37 * var41;
+                    var38 += var40 * var41;
+                    if (var27 < var28) {
+                        var0 -= var1;
+                        var1 -= var2;
+                        var2 = anIntArray1082[var2];
+
+                        while (true) {
+                            --var1;
+                            if (var1 < 0) {
+                                while (true) {
+                                    --var0;
+                                    if (var0 < 0) {
+                                        return;
+                                    }
+
+                                    method640(anIntArray953, var19, 0, 0, var2, var4 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                    var4 += var26;
+                                    var5 += var28;
+                                    var8 += var31;
+                                    var2 += anInt749;
+                                    var32 += var34;
+                                    var35 += var37;
+                                    var38 += var40;
+                                }
+                            }
+
+                            method640(anIntArray953, var19, 0, 0, var2, var3 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                            var3 += var27;
+                            var5 += var28;
+                            var8 += var31;
+                            var2 += anInt749;
+                            var32 += var34;
+                            var35 += var37;
+                            var38 += var40;
+                        }
+                    }
+                    var0 -= var1;
+                    var1 -= var2;
+                    var2 = anIntArray1082[var2];
+
+                    while (true) {
+                        --var1;
+                        if (var1 < 0) {
                             while (true) {
                                 --var0;
                                 if (var0 < 0) {
-                                    while (true) {
-                                        --var1;
-                                        if (var1 < 0) {
-                                            return;
-                                        }
-
-                                        method640(anIntArray953, var19, 0, 0, var2, var3 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
-                                        var4 += var27;
-                                        var3 += var26;
-                                        var8 += var31;
-                                        var2 += anInt749;
-                                        var32 += var34;
-                                        var35 += var37;
-                                        var38 += var40;
-                                    }
+                                    return;
                                 }
 
                                 method640(anIntArray953, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
-                                var4 += var27;
+                                var4 += var26;
                                 var5 += var28;
                                 var8 += var31;
                                 var2 += anInt749;
@@ -1173,94 +1234,15 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                 var38 += var40;
                             }
                         }
-                    } else {
-                        var3 = var5 <<= 14;
-                        if (var2 < 0) {
-                            var3 -= var27 * var2;
-                            var5 -= var28 * var2;
-                            var8 -= var31 * var2;
-                            var2 = 0;
-                        }
 
-                        var4 <<= 14;
-                        if (var1 < 0) {
-                            var4 -= var26 * var1;
-                            var1 = 0;
-                        }
-
-                        var41 = var2 - viewportCenterY;
-                        var32 += var34 * var41;
-                        var35 += var37 * var41;
-                        var38 += var40 * var41;
-                        if (var27 < var28) {
-                            var0 -= var1;
-                            var1 -= var2;
-                            var2 = anIntArray1082[var2];
-
-                            while (true) {
-                                --var1;
-                                if (var1 < 0) {
-                                    while (true) {
-                                        --var0;
-                                        if (var0 < 0) {
-                                            return;
-                                        }
-
-                                        method640(anIntArray953, var19, 0, 0, var2, var4 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
-                                        var4 += var26;
-                                        var5 += var28;
-                                        var8 += var31;
-                                        var2 += anInt749;
-                                        var32 += var34;
-                                        var35 += var37;
-                                        var38 += var40;
-                                    }
-                                }
-
-                                method640(anIntArray953, var19, 0, 0, var2, var3 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
-                                var3 += var27;
-                                var5 += var28;
-                                var8 += var31;
-                                var2 += anInt749;
-                                var32 += var34;
-                                var35 += var37;
-                                var38 += var40;
-                            }
-                        } else {
-                            var0 -= var1;
-                            var1 -= var2;
-                            var2 = anIntArray1082[var2];
-
-                            while (true) {
-                                --var1;
-                                if (var1 < 0) {
-                                    while (true) {
-                                        --var0;
-                                        if (var0 < 0) {
-                                            return;
-                                        }
-
-                                        method640(anIntArray953, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
-                                        var4 += var26;
-                                        var5 += var28;
-                                        var8 += var31;
-                                        var2 += anInt749;
-                                        var32 += var34;
-                                        var35 += var37;
-                                        var38 += var40;
-                                    }
-                                }
-
-                                method640(anIntArray953, var19, 0, 0, var2, var5 >> 14, var3 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
-                                var3 += var27;
-                                var5 += var28;
-                                var8 += var31;
-                                var2 += anInt749;
-                                var32 += var34;
-                                var35 += var37;
-                                var38 += var40;
-                            }
-                        }
+                        method640(anIntArray953, var19, 0, 0, var2, var5 >> 14, var3 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                        var3 += var27;
+                        var5 += var28;
+                        var8 += var31;
+                        var2 += anInt749;
+                        var32 += var34;
+                        var35 += var37;
+                        var38 += var40;
                     }
                 }
             }
@@ -1381,33 +1363,109 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     var35 += var37;
                                     var38 += var40;
                                 }
-                            } else {
-                                var2 -= var1;
-                                var1 -= var0;
-                                var0 = anIntArray1082[var0];
+                            }
+                            var2 -= var1;
+                            var1 -= var0;
+                            var0 = anIntArray1082[var0];
 
+                            while (true) {
+                                --var1;
+                                if (var1 < 0) {
+                                    while (true) {
+                                        --var2;
+                                        if (var2 < 0) {
+                                            return;
+                                        }
+
+                                        method639(anIntArray953, var19, 0, 0, var0, var5 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                        var5 += var28;
+                                        var4 += var27;
+                                        var6 += var31;
+                                        var0 += anInt749;
+                                        var32 += var34;
+                                        var35 += var37;
+                                        var38 += var40;
+                                    }
+                                }
+
+                                method639(anIntArray953, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                var5 += var28;
+                                var3 += var26;
+                                var6 += var31;
+                                var0 += anInt749;
+                                var32 += var34;
+                                var35 += var37;
+                                var38 += var40;
+                            }
+                        }
+                        var4 = var3 <<= 14;
+                        if (var0 < 0) {
+                            var4 -= var28 * var0;
+                            var3 -= var26 * var0;
+                            var6 -= var31 * var0;
+                            var0 = 0;
+                        }
+
+                        var5 <<= 14;
+                        if (var2 < 0) {
+                            var5 -= var27 * var2;
+                            var2 = 0;
+                        }
+
+                        var41 = var0 - viewportCenterY;
+                        var32 += var34 * var41;
+                        var35 += var37 * var41;
+                        var38 += var40 * var41;
+                        if (var0 != var2 && var28 < var26 || var0 == var2 && var27 > var26) {
+                            var1 -= var2;
+                            var2 -= var0;
+                            var0 = anIntArray1082[var0];
+
+                            while (true) {
+                                --var2;
+                                if (var2 < 0) {
+                                    while (true) {
+                                        --var1;
+                                        if (var1 < 0) {
+                                            return;
+                                        }
+
+                                        method639(anIntArray953, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                        var5 += var27;
+                                        var3 += var26;
+                                        var6 += var31;
+                                        var0 += anInt749;
+                                        var32 += var34;
+                                        var35 += var37;
+                                        var38 += var40;
+                                    }
+                                }
+
+                                method639(anIntArray953, var19, 0, 0, var0, var4 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                var4 += var28;
+                                var3 += var26;
+                                var6 += var31;
+                                var0 += anInt749;
+                                var32 += var34;
+                                var35 += var37;
+                                var38 += var40;
+                            }
+                        }
+                        var1 -= var2;
+                        var2 -= var0;
+                        var0 = anIntArray1082[var0];
+
+                        while (true) {
+                            --var2;
+                            if (var2 < 0) {
                                 while (true) {
                                     --var1;
                                     if (var1 < 0) {
-                                        while (true) {
-                                            --var2;
-                                            if (var2 < 0) {
-                                                return;
-                                            }
-
-                                            method639(anIntArray953, var19, 0, 0, var0, var5 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
-                                            var5 += var28;
-                                            var4 += var27;
-                                            var6 += var31;
-                                            var0 += anInt749;
-                                            var32 += var34;
-                                            var35 += var37;
-                                            var38 += var40;
-                                        }
+                                        return;
                                     }
 
-                                    method639(anIntArray953, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
-                                    var5 += var28;
+                                    method639(anIntArray953, var19, 0, 0, var0, var3 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                    var5 += var27;
                                     var3 += var26;
                                     var6 += var31;
                                     var0 += anInt749;
@@ -1416,94 +1474,15 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     var38 += var40;
                                 }
                             }
-                        } else {
-                            var4 = var3 <<= 14;
-                            if (var0 < 0) {
-                                var4 -= var28 * var0;
-                                var3 -= var26 * var0;
-                                var6 -= var31 * var0;
-                                var0 = 0;
-                            }
 
-                            var5 <<= 14;
-                            if (var2 < 0) {
-                                var5 -= var27 * var2;
-                                var2 = 0;
-                            }
-
-                            var41 = var0 - viewportCenterY;
-                            var32 += var34 * var41;
-                            var35 += var37 * var41;
-                            var38 += var40 * var41;
-                            if (var0 != var2 && var28 < var26 || var0 == var2 && var27 > var26) {
-                                var1 -= var2;
-                                var2 -= var0;
-                                var0 = anIntArray1082[var0];
-
-                                while (true) {
-                                    --var2;
-                                    if (var2 < 0) {
-                                        while (true) {
-                                            --var1;
-                                            if (var1 < 0) {
-                                                return;
-                                            }
-
-                                            method639(anIntArray953, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
-                                            var5 += var27;
-                                            var3 += var26;
-                                            var6 += var31;
-                                            var0 += anInt749;
-                                            var32 += var34;
-                                            var35 += var37;
-                                            var38 += var40;
-                                        }
-                                    }
-
-                                    method639(anIntArray953, var19, 0, 0, var0, var4 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
-                                    var4 += var28;
-                                    var3 += var26;
-                                    var6 += var31;
-                                    var0 += anInt749;
-                                    var32 += var34;
-                                    var35 += var37;
-                                    var38 += var40;
-                                }
-                            } else {
-                                var1 -= var2;
-                                var2 -= var0;
-                                var0 = anIntArray1082[var0];
-
-                                while (true) {
-                                    --var2;
-                                    if (var2 < 0) {
-                                        while (true) {
-                                            --var1;
-                                            if (var1 < 0) {
-                                                return;
-                                            }
-
-                                            method639(anIntArray953, var19, 0, 0, var0, var3 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
-                                            var5 += var27;
-                                            var3 += var26;
-                                            var6 += var31;
-                                            var0 += anInt749;
-                                            var32 += var34;
-                                            var35 += var37;
-                                            var38 += var40;
-                                        }
-                                    }
-
-                                    method639(anIntArray953, var19, 0, 0, var0, var3 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
-                                    var4 += var28;
-                                    var3 += var26;
-                                    var6 += var31;
-                                    var0 += anInt749;
-                                    var32 += var34;
-                                    var35 += var37;
-                                    var38 += var40;
-                                }
-                            }
+                            method639(anIntArray953, var19, 0, 0, var0, var3 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                            var4 += var28;
+                            var3 += var26;
+                            var6 += var31;
+                            var0 += anInt749;
+                            var32 += var34;
+                            var35 += var37;
+                            var38 += var40;
                         }
                     }
                 } else if (var1 <= var2) {
@@ -1570,33 +1549,109 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     var35 += var37;
                                     var38 += var40;
                                 }
-                            } else {
-                                var0 -= var2;
-                                var2 -= var1;
-                                var1 = anIntArray1082[var1];
+                            }
+                            var0 -= var2;
+                            var2 -= var1;
+                            var1 = anIntArray1082[var1];
 
+                            while (true) {
+                                --var2;
+                                if (var2 < 0) {
+                                    while (true) {
+                                        --var0;
+                                        if (var0 < 0) {
+                                            return;
+                                        }
+
+                                        method639(anIntArray953, var19, 0, 0, var1, var3 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                        var3 += var26;
+                                        var5 += var28;
+                                        var7 += var31;
+                                        var1 += anInt749;
+                                        var32 += var34;
+                                        var35 += var37;
+                                        var38 += var40;
+                                    }
+                                }
+
+                                method639(anIntArray953, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                var3 += var26;
+                                var4 += var27;
+                                var7 += var31;
+                                var1 += anInt749;
+                                var32 += var34;
+                                var35 += var37;
+                                var38 += var40;
+                            }
+                        }
+                        var5 = var4 <<= 14;
+                        if (var1 < 0) {
+                            var5 -= var26 * var1;
+                            var4 -= var27 * var1;
+                            var7 -= var31 * var1;
+                            var1 = 0;
+                        }
+
+                        var3 <<= 14;
+                        if (var0 < 0) {
+                            var3 -= var28 * var0;
+                            var0 = 0;
+                        }
+
+                        var41 = var1 - viewportCenterY;
+                        var32 += var34 * var41;
+                        var35 += var37 * var41;
+                        var38 += var40 * var41;
+                        if (var26 < var27) {
+                            var2 -= var0;
+                            var0 -= var1;
+                            var1 = anIntArray1082[var1];
+
+                            while (true) {
+                                --var0;
+                                if (var0 < 0) {
+                                    while (true) {
+                                        --var2;
+                                        if (var2 < 0) {
+                                            return;
+                                        }
+
+                                        method639(anIntArray953, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                        var3 += var28;
+                                        var4 += var27;
+                                        var7 += var31;
+                                        var1 += anInt749;
+                                        var32 += var34;
+                                        var35 += var37;
+                                        var38 += var40;
+                                    }
+                                }
+
+                                method639(anIntArray953, var19, 0, 0, var1, var5 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                var5 += var26;
+                                var4 += var27;
+                                var7 += var31;
+                                var1 += anInt749;
+                                var32 += var34;
+                                var35 += var37;
+                                var38 += var40;
+                            }
+                        }
+                        var2 -= var0;
+                        var0 -= var1;
+                        var1 = anIntArray1082[var1];
+
+                        while (true) {
+                            --var0;
+                            if (var0 < 0) {
                                 while (true) {
                                     --var2;
                                     if (var2 < 0) {
-                                        while (true) {
-                                            --var0;
-                                            if (var0 < 0) {
-                                                return;
-                                            }
-
-                                            method639(anIntArray953, var19, 0, 0, var1, var3 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
-                                            var3 += var26;
-                                            var5 += var28;
-                                            var7 += var31;
-                                            var1 += anInt749;
-                                            var32 += var34;
-                                            var35 += var37;
-                                            var38 += var40;
-                                        }
+                                        return;
                                     }
 
-                                    method639(anIntArray953, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
-                                    var3 += var26;
+                                    method639(anIntArray953, var19, 0, 0, var1, var4 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                    var3 += var28;
                                     var4 += var27;
                                     var7 += var31;
                                     var1 += anInt749;
@@ -1605,94 +1660,15 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     var38 += var40;
                                 }
                             }
-                        } else {
-                            var5 = var4 <<= 14;
-                            if (var1 < 0) {
-                                var5 -= var26 * var1;
-                                var4 -= var27 * var1;
-                                var7 -= var31 * var1;
-                                var1 = 0;
-                            }
 
-                            var3 <<= 14;
-                            if (var0 < 0) {
-                                var3 -= var28 * var0;
-                                var0 = 0;
-                            }
-
-                            var41 = var1 - viewportCenterY;
-                            var32 += var34 * var41;
-                            var35 += var37 * var41;
-                            var38 += var40 * var41;
-                            if (var26 < var27) {
-                                var2 -= var0;
-                                var0 -= var1;
-                                var1 = anIntArray1082[var1];
-
-                                while (true) {
-                                    --var0;
-                                    if (var0 < 0) {
-                                        while (true) {
-                                            --var2;
-                                            if (var2 < 0) {
-                                                return;
-                                            }
-
-                                            method639(anIntArray953, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
-                                            var3 += var28;
-                                            var4 += var27;
-                                            var7 += var31;
-                                            var1 += anInt749;
-                                            var32 += var34;
-                                            var35 += var37;
-                                            var38 += var40;
-                                        }
-                                    }
-
-                                    method639(anIntArray953, var19, 0, 0, var1, var5 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
-                                    var5 += var26;
-                                    var4 += var27;
-                                    var7 += var31;
-                                    var1 += anInt749;
-                                    var32 += var34;
-                                    var35 += var37;
-                                    var38 += var40;
-                                }
-                            } else {
-                                var2 -= var0;
-                                var0 -= var1;
-                                var1 = anIntArray1082[var1];
-
-                                while (true) {
-                                    --var0;
-                                    if (var0 < 0) {
-                                        while (true) {
-                                            --var2;
-                                            if (var2 < 0) {
-                                                return;
-                                            }
-
-                                            method639(anIntArray953, var19, 0, 0, var1, var4 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
-                                            var3 += var28;
-                                            var4 += var27;
-                                            var7 += var31;
-                                            var1 += anInt749;
-                                            var32 += var34;
-                                            var35 += var37;
-                                            var38 += var40;
-                                        }
-                                    }
-
-                                    method639(anIntArray953, var19, 0, 0, var1, var4 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
-                                    var5 += var26;
-                                    var4 += var27;
-                                    var7 += var31;
-                                    var1 += anInt749;
-                                    var32 += var34;
-                                    var35 += var37;
-                                    var38 += var40;
-                                }
-                            }
+                            method639(anIntArray953, var19, 0, 0, var1, var4 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                            var5 += var26;
+                            var4 += var27;
+                            var7 += var31;
+                            var1 += anInt749;
+                            var32 += var34;
+                            var35 += var37;
+                            var38 += var40;
                         }
                     }
                 } else if (var2 < anInt235) {
@@ -1758,33 +1734,109 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                 var35 += var37;
                                 var38 += var40;
                             }
-                        } else {
-                            var1 -= var0;
-                            var0 -= var2;
-                            var2 = anIntArray1082[var2];
+                        }
+                        var1 -= var0;
+                        var0 -= var2;
+                        var2 = anIntArray1082[var2];
 
+                        while (true) {
+                            --var0;
+                            if (var0 < 0) {
+                                while (true) {
+                                    --var1;
+                                    if (var1 < 0) {
+                                        return;
+                                    }
+
+                                    method639(anIntArray953, var19, 0, 0, var2, var3 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                    var4 += var27;
+                                    var3 += var26;
+                                    var8 += var31;
+                                    var2 += anInt749;
+                                    var32 += var34;
+                                    var35 += var37;
+                                    var38 += var40;
+                                }
+                            }
+
+                            method639(anIntArray953, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                            var4 += var27;
+                            var5 += var28;
+                            var8 += var31;
+                            var2 += anInt749;
+                            var32 += var34;
+                            var35 += var37;
+                            var38 += var40;
+                        }
+                    }
+                    var3 = var5 <<= 14;
+                    if (var2 < 0) {
+                        var3 -= var27 * var2;
+                        var5 -= var28 * var2;
+                        var8 -= var31 * var2;
+                        var2 = 0;
+                    }
+
+                    var4 <<= 14;
+                    if (var1 < 0) {
+                        var4 -= var26 * var1;
+                        var1 = 0;
+                    }
+
+                    var41 = var2 - viewportCenterY;
+                    var32 += var34 * var41;
+                    var35 += var37 * var41;
+                    var38 += var40 * var41;
+                    if (var27 < var28) {
+                        var0 -= var1;
+                        var1 -= var2;
+                        var2 = anIntArray1082[var2];
+
+                        while (true) {
+                            --var1;
+                            if (var1 < 0) {
+                                while (true) {
+                                    --var0;
+                                    if (var0 < 0) {
+                                        return;
+                                    }
+
+                                    method639(anIntArray953, var19, 0, 0, var2, var4 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                    var4 += var26;
+                                    var5 += var28;
+                                    var8 += var31;
+                                    var2 += anInt749;
+                                    var32 += var34;
+                                    var35 += var37;
+                                    var38 += var40;
+                                }
+                            }
+
+                            method639(anIntArray953, var19, 0, 0, var2, var3 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                            var3 += var27;
+                            var5 += var28;
+                            var8 += var31;
+                            var2 += anInt749;
+                            var32 += var34;
+                            var35 += var37;
+                            var38 += var40;
+                        }
+                    }
+                    var0 -= var1;
+                    var1 -= var2;
+                    var2 = anIntArray1082[var2];
+
+                    while (true) {
+                        --var1;
+                        if (var1 < 0) {
                             while (true) {
                                 --var0;
                                 if (var0 < 0) {
-                                    while (true) {
-                                        --var1;
-                                        if (var1 < 0) {
-                                            return;
-                                        }
-
-                                        method639(anIntArray953, var19, 0, 0, var2, var3 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
-                                        var4 += var27;
-                                        var3 += var26;
-                                        var8 += var31;
-                                        var2 += anInt749;
-                                        var32 += var34;
-                                        var35 += var37;
-                                        var38 += var40;
-                                    }
+                                    return;
                                 }
 
                                 method639(anIntArray953, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
-                                var4 += var27;
+                                var4 += var26;
                                 var5 += var28;
                                 var8 += var31;
                                 var2 += anInt749;
@@ -1793,94 +1845,15 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                 var38 += var40;
                             }
                         }
-                    } else {
-                        var3 = var5 <<= 14;
-                        if (var2 < 0) {
-                            var3 -= var27 * var2;
-                            var5 -= var28 * var2;
-                            var8 -= var31 * var2;
-                            var2 = 0;
-                        }
 
-                        var4 <<= 14;
-                        if (var1 < 0) {
-                            var4 -= var26 * var1;
-                            var1 = 0;
-                        }
-
-                        var41 = var2 - viewportCenterY;
-                        var32 += var34 * var41;
-                        var35 += var37 * var41;
-                        var38 += var40 * var41;
-                        if (var27 < var28) {
-                            var0 -= var1;
-                            var1 -= var2;
-                            var2 = anIntArray1082[var2];
-
-                            while (true) {
-                                --var1;
-                                if (var1 < 0) {
-                                    while (true) {
-                                        --var0;
-                                        if (var0 < 0) {
-                                            return;
-                                        }
-
-                                        method639(anIntArray953, var19, 0, 0, var2, var4 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
-                                        var4 += var26;
-                                        var5 += var28;
-                                        var8 += var31;
-                                        var2 += anInt749;
-                                        var32 += var34;
-                                        var35 += var37;
-                                        var38 += var40;
-                                    }
-                                }
-
-                                method639(anIntArray953, var19, 0, 0, var2, var3 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
-                                var3 += var27;
-                                var5 += var28;
-                                var8 += var31;
-                                var2 += anInt749;
-                                var32 += var34;
-                                var35 += var37;
-                                var38 += var40;
-                            }
-                        } else {
-                            var0 -= var1;
-                            var1 -= var2;
-                            var2 = anIntArray1082[var2];
-
-                            while (true) {
-                                --var1;
-                                if (var1 < 0) {
-                                    while (true) {
-                                        --var0;
-                                        if (var0 < 0) {
-                                            return;
-                                        }
-
-                                        method639(anIntArray953, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
-                                        var4 += var26;
-                                        var5 += var28;
-                                        var8 += var31;
-                                        var2 += anInt749;
-                                        var32 += var34;
-                                        var35 += var37;
-                                        var38 += var40;
-                                    }
-                                }
-
-                                method639(anIntArray953, var19, 0, 0, var2, var5 >> 14, var3 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
-                                var3 += var27;
-                                var5 += var28;
-                                var8 += var31;
-                                var2 += anInt749;
-                                var32 += var34;
-                                var35 += var37;
-                                var38 += var40;
-                            }
-                        }
+                        method639(anIntArray953, var19, 0, 0, var2, var5 >> 14, var3 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                        var3 += var27;
+                        var5 += var28;
+                        var8 += var31;
+                        var2 += anInt749;
+                        var32 += var34;
+                        var35 += var37;
+                        var38 += var40;
                     }
                 }
             }
@@ -1962,41 +1935,14 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                         var0[var1++] = var0[var1];
                         var0[var1++] = var0[var1];
                     }
-                } else {
-                    int var6 = anInt327;
-                    int var7 = 256 - anInt327;
-                    var2 = ((var2 & 16711935) * var7 >> 8 & 16711935) + ((var2 & '\uff00') * var7 >> 8 & '\uff00');
-
-                    while (true) {
-                        --var3;
-                        int var8;
-                        if (var3 < 0) {
-                            var3 = var5 - var4 & 3;
-
-                            while (true) {
-                                --var3;
-                                if (var3 < 0) {
-                                    return;
-                                }
-
-                                var8 = var0[var1];
-                                var0[var1++] = var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & '\uff00') * var6 >> 8 & '\uff00');
-                            }
-                        }
-
-                        var8 = var0[var1];
-                        var0[var1++] = var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & '\uff00') * var6 >> 8 & '\uff00');
-                        var8 = var0[var1];
-                        var0[var1++] = var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & '\uff00') * var6 >> 8 & '\uff00');
-                        var8 = var0[var1];
-                        var0[var1++] = var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & '\uff00') * var6 >> 8 & '\uff00');
-                        var8 = var0[var1];
-                        var0[var1++] = var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & '\uff00') * var6 >> 8 & '\uff00');
-                    }
                 }
-            } else {
+                int var6 = anInt327;
+                int var7 = 256 - anInt327;
+                var2 = ((var2 & 16711935) * var7 >> 8 & 16711935) + ((var2 & '\uff00') * var7 >> 8 & '\uff00');
+
                 while (true) {
                     --var3;
+                    int var8;
                     if (var3 < 0) {
                         var3 = var5 - var4 & 3;
 
@@ -2006,15 +1952,40 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                 return;
                             }
 
-                            var0[var1++] = var2;
+                            var8 = var0[var1];
+                            var0[var1++] = var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & '\uff00') * var6 >> 8 & '\uff00');
                         }
                     }
 
-                    var0[var1++] = var2;
-                    var0[var1++] = var2;
-                    var0[var1++] = var2;
-                    var0[var1++] = var2;
+                    var8 = var0[var1];
+                    var0[var1++] = var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & '\uff00') * var6 >> 8 & '\uff00');
+                    var8 = var0[var1];
+                    var0[var1++] = var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & '\uff00') * var6 >> 8 & '\uff00');
+                    var8 = var0[var1];
+                    var0[var1++] = var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & '\uff00') * var6 >> 8 & '\uff00');
+                    var8 = var0[var1];
+                    var0[var1++] = var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & '\uff00') * var6 >> 8 & '\uff00');
                 }
+            }
+            while (true) {
+                --var3;
+                if (var3 < 0) {
+                    var3 = var5 - var4 & 3;
+
+                    while (true) {
+                        --var3;
+                        if (var3 < 0) {
+                            return;
+                        }
+
+                        var0[var1++] = var2;
+                    }
+                }
+
+                var0[var1++] = var2;
+                var0[var1++] = var2;
+                var0[var1++] = var2;
+                var0[var1++] = var2;
             }
         }
     }
@@ -2399,100 +2370,97 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                             var3 += var7;
                             var0 += anInt749;
                         }
-                    } else {
-                        var2 -= var1;
-                        var1 -= var0;
-                        var0 = anIntArray1082[var0];
+                    }
+                    var2 -= var1;
+                    var1 -= var0;
+                    var0 = anIntArray1082[var0];
 
+                    while (true) {
+                        --var1;
+                        if (var1 < 0) {
+                            while (true) {
+                                --var2;
+                                if (var2 < 0) {
+                                    return;
+                                }
+
+                                method631(anIntArray953, var0, var6, 0, var4 >> 14, var5 >> 14);
+                                var5 += var9;
+                                var4 += var8;
+                                var0 += anInt749;
+                            }
+                        }
+
+                        method631(anIntArray953, var0, var6, 0, var3 >> 14, var5 >> 14);
+                        var5 += var9;
+                        var3 += var7;
+                        var0 += anInt749;
+                    }
+                }
+                var4 = var3 <<= 14;
+                if (var0 < 0) {
+                    var4 -= var9 * var0;
+                    var3 -= var7 * var0;
+                    var0 = 0;
+                }
+
+                var5 <<= 14;
+                if (var2 < 0) {
+                    var5 -= var8 * var2;
+                    var2 = 0;
+                }
+
+                if (var0 != var2 && var9 < var7 || var0 == var2 && var8 > var7) {
+                    var1 -= var2;
+                    var2 -= var0;
+                    var0 = anIntArray1082[var0];
+
+                    while (true) {
+                        --var2;
+                        if (var2 < 0) {
+                            while (true) {
+                                --var1;
+                                if (var1 < 0) {
+                                    return;
+                                }
+
+                                method631(anIntArray953, var0, var6, 0, var5 >> 14, var3 >> 14);
+                                var5 += var8;
+                                var3 += var7;
+                                var0 += anInt749;
+                            }
+                        }
+
+                        method631(anIntArray953, var0, var6, 0, var4 >> 14, var3 >> 14);
+                        var4 += var9;
+                        var3 += var7;
+                        var0 += anInt749;
+                    }
+                }
+                var1 -= var2;
+                var2 -= var0;
+                var0 = anIntArray1082[var0];
+
+                while (true) {
+                    --var2;
+                    if (var2 < 0) {
                         while (true) {
                             --var1;
                             if (var1 < 0) {
-                                while (true) {
-                                    --var2;
-                                    if (var2 < 0) {
-                                        return;
-                                    }
-
-                                    method631(anIntArray953, var0, var6, 0, var4 >> 14, var5 >> 14);
-                                    var5 += var9;
-                                    var4 += var8;
-                                    var0 += anInt749;
-                                }
+                                return;
                             }
 
                             method631(anIntArray953, var0, var6, 0, var3 >> 14, var5 >> 14);
-                            var5 += var9;
+                            var5 += var8;
                             var3 += var7;
                             var0 += anInt749;
                         }
                     }
-                } else {
-                    var4 = var3 <<= 14;
-                    if (var0 < 0) {
-                        var4 -= var9 * var0;
-                        var3 -= var7 * var0;
-                        var0 = 0;
-                    }
 
-                    var5 <<= 14;
-                    if (var2 < 0) {
-                        var5 -= var8 * var2;
-                        var2 = 0;
-                    }
-
-                    if (var0 != var2 && var9 < var7 || var0 == var2 && var8 > var7) {
-                        var1 -= var2;
-                        var2 -= var0;
-                        var0 = anIntArray1082[var0];
-
-                        while (true) {
-                            --var2;
-                            if (var2 < 0) {
-                                while (true) {
-                                    --var1;
-                                    if (var1 < 0) {
-                                        return;
-                                    }
-
-                                    method631(anIntArray953, var0, var6, 0, var5 >> 14, var3 >> 14);
-                                    var5 += var8;
-                                    var3 += var7;
-                                    var0 += anInt749;
-                                }
-                            }
-
-                            method631(anIntArray953, var0, var6, 0, var4 >> 14, var3 >> 14);
-                            var4 += var9;
-                            var3 += var7;
-                            var0 += anInt749;
-                        }
-                    } else {
-                        var1 -= var2;
-                        var2 -= var0;
-                        var0 = anIntArray1082[var0];
-
-                        while (true) {
-                            --var2;
-                            if (var2 < 0) {
-                                while (true) {
-                                    --var1;
-                                    if (var1 < 0) {
-                                        return;
-                                    }
-
-                                    method631(anIntArray953, var0, var6, 0, var3 >> 14, var5 >> 14);
-                                    var5 += var8;
-                                    var3 += var7;
-                                    var0 += anInt749;
-                                }
-                            }
-
-                            method631(anIntArray953, var0, var6, 0, var3 >> 14, var4 >> 14);
-                            var4 += var9;
-                            var3 += var7;
-                            var0 += anInt749;
-                        }
-                    }
+                    method631(anIntArray953, var0, var6, 0, var3 >> 14, var4 >> 14);
+                    var4 += var9;
+                    var3 += var7;
+                    var0 += anInt749;
                 }
             }
         } else if (var1 <= var2) {
@@ -2545,100 +2513,97 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                             var4 += var8;
                             var1 += anInt749;
                         }
-                    } else {
-                        var0 -= var2;
-                        var2 -= var1;
-                        var1 = anIntArray1082[var1];
+                    }
+                    var0 -= var2;
+                    var2 -= var1;
+                    var1 = anIntArray1082[var1];
 
+                    while (true) {
+                        --var2;
+                        if (var2 < 0) {
+                            while (true) {
+                                --var0;
+                                if (var0 < 0) {
+                                    return;
+                                }
+
+                                method631(anIntArray953, var1, var6, 0, var5 >> 14, var3 >> 14);
+                                var3 += var7;
+                                var5 += var9;
+                                var1 += anInt749;
+                            }
+                        }
+
+                        method631(anIntArray953, var1, var6, 0, var4 >> 14, var3 >> 14);
+                        var3 += var7;
+                        var4 += var8;
+                        var1 += anInt749;
+                    }
+                }
+                var5 = var4 <<= 14;
+                if (var1 < 0) {
+                    var5 -= var7 * var1;
+                    var4 -= var8 * var1;
+                    var1 = 0;
+                }
+
+                var3 <<= 14;
+                if (var0 < 0) {
+                    var3 -= var9 * var0;
+                    var0 = 0;
+                }
+
+                if (var7 < var8) {
+                    var2 -= var0;
+                    var0 -= var1;
+                    var1 = anIntArray1082[var1];
+
+                    while (true) {
+                        --var0;
+                        if (var0 < 0) {
+                            while (true) {
+                                --var2;
+                                if (var2 < 0) {
+                                    return;
+                                }
+
+                                method631(anIntArray953, var1, var6, 0, var3 >> 14, var4 >> 14);
+                                var3 += var9;
+                                var4 += var8;
+                                var1 += anInt749;
+                            }
+                        }
+
+                        method631(anIntArray953, var1, var6, 0, var5 >> 14, var4 >> 14);
+                        var5 += var7;
+                        var4 += var8;
+                        var1 += anInt749;
+                    }
+                }
+                var2 -= var0;
+                var0 -= var1;
+                var1 = anIntArray1082[var1];
+
+                while (true) {
+                    --var0;
+                    if (var0 < 0) {
                         while (true) {
                             --var2;
                             if (var2 < 0) {
-                                while (true) {
-                                    --var0;
-                                    if (var0 < 0) {
-                                        return;
-                                    }
-
-                                    method631(anIntArray953, var1, var6, 0, var5 >> 14, var3 >> 14);
-                                    var3 += var7;
-                                    var5 += var9;
-                                    var1 += anInt749;
-                                }
+                                return;
                             }
 
                             method631(anIntArray953, var1, var6, 0, var4 >> 14, var3 >> 14);
-                            var3 += var7;
+                            var3 += var9;
                             var4 += var8;
                             var1 += anInt749;
                         }
                     }
-                } else {
-                    var5 = var4 <<= 14;
-                    if (var1 < 0) {
-                        var5 -= var7 * var1;
-                        var4 -= var8 * var1;
-                        var1 = 0;
-                    }
 
-                    var3 <<= 14;
-                    if (var0 < 0) {
-                        var3 -= var9 * var0;
-                        var0 = 0;
-                    }
-
-                    if (var7 < var8) {
-                        var2 -= var0;
-                        var0 -= var1;
-                        var1 = anIntArray1082[var1];
-
-                        while (true) {
-                            --var0;
-                            if (var0 < 0) {
-                                while (true) {
-                                    --var2;
-                                    if (var2 < 0) {
-                                        return;
-                                    }
-
-                                    method631(anIntArray953, var1, var6, 0, var3 >> 14, var4 >> 14);
-                                    var3 += var9;
-                                    var4 += var8;
-                                    var1 += anInt749;
-                                }
-                            }
-
-                            method631(anIntArray953, var1, var6, 0, var5 >> 14, var4 >> 14);
-                            var5 += var7;
-                            var4 += var8;
-                            var1 += anInt749;
-                        }
-                    } else {
-                        var2 -= var0;
-                        var0 -= var1;
-                        var1 = anIntArray1082[var1];
-
-                        while (true) {
-                            --var0;
-                            if (var0 < 0) {
-                                while (true) {
-                                    --var2;
-                                    if (var2 < 0) {
-                                        return;
-                                    }
-
-                                    method631(anIntArray953, var1, var6, 0, var4 >> 14, var3 >> 14);
-                                    var3 += var9;
-                                    var4 += var8;
-                                    var1 += anInt749;
-                                }
-                            }
-
-                            method631(anIntArray953, var1, var6, 0, var4 >> 14, var5 >> 14);
-                            var5 += var7;
-                            var4 += var8;
-                            var1 += anInt749;
-                        }
-                    }
+                    method631(anIntArray953, var1, var6, 0, var4 >> 14, var5 >> 14);
+                    var5 += var7;
+                    var4 += var8;
+                    var1 += anInt749;
                 }
             }
         } else if (var2 < anInt235) {
@@ -2690,100 +2655,97 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                         var5 += var9;
                         var2 += anInt749;
                     }
-                } else {
-                    var1 -= var0;
-                    var0 -= var2;
-                    var2 = anIntArray1082[var2];
+                }
+                var1 -= var0;
+                var0 -= var2;
+                var2 = anIntArray1082[var2];
 
+                while (true) {
+                    --var0;
+                    if (var0 < 0) {
+                        while (true) {
+                            --var1;
+                            if (var1 < 0) {
+                                return;
+                            }
+
+                            method631(anIntArray953, var2, var6, 0, var3 >> 14, var4 >> 14);
+                            var4 += var8;
+                            var3 += var7;
+                            var2 += anInt749;
+                        }
+                    }
+
+                    method631(anIntArray953, var2, var6, 0, var5 >> 14, var4 >> 14);
+                    var4 += var8;
+                    var5 += var9;
+                    var2 += anInt749;
+                }
+            }
+            var3 = var5 <<= 14;
+            if (var2 < 0) {
+                var3 -= var8 * var2;
+                var5 -= var9 * var2;
+                var2 = 0;
+            }
+
+            var4 <<= 14;
+            if (var1 < 0) {
+                var4 -= var7 * var1;
+                var1 = 0;
+            }
+
+            if (var8 < var9) {
+                var0 -= var1;
+                var1 -= var2;
+                var2 = anIntArray1082[var2];
+
+                while (true) {
+                    --var1;
+                    if (var1 < 0) {
+                        while (true) {
+                            --var0;
+                            if (var0 < 0) {
+                                return;
+                            }
+
+                            method631(anIntArray953, var2, var6, 0, var4 >> 14, var5 >> 14);
+                            var4 += var7;
+                            var5 += var9;
+                            var2 += anInt749;
+                        }
+                    }
+
+                    method631(anIntArray953, var2, var6, 0, var3 >> 14, var5 >> 14);
+                    var3 += var8;
+                    var5 += var9;
+                    var2 += anInt749;
+                }
+            }
+            var0 -= var1;
+            var1 -= var2;
+            var2 = anIntArray1082[var2];
+
+            while (true) {
+                --var1;
+                if (var1 < 0) {
                     while (true) {
                         --var0;
                         if (var0 < 0) {
-                            while (true) {
-                                --var1;
-                                if (var1 < 0) {
-                                    return;
-                                }
-
-                                method631(anIntArray953, var2, var6, 0, var3 >> 14, var4 >> 14);
-                                var4 += var8;
-                                var3 += var7;
-                                var2 += anInt749;
-                            }
+                            return;
                         }
 
                         method631(anIntArray953, var2, var6, 0, var5 >> 14, var4 >> 14);
-                        var4 += var8;
+                        var4 += var7;
                         var5 += var9;
                         var2 += anInt749;
                     }
                 }
-            } else {
-                var3 = var5 <<= 14;
-                if (var2 < 0) {
-                    var3 -= var8 * var2;
-                    var5 -= var9 * var2;
-                    var2 = 0;
-                }
 
-                var4 <<= 14;
-                if (var1 < 0) {
-                    var4 -= var7 * var1;
-                    var1 = 0;
-                }
-
-                if (var8 < var9) {
-                    var0 -= var1;
-                    var1 -= var2;
-                    var2 = anIntArray1082[var2];
-
-                    while (true) {
-                        --var1;
-                        if (var1 < 0) {
-                            while (true) {
-                                --var0;
-                                if (var0 < 0) {
-                                    return;
-                                }
-
-                                method631(anIntArray953, var2, var6, 0, var4 >> 14, var5 >> 14);
-                                var4 += var7;
-                                var5 += var9;
-                                var2 += anInt749;
-                            }
-                        }
-
-                        method631(anIntArray953, var2, var6, 0, var3 >> 14, var5 >> 14);
-                        var3 += var8;
-                        var5 += var9;
-                        var2 += anInt749;
-                    }
-                } else {
-                    var0 -= var1;
-                    var1 -= var2;
-                    var2 = anIntArray1082[var2];
-
-                    while (true) {
-                        --var1;
-                        if (var1 < 0) {
-                            while (true) {
-                                --var0;
-                                if (var0 < 0) {
-                                    return;
-                                }
-
-                                method631(anIntArray953, var2, var6, 0, var5 >> 14, var4 >> 14);
-                                var4 += var7;
-                                var5 += var9;
-                                var2 += anInt749;
-                            }
-                        }
-
-                        method631(anIntArray953, var2, var6, 0, var5 >> 14, var3 >> 14);
-                        var3 += var8;
-                        var5 += var9;
-                        var2 += anInt749;
-                    }
-                }
+                method631(anIntArray953, var2, var6, 0, var5 >> 14, var3 >> 14);
+                var3 += var8;
+                var5 += var9;
+                var2 += anInt749;
             }
         }
     }

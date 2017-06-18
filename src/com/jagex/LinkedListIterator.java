@@ -33,9 +33,8 @@ public class LinkedListIterator<T extends Node> implements Iterator<T> {
     public void remove() {
         if (this.aNode1788 == null) {
             throw new IllegalStateException();
-        } else {
-            this.aNode1788.unlink();
-            this.aNode1788 = null;
         }
+        this.aNode1788.unlink();
+        this.aNode1788 = null;
     }
 }

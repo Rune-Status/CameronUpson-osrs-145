@@ -39,36 +39,34 @@ public final class Class26 {
         if (var1 == 205) {
             Client.specialScript = 250;
             return true;
-        } else {
-            int var2;
-            int var3;
-            if (var1 >= 300 && var1 <= 313) {
-                var2 = (var1 - 300) / 2;
-                var3 = var1 & 1;
-                Client.aPlayerAppearance1455.method1035(var2, var3 == 1);
-            }
-
-            if (var1 >= 314 && var1 <= 323) {
-                var2 = (var1 - 314) / 2;
-                var3 = var1 & 1;
-                Client.aPlayerAppearance1455.method1033(var2, var3 == 1);
-            }
-
-            if (var1 == 324) {
-                Client.aPlayerAppearance1455.method1039(false);
-            }
-
-            if (var1 == 325) {
-                Client.aPlayerAppearance1455.method1039(true);
-            }
-
-            if (var1 == 326) {
-                Client.packet.writeHeader(222);
-                Client.aPlayerAppearance1455.method1040(Client.packet);
-                return true;
-            } else {
-                return false;
-            }
         }
+        int var2;
+        int var3;
+        if (var1 >= 300 && var1 <= 313) {
+            var2 = (var1 - 300) / 2;
+            var3 = var1 & 1;
+            Client.aPlayerAppearance1455.method1035(var2, var3 == 1);
+        }
+
+        if (var1 >= 314 && var1 <= 323) {
+            var2 = (var1 - 314) / 2;
+            var3 = var1 & 1;
+            Client.aPlayerAppearance1455.method1033(var2, var3 == 1);
+        }
+
+        if (var1 == 324) {
+            Client.aPlayerAppearance1455.method1039(false);
+        }
+
+        if (var1 == 325) {
+            Client.aPlayerAppearance1455.method1039(true);
+        }
+
+        if (var1 == 326) {
+            Client.packet.writeHeader(222);
+            Client.aPlayerAppearance1455.method1040(Client.packet);
+            return true;
+        }
+        return false;
     }
 }

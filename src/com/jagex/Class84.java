@@ -38,176 +38,173 @@ public class Class84 {
     public static String method484(CharSequence var0, Class188 var1) {
         if (var0 == null) {
             return null;
-        } else {
-            int var2 = 0;
+        }
+        int var2 = 0;
 
-            int var3;
-            char var4;
-            boolean var5;
-            for (var3 = var0.length(); var2 < var3; ++var2) {
-                var4 = var0.charAt(var2);
-                var5 = var4 == 160 || var4 == ' ' || var4 == '_' || var4 == '-';
-                if (!var5) {
-                    break;
-                }
-            }
-
-            while (var3 > var2) {
-                var4 = var0.charAt(var3 - 1);
-                var5 = var4 == 160 || var4 == ' ' || var4 == '_' || var4 == '-';
-                if (!var5) {
-                    break;
-                }
-
-                --var3;
-            }
-
-            int var15 = var3 - var2;
-            if (var15 >= 1 && var15 <= ObjectDefinition.method1075(var1)) {
-                StringBuilder var6 = new StringBuilder(var15);
-
-                for (int var7 = var2; var7 < var3; ++var7) {
-                    char var8 = var0.charAt(var7);
-                    boolean var9;
-                    if (Character.isISOControl(var8)) {
-                        var9 = false;
-                    } else {
-                        boolean var10 = var8 >= '0' && var8 <= '9' || var8 >= 'A' && var8 <= 'Z' || var8 >= 'a' && var8 <= 'z';
-                        if (var10) {
-                            var9 = true;
-                        } else {
-                            char[] var11 = Class179.aCharArray2144;
-                            int var12 = 0;
-
-                            label123:
-                            while (true) {
-                                char var13;
-                                if (var12 >= var11.length) {
-                                    var11 = Class179.aCharArray2143;
-
-                                    for (var12 = 0; var12 < var11.length; ++var12) {
-                                        var13 = var11[var12];
-                                        if (var13 == var8) {
-                                            var9 = true;
-                                            break label123;
-                                        }
-                                    }
-
-                                    var9 = false;
-                                    break;
-                                }
-
-                                var13 = var11[var12];
-                                if (var8 == var13) {
-                                    var9 = true;
-                                    break;
-                                }
-
-                                ++var12;
-                            }
-                        }
-                    }
-
-                    if (var9) {
-                        char var16;
-                        switch (var8) {
-                            case ' ':
-                            case '-':
-                            case '_':
-                            case ' ':
-                                var16 = '_';
-                                break;
-                            case '#':
-                            case '[':
-                            case ']':
-                                var16 = var8;
-                                break;
-                            case 'À':
-                            case 'Á':
-                            case 'Â':
-                            case 'Ã':
-                            case 'Ä':
-                            case 'à':
-                            case 'á':
-                            case 'â':
-                            case 'ã':
-                            case 'ä':
-                                var16 = 'a';
-                                break;
-                            case 'Ç':
-                            case 'ç':
-                                var16 = 'c';
-                                break;
-                            case 'È':
-                            case 'É':
-                            case 'Ê':
-                            case 'Ë':
-                            case 'è':
-                            case 'é':
-                            case 'ê':
-                            case 'ë':
-                                var16 = 'e';
-                                break;
-                            case 'Í':
-                            case 'Î':
-                            case 'Ï':
-                            case 'í':
-                            case 'î':
-                            case 'ï':
-                                var16 = 'i';
-                                break;
-                            case 'Ñ':
-                            case 'ñ':
-                                var16 = 'n';
-                                break;
-                            case 'Ò':
-                            case 'Ó':
-                            case 'Ô':
-                            case 'Õ':
-                            case 'Ö':
-                            case 'ò':
-                            case 'ó':
-                            case 'ô':
-                            case 'õ':
-                            case 'ö':
-                                var16 = 'o';
-                                break;
-                            case 'Ù':
-                            case 'Ú':
-                            case 'Û':
-                            case 'Ü':
-                            case 'ù':
-                            case 'ú':
-                            case 'û':
-                            case 'ü':
-                                var16 = 'u';
-                                break;
-                            case 'ß':
-                                var16 = 'b';
-                                break;
-                            case 'ÿ':
-                            case 'Ÿ':
-                                var16 = 'y';
-                                break;
-                            default:
-                                var16 = Character.toLowerCase(var8);
-                        }
-
-                        if (var16 != 0) {
-                            var6.append(var16);
-                        }
-                    }
-                }
-
-                if (var6.length() == 0) {
-                    return null;
-                } else {
-                    return var6.toString();
-                }
-            } else {
-                return null;
+        int var3;
+        char var4;
+        boolean var5;
+        for (var3 = var0.length(); var2 < var3; ++var2) {
+            var4 = var0.charAt(var2);
+            var5 = var4 == 160 || var4 == ' ' || var4 == '_' || var4 == '-';
+            if (!var5) {
+                break;
             }
         }
+
+        while (var3 > var2) {
+            var4 = var0.charAt(var3 - 1);
+            var5 = var4 == 160 || var4 == ' ' || var4 == '_' || var4 == '-';
+            if (!var5) {
+                break;
+            }
+
+            --var3;
+        }
+
+        int var15 = var3 - var2;
+        if (var15 >= 1 && var15 <= ObjectDefinition.method1075(var1)) {
+            StringBuilder var6 = new StringBuilder(var15);
+
+            for (int var7 = var2; var7 < var3; ++var7) {
+                char var8 = var0.charAt(var7);
+                boolean var9;
+                if (Character.isISOControl(var8)) {
+                    var9 = false;
+                } else {
+                    boolean var10 = var8 >= '0' && var8 <= '9' || var8 >= 'A' && var8 <= 'Z' || var8 >= 'a' && var8 <= 'z';
+                    if (var10) {
+                        var9 = true;
+                    } else {
+                        char[] var11 = Class179.aCharArray2144;
+                        int var12 = 0;
+
+                        label123:
+                        while (true) {
+                            char var13;
+                            if (var12 >= var11.length) {
+                                var11 = Class179.aCharArray2143;
+
+                                for (var12 = 0; var12 < var11.length; ++var12) {
+                                    var13 = var11[var12];
+                                    if (var13 == var8) {
+                                        var9 = true;
+                                        break label123;
+                                    }
+                                }
+
+                                var9 = false;
+                                break;
+                            }
+
+                            var13 = var11[var12];
+                            if (var8 == var13) {
+                                var9 = true;
+                                break;
+                            }
+
+                            ++var12;
+                        }
+                    }
+                }
+
+                if (var9) {
+                    char var16;
+                    switch (var8) {
+                        case ' ':
+                        case '-':
+                        case '_':
+                        case ' ':
+                            var16 = '_';
+                            break;
+                        case '#':
+                        case '[':
+                        case ']':
+                            var16 = var8;
+                            break;
+                        case 'À':
+                        case 'Á':
+                        case 'Â':
+                        case 'Ã':
+                        case 'Ä':
+                        case 'à':
+                        case 'á':
+                        case 'â':
+                        case 'ã':
+                        case 'ä':
+                            var16 = 'a';
+                            break;
+                        case 'Ç':
+                        case 'ç':
+                            var16 = 'c';
+                            break;
+                        case 'È':
+                        case 'É':
+                        case 'Ê':
+                        case 'Ë':
+                        case 'è':
+                        case 'é':
+                        case 'ê':
+                        case 'ë':
+                            var16 = 'e';
+                            break;
+                        case 'Í':
+                        case 'Î':
+                        case 'Ï':
+                        case 'í':
+                        case 'î':
+                        case 'ï':
+                            var16 = 'i';
+                            break;
+                        case 'Ñ':
+                        case 'ñ':
+                            var16 = 'n';
+                            break;
+                        case 'Ò':
+                        case 'Ó':
+                        case 'Ô':
+                        case 'Õ':
+                        case 'Ö':
+                        case 'ò':
+                        case 'ó':
+                        case 'ô':
+                        case 'õ':
+                        case 'ö':
+                            var16 = 'o';
+                            break;
+                        case 'Ù':
+                        case 'Ú':
+                        case 'Û':
+                        case 'Ü':
+                        case 'ù':
+                        case 'ú':
+                        case 'û':
+                        case 'ü':
+                            var16 = 'u';
+                            break;
+                        case 'ß':
+                            var16 = 'b';
+                            break;
+                        case 'ÿ':
+                        case 'Ÿ':
+                            var16 = 'y';
+                            break;
+                        default:
+                            var16 = Character.toLowerCase(var8);
+                    }
+
+                    if (var16 != 0) {
+                        var6.append(var16);
+                    }
+                }
+            }
+
+            if (var6.length() == 0) {
+                return null;
+            }
+            return var6.toString();
+        }
+        return null;
     }
 
     static long method485() {

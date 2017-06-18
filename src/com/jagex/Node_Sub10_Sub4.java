@@ -110,9 +110,8 @@ public class Node_Sub10_Sub4 extends Node_Sub10 {
         Node_Sub20 var1 = this.aNodeDeque739.method995();
         if (var1 == null) {
             return null;
-        } else {
-            return var1.aNode_Sub10_Sub2_1773 != null ? var1.aNode_Sub10_Sub2_1773 : this.method426();
         }
+        return var1.aNode_Sub10_Sub2_1773 != null ? var1.aNode_Sub10_Sub2_1773 : this.method426();
     }
 
     protected int method425() {

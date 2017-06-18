@@ -126,11 +126,10 @@ public class AnimationSequence extends DoublyNode {
         var2 &= 65535;
         if (var3 == null) {
             return var1.method726(true);
-        } else {
-            Model var4 = var1.method726(!var3.method626(var2));
-            var4.method727(var3, var2);
-            return var4;
         }
+        Model var4 = var1.method726(!var3.method626(var2));
+        var4.method727(var3, var2);
+        return var4;
     }
 
     Model method1194(Model var1, int var2) {
@@ -139,11 +138,10 @@ public class AnimationSequence extends DoublyNode {
         var2 &= 65535;
         if (var3 == null) {
             return var1.method732(true);
-        } else {
-            Model var4 = var1.method732(!var3.method626(var2));
-            var4.method727(var3, var2);
-            return var4;
         }
+        Model var4 = var1.method732(!var3.method626(var2));
+        var4.method727(var3, var2);
+        return var4;
     }
 
     public Model method1193(Model var1, int var2) {
@@ -152,27 +150,25 @@ public class AnimationSequence extends DoublyNode {
         var3 &= 65535;
         if (var4 == null) {
             return var1.method726(true);
-        } else {
-            AnimationFrame var5 = null;
-            int var6 = 0;
-            if (this.anIntArray934 != null && var2 < this.anIntArray934.length) {
-                var6 = this.anIntArray934[var2];
-                var5 = Class19.method143(var6 >> 16);
-                var6 &= 65535;
-            }
-
-            Model var7;
-            if (var5 != null && var6 != 65535) {
-                var7 = var1.method726(!var4.method626(var3) & !var5.method626(var6));
-                var7.method727(var4, var3);
-                var7.method727(var5, var6);
-                return var7;
-            } else {
-                var7 = var1.method726(!var4.method626(var3));
-                var7.method727(var4, var3);
-                return var7;
-            }
         }
+        AnimationFrame var5 = null;
+        int var6 = 0;
+        if (this.anIntArray934 != null && var2 < this.anIntArray934.length) {
+            var6 = this.anIntArray934[var2];
+            var5 = Class19.method143(var6 >> 16);
+            var6 &= 65535;
+        }
+
+        Model var7;
+        if (var5 != null && var6 != 65535) {
+            var7 = var1.method726(!var4.method626(var3) & !var5.method626(var6));
+            var7.method727(var4, var3);
+            var7.method727(var5, var6);
+            return var7;
+        }
+        var7 = var1.method726(!var4.method626(var3));
+        var7.method727(var4, var3);
+        return var7;
     }
 
     public Model method1197(Model var1, int var2, AnimationSequence var3, int var4) {
@@ -181,21 +177,19 @@ public class AnimationSequence extends DoublyNode {
         var2 &= 65535;
         if (var5 == null) {
             return var3.method1195(var1, var4);
-        } else {
-            var4 = var3.frames[var4];
-            AnimationFrame var6 = Class19.method143(var4 >> 16);
-            var4 &= 65535;
-            Model var7;
-            if (var6 == null) {
-                var7 = var1.method726(!var5.method626(var2));
-                var7.method727(var5, var2);
-                return var7;
-            } else {
-                var7 = var1.method726(!var5.method626(var2) & !var6.method626(var4));
-                var7.method735(var5, var2, var6, var4, this.interleaveOrder);
-                return var7;
-            }
         }
+        var4 = var3.frames[var4];
+        AnimationFrame var6 = Class19.method143(var4 >> 16);
+        var4 &= 65535;
+        Model var7;
+        if (var6 == null) {
+            var7 = var1.method726(!var5.method626(var2));
+            var7.method727(var5, var2);
+            return var7;
+        }
+        var7 = var1.method726(!var5.method626(var2) & !var6.method626(var4));
+        var7.method735(var5, var2, var6, var4, this.interleaveOrder);
+        return var7;
     }
 
     Model method1196(Model var1, int var2, int var3) {
@@ -204,27 +198,26 @@ public class AnimationSequence extends DoublyNode {
         var2 &= 65535;
         if (var4 == null) {
             return var1.method726(true);
-        } else {
-            Model var5 = var1.method726(!var4.method626(var2));
-            var3 &= 3;
-            if (var3 == 1) {
-                var5.method540();
-            } else if (var3 == 2) {
-                var5.method730();
-            } else if (var3 == 3) {
-                var5.method725();
-            }
-
-            var5.method727(var4, var2);
-            if (var3 == 1) {
-                var5.method725();
-            } else if (var3 == 2) {
-                var5.method730();
-            } else if (var3 == 3) {
-                var5.method540();
-            }
-
-            return var5;
         }
+        Model var5 = var1.method726(!var4.method626(var2));
+        var3 &= 3;
+        if (var3 == 1) {
+            var5.method540();
+        } else if (var3 == 2) {
+            var5.method730();
+        } else if (var3 == 3) {
+            var5.method725();
+        }
+
+        var5.method727(var4, var2);
+        if (var3 == 1) {
+            var5.method725();
+        } else if (var3 == 2) {
+            var5.method730();
+        } else if (var3 == 3) {
+            var5.method540();
+        }
+
+        return var5;
     }
 }

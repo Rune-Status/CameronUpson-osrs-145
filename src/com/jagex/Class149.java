@@ -5,55 +5,54 @@ public class Class149 {
         ItemDefinition var1 = (ItemDefinition) ItemDefinition.aReferenceCache2115.method973((long) var0);
         if (var1 != null) {
             return var1;
-        } else {
-            byte[] var2 = Class55.aReferenceTable424.method1085(10, var0);
-            var1 = new ItemDefinition();
-            var1.id = var0;
-            if (var2 != null) {
-                var1.method1066(new Buffer(var2));
-            }
+        }
+        byte[] var2 = Class55.aReferenceTable424.method1085(10, var0);
+        var1 = new ItemDefinition();
+        var1.id = var0;
+        if (var2 != null) {
+            var1.method1066(new Buffer(var2));
+        }
 
-            var1.method756();
-            if (var1.anInt1864 != -1) {
-                var1.method1146(method1001(var1.anInt1864), method1001(var1.noteId));
-            }
+        var1.method756();
+        if (var1.anInt1864 != -1) {
+            var1.method1146(method1001(var1.anInt1864), method1001(var1.noteId));
+        }
 
-            if (var1.anInt783 != -1) {
-                var1.method1147(method1001(var1.anInt783), method1001(var1.anInt768));
-            }
+        if (var1.anInt783 != -1) {
+            var1.method1147(method1001(var1.anInt783), method1001(var1.anInt768));
+        }
 
-            if (var1.anInt785 != -1) {
-                var1.method1138(method1001(var1.anInt785), method1001(var1.anInt781));
-            }
+        if (var1.anInt785 != -1) {
+            var1.method1138(method1001(var1.anInt785), method1001(var1.anInt781));
+        }
 
-            if (!Node_Sub21_Sub19.aBoolean2098 && var1.aBoolean1731) {
-                var1.name = "Members object";
-                var1.aBoolean2114 = false;
-                var1.groundActions = null;
-                var1.actions = null;
-                var1.anInt754 = -1;
-                var1.anInt776 = 0;
-                if (var1.properties != null) {
-                    boolean var3 = false;
+        if (!Node_Sub21_Sub19.aBoolean2098 && var1.aBoolean1731) {
+            var1.name = "Members object";
+            var1.aBoolean2114 = false;
+            var1.groundActions = null;
+            var1.actions = null;
+            var1.anInt754 = -1;
+            var1.anInt776 = 0;
+            if (var1.properties != null) {
+                boolean var3 = false;
 
-                    for (Node var4 = var1.properties.first(); var4 != null; var4 = var1.properties.next()) {
-                        DefinitionProperty var5 = Class158.method1012((int) var4.key);
-                        if (var5.deleteOnUse) {
-                            var4.unlink();
-                        } else {
-                            var3 = true;
-                        }
-                    }
-
-                    if (!var3) {
-                        var1.properties = null;
+                for (Node var4 = var1.properties.first(); var4 != null; var4 = var1.properties.next()) {
+                    DefinitionProperty var5 = Class158.method1012((int) var4.key);
+                    if (var5.deleteOnUse) {
+                        var4.unlink();
+                    } else {
+                        var3 = true;
                     }
                 }
-            }
 
-            ItemDefinition.aReferenceCache2115.method975(var1, (long) var0);
-            return var1;
+                if (!var3) {
+                    var1.properties = null;
+                }
+            }
         }
+
+        ItemDefinition.aReferenceCache2115.method975(var1, (long) var0);
+        return var1;
     }
 
     public static byte method1002(char var0) {

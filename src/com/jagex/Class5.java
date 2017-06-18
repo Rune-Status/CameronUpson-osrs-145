@@ -706,23 +706,22 @@ public final class Class5 {
         ObjectDefinition var1 = (ObjectDefinition) ObjectDefinition.aReferenceCache2013.method973((long) var0);
         if (var1 != null) {
             return var1;
-        } else {
-            byte[] var2 = ObjectDefinition.aReferenceTable2017.method1085(6, var0);
-            var1 = new ObjectDefinition();
-            var1.id = var0;
-            if (var2 != null) {
-                var1.method1066(new Buffer(var2));
-            }
-
-            var1.method756();
-            if (var1.aBoolean2033) {
-                var1.anInt229 = 0;
-                var1.aBoolean223 = false;
-            }
-
-            ObjectDefinition.aReferenceCache2013.method975(var1, (long) var0);
-            return var1;
         }
+        byte[] var2 = ObjectDefinition.aReferenceTable2017.method1085(6, var0);
+        var1 = new ObjectDefinition();
+        var1.id = var0;
+        if (var2 != null) {
+            var1.method1066(new Buffer(var2));
+        }
+
+        var1.method756();
+        if (var1.aBoolean2033) {
+            var1.anInt229 = 0;
+            var1.aBoolean223 = false;
+        }
+
+        ObjectDefinition.aReferenceCache2013.method975(var1, (long) var0);
+        return var1;
     }
 
     static boolean method18(Packet var0, int var1) {
@@ -747,91 +746,89 @@ public final class Class5 {
 
             if (Client.players[var1] != null) {
                 throw new RuntimeException();
-            } else {
-                Player var6 = Client.players[var1] = new Player();
-                var6.anInt213 = var1;
-                if (Class71.aBufferArray728[var1] != null) {
-                    var6.method198(Class71.aBufferArray728[var1]);
-                }
-
-                var6.orientation = Class71.anIntArray725[var1];
-                var6.targetIndex = Class71.anIntArray726[var1];
-                var7 = Class71.anIntArray718[var1];
-                var8 = var7 >> 28;
-                var9 = var7 >> 14 & 255;
-                var10 = var7 & 255;
-                var6.aByteArray798[0] = Class71.aByteArray727[var1];
-                var6.combatLevel = (byte) var8;
-                var6.method200(var3 + (var9 << 13) - Class62.anInt636, var4 + (var10 << 13) - Class49.anInt377);
-                var6.aBoolean237 = false;
-                return true;
             }
-        } else if (var2 == 1) {
+            Player var6 = Client.players[var1] = new Player();
+            var6.anInt213 = var1;
+            if (Class71.aBufferArray728[var1] != null) {
+                var6.method198(Class71.aBufferArray728[var1]);
+            }
+
+            var6.orientation = Class71.anIntArray725[var1];
+            var6.targetIndex = Class71.anIntArray726[var1];
+            var7 = Class71.anIntArray718[var1];
+            var8 = var7 >> 28;
+            var9 = var7 >> 14 & 255;
+            var10 = var7 & 255;
+            var6.aByteArray798[0] = Class71.aByteArray727[var1];
+            var6.combatLevel = (byte) var8;
+            var6.method200(var3 + (var9 << 13) - Class62.anInt636, var4 + (var10 << 13) - Class49.anInt377);
+            var6.aBoolean237 = false;
+            return true;
+        }
+        if (var2 == 1) {
             var3 = var0.method788(2);
             var4 = Class71.anIntArray718[var1];
             Class71.anIntArray718[var1] = ((var3 + (var4 >> 28) & 3) << 28) + (var4 & 268435455);
             return false;
-        } else {
-            int var5;
-            int var11;
-            if (var2 == 2) {
-                var3 = var0.method788(5);
-                var4 = var3 >> 3;
-                var5 = var3 & 7;
-                var11 = Class71.anIntArray718[var1];
-                var7 = var4 + (var11 >> 28) & 3;
-                var8 = var11 >> 14 & 255;
-                var9 = var11 & 255;
-                if (var5 == 0) {
-                    --var8;
-                    --var9;
-                }
-
-                if (var5 == 1) {
-                    --var9;
-                }
-
-                if (var5 == 2) {
-                    ++var8;
-                    --var9;
-                }
-
-                if (var5 == 3) {
-                    --var8;
-                }
-
-                if (var5 == 4) {
-                    ++var8;
-                }
-
-                if (var5 == 5) {
-                    --var8;
-                    ++var9;
-                }
-
-                if (var5 == 6) {
-                    ++var9;
-                }
-
-                if (var5 == 7) {
-                    ++var8;
-                    ++var9;
-                }
-
-                Class71.anIntArray718[var1] = var9 + (var8 << 14) + (var7 << 28);
-                return false;
-            } else {
-                var3 = var0.method788(18);
-                var4 = var3 >> 16;
-                var5 = var3 >> 8 & 255;
-                var11 = var3 & 255;
-                var7 = Class71.anIntArray718[var1];
-                var8 = var4 + (var7 >> 28) & 3;
-                var9 = var5 + (var7 >> 14) & 255;
-                var10 = var7 + var11 & 255;
-                Class71.anIntArray718[var1] = var10 + (var8 << 28) + (var9 << 14);
-                return false;
-            }
         }
+        int var5;
+        int var11;
+        if (var2 == 2) {
+            var3 = var0.method788(5);
+            var4 = var3 >> 3;
+            var5 = var3 & 7;
+            var11 = Class71.anIntArray718[var1];
+            var7 = var4 + (var11 >> 28) & 3;
+            var8 = var11 >> 14 & 255;
+            var9 = var11 & 255;
+            if (var5 == 0) {
+                --var8;
+                --var9;
+            }
+
+            if (var5 == 1) {
+                --var9;
+            }
+
+            if (var5 == 2) {
+                ++var8;
+                --var9;
+            }
+
+            if (var5 == 3) {
+                --var8;
+            }
+
+            if (var5 == 4) {
+                ++var8;
+            }
+
+            if (var5 == 5) {
+                --var8;
+                ++var9;
+            }
+
+            if (var5 == 6) {
+                ++var9;
+            }
+
+            if (var5 == 7) {
+                ++var8;
+                ++var9;
+            }
+
+            Class71.anIntArray718[var1] = var9 + (var8 << 14) + (var7 << 28);
+            return false;
+        }
+        var3 = var0.method788(18);
+        var4 = var3 >> 16;
+        var5 = var3 >> 8 & 255;
+        var11 = var3 & 255;
+        var7 = Class71.anIntArray718[var1];
+        var8 = var4 + (var7 >> 28) & 3;
+        var9 = var5 + (var7 >> 14) & 255;
+        var10 = var7 + var11 & 255;
+        Class71.anIntArray718[var1] = var10 + (var8 << 28) + (var9 << 14);
+        return false;
     }
 }

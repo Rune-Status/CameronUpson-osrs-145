@@ -408,44 +408,43 @@ public class Class34 {
 
         if (var11 == var0 && var1 == var30) {
             return 0;
-        } else {
-            var13 = 0;
-            Class112.anIntArray1330[var13] = var11;
-            var31 = var13 + 1;
-            Class112.anIntArray1329[var13] = var30;
-
-            for (var14 = var15 = Class112.anIntArrayArray1328[var11 - var9][var30 - var10]; var11 != var0 || var1 != var30; var14 = Class112.anIntArrayArray1328[var11 - var9][var30 - var10]) {
-                if (var14 != var15) {
-                    var15 = var14;
-                    Class112.anIntArray1330[var31] = var11;
-                    Class112.anIntArray1329[var31++] = var30;
-                }
-
-                if ((var14 & 2) != 0) {
-                    ++var11;
-                } else if ((var14 & 8) != 0) {
-                    --var11;
-                }
-
-                if ((var14 & 1) != 0) {
-                    ++var30;
-                } else if ((var14 & 4) != 0) {
-                    --var30;
-                }
-            }
-
-            var33 = 0;
-
-            while (var31-- > 0) {
-                var6[var33] = Class112.anIntArray1330[var31];
-                var7[var33++] = Class112.anIntArray1329[var31];
-                if (var33 >= var6.length) {
-                    break;
-                }
-            }
-
-            return var33;
         }
+        var13 = 0;
+        Class112.anIntArray1330[var13] = var11;
+        var31 = var13 + 1;
+        Class112.anIntArray1329[var13] = var30;
+
+        for (var14 = var15 = Class112.anIntArrayArray1328[var11 - var9][var30 - var10]; var11 != var0 || var1 != var30; var14 = Class112.anIntArrayArray1328[var11 - var9][var30 - var10]) {
+            if (var14 != var15) {
+                var15 = var14;
+                Class112.anIntArray1330[var31] = var11;
+                Class112.anIntArray1329[var31++] = var30;
+            }
+
+            if ((var14 & 2) != 0) {
+                ++var11;
+            } else if ((var14 & 8) != 0) {
+                --var11;
+            }
+
+            if ((var14 & 1) != 0) {
+                ++var30;
+            } else if ((var14 & 4) != 0) {
+                --var30;
+            }
+        }
+
+        var33 = 0;
+
+        while (var31-- > 0) {
+            var6[var33] = Class112.anIntArray1330[var31];
+            var7[var33++] = Class112.anIntArray1329[var31];
+            if (var33 >= var6.length) {
+                break;
+            }
+        }
+
+        return var33;
     }
 
     static void method223() {

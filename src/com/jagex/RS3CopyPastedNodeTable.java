@@ -24,10 +24,9 @@ public final class RS3CopyPastedNodeTable implements Iterable {
     static String getObjectOrDefault(RS3CopyPastedNodeTable var0, int key, String default_) {
         if (var0 == null) {
             return default_;
-        } else {
-            ObjectNode var3 = (ObjectNode) var0.lookup((long) key);
-            return var3 == null ? default_ : (String) var3.value;
         }
+        ObjectNode var3 = (ObjectNode) var0.lookup((long) key);
+        return var3 == null ? default_ : (String) var3.value;
     }
 
     static RS3CopyPastedNodeTable readFrom(Buffer buffer, RS3CopyPastedNodeTable table) {
@@ -57,10 +56,9 @@ public final class RS3CopyPastedNodeTable implements Iterable {
     static int getOrDefault(RS3CopyPastedNodeTable table, int key, int default_) {
         if (table == null) {
             return default_;
-        } else {
-            IntegerNode var3 = (IntegerNode) table.lookup((long) key);
-            return var3 == null ? default_ : var3.value;
         }
+        IntegerNode var3 = (IntegerNode) table.lookup((long) key);
+        return var3 == null ? default_ : var3.value;
     }
 
     public static int nextPowerOf2(int var0) {
@@ -117,18 +115,17 @@ public final class RS3CopyPastedNodeTable implements Iterable {
             var1 = this.tail;
             this.tail = var1.next;
             return var1;
-        } else {
-            do {
-                if (this.index >= this.size) {
-                    return null;
-                }
-
-                var1 = this.buckets[this.index++].next;
-            } while (var1 == this.buckets[this.index - 1]);
-
-            this.tail = var1.next;
-            return var1;
         }
+        do {
+            if (this.index >= this.size) {
+                return null;
+            }
+
+            var1 = this.buckets[this.index++].next;
+        } while (var1 == this.buckets[this.index - 1]);
+
+        this.tail = var1.next;
+        return var1;
     }
 
     public Iterator iterator() {

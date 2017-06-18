@@ -37,18 +37,17 @@ public class Node_Sub10_Sub3 extends Node_Sub10 {
         int var1 = var0 & 255;
         if (var1 == 0) {
             throw new IllegalArgumentException("");
-        } else {
-            if (var1 >= 128 && var1 < 160) {
-                char var2 = Class169.aCharArray2118[var1 - 128];
-                if (var2 == 0) {
-                    var2 = '?';
-                }
-
-                var1 = var2;
+        }
+        if (var1 >= 128 && var1 < 160) {
+            char var2 = Class169.aCharArray2118[var1 - 128];
+            if (var2 == 0) {
+                var2 = '?';
             }
 
-            return (char) var1;
+            var1 = var2;
         }
+
+        return (char) var1;
     }
 
     void method938(int var1, int var2) {
@@ -65,9 +64,8 @@ public class Node_Sub10_Sub3 extends Node_Sub10 {
             }
 
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     int method195() {
@@ -545,19 +543,17 @@ public class Node_Sub10_Sub3 extends Node_Sub10 {
                 }
 
                 return true;
-            } else {
-                var1.aNode_Sub10_Sub2_1773.method531(var1.anInt981, this.method936(var1), this.method921(var1));
-                return false;
             }
-        } else {
-            var1.method308();
-            var1.unlink();
-            if (var1.anInt327 > 0 && this.aNode_Sub20ArrayArray1736[var1.anInt204][var1.anInt327] == var1) {
-                this.aNode_Sub20ArrayArray1736[var1.anInt204][var1.anInt327] = null;
-            }
-
-            return true;
+            var1.aNode_Sub10_Sub2_1773.method531(var1.anInt981, this.method936(var1), this.method921(var1));
+            return false;
         }
+        var1.method308();
+        var1.unlink();
+        if (var1.anInt327 > 0 && this.aNode_Sub20ArrayArray1736[var1.anInt204][var1.anInt327] == var1) {
+            this.aNode_Sub20ArrayArray1736[var1.anInt204][var1.anInt327] = null;
+        }
+
+        return true;
     }
 
     void method926(Node_Sub20 var1, boolean var2) {

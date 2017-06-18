@@ -14,17 +14,18 @@ public class Class128 {
             var1 = aByteArrayArray1410[--anInt1409];
             aByteArrayArray1410[anInt1409] = null;
             return var1;
-        } else if (var0 == 5000 && anInt1414 > 0) {
+        }
+        if (var0 == 5000 && anInt1414 > 0) {
             var1 = aByteArrayArray1412[--anInt1414];
             aByteArrayArray1412[anInt1414] = null;
             return var1;
-        } else if (var0 == 30000 && anInt1411 > 0) {
+        }
+        if (var0 == 30000 && anInt1411 > 0) {
             var1 = aByteArrayArray1413[--anInt1411];
             aByteArrayArray1413[anInt1411] = null;
             return var1;
-        } else {
-            return new byte[var0];
         }
+        return new byte[var0];
     }
 
     static void method879(int var0, int var1, int var2, int var3) {
@@ -57,26 +58,24 @@ public class Class128 {
         if (var0 > 0L && var0 < 6582952005840035281L) {
             if (var0 % 37L == 0L) {
                 return null;
-            } else {
-                int var2 = 0;
-
-                for (long var3 = var0; var3 != 0L; var3 /= 37L) {
-                    ++var2;
-                }
-
-                StringBuilder var5 = new StringBuilder(var2);
-
-                while (0L != var0) {
-                    long var6 = var0;
-                    var0 /= 37L;
-                    var5.append(Class177.aCharArray2140[(int) (var6 - var0 * 37L)]);
-                }
-
-                return var5.reverse().toString();
             }
-        } else {
-            return null;
+            int var2 = 0;
+
+            for (long var3 = var0; var3 != 0L; var3 /= 37L) {
+                ++var2;
+            }
+
+            StringBuilder var5 = new StringBuilder(var2);
+
+            while (0L != var0) {
+                long var6 = var0;
+                var0 /= 37L;
+                var5.append(Class177.aCharArray2140[(int) (var6 - var0 * 37L)]);
+            }
+
+            return var5.reverse().toString();
         }
+        return null;
     }
 
     static void method880(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {

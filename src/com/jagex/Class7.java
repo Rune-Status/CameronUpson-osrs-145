@@ -245,7 +245,8 @@ public final class Class7 {
     public static Class84 method39(Class108 var0, int var1, int var2) {
         if (Class84.anInt870 == 0) {
             throw new IllegalStateException();
-        } else if (var1 >= 0 && var1 < 2) {
+        }
+        if (var1 >= 0 && var1 < 2) {
             if (var2 < 256) {
                 var2 = 256;
             }
@@ -279,9 +280,8 @@ public final class Class7 {
             } catch (Throwable var4) {
                 return new Class84();
             }
-        } else {
-            throw new IllegalArgumentException();
         }
+        throw new IllegalArgumentException();
     }
 
     public void method35(ReferenceTable var1, String var2, boolean var3) {
@@ -550,12 +550,12 @@ public final class Class7 {
         float var3 = (float) var1 / (float) var2;
         if (var3 > 8.0F) {
             return 8.0F;
-        } else if (var3 < 1.0F) {
-            return 1.0F;
-        } else {
-            int var4 = Math.round(var3);
-            return Math.abs((float) var4 - var3) < 0.05F ? (float) var4 : var3;
         }
+        if (var3 < 1.0F) {
+            return 1.0F;
+        }
+        int var4 = Math.round(var3);
+        return Math.abs((float) var4 - var3) < 0.05F ? (float) var4 : var3;
     }
 
     public boolean method34() {
@@ -566,23 +566,22 @@ public final class Class7 {
         java.util.LinkedList var11 = new java.util.LinkedList();
         if (!this.aBoolean59) {
             return var11;
-        } else {
-            Class5 var12 = this.method29(var1, var2, var3, var4);
-            float var13 = this.method28(var7, var3 - var1);
-            int var14 = (int) (var13 * 64.0F);
-            int var15 = this.anInt51 + var1;
-            int var16 = this.anInt58 + var2;
+        }
+        Class5 var12 = this.method29(var1, var2, var3, var4);
+        float var13 = this.method28(var7, var3 - var1);
+        int var14 = (int) (var13 * 64.0F);
+        int var15 = this.anInt51 + var1;
+        int var16 = this.anInt58 + var2;
 
-            for (int var17 = var12.anInt34; var17 < var12.anInt34 + var12.anInt32; ++var17) {
-                for (int var18 = var12.anInt33; var18 < var12.anInt39 + var12.anInt33; ++var18) {
-                    List var19 = this.aClass13ArrayArray63[var17][var18].method122(var5 + (this.aClass13ArrayArray63[var17][var18].anInt107 * 64 - var15) * var14 / 64, var6 + var8 - var14 * (this.aClass13ArrayArray63[var17][var18].anInt108 * 64 - var16 + 64) / 64, var14, var9, var10);
-                    if (!var19.isEmpty()) {
-                        var11.addAll(var19);
-                    }
+        for (int var17 = var12.anInt34; var17 < var12.anInt34 + var12.anInt32; ++var17) {
+            for (int var18 = var12.anInt33; var18 < var12.anInt39 + var12.anInt33; ++var18) {
+                List var19 = this.aClass13ArrayArray63[var17][var18].method122(var5 + (this.aClass13ArrayArray63[var17][var18].anInt107 * 64 - var15) * var14 / 64, var6 + var8 - var14 * (this.aClass13ArrayArray63[var17][var18].anInt108 * 64 - var16 + 64) / 64, var14, var9, var10);
+                if (!var19.isEmpty()) {
+                    var11.addAll(var19);
                 }
             }
-
-            return var11;
         }
+
+        return var11;
     }
 }

@@ -421,8 +421,7 @@ public class Class93 {
     public void method605(long var1) throws IOException {
         if (var1 < 0L) {
             throw new IOException("");
-        } else {
-            this.aLong1001 = var1;
         }
+        this.aLong1001 = var1;
     }
 }

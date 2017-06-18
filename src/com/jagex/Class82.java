@@ -47,10 +47,9 @@ public final class Class82 {
             this.aRandomAccessFile847.seek(this.aLong850 + 1L);
             this.aRandomAccessFile847.write(1);
             throw new EOFException();
-        } else {
-            this.aRandomAccessFile847.write(var1, var2, var3);
-            this.aLong849 += (long) var3;
         }
+        this.aRandomAccessFile847.write(var1, var2, var3);
+        this.aLong849 += (long) var3;
     }
 
     public final long method475() throws IOException {

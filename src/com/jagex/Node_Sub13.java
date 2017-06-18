@@ -72,10 +72,9 @@ public class Node_Sub13 extends Node {
         if (!method589(var0)) {
             var0.method1102(var1, var2);
             return null;
-        } else {
-            byte[] var3 = var0.method1085(var1, var2);
-            return var3 == null ? null : new Node_Sub13(var3);
         }
+        byte[] var3 = var0.method1085(var1, var2);
+        return var3 == null ? null : new Node_Sub13(var3);
     }
 
     static void method594(byte[] var0) {
@@ -258,50 +257,49 @@ public class Node_Sub13 extends Node {
     Node_Sub11_Sub1 method588(int[] var1) {
         if (var1 != null && var1[0] <= 0) {
             return null;
-        } else {
-            if (this.aByteArray979 == null) {
-                this.anInt981 = 0;
-                this.aFloatArray986 = new float[anInt226];
-                this.aByteArray979 = new byte[this.anInt206];
-                this.anInt754 = 0;
-                this.anInt745 = 0;
-            }
-
-            for (; this.anInt745 < this.aByteArrayArray984.length; ++this.anInt745) {
-                if (var1 != null && var1[0] <= 0) {
-                    return null;
-                }
-
-                float[] var2 = this.method593(this.anInt745);
-                if (var2 != null) {
-                    int var3 = this.anInt754;
-                    int var4 = var2.length;
-                    if (var4 > this.anInt206 - var3) {
-                        var4 = this.anInt206 - var3;
-                    }
-
-                    for (int var5 = 0; var5 < var4; ++var5) {
-                        int var6 = (int) (128.0F + var2[var5] * 128.0F);
-                        if ((var6 & -256) != 0) {
-                            var6 = ~var6 >> 31;
-                        }
-
-                        this.aByteArray979[var3++] = (byte) (var6 - 128);
-                    }
-
-                    if (var1 != null) {
-                        var1[0] -= var3 - this.anInt754;
-                    }
-
-                    this.anInt754 = var3;
-                }
-            }
-
-            this.aFloatArray986 = null;
-            byte[] var7 = this.aByteArray979;
-            this.aByteArray979 = null;
-            return new Node_Sub11_Sub1(this.anInt209, var7, this.anInt232, this.anInt327, this.aBoolean994);
         }
+        if (this.aByteArray979 == null) {
+            this.anInt981 = 0;
+            this.aFloatArray986 = new float[anInt226];
+            this.aByteArray979 = new byte[this.anInt206];
+            this.anInt754 = 0;
+            this.anInt745 = 0;
+        }
+
+        for (; this.anInt745 < this.aByteArrayArray984.length; ++this.anInt745) {
+            if (var1 != null && var1[0] <= 0) {
+                return null;
+            }
+
+            float[] var2 = this.method593(this.anInt745);
+            if (var2 != null) {
+                int var3 = this.anInt754;
+                int var4 = var2.length;
+                if (var4 > this.anInt206 - var3) {
+                    var4 = this.anInt206 - var3;
+                }
+
+                for (int var5 = 0; var5 < var4; ++var5) {
+                    int var6 = (int) (128.0F + var2[var5] * 128.0F);
+                    if ((var6 & -256) != 0) {
+                        var6 = ~var6 >> 31;
+                    }
+
+                    this.aByteArray979[var3++] = (byte) (var6 - 128);
+                }
+
+                if (var1 != null) {
+                    var1[0] -= var3 - this.anInt754;
+                }
+
+                this.anInt754 = var3;
+            }
+        }
+
+        this.aFloatArray986 = null;
+        byte[] var7 = this.aByteArray979;
+        this.aByteArray979 = null;
+        return new Node_Sub11_Sub1(this.anInt209, var7, this.anInt232, this.anInt327, this.aBoolean994);
     }
 
     float[] method593(int var1) {

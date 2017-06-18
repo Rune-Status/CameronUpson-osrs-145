@@ -98,20 +98,19 @@ public class Class135 {
 
         if (var5 != 240 && var5 != 247) {
             return this.method951(var1, var5);
-        } else {
-            int var3 = this.aBuffer1741.method817();
-            if (var5 == 247 && var3 > 0) {
-                int var4 = this.aBuffer1741.payload[this.aBuffer1741.caret] & 255;
-                if (var4 >= 241 && var4 <= 243 || var4 == 246 || var4 == 248 || var4 >= 250 && var4 <= 252 || var4 == 254) {
-                    ++this.aBuffer1741.caret;
-                    this.anIntArray1747[var1] = var4;
-                    return this.method951(var1, var4);
-                }
-            }
-
-            this.aBuffer1741.caret += var3;
-            return 0;
         }
+        int var3 = this.aBuffer1741.method817();
+        if (var5 == 247 && var3 > 0) {
+            int var4 = this.aBuffer1741.payload[this.aBuffer1741.caret] & 255;
+            if (var4 >= 241 && var4 <= 243 || var4 == 246 || var4 == 248 || var4 >= 250 && var4 <= 252 || var4 == 254) {
+                ++this.aBuffer1741.caret;
+                this.anIntArray1747[var1] = var4;
+                return this.method951(var1, var4);
+            }
+        }
+
+        this.aBuffer1741.caret += var3;
+        return 0;
     }
 
     int method951(int var1, int var2) {
@@ -122,7 +121,8 @@ public class Class135 {
             if (var7 == 47) {
                 this.aBuffer1741.caret += var4;
                 return 1;
-            } else if (var7 == 81) {
+            }
+            if (var7 == 81) {
                 int var5 = this.aBuffer1741.method868();
                 var4 -= 3;
                 int var6 = this.anIntArray1746[var1];
@@ -130,23 +130,21 @@ public class Class135 {
                 this.anInt1748 = var5;
                 this.aBuffer1741.caret += var4;
                 return 2;
-            } else {
-                this.aBuffer1741.caret += var4;
-                return 3;
             }
-        } else {
-            byte var3 = aByteArray1742[var2 - 128];
-            var4 = var2;
-            if (var3 >= 1) {
-                var4 = var2 | this.aBuffer1741.readUnsignedByte() << 8;
-            }
-
-            if (var3 >= 2) {
-                var4 |= this.aBuffer1741.readUnsignedByte() << 16;
-            }
-
-            return var4;
+            this.aBuffer1741.caret += var4;
+            return 3;
         }
+        byte var3 = aByteArray1742[var2 - 128];
+        var4 = var2;
+        if (var3 >= 1) {
+            var4 = var2 | this.aBuffer1741.readUnsignedByte() << 8;
+        }
+
+        if (var3 >= 2) {
+            var4 |= this.aBuffer1741.readUnsignedByte() << 16;
+        }
+
+        return var4;
     }
 
     int method948() {

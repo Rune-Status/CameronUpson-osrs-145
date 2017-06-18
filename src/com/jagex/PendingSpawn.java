@@ -18,20 +18,17 @@ public final class PendingSpawn extends Node {
         int var7 = Class105.anInt1246 + var6;
         if (var7 < var0 && var7 < var1 && var7 < var2) {
             return false;
-        } else {
-            var7 = Class105.anInt1246 - var6;
-            if (var7 > var0 && var7 > var1 && var7 > var2) {
-                return false;
-            } else {
-                var7 = Class105.anInt1251 + var6;
-                if (var7 < var3 && var7 < var4 && var7 < var5) {
-                    return false;
-                } else {
-                    var7 = Class105.anInt1251 - var6;
-                    return var7 <= var3 || var7 <= var4 || var7 <= var5;
-                }
-            }
         }
+        var7 = Class105.anInt1246 - var6;
+        if (var7 > var0 && var7 > var1 && var7 > var2) {
+            return false;
+        }
+        var7 = Class105.anInt1251 + var6;
+        if (var7 < var3 && var7 < var4 && var7 < var5) {
+            return false;
+        }
+        var7 = Class105.anInt1251 - var6;
+        return var7 <= var3 || var7 <= var4 || var7 <= var5;
     }
 
     static char method276(char var0, int var1) {
@@ -99,10 +96,10 @@ public final class PendingSpawn extends Node {
 
         if (var0 == 338) {
             return 'O';
-        } else if (var0 == 339) {
-            return 'o';
-        } else {
-            return var0 == 376 ? 'Y' : var0;
         }
+        if (var0 == 339) {
+            return 'o';
+        }
+        return var0 == 376 ? 'Y' : var0;
     }
 }

@@ -254,84 +254,82 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
         Class78.aFile841 = HealthBar.aFile416;
         if (!Class78.aFile841.exists()) {
             throw new RuntimeException("");
-        } else {
-            Class130.aBoolean1425 = true;
+        }
+        Class130.aBoolean1425 = true;
 
-            try {
-                var21 = new File(Class10.aString76, "random.dat");
-                int var25;
-                if (var21.exists()) {
-                    Class97.aClass93_1076 = new Class93(new Class82(var21, "rw", 25L), 24, 0);
-                } else {
-                    label220:
-                    for (int var26 = 0; var26 < ClientPreferences.aStringArray351.length; ++var26) {
-                        for (var25 = 0; var25 < Class85.aStringArray874.length; ++var25) {
-                            File var37 = new File(Class85.aStringArray874[var25] + ClientPreferences.aStringArray351[var26] + File.separatorChar + "random.dat");
-                            if (var37.exists()) {
-                                Class97.aClass93_1076 = new Class93(new Class82(var37, "rw", 25L), 24, 0);
-                                break label220;
-                            }
+        try {
+            var21 = new File(Class10.aString76, "random.dat");
+            int var25;
+            if (var21.exists()) {
+                Class97.aClass93_1076 = new Class93(new Class82(var21, "rw", 25L), 24, 0);
+            } else {
+                label220:
+                for (int var26 = 0; var26 < ClientPreferences.aStringArray351.length; ++var26) {
+                    for (var25 = 0; var25 < Class85.aStringArray874.length; ++var25) {
+                        File var37 = new File(Class85.aStringArray874[var25] + ClientPreferences.aStringArray351[var26] + File.separatorChar + "random.dat");
+                        if (var37.exists()) {
+                            Class97.aClass93_1076 = new Class93(new Class82(var37, "rw", 25L), 24, 0);
+                            break label220;
                         }
                     }
                 }
-
-                if (Class97.aClass93_1076 == null) {
-                    RandomAccessFile var36 = new RandomAccessFile(var21, "rw");
-                    var25 = var36.read();
-                    var36.seek(0L);
-                    var36.write(var25);
-                    var36.seek(0L);
-                    var36.close();
-                    Class97.aClass93_1076 = new Class93(new Class82(var21, "rw", 25L), 24, 0);
-                }
-            } catch (IOException var32) {
             }
 
-            Class97.aClass93_1080 = new Class93(new Class82(MouseRecorder.method211("main_file_cache.dat2"), "rw", 1048576000L), 5200, 0);
-            Class97.aClass93_1077 = new Class93(new Class82(MouseRecorder.method211("main_file_cache.idx255"), "rw", 1048576L), 6000, 0);
-            Class21.aClass93Array141 = new Class93[ItemTable.anInt328];
-
-            for (int var27 = 0; var27 < ItemTable.anInt328; ++var27) {
-                Class21.aClass93Array141[var27] = new Class93(new Class82(MouseRecorder.method211("main_file_cache.idx" + var27), "rw", 1048576L), 6000, 0);
+            if (Class97.aClass93_1076 == null) {
+                RandomAccessFile var36 = new RandomAccessFile(var21, "rw");
+                var25 = var36.read();
+                var36.seek(0L);
+                var36.write(var25);
+                var36.seek(0L);
+                var36.close();
+                Class97.aClass93_1076 = new Class93(new Class82(var21, "rw", 25L), 24, 0);
             }
-
+        } catch (IOException var32) {
         }
+
+        Class97.aClass93_1080 = new Class93(new Class82(MouseRecorder.method211("main_file_cache.dat2"), "rw", 1048576000L), 5200, 0);
+        Class97.aClass93_1077 = new Class93(new Class82(MouseRecorder.method211("main_file_cache.idx255"), "rw", 1048576L), 6000, 0);
+        Class21.aClass93Array141 = new Class93[ItemTable.anInt328];
+
+        for (int var27 = 0; var27 < ItemTable.anInt328; ++var27) {
+            Class21.aClass93Array141[var27] = new Class93(new Class82(MouseRecorder.method211("main_file_cache.idx" + var27), "rw", 1048576L), 6000, 0);
+        }
+
     }
 
     public static boolean method220(int var0) {
         if (Class70.aBooleanArray716[var0]) {
             return true;
-        } else if (!Class51.aReferenceTable382.method1106(var0)) {
+        }
+        if (!Class51.aReferenceTable382.method1106(var0)) {
             return false;
-        } else {
-            int var1 = Class51.aReferenceTable382.method1101(var0);
-            if (var1 == 0) {
-                Class70.aBooleanArray716[var0] = true;
-                return true;
-            } else {
-                if (InterfaceComponent.interfaces[var0] == null) {
-                    InterfaceComponent.interfaces[var0] = new InterfaceComponent[var1];
-                }
+        }
+        int var1 = Class51.aReferenceTable382.method1101(var0);
+        if (var1 == 0) {
+            Class70.aBooleanArray716[var0] = true;
+            return true;
+        }
+        if (InterfaceComponent.interfaces[var0] == null) {
+            InterfaceComponent.interfaces[var0] = new InterfaceComponent[var1];
+        }
 
-                for (int var2 = 0; var2 < var1; ++var2) {
-                    if (InterfaceComponent.interfaces[var0][var2] == null) {
-                        byte[] var3 = Class51.aReferenceTable382.method1085(var0, var2);
-                        if (var3 != null) {
-                            InterfaceComponent.interfaces[var0][var2] = new InterfaceComponent();
-                            InterfaceComponent.interfaces[var0][var2].uid = var2 + (var0 << 16);
-                            if (var3[0] == -1) {
-                                InterfaceComponent.interfaces[var0][var2].method1027(new Buffer(var3));
-                            } else {
-                                InterfaceComponent.interfaces[var0][var2].method1026(new Buffer(var3));
-                            }
-                        }
+        for (int var2 = 0; var2 < var1; ++var2) {
+            if (InterfaceComponent.interfaces[var0][var2] == null) {
+                byte[] var3 = Class51.aReferenceTable382.method1085(var0, var2);
+                if (var3 != null) {
+                    InterfaceComponent.interfaces[var0][var2] = new InterfaceComponent();
+                    InterfaceComponent.interfaces[var0][var2].uid = var2 + (var0 << 16);
+                    if (var3[0] == -1) {
+                        InterfaceComponent.interfaces[var0][var2].method1027(new Buffer(var3));
+                    } else {
+                        InterfaceComponent.interfaces[var0][var2].method1026(new Buffer(var3));
                     }
                 }
-
-                Class70.aBooleanArray716[var0] = true;
-                return true;
             }
         }
+
+        Class70.aBooleanArray716[var0] = true;
+        return true;
     }
 
     static void method219(int var0, int var1, int var2, int var3, int var4, int var5, int var6) {

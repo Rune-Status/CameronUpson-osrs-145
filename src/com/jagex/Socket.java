@@ -61,7 +61,7 @@ public final class Socket implements Runnable {
         }
     }
 
-    protected void finalize0() {
+    protected void finalize() {
         this.method882();
     }
 
@@ -159,26 +159,25 @@ public final class Socket implements Runnable {
             if (this.aBoolean1416) {
                 this.aBoolean1416 = false;
                 throw new IOException();
-            } else {
-                if (this.aByteArray1423 == null) {
-                    this.aByteArray1423 = new byte[5000];
+            }
+            if (this.aByteArray1423 == null) {
+                this.aByteArray1423 = new byte[5000];
+            }
+
+            synchronized (this) {
+                for (int var5 = 0; var5 < var3; ++var5) {
+                    this.aByteArray1423[this.anInt1419] = var1[var5 + var2];
+                    this.anInt1419 = (this.anInt1419 + 1) % 5000;
+                    if (this.anInt1419 == (this.anInt1421 + 4900) % 5000) {
+                        throw new IOException();
+                    }
                 }
 
-                synchronized (this) {
-                    for (int var5 = 0; var5 < var3; ++var5) {
-                        this.aByteArray1423[this.anInt1419] = var1[var5 + var2];
-                        this.anInt1419 = (this.anInt1419 + 1) % 5000;
-                        if (this.anInt1419 == (this.anInt1421 + 4900) % 5000) {
-                            throw new IOException();
-                        }
-                    }
-
-                    if (this.aClass103_1422 == null) {
-                        this.aClass103_1422 = this.aClass108_1420.method747(this, 3);
-                    }
-
-                    this.notifyAll();
+                if (this.aClass103_1422 == null) {
+                    this.aClass103_1422 = this.aClass108_1420.method747(this, 3);
                 }
+
+                this.notifyAll();
             }
         }
     }

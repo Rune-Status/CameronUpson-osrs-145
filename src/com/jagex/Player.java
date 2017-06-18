@@ -277,9 +277,8 @@ public final class Player extends PathingEntity {
             } catch (Exception var14) {
                 return -1;
             }
-        } else {
-            return -2;
         }
+        return -2;
     }
 
     static void method192(World[] var0, int var1, int var2, int[] var3, int[] var4) {
@@ -446,66 +445,64 @@ public final class Player extends PathingEntity {
     protected final Model method191() {
         if (this.appearance == null) {
             return null;
-        } else {
-            AnimationSequence var1 = this.animation != -1 && this.anInt791 == 0 ? Applet_Sub1.method251(this.animation) : null;
-            AnimationSequence var2 = this.anInt768 == -1 || this.aBoolean223 || this.anInt754 == this.anInt768 && var1 != null ? null : Applet_Sub1.method251(this.anInt768);
-            Model var3 = this.appearance.getModel(var1, this.animationFrame, var2, this.subAnimationFrame);
-            if (var3 == null) {
-                return null;
-            } else {
-                var3.method724();
-                this.anInt803 = var3.height;
-                Model var4;
-                Model[] var5;
-                if (!this.aBoolean223 && this.anInt771 != -1 && this.anInt782 != -1) {
-                    var4 = Node_Sub21_Sub15.method1115(this.anInt771).method1050(this.anInt782);
-                    if (var4 != null) {
-                        var4.method738(0, -this.anInt787, 0);
-                        var5 = new Model[]{var3, var4};
-                        var3 = new Model(var5, 2);
-                    }
-                }
-
-                if (!this.aBoolean223 && this.aModel218 != null) {
-                    if (Client.engineCycle >= this.anInt226) {
-                        this.aModel218 = null;
-                    }
-
-                    if (Client.engineCycle >= this.anInt214 && Client.engineCycle < this.anInt226) {
-                        var4 = this.aModel218;
-                        var4.method738(this.anInt228 - this.strictX, this.anInt225 - this.anInt217, this.anInt212 - this.strictY);
-                        if (this.orientation == 512) {
-                            var4.method725();
-                            var4.method725();
-                            var4.method725();
-                        } else if (this.orientation == 1024) {
-                            var4.method725();
-                            var4.method725();
-                        } else if (this.orientation == 1536) {
-                            var4.method725();
-                        }
-
-                        var5 = new Model[]{var3, var4};
-                        var3 = new Model(var5, 2);
-                        if (this.orientation == 512) {
-                            var4.method725();
-                        } else if (this.orientation == 1024) {
-                            var4.method725();
-                            var4.method725();
-                        } else if (this.orientation == 1536) {
-                            var4.method725();
-                            var4.method725();
-                            var4.method725();
-                        }
-
-                        var4.method738(this.strictX - this.anInt228, this.anInt217 - this.anInt225, this.strictY - this.anInt212);
-                    }
-                }
-
-                var3.aBoolean1259 = true;
-                return var3;
+        }
+        AnimationSequence var1 = this.animation != -1 && this.anInt791 == 0 ? Applet_Sub1.method251(this.animation) : null;
+        AnimationSequence var2 = this.anInt768 == -1 || this.aBoolean223 || this.anInt754 == this.anInt768 && var1 != null ? null : Applet_Sub1.method251(this.anInt768);
+        Model var3 = this.appearance.getModel(var1, this.animationFrame, var2, this.subAnimationFrame);
+        if (var3 == null) {
+            return null;
+        }
+        var3.method724();
+        this.anInt803 = var3.height;
+        Model var4;
+        Model[] var5;
+        if (!this.aBoolean223 && this.anInt771 != -1 && this.anInt782 != -1) {
+            var4 = Node_Sub21_Sub15.method1115(this.anInt771).method1050(this.anInt782);
+            if (var4 != null) {
+                var4.method738(0, -this.anInt787, 0);
+                var5 = new Model[]{var3, var4};
+                var3 = new Model(var5, 2);
             }
         }
+
+        if (!this.aBoolean223 && this.aModel218 != null) {
+            if (Client.engineCycle >= this.anInt226) {
+                this.aModel218 = null;
+            }
+
+            if (Client.engineCycle >= this.anInt214 && Client.engineCycle < this.anInt226) {
+                var4 = this.aModel218;
+                var4.method738(this.anInt228 - this.strictX, this.anInt225 - this.anInt217, this.anInt212 - this.strictY);
+                if (this.orientation == 512) {
+                    var4.method725();
+                    var4.method725();
+                    var4.method725();
+                } else if (this.orientation == 1024) {
+                    var4.method725();
+                    var4.method725();
+                } else if (this.orientation == 1536) {
+                    var4.method725();
+                }
+
+                var5 = new Model[]{var3, var4};
+                var3 = new Model(var5, 2);
+                if (this.orientation == 512) {
+                    var4.method725();
+                } else if (this.orientation == 1024) {
+                    var4.method725();
+                    var4.method725();
+                } else if (this.orientation == 1536) {
+                    var4.method725();
+                    var4.method725();
+                    var4.method725();
+                }
+
+                var4.method738(this.strictX - this.anInt228, this.anInt217 - this.anInt225, this.strictY - this.anInt212);
+            }
+        }
+
+        var3.aBoolean1259 = true;
+        return var3;
     }
 
     final void method199(int var1, int var2, byte var3) {

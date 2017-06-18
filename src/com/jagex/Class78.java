@@ -12,198 +12,214 @@ final class Class78 implements Class66 {
         if (var0 == 3300) {
             Class63.anIntArray645[++Class63.anInt644 - 1] = Client.engineCycle;
             return 1;
-        } else {
-            int var3;
-            int var4;
-            int[] var5;
-            int var6;
-            ItemTable var7;
-            int var8;
-            if (var0 == 3301) {
-                Class63.anInt644 -= 2;
-                var3 = Class63.anIntArray645[Class63.anInt644];
-                var4 = Class63.anIntArray645[Class63.anInt644 + 1];
-                var5 = Class63.anIntArray645;
-                var6 = ++Class63.anInt644 - 1;
-                var7 = ItemTable.itemTables.lookup((long) var3);
-                if (var7 == null) {
-                    var8 = -1;
-                } else if (var4 >= 0 && var4 < var7.ids.length) {
-                    var8 = var7.ids[var4];
-                } else {
-                    var8 = -1;
+        }
+        int var3;
+        int var4;
+        int[] var5;
+        int var6;
+        ItemTable var7;
+        int var8;
+        if (var0 == 3301) {
+            Class63.anInt644 -= 2;
+            var3 = Class63.anIntArray645[Class63.anInt644];
+            var4 = Class63.anIntArray645[Class63.anInt644 + 1];
+            var5 = Class63.anIntArray645;
+            var6 = ++Class63.anInt644 - 1;
+            var7 = ItemTable.itemTables.lookup((long) var3);
+            if (var7 == null) {
+                var8 = -1;
+            } else if (var4 >= 0 && var4 < var7.ids.length) {
+                var8 = var7.ids[var4];
+            } else {
+                var8 = -1;
+            }
+
+            var5[var6] = var8;
+            return 1;
+        }
+        if (var0 == 3302) {
+            Class63.anInt644 -= 2;
+            var3 = Class63.anIntArray645[Class63.anInt644];
+            var4 = Class63.anIntArray645[Class63.anInt644 + 1];
+            var5 = Class63.anIntArray645;
+            var6 = ++Class63.anInt644 - 1;
+            var7 = ItemTable.itemTables.lookup((long) var3);
+            if (var7 == null) {
+                var8 = 0;
+            } else if (var4 >= 0 && var4 < var7.stackSizes.length) {
+                var8 = var7.stackSizes[var4];
+            } else {
+                var8 = 0;
+            }
+
+            var5[var6] = var8;
+            return 1;
+        }
+        if (var0 == 3303) {
+            Class63.anInt644 -= 2;
+            var3 = Class63.anIntArray645[Class63.anInt644];
+            var4 = Class63.anIntArray645[Class63.anInt644 + 1];
+            Class63.anIntArray645[++Class63.anInt644 - 1] = Class18.method137(var3, var4);
+            return 1;
+        }
+        int var10;
+        if (var0 == 3304) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            int[] var9 = Class63.anIntArray645;
+            var10 = ++Class63.anInt644 - 1;
+            Node_Sub21_Sub19 var11 = (Node_Sub21_Sub19) Node_Sub21_Sub19.aReferenceCache2025.method973((long) var3);
+            Node_Sub21_Sub19 var12;
+            if (var11 != null) {
+                var12 = var11;
+            } else {
+                byte[] var13 = Node_Sub21_Sub19.aReferenceTable2012.method1085(5, var3);
+                var11 = new Node_Sub21_Sub19();
+                if (var13 != null) {
+                    var11.method1052(new Buffer(var13));
                 }
 
-                var5[var6] = var8;
-                return 1;
-            } else if (var0 == 3302) {
-                Class63.anInt644 -= 2;
-                var3 = Class63.anIntArray645[Class63.anInt644];
-                var4 = Class63.anIntArray645[Class63.anInt644 + 1];
-                var5 = Class63.anIntArray645;
-                var6 = ++Class63.anInt644 - 1;
-                var7 = ItemTable.itemTables.lookup((long) var3);
-                if (var7 == null) {
-                    var8 = 0;
-                } else if (var4 >= 0 && var4 < var7.stackSizes.length) {
-                    var8 = var7.stackSizes[var4];
-                } else {
-                    var8 = 0;
-                }
+                Node_Sub21_Sub19.aReferenceCache2025.method975(var11, (long) var3);
+                var12 = var11;
+            }
 
-                var5[var6] = var8;
-                return 1;
-            } else if (var0 == 3303) {
+            var9[var10] = var12.anInt206;
+            return 1;
+        }
+        if (var0 == 3305) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            Class63.anIntArray645[++Class63.anInt644 - 1] = Client.currentLevels[var3];
+            return 1;
+        }
+        if (var0 == 3306) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            Class63.anIntArray645[++Class63.anInt644 - 1] = Client.levels[var3];
+            return 1;
+        }
+        if (var0 == 3307) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            Class63.anIntArray645[++Class63.anInt644 - 1] = Client.experiences[var3];
+            return 1;
+        }
+        if (var0 == 3308) {
+            var3 = Player.floorLevel;
+            var4 = (Client.player.strictX >> 7) + Class62.anInt636;
+            var10 = (Client.player.strictY >> 7) + Class49.anInt377;
+            Class63.anIntArray645[++Class63.anInt644 - 1] = (var3 << 28) + (var4 << 14) + var10;
+            return 1;
+        }
+        if (var0 == 3309) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            Class63.anIntArray645[++Class63.anInt644 - 1] = var3 >> 14 & 16383;
+            return 1;
+        }
+        if (var0 == 3310) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            Class63.anIntArray645[++Class63.anInt644 - 1] = var3 >> 28;
+            return 1;
+        }
+        if (var0 == 3311) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            Class63.anIntArray645[++Class63.anInt644 - 1] = var3 & 16383;
+            return 1;
+        }
+        if (var0 == 3312) {
+            Class63.anIntArray645[++Class63.anInt644 - 1] = Client.membersWorld ? 1 : 0;
+            return 1;
+        }
+        if (var0 == 3313) {
+            Class63.anInt644 -= 2;
+            var3 = Class63.anIntArray645[Class63.anInt644] + '耀';
+            var4 = Class63.anIntArray645[Class63.anInt644 + 1];
+            var5 = Class63.anIntArray645;
+            var6 = ++Class63.anInt644 - 1;
+            var7 = ItemTable.itemTables.lookup((long) var3);
+            if (var7 == null) {
+                var8 = -1;
+            } else if (var4 >= 0 && var4 < var7.ids.length) {
+                var8 = var7.ids[var4];
+            } else {
+                var8 = -1;
+            }
+
+            var5[var6] = var8;
+            return 1;
+        }
+        if (var0 != 3314) {
+            if (var0 == 3315) {
                 Class63.anInt644 -= 2;
-                var3 = Class63.anIntArray645[Class63.anInt644];
+                var3 = Class63.anIntArray645[Class63.anInt644] + '耀';
                 var4 = Class63.anIntArray645[Class63.anInt644 + 1];
                 Class63.anIntArray645[++Class63.anInt644 - 1] = Class18.method137(var3, var4);
                 return 1;
-            } else {
-                int var10;
-                if (var0 == 3304) {
-                    var3 = Class63.anIntArray645[--Class63.anInt644];
-                    int[] var9 = Class63.anIntArray645;
-                    var10 = ++Class63.anInt644 - 1;
-                    Node_Sub21_Sub19 var11 = (Node_Sub21_Sub19) Node_Sub21_Sub19.aReferenceCache2025.method973((long) var3);
-                    Node_Sub21_Sub19 var12;
-                    if (var11 != null) {
-                        var12 = var11;
-                    } else {
-                        byte[] var13 = Node_Sub21_Sub19.aReferenceTable2012.method1085(5, var3);
-                        var11 = new Node_Sub21_Sub19();
-                        if (var13 != null) {
-                            var11.method1052(new Buffer(var13));
-                        }
-
-                        Node_Sub21_Sub19.aReferenceCache2025.method975(var11, (long) var3);
-                        var12 = var11;
-                    }
-
-                    var9[var10] = var12.anInt206;
-                    return 1;
-                } else if (var0 == 3305) {
-                    var3 = Class63.anIntArray645[--Class63.anInt644];
-                    Class63.anIntArray645[++Class63.anInt644 - 1] = Client.currentLevels[var3];
-                    return 1;
-                } else if (var0 == 3306) {
-                    var3 = Class63.anIntArray645[--Class63.anInt644];
-                    Class63.anIntArray645[++Class63.anInt644 - 1] = Client.levels[var3];
-                    return 1;
-                } else if (var0 == 3307) {
-                    var3 = Class63.anIntArray645[--Class63.anInt644];
-                    Class63.anIntArray645[++Class63.anInt644 - 1] = Client.experiences[var3];
-                    return 1;
-                } else if (var0 == 3308) {
-                    var3 = Player.floorLevel;
-                    var4 = (Client.player.strictX >> 7) + Class62.anInt636;
-                    var10 = (Client.player.strictY >> 7) + Class49.anInt377;
-                    Class63.anIntArray645[++Class63.anInt644 - 1] = (var3 << 28) + (var4 << 14) + var10;
-                    return 1;
-                } else if (var0 == 3309) {
-                    var3 = Class63.anIntArray645[--Class63.anInt644];
-                    Class63.anIntArray645[++Class63.anInt644 - 1] = var3 >> 14 & 16383;
-                    return 1;
-                } else if (var0 == 3310) {
-                    var3 = Class63.anIntArray645[--Class63.anInt644];
-                    Class63.anIntArray645[++Class63.anInt644 - 1] = var3 >> 28;
-                    return 1;
-                } else if (var0 == 3311) {
-                    var3 = Class63.anIntArray645[--Class63.anInt644];
-                    Class63.anIntArray645[++Class63.anInt644 - 1] = var3 & 16383;
-                    return 1;
-                } else if (var0 == 3312) {
-                    Class63.anIntArray645[++Class63.anInt644 - 1] = Client.membersWorld ? 1 : 0;
-                    return 1;
-                } else if (var0 == 3313) {
-                    Class63.anInt644 -= 2;
-                    var3 = Class63.anIntArray645[Class63.anInt644] + '耀';
-                    var4 = Class63.anIntArray645[Class63.anInt644 + 1];
-                    var5 = Class63.anIntArray645;
-                    var6 = ++Class63.anInt644 - 1;
-                    var7 = ItemTable.itemTables.lookup((long) var3);
-                    if (var7 == null) {
-                        var8 = -1;
-                    } else if (var4 >= 0 && var4 < var7.ids.length) {
-                        var8 = var7.ids[var4];
-                    } else {
-                        var8 = -1;
-                    }
-
-                    var5[var6] = var8;
-                    return 1;
-                } else if (var0 != 3314) {
-                    if (var0 == 3315) {
-                        Class63.anInt644 -= 2;
-                        var3 = Class63.anIntArray645[Class63.anInt644] + '耀';
-                        var4 = Class63.anIntArray645[Class63.anInt644 + 1];
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = Class18.method137(var3, var4);
-                        return 1;
-                    } else if (var0 == 3316) {
-                        if (Client.rights >= 2) {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = Client.rights;
-                        } else {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
-                        }
-
-                        return 1;
-                    } else if (var0 == 3317) {
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = Client.anInt1466;
-                        return 1;
-                    } else if (var0 == 3318) {
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = Client.currentWorld;
-                        return 1;
-                    } else if (var0 == 3321) {
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = Client.energy;
-                        return 1;
-                    } else if (var0 == 3322) {
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = Client.weight;
-                        return 1;
-                    } else if (var0 == 3323) {
-                        if (Client.aBoolean1636) {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = 1;
-                        } else {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
-                        }
-
-                        return 1;
-                    } else if (var0 == 3324) {
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = Client.currentWorldMask;
-                        return 1;
-                    } else if (var0 == 3325) {
-                        Class63.anInt644 -= 4;
-                        var3 = Class63.anIntArray645[Class63.anInt644];
-                        var4 = Class63.anIntArray645[Class63.anInt644 + 1];
-                        var10 = Class63.anIntArray645[Class63.anInt644 + 2];
-                        var6 = Class63.anIntArray645[Class63.anInt644 + 3];
-                        var3 += var4 << 14;
-                        var3 += var10 << 28;
-                        var3 += var6;
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = var3;
-                        return 1;
-                    } else {
-                        return 2;
-                    }
-                } else {
-                    Class63.anInt644 -= 2;
-                    var3 = Class63.anIntArray645[Class63.anInt644] + '耀';
-                    var4 = Class63.anIntArray645[Class63.anInt644 + 1];
-                    var5 = Class63.anIntArray645;
-                    var6 = ++Class63.anInt644 - 1;
-                    var7 = ItemTable.itemTables.lookup((long) var3);
-                    if (var7 == null) {
-                        var8 = 0;
-                    } else if (var4 >= 0 && var4 < var7.stackSizes.length) {
-                        var8 = var7.stackSizes[var4];
-                    } else {
-                        var8 = 0;
-                    }
-
-                    var5[var6] = var8;
-                    return 1;
-                }
             }
+            if (var0 == 3316) {
+                if (Client.rights >= 2) {
+                    Class63.anIntArray645[++Class63.anInt644 - 1] = Client.rights;
+                } else {
+                    Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
+                }
+
+                return 1;
+            }
+            if (var0 == 3317) {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.anInt1466;
+                return 1;
+            }
+            if (var0 == 3318) {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.currentWorld;
+                return 1;
+            }
+            if (var0 == 3321) {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.energy;
+                return 1;
+            }
+            if (var0 == 3322) {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.weight;
+                return 1;
+            }
+            if (var0 == 3323) {
+                if (Client.aBoolean1636) {
+                    Class63.anIntArray645[++Class63.anInt644 - 1] = 1;
+                } else {
+                    Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
+                }
+
+                return 1;
+            }
+            if (var0 == 3324) {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.currentWorldMask;
+                return 1;
+            }
+            if (var0 == 3325) {
+                Class63.anInt644 -= 4;
+                var3 = Class63.anIntArray645[Class63.anInt644];
+                var4 = Class63.anIntArray645[Class63.anInt644 + 1];
+                var10 = Class63.anIntArray645[Class63.anInt644 + 2];
+                var6 = Class63.anIntArray645[Class63.anInt644 + 3];
+                var3 += var4 << 14;
+                var3 += var10 << 28;
+                var3 += var6;
+                Class63.anIntArray645[++Class63.anInt644 - 1] = var3;
+                return 1;
+            }
+            return 2;
         }
+        Class63.anInt644 -= 2;
+        var3 = Class63.anIntArray645[Class63.anInt644] + '耀';
+        var4 = Class63.anIntArray645[Class63.anInt644 + 1];
+        var5 = Class63.anIntArray645;
+        var6 = ++Class63.anInt644 - 1;
+        var7 = ItemTable.itemTables.lookup((long) var3);
+        if (var7 == null) {
+            var8 = 0;
+        } else if (var4 >= 0 && var4 < var7.stackSizes.length) {
+            var8 = var7.stackSizes[var4];
+        } else {
+            var8 = 0;
+        }
+
+        var5[var6] = var8;
+        return 1;
     }
 
     static void method468(boolean var0) {

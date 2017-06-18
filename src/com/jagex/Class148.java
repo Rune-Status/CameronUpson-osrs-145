@@ -20,21 +20,21 @@ public class Class148 implements EnumOrdinal {
     public static byte[] method1000(Object var0, boolean var1) {
         if (var0 == null) {
             return null;
-        } else if (var0 instanceof byte[]) {
+        }
+        if (var0 instanceof byte[]) {
             if (var1) {
                 int var3 = ((byte[]) var0).length;
                 byte[] var4 = new byte[var3];
                 System.arraycopy(var0, 0, var4, 0, var3);
                 return var4;
-            } else {
-                return (byte[]) var0;
             }
-        } else if (var0 instanceof Class111) {
+            return (byte[]) var0;
+        }
+        if (var0 instanceof Class111) {
             Class111 var2 = (Class111) var0;
             return var2.method768();
-        } else {
-            throw new IllegalArgumentException();
         }
+        throw new IllegalArgumentException();
     }
 
     public int ordinal() {

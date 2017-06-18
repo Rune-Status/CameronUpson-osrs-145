@@ -88,9 +88,8 @@ public abstract class Class6 {
     int method20(int var1, int var2) {
         if (var1 >= 0 && var2 >= 0) {
             return var1 < 64 && var2 < 64 ? this.aShortArrayArrayArray47[0][var1][var2] - 1 : -1;
-        } else {
-            return -1;
         }
+        return -1;
     }
 
     int method25() {

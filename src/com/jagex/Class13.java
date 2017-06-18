@@ -398,19 +398,19 @@ public class Class13 {
     boolean method124(int var1, Class9 var2, Class13[] var3, Node_Sub21_Sub26_Sub2[] var4) {
         if (!this.method107(var1)) {
             return false;
-        } else if (this.aClass6_Sub2_109 == null && this.aLinkedList103.isEmpty()) {
-            return false;
-        } else {
-            this.method114(var3);
-            this.aSprite105.method335();
-            if (this.aClass6_Sub2_109 != null) {
-                this.method111(var2, var3, var4);
-            } else {
-                this.method106(var2, var4);
-            }
-
-            return true;
         }
+        if (this.aClass6_Sub2_109 == null && this.aLinkedList103.isEmpty()) {
+            return false;
+        }
+        this.method114(var3);
+        this.aSprite105.method335();
+        if (this.aClass6_Sub2_109 != null) {
+            this.method111(var2, var3, var4);
+        } else {
+            this.method106(var2, var4);
+        }
+
+        return true;
     }
 
     void method97(int var1, int var2, int var3, HashSet var4) {
@@ -516,23 +516,22 @@ public class Class13 {
     boolean method114(Class13[] var1) {
         if (this.anIntArrayArray98 != null) {
             return false;
-        } else {
-            Class18 var2 = new Class18(64, 64);
-            if (this.aClass6_Sub2_109 != null) {
-                this.method101(0, 0, 64, 64, this.aClass6_Sub2_109, var2);
-            } else {
-                Iterator var3 = this.aLinkedList103.iterator();
-
-                while (var3.hasNext()) {
-                    Class6_Sub1 var4 = (Class6_Sub1) var3.next();
-                    this.method101(var4.method164() * 8, var4.method165() * 8, 8, 8, var4, var2);
-                }
-            }
-
-            this.method113(var1, var2);
-            this.method99(var2);
-            return true;
         }
+        Class18 var2 = new Class18(64, 64);
+        if (this.aClass6_Sub2_109 != null) {
+            this.method101(0, 0, 64, 64, this.aClass6_Sub2_109, var2);
+        } else {
+            Iterator var3 = this.aLinkedList103.iterator();
+
+            while (var3.hasNext()) {
+                Class6_Sub1 var4 = (Class6_Sub1) var3.next();
+                this.method101(var4.method164() * 8, var4.method165() * 8, 8, 8, var4, var2);
+            }
+        }
+
+        this.method113(var1, var2);
+        this.method99(var2);
+        return true;
     }
 
     void method113(Class13[] var1, Class18 var2) {
@@ -722,31 +721,28 @@ public class Class13 {
             Class77 var2 = Class77.method465(var1.anInt214);
             if (var2 == null) {
                 return null;
-            } else {
-                Font var3 = (Font) this.aHashMap97.get(var2);
-                if (var3 == null) {
-                    return null;
-                } else {
-                    int var4 = var3.method1168(var1.aString2091, 1000000);
-                    String[] var5 = new String[var4];
-                    var3.method1181(var1.aString2091, null, var5);
-                    int var6 = var5.length * var3.anInt221 / 2;
-                    int var7 = 0;
+            }
+            Font var3 = (Font) this.aHashMap97.get(var2);
+            if (var3 == null) {
+                return null;
+            }
+            int var4 = var3.method1168(var1.aString2091, 1000000);
+            String[] var5 = new String[var4];
+            var3.method1181(var1.aString2091, null, var5);
+            int var6 = var5.length * var3.anInt221 / 2;
+            int var7 = 0;
 
-                    for (int var9 = 0; var9 < var5.length; ++var9) {
-                        String var10 = var5[var9];
-                        int var11 = var3.getTextWidth(var10);
-                        if (var11 > var7) {
-                            var7 = var11;
-                        }
-                    }
-
-                    return new Class2(var1.aString2091, var7, var6, var2);
+            for (int var9 = 0; var9 < var5.length; ++var9) {
+                String var10 = var5[var9];
+                int var11 = var3.getTextWidth(var10);
+                if (var11 > var7) {
+                    var7 = var11;
                 }
             }
-        } else {
-            return null;
+
+            return new Class2(var1.aString2091, var7, var6, var2);
         }
+        return null;
     }
 
     void method93(Class24 var1, int var2, int var3, float var4) {
@@ -837,31 +833,28 @@ public class Class13 {
                 }
 
                 return var6;
-            } else {
-                return var6;
             }
-        } else {
             return var6;
         }
+        return var6;
     }
 
     int method110(int var1, int var2) {
         if (this.aClass6_Sub2_109 != null) {
             return this.aClass6_Sub2_109.method20(var1, var2);
-        } else {
-            if (!this.aLinkedList103.isEmpty()) {
-                Iterator var3 = this.aLinkedList103.iterator();
+        }
+        if (!this.aLinkedList103.isEmpty()) {
+            Iterator var3 = this.aLinkedList103.iterator();
 
-                while (var3.hasNext()) {
-                    Class6_Sub1 var4 = (Class6_Sub1) var3.next();
-                    if (var4.method166(var1, var2)) {
-                        return var4.method20(var1, var2);
-                    }
+            while (var3.hasNext()) {
+                Class6_Sub1 var4 = (Class6_Sub1) var3.next();
+                if (var4.method166(var1, var2)) {
+                    return var4.method20(var1, var2);
                 }
             }
-
-            return -1;
         }
+
+        return -1;
     }
 
     void method94(int var1, int var2, int var3, int var4) {
@@ -941,11 +934,10 @@ public class Class13 {
     boolean method107(int var1) {
         if (this.aSprite105 != null && var1 == this.anInt99) {
             return false;
-        } else {
-            this.anInt99 = var1;
-            this.aSprite105 = new Sprite(this.anInt99 * 64, this.anInt99 * 64);
-            return true;
         }
+        this.anInt99 = var1;
+        this.aSprite105 = new Sprite(this.anInt99 * 64, this.anInt99 * 64);
+        return true;
     }
 
     void method90(int var1, int var2, int var3, int var4, int var5, int var6, Class13 var7, Class18 var8) {

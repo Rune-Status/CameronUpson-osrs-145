@@ -36,10 +36,9 @@ public class NodeDeque<T extends Node> {
         Node var1 = this.tail.next;
         if (var1 == this.tail) {
             return null;
-        } else {
-            var1.unlink();
-            return (T) var1;
         }
+        var1.unlink();
+        return (T) var1;
     }
 
     public T method995() {
@@ -47,10 +46,9 @@ public class NodeDeque<T extends Node> {
         if (var1 == this.tail) {
             this.head = null;
             return null;
-        } else {
-            this.head = var1.next;
-            return (T) var1;
         }
+        this.head = var1.next;
+        return (T) var1;
     }
 
     public T current() {
@@ -58,10 +56,9 @@ public class NodeDeque<T extends Node> {
         if (var1 == this.tail) {
             this.head = null;
             return null;
-        } else {
-            this.head = var1.previous;
-            return (T) var1;
         }
+        this.head = var1.previous;
+        return (T) var1;
     }
 
     public T method990() {
@@ -69,10 +66,9 @@ public class NodeDeque<T extends Node> {
         if (var1 == this.tail) {
             this.head = null;
             return null;
-        } else {
-            this.head = var1.previous;
-            return (T) var1;
         }
+        this.head = var1.previous;
+        return (T) var1;
     }
 
     public void method993(T var1) {
@@ -102,19 +98,17 @@ public class NodeDeque<T extends Node> {
         if (var1 == this.tail) {
             this.head = null;
             return null;
-        } else {
-            this.head = var1.next;
-            return (T) var1;
         }
+        this.head = var1.next;
+        return (T) var1;
     }
 
     public T method996() {
         Node var1 = this.tail.previous;
         if (var1 == this.tail) {
             return null;
-        } else {
-            var1.unlink();
-            return (T) var1;
         }
+        var1.unlink();
+        return (T) var1;
     }
 }

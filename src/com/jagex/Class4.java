@@ -30,38 +30,41 @@ public final class Class4 implements KeyListener, FocusListener {
             try {
                 if (!Class40.aString344.startsWith("win")) {
                     throw new Exception();
-                } else if (!var0.startsWith("http://") && !var0.startsWith("https://")) {
-                    throw new Exception();
-                } else {
-                    String var11 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-
-                    for (int var4 = 0; var4 < var0.length(); ++var4) {
-                        if (var11.indexOf(var0.charAt(var4)) == -1) {
-                            throw new Exception();
-                        }
-                    }
-
-                    Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var0 + "\"");
-                    return true;
                 }
+                if (!var0.startsWith("http://") && !var0.startsWith("https://")) {
+                    throw new Exception();
+                }
+                String var11 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+
+                for (int var4 = 0; var4 < var0.length(); ++var4) {
+                    if (var11.indexOf(var0.charAt(var4)) == -1) {
+                        throw new Exception();
+                    }
+                }
+
+                Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var0 + "\"");
+                return true;
             } catch (Throwable var5) {
                 return false;
             }
-        } else if (var1 == 1) {
+        }
+        if (var1 == 1) {
             try {
                 Object var10 = Class29.method189(Class40.anApplet343, var2, new Object[]{(new URL(Class40.anApplet343.getCodeBase(), var0)).toString()});
                 return var10 != null;
             } catch (Throwable var6) {
                 return false;
             }
-        } else if (var1 == 2) {
+        }
+        if (var1 == 2) {
             try {
                 Class40.anApplet343.getAppletContext().showDocument(new URL(Class40.anApplet343.getCodeBase(), var0), "_blank");
                 return true;
             } catch (Exception var7) {
                 return false;
             }
-        } else if (var1 == 3) {
+        }
+        if (var1 == 3) {
             try {
                 Applet var3 = Class40.anApplet343;
                 JSObject.getWindow(var3).call("loggedout", (Object[]) null);
@@ -74,9 +77,8 @@ public final class Class4 implements KeyListener, FocusListener {
             } catch (Exception var8) {
                 return false;
             }
-        } else {
-            throw new IllegalArgumentException();
         }
+        throw new IllegalArgumentException();
     }
 
     static void method16() {

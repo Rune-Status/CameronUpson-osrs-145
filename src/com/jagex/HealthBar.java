@@ -145,13 +145,11 @@ public class HealthBar extends Node {
 
             if (var2.anInt232 + var2.cycle + this.definition.anInt228 > var1) {
                 return var2;
-            } else {
-                var2.unlink();
-                return null;
             }
-        } else {
+            var2.unlink();
             return null;
         }
+        return null;
     }
 
     boolean method345() {

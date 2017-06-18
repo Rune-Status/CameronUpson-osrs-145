@@ -29,53 +29,52 @@ public class Node_Sub21_Sub1 extends DoublyNode {
 
         if (var0 > Client.anInt1501) {
             throw new RuntimeException("");
-        } else {
-            Client.anInt1501 = 0;
+        }
+        Client.anInt1501 = 0;
 
-            for (var1 = 0; var1 < var0; ++var1) {
-                int var2 = Client.npcIndices[var1];
-                Npc var3 = Client.npcs[var2];
-                int var4 = Client.aPacket1521.method788(1);
-                if (var4 == 0) {
+        for (var1 = 0; var1 < var0; ++var1) {
+            int var2 = Client.npcIndices[var1];
+            Npc var3 = Client.npcs[var2];
+            int var4 = Client.aPacket1521.method788(1);
+            if (var4 == 0) {
+                Client.npcIndices[++Client.anInt1501 - 1] = var2;
+                var3.anInt769 = Client.engineCycle;
+            } else {
+                int var5 = Client.aPacket1521.method788(2);
+                if (var5 == 0) {
                     Client.npcIndices[++Client.anInt1501 - 1] = var2;
                     var3.anInt769 = Client.engineCycle;
+                    Client.anIntArray1507[++Client.anInt1508 - 1] = var2;
                 } else {
-                    int var5 = Client.aPacket1521.method788(2);
-                    if (var5 == 0) {
+                    int var6;
+                    int var7;
+                    if (var5 == 1) {
                         Client.npcIndices[++Client.anInt1501 - 1] = var2;
                         var3.anInt769 = Client.engineCycle;
-                        Client.anIntArray1507[++Client.anInt1508 - 1] = var2;
-                    } else {
-                        int var6;
-                        int var7;
-                        if (var5 == 1) {
-                            Client.npcIndices[++Client.anInt1501 - 1] = var2;
-                            var3.anInt769 = Client.engineCycle;
-                            var6 = Client.aPacket1521.method788(3);
-                            var3.method384(var6, (byte) 1);
-                            var7 = Client.aPacket1521.method788(1);
-                            if (var7 == 1) {
-                                Client.anIntArray1507[++Client.anInt1508 - 1] = var2;
-                            }
-                        } else if (var5 == 2) {
-                            Client.npcIndices[++Client.anInt1501 - 1] = var2;
-                            var3.anInt769 = Client.engineCycle;
-                            var6 = Client.aPacket1521.method788(3);
-                            var3.method384(var6, (byte) 2);
-                            var7 = Client.aPacket1521.method788(3);
-                            var3.method384(var7, (byte) 2);
-                            int var8 = Client.aPacket1521.method788(1);
-                            if (var8 == 1) {
-                                Client.anIntArray1507[++Client.anInt1508 - 1] = var2;
-                            }
-                        } else if (var5 == 3) {
-                            Client.anIntArray1584[++Client.anInt1580 - 1] = var2;
+                        var6 = Client.aPacket1521.method788(3);
+                        var3.method384(var6, (byte) 1);
+                        var7 = Client.aPacket1521.method788(1);
+                        if (var7 == 1) {
+                            Client.anIntArray1507[++Client.anInt1508 - 1] = var2;
                         }
+                    } else if (var5 == 2) {
+                        Client.npcIndices[++Client.anInt1501 - 1] = var2;
+                        var3.anInt769 = Client.engineCycle;
+                        var6 = Client.aPacket1521.method788(3);
+                        var3.method384(var6, (byte) 2);
+                        var7 = Client.aPacket1521.method788(3);
+                        var3.method384(var7, (byte) 2);
+                        int var8 = Client.aPacket1521.method788(1);
+                        if (var8 == 1) {
+                            Client.anIntArray1507[++Client.anInt1508 - 1] = var2;
+                        }
+                    } else if (var5 == 3) {
+                        Client.anIntArray1584[++Client.anInt1580 - 1] = var2;
                     }
                 }
             }
-
         }
+
     }
 
     static void method183() {

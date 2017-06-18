@@ -23,26 +23,24 @@ public class Class158 implements EnumOrdinal {
     static int method1013() {
         if (Client.menuRowCount <= 0) {
             return -1;
-        } else {
-            return Client.aBoolean1628 && Class4.aBooleanArray23[81] && Client.anInt1624 != -1 ? Client.anInt1624 : Client.menuRowCount - 1;
         }
+        return Client.aBoolean1628 && Class4.aBooleanArray23[81] && Client.anInt1624 != -1 ? Client.anInt1624 : Client.menuRowCount - 1;
     }
 
     public static DefinitionProperty method1012(int var0) {
         DefinitionProperty var1 = (DefinitionProperty) DefinitionProperty.aReferenceCache2025.method973((long) var0);
         if (var1 != null) {
             return var1;
-        } else {
-            byte[] var2 = DefinitionProperty.aReferenceTable2012.method1085(11, var0);
-            var1 = new DefinitionProperty();
-            if (var2 != null) {
-                var1.decode(new Buffer(var2));
-            }
-
-            var1.method756();
-            DefinitionProperty.aReferenceCache2025.method975(var1, (long) var0);
-            return var1;
         }
+        byte[] var2 = DefinitionProperty.aReferenceTable2012.method1085(11, var0);
+        var1 = new DefinitionProperty();
+        if (var2 != null) {
+            var1.decode(new Buffer(var2));
+        }
+
+        var1.method756();
+        DefinitionProperty.aReferenceCache2025.method975(var1, (long) var0);
+        return var1;
     }
 
     public int ordinal() {

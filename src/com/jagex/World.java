@@ -53,31 +53,35 @@ public class World {
             }
 
             return var4 - var5;
-        } else if (var2 == 2) {
+        }
+        if (var2 == 2) {
             return var0.location - var1.location;
-        } else if (var2 == 3) {
+        }
+        if (var2 == 3) {
             if (var0.activity.equals("-")) {
                 if (var1.activity.equals("-")) {
                     return 0;
-                } else {
-                    return var3 ? -1 : 1;
                 }
-            } else if (var1.activity.equals("-")) {
-                return var3 ? 1 : -1;
-            } else {
-                return var0.activity.compareTo(var1.activity);
+                return var3 ? -1 : 1;
             }
-        } else if (var2 == 4) {
-            return var0.method331() ? (var1.method331() ? 0 : 1) : (var1.method331() ? -1 : 0);
-        } else if (var2 == 5) {
-            return var0.method328() ? (var1.method328() ? 0 : 1) : (var1.method328() ? -1 : 0);
-        } else if (var2 == 6) {
-            return var0.method326() ? (var1.method326() ? 0 : 1) : (var1.method326() ? -1 : 0);
-        } else if (var2 == 7) {
-            return var0.method327() ? (var1.method327() ? 0 : 1) : (var1.method327() ? -1 : 0);
-        } else {
-            return var0.id - var1.id;
+            if (var1.activity.equals("-")) {
+                return var3 ? 1 : -1;
+            }
+            return var0.activity.compareTo(var1.activity);
         }
+        if (var2 == 4) {
+            return var0.method331() ? (var1.method331() ? 0 : 1) : (var1.method331() ? -1 : 0);
+        }
+        if (var2 == 5) {
+            return var0.method328() ? (var1.method328() ? 0 : 1) : (var1.method328() ? -1 : 0);
+        }
+        if (var2 == 6) {
+            return var0.method326() ? (var1.method326() ? 0 : 1) : (var1.method326() ? -1 : 0);
+        }
+        if (var2 == 7) {
+            return var0.method327() ? (var1.method327() ? 0 : 1) : (var1.method327() ? -1 : 0);
+        }
+        return var0.id - var1.id;
     }
 
     boolean method327() {

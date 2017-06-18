@@ -79,19 +79,18 @@ final class Class44 implements Comparator {
     int method299(Class53 var1, Class53 var2) {
         if (var1.anInt406 == var2.anInt406) {
             return 0;
-        } else {
-            if (this.aBoolean367) {
-                if (var1.anInt406 == Client.currentWorld) {
-                    return -1;
-                }
-
-                if (Client.currentWorld == var2.anInt406) {
-                    return 1;
-                }
+        }
+        if (this.aBoolean367) {
+            if (var1.anInt406 == Client.currentWorld) {
+                return -1;
             }
 
-            return var1.anInt406 < var2.anInt406 ? -1 : 1;
+            if (Client.currentWorld == var2.anInt406) {
+                return 1;
+            }
         }
+
+        return var1.anInt406 < var2.anInt406 ? -1 : 1;
     }
 
     public boolean equals(Object var1) {

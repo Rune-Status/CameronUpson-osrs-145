@@ -43,47 +43,46 @@ public class Class18 {
         ItemTable var2 = ItemTable.itemTables.lookup((long) var0);
         if (var2 == null) {
             return 0;
-        } else if (var1 == -1) {
-            return 0;
-        } else {
-            int var3 = 0;
-
-            for (int var4 = 0; var4 < var2.stackSizes.length; ++var4) {
-                if (var2.ids[var4] == var1) {
-                    var3 += var2.stackSizes[var4];
-                }
-            }
-
-            return var3;
         }
+        if (var1 == -1) {
+            return 0;
+        }
+        int var3 = 0;
+
+        for (int var4 = 0; var4 < var2.stackSizes.length; ++var4) {
+            if (var2.ids[var4] == var1) {
+                var3 += var2.stackSizes[var4];
+            }
+        }
+
+        return var3;
     }
 
     static Node_Sub21_Sub26_Sub2[] method138(ReferenceTable var0, int var1, int var2) {
         if (!Class64.method381(var0, var1, var2)) {
             return null;
-        } else {
-            Node_Sub21_Sub26_Sub2[] var3 = new Node_Sub21_Sub26_Sub2[Class191.anInt2244];
-
-            for (int var4 = 0; var4 < Class191.anInt2244; ++var4) {
-                Node_Sub21_Sub26_Sub2 var5 = var3[var4] = new Node_Sub21_Sub26_Sub2();
-                var5.anInt221 = Class160.anInt1857;
-                var5.anInt220 = Class191.anInt2246;
-                var5.anInt327 = Class191.anIntArray2245[var4];
-                var5.anInt328 = Class191.anIntArray2248[var4];
-                var5.anInt206 = Class191.anIntArray2249[var4];
-                var5.anInt232 = Class109.anIntArray1305[var4];
-                var5.anIntArray342 = Class94.anIntArray1043;
-                var5.aByteArray1361 = Class191.aByteArrayArray2247[var4];
-            }
-
-            Class191.anIntArray2245 = null;
-            Class191.anIntArray2248 = null;
-            Class191.anIntArray2249 = null;
-            Class109.anIntArray1305 = null;
-            Class94.anIntArray1043 = null;
-            Class191.aByteArrayArray2247 = null;
-            return var3;
         }
+        Node_Sub21_Sub26_Sub2[] var3 = new Node_Sub21_Sub26_Sub2[Class191.anInt2244];
+
+        for (int var4 = 0; var4 < Class191.anInt2244; ++var4) {
+            Node_Sub21_Sub26_Sub2 var5 = var3[var4] = new Node_Sub21_Sub26_Sub2();
+            var5.anInt221 = Class160.anInt1857;
+            var5.anInt220 = Class191.anInt2246;
+            var5.anInt327 = Class191.anIntArray2245[var4];
+            var5.anInt328 = Class191.anIntArray2248[var4];
+            var5.anInt206 = Class191.anIntArray2249[var4];
+            var5.anInt232 = Class109.anIntArray1305[var4];
+            var5.anIntArray342 = Class94.anIntArray1043;
+            var5.aByteArray1361 = Class191.aByteArrayArray2247[var4];
+        }
+
+        Class191.anIntArray2245 = null;
+        Class191.anIntArray2248 = null;
+        Class191.anIntArray2249 = null;
+        Class109.anIntArray1305 = null;
+        Class94.anIntArray1043 = null;
+        Class191.aByteArrayArray2247 = null;
+        return var3;
     }
 
     void method136(int var1, int var2, int var3, Node_Sub21_Sub24 var4) {
@@ -113,14 +112,12 @@ public class Class18 {
         if (var1 >= 0 && var2 >= 0 && var1 < this.anInt128 && var2 < this.anInt135) {
             if (this.anIntArrayArray132[var1][var2] == 0) {
                 return 0;
-            } else {
-                int var3 = this.anIntArrayArray131[var1][var2] / this.anIntArrayArray134[var1][var2];
-                int var4 = this.anIntArrayArray130[var1][var2] / this.anIntArrayArray134[var1][var2];
-                int var5 = this.anIntArrayArray132[var1][var2] / this.anIntArrayArray134[var1][var2];
-                return DynamicObject.method294((double) var3 / 256.0D, (double) var4 / 256.0D, (double) var5 / 256.0D);
             }
-        } else {
-            return 0;
+            int var3 = this.anIntArrayArray131[var1][var2] / this.anIntArrayArray134[var1][var2];
+            int var4 = this.anIntArrayArray130[var1][var2] / this.anIntArrayArray134[var1][var2];
+            int var5 = this.anIntArrayArray132[var1][var2] / this.anIntArrayArray134[var1][var2];
+            return DynamicObject.method294((double) var3 / 256.0D, (double) var4 / 256.0D, (double) var5 / 256.0D);
         }
+        return 0;
     }
 }

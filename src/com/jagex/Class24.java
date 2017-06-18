@@ -72,18 +72,17 @@ public class Class24 {
     boolean method154(int var1, int var2) {
         if (this.method156(var1, var2)) {
             return true;
-        } else {
-            return this.method155(var1, var2);
         }
+        return this.method155(var1, var2);
     }
 
     boolean method155(int var1, int var2) {
         if (this.aClass2_166 == null) {
             return false;
-        } else if (var1 >= this.anInt165 - this.aClass2_166.anInt14 / 2 && var1 <= this.aClass2_166.anInt14 / 2 + this.anInt165) {
-            return var2 >= this.anInt164 && var2 <= this.aClass2_166.anInt11 + this.anInt164;
-        } else {
-            return false;
         }
+        if (var1 >= this.anInt165 - this.aClass2_166.anInt14 / 2 && var1 <= this.aClass2_166.anInt14 / 2 + this.anInt165) {
+            return var2 >= this.anInt164 && var2 <= this.aClass2_166.anInt11 + this.anInt164;
+        }
+        return false;
     }
 }

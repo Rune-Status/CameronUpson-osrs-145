@@ -106,11 +106,10 @@ public class Buffer extends Node {
         int var2 = var1.indexOf(0);
         if (var2 >= 0) {
             throw new IllegalArgumentException("");
-        } else {
-            this.payload[++this.caret - 1] = 0;
-            this.caret += Node_Sub21_Sub20.method1125(var1, 0, var1.length(), this.payload, this.caret);
-            this.payload[++this.caret - 1] = 0;
         }
+        this.payload[++this.caret - 1] = 0;
+        this.caret += Node_Sub21_Sub20.method1125(var1, 0, var1.length(), this.payload, this.caret);
+        this.payload[++this.caret - 1] = 0;
     }
 
     public int method835() {
@@ -177,9 +176,8 @@ public class Buffer extends Node {
         if (this.payload[this.caret] == 0) {
             ++this.caret;
             return null;
-        } else {
-            return this.method819();
         }
+        return this.method819();
     }
 
     public String method819() {
@@ -196,15 +194,14 @@ public class Buffer extends Node {
         byte var1 = this.payload[++this.caret - 1];
         if (var1 != 0) {
             throw new IllegalStateException("");
-        } else {
-            int var2 = this.caret;
-
-            while (this.payload[++this.caret - 1] != 0) {
-            }
-
-            int var3 = this.caret - var2 - 1;
-            return var3 == 0 ? "" : Class6_Sub2.method458(this.payload, var2, var3);
         }
+        int var2 = this.caret;
+
+        while (this.payload[++this.caret - 1] != 0) {
+        }
+
+        int var3 = this.caret - var2 - 1;
+        return var3 == 0 ? "" : Class6_Sub2.method458(this.payload, var2, var3);
     }
 
     public int method541() {
@@ -220,10 +217,9 @@ public class Buffer extends Node {
     public int readSmart32() {
         if (this.payload[this.caret] < 0) {
             return this.method835() & Integer.MAX_VALUE;
-        } else {
-            int var1 = this.readUnsignedShort();
-            return var1 == 32767 ? -1 : var1;
         }
+        int var1 = this.readUnsignedShort();
+        return var1 == 32767 ? -1 : var1;
     }
 
     public int method817() {
@@ -419,67 +415,65 @@ public class Buffer extends Node {
         byte var1 = this.payload[++this.caret - 1];
         if (var1 != 0) {
             throw new IllegalStateException("");
-        } else {
-            int var2 = this.method817();
-            if (var2 + this.caret > this.payload.length) {
-                throw new IllegalStateException("");
-            } else {
-                byte[] var3 = this.payload;
-                int var4 = this.caret;
-                char[] var5 = new char[var2];
-                int var6 = 0;
-                int var7 = var4;
+        }
+        int var2 = this.method817();
+        if (var2 + this.caret > this.payload.length) {
+            throw new IllegalStateException("");
+        }
+        byte[] var3 = this.payload;
+        int var4 = this.caret;
+        char[] var5 = new char[var2];
+        int var6 = 0;
+        int var7 = var4;
 
-                int var10;
-                for (int var8 = var4 + var2; var7 < var8; var5[var6++] = (char) var10) {
-                    int var9 = var3[var7++] & 255;
-                    if (var9 < 128) {
-                        if (var9 == 0) {
-                            var10 = 65533;
-                        } else {
-                            var10 = var9;
-                        }
-                    } else if (var9 < 192) {
+        int var10;
+        for (int var8 = var4 + var2; var7 < var8; var5[var6++] = (char) var10) {
+            int var9 = var3[var7++] & 255;
+            if (var9 < 128) {
+                if (var9 == 0) {
+                    var10 = 65533;
+                } else {
+                    var10 = var9;
+                }
+            } else if (var9 < 192) {
+                var10 = 65533;
+            } else if (var9 < 224) {
+                if (var7 < var8 && (var3[var7] & 192) == 128) {
+                    var10 = (var9 & 31) << 6 | var3[var7++] & 63;
+                    if (var10 < 128) {
                         var10 = 65533;
-                    } else if (var9 < 224) {
-                        if (var7 < var8 && (var3[var7] & 192) == 128) {
-                            var10 = (var9 & 31) << 6 | var3[var7++] & 63;
-                            if (var10 < 128) {
-                                var10 = 65533;
-                            }
-                        } else {
-                            var10 = 65533;
-                        }
-                    } else if (var9 < 240) {
-                        if (var7 + 1 < var8 && (var3[var7] & 192) == 128 && (var3[var7 + 1] & 192) == 128) {
-                            var10 = (var9 & 15) << 12 | (var3[var7++] & 63) << 6 | var3[var7++] & 63;
-                            if (var10 < 2048) {
-                                var10 = 65533;
-                            }
-                        } else {
-                            var10 = 65533;
-                        }
-                    } else if (var9 < 248) {
-                        if (var7 + 2 < var8 && (var3[var7] & 192) == 128 && (var3[var7 + 1] & 192) == 128 && (var3[var7 + 2] & 192) == 128) {
-                            var10 = (var9 & 7) << 18 | (var3[var7++] & 63) << 12 | (var3[var7++] & 63) << 6 | var3[var7++] & 63;
-                            if (var10 >= 65536 && var10 <= 1114111) {
-                                var10 = 65533;
-                            } else {
-                                var10 = 65533;
-                            }
-                        } else {
-                            var10 = 65533;
-                        }
+                    }
+                } else {
+                    var10 = 65533;
+                }
+            } else if (var9 < 240) {
+                if (var7 + 1 < var8 && (var3[var7] & 192) == 128 && (var3[var7 + 1] & 192) == 128) {
+                    var10 = (var9 & 15) << 12 | (var3[var7++] & 63) << 6 | var3[var7++] & 63;
+                    if (var10 < 2048) {
+                        var10 = 65533;
+                    }
+                } else {
+                    var10 = 65533;
+                }
+            } else if (var9 < 248) {
+                if (var7 + 2 < var8 && (var3[var7] & 192) == 128 && (var3[var7 + 1] & 192) == 128 && (var3[var7 + 2] & 192) == 128) {
+                    var10 = (var9 & 7) << 18 | (var3[var7++] & 63) << 12 | (var3[var7++] & 63) << 6 | var3[var7++] & 63;
+                    if (var10 >= 65536 && var10 <= 1114111) {
+                        var10 = 65533;
                     } else {
                         var10 = 65533;
                     }
+                } else {
+                    var10 = 65533;
                 }
-
-                String var11 = new String(var5, 0, var6);
-                this.caret += var2;
-                return var11;
+            } else {
+                var10 = 65533;
             }
         }
+
+        String var11 = new String(var5, 0, var6);
+        this.caret += var2;
+        return var11;
     }
 
     public int method832(int var1) {
@@ -512,10 +506,9 @@ public class Buffer extends Node {
         int var2 = var1.indexOf(0);
         if (var2 >= 0) {
             throw new IllegalArgumentException("");
-        } else {
-            this.caret += Node_Sub21_Sub20.method1125(var1, 0, var1.length(), this.payload, this.caret);
-            this.payload[++this.caret - 1] = 0;
         }
+        this.caret += Node_Sub21_Sub20.method1125(var1, 0, var1.length(), this.payload, this.caret);
+        this.payload[++this.caret - 1] = 0;
     }
 
     public void method854(int var1) {

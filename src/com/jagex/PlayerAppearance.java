@@ -137,169 +137,165 @@ public class PlayerAppearance {
     public Model getModel(AnimationSequence var1, int var2, AnimationSequence var3, int var4) {
         if (this.transformedNpcId != -1) {
             return Class122.getNpcDefinition(this.transformedNpcId).method1058(var1, var2, var3, var4);
-        } else {
-            long var5 = this.aLong1989;
-            int[] var7 = this.equipmentIds;
-            if (var1 != null && (var1.offHand >= 0 || var1.mainHand >= 0)) {
-                var7 = new int[12];
+        }
+        long var5 = this.aLong1989;
+        int[] var7 = this.equipmentIds;
+        if (var1 != null && (var1.offHand >= 0 || var1.mainHand >= 0)) {
+            var7 = new int[12];
 
-                for (int var8 = 0; var8 < 12; ++var8) {
-                    var7[var8] = this.equipmentIds[var8];
+            for (int var8 = 0; var8 < 12; ++var8) {
+                var7[var8] = this.equipmentIds[var8];
+            }
+
+            if (var1.offHand >= 0) {
+                var5 += (long) (var1.offHand - this.equipmentIds[5] << 40);
+                var7[5] = var1.offHand;
+            }
+
+            if (var1.mainHand >= 0) {
+                var5 += (long) (var1.mainHand - this.equipmentIds[3] << 48);
+                var7[3] = var1.mainHand;
+            }
+        }
+
+        Model var9 = (Model) aReferenceCache1985.method973(var5);
+        if (var9 == null) {
+            boolean var10 = false;
+
+            int var12;
+            for (int var11 = 0; var11 < 12; ++var11) {
+                var12 = var7[var11];
+                if (var12 >= 256 && var12 < 512 && !ScriptEvent.method269(var12 - 256).method1128()) {
+                    var10 = true;
                 }
 
-                if (var1.offHand >= 0) {
-                    var5 += (long) (var1.offHand - this.equipmentIds[5] << 40);
-                    var7[5] = var1.offHand;
-                }
-
-                if (var1.mainHand >= 0) {
-                    var5 += (long) (var1.mainHand - this.equipmentIds[3] << 48);
-                    var7[3] = var1.mainHand;
+                if (var12 >= 512 && !Class149.method1001(var12 - 512).method1137(this.female)) {
+                    var10 = true;
                 }
             }
 
-            Model var9 = (Model) aReferenceCache1985.method973(var5);
-            if (var9 == null) {
-                boolean var10 = false;
-
-                int var12;
-                for (int var11 = 0; var11 < 12; ++var11) {
-                    var12 = var7[var11];
-                    if (var12 >= 256 && var12 < 512 && !ScriptEvent.method269(var12 - 256).method1128()) {
-                        var10 = true;
-                    }
-
-                    if (var12 >= 512 && !Class149.method1001(var12 - 512).method1137(this.female)) {
-                        var10 = true;
-                    }
-                }
-
-                if (var10) {
-                    if (-1L != this.aLong1990) {
-                        var9 = (Model) aReferenceCache1985.method973(this.aLong1990);
-                    }
-
-                    if (var9 == null) {
-                        return null;
-                    }
+            if (var10) {
+                if (-1L != this.aLong1990) {
+                    var9 = (Model) aReferenceCache1985.method973(this.aLong1990);
                 }
 
                 if (var9 == null) {
-                    ModelHeader[] var13 = new ModelHeader[12];
-                    var12 = 0;
-
-                    int var15;
-                    for (int var14 = 0; var14 < 12; ++var14) {
-                        var15 = var7[var14];
-                        ModelHeader var16;
-                        if (var15 >= 256 && var15 < 512) {
-                            var16 = ScriptEvent.method269(var15 - 256).method1129();
-                            if (var16 != null) {
-                                var13[var12++] = var16;
-                            }
-                        }
-
-                        if (var15 >= 512) {
-                            var16 = Class149.method1001(var15 - 512).getEquipmentModel(this.female);
-                            if (var16 != null) {
-                                var13[var12++] = var16;
-                            }
-                        }
-                    }
-
-                    ModelHeader var18 = new ModelHeader(var13, var12);
-
-                    for (var15 = 0; var15 < 5; ++var15) {
-                        if (this.ids[var15] < Legacy2DBoundingBox.aShortArrayArray399[var15].length) {
-                            var18.recolor(aShortArray1991[var15], Legacy2DBoundingBox.aShortArrayArray399[var15][this.ids[var15]]);
-                        }
-
-                        if (this.ids[var15] < equipmentColorReplacements[var15].length) {
-                            var18.recolor(aShortArray1988[var15], equipmentColorReplacements[var15][this.ids[var15]]);
-                        }
-                    }
-
-                    var9 = var18.light(64, 850, -30, -50, -30);
-                    aReferenceCache1985.method975(var9, var5);
-                    this.aLong1990 = var5;
+                    return null;
                 }
             }
 
-            if (var1 == null && var3 == null) {
-                return var9;
-            } else {
-                Model var17;
-                if (var1 != null && var3 != null) {
-                    var17 = var1.method1197(var9, var2, var3, var4);
-                } else if (var1 != null) {
-                    var17 = var1.method1195(var9, var2);
-                } else {
-                    var17 = var3.method1195(var9, var4);
+            if (var9 == null) {
+                ModelHeader[] var13 = new ModelHeader[12];
+                var12 = 0;
+
+                int var15;
+                for (int var14 = 0; var14 < 12; ++var14) {
+                    var15 = var7[var14];
+                    ModelHeader var16;
+                    if (var15 >= 256 && var15 < 512) {
+                        var16 = ScriptEvent.method269(var15 - 256).method1129();
+                        if (var16 != null) {
+                            var13[var12++] = var16;
+                        }
+                    }
+
+                    if (var15 >= 512) {
+                        var16 = Class149.method1001(var15 - 512).getEquipmentModel(this.female);
+                        if (var16 != null) {
+                            var13[var12++] = var16;
+                        }
+                    }
                 }
 
-                return var17;
+                ModelHeader var18 = new ModelHeader(var13, var12);
+
+                for (var15 = 0; var15 < 5; ++var15) {
+                    if (this.ids[var15] < Legacy2DBoundingBox.aShortArrayArray399[var15].length) {
+                        var18.recolor(aShortArray1991[var15], Legacy2DBoundingBox.aShortArrayArray399[var15][this.ids[var15]]);
+                    }
+
+                    if (this.ids[var15] < equipmentColorReplacements[var15].length) {
+                        var18.recolor(aShortArray1988[var15], equipmentColorReplacements[var15][this.ids[var15]]);
+                    }
+                }
+
+                var9 = var18.light(64, 850, -30, -50, -30);
+                aReferenceCache1985.method975(var9, var5);
+                this.aLong1990 = var5;
             }
         }
+
+        if (var1 == null && var3 == null) {
+            return var9;
+        }
+        Model var17;
+        if (var1 != null && var3 != null) {
+            var17 = var1.method1197(var9, var2, var3, var4);
+        } else if (var1 != null) {
+            var17 = var1.method1195(var9, var2);
+        } else {
+            var17 = var3.method1195(var9, var4);
+        }
+
+        return var17;
     }
 
     ModelHeader method1032() {
         if (this.transformedNpcId != -1) {
             return Class122.getNpcDefinition(this.transformedNpcId).method1059();
-        } else {
-            boolean var1 = false;
+        }
+        boolean var1 = false;
 
-            int var3;
-            for (int var2 = 0; var2 < 12; ++var2) {
-                var3 = this.equipmentIds[var2];
-                if (var3 >= 256 && var3 < 512 && !ScriptEvent.method269(var3 - 256).method1079()) {
-                    var1 = true;
-                }
-
-                if (var3 >= 512 && !Class149.method1001(var3 - 512).method1144(this.female)) {
-                    var1 = true;
-                }
+        int var3;
+        for (int var2 = 0; var2 < 12; ++var2) {
+            var3 = this.equipmentIds[var2];
+            if (var3 >= 256 && var3 < 512 && !ScriptEvent.method269(var3 - 256).method1079()) {
+                var1 = true;
             }
 
-            if (var1) {
-                return null;
-            } else {
-                ModelHeader[] var4 = new ModelHeader[12];
-                var3 = 0;
-
-                int var6;
-                for (int var5 = 0; var5 < 12; ++var5) {
-                    var6 = this.equipmentIds[var5];
-                    ModelHeader var7;
-                    if (var6 >= 256 && var6 < 512) {
-                        var7 = ScriptEvent.method269(var6 - 256).method1059();
-                        if (var7 != null) {
-                            var4[var3++] = var7;
-                        }
-                    }
-
-                    if (var6 >= 512) {
-                        var7 = Class149.method1001(var6 - 512).method1139(this.female);
-                        if (var7 != null) {
-                            var4[var3++] = var7;
-                        }
-                    }
-                }
-
-                ModelHeader var8 = new ModelHeader(var4, var3);
-
-                for (var6 = 0; var6 < 5; ++var6) {
-                    if (this.ids[var6] < Legacy2DBoundingBox.aShortArrayArray399[var6].length) {
-                        var8.recolor(aShortArray1991[var6], Legacy2DBoundingBox.aShortArrayArray399[var6][this.ids[var6]]);
-                    }
-
-                    if (this.ids[var6] < equipmentColorReplacements[var6].length) {
-                        var8.recolor(aShortArray1988[var6], equipmentColorReplacements[var6][this.ids[var6]]);
-                    }
-                }
-
-                return var8;
+            if (var3 >= 512 && !Class149.method1001(var3 - 512).method1144(this.female)) {
+                var1 = true;
             }
         }
+
+        if (var1) {
+            return null;
+        }
+        ModelHeader[] var4 = new ModelHeader[12];
+        var3 = 0;
+
+        int var6;
+        for (int var5 = 0; var5 < 12; ++var5) {
+            var6 = this.equipmentIds[var5];
+            ModelHeader var7;
+            if (var6 >= 256 && var6 < 512) {
+                var7 = ScriptEvent.method269(var6 - 256).method1059();
+                if (var7 != null) {
+                    var4[var3++] = var7;
+                }
+            }
+
+            if (var6 >= 512) {
+                var7 = Class149.method1001(var6 - 512).method1139(this.female);
+                if (var7 != null) {
+                    var4[var3++] = var7;
+                }
+            }
+        }
+
+        ModelHeader var8 = new ModelHeader(var4, var3);
+
+        for (var6 = 0; var6 < 5; ++var6) {
+            if (this.ids[var6] < Legacy2DBoundingBox.aShortArrayArray399[var6].length) {
+                var8.recolor(aShortArray1991[var6], Legacy2DBoundingBox.aShortArrayArray399[var6][this.ids[var6]]);
+            }
+
+            if (this.ids[var6] < equipmentColorReplacements[var6].length) {
+                var8.recolor(aShortArray1988[var6], equipmentColorReplacements[var6][this.ids[var6]]);
+            }
+        }
+
+        return var8;
     }
 
     public void method1035(int var1, boolean var2) {

@@ -74,7 +74,8 @@ public class Class53 {
             }
 
             return 1;
-        } else if (var0 == 1001) {
+        }
+        if (var0 == 1001) {
             Class63.anInt644 -= 4;
             var4.anInt749 = Class63.anIntArray645[Class63.anInt644];
             var4.anInt748 = Class63.anIntArray645[Class63.anInt644 + 1];
@@ -87,7 +88,8 @@ public class Class53 {
             }
 
             return 1;
-        } else if (var0 == 1003) {
+        }
+        if (var0 == 1003) {
             boolean var5 = Class63.anIntArray645[--Class63.anInt644] == 1;
             if (var5 != var4.explicitlyHidden) {
                 var4.explicitlyHidden = var5;
@@ -95,15 +97,16 @@ public class Class53 {
             }
 
             return 1;
-        } else if (var0 == 1005) {
+        }
+        if (var0 == 1005) {
             var4.aBoolean1936 = Class63.anIntArray645[--Class63.anInt644] == 1;
             return 1;
-        } else if (var0 == 1006) {
+        }
+        if (var0 == 1006) {
             var4.aBoolean1945 = Class63.anIntArray645[--Class63.anInt644] == 1;
             return 1;
-        } else {
-            return 2;
         }
+        return 2;
     }
 
     public String method340() {

@@ -13,21 +13,21 @@ final class Class60 implements Comparator {
         Node_Sub21_Sub12 var2 = Node_Sub21_Sub10.method1063(var0);
         if (var2 == null) {
             return var1;
-        } else if (var2.anInt328 >= 0) {
-            return var2.anInt328 | -16777216;
-        } else {
-            int var3;
-            if (var2.anInt232 >= 0) {
-                var3 = Class23.method152(Node_Sub21_Sub26_Sub1.aTextureProvider1085.method501(var2.anInt232), 96);
-                return Node_Sub21_Sub26_Sub1.anIntArray240[var3] | -16777216;
-            } else if (var2.anInt206 == 16711935) {
-                return var1;
-            } else {
-                var3 = Class6_Sub2.method459(var2.anInt221, var2.anInt220, var2.anInt217);
-                int var4 = Class23.method152(var3, 96);
-                return Node_Sub21_Sub26_Sub1.anIntArray240[var4] | -16777216;
-            }
         }
+        if (var2.anInt328 >= 0) {
+            return var2.anInt328 | -16777216;
+        }
+        int var3;
+        if (var2.anInt232 >= 0) {
+            var3 = Class23.method152(Node_Sub21_Sub26_Sub1.aTextureProvider1085.method501(var2.anInt232), 96);
+            return Node_Sub21_Sub26_Sub1.anIntArray240[var3] | -16777216;
+        }
+        if (var2.anInt206 == 16711935) {
+            return var1;
+        }
+        var3 = Class6_Sub2.method459(var2.anInt221, var2.anInt220, var2.anInt217);
+        int var4 = Class23.method152(var3, 96);
+        return Node_Sub21_Sub26_Sub1.anIntArray240[var4] | -16777216;
     }
 
     static boolean method369() {

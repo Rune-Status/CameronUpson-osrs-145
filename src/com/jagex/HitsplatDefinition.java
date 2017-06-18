@@ -141,99 +141,89 @@ public class HitsplatDefinition extends DoublyNode {
     public Font getFont() {
         if (this.fontId == -1) {
             return null;
-        } else {
-            Font var1 = (Font) aReferenceCache2047.method973((long) this.fontId);
-            if (var1 != null) {
-                return var1;
-            } else {
-                ReferenceTable var2 = aReferenceTable2017;
-                ReferenceTable var3 = aReferenceTable2039;
-                int var4 = this.fontId;
-                Font var5;
-                if (!Class64.method381(var2, var4, 0)) {
-                    var5 = null;
-                } else {
-                    var5 = Class65.loadFont(var3.method1085(var4, 0));
-                }
-
-                if (var5 != null) {
-                    aReferenceCache2047.method975(var5, (long) this.fontId);
-                }
-
-                return var5;
-            }
         }
+        Font var1 = (Font) aReferenceCache2047.method973((long) this.fontId);
+        if (var1 != null) {
+            return var1;
+        }
+        ReferenceTable var2 = aReferenceTable2017;
+        ReferenceTable var3 = aReferenceTable2039;
+        int var4 = this.fontId;
+        Font var5;
+        if (!Class64.method381(var2, var4, 0)) {
+            var5 = null;
+        } else {
+            var5 = Class65.loadFont(var3.method1085(var4, 0));
+        }
+
+        if (var5 != null) {
+            aReferenceCache2047.method975(var5, (long) this.fontId);
+        }
+
+        return var5;
     }
 
     public Sprite getMiddleSpriteId() {
         if (this.middleSpriteId < 0) {
             return null;
-        } else {
-            Sprite var1 = (Sprite) aReferenceCache2045.method973((long) this.middleSpriteId);
-            if (var1 != null) {
-                return var1;
-            } else {
-                var1 = Class176.method1188(aReferenceTable2017, this.middleSpriteId, 0);
-                if (var1 != null) {
-                    aReferenceCache2045.method975(var1, (long) this.middleSpriteId);
-                }
-
-                return var1;
-            }
         }
+        Sprite var1 = (Sprite) aReferenceCache2045.method973((long) this.middleSpriteId);
+        if (var1 != null) {
+            return var1;
+        }
+        var1 = Class176.method1188(aReferenceTable2017, this.middleSpriteId, 0);
+        if (var1 != null) {
+            aReferenceCache2045.method975(var1, (long) this.middleSpriteId);
+        }
+
+        return var1;
     }
 
     public Sprite getLeftSprite() {
         if (this.leftSpriteId < 0) {
             return null;
-        } else {
-            Sprite var1 = (Sprite) aReferenceCache2045.method973((long) this.leftSpriteId);
-            if (var1 != null) {
-                return var1;
-            } else {
-                var1 = Class176.method1188(aReferenceTable2017, this.leftSpriteId, 0);
-                if (var1 != null) {
-                    aReferenceCache2045.method975(var1, (long) this.leftSpriteId);
-                }
-
-                return var1;
-            }
         }
+        Sprite var1 = (Sprite) aReferenceCache2045.method973((long) this.leftSpriteId);
+        if (var1 != null) {
+            return var1;
+        }
+        var1 = Class176.method1188(aReferenceTable2017, this.leftSpriteId, 0);
+        if (var1 != null) {
+            aReferenceCache2045.method975(var1, (long) this.leftSpriteId);
+        }
+
+        return var1;
     }
 
     public Sprite getIcon() {
         if (this.iconId < 0) {
             return null;
-        } else {
-            Sprite var1 = (Sprite) aReferenceCache2045.method973((long) this.iconId);
-            if (var1 != null) {
-                return var1;
-            } else {
-                var1 = Class176.method1188(aReferenceTable2017, this.iconId, 0);
-                if (var1 != null) {
-                    aReferenceCache2045.method975(var1, (long) this.iconId);
-                }
-
-                return var1;
-            }
         }
+        Sprite var1 = (Sprite) aReferenceCache2045.method973((long) this.iconId);
+        if (var1 != null) {
+            return var1;
+        }
+        var1 = Class176.method1188(aReferenceTable2017, this.iconId, 0);
+        if (var1 != null) {
+            aReferenceCache2045.method975(var1, (long) this.iconId);
+        }
+
+        return var1;
     }
 
     public Sprite getRightSprite() {
         if (this.rightSpriteId < 0) {
             return null;
-        } else {
-            Sprite var1 = (Sprite) aReferenceCache2045.method973((long) this.rightSpriteId);
-            if (var1 != null) {
-                return var1;
-            } else {
-                var1 = Class176.method1188(aReferenceTable2017, this.rightSpriteId, 0);
-                if (var1 != null) {
-                    aReferenceCache2045.method975(var1, (long) this.rightSpriteId);
-                }
-
-                return var1;
-            }
         }
+        Sprite var1 = (Sprite) aReferenceCache2045.method973((long) this.rightSpriteId);
+        if (var1 != null) {
+            return var1;
+        }
+        var1 = Class176.method1188(aReferenceTable2017, this.rightSpriteId, 0);
+        if (var1 != null) {
+            aReferenceCache2045.method975(var1, (long) this.rightSpriteId);
+        }
+
+        return var1;
     }
 }

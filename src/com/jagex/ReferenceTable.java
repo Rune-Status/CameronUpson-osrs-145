@@ -196,33 +196,30 @@ public abstract class ReferenceTable {
             }
 
             return var5;
-        } else {
-            return null;
         }
+        return null;
     }
 
     public boolean method1102(int var1, int var2) {
         if (var1 >= 0 && var1 < this.buffer.length && this.buffer[var1] != null && var2 >= 0 && var2 < this.buffer[var1].length) {
             if (this.buffer[var1][var2] != null) {
                 return true;
-            } else if (this.anObjectArray2057[var1] != null) {
-                return true;
-            } else {
-                this.method1081(var1);
-                return this.anObjectArray2057[var1] != null;
             }
-        } else {
-            return false;
+            if (this.anObjectArray2057[var1] != null) {
+                return true;
+            }
+            this.method1081(var1);
+            return this.anObjectArray2057[var1] != null;
         }
+        return false;
     }
 
     public boolean method1106(int var1) {
         if (this.anObjectArray2057[var1] != null) {
             return true;
-        } else {
-            this.method1081(var1);
-            return this.anObjectArray2057[var1] != null;
         }
+        this.method1081(var1);
+        return this.anObjectArray2057[var1] != null;
     }
 
     public boolean method1088() {
@@ -248,11 +245,11 @@ public abstract class ReferenceTable {
     public byte[] method1093(int var1) {
         if (this.buffer.length == 1) {
             return this.method1085(0, var1);
-        } else if (this.buffer[var1].length == 1) {
-            return this.method1085(var1, 0);
-        } else {
-            throw new RuntimeException();
         }
+        if (this.buffer[var1].length == 1) {
+            return this.method1085(var1, 0);
+        }
+        throw new RuntimeException();
     }
 
     public byte[] method1095(int var1, int var2) {
@@ -269,19 +266,18 @@ public abstract class ReferenceTable {
             }
 
             return Class148.method1000(this.buffer[var1][var2], false);
-        } else {
-            return null;
         }
+        return null;
     }
 
     public byte[] method1092(int var1) {
         if (this.buffer.length == 1) {
             return this.method1095(0, var1);
-        } else if (this.buffer[var1].length == 1) {
-            return this.method1095(var1, 0);
-        } else {
-            throw new RuntimeException();
         }
+        if (this.buffer[var1].length == 1) {
+            return this.method1095(var1, 0);
+        }
+        throw new RuntimeException();
     }
 
     void method1081(int var1) {
@@ -317,93 +313,91 @@ public abstract class ReferenceTable {
     boolean method1090(int var1, int[] var2) {
         if (this.anObjectArray2057[var1] == null) {
             return false;
-        } else {
-            int var3 = this.anIntArray2054[var1];
-            int[] var4 = this.anIntArrayArray2053[var1];
-            Object[] var5 = this.buffer[var1];
-            boolean var6 = true;
+        }
+        int var3 = this.anIntArray2054[var1];
+        int[] var4 = this.anIntArrayArray2053[var1];
+        Object[] var5 = this.buffer[var1];
+        boolean var6 = true;
 
-            for (int var7 = 0; var7 < var3; ++var7) {
-                if (var5[var4[var7]] == null) {
-                    var6 = false;
-                    break;
-                }
-            }
-
-            if (var6) {
-                return true;
-            } else {
-                byte[] var8;
-                if (var2 != null && (var2[0] != 0 || var2[1] != 0 || var2[2] != 0 || var2[3] != 0)) {
-                    var8 = Class148.method1000(this.anObjectArray2057[var1], true);
-                    Buffer var9 = new Buffer(var8);
-                    var9.method821(var2, 5, var9.payload.length);
-                } else {
-                    var8 = Class148.method1000(this.anObjectArray2057[var1], false);
-                }
-
-                byte[] var20 = Class150.method1003(var8);
-                if (this.aBoolean2052) {
-                    this.anObjectArray2057[var1] = null;
-                }
-
-                if (var3 > 1) {
-                    int var10 = var20.length;
-                    --var10;
-                    int var11 = var20[var10] & 255;
-                    var10 -= var11 * var3 * 4;
-                    Buffer var12 = new Buffer(var20);
-                    int[] var13 = new int[var3];
-                    var12.caret = var10;
-
-                    int var15;
-                    int var16;
-                    for (int var14 = 0; var14 < var11; ++var14) {
-                        var15 = 0;
-
-                        for (var16 = 0; var16 < var3; ++var16) {
-                            var15 += var12.method835();
-                            var13[var16] += var15;
-                        }
-                    }
-
-                    byte[][] var17 = new byte[var3][];
-
-                    for (var15 = 0; var15 < var3; ++var15) {
-                        var17[var15] = new byte[var13[var15]];
-                        var13[var15] = 0;
-                    }
-
-                    var12.caret = var10;
-                    var15 = 0;
-
-                    for (var16 = 0; var16 < var11; ++var16) {
-                        int var18 = 0;
-
-                        for (int var19 = 0; var19 < var3; ++var19) {
-                            var18 += var12.method835();
-                            System.arraycopy(var20, var15, var17[var19], var13[var19], var18);
-                            var13[var19] += var18;
-                            var15 += var18;
-                        }
-                    }
-
-                    for (var16 = 0; var16 < var3; ++var16) {
-                        if (!this.aBoolean2062) {
-                            var5[var4[var16]] = Class54.method349(var17[var16], false);
-                        } else {
-                            var5[var4[var16]] = var17[var16];
-                        }
-                    }
-                } else if (!this.aBoolean2062) {
-                    var5[var4[0]] = Class54.method349(var20, false);
-                } else {
-                    var5[var4[0]] = var20;
-                }
-
-                return true;
+        for (int var7 = 0; var7 < var3; ++var7) {
+            if (var5[var4[var7]] == null) {
+                var6 = false;
+                break;
             }
         }
+
+        if (var6) {
+            return true;
+        }
+        byte[] var8;
+        if (var2 != null && (var2[0] != 0 || var2[1] != 0 || var2[2] != 0 || var2[3] != 0)) {
+            var8 = Class148.method1000(this.anObjectArray2057[var1], true);
+            Buffer var9 = new Buffer(var8);
+            var9.method821(var2, 5, var9.payload.length);
+        } else {
+            var8 = Class148.method1000(this.anObjectArray2057[var1], false);
+        }
+
+        byte[] var20 = Class150.method1003(var8);
+        if (this.aBoolean2052) {
+            this.anObjectArray2057[var1] = null;
+        }
+
+        if (var3 > 1) {
+            int var10 = var20.length;
+            --var10;
+            int var11 = var20[var10] & 255;
+            var10 -= var11 * var3 * 4;
+            Buffer var12 = new Buffer(var20);
+            int[] var13 = new int[var3];
+            var12.caret = var10;
+
+            int var15;
+            int var16;
+            for (int var14 = 0; var14 < var11; ++var14) {
+                var15 = 0;
+
+                for (var16 = 0; var16 < var3; ++var16) {
+                    var15 += var12.method835();
+                    var13[var16] += var15;
+                }
+            }
+
+            byte[][] var17 = new byte[var3][];
+
+            for (var15 = 0; var15 < var3; ++var15) {
+                var17[var15] = new byte[var13[var15]];
+                var13[var15] = 0;
+            }
+
+            var12.caret = var10;
+            var15 = 0;
+
+            for (var16 = 0; var16 < var11; ++var16) {
+                int var18 = 0;
+
+                for (int var19 = 0; var19 < var3; ++var19) {
+                    var18 += var12.method835();
+                    System.arraycopy(var20, var15, var17[var19], var13[var19], var18);
+                    var13[var19] += var18;
+                    var15 += var18;
+                }
+            }
+
+            for (var16 = 0; var16 < var3; ++var16) {
+                if (!this.aBoolean2062) {
+                    var5[var4[var16]] = Class54.method349(var17[var16], false);
+                } else {
+                    var5[var4[var16]] = var17[var16];
+                }
+            }
+        } else if (!this.aBoolean2062) {
+            var5[var4[0]] = Class54.method349(var20, false);
+        } else {
+            var5[var4[0]] = var20;
+        }
+
+        return true;
     }
 
     public byte[] method1085(int var1, int var2) {
@@ -416,10 +410,9 @@ public abstract class ReferenceTable {
         int var3 = this.entry.method913(ScriptEvent.method271(var1));
         if (var3 < 0) {
             return false;
-        } else {
-            int var4 = this.children[var3].method913(ScriptEvent.method271(var2));
-            return var4 >= 0;
         }
+        int var4 = this.children[var3].method913(ScriptEvent.method271(var2));
+        return var4 >= 0;
     }
 
     public byte[] method1105(String var1, String var2) {

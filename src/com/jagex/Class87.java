@@ -18,72 +18,71 @@ public class Class87 {
         int var1 = Node_Sub13.method590(16);
         if (var1 != 1) {
             throw new RuntimeException();
-        } else {
-            int var2 = Node_Sub13.method590(5);
-            int var3 = 0;
-            this.anIntArray907 = new int[var2];
-
-            int var4;
-            int var5;
-            for (var4 = 0; var4 < var2; ++var4) {
-                var5 = Node_Sub13.method590(4);
-                this.anIntArray907[var4] = var5;
-                if (var5 >= var3) {
-                    var3 = var5 + 1;
-                }
-            }
-
-            this.anIntArray910 = new int[var3];
-            this.anIntArray909 = new int[var3];
-            this.anIntArray908 = new int[var3];
-            this.anIntArrayArray906 = new int[var3][];
-
-            int var7;
-            for (var4 = 0; var4 < var3; ++var4) {
-                this.anIntArray910[var4] = Node_Sub13.method590(3) + 1;
-                var5 = this.anIntArray909[var4] = Node_Sub13.method590(2);
-                if (var5 != 0) {
-                    this.anIntArray908[var4] = Node_Sub13.method590(8);
-                }
-
-                var5 = 1 << var5;
-                int[] var6 = new int[var5];
-                this.anIntArrayArray906[var4] = var6;
-
-                for (var7 = 0; var7 < var5; ++var7) {
-                    var6[var7] = Node_Sub13.method590(8) - 1;
-                }
-            }
-
-            this.anInt904 = Node_Sub13.method590(2) + 1;
-            var4 = Node_Sub13.method590(4);
-            var5 = 2;
-
-            int var8;
-            for (var8 = 0; var8 < var2; ++var8) {
-                var5 += this.anIntArray910[this.anIntArray907[var8]];
-            }
-
-            this.anIntArray905 = new int[var5];
-            this.anIntArray905[0] = 0;
-            this.anIntArray905[1] = 1 << var4;
-            var5 = 2;
-
-            for (var8 = 0; var8 < var2; ++var8) {
-                var7 = this.anIntArray907[var8];
-
-                for (int var9 = 0; var9 < this.anIntArray910[var7]; ++var9) {
-                    this.anIntArray905[var5++] = Node_Sub13.method590(var4);
-                }
-            }
-
-            if (anIntArray903 == null || anIntArray903.length < var5) {
-                anIntArray903 = new int[var5];
-                anIntArray912 = new int[var5];
-                aBooleanArray902 = new boolean[var5];
-            }
-
         }
+        int var2 = Node_Sub13.method590(5);
+        int var3 = 0;
+        this.anIntArray907 = new int[var2];
+
+        int var4;
+        int var5;
+        for (var4 = 0; var4 < var2; ++var4) {
+            var5 = Node_Sub13.method590(4);
+            this.anIntArray907[var4] = var5;
+            if (var5 >= var3) {
+                var3 = var5 + 1;
+            }
+        }
+
+        this.anIntArray910 = new int[var3];
+        this.anIntArray909 = new int[var3];
+        this.anIntArray908 = new int[var3];
+        this.anIntArrayArray906 = new int[var3][];
+
+        int var7;
+        for (var4 = 0; var4 < var3; ++var4) {
+            this.anIntArray910[var4] = Node_Sub13.method590(3) + 1;
+            var5 = this.anIntArray909[var4] = Node_Sub13.method590(2);
+            if (var5 != 0) {
+                this.anIntArray908[var4] = Node_Sub13.method590(8);
+            }
+
+            var5 = 1 << var5;
+            int[] var6 = new int[var5];
+            this.anIntArrayArray906[var4] = var6;
+
+            for (var7 = 0; var7 < var5; ++var7) {
+                var6[var7] = Node_Sub13.method590(8) - 1;
+            }
+        }
+
+        this.anInt904 = Node_Sub13.method590(2) + 1;
+        var4 = Node_Sub13.method590(4);
+        var5 = 2;
+
+        int var8;
+        for (var8 = 0; var8 < var2; ++var8) {
+            var5 += this.anIntArray910[this.anIntArray907[var8]];
+        }
+
+        this.anIntArray905 = new int[var5];
+        this.anIntArray905[0] = 0;
+        this.anIntArray905[1] = 1 << var4;
+        var5 = 2;
+
+        for (var8 = 0; var8 < var2; ++var8) {
+            var7 = this.anIntArray907[var8];
+
+            for (int var9 = 0; var9 < this.anIntArray910[var7]; ++var9) {
+                this.anIntArray905[var5++] = Node_Sub13.method590(var4);
+            }
+        }
+
+        if (anIntArray903 == null || anIntArray903.length < var5) {
+            anIntArray903 = new int[var5];
+            anIntArray912 = new int[var5];
+            aBooleanArray902 = new boolean[var5];
+        }
+
     }
 
     static int method517(int[] var0, int var1) {
@@ -187,39 +186,38 @@ public class Class87 {
         boolean var1 = Node_Sub13.method591() != 0;
         if (!var1) {
             return false;
-        } else {
-            int var2 = this.anIntArray905.length;
-
-            int var3;
-            for (var3 = 0; var3 < var2; ++var3) {
-                anIntArray903[var3] = this.anIntArray905[var3];
-            }
-
-            var3 = anIntArray901[this.anInt904 - 1];
-            int var4 = Class122.method809(var3 - 1);
-            anIntArray912[0] = Node_Sub13.method590(var4);
-            anIntArray912[1] = Node_Sub13.method590(var4);
-            int var5 = 2;
-
-            for (int var6 = 0; var6 < this.anIntArray907.length; ++var6) {
-                int var7 = this.anIntArray907[var6];
-                int var8 = this.anIntArray910[var7];
-                int var9 = this.anIntArray909[var7];
-                int var10 = (1 << var9) - 1;
-                int var11 = 0;
-                if (var9 > 0) {
-                    var11 = Node_Sub13.aClass88Array985[this.anIntArray908[var7]].method520();
-                }
-
-                for (int var12 = 0; var12 < var8; ++var12) {
-                    int var13 = this.anIntArrayArray906[var7][var11 & var10];
-                    var11 >>>= var9;
-                    anIntArray912[var5++] = var13 >= 0 ? Node_Sub13.aClass88Array985[var13].method520() : 0;
-                }
-            }
-
-            return true;
         }
+        int var2 = this.anIntArray905.length;
+
+        int var3;
+        for (var3 = 0; var3 < var2; ++var3) {
+            anIntArray903[var3] = this.anIntArray905[var3];
+        }
+
+        var3 = anIntArray901[this.anInt904 - 1];
+        int var4 = Class122.method809(var3 - 1);
+        anIntArray912[0] = Node_Sub13.method590(var4);
+        anIntArray912[1] = Node_Sub13.method590(var4);
+        int var5 = 2;
+
+        for (int var6 = 0; var6 < this.anIntArray907.length; ++var6) {
+            int var7 = this.anIntArray907[var6];
+            int var8 = this.anIntArray910[var7];
+            int var9 = this.anIntArray909[var7];
+            int var10 = (1 << var9) - 1;
+            int var11 = 0;
+            if (var9 > 0) {
+                var11 = Node_Sub13.aClass88Array985[this.anIntArray908[var7]].method520();
+            }
+
+            for (int var12 = 0; var12 < var8; ++var12) {
+                int var13 = this.anIntArrayArray906[var7][var11 & var10];
+                var11 >>>= var9;
+                anIntArray912[var5++] = var13 >= 0 ? Node_Sub13.aClass88Array985[var13].method520() : 0;
+            }
+        }
+
+        return true;
     }
 
     void method516(float[] var1, int var2) {

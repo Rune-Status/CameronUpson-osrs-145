@@ -169,9 +169,8 @@ public class Class189 {
     public Class24 method1283() {
         if (this.anIterator2221 == null) {
             return null;
-        } else {
-            return !this.anIterator2221.hasNext() ? null : (Class24) this.anIterator2221.next();
         }
+        return !this.anIterator2221.hasNext() ? null : (Class24) this.anIterator2221.next();
     }
 
     public void method1297(int var1) {
@@ -288,29 +287,33 @@ public class Class189 {
     float method1285(int var1) {
         if (var1 == 25) {
             return 1.0F;
-        } else if (var1 == 37) {
-            return 1.5F;
-        } else if (var1 == 50) {
-            return 2.0F;
-        } else if (var1 == 75) {
-            return 3.0F;
-        } else {
-            return var1 == 100 ? 4.0F : 8.0F;
         }
+        if (var1 == 37) {
+            return 1.5F;
+        }
+        if (var1 == 50) {
+            return 2.0F;
+        }
+        if (var1 == 75) {
+            return 3.0F;
+        }
+        return var1 == 100 ? 4.0F : 8.0F;
     }
 
     public int method1305() {
         if (1.0D == (double) this.currentScale) {
             return 25;
-        } else if (1.5D == (double) this.currentScale) {
-            return 37;
-        } else if ((double) this.currentScale == 2.0D) {
-            return 50;
-        } else if ((double) this.currentScale == 3.0D) {
-            return 75;
-        } else {
-            return 4.0D == (double) this.currentScale ? 100 : 200;
         }
+        if (1.5D == (double) this.currentScale) {
+            return 37;
+        }
+        if ((double) this.currentScale == 2.0D) {
+            return 50;
+        }
+        if ((double) this.currentScale == 3.0D) {
+            return 75;
+        }
+        return 4.0D == (double) this.currentScale ? 100 : 200;
     }
 
     public void method1301() {
@@ -506,42 +509,42 @@ public class Class189 {
     public SceneOffset method1279(int var1, SceneOffset var2) {
         if (!this.aClass190_2229.method1309()) {
             return null;
-        } else if (!this.aClass7_2217.method34()) {
+        }
+        if (!this.aClass7_2217.method34()) {
             return null;
-        } else if (!this.aWorldMapTransportation_2234.method79(var2.x, var2.y)) {
+        }
+        if (!this.aWorldMapTransportation_2234.method79(var2.x, var2.y)) {
             return null;
-        } else {
-            HashMap var3 = this.aClass7_2217.method36();
-            List var4 = (List) var3.get(var1);
-            if (var4 != null && !var4.isEmpty()) {
-                Class24 var5 = null;
-                int var6 = -1;
-                Iterator var7 = var4.iterator();
+        }
+        HashMap var3 = this.aClass7_2217.method36();
+        List var4 = (List) var3.get(var1);
+        if (var4 != null && !var4.isEmpty()) {
+            Class24 var5 = null;
+            int var6 = -1;
+            Iterator var7 = var4.iterator();
 
-                while (true) {
-                    Class24 var8;
-                    int var11;
-                    do {
-                        if (!var7.hasNext()) {
-                            return var5.aSceneOffset_167;
-                        }
+            while (true) {
+                Class24 var8;
+                int var11;
+                do {
+                    if (!var7.hasNext()) {
+                        return var5.aSceneOffset_167;
+                    }
 
-                        var8 = (Class24) var7.next();
-                        int var9 = var8.aSceneOffset_167.x - var2.x;
-                        int var10 = var8.aSceneOffset_167.y - var2.y;
-                        var11 = var9 * var9 + var10 * var10;
-                        if (var11 == 0) {
-                            return var8.aSceneOffset_167;
-                        }
-                    } while (var11 >= var6 && var5 != null);
+                    var8 = (Class24) var7.next();
+                    int var9 = var8.aSceneOffset_167.x - var2.x;
+                    int var10 = var8.aSceneOffset_167.y - var2.y;
+                    var11 = var9 * var9 + var10 * var10;
+                    if (var11 == 0) {
+                        return var8.aSceneOffset_167;
+                    }
+                } while (var11 >= var6 && var5 != null);
 
-                    var5 = var8;
-                    var6 = var11;
-                }
-            } else {
-                return null;
+                var5 = var8;
+                var6 = var11;
             }
         }
+        return null;
     }
 
     public int method1270() {
@@ -555,21 +558,21 @@ public class Class189 {
     public Class24 method1282() {
         if (!this.aClass190_2229.method1309()) {
             return null;
-        } else if (!this.aClass7_2217.method34()) {
-            return null;
-        } else {
-            HashMap var1 = this.aClass7_2217.method36();
-            this.aList2230 = new java.util.LinkedList();
-            Iterator var2 = var1.values().iterator();
-
-            while (var2.hasNext()) {
-                List var3 = (List) var2.next();
-                this.aList2230.addAll(var3);
-            }
-
-            this.anIterator2221 = this.aList2230.iterator();
-            return this.method1283();
         }
+        if (!this.aClass7_2217.method34()) {
+            return null;
+        }
+        HashMap var1 = this.aClass7_2217.method36();
+        this.aList2230 = new java.util.LinkedList();
+        Iterator var2 = var1.values().iterator();
+
+        while (var2.hasNext()) {
+            List var3 = (List) var2.next();
+            this.aList2230.addAll(var3);
+        }
+
+        this.anIterator2221 = this.aList2230.iterator();
+        return this.method1283();
     }
 
     public void method1281(int var1, int var2, SceneOffset var3, SceneOffset var4) {

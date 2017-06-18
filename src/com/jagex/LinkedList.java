@@ -52,10 +52,9 @@ public class LinkedList<T extends Node> implements Iterable<T> {
         Node var1 = this.sentinel.next;
         if (var1 == this.sentinel) {
             return null;
-        } else {
-            var1.unlink();
-            return (T) var1;
         }
+        var1.unlink();
+        return (T) var1;
     }
 
     T method910(T var1) {
@@ -69,10 +68,9 @@ public class LinkedList<T extends Node> implements Iterable<T> {
         if (var2 == this.sentinel) {
             this.tail = null;
             return null;
-        } else {
-            this.tail = var2.next;
-            return (T) var2;
         }
+        this.tail = var2.next;
+        return (T) var2;
     }
 
     public T method911() {
@@ -80,10 +78,9 @@ public class LinkedList<T extends Node> implements Iterable<T> {
         if (var1 == this.sentinel) {
             this.tail = null;
             return null;
-        } else {
-            this.tail = var1.next;
-            return (T) var1;
         }
+        this.tail = var1.next;
+        return (T) var1;
     }
 
     public boolean method906() {

@@ -284,7 +284,8 @@ public class Class9 {
                                                                                                                                                                                                                                 }
 
                                                                                                                                                                                                                                 throw new RuntimeException();
-                                                                                                                                                                                                                            } else if (var7 == 45) {
+                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                            if (var7 == 45) {
                                                                                                                                                                                                                                 var16 = var32[var14];
                                                                                                                                                                                                                                 var17 = Class63.anIntArray645[--Class63.anInt644];
                                                                                                                                                                                                                                 if (var17 < 0 || var17 >= Class63.anIntArray642[var16]) {
@@ -1074,8 +1075,7 @@ public class Class9 {
     int method47(int var1) {
         if (var1 != 9 && var1 != 10) {
             return var1 == 11 ? 8 : var1;
-        } else {
-            return 1;
         }
+        return 1;
     }
 }

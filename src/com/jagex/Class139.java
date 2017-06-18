@@ -14,10 +14,9 @@ public class Class139 {
         if (var1 == this.aClass134_1769) {
             this.aClass134_1770 = null;
             return null;
-        } else {
-            this.aClass134_1770 = var1.aClass134_1738;
-            return var1;
         }
+        this.aClass134_1770 = var1.aClass134_1738;
+        return var1;
     }
 
     public Class134 method969() {
@@ -25,10 +24,9 @@ public class Class139 {
         if (var1 == this.aClass134_1769) {
             this.aClass134_1770 = null;
             return null;
-        } else {
-            this.aClass134_1770 = var1.aClass134_1738;
-            return var1;
         }
+        this.aClass134_1770 = var1.aClass134_1738;
+        return var1;
     }
 
     public void method967(Class134 var1) {

@@ -154,26 +154,25 @@ public class DynamicObject extends Entity {
 
         if (var2 == null) {
             return null;
-        } else {
-            int var3;
-            int var4;
-            if (this.orientation != 1 && this.orientation != 3) {
-                var3 = var2.anInt230;
-                var4 = var2.anInt222;
-            } else {
-                var3 = var2.anInt222;
-                var4 = var2.anInt230;
-            }
-
-            int var5 = this.sceneX + (var3 >> 1);
-            int var6 = this.sceneX + (var3 + 1 >> 1);
-            int var7 = this.sceneY + (var4 >> 1);
-            int var8 = (var4 + 1 >> 1) + this.sceneY;
-            int[][] var9 = Class26.anIntArrayArrayArray191[this.level];
-            int var10 = var9[var6][var8] + var9[var5][var7] + var9[var6][var7] + var9[var5][var8] >> 2;
-            int var11 = (this.sceneX << 7) + (var3 << 6);
-            int var12 = (var4 << 6) + (this.sceneY << 7);
-            return var2.method1074(this.type, this.orientation, var9, var11, var10, var12, this.anAnimationSequence358, this.anInt220);
         }
+        int var3;
+        int var4;
+        if (this.orientation != 1 && this.orientation != 3) {
+            var3 = var2.anInt230;
+            var4 = var2.anInt222;
+        } else {
+            var3 = var2.anInt222;
+            var4 = var2.anInt230;
+        }
+
+        int var5 = this.sceneX + (var3 >> 1);
+        int var6 = this.sceneX + (var3 + 1 >> 1);
+        int var7 = this.sceneY + (var4 >> 1);
+        int var8 = (var4 + 1 >> 1) + this.sceneY;
+        int[][] var9 = Class26.anIntArrayArrayArray191[this.level];
+        int var10 = var9[var6][var8] + var9[var5][var7] + var9[var6][var7] + var9[var5][var8] >> 2;
+        int var11 = (this.sceneX << 7) + (var3 << 6);
+        int var12 = (var4 << 6) + (this.sceneY << 7);
+        return var2.method1074(this.type, this.orientation, var9, var11, var10, var12, this.anAnimationSequence358, this.anInt220);
     }
 }

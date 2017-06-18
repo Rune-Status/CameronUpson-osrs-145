@@ -33,37 +33,33 @@ public class HealthBarDefinition extends DoublyNode {
     public Sprite method1122() {
         if (this.anInt212 < 0) {
             return null;
-        } else {
-            Sprite var1 = (Sprite) aReferenceCache2013.method973((long) this.anInt212);
-            if (var1 != null) {
-                return var1;
-            } else {
-                var1 = Class176.method1188(Class171.aReferenceTable2125, this.anInt212, 0);
-                if (var1 != null) {
-                    aReferenceCache2013.method975(var1, (long) this.anInt212);
-                }
-
-                return var1;
-            }
         }
+        Sprite var1 = (Sprite) aReferenceCache2013.method973((long) this.anInt212);
+        if (var1 != null) {
+            return var1;
+        }
+        var1 = Class176.method1188(Class171.aReferenceTable2125, this.anInt212, 0);
+        if (var1 != null) {
+            aReferenceCache2013.method975(var1, (long) this.anInt212);
+        }
+
+        return var1;
     }
 
     public Sprite method1121() {
         if (this.anInt225 < 0) {
             return null;
-        } else {
-            Sprite var1 = (Sprite) aReferenceCache2013.method973((long) this.anInt225);
-            if (var1 != null) {
-                return var1;
-            } else {
-                var1 = Class176.method1188(Class171.aReferenceTable2125, this.anInt225, 0);
-                if (var1 != null) {
-                    aReferenceCache2013.method975(var1, (long) this.anInt225);
-                }
-
-                return var1;
-            }
         }
+        Sprite var1 = (Sprite) aReferenceCache2013.method973((long) this.anInt225);
+        if (var1 != null) {
+            return var1;
+        }
+        var1 = Class176.method1188(Class171.aReferenceTable2125, this.anInt225, 0);
+        if (var1 != null) {
+            aReferenceCache2013.method975(var1, (long) this.anInt225);
+        }
+
+        return var1;
     }
 
     void method1051(Buffer var1, int var2) {

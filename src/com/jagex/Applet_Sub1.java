@@ -59,17 +59,16 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         AnimationSequence var1 = (AnimationSequence) AnimationSequence.aReferenceCache2013.method973((long) var0);
         if (var1 != null) {
             return var1;
-        } else {
-            byte[] var2 = Class44.aReferenceTable368.method1085(12, var0);
-            var1 = new AnimationSequence();
-            if (var2 != null) {
-                var1.method1066(new Buffer(var2));
-            }
-
-            var1.method556();
-            AnimationSequence.aReferenceCache2013.method975(var1, (long) var0);
-            return var1;
         }
+        byte[] var2 = Class44.aReferenceTable368.method1085(12, var0);
+        var1 = new AnimationSequence();
+        if (var2 != null) {
+            var1.method1066(new Buffer(var2));
+        }
+
+        var1.method556();
+        AnimationSequence.aReferenceCache2013.method975(var1, (long) var0);
+        return var1;
     }
 
     static void method233() {
@@ -447,7 +446,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
                                     return;
                                 }
-                            } else if (Login.anInt701 == 3) {
+                            }
+                            if (Login.anInt701 == 3) {
                                 var12 = Login.anInt710 + 180;
                                 var14 = 276;
                                 if (var1 == 1 && var9 >= var12 - 75 && var9 <= var12 + 75 && var10 >= var14 - 20 && var10 <= var14 + 20) {
@@ -664,12 +664,11 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         synchronized (Class4.aClass4_26) {
             if (Class4.anInt22 == Class4.anInt29) {
                 return false;
-            } else {
-                Class99.anInt1087 = Class4.anIntArray30[Class4.anInt29];
-                Class77.aChar836 = Class4.aCharArray28[Class4.anInt29];
-                Class4.anInt29 = Class4.anInt29 + 1 & 127;
-                return true;
             }
+            Class99.anInt1087 = Class4.anIntArray30[Class4.anInt29];
+            Class77.aChar836 = Class4.aCharArray28[Class4.anInt29];
+            Class4.anInt29 = Class4.anInt29 + 1 & 127;
+            return true;
         }
     }
 
@@ -802,24 +801,20 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
             if (!var1.equals("runescape.com") && !var1.endsWith(".runescape.com")) {
                 if (var1.endsWith("127.0.0.1")) {
                     return true;
-                } else {
-                    while (var1.length() > 0 && var1.charAt(var1.length() - 1) >= '0' && var1.charAt(var1.length() - 1) <= '9') {
-                        var1 = var1.substring(0, var1.length() - 1);
-                    }
-
-                    if (var1.endsWith("192.168.1.")) {
-                        return true;
-                    } else {
-                        this.method227("invalidhost");
-                        return false;
-                    }
                 }
-            } else {
-                return true;
+                while (var1.length() > 0 && var1.charAt(var1.length() - 1) >= '0' && var1.charAt(var1.length() - 1) <= '9') {
+                    var1 = var1.substring(0, var1.length() - 1);
+                }
+
+                if (var1.endsWith("192.168.1.")) {
+                    return true;
+                }
+                this.method227("invalidhost");
+                return false;
             }
-        } else {
             return true;
         }
+        return true;
     }
 
     public void run() {

@@ -19,42 +19,41 @@ public class Class119 {
                 var3.modelType = 2;
                 var3.modelId = Class63.anIntArray645[--Class63.anInt644];
                 return 1;
-            } else if (var0 == 1202) {
+            }
+            if (var0 == 1202) {
                 var3.modelType = 3;
                 var3.modelId = Client.player.appearance.method1036();
                 return 1;
-            } else {
-                return 2;
             }
-        } else {
-            Class63.anInt644 -= 2;
-            int var4 = Class63.anIntArray645[Class63.anInt644];
-            int var5 = Class63.anIntArray645[Class63.anInt644 + 1];
-            var3.itemId = var4;
-            var3.itemStackSize = var5;
-            ItemDefinition var6 = Class149.method1001(var4);
-            var3.xRotation = var6.anInt668;
-            var3.zRotation = var6.anInt236;
-            var3.yRotation = var6.anInt213;
-            var3.modelOffsetX = var6.anInt818;
-            var3.modelOffsetY = var6.anInt233;
-            var3.modelZoom = var6.anInt219;
-            if (var0 == 1205) {
-                var3.anInt777 = 0;
-            } else if (var0 == 1212 | var6.stackable == 1) {
-                var3.anInt777 = 1;
-            } else {
-                var3.anInt777 = 2;
-            }
-
-            if (var3.anInt772 > 0) {
-                var3.modelZoom = var3.modelZoom * 32 / var3.anInt772;
-            } else if (var3.anInt749 > 0) {
-                var3.modelZoom = var3.modelZoom * 32 / var3.anInt749;
-            }
-
-            return 1;
+            return 2;
         }
+        Class63.anInt644 -= 2;
+        int var4 = Class63.anIntArray645[Class63.anInt644];
+        int var5 = Class63.anIntArray645[Class63.anInt644 + 1];
+        var3.itemId = var4;
+        var3.itemStackSize = var5;
+        ItemDefinition var6 = Class149.method1001(var4);
+        var3.xRotation = var6.anInt668;
+        var3.zRotation = var6.anInt236;
+        var3.yRotation = var6.anInt213;
+        var3.modelOffsetX = var6.anInt818;
+        var3.modelOffsetY = var6.anInt233;
+        var3.modelZoom = var6.anInt219;
+        if (var0 == 1205) {
+            var3.anInt777 = 0;
+        } else if (var0 == 1212 | var6.stackable == 1) {
+            var3.anInt777 = 1;
+        } else {
+            var3.anInt777 = 2;
+        }
+
+        if (var3.anInt772 > 0) {
+            var3.modelZoom = var3.modelZoom * 32 / var3.anInt772;
+        } else if (var3.anInt749 > 0) {
+            var3.modelZoom = var3.modelZoom * 32 / var3.anInt749;
+        }
+
+        return 1;
     }
 
     static int method805(int var0, int var1, int var2) {

@@ -77,16 +77,16 @@ public class CacheReferenceTable extends ReferenceTable {
     public int method1130() {
         if (this.aBoolean2106) {
             return 100;
-        } else if (this.anObjectArray2057 != null) {
-            return 99;
-        } else {
-            int var1 = Class57.method360(255, this.anInt2101);
-            if (var1 >= 100) {
-                var1 = 99;
-            }
-
-            return var1;
         }
+        if (this.anObjectArray2057 != null) {
+            return 99;
+        }
+        int var1 = Class57.method360(255, this.anInt2101);
+        if (var1 >= 100) {
+            var1 = 99;
+        }
+
+        return var1;
     }
 
     void method1091(int var1) {
@@ -128,9 +128,8 @@ public class CacheReferenceTable extends ReferenceTable {
     int method1083(int var1) {
         if (this.anObjectArray2057[var1] != null) {
             return 100;
-        } else {
-            return this.aBooleanArray2108[var1] ? 100 : Class57.method360(this.anInt2101, var1);
         }
+        return this.aBooleanArray2108[var1] ? 100 : Class57.method360(this.anInt2101, var1);
     }
 
     public void method1131(CacheIndex var1, int var2, byte[] var3, boolean var4) {
@@ -242,10 +241,9 @@ public class CacheReferenceTable extends ReferenceTable {
 
         if (var1 == 0) {
             return 100;
-        } else {
-            var3 = var2 * 100 / var1;
-            return var3;
         }
+        var3 = var2 * 100 / var1;
+        return var3;
     }
 
     void method1135(int var1, byte[] var2, boolean var3, boolean var4) {

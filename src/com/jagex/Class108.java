@@ -88,9 +88,8 @@ public class Class108 implements Runnable {
             }
 
             return var4;
-        } else {
-            throw new IllegalArgumentException("");
         }
+        throw new IllegalArgumentException("");
     }
 
     public final Class103 method747(Runnable var1, int var2) {

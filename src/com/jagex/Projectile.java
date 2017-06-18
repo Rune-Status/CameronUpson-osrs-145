@@ -107,9 +107,8 @@ public final class Projectile extends Entity {
         Model var2 = var1.method1050(this.anInt213);
         if (var2 == null) {
             return null;
-        } else {
-            var2.method722(this.yRotation);
-            return var2;
         }
+        var2.method722(this.yRotation);
+        return var2;
     }
 }

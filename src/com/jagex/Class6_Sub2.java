@@ -234,10 +234,9 @@ public class Class6_Sub2 extends Class6 {
     public boolean method163(Object var1) {
         if (!(var1 instanceof Class6_Sub2)) {
             return false;
-        } else {
-            Class6_Sub2 var2 = (Class6_Sub2) var1;
-            return this.anInt43 == var2.anInt43 && this.anInt42 == var2.anInt42;
         }
+        Class6_Sub2 var2 = (Class6_Sub2) var1;
+        return this.anInt43 == var2.anInt43 && this.anInt42 == var2.anInt42;
     }
 
     public int method162() {
@@ -248,36 +247,34 @@ public class Class6_Sub2 extends Class6 {
         int var3 = var2.readUnsignedByte();
         if (var3 != Class14.aClass14_114.anInt115) {
             throw new IllegalStateException("");
-        } else {
-            this.anInt45 = var2.readUnsignedByte();
-            this.anInt48 = var2.readUnsignedByte();
-            this.anInt40 = var2.readUnsignedShort();
-            this.anInt49 = var2.readUnsignedShort();
-            this.anInt43 = var2.readUnsignedShort();
-            this.anInt42 = var2.readUnsignedShort();
-            this.anInt48 = Math.min(this.anInt48, 4);
-            this.aShortArrayArrayArray47 = new short[1][64][64];
-            this.aShortArrayArrayArray46 = new short[this.anInt48][64][64];
-            this.aByteArrayArrayArray44 = new byte[this.anInt48][64][64];
-            this.aByteArrayArrayArray41 = new byte[this.anInt48][64][64];
-            this.mapTiles = new MapTile[this.anInt48][64][64][];
-            var3 = var1.readUnsignedByte();
-            if (Class17.aClass17_124.anInt125 != var3) {
-                throw new IllegalStateException("");
-            } else {
-                int var4 = var1.readUnsignedByte();
-                int var5 = var1.readUnsignedByte();
-                if (this.anInt43 == var4 && var5 == this.anInt42) {
-                    for (int var6 = 0; var6 < 64; ++var6) {
-                        for (int var7 = 0; var7 < 64; ++var7) {
-                            this.method23(var6, var7, var1);
-                        }
-                    }
-
-                } else {
-                    throw new IllegalStateException("");
+        }
+        this.anInt45 = var2.readUnsignedByte();
+        this.anInt48 = var2.readUnsignedByte();
+        this.anInt40 = var2.readUnsignedShort();
+        this.anInt49 = var2.readUnsignedShort();
+        this.anInt43 = var2.readUnsignedShort();
+        this.anInt42 = var2.readUnsignedShort();
+        this.anInt48 = Math.min(this.anInt48, 4);
+        this.aShortArrayArrayArray47 = new short[1][64][64];
+        this.aShortArrayArrayArray46 = new short[this.anInt48][64][64];
+        this.aByteArrayArrayArray44 = new byte[this.anInt48][64][64];
+        this.aByteArrayArrayArray41 = new byte[this.anInt48][64][64];
+        this.mapTiles = new MapTile[this.anInt48][64][64][];
+        var3 = var1.readUnsignedByte();
+        if (Class17.aClass17_124.anInt125 != var3) {
+            throw new IllegalStateException("");
+        }
+        int var4 = var1.readUnsignedByte();
+        int var5 = var1.readUnsignedByte();
+        if (this.anInt43 == var4 && var5 == this.anInt42) {
+            for (int var6 = 0; var6 < 64; ++var6) {
+                for (int var7 = 0; var7 < 64; ++var7) {
+                    this.method23(var6, var7, var1);
                 }
             }
+
+        } else {
+            throw new IllegalStateException("");
         }
     }
 }

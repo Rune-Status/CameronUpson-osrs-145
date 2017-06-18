@@ -46,29 +46,28 @@ public class AudioEffect {
 
         if (var1 == 0) {
             return new byte[0];
-        } else {
-            var2 = var1 * 22050 / 1000;
-            byte[] var3 = new byte[var2];
+        }
+        var2 = var1 * 22050 / 1000;
+        byte[] var3 = new byte[var2];
 
-            for (int var4 = 0; var4 < 10; ++var4) {
-                if (this.instruments[var4] != null) {
-                    int var5 = this.instruments[var4].anInt1029 * 22050 / 1000;
-                    int var6 = this.instruments[var4].anInt1026 * 22050 / 1000;
-                    int[] var7 = this.instruments[var4].method610(var5, this.instruments[var4].anInt1029);
+        for (int var4 = 0; var4 < 10; ++var4) {
+            if (this.instruments[var4] != null) {
+                int var5 = this.instruments[var4].anInt1029 * 22050 / 1000;
+                int var6 = this.instruments[var4].anInt1026 * 22050 / 1000;
+                int[] var7 = this.instruments[var4].method610(var5, this.instruments[var4].anInt1029);
 
-                    for (int var8 = 0; var8 < var5; ++var8) {
-                        int var9 = var3[var8 + var6] + (var7[var8] >> 8);
-                        if ((var9 + 128 & -256) != 0) {
-                            var9 = var9 >> 31 ^ 127;
-                        }
-
-                        var3[var8 + var6] = (byte) var9;
+                for (int var8 = 0; var8 < var5; ++var8) {
+                    int var9 = var3[var8 + var6] + (var7[var8] >> 8);
+                    if ((var9 + 128 & -256) != 0) {
+                        var9 = var9 >> 31 ^ 127;
                     }
+
+                    var3[var8 + var6] = (byte) var9;
                 }
             }
-
-            return var3;
         }
+
+        return var3;
     }
 
     public final int method608() {
@@ -98,9 +97,8 @@ public class AudioEffect {
             }
 
             return var1;
-        } else {
-            return 0;
         }
+        return 0;
     }
 
     public Node_Sub11_Sub1 method609() {

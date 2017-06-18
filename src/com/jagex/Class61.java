@@ -29,22 +29,21 @@ public class Class61 {
     static boolean method372(String var0) {
         if (var0 == null) {
             return false;
-        } else {
-            String var1 = Class84.method484(var0, Class2.aClass188_13);
+        }
+        String var1 = Class84.method484(var0, Class2.aClass188_13);
 
-            for (int var2 = 0; var2 < Client.anInt1450; ++var2) {
-                IgnoredPlayer var3 = Client.ignoredPlayers[var2];
-                if (var1.equalsIgnoreCase(Class84.method484(var3.aString242, Class2.aClass188_13))) {
-                    return true;
-                }
-
-                if (var1.equalsIgnoreCase(Class84.method484(var3.aString243, Class2.aClass188_13))) {
-                    return true;
-                }
+        for (int var2 = 0; var2 < Client.anInt1450; ++var2) {
+            IgnoredPlayer var3 = Client.ignoredPlayers[var2];
+            if (var1.equalsIgnoreCase(Class84.method484(var3.aString242, Class2.aClass188_13))) {
+                return true;
             }
 
-            return false;
+            if (var1.equalsIgnoreCase(Class84.method484(var3.aString243, Class2.aClass188_13))) {
+                return true;
+            }
         }
+
+        return false;
     }
 
     public static void method375() {

@@ -275,104 +275,103 @@ public abstract class Node_Sub21_Sub26_Sub3 extends Node_Sub21_Sub26 {
     public int method1181(String var1, int[] var2, String[] var3) {
         if (var1 == null) {
             return 0;
-        } else {
-            int var4 = 0;
-            int var5 = 0;
-            StringBuilder var6 = new StringBuilder(100);
-            int var7 = -1;
-            int var8 = 0;
-            byte var9 = 0;
-            int var10 = -1;
-            char var11 = 0;
-            int var12 = 0;
-            int var13 = var1.length();
+        }
+        int var4 = 0;
+        int var5 = 0;
+        StringBuilder var6 = new StringBuilder(100);
+        int var7 = -1;
+        int var8 = 0;
+        byte var9 = 0;
+        int var10 = -1;
+        char var11 = 0;
+        int var12 = 0;
+        int var13 = var1.length();
 
-            for (int var14 = 0; var14 < var13; ++var14) {
-                char var15 = var1.charAt(var14);
-                if (var15 == '<') {
-                    var10 = var14;
-                } else {
-                    if (var15 == '>' && var10 != -1) {
-                        String var17 = var1.substring(var10 + 1, var14);
-                        var10 = -1;
-                        var6.append('<');
-                        var6.append(var17);
-                        var6.append('>');
-                        if (var17.equals("br")) {
-                            var3[var12] = var6.toString().substring(var5, var6.length());
-                            ++var12;
-                            var5 = var6.length();
-                            var4 = 0;
-                            var7 = -1;
-                            var11 = 0;
-                        } else if (var17.equals("lt")) {
-                            var4 += this.method1159('<');
-                            if (this.aByteArray943 != null && var11 != -1) {
-                                var4 += this.aByteArray943[(var11 << 8) + 60];
-                            }
-
-                            var11 = '<';
-                        } else if (var17.equals("gt")) {
-                            var4 += this.method1159('>');
-                            if (this.aByteArray943 != null && var11 != -1) {
-                                var4 += this.aByteArray943[(var11 << 8) + 62];
-                            }
-
-                            var11 = '>';
-                        } else if (var17.startsWith("img=")) {
-                            try {
-                                int var18 = Class85.method495(var17.substring(4));
-                                var4 += aNode_Sub21_Sub26_Sub2Array2131[var18].anInt221;
-                                var11 = 0;
-                            } catch (Exception var20) {
-                            }
+        for (int var14 = 0; var14 < var13; ++var14) {
+            char var15 = var1.charAt(var14);
+            if (var15 == '<') {
+                var10 = var14;
+            } else {
+                if (var15 == '>' && var10 != -1) {
+                    String var17 = var1.substring(var10 + 1, var14);
+                    var10 = -1;
+                    var6.append('<');
+                    var6.append(var17);
+                    var6.append('>');
+                    if (var17.equals("br")) {
+                        var3[var12] = var6.toString().substring(var5, var6.length());
+                        ++var12;
+                        var5 = var6.length();
+                        var4 = 0;
+                        var7 = -1;
+                        var11 = 0;
+                    } else if (var17.equals("lt")) {
+                        var4 += this.method1159('<');
+                        if (this.aByteArray943 != null && var11 != -1) {
+                            var4 += this.aByteArray943[(var11 << 8) + 60];
                         }
 
-                        var15 = 0;
+                        var11 = '<';
+                    } else if (var17.equals("gt")) {
+                        var4 += this.method1159('>');
+                        if (this.aByteArray943 != null && var11 != -1) {
+                            var4 += this.aByteArray943[(var11 << 8) + 62];
+                        }
+
+                        var11 = '>';
+                    } else if (var17.startsWith("img=")) {
+                        try {
+                            int var18 = Class85.method495(var17.substring(4));
+                            var4 += aNode_Sub21_Sub26_Sub2Array2131[var18].anInt221;
+                            var11 = 0;
+                        } catch (Exception var20) {
+                        }
                     }
 
-                    if (var10 == -1) {
-                        if (var15 != 0) {
-                            var6.append(var15);
-                            var4 += this.method1159(var15);
-                            if (this.aByteArray943 != null && var11 != -1) {
-                                var4 += this.aByteArray943[(var11 << 8) + var15];
-                            }
+                    var15 = 0;
+                }
 
-                            var11 = var15;
+                if (var10 == -1) {
+                    if (var15 != 0) {
+                        var6.append(var15);
+                        var4 += this.method1159(var15);
+                        if (this.aByteArray943 != null && var11 != -1) {
+                            var4 += this.aByteArray943[(var11 << 8) + var15];
                         }
 
-                        if (var15 == ' ') {
-                            var7 = var6.length();
-                            var8 = var4;
-                            var9 = 1;
-                        }
+                        var11 = var15;
+                    }
 
-                        if (var2 != null && var4 > var2[var12 < var2.length ? var12 : var2.length - 1] && var7 >= 0) {
-                            var3[var12] = var6.toString().substring(var5, var7 - var9);
-                            ++var12;
-                            var5 = var7;
-                            var7 = -1;
-                            var4 -= var8;
-                            var11 = 0;
-                        }
+                    if (var15 == ' ') {
+                        var7 = var6.length();
+                        var8 = var4;
+                        var9 = 1;
+                    }
 
-                        if (var15 == '-') {
-                            var7 = var6.length();
-                            var8 = var4;
-                            var9 = 0;
-                        }
+                    if (var2 != null && var4 > var2[var12 < var2.length ? var12 : var2.length - 1] && var7 >= 0) {
+                        var3[var12] = var6.toString().substring(var5, var7 - var9);
+                        ++var12;
+                        var5 = var7;
+                        var7 = -1;
+                        var4 -= var8;
+                        var11 = 0;
+                    }
+
+                    if (var15 == '-') {
+                        var7 = var6.length();
+                        var8 = var4;
+                        var9 = 0;
                     }
                 }
             }
-
-            String var16 = var6.toString();
-            if (var16.length() > var5) {
-                var3[var12++] = var16.substring(var5, var16.length());
-            }
-
-            return var12;
         }
+
+        String var16 = var6.toString();
+        if (var16.length() > var5) {
+            var3[var12++] = var16.substring(var5, var16.length());
+        }
+
+        return var12;
     }
 
     public int method1178(String var1, int var2) {
@@ -411,60 +410,59 @@ public abstract class Node_Sub21_Sub26_Sub3 extends Node_Sub21_Sub26 {
     public int method1184(String var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10) {
         if (var1 == null) {
             return 0;
-        } else {
-            this.method1164(var6, var7);
-            if (var10 == 0) {
-                var10 = this.anInt221;
-            }
-
-            int[] var11 = new int[]{var4};
-            if (var5 < this.anInt220 + this.anInt217 + var10 && var5 < var10 + var10) {
-                var11 = null;
-            }
-
-            int var12 = this.method1181(var1, var11, aStringArray2132);
-            if (var9 == 3 && var12 == 1) {
-                var9 = 1;
-            }
-
-            int var13;
-            int var14;
-            if (var9 == 0) {
-                var13 = var3 + this.anInt220;
-            } else if (var9 == 1) {
-                var13 = var3 + this.anInt220 + (var5 - this.anInt220 - this.anInt217 - (var12 - 1) * var10) / 2;
-            } else if (var9 == 2) {
-                var13 = var3 + var5 - this.anInt217 - (var12 - 1) * var10;
-            } else {
-                var14 = (var5 - this.anInt220 - this.anInt217 - (var12 - 1) * var10) / (var12 + 1);
-                if (var14 < 0) {
-                    var14 = 0;
-                }
-
-                var13 = var3 + this.anInt220 + var14;
-                var10 += var14;
-            }
-
-            for (var14 = 0; var14 < var12; ++var14) {
-                if (var8 == 0) {
-                    this.method1169(aStringArray2132[var14], var2, var13);
-                } else if (var8 == 1) {
-                    this.method1169(aStringArray2132[var14], var2 + (var4 - this.getTextWidth(aStringArray2132[var14])) / 2, var13);
-                } else if (var8 == 2) {
-                    this.method1169(aStringArray2132[var14], var2 + var4 - this.getTextWidth(aStringArray2132[var14]), var13);
-                } else if (var14 == var12 - 1) {
-                    this.method1169(aStringArray2132[var14], var2, var13);
-                } else {
-                    this.method1167(aStringArray2132[var14], var4);
-                    this.method1169(aStringArray2132[var14], var2, var13);
-                    anInt229 = 0;
-                }
-
-                var13 += var10;
-            }
-
-            return var12;
         }
+        this.method1164(var6, var7);
+        if (var10 == 0) {
+            var10 = this.anInt221;
+        }
+
+        int[] var11 = new int[]{var4};
+        if (var5 < this.anInt220 + this.anInt217 + var10 && var5 < var10 + var10) {
+            var11 = null;
+        }
+
+        int var12 = this.method1181(var1, var11, aStringArray2132);
+        if (var9 == 3 && var12 == 1) {
+            var9 = 1;
+        }
+
+        int var13;
+        int var14;
+        if (var9 == 0) {
+            var13 = var3 + this.anInt220;
+        } else if (var9 == 1) {
+            var13 = var3 + this.anInt220 + (var5 - this.anInt220 - this.anInt217 - (var12 - 1) * var10) / 2;
+        } else if (var9 == 2) {
+            var13 = var3 + var5 - this.anInt217 - (var12 - 1) * var10;
+        } else {
+            var14 = (var5 - this.anInt220 - this.anInt217 - (var12 - 1) * var10) / (var12 + 1);
+            if (var14 < 0) {
+                var14 = 0;
+            }
+
+            var13 = var3 + this.anInt220 + var14;
+            var10 += var14;
+        }
+
+        for (var14 = 0; var14 < var12; ++var14) {
+            if (var8 == 0) {
+                this.method1169(aStringArray2132[var14], var2, var13);
+            } else if (var8 == 1) {
+                this.method1169(aStringArray2132[var14], var2 + (var4 - this.getTextWidth(aStringArray2132[var14])) / 2, var13);
+            } else if (var8 == 2) {
+                this.method1169(aStringArray2132[var14], var2 + var4 - this.getTextWidth(aStringArray2132[var14]), var13);
+            } else if (var14 == var12 - 1) {
+                this.method1169(aStringArray2132[var14], var2, var13);
+            } else {
+                this.method1167(aStringArray2132[var14], var4);
+                this.method1169(aStringArray2132[var14], var2, var13);
+                anInt229 = 0;
+            }
+
+            var13 += var10;
+        }
+
+        return var12;
     }
 
     public void method1179(String var1, int var2, int var3, int var4, int var5, int var6) {
@@ -787,55 +785,54 @@ public abstract class Node_Sub21_Sub26_Sub3 extends Node_Sub21_Sub26 {
     public int getTextWidth(String var1) {
         if (var1 == null) {
             return 0;
-        } else {
-            int var2 = -1;
-            int var3 = -1;
-            int var4 = 0;
+        }
+        int var2 = -1;
+        int var3 = -1;
+        int var4 = 0;
 
-            for (int var5 = 0; var5 < var1.length(); ++var5) {
-                char var6 = var1.charAt(var5);
-                if (var6 == '<') {
-                    var2 = var5;
-                } else {
-                    if (var6 == '>' && var2 != -1) {
-                        String var7 = var1.substring(var2 + 1, var5);
-                        var2 = -1;
-                        if (var7.equals("lt")) {
-                            var6 = '<';
-                        } else {
-                            if (!var7.equals("gt")) {
-                                if (var7.startsWith("img=")) {
-                                    try {
-                                        int var8 = Class85.method495(var7.substring(4));
-                                        var4 += aNode_Sub21_Sub26_Sub2Array2131[var8].anInt221;
-                                        var3 = -1;
-                                    } catch (Exception var10) {
-                                    }
+        for (int var5 = 0; var5 < var1.length(); ++var5) {
+            char var6 = var1.charAt(var5);
+            if (var6 == '<') {
+                var2 = var5;
+            } else {
+                if (var6 == '>' && var2 != -1) {
+                    String var7 = var1.substring(var2 + 1, var5);
+                    var2 = -1;
+                    if (var7.equals("lt")) {
+                        var6 = '<';
+                    } else {
+                        if (!var7.equals("gt")) {
+                            if (var7.startsWith("img=")) {
+                                try {
+                                    int var8 = Class85.method495(var7.substring(4));
+                                    var4 += aNode_Sub21_Sub26_Sub2Array2131[var8].anInt221;
+                                    var3 = -1;
+                                } catch (Exception var10) {
                                 }
-                                continue;
                             }
-
-                            var6 = '>';
-                        }
-                    }
-
-                    if (var6 == 160) {
-                        var6 = ' ';
-                    }
-
-                    if (var2 == -1) {
-                        var4 += this.anIntArray342[(char) (Class149.method1002(var6) & 255)];
-                        if (this.aByteArray943 != null && var3 != -1) {
-                            var4 += this.aByteArray943[(var3 << 8) + var6];
+                            continue;
                         }
 
-                        var3 = var6;
+                        var6 = '>';
                     }
                 }
-            }
 
-            return var4;
+                if (var6 == 160) {
+                    var6 = ' ';
+                }
+
+                if (var2 == -1) {
+                    var4 += this.anIntArray342[(char) (Class149.method1002(var6) & 255)];
+                    if (this.aByteArray943 != null && var3 != -1) {
+                        var4 += this.aByteArray943[(var3 << 8) + var6];
+                    }
+
+                    var3 = var6;
+                }
+            }
         }
+
+        return var4;
     }
 
     void method1167(String var1, int var2) {

@@ -45,15 +45,14 @@ public final class Class36 {
         int var1 = Class75.method450(Class75.method448(var0));
         if (var1 == 0) {
             return null;
-        } else {
-            for (int var2 = 0; var2 < var1; ++var2) {
-                var0 = Class161.method1016(var0.parentUid);
-                if (var0 == null) {
-                    return null;
-                }
-            }
-
-            return var0;
         }
+        for (int var2 = 0; var2 < var1; ++var2) {
+            var0 = Class161.method1016(var0.parentUid);
+            if (var0 == null) {
+                return null;
+            }
+        }
+
+        return var0;
     }
 }

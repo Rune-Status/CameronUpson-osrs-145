@@ -77,9 +77,8 @@ public class Class21 implements Class16 {
     public boolean method10(int var1, int var2, int var3) {
         if (var1 >= this.anInt1 && var1 < this.anInt6 + this.anInt1) {
             return var2 >= (this.anInt122 << 3) + (this.anInt3 << 6) && var2 <= (this.anInt120 << 3) + (this.anInt3 << 6) + 7 && var3 >= (this.anInt2 << 6) + (this.anInt121 << 3) && var3 <= (this.anInt2 << 6) + (this.anInt119 << 3) + 7;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public boolean method5(int var1, int var2) {
@@ -89,11 +88,10 @@ public class Class21 implements Class16 {
     public SceneOffset method7(int var1, int var2) {
         if (!this.method5(var1, var2)) {
             return null;
-        } else {
-            int var3 = var1 + (this.anInt3 * 64 - this.anInt4 * 64) + (this.anInt122 * 8 - this.anInt143 * 8);
-            int var4 = var2 + (this.anInt2 * 64 - this.anInt5 * 64) + (this.anInt121 * 8 - this.anInt144 * 8);
-            return new SceneOffset(this.anInt1, var3, var4);
         }
+        int var3 = var1 + (this.anInt3 * 64 - this.anInt4 * 64) + (this.anInt122 * 8 - this.anInt143 * 8);
+        int var4 = var2 + (this.anInt2 * 64 - this.anInt5 * 64) + (this.anInt121 * 8 - this.anInt144 * 8);
+        return new SceneOffset(this.anInt1, var3, var4);
     }
 
     public void decode(Buffer var1) {
@@ -120,9 +118,8 @@ public class Class21 implements Class16 {
     public int[] method2(int var1, int var2, int var3) {
         if (!this.method10(var1, var2, var3)) {
             return null;
-        } else {
-            return new int[]{this.anInt4 * 64 - this.anInt3 * 64 + var2 + (this.anInt143 * 8 - this.anInt122 * 8), var3 + (this.anInt5 * 64 - this.anInt2 * 64) + (this.anInt144 * 8 - this.anInt121 * 8)};
         }
+        return new int[]{this.anInt4 * 64 - this.anInt3 * 64 + var2 + (this.anInt143 * 8 - this.anInt122 * 8), var3 + (this.anInt5 * 64 - this.anInt2 * 64) + (this.anInt144 * 8 - this.anInt121 * 8)};
     }
 
     public void method1(WorldMapTransportation var1) {

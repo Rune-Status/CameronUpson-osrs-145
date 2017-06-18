@@ -97,8 +97,7 @@ public final class Class90 {
             }
 
             return var3;
-        } else {
-            return Integer.toString(var0);
         }
+        return Integer.toString(var0);
     }
 }

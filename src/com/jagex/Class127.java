@@ -56,9 +56,8 @@ public final class Class127 {
         InterfaceComponent var2 = Class161.method1016(var0);
         if (var1 == -1) {
             return var2;
-        } else {
-            return var2 != null && var2.components != null && var1 < var2.components.length ? var2.components[var1] : null;
         }
+        return var2 != null && var2.components != null && var1 < var2.components.length ? var2.components[var1] : null;
     }
 
 }

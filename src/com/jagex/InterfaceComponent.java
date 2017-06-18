@@ -215,9 +215,8 @@ public class InterfaceComponent extends Node {
         boolean var3 = (var2 >> var1 + 1 & 1) != 0;
         if (!var3 && var0.anObjectArray1907 == null) {
             return null;
-        } else {
-            return var0.actions != null && var0.actions.length > var1 && var0.actions[var1] != null && var0.actions[var1].trim().length() != 0 ? var0.actions[var1] : null;
         }
+        return var0.actions != null && var0.actions.length > var1 && var0.actions[var1] != null && var0.actions[var1].trim().length() != 0 ? var0.actions[var1] : null;
     }
 
     static void method409(InterfaceComponent var0, int var1, int var2, int var3) {
@@ -238,24 +237,21 @@ public class InterfaceComponent extends Node {
             int var2 = this.anIntArray1883[var1];
             if (var2 == -1) {
                 return null;
-            } else {
-                Sprite var3 = (Sprite) aReferenceCache1891.method973((long) var2);
-                if (var3 != null) {
-                    return var3;
-                } else {
-                    var3 = Class176.method1188(Legacy2DBoundingBox.aReferenceTable398, var2, 0);
-                    if (var3 != null) {
-                        aReferenceCache1891.method975(var3, (long) var2);
-                    } else {
-                        aBoolean1174 = true;
-                    }
-
-                    return var3;
-                }
             }
-        } else {
-            return null;
+            Sprite var3 = (Sprite) aReferenceCache1891.method973((long) var2);
+            if (var3 != null) {
+                return var3;
+            }
+            var3 = Class176.method1188(Legacy2DBoundingBox.aReferenceTable398, var2, 0);
+            if (var3 != null) {
+                aReferenceCache1891.method975(var3, (long) var2);
+            } else {
+                aBoolean1174 = true;
+            }
+
+            return var3;
         }
+        return null;
     }
 
     void method1027(Buffer var1) {
@@ -398,36 +394,34 @@ public class InterfaceComponent extends Node {
         int var2 = var1.readUnsignedByte();
         if (var2 == 0) {
             return null;
-        } else {
-            Object[] var3 = new Object[var2];
-
-            for (int var4 = 0; var4 < var2; ++var4) {
-                int var5 = var1.readUnsignedByte();
-                if (var5 == 0) {
-                    var3[var4] = var1.method835();
-                } else if (var5 == 1) {
-                    var3[var4] = var1.method819();
-                }
-            }
-
-            this.aBoolean1872 = true;
-            return var3;
         }
+        Object[] var3 = new Object[var2];
+
+        for (int var4 = 0; var4 < var2; ++var4) {
+            int var5 = var1.readUnsignedByte();
+            if (var5 == 0) {
+                var3[var4] = var1.method835();
+            } else if (var5 == 1) {
+                var3[var4] = var1.method819();
+            }
+        }
+
+        this.aBoolean1872 = true;
+        return var3;
     }
 
     int[] readIntArray(Buffer var1) {
         int var2 = var1.readUnsignedByte();
         if (var2 == 0) {
             return null;
-        } else {
-            int[] var3 = new int[var2];
-
-            for (int var4 = 0; var4 < var2; ++var4) {
-                var3[var4] = var1.method835();
-            }
-
-            return var3;
         }
+        int[] var3 = new int[var2];
+
+        for (int var4 = 0; var4 < var2; ++var4) {
+            var3[var4] = var1.method835();
+        }
+
+        return var3;
     }
 
     public Sprite getMaterial(boolean enabled) {
@@ -441,46 +435,43 @@ public class InterfaceComponent extends Node {
 
         if (var2 == -1) {
             return null;
-        } else {
-            long var3 = ((long) this.borderThickness << 36) + (long) var2 + ((this.flippedVertically ? 1L : 0L) << 38) + ((this.flippedHorizontally ? 1L : 0L) << 39) + ((long) this.shadowColor << 40);
-            Sprite var5 = (Sprite) aReferenceCache1891.method973(var3);
-            if (var5 != null) {
-                return var5;
-            } else {
-                var5 = Class176.method1188(Legacy2DBoundingBox.aReferenceTable398, var2, 0);
-                if (var5 == null) {
-                    aBoolean1174 = true;
-                    return null;
-                } else {
-                    if (this.flippedVertically) {
-                        var5.method724();
-                    }
-
-                    if (this.flippedHorizontally) {
-                        var5.method1123();
-                    }
-
-                    if (this.borderThickness > 0) {
-                        var5.method869(this.borderThickness);
-                    }
-
-                    if (this.borderThickness >= 1) {
-                        var5.method1232(1);
-                    }
-
-                    if (this.borderThickness >= 2) {
-                        var5.method1232(16777215);
-                    }
-
-                    if (this.shadowColor != 0) {
-                        var5.method1240(this.shadowColor);
-                    }
-
-                    aReferenceCache1891.method975(var5, var3);
-                    return var5;
-                }
-            }
         }
+        long var3 = ((long) this.borderThickness << 36) + (long) var2 + ((this.flippedVertically ? 1L : 0L) << 38) + ((this.flippedHorizontally ? 1L : 0L) << 39) + ((long) this.shadowColor << 40);
+        Sprite var5 = (Sprite) aReferenceCache1891.method973(var3);
+        if (var5 != null) {
+            return var5;
+        }
+        var5 = Class176.method1188(Legacy2DBoundingBox.aReferenceTable398, var2, 0);
+        if (var5 == null) {
+            aBoolean1174 = true;
+            return null;
+        }
+        if (this.flippedVertically) {
+            var5.method724();
+        }
+
+        if (this.flippedHorizontally) {
+            var5.method1123();
+        }
+
+        if (this.borderThickness > 0) {
+            var5.method869(this.borderThickness);
+        }
+
+        if (this.borderThickness >= 1) {
+            var5.method1232(1);
+        }
+
+        if (this.borderThickness >= 2) {
+            var5.method1232(16777215);
+        }
+
+        if (this.shadowColor != 0) {
+            var5.method1240(this.shadowColor);
+        }
+
+        aReferenceCache1891.method975(var5, var3);
+        return var5;
     }
 
     public Node_Sub21_Sub5 method1025(boolean var1) {
@@ -491,49 +482,46 @@ public class InterfaceComponent extends Node {
         int var2 = var1 ? this.enabledMaterialId : this.materialId;
         if (var2 == -1) {
             return null;
-        } else {
-            long var3 = ((long) this.shadowColor << 40) + ((long) this.borderThickness << 36) + (long) var2 + ((this.flippedVertically ? 1L : 0L) << 38) + ((this.flippedHorizontally ? 1L : 0L) << 39);
-            Node_Sub21_Sub5 var5 = (Node_Sub21_Sub5) aReferenceCache1880.method973(var3);
-            if (var5 != null) {
-                return var5;
-            } else {
-                Sprite var6 = this.getMaterial(var1);
-                if (var6 == null) {
-                    return null;
-                } else {
-                    Sprite var7 = var6.method1238();
-                    int[] var8 = new int[var7.height];
-                    int[] var9 = new int[var7.height];
+        }
+        long var3 = ((long) this.shadowColor << 40) + ((long) this.borderThickness << 36) + (long) var2 + ((this.flippedVertically ? 1L : 0L) << 38) + ((this.flippedHorizontally ? 1L : 0L) << 39);
+        Node_Sub21_Sub5 var5 = (Node_Sub21_Sub5) aReferenceCache1880.method973(var3);
+        if (var5 != null) {
+            return var5;
+        }
+        Sprite var6 = this.getMaterial(var1);
+        if (var6 == null) {
+            return null;
+        }
+        Sprite var7 = var6.method1238();
+        int[] var8 = new int[var7.height];
+        int[] var9 = new int[var7.height];
 
-                    for (int var10 = 0; var10 < var7.height; ++var10) {
-                        int var11 = 0;
-                        int var12 = var7.width;
+        for (int var10 = 0; var10 < var7.height; ++var10) {
+            int var11 = 0;
+            int var12 = var7.width;
 
-                        int var13;
-                        for (var13 = 0; var13 < var7.width; ++var13) {
-                            if (var7.pixels[var13 + var7.width * var10] == 0) {
-                                var11 = var13;
-                                break;
-                            }
-                        }
-
-                        for (var13 = var7.width - 1; var13 >= var11; --var13) {
-                            if (var7.pixels[var7.width * var10 + var13] == 0) {
-                                var12 = var13 + 1;
-                                break;
-                            }
-                        }
-
-                        var8[var10] = var11;
-                        var9[var10] = var12 - var11;
-                    }
-
-                    var5 = new Node_Sub21_Sub5(var7.width, var7.height, var9, var8, var2);
-                    aReferenceCache1880.method975(var5, var3);
-                    return var5;
+            int var13;
+            for (var13 = 0; var13 < var7.width; ++var13) {
+                if (var7.pixels[var13 + var7.width * var10] == 0) {
+                    var11 = var13;
+                    break;
                 }
             }
+
+            for (var13 = var7.width - 1; var13 >= var11; --var13) {
+                if (var7.pixels[var7.width * var10 + var13] == 0) {
+                    var12 = var13 + 1;
+                    break;
+                }
+            }
+
+            var8[var10] = var11;
+            var9[var10] = var12 - var11;
         }
+
+        var5 = new Node_Sub21_Sub5(var7.width, var7.height, var9, var8, var2);
+        aReferenceCache1880.method975(var5, var3);
+        return var5;
     }
 
     public void method1024(int var1, String var2) {
@@ -565,96 +553,94 @@ public class InterfaceComponent extends Node {
 
         if (var5 == 0) {
             return null;
-        } else if (var5 == 1 && var6 == -1) {
-            return null;
-        } else {
-            Model var7 = (Model) aReferenceCache1886.method973((long) (var6 + (var5 << 16)));
-            if (var7 == null) {
-                ModelHeader var8;
-                if (var5 == 1) {
-                    var8 = ModelHeader.method571(aReferenceTable1878, var6, 0);
-                    if (var8 == null) {
-                        aBoolean1174 = true;
-                        return null;
-                    }
-
-                    var7 = var8.light(64, 768, -50, -10, -50);
-                }
-
-                if (var5 == 2) {
-                    var8 = Class122.getNpcDefinition(var6).method1059();
-                    if (var8 == null) {
-                        aBoolean1174 = true;
-                        return null;
-                    }
-
-                    var7 = var8.light(64, 768, -50, -10, -50);
-                }
-
-                if (var5 == 3) {
-                    if (var4 == null) {
-                        return null;
-                    }
-
-                    var8 = var4.method1032();
-                    if (var8 == null) {
-                        aBoolean1174 = true;
-                        return null;
-                    }
-
-                    var7 = var8.light(64, 768, -50, -10, -50);
-                }
-
-                if (var5 == 4) {
-                    ItemDefinition var9 = Class149.method1001(var6);
-                    var8 = var9.method1136(10);
-                    if (var8 == null) {
-                        aBoolean1174 = true;
-                        return null;
-                    }
-
-                    var7 = var8.light(var9.anInt1868 + 64, var9.anInt1867 + 768, -50, -10, -50);
-                }
-
-                aReferenceCache1886.method975(var7, (long) ((var5 << 16) + var6));
-            }
-
-            if (var1 != null) {
-                var7 = var1.method1193(var7, var2);
-            }
-
-            return var7;
         }
+        if (var5 == 1 && var6 == -1) {
+            return null;
+        }
+        Model var7 = (Model) aReferenceCache1886.method973((long) (var6 + (var5 << 16)));
+        if (var7 == null) {
+            ModelHeader var8;
+            if (var5 == 1) {
+                var8 = ModelHeader.method571(aReferenceTable1878, var6, 0);
+                if (var8 == null) {
+                    aBoolean1174 = true;
+                    return null;
+                }
+
+                var7 = var8.light(64, 768, -50, -10, -50);
+            }
+
+            if (var5 == 2) {
+                var8 = Class122.getNpcDefinition(var6).method1059();
+                if (var8 == null) {
+                    aBoolean1174 = true;
+                    return null;
+                }
+
+                var7 = var8.light(64, 768, -50, -10, -50);
+            }
+
+            if (var5 == 3) {
+                if (var4 == null) {
+                    return null;
+                }
+
+                var8 = var4.method1032();
+                if (var8 == null) {
+                    aBoolean1174 = true;
+                    return null;
+                }
+
+                var7 = var8.light(64, 768, -50, -10, -50);
+            }
+
+            if (var5 == 4) {
+                ItemDefinition var9 = Class149.method1001(var6);
+                var8 = var9.method1136(10);
+                if (var8 == null) {
+                    aBoolean1174 = true;
+                    return null;
+                }
+
+                var7 = var8.light(var9.anInt1868 + 64, var9.anInt1867 + 768, -50, -10, -50);
+            }
+
+            aReferenceCache1886.method975(var7, (long) ((var5 << 16) + var6));
+        }
+
+        if (var1 != null) {
+            var7 = var1.method1193(var7, var2);
+        }
+
+        return var7;
     }
 
     public Font getFont() {
         aBoolean1174 = false;
         if (this.fontId == -1) {
             return null;
-        } else {
-            Font var1 = (Font) aReferenceCache1873.method973((long) this.fontId);
-            if (var1 != null) {
-                return var1;
-            } else {
-                ReferenceTable var2 = Legacy2DBoundingBox.aReferenceTable398;
-                ReferenceTable var3 = Class82.aReferenceTable851;
-                int var4 = this.fontId;
-                Font var5;
-                if (!Class64.method381(var2, var4, 0)) {
-                    var5 = null;
-                } else {
-                    var5 = Class65.loadFont(var3.method1085(var4, 0));
-                }
-
-                if (var5 != null) {
-                    aReferenceCache1873.method975(var5, (long) this.fontId);
-                } else {
-                    aBoolean1174 = true;
-                }
-
-                return var5;
-            }
         }
+        Font var1 = (Font) aReferenceCache1873.method973((long) this.fontId);
+        if (var1 != null) {
+            return var1;
+        }
+        ReferenceTable var2 = Legacy2DBoundingBox.aReferenceTable398;
+        ReferenceTable var3 = Class82.aReferenceTable851;
+        int var4 = this.fontId;
+        Font var5;
+        if (!Class64.method381(var2, var4, 0)) {
+            var5 = null;
+        } else {
+            var5 = Class65.loadFont(var3.method1085(var4, 0));
+        }
+
+        if (var5 != null) {
+            aReferenceCache1873.method975(var5, (long) this.fontId);
+        } else {
+            aBoolean1174 = true;
+        }
+
+        return var5;
     }
 
     void method1026(Buffer var1) {

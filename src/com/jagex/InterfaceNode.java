@@ -113,48 +113,47 @@ public class InterfaceNode extends Node {
             }
 
             return 1;
-        } else if (var0 != 3408) {
-            return 2;
-        } else {
-            Class63.anInt644 -= 4;
-            var3 = Class63.anIntArray645[Class63.anInt644];
-            var4 = Class63.anIntArray645[Class63.anInt644 + 1];
-            int var7 = Class63.anIntArray645[Class63.anInt644 + 2];
-            var6 = Class63.anIntArray645[Class63.anInt644 + 3];
-            Node_Sub21_Sub13 var8 = Class111.method770(var7);
-            if (var8.aChar2067 == var3 && var8.aChar2066 == var4) {
-                for (int var9 = 0; var9 < var8.anInt221; ++var9) {
-                    if (var6 == var8.anIntArray932[var9]) {
-                        if (var4 == 115) {
-                            Class63.aStringArray640[++Class77.anInt828 - 1] = var8.aStringArray2065[var9];
-                        } else {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = var8.anIntArray1319[var9];
-                        }
-
-                        var8 = null;
-                        break;
-                    }
-                }
-
-                if (var8 != null) {
-                    if (var4 == 115) {
-                        Class63.aStringArray640[++Class77.anInt828 - 1] = var8.aString207;
-                    } else {
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = var8.anInt328;
-                    }
-                }
-
-                return 1;
-            } else {
-                if (var4 == 115) {
-                    Class63.aStringArray640[++Class77.anInt828 - 1] = "null";
-                } else {
-                    Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
-                }
-
-                return 1;
-            }
         }
+        if (var0 != 3408) {
+            return 2;
+        }
+        Class63.anInt644 -= 4;
+        var3 = Class63.anIntArray645[Class63.anInt644];
+        var4 = Class63.anIntArray645[Class63.anInt644 + 1];
+        int var7 = Class63.anIntArray645[Class63.anInt644 + 2];
+        var6 = Class63.anIntArray645[Class63.anInt644 + 3];
+        Node_Sub21_Sub13 var8 = Class111.method770(var7);
+        if (var8.aChar2067 == var3 && var8.aChar2066 == var4) {
+            for (int var9 = 0; var9 < var8.anInt221; ++var9) {
+                if (var6 == var8.anIntArray932[var9]) {
+                    if (var4 == 115) {
+                        Class63.aStringArray640[++Class77.anInt828 - 1] = var8.aStringArray2065[var9];
+                    } else {
+                        Class63.anIntArray645[++Class63.anInt644 - 1] = var8.anIntArray1319[var9];
+                    }
+
+                    var8 = null;
+                    break;
+                }
+            }
+
+            if (var8 != null) {
+                if (var4 == 115) {
+                    Class63.aStringArray640[++Class77.anInt828 - 1] = var8.aString207;
+                } else {
+                    Class63.anIntArray645[++Class63.anInt644 - 1] = var8.anInt328;
+                }
+            }
+
+            return 1;
+        }
+        if (var4 == 115) {
+            Class63.aStringArray640[++Class77.anInt828 - 1] = "null";
+        } else {
+            Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
+        }
+
+        return 1;
     }
 
     public static Node_Sub21_Sub26_Sub2[] method267(ReferenceTable var0, String var1, String var2) {

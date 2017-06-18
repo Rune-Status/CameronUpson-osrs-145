@@ -14,29 +14,28 @@ public class Class30 {
     static boolean method205(InterfaceComponent var0) {
         if (var0.anIntArray1941 == null) {
             return false;
-        } else {
-            for (int var1 = 0; var1 < var0.anIntArray1941.length; ++var1) {
-                int var2 = Player.method190(var0, var1);
-                int var3 = var0.anIntArray1940[var1];
-                if (var0.anIntArray1941[var1] == 2) {
-                    if (var2 >= var3) {
-                        return false;
-                    }
-                } else if (var0.anIntArray1941[var1] == 3) {
-                    if (var2 <= var3) {
-                        return false;
-                    }
-                } else if (var0.anIntArray1941[var1] == 4) {
-                    if (var2 == var3) {
-                        return false;
-                    }
-                } else if (var2 != var3) {
+        }
+        for (int var1 = 0; var1 < var0.anIntArray1941.length; ++var1) {
+            int var2 = Player.method190(var0, var1);
+            int var3 = var0.anIntArray1940[var1];
+            if (var0.anIntArray1941[var1] == 2) {
+                if (var2 >= var3) {
                     return false;
                 }
+            } else if (var0.anIntArray1941[var1] == 3) {
+                if (var2 <= var3) {
+                    return false;
+                }
+            } else if (var0.anIntArray1941[var1] == 4) {
+                if (var2 == var3) {
+                    return false;
+                }
+            } else if (var2 != var3) {
+                return false;
             }
-
-            return true;
         }
+
+        return true;
     }
 
     public static String method203(CharSequence var0) {

@@ -123,9 +123,8 @@ public class SceneGraph {
             int var7 = anInt1209 + var3 * 390 / var5;
             int var8 = anInt1215 + var6 * 390 / var5;
             return var7 >= anInt1214 && var7 <= anInt1210 && var8 >= anInt1216 && var8 <= anInt1218;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public static boolean method683() {
@@ -364,11 +363,10 @@ public class SceneGraph {
     public boolean method708(int var1, int var2, int var3, int var4, int var5, int var6, Entity var7, int var8, int var9, int var10) {
         if (var7 == null) {
             return true;
-        } else {
-            int var11 = var2 * 128 + var5 * 64;
-            int var12 = var3 * 128 + var6 * 64;
-            return this.method716(var1, var2, var3, var5, var6, var11, var12, var4, var7, var8, false, var9, var10);
         }
+        int var11 = var2 * 128 + var5 * 64;
+        int var12 = var3 * 128 + var6 * 64;
+        return this.method716(var1, var2, var3, var5, var6, var11, var12, var4, var7, var8, false, var9, var10);
     }
 
     public void method710() {
@@ -406,16 +404,15 @@ public class SceneGraph {
         Tile var4 = this.tiles[var1][var2][var3];
         if (var4 == null) {
             return null;
-        } else {
-            for (int var5 = 0; var5 < var4.anInt226; ++var5) {
-                EntityMarker var6 = var4.markers[var5];
-                if ((var6.uid >> 29 & 3) == 2 && var6.sceneX == var2 && var6.sceneY == var3) {
-                    return var6;
-                }
-            }
-
-            return null;
         }
+        for (int var5 = 0; var5 < var4.anInt226; ++var5) {
+            EntityMarker var6 = var4.markers[var5];
+            if ((var6.uid >> 29 & 3) == 2 && var6.sceneX == var2 && var6.sceneY == var3) {
+                return var6;
+            }
+        }
+
+        return null;
     }
 
     boolean method716(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, Entity var9, int var10, boolean var11, int var12, int var13) {
@@ -550,16 +547,15 @@ public class SceneGraph {
         Tile var4 = this.tiles[var1][var2][var3];
         if (var4 == null) {
             return 0;
-        } else {
-            for (int var5 = 0; var5 < var4.anInt226; ++var5) {
-                EntityMarker var6 = var4.markers[var5];
-                if ((var6.uid >> 29 & 3) == 2 && var6.sceneX == var2 && var6.sceneY == var3) {
-                    return var6.uid;
-                }
-            }
-
-            return 0;
         }
+        for (int var5 = 0; var5 < var4.anInt226; ++var5) {
+            EntityMarker var6 = var4.markers[var5];
+            if ((var6.uid >> 29 & 3) == 2 && var6.sceneX == var2 && var6.sceneY == var3) {
+                return var6.uid;
+            }
+        }
+
+        return 0;
     }
 
     public void method679(int var1, int var2, int var3) {
@@ -608,35 +604,34 @@ public class SceneGraph {
     public boolean method698(int var1, int var2, int var3, int var4, int var5, Entity var6, int var7, int var8, boolean var9) {
         if (var6 == null) {
             return true;
-        } else {
-            int var10 = var2 - var5;
-            int var11 = var3 - var5;
-            int var12 = var2 + var5;
-            int var13 = var3 + var5;
-            if (var9) {
-                if (var7 > 640 && var7 < 1408) {
-                    var13 += 128;
-                }
-
-                if (var7 > 1152 && var7 < 1920) {
-                    var12 += 128;
-                }
-
-                if (var7 > 1664 || var7 < 384) {
-                    var11 -= 128;
-                }
-
-                if (var7 > 128 && var7 < 896) {
-                    var10 -= 128;
-                }
+        }
+        int var10 = var2 - var5;
+        int var11 = var3 - var5;
+        int var12 = var2 + var5;
+        int var13 = var3 + var5;
+        if (var9) {
+            if (var7 > 640 && var7 < 1408) {
+                var13 += 128;
             }
 
-            var10 /= 128;
-            var11 /= 128;
-            var12 /= 128;
-            var13 /= 128;
-            return this.method716(var1, var10, var11, var12 - var10 + 1, var13 - var11 + 1, var2, var3, var4, var6, var7, true, var8, 0);
+            if (var7 > 1152 && var7 < 1920) {
+                var12 += 128;
+            }
+
+            if (var7 > 1664 || var7 < 384) {
+                var11 -= 128;
+            }
+
+            if (var7 > 128 && var7 < 896) {
+                var10 -= 128;
+            }
         }
+
+        var10 /= 128;
+        var11 /= 128;
+        var12 /= 128;
+        var13 /= 128;
+        return this.method716(var1, var10, var11, var12 - var10 + 1, var13 - var11 + 1, var2, var3, var4, var6, var7, true, var8, 0);
     }
 
     public void method669(int[] var1, int var2, int var3, int var4, int var5, int var6) {
@@ -705,18 +700,20 @@ public class SceneGraph {
     boolean method674(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
         if (var2 < var3 && var2 < var4 && var2 < var5) {
             return false;
-        } else if (var2 > var3 && var2 > var4 && var2 > var5) {
-            return false;
-        } else if (var1 < var6 && var1 < var7 && var1 < var8) {
-            return false;
-        } else if (var1 > var6 && var1 > var7 && var1 > var8) {
-            return false;
-        } else {
-            int var9 = (var2 - var3) * (var7 - var6) - (var1 - var6) * (var4 - var3);
-            int var10 = (var2 - var5) * (var6 - var8) - (var1 - var8) * (var3 - var5);
-            int var11 = (var2 - var4) * (var8 - var7) - (var1 - var7) * (var5 - var4);
-            return var9 * var11 > 0 && var11 * var10 > 0;
         }
+        if (var2 > var3 && var2 > var4 && var2 > var5) {
+            return false;
+        }
+        if (var1 < var6 && var1 < var7 && var1 < var8) {
+            return false;
+        }
+        if (var1 > var6 && var1 > var7 && var1 > var8) {
+            return false;
+        }
+        int var9 = (var2 - var3) * (var7 - var6) - (var1 - var6) * (var4 - var3);
+        int var10 = (var2 - var5) * (var6 - var8) - (var1 - var8) * (var3 - var5);
+        int var11 = (var2 - var4) * (var8 - var7) - (var1 - var7) * (var5 - var4);
+        return var9 * var11 > 0 && var11 * var10 > 0;
     }
 
     public void method676(int var1, int var2, int var3, boolean var4) {
@@ -1242,169 +1239,169 @@ public class SceneGraph {
         int var4 = this.anIntArrayArrayArray1221[var1][var2][var3];
         if (var4 == -anInt1234) {
             return false;
-        } else if (var4 == anInt1234) {
-            return true;
-        } else {
-            int var5 = var2 << 7;
-            int var6 = var3 << 7;
-            if (this.method696(var5 + 1, this.anIntArrayArrayArray1238[var1][var2][var3], var6 + 1) && this.method696(var5 + 128 - 1, this.anIntArrayArrayArray1238[var1][var2 + 1][var3], var6 + 1) && this.method696(var5 + 128 - 1, this.anIntArrayArrayArray1238[var1][var2 + 1][var3 + 1], var6 + 128 - 1) && this.method696(var5 + 1, this.anIntArrayArrayArray1238[var1][var2][var3 + 1], var6 + 128 - 1)) {
-                this.anIntArrayArrayArray1221[var1][var2][var3] = anInt1234;
-                return true;
-            } else {
-                this.anIntArrayArrayArray1221[var1][var2][var3] = -anInt1234;
-                return false;
-            }
         }
+        if (var4 == anInt1234) {
+            return true;
+        }
+        int var5 = var2 << 7;
+        int var6 = var3 << 7;
+        if (this.method696(var5 + 1, this.anIntArrayArrayArray1238[var1][var2][var3], var6 + 1) && this.method696(var5 + 128 - 1, this.anIntArrayArrayArray1238[var1][var2 + 1][var3], var6 + 1) && this.method696(var5 + 128 - 1, this.anIntArrayArrayArray1238[var1][var2 + 1][var3 + 1], var6 + 128 - 1) && this.method696(var5 + 1, this.anIntArrayArrayArray1238[var1][var2][var3 + 1], var6 + 128 - 1)) {
+            this.anIntArrayArrayArray1221[var1][var2][var3] = anInt1234;
+            return true;
+        }
+        this.anIntArrayArrayArray1221[var1][var2][var3] = -anInt1234;
+        return false;
     }
 
     boolean method694(int var1, int var2, int var3, int var4) {
         if (!this.method686(var1, var2, var3)) {
             return false;
-        } else {
-            int var5 = var2 << 7;
-            int var6 = var3 << 7;
-            int var7 = this.anIntArrayArrayArray1238[var1][var2][var3] - 1;
-            int var8 = var7 - 120;
-            int var9 = var7 - 230;
-            int var10 = var7 - 238;
-            if (var4 < 16) {
-                if (var4 == 1) {
-                    if (var5 > anInt1220) {
-                        if (!this.method696(var5, var7, var6)) {
-                            return false;
-                        }
-
-                        if (!this.method696(var5, var7, var6 + 128)) {
-                            return false;
-                        }
-                    }
-
-                    if (var1 > 0) {
-                        if (!this.method696(var5, var8, var6)) {
-                            return false;
-                        }
-
-                        if (!this.method696(var5, var8, var6 + 128)) {
-                            return false;
-                        }
-                    }
-
-                    if (!this.method696(var5, var9, var6)) {
+        }
+        int var5 = var2 << 7;
+        int var6 = var3 << 7;
+        int var7 = this.anIntArrayArrayArray1238[var1][var2][var3] - 1;
+        int var8 = var7 - 120;
+        int var9 = var7 - 230;
+        int var10 = var7 - 238;
+        if (var4 < 16) {
+            if (var4 == 1) {
+                if (var5 > anInt1220) {
+                    if (!this.method696(var5, var7, var6)) {
                         return false;
                     }
 
-                    return this.method696(var5, var9, var6 + 128);
+                    if (!this.method696(var5, var7, var6 + 128)) {
+                        return false;
+                    }
                 }
 
-                if (var4 == 2) {
-                    if (var6 < anInt1236) {
-                        if (!this.method696(var5, var7, var6 + 128)) {
-                            return false;
-                        }
-
-                        if (!this.method696(var5 + 128, var7, var6 + 128)) {
-                            return false;
-                        }
-                    }
-
-                    if (var1 > 0) {
-                        if (!this.method696(var5, var8, var6 + 128)) {
-                            return false;
-                        }
-
-                        if (!this.method696(var5 + 128, var8, var6 + 128)) {
-                            return false;
-                        }
-                    }
-
-                    if (!this.method696(var5, var9, var6 + 128)) {
+                if (var1 > 0) {
+                    if (!this.method696(var5, var8, var6)) {
                         return false;
                     }
 
-                    return this.method696(var5 + 128, var9, var6 + 128);
-                }
-
-                if (var4 == 4) {
-                    if (var5 < anInt1220) {
-                        if (!this.method696(var5 + 128, var7, var6)) {
-                            return false;
-                        }
-
-                        if (!this.method696(var5 + 128, var7, var6 + 128)) {
-                            return false;
-                        }
-                    }
-
-                    if (var1 > 0) {
-                        if (!this.method696(var5 + 128, var8, var6)) {
-                            return false;
-                        }
-
-                        if (!this.method696(var5 + 128, var8, var6 + 128)) {
-                            return false;
-                        }
-                    }
-
-                    if (!this.method696(var5 + 128, var9, var6)) {
+                    if (!this.method696(var5, var8, var6 + 128)) {
                         return false;
                     }
-
-                    return this.method696(var5 + 128, var9, var6 + 128);
                 }
 
-                if (var4 == 8) {
-                    if (var6 > anInt1236) {
-                        if (!this.method696(var5, var7, var6)) {
-                            return false;
-                        }
-
-                        if (!this.method696(var5 + 128, var7, var6)) {
-                            return false;
-                        }
-                    }
-
-                    if (var1 > 0) {
-                        if (!this.method696(var5, var8, var6)) {
-                            return false;
-                        }
-
-                        if (!this.method696(var5 + 128, var8, var6)) {
-                            return false;
-                        }
-                    }
-
-                    if (!this.method696(var5, var9, var6)) {
-                        return false;
-                    }
-
-                    return this.method696(var5 + 128, var9, var6);
+                if (!this.method696(var5, var9, var6)) {
+                    return false;
                 }
+
+                return this.method696(var5, var9, var6 + 128);
             }
 
-            if (!this.method696(var5 + 64, var10, var6 + 64)) {
-                return false;
-            } else if (var4 == 16) {
-                return this.method696(var5, var9, var6 + 128);
-            } else if (var4 == 32) {
+            if (var4 == 2) {
+                if (var6 < anInt1236) {
+                    if (!this.method696(var5, var7, var6 + 128)) {
+                        return false;
+                    }
+
+                    if (!this.method696(var5 + 128, var7, var6 + 128)) {
+                        return false;
+                    }
+                }
+
+                if (var1 > 0) {
+                    if (!this.method696(var5, var8, var6 + 128)) {
+                        return false;
+                    }
+
+                    if (!this.method696(var5 + 128, var8, var6 + 128)) {
+                        return false;
+                    }
+                }
+
+                if (!this.method696(var5, var9, var6 + 128)) {
+                    return false;
+                }
+
                 return this.method696(var5 + 128, var9, var6 + 128);
-            } else if (var4 == 64) {
+            }
+
+            if (var4 == 4) {
+                if (var5 < anInt1220) {
+                    if (!this.method696(var5 + 128, var7, var6)) {
+                        return false;
+                    }
+
+                    if (!this.method696(var5 + 128, var7, var6 + 128)) {
+                        return false;
+                    }
+                }
+
+                if (var1 > 0) {
+                    if (!this.method696(var5 + 128, var8, var6)) {
+                        return false;
+                    }
+
+                    if (!this.method696(var5 + 128, var8, var6 + 128)) {
+                        return false;
+                    }
+                }
+
+                if (!this.method696(var5 + 128, var9, var6)) {
+                    return false;
+                }
+
+                return this.method696(var5 + 128, var9, var6 + 128);
+            }
+
+            if (var4 == 8) {
+                if (var6 > anInt1236) {
+                    if (!this.method696(var5, var7, var6)) {
+                        return false;
+                    }
+
+                    if (!this.method696(var5 + 128, var7, var6)) {
+                        return false;
+                    }
+                }
+
+                if (var1 > 0) {
+                    if (!this.method696(var5, var8, var6)) {
+                        return false;
+                    }
+
+                    if (!this.method696(var5 + 128, var8, var6)) {
+                        return false;
+                    }
+                }
+
+                if (!this.method696(var5, var9, var6)) {
+                    return false;
+                }
+
                 return this.method696(var5 + 128, var9, var6);
-            } else if (var4 == 128) {
-                return this.method696(var5, var9, var6);
-            } else {
-                return true;
             }
         }
+
+        if (!this.method696(var5 + 64, var10, var6 + 64)) {
+            return false;
+        }
+        if (var4 == 16) {
+            return this.method696(var5, var9, var6 + 128);
+        }
+        if (var4 == 32) {
+            return this.method696(var5 + 128, var9, var6 + 128);
+        }
+        if (var4 == 64) {
+            return this.method696(var5 + 128, var9, var6);
+        }
+        if (var4 == 128) {
+            return this.method696(var5, var9, var6);
+        }
+        return true;
     }
 
     boolean method693(int var1, int var2, int var3, int var4) {
         if (!this.method686(var1, var2, var3)) {
             return false;
-        } else {
-            int var5 = var2 << 7;
-            int var6 = var3 << 7;
-            return this.method696(var5 + 1, this.anIntArrayArrayArray1238[var1][var2][var3] - var4, var6 + 1) && this.method696(var5 + 128 - 1, this.anIntArrayArrayArray1238[var1][var2 + 1][var3] - var4, var6 + 1) && this.method696(var5 + 128 - 1, this.anIntArrayArrayArray1238[var1][var2 + 1][var3 + 1] - var4, var6 + 128 - 1) && this.method696(var5 + 1, this.anIntArrayArrayArray1238[var1][var2][var3 + 1] - var4, var6 + 128 - 1);
         }
+        int var5 = var2 << 7;
+        int var6 = var3 << 7;
+        return this.method696(var5 + 1, this.anIntArrayArrayArray1238[var1][var2][var3] - var4, var6 + 1) && this.method696(var5 + 128 - 1, this.anIntArrayArrayArray1238[var1][var2 + 1][var3] - var4, var6 + 1) && this.method696(var5 + 128 - 1, this.anIntArrayArrayArray1238[var1][var2 + 1][var3 + 1] - var4, var6 + 128 - 1) && this.method696(var5 + 1, this.anIntArrayArrayArray1238[var1][var2][var3 + 1] - var4, var6 + 128 - 1);
     }
 
     boolean method696(int var1, int var2, int var3) {
@@ -2173,37 +2170,34 @@ public class SceneGraph {
         if (var2 == var3 && var4 == var5) {
             if (!this.method686(var1, var2, var4)) {
                 return false;
-            } else {
-                var7 = var2 << 7;
-                var8 = var4 << 7;
-                return this.method696(var7 + 1, this.anIntArrayArrayArray1238[var1][var2][var4] - var6, var8 + 1) && this.method696(var7 + 128 - 1, this.anIntArrayArrayArray1238[var1][var2 + 1][var4] - var6, var8 + 1) && this.method696(var7 + 128 - 1, this.anIntArrayArrayArray1238[var1][var2 + 1][var4 + 1] - var6, var8 + 128 - 1) && this.method696(var7 + 1, this.anIntArrayArrayArray1238[var1][var2][var4 + 1] - var6, var8 + 128 - 1);
             }
-        } else {
-            for (var7 = var2; var7 <= var3; ++var7) {
-                for (var8 = var4; var8 <= var5; ++var8) {
-                    if (this.anIntArrayArrayArray1221[var1][var7][var8] == -anInt1234) {
-                        return false;
-                    }
-                }
-            }
-
-            var7 = (var2 << 7) + 1;
-            var8 = (var4 << 7) + 2;
-            int var9 = this.anIntArrayArrayArray1238[var1][var2][var4] - var6;
-            if (!this.method696(var7, var9, var8)) {
-                return false;
-            } else {
-                int var10 = (var3 << 7) - 1;
-                if (!this.method696(var10, var9, var8)) {
+            var7 = var2 << 7;
+            var8 = var4 << 7;
+            return this.method696(var7 + 1, this.anIntArrayArrayArray1238[var1][var2][var4] - var6, var8 + 1) && this.method696(var7 + 128 - 1, this.anIntArrayArrayArray1238[var1][var2 + 1][var4] - var6, var8 + 1) && this.method696(var7 + 128 - 1, this.anIntArrayArrayArray1238[var1][var2 + 1][var4 + 1] - var6, var8 + 128 - 1) && this.method696(var7 + 1, this.anIntArrayArrayArray1238[var1][var2][var4 + 1] - var6, var8 + 128 - 1);
+        }
+        for (var7 = var2; var7 <= var3; ++var7) {
+            for (var8 = var4; var8 <= var5; ++var8) {
+                if (this.anIntArrayArrayArray1221[var1][var7][var8] == -anInt1234) {
                     return false;
-                } else {
-                    int var11 = (var5 << 7) - 1;
-                    if (!this.method696(var7, var9, var11)) {
-                        return false;
-                    } else return this.method696(var10, var9, var11);
                 }
             }
         }
+
+        var7 = (var2 << 7) + 1;
+        var8 = (var4 << 7) + 2;
+        int var9 = this.anIntArrayArrayArray1238[var1][var2][var4] - var6;
+        if (!this.method696(var7, var9, var8)) {
+            return false;
+        }
+        int var10 = (var3 << 7) - 1;
+        if (!this.method696(var10, var9, var8)) {
+            return false;
+        }
+        int var11 = (var5 << 7) - 1;
+        if (!this.method696(var7, var9, var11)) {
+            return false;
+        }
+        return this.method696(var10, var9, var11);
     }
 
     void method705(EntityMarker var1) {
@@ -2241,21 +2235,23 @@ public class SceneGraph {
         Tile var5 = this.tiles[var1][var2][var3];
         if (var5 == null) {
             return -1;
-        } else if (var5.boundary != null && var5.boundary.uid == var4) {
-            return var5.boundary.anInt1143 & 255;
-        } else if (var5.boundaryDecor != null && var5.boundaryDecor.uid == var4) {
-            return var5.boundaryDecor.anInt1116 & 255;
-        } else if (var5.decor != null && var5.decor.uid == var4) {
-            return var5.decor.anInt1039 & 255;
-        } else {
-            for (int var6 = 0; var6 < var5.anInt226; ++var6) {
-                if (var5.markers[var6].uid == var4) {
-                    return var5.markers[var6].anInt1121 & 255;
-                }
-            }
-
-            return -1;
         }
+        if (var5.boundary != null && var5.boundary.uid == var4) {
+            return var5.boundary.anInt1143 & 255;
+        }
+        if (var5.boundaryDecor != null && var5.boundaryDecor.uid == var4) {
+            return var5.boundaryDecor.anInt1116 & 255;
+        }
+        if (var5.decor != null && var5.decor.uid == var4) {
+            return var5.decor.anInt1039 & 255;
+        }
+        for (int var6 = 0; var6 < var5.anInt226; ++var6) {
+            if (var5.markers[var6].uid == var4) {
+                return var5.markers[var6].anInt1121 & 255;
+            }
+        }
+
+        return -1;
     }
 
     public void method706(int var1, int var2, int var3) {

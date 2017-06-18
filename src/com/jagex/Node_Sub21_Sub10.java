@@ -8,17 +8,16 @@ public class Node_Sub21_Sub10 extends DoublyNode {
         Node_Sub21_Sub12 var1 = (Node_Sub21_Sub12) Node_Sub21_Sub12.aReferenceCache2025.method973((long) var0);
         if (var1 != null) {
             return var1;
-        } else {
-            byte[] var2 = Node_Sub21_Sub12.aReferenceTable2012.method1085(4, var0);
-            var1 = new Node_Sub21_Sub12();
-            if (var2 != null) {
-                var1.method1051(new Buffer(var2), var0);
-            }
-
-            var1.method756();
-            Node_Sub21_Sub12.aReferenceCache2025.method975(var1, (long) var0);
-            return var1;
         }
+        byte[] var2 = Node_Sub21_Sub12.aReferenceTable2012.method1085(4, var0);
+        var1 = new Node_Sub21_Sub12();
+        if (var2 != null) {
+            var1.method1051(new Buffer(var2), var0);
+        }
+
+        var1.method756();
+        Node_Sub21_Sub12.aReferenceCache2025.method975(var1, (long) var0);
+        return var1;
     }
 
     public static void method1064(ReferenceTable var0, ReferenceTable var1) {

@@ -446,86 +446,85 @@ public class Key implements EnumOrdinal, Class187 {
         Model var12 = var9.method1141(1);
         if (var12 == null) {
             return null;
-        } else {
-            Sprite var13 = null;
-            if (var9.anInt1864 != -1) {
-                var13 = method365(var9.noteId, 10, 1, 0, 0, true);
-                if (var13 == null) {
-                    return null;
-                }
-            } else if (var9.anInt783 != -1) {
-                var13 = method365(var9.anInt768, var1, var2, var3, 0, false);
-                if (var13 == null) {
-                    return null;
-                }
-            } else if (var9.anInt785 != -1) {
-                var13 = method365(var9.anInt781, var1, 0, 0, 0, false);
-                if (var13 == null) {
-                    return null;
-                }
-            }
-
-            int[] var14 = Node_Sub21_Sub26.anIntArray953;
-            int var15 = Node_Sub21_Sub26.anInt749;
-            int var16 = Node_Sub21_Sub26.anInt748;
-            int[] var17 = new int[4];
-            Node_Sub21_Sub26.method1207(var17);
-            var8 = new Sprite(36, 32);
-            Node_Sub21_Sub26.method1211(var8.pixels, 36, 32);
-            Node_Sub21_Sub26.method1218();
-            Node_Sub21_Sub26_Sub1.method308();
-            Node_Sub21_Sub26_Sub1.method641(16, 16);
-            Node_Sub21_Sub26_Sub1.aBoolean1084 = false;
-            if (var9.anInt785 != -1) {
-                var13.method1230(0, 0);
-            }
-
-            int var18 = var9.anInt219;
-            if (var5) {
-                var18 = (int) ((double) var18 * 1.5D);
-            } else if (var2 == 2) {
-                var18 = (int) (1.04D * (double) var18);
-            }
-
-            int var19 = var18 * Node_Sub21_Sub26_Sub1.SINE[var9.anInt668] >> 16;
-            int var20 = Node_Sub21_Sub26_Sub1.COS[var9.anInt668] * var18 >> 16;
-            var12.method724();
-            var12.method739(0, var9.anInt236, var9.anInt213, var9.anInt668, var9.anInt818, var9.anInt233 + var12.height / 2 + var19, var9.anInt233 + var20);
-            if (var9.anInt783 != -1) {
-                var13.method1230(0, 0);
-            }
-
-            if (var2 >= 1) {
-                var8.method1232(1);
-            }
-
-            if (var2 >= 2) {
-                var8.method1232(16777215);
-            }
-
-            if (var3 != 0) {
-                var8.method1240(var3);
-            }
-
-            Node_Sub21_Sub26.method1211(var8.pixels, 36, 32);
-            if (var9.anInt1864 != -1) {
-                var13.method1230(0, 0);
-            }
-
-            if (var4 == 1 || var4 == 2 && var9.stackable == 1) {
-                Class53.aFont413.method1170(Node_Sub21_Sub15.method1116(var1), 0, 9, 16776960, 1);
-            }
-
-            if (!var5) {
-                ItemDefinition.aReferenceCache1891.method975(var8, var6);
-            }
-
-            Node_Sub21_Sub26.method1211(var14, var15, var16);
-            Node_Sub21_Sub26.method1213(var17);
-            Node_Sub21_Sub26_Sub1.method308();
-            Node_Sub21_Sub26_Sub1.aBoolean1084 = true;
-            return var8;
         }
+        Sprite var13 = null;
+        if (var9.anInt1864 != -1) {
+            var13 = method365(var9.noteId, 10, 1, 0, 0, true);
+            if (var13 == null) {
+                return null;
+            }
+        } else if (var9.anInt783 != -1) {
+            var13 = method365(var9.anInt768, var1, var2, var3, 0, false);
+            if (var13 == null) {
+                return null;
+            }
+        } else if (var9.anInt785 != -1) {
+            var13 = method365(var9.anInt781, var1, 0, 0, 0, false);
+            if (var13 == null) {
+                return null;
+            }
+        }
+
+        int[] var14 = Node_Sub21_Sub26.anIntArray953;
+        int var15 = Node_Sub21_Sub26.anInt749;
+        int var16 = Node_Sub21_Sub26.anInt748;
+        int[] var17 = new int[4];
+        Node_Sub21_Sub26.method1207(var17);
+        var8 = new Sprite(36, 32);
+        Node_Sub21_Sub26.method1211(var8.pixels, 36, 32);
+        Node_Sub21_Sub26.method1218();
+        Node_Sub21_Sub26_Sub1.method308();
+        Node_Sub21_Sub26_Sub1.method641(16, 16);
+        Node_Sub21_Sub26_Sub1.aBoolean1084 = false;
+        if (var9.anInt785 != -1) {
+            var13.method1230(0, 0);
+        }
+
+        int var18 = var9.anInt219;
+        if (var5) {
+            var18 = (int) ((double) var18 * 1.5D);
+        } else if (var2 == 2) {
+            var18 = (int) (1.04D * (double) var18);
+        }
+
+        int var19 = var18 * Node_Sub21_Sub26_Sub1.SINE[var9.anInt668] >> 16;
+        int var20 = Node_Sub21_Sub26_Sub1.COS[var9.anInt668] * var18 >> 16;
+        var12.method724();
+        var12.method739(0, var9.anInt236, var9.anInt213, var9.anInt668, var9.anInt818, var9.anInt233 + var12.height / 2 + var19, var9.anInt233 + var20);
+        if (var9.anInt783 != -1) {
+            var13.method1230(0, 0);
+        }
+
+        if (var2 >= 1) {
+            var8.method1232(1);
+        }
+
+        if (var2 >= 2) {
+            var8.method1232(16777215);
+        }
+
+        if (var3 != 0) {
+            var8.method1240(var3);
+        }
+
+        Node_Sub21_Sub26.method1211(var8.pixels, 36, 32);
+        if (var9.anInt1864 != -1) {
+            var13.method1230(0, 0);
+        }
+
+        if (var4 == 1 || var4 == 2 && var9.stackable == 1) {
+            Class53.aFont413.method1170(Node_Sub21_Sub15.method1116(var1), 0, 9, 16776960, 1);
+        }
+
+        if (!var5) {
+            ItemDefinition.aReferenceCache1891.method975(var8, var6);
+        }
+
+        Node_Sub21_Sub26.method1211(var14, var15, var16);
+        Node_Sub21_Sub26.method1213(var17);
+        Node_Sub21_Sub26_Sub1.method308();
+        Node_Sub21_Sub26_Sub1.aBoolean1084 = true;
+        return var8;
     }
 
     static void method362(NpcDefinition var0, int var1, int var2, int var3) {

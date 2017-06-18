@@ -67,8 +67,7 @@ public class Class170 {
     public static boolean method1152(String var0, String var1, String var2, String var3) {
         if (var0 != null && var2 != null) {
             return !var0.startsWith("#") && !var2.startsWith("#") ? var1.equals(var3) : var0.equals(var2);
-        } else {
-            return false;
         }
+        return false;
     }
 }

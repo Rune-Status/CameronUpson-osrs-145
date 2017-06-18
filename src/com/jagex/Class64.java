@@ -168,14 +168,13 @@ public class Class64 {
 
         if (Client.aPacket1521.caret != Client.anInt1514) {
             throw new RuntimeException(Client.aPacket1521.caret + "," + Client.anInt1514);
-        } else {
-            for (var1 = 0; var1 < Client.anInt1501; ++var1) {
-                if (Client.npcs[Client.npcIndices[var1]] == null) {
-                    throw new RuntimeException(var1 + "," + Client.anInt1501);
-                }
-            }
-
         }
+        for (var1 = 0; var1 < Client.anInt1501; ++var1) {
+            if (Client.npcs[Client.npcIndices[var1]] == null) {
+                throw new RuntimeException(var1 + "," + Client.anInt1501);
+            }
+        }
+
     }
 
     static boolean method383(int var0, int var1, Class113 var2, CollisionMap var3) {
@@ -292,9 +291,8 @@ public class Class64 {
         byte[] var3 = var0.method1085(var1, var2);
         if (var3 == null) {
             return false;
-        } else {
-            Class116.method794(var3);
-            return true;
         }
+        Class116.method794(var3);
+        return true;
     }
 }

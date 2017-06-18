@@ -107,50 +107,48 @@ public class Node_Sub21_Sub21 extends DoublyNode {
     public boolean method1128() {
         if (this.anIntArray957 == null) {
             return true;
-        } else {
-            boolean var1 = true;
-
-            for (int var2 = 0; var2 < this.anIntArray957.length; ++var2) {
-                if (!aReferenceTable2017.method1102(this.anIntArray957[var2], 0)) {
-                    var1 = false;
-                }
-            }
-
-            return var1;
         }
+        boolean var1 = true;
+
+        for (int var2 = 0; var2 < this.anIntArray957.length; ++var2) {
+            if (!aReferenceTable2017.method1102(this.anIntArray957[var2], 0)) {
+                var1 = false;
+            }
+        }
+
+        return var1;
     }
 
     public ModelHeader method1129() {
         if (this.anIntArray957 == null) {
             return null;
-        } else {
-            ModelHeader[] var1 = new ModelHeader[this.anIntArray957.length];
-
-            for (int var2 = 0; var2 < this.anIntArray957.length; ++var2) {
-                var1[var2] = ModelHeader.method571(aReferenceTable2017, this.anIntArray957[var2], 0);
-            }
-
-            ModelHeader var3;
-            if (var1.length == 1) {
-                var3 = var1[0];
-            } else {
-                var3 = new ModelHeader(var1, var1.length);
-            }
-
-            int var4;
-            if (this.aShortArray2099 != null) {
-                for (var4 = 0; var4 < this.aShortArray2099.length; ++var4) {
-                    var3.recolor(this.aShortArray2099[var4], this.aShortArray2010[var4]);
-                }
-            }
-
-            if (this.aShortArray2009 != null) {
-                for (var4 = 0; var4 < this.aShortArray2009.length; ++var4) {
-                    var3.method573(this.aShortArray2009[var4], this.aShortArray2007[var4]);
-                }
-            }
-
-            return var3;
         }
+        ModelHeader[] var1 = new ModelHeader[this.anIntArray957.length];
+
+        for (int var2 = 0; var2 < this.anIntArray957.length; ++var2) {
+            var1[var2] = ModelHeader.method571(aReferenceTable2017, this.anIntArray957[var2], 0);
+        }
+
+        ModelHeader var3;
+        if (var1.length == 1) {
+            var3 = var1[0];
+        } else {
+            var3 = new ModelHeader(var1, var1.length);
+        }
+
+        int var4;
+        if (this.aShortArray2099 != null) {
+            for (var4 = 0; var4 < this.aShortArray2099.length; ++var4) {
+                var3.recolor(this.aShortArray2099[var4], this.aShortArray2010[var4]);
+            }
+        }
+
+        if (this.aShortArray2009 != null) {
+            for (var4 = 0; var4 < this.aShortArray2009.length; ++var4) {
+                var3.method573(this.aShortArray2009[var4], this.aShortArray2007[var4]);
+            }
+        }
+
+        return var3;
     }
 }

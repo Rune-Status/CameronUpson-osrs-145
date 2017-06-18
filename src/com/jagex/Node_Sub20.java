@@ -34,271 +34,286 @@ public class Node_Sub20 extends Node {
             }
 
             return 1;
-        } else {
-            int var3;
-            if (var0 == 3601) {
-                var3 = Class63.anIntArray645[--Class63.anInt644];
-                if (Client.friendCount == 2 && var3 < Client.anInt1431) {
-                    Class63.aStringArray640[++Class77.anInt828 - 1] = Client.aClass27Array1449[var3].aString198;
-                    Class63.aStringArray640[++Class77.anInt828 - 1] = Client.aClass27Array1449[var3].aString203;
-                } else {
-                    Class63.aStringArray640[++Class77.anInt828 - 1] = "";
-                    Class63.aStringArray640[++Class77.anInt828 - 1] = "";
-                }
-
-                return 1;
-            } else if (var0 == 3602) {
-                var3 = Class63.anIntArray645[--Class63.anInt644];
-                if (Client.friendCount == 2 && var3 < Client.anInt1431) {
-                    Class63.anIntArray645[++Class63.anInt644 - 1] = Client.aClass27Array1449[var3].anInt200;
-                } else {
-                    Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
-                }
-
-                return 1;
-            } else if (var0 == 3603) {
-                var3 = Class63.anIntArray645[--Class63.anInt644];
-                if (Client.friendCount == 2 && var3 < Client.anInt1431) {
-                    Class63.anIntArray645[++Class63.anInt644 - 1] = Client.aClass27Array1449[var3].anInt199;
-                } else {
-                    Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
-                }
-
-                return 1;
+        }
+        int var3;
+        if (var0 == 3601) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            if (Client.friendCount == 2 && var3 < Client.anInt1431) {
+                Class63.aStringArray640[++Class77.anInt828 - 1] = Client.aClass27Array1449[var3].aString198;
+                Class63.aStringArray640[++Class77.anInt828 - 1] = Client.aClass27Array1449[var3].aString203;
             } else {
-                String var4;
-                if (var0 == 3604) {
-                    var4 = Class63.aStringArray640[--Class77.anInt828];
-                    int var5 = Class63.anIntArray645[--Class63.anInt644];
-                    Class123.method813(var4, var5);
-                    return 1;
-                } else {
-                    int var7;
-                    Class27 var8;
-                    String var10;
-                    String var14;
-                    String var16;
-                    if (var0 == 3605) {
-                        var4 = Class63.aStringArray640[--Class77.anInt828];
-                        if (var4 != null) {
-                            if ((Client.anInt1431 < 200 || Client.anInt1593 == 1) && Client.anInt1431 < 400) {
-                                var14 = Class84.method484(var4, Class2.aClass188_13);
-                                if (var14 != null) {
-                                    var7 = 0;
+                Class63.aStringArray640[++Class77.anInt828 - 1] = "";
+                Class63.aStringArray640[++Class77.anInt828 - 1] = "";
+            }
 
-                                    while (true) {
-                                        if (var7 >= Client.anInt1431) {
-                                            for (var7 = 0; var7 < Client.anInt1450; ++var7) {
-                                                IgnoredPlayer var15 = Client.ignoredPlayers[var7];
-                                                var16 = Class84.method484(var15.aString242, Class2.aClass188_13);
-                                                if (var16 != null && var16.equals(var14)) {
-                                                    Class78.method469(30, "", "Please remove " + var4 + " from your ignore list first");
-                                                    return 1;
-                                                }
+            return 1;
+        }
+        if (var0 == 3602) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            if (Client.friendCount == 2 && var3 < Client.anInt1431) {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.aClass27Array1449[var3].anInt200;
+            } else {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
+            }
 
-                                                if (var15.aString243 != null) {
-                                                    var10 = Class84.method484(var15.aString243, Class2.aClass188_13);
-                                                    if (var10 != null && var10.equals(var14)) {
-                                                        Class78.method469(30, "", "Please remove " + var4 + " from your ignore list first");
-                                                        return 1;
-                                                    }
-                                                }
-                                            }
+            return 1;
+        }
+        if (var0 == 3603) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            if (Client.friendCount == 2 && var3 < Client.anInt1431) {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.aClass27Array1449[var3].anInt199;
+            } else {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
+            }
 
-                                            if (Class84.method484(Client.player.name, Class2.aClass188_13).equals(var14)) {
-                                                Class78.method469(30, "", "You can't add yourself to your own friend list");
-                                            } else {
-                                                Client.packet.writeHeader(186);
-                                                Client.packet.method451(Class27.method179(var4));
-                                                Client.packet.method865(var4);
-                                            }
-                                            break;
+            return 1;
+        }
+        String var4;
+        if (var0 == 3604) {
+            var4 = Class63.aStringArray640[--Class77.anInt828];
+            int var5 = Class63.anIntArray645[--Class63.anInt644];
+            Class123.method813(var4, var5);
+            return 1;
+        }
+        int var7;
+        Class27 var8;
+        String var10;
+        String var14;
+        String var16;
+        if (var0 == 3605) {
+            var4 = Class63.aStringArray640[--Class77.anInt828];
+            if (var4 != null) {
+                if ((Client.anInt1431 < 200 || Client.anInt1593 == 1) && Client.anInt1431 < 400) {
+                    var14 = Class84.method484(var4, Class2.aClass188_13);
+                    if (var14 != null) {
+                        var7 = 0;
+
+                        while (true) {
+                            if (var7 >= Client.anInt1431) {
+                                for (var7 = 0; var7 < Client.anInt1450; ++var7) {
+                                    IgnoredPlayer var15 = Client.ignoredPlayers[var7];
+                                    var16 = Class84.method484(var15.aString242, Class2.aClass188_13);
+                                    if (var16 != null && var16.equals(var14)) {
+                                        Class78.method469(30, "", "Please remove " + var4 + " from your ignore list first");
+                                        return 1;
+                                    }
+
+                                    if (var15.aString243 != null) {
+                                        var10 = Class84.method484(var15.aString243, Class2.aClass188_13);
+                                        if (var10 != null && var10.equals(var14)) {
+                                            Class78.method469(30, "", "Please remove " + var4 + " from your ignore list first");
+                                            return 1;
                                         }
-
-                                        var8 = Client.aClass27Array1449[var7];
-                                        var16 = Class84.method484(var8.aString198, Class2.aClass188_13);
-                                        if (var16 != null && var16.equals(var14)) {
-                                            Class78.method469(30, "", var4 + " is already on your friend list");
-                                            break;
-                                        }
-
-                                        if (var8.aString203 != null) {
-                                            var10 = Class84.method484(var8.aString203, Class2.aClass188_13);
-                                            if (var10 != null && var10.equals(var14)) {
-                                                Class78.method469(30, "", var4 + " is already on your friend list");
-                                                break;
-                                            }
-                                        }
-
-                                        ++var7;
                                     }
                                 }
-                            } else {
-                                Class78.method469(30, "", "Your friend list is full. Max of 200 for free users, and 400 for members");
-                            }
-                        }
 
-                        return 1;
-                    } else if (var0 == 3606) {
-                        var4 = Class63.aStringArray640[--Class77.anInt828];
-                        if (var4 != null) {
-                            var14 = Class84.method484(var4, Class2.aClass188_13);
-                            if (var14 != null) {
-                                for (var7 = 0; var7 < Client.anInt1431; ++var7) {
-                                    var8 = Client.aClass27Array1449[var7];
-                                    var16 = var8.aString198;
-                                    var10 = Class84.method484(var16, Class2.aClass188_13);
-                                    if (Class170.method1152(var4, var14, var16, var10)) {
-                                        --Client.anInt1431;
-
-                                        for (int var11 = var7; var11 < Client.anInt1431; ++var11) {
-                                            Client.aClass27Array1449[var11] = Client.aClass27Array1449[var11 + 1];
-                                        }
-
-                                        Client.anInt1660 = Client.anInt1644;
-                                        Client.packet.writeHeader(22);
-                                        Client.packet.method451(Class27.method179(var4));
-                                        Client.packet.method865(var4);
-                                        break;
-                                    }
+                                if (Class84.method484(Client.player.name, Class2.aClass188_13).equals(var14)) {
+                                    Class78.method469(30, "", "You can't add yourself to your own friend list");
+                                } else {
+                                    Client.packet.writeHeader(186);
+                                    Client.packet.method451(Class27.method179(var4));
+                                    Client.packet.method865(var4);
                                 }
-                            }
-                        }
-
-                        return 1;
-                    } else if (var0 == 3607) {
-                        var4 = Class63.aStringArray640[--Class77.anInt828];
-                        Class90.method585(var4, false);
-                        return 1;
-                    } else if (var0 == 3608) {
-                        var4 = Class63.aStringArray640[--Class77.anInt828];
-                        Varps.method1045(var4);
-                        return 1;
-                    } else if (var0 == 3609) {
-                        var4 = Class63.aStringArray640[--Class77.anInt828];
-
-                        for (int var13 = 0; var13 < new Class158[]{Class158.aClass158_1849, Class158.aClass158_1855, Class158.aClass158_1845, Class158.aClass158_1853, Class158.aClass158_1848, Class158.aClass158_1851}.length; ++var13) {
-                            Class158 var9 = new Class158[]{Class158.aClass158_1849, Class158.aClass158_1855, Class158.aClass158_1845, Class158.aClass158_1853, Class158.aClass158_1848, Class158.aClass158_1851}[var13];
-                            if (var9.anInt1852 != -1 && var4.startsWith(Canvas.method187(var9.anInt1852))) {
-                                var4 = var4.substring(Integer.toString(var9.anInt1852).length() + 6);
                                 break;
                             }
-                        }
 
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = Class112.method771(var4, false) ? 1 : 0;
-                        return 1;
-                    } else if (var0 == 3611) {
-                        if (Client.clanChatOwner != null) {
-                            Class63.aStringArray640[++Class77.anInt828 - 1] = Class64.method380(Client.clanChatOwner);
-                        } else {
-                            Class63.aStringArray640[++Class77.anInt828 - 1] = "";
-                        }
-
-                        return 1;
-                    } else if (var0 == 3612) {
-                        if (Client.clanChatOwner != null) {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = GrandExchangeOffer.anInt738;
-                        } else {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
-                        }
-
-                        return 1;
-                    } else if (var0 == 3613) {
-                        var3 = Class63.anIntArray645[--Class63.anInt644];
-                        if (Client.clanChatOwner != null && var3 < GrandExchangeOffer.anInt738) {
-                            Class63.aStringArray640[++Class77.anInt828 - 1] = Class126.aClanMateArray1370[var3].aString227;
-                        } else {
-                            Class63.aStringArray640[++Class77.anInt828 - 1] = "";
-                        }
-
-                        return 1;
-                    } else if (var0 == 3614) {
-                        var3 = Class63.anIntArray645[--Class63.anInt644];
-                        if (Client.clanChatOwner != null && var3 < GrandExchangeOffer.anInt738) {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = Class126.aClanMateArray1370[var3].world;
-                        } else {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
-                        }
-
-                        return 1;
-                    } else if (var0 == 3615) {
-                        var3 = Class63.anIntArray645[--Class63.anInt644];
-                        if (Client.clanChatOwner != null && var3 < GrandExchangeOffer.anInt738) {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = Class126.aClanMateArray1370[var3].rank;
-                        } else {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
-                        }
-
-                        return 1;
-                    } else if (var0 == 3616) {
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = Class6_Sub2.aByte826;
-                        return 1;
-                    } else if (var0 == 3617) {
-                        var4 = Class63.aStringArray640[--Class77.anInt828];
-                        Client.method894(var4);
-                        return 1;
-                    } else if (var0 == 3618) {
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = Class150.aByte1826;
-                        return 1;
-                    } else if (var0 == 3619) {
-                        var4 = Class63.aStringArray640[--Class77.anInt828];
-                        HealthBar.method344(var4);
-                        return 1;
-                    } else if (var0 == 3620) {
-                        Node_Sub21_Sub1.method183();
-                        return 1;
-                    } else if (var0 == 3621) {
-                        if (Client.friendCount == 0) {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
-                        } else {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = Client.anInt1450;
-                        }
-
-                        return 1;
-                    } else if (var0 == 3622) {
-                        var3 = Class63.anIntArray645[--Class63.anInt644];
-                        if (Client.friendCount != 0 && var3 < Client.anInt1450) {
-                            Class63.aStringArray640[++Class77.anInt828 - 1] = Client.ignoredPlayers[var3].aString242;
-                            Class63.aStringArray640[++Class77.anInt828 - 1] = Client.ignoredPlayers[var3].aString243;
-                        } else {
-                            Class63.aStringArray640[++Class77.anInt828 - 1] = "";
-                            Class63.aStringArray640[++Class77.anInt828 - 1] = "";
-                        }
-
-                        return 1;
-                    } else if (var0 == 3623) {
-                        var4 = Class63.aStringArray640[--Class77.anInt828];
-                        if (var4.startsWith(Canvas.method187(0)) || var4.startsWith(Canvas.method187(1))) {
-                            var4 = var4.substring(7);
-                        }
-
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = Class61.method372(var4) ? 1 : 0;
-                        return 1;
-                    } else if (var0 != 3624) {
-                        if (var0 == 3625) {
-                            if (Client.clanChatName != null) {
-                                Class63.aStringArray640[++Class77.anInt828 - 1] = Class64.method380(Client.clanChatName);
-                            } else {
-                                Class63.aStringArray640[++Class77.anInt828 - 1] = "";
+                            var8 = Client.aClass27Array1449[var7];
+                            var16 = Class84.method484(var8.aString198, Class2.aClass188_13);
+                            if (var16 != null && var16.equals(var14)) {
+                                Class78.method469(30, "", var4 + " is already on your friend list");
+                                break;
                             }
 
-                            return 1;
-                        } else {
-                            return 2;
-                        }
-                    } else {
-                        var3 = Class63.anIntArray645[--Class63.anInt644];
-                        if (Class126.aClanMateArray1370 != null && var3 < GrandExchangeOffer.anInt738 && Class126.aClanMateArray1370[var3].aString227.equalsIgnoreCase(Client.player.name)) {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = 1;
-                        } else {
-                            Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
-                        }
+                            if (var8.aString203 != null) {
+                                var10 = Class84.method484(var8.aString203, Class2.aClass188_13);
+                                if (var10 != null && var10.equals(var14)) {
+                                    Class78.method469(30, "", var4 + " is already on your friend list");
+                                    break;
+                                }
+                            }
 
-                        return 1;
+                            ++var7;
+                        }
+                    }
+                } else {
+                    Class78.method469(30, "", "Your friend list is full. Max of 200 for free users, and 400 for members");
+                }
+            }
+
+            return 1;
+        }
+        if (var0 == 3606) {
+            var4 = Class63.aStringArray640[--Class77.anInt828];
+            if (var4 != null) {
+                var14 = Class84.method484(var4, Class2.aClass188_13);
+                if (var14 != null) {
+                    for (var7 = 0; var7 < Client.anInt1431; ++var7) {
+                        var8 = Client.aClass27Array1449[var7];
+                        var16 = var8.aString198;
+                        var10 = Class84.method484(var16, Class2.aClass188_13);
+                        if (Class170.method1152(var4, var14, var16, var10)) {
+                            --Client.anInt1431;
+
+                            for (int var11 = var7; var11 < Client.anInt1431; ++var11) {
+                                Client.aClass27Array1449[var11] = Client.aClass27Array1449[var11 + 1];
+                            }
+
+                            Client.anInt1660 = Client.anInt1644;
+                            Client.packet.writeHeader(22);
+                            Client.packet.method451(Class27.method179(var4));
+                            Client.packet.method865(var4);
+                            break;
+                        }
                     }
                 }
             }
+
+            return 1;
         }
+        if (var0 == 3607) {
+            var4 = Class63.aStringArray640[--Class77.anInt828];
+            Class90.method585(var4, false);
+            return 1;
+        }
+        if (var0 == 3608) {
+            var4 = Class63.aStringArray640[--Class77.anInt828];
+            Varps.method1045(var4);
+            return 1;
+        }
+        if (var0 == 3609) {
+            var4 = Class63.aStringArray640[--Class77.anInt828];
+
+            for (int var13 = 0; var13 < new Class158[]{Class158.aClass158_1849, Class158.aClass158_1855, Class158.aClass158_1845, Class158.aClass158_1853, Class158.aClass158_1848, Class158.aClass158_1851}.length; ++var13) {
+                Class158 var9 = new Class158[]{Class158.aClass158_1849, Class158.aClass158_1855, Class158.aClass158_1845, Class158.aClass158_1853, Class158.aClass158_1848, Class158.aClass158_1851}[var13];
+                if (var9.anInt1852 != -1 && var4.startsWith(Canvas.method187(var9.anInt1852))) {
+                    var4 = var4.substring(Integer.toString(var9.anInt1852).length() + 6);
+                    break;
+                }
+            }
+
+            Class63.anIntArray645[++Class63.anInt644 - 1] = Class112.method771(var4, false) ? 1 : 0;
+            return 1;
+        }
+        if (var0 == 3611) {
+            if (Client.clanChatOwner != null) {
+                Class63.aStringArray640[++Class77.anInt828 - 1] = Class64.method380(Client.clanChatOwner);
+            } else {
+                Class63.aStringArray640[++Class77.anInt828 - 1] = "";
+            }
+
+            return 1;
+        }
+        if (var0 == 3612) {
+            if (Client.clanChatOwner != null) {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = GrandExchangeOffer.anInt738;
+            } else {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
+            }
+
+            return 1;
+        }
+        if (var0 == 3613) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            if (Client.clanChatOwner != null && var3 < GrandExchangeOffer.anInt738) {
+                Class63.aStringArray640[++Class77.anInt828 - 1] = Class126.aClanMateArray1370[var3].aString227;
+            } else {
+                Class63.aStringArray640[++Class77.anInt828 - 1] = "";
+            }
+
+            return 1;
+        }
+        if (var0 == 3614) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            if (Client.clanChatOwner != null && var3 < GrandExchangeOffer.anInt738) {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Class126.aClanMateArray1370[var3].world;
+            } else {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
+            }
+
+            return 1;
+        }
+        if (var0 == 3615) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            if (Client.clanChatOwner != null && var3 < GrandExchangeOffer.anInt738) {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Class126.aClanMateArray1370[var3].rank;
+            } else {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
+            }
+
+            return 1;
+        }
+        if (var0 == 3616) {
+            Class63.anIntArray645[++Class63.anInt644 - 1] = Class6_Sub2.aByte826;
+            return 1;
+        }
+        if (var0 == 3617) {
+            var4 = Class63.aStringArray640[--Class77.anInt828];
+            Client.method894(var4);
+            return 1;
+        }
+        if (var0 == 3618) {
+            Class63.anIntArray645[++Class63.anInt644 - 1] = Class150.aByte1826;
+            return 1;
+        }
+        if (var0 == 3619) {
+            var4 = Class63.aStringArray640[--Class77.anInt828];
+            HealthBar.method344(var4);
+            return 1;
+        }
+        if (var0 == 3620) {
+            Node_Sub21_Sub1.method183();
+            return 1;
+        }
+        if (var0 == 3621) {
+            if (Client.friendCount == 0) {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
+            } else {
+                Class63.anIntArray645[++Class63.anInt644 - 1] = Client.anInt1450;
+            }
+
+            return 1;
+        }
+        if (var0 == 3622) {
+            var3 = Class63.anIntArray645[--Class63.anInt644];
+            if (Client.friendCount != 0 && var3 < Client.anInt1450) {
+                Class63.aStringArray640[++Class77.anInt828 - 1] = Client.ignoredPlayers[var3].aString242;
+                Class63.aStringArray640[++Class77.anInt828 - 1] = Client.ignoredPlayers[var3].aString243;
+            } else {
+                Class63.aStringArray640[++Class77.anInt828 - 1] = "";
+                Class63.aStringArray640[++Class77.anInt828 - 1] = "";
+            }
+
+            return 1;
+        }
+        if (var0 == 3623) {
+            var4 = Class63.aStringArray640[--Class77.anInt828];
+            if (var4.startsWith(Canvas.method187(0)) || var4.startsWith(Canvas.method187(1))) {
+                var4 = var4.substring(7);
+            }
+
+            Class63.anIntArray645[++Class63.anInt644 - 1] = Class61.method372(var4) ? 1 : 0;
+            return 1;
+        }
+        if (var0 != 3624) {
+            if (var0 == 3625) {
+                if (Client.clanChatName != null) {
+                    Class63.aStringArray640[++Class77.anInt828 - 1] = Class64.method380(Client.clanChatName);
+                } else {
+                    Class63.aStringArray640[++Class77.anInt828 - 1] = "";
+                }
+
+                return 1;
+            }
+            return 2;
+        }
+        var3 = Class63.anIntArray645[--Class63.anInt644];
+        if (Class126.aClanMateArray1370 != null && var3 < GrandExchangeOffer.anInt738 && Class126.aClanMateArray1370[var3].aString227.equalsIgnoreCase(Client.player.name)) {
+            Class63.anIntArray645[++Class63.anInt644 - 1] = 1;
+        } else {
+            Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
+        }
+
+        return 1;
     }
 
     public static int method970(CharSequence var0, CharSequence var1, int var2) {
@@ -396,17 +411,16 @@ public class Node_Sub20 extends Node {
         var17 = var3 - var4;
         if (var17 != 0) {
             return var17;
-        } else {
-            for (int var19 = 0; var19 < var16; ++var19) {
-                var20 = var0.charAt(var19);
-                char var13 = var1.charAt(var19);
-                if (var13 != var20) {
-                    return Entity.method660(var20, var2) - Entity.method660(var13, var2);
-                }
-            }
-
-            return 0;
         }
+        for (int var19 = 0; var19 < var16; ++var19) {
+            var20 = var0.charAt(var19);
+            char var13 = var1.charAt(var19);
+            if (var13 != var20) {
+                return Entity.method660(var20, var2) - Entity.method660(var13, var2);
+            }
+        }
+
+        return 0;
     }
 
     static void method971(PathingEntity var0, int var1) {

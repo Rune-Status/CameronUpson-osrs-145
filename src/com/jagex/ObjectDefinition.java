@@ -60,31 +60,29 @@ public class ObjectDefinition extends DoublyNode {
     static int method1075(Class188 var0) {
         if (var0 == null) {
             return 12;
-        } else {
-            switch (var0.anInt2191) {
-                case 7:
-                    return 20;
-                default:
-                    return 12;
-            }
+        }
+        switch (var0.anInt2191) {
+            case 7:
+                return 20;
+            default:
+                return 12;
         }
     }
 
     public boolean method1077() {
         if (this.transformIds == null) {
             return this.anInt767 != -1 || this.anIntArray751 != null;
-        } else {
-            for (int var1 = 0; var1 < this.transformIds.length; ++var1) {
-                if (this.transformIds[var1] != -1) {
-                    ObjectDefinition var2 = Class5.method17(this.transformIds[var1]);
-                    if (var2.anInt767 != -1 || var2.anIntArray751 != null) {
-                        return true;
-                    }
+        }
+        for (int var1 = 0; var1 < this.transformIds.length; ++var1) {
+            if (this.transformIds[var1] != -1) {
+                ObjectDefinition var2 = Class5.method17(this.transformIds[var1]);
+                if (var2.anInt767 != -1 || var2.anIntArray751 != null) {
+                    return true;
                 }
             }
-
-            return false;
         }
+
+        return false;
     }
 
     void method756() {
@@ -207,19 +205,18 @@ public class ObjectDefinition extends DoublyNode {
 
         if (var7 == null && this.clipType == -1) {
             return var11;
-        } else {
-            if (var7 != null) {
-                var11 = var7.method1196(var11, var8, var2);
-            } else {
-                var11 = var11.method726(true);
-            }
-
-            if (this.clipType >= 0) {
-                var11 = var11.method729(var3, var4, var5, var6, false, this.clipType);
-            }
-
-            return var11;
         }
+        if (var7 != null) {
+            var11 = var7.method1196(var11, var8, var2);
+        } else {
+            var11 = var11.method726(true);
+        }
+
+        if (this.clipType >= 0) {
+            var11 = var11.method729(var3, var4, var5, var6, false, this.clipType);
+        }
+
+        return var11;
     }
 
     final ModelHeader method1076(int var1, int var2) {
@@ -552,32 +549,32 @@ public class ObjectDefinition extends DoublyNode {
             }
 
             return true;
-        } else if (this.anIntArray1271 == null) {
-            return true;
-        } else if (var1 != 10) {
-            return true;
-        } else {
-            boolean var2 = true;
-
-            for (int var3 = 0; var3 < this.anIntArray1271.length; ++var3) {
-                var2 &= aReferenceTable2039.method1102(this.anIntArray1271[var3] & '\uffff', 0);
-            }
-
-            return var2;
         }
+        if (this.anIntArray1271 == null) {
+            return true;
+        }
+        if (var1 != 10) {
+            return true;
+        }
+        boolean var2 = true;
+
+        for (int var3 = 0; var3 < this.anIntArray1271.length; ++var3) {
+            var2 &= aReferenceTable2039.method1102(this.anIntArray1271[var3] & '\uffff', 0);
+        }
+
+        return var2;
     }
 
     public final boolean method1079() {
         if (this.anIntArray1271 == null) {
             return true;
-        } else {
-            boolean var1 = true;
-
-            for (int var2 = 0; var2 < this.anIntArray1271.length; ++var2) {
-                var1 &= aReferenceTable2039.method1102(this.anIntArray1271[var2] & '\uffff', 0);
-            }
-
-            return var1;
         }
+        boolean var1 = true;
+
+        for (int var2 = 0; var2 < this.anIntArray1271.length; ++var2) {
+            var1 &= aReferenceTable2039.method1102(this.anIntArray1271[var2] & '\uffff', 0);
+        }
+
+        return var1;
     }
 }

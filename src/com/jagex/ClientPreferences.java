@@ -75,17 +75,16 @@ public class ClientPreferences {
         Node_Sub21_Sub24 var1 = (Node_Sub21_Sub24) Node_Sub21_Sub24.aReferenceCache2025.method973((long) var0);
         if (var1 != null) {
             return var1;
-        } else {
-            byte[] var2 = Class19.aReferenceTable136.method1085(1, var0);
-            var1 = new Node_Sub21_Sub24();
-            if (var2 != null) {
-                var1.method1065(new Buffer(var2), var0);
-            }
-
-            var1.method335();
-            Node_Sub21_Sub24.aReferenceCache2025.method975(var1, (long) var0);
-            return var1;
         }
+        byte[] var2 = Class19.aReferenceTable136.method1085(1, var0);
+        var1 = new Node_Sub21_Sub24();
+        if (var2 != null) {
+            var1.method1065(new Buffer(var2), var0);
+        }
+
+        var1.method335();
+        Node_Sub21_Sub24.aReferenceCache2025.method975(var1, (long) var0);
+        return var1;
     }
 
     void method289(boolean var1) {

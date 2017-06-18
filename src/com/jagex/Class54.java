@@ -11,19 +11,18 @@ public class Class54 {
     public static Object method349(byte[] var0, boolean var1) {
         if (var0 == null) {
             return null;
-        } else {
-            if (var0.length > 136 && !Class111.aBoolean1326) {
-                try {
-                    Class111_Sub1 var2 = new Class111_Sub1();
-                    var2.method769(var0);
-                    return var2;
-                } catch (Throwable var3) {
-                    Class111.aBoolean1326 = true;
-                }
-            }
-
-            return var0;
         }
+        if (var0.length > 136 && !Class111.aBoolean1326) {
+            try {
+                Class111_Sub1 var2 = new Class111_Sub1();
+                var2.method769(var0);
+                return var2;
+            } catch (Throwable var3) {
+                Class111.aBoolean1326 = true;
+            }
+        }
+
+        return var0;
     }
 
     public static int method347(CharSequence var0) {

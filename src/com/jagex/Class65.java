@@ -58,35 +58,31 @@ final class Class65 implements Comparator {
 
             if (!var4) {
                 throw new NumberFormatException();
-            } else {
-                return var5;
             }
-        } else {
-            throw new IllegalArgumentException("");
+            return var5;
         }
+        throw new IllegalArgumentException("");
     }
 
     static int method389(int var0, int var1, int var2) {
         if ((Class26.aByteArrayArrayArray189[var0][var1][var2] & 8) != 0) {
             return 0;
-        } else {
-            return var0 > 0 && (Class26.aByteArrayArrayArray189[1][var1][var2] & 2) != 0 ? var0 - 1 : var0;
         }
+        return var0 > 0 && (Class26.aByteArrayArrayArray189[1][var1][var2] & 2) != 0 ? var0 - 1 : var0;
     }
 
     public static Font loadFont(byte[] var0) {
         if (var0 == null) {
             return null;
-        } else {
-            Font var1 = new Font(var0, Class191.anIntArray2245, Class191.anIntArray2248, Class191.anIntArray2249, Class109.anIntArray1305, Class94.anIntArray1043, Class191.aByteArrayArray2247);
-            Class191.anIntArray2245 = null;
-            Class191.anIntArray2248 = null;
-            Class191.anIntArray2249 = null;
-            Class109.anIntArray1305 = null;
-            Class94.anIntArray1043 = null;
-            Class191.aByteArrayArray2247 = null;
-            return var1;
         }
+        Font var1 = new Font(var0, Class191.anIntArray2245, Class191.anIntArray2248, Class191.anIntArray2249, Class109.anIntArray1305, Class94.anIntArray1043, Class191.aByteArrayArray2247);
+        Class191.anIntArray2245 = null;
+        Class191.anIntArray2248 = null;
+        Class191.anIntArray2249 = null;
+        Class109.anIntArray1305 = null;
+        Class94.anIntArray1043 = null;
+        Class191.aByteArrayArray2247 = null;
+        return var1;
     }
 
     int method386(Class53 var1, Class53 var2) {

@@ -13,9 +13,8 @@ public final class Packet extends Buffer {
         Node_Sub21_Sub1 var1 = (Node_Sub21_Sub1) Class59.A_ITERABLE_NODE_TABLE___628.lookup((long) var0);
         if (var1 == null) {
             return -1;
-        } else {
-            return Class59.aClass142_627.aDoublyNode1786 == var1.previousDoubly ? -1 : ((Node_Sub21_Sub1) var1.previousDoubly).anInt204;
         }
+        return Class59.aClass142_627.aDoublyNode1786 == var1.previousDoubly ? -1 : ((Node_Sub21_Sub1) var1.previousDoubly).anInt204;
     }
 
     public void method787(int[] var1) {

@@ -18,7 +18,8 @@ public class Class23 implements EnumOrdinal {
     static int method152(int var0, int var1) {
         if (var0 == -2) {
             return 12345678;
-        } else if (var0 == -1) {
+        }
+        if (var0 == -1) {
             if (var1 < 0) {
                 var1 = 0;
             } else if (var1 > 127) {
@@ -27,16 +28,15 @@ public class Class23 implements EnumOrdinal {
 
             var1 = 127 - var1;
             return var1;
-        } else {
-            var1 = var1 * (var0 & 127) / 128;
-            if (var1 < 2) {
-                var1 = 2;
-            } else if (var1 > 126) {
-                var1 = 126;
-            }
-
-            return var1 + (var0 & 'ﾀ');
         }
+        var1 = var1 * (var0 & 127) / 128;
+        if (var1 < 2) {
+            var1 = 2;
+        } else if (var1 > 126) {
+            var1 = 126;
+        }
+
+        return var1 + (var0 & 'ﾀ');
     }
 
     static int method153(int var0, int var1) {

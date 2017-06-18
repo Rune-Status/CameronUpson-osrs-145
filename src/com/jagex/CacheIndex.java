@@ -100,9 +100,8 @@ public final class CacheIndex {
                 }
 
                 return var5;
-            } else {
-                throw new IllegalArgumentException();
             }
+            throw new IllegalArgumentException();
         }
     }
 

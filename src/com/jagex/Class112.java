@@ -224,17 +224,16 @@ public class Class112 {
     static boolean method771(String var0, boolean var1) {
         if (var0 == null) {
             return false;
-        } else {
-            String var2 = Class84.method484(var0, Class2.aClass188_13);
-
-            for (int var3 = 0; var3 < Client.anInt1431; ++var3) {
-                if (var2.equalsIgnoreCase(Class84.method484(Client.aClass27Array1449[var3].aString198, Class2.aClass188_13)) && (!var1 || Client.aClass27Array1449[var3].anInt200 != 0)) {
-                    return true;
-                }
-            }
-
-            return var2.equalsIgnoreCase(Class84.method484(Client.player.name, Class2.aClass188_13));
         }
+        String var2 = Class84.method484(var0, Class2.aClass188_13);
+
+        for (int var3 = 0; var3 < Client.anInt1431; ++var3) {
+            if (var2.equalsIgnoreCase(Class84.method484(Client.aClass27Array1449[var3].aString198, Class2.aClass188_13)) && (!var1 || Client.aClass27Array1449[var3].anInt200 != 0)) {
+                return true;
+            }
+        }
+
+        return var2.equalsIgnoreCase(Class84.method484(Client.player.name, Class2.aClass188_13));
     }
 
     public static String method772(Buffer var0, int var1) {
@@ -262,10 +261,10 @@ public class Class112 {
         var2 &= 3;
         if (var2 == 0) {
             return var0;
-        } else if (var2 == 1) {
-            return var1;
-        } else {
-            return var2 == 2 ? 7 - var0 - (var3 - 1) : 7 - var1 - (var4 - 1);
         }
+        if (var2 == 1) {
+            return var1;
+        }
+        return var2 == 2 ? 7 - var0 - (var3 - 1) : 7 - var1 - (var4 - 1);
     }
 }

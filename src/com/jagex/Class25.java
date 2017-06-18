@@ -35,9 +35,8 @@ public class Class25 {
             int var8 = Class26.anIntArrayArrayArray191[var5][var3 + 1][var4] * var6 + (128 - var6) * Class26.anIntArrayArrayArray191[var5][var3][var4] >> 7;
             int var9 = var6 * Class26.anIntArrayArrayArray191[var5][var3 + 1][var4 + 1] + Class26.anIntArrayArrayArray191[var5][var3][var4 + 1] * (128 - var6) >> 7;
             return (128 - var7) * var8 + var7 * var9 >> 7;
-        } else {
-            return 0;
         }
+        return 0;
     }
 
     static void method176() {
@@ -96,35 +95,34 @@ public class Class25 {
     byte[] method173() throws IOException {
         if (Class124.method873() > this.aLong179) {
             throw new IOException();
-        } else {
-            if (this.anInt174 == 0) {
-                if (this.aClass103_182.anInt1162 == 2) {
-                    throw new IOException();
-                }
-
-                if (this.aClass103_182.anInt1162 == 1) {
-                    this.aDataInputStream176 = (DataInputStream) this.aClass103_182.anObject1161;
-                    this.anInt174 = 1;
-                }
-            }
-
-            if (this.anInt174 == 1) {
-                this.anInt178 += this.aDataInputStream176.read(this.aByteArray175, this.anInt178, this.aByteArray175.length - this.anInt178);
-                if (this.anInt178 == 4) {
-                    int var1 = (new Buffer(this.aByteArray175)).method835();
-                    this.aByteArray180 = new byte[var1];
-                    this.anInt174 = 2;
-                }
-            }
-
-            if (this.anInt174 == 2) {
-                this.anInt181 += this.aDataInputStream176.read(this.aByteArray180, this.anInt181, this.aByteArray180.length - this.anInt181);
-                if (this.aByteArray180.length == this.anInt181) {
-                    return this.aByteArray180;
-                }
-            }
-
-            return null;
         }
+        if (this.anInt174 == 0) {
+            if (this.aClass103_182.anInt1162 == 2) {
+                throw new IOException();
+            }
+
+            if (this.aClass103_182.anInt1162 == 1) {
+                this.aDataInputStream176 = (DataInputStream) this.aClass103_182.anObject1161;
+                this.anInt174 = 1;
+            }
+        }
+
+        if (this.anInt174 == 1) {
+            this.anInt178 += this.aDataInputStream176.read(this.aByteArray175, this.anInt178, this.aByteArray175.length - this.anInt178);
+            if (this.anInt178 == 4) {
+                int var1 = (new Buffer(this.aByteArray175)).method835();
+                this.aByteArray180 = new byte[var1];
+                this.anInt174 = 2;
+            }
+        }
+
+        if (this.anInt174 == 2) {
+            this.anInt181 += this.aDataInputStream176.read(this.aByteArray180, this.anInt181, this.aByteArray180.length - this.anInt181);
+            if (this.aByteArray180.length == this.anInt181) {
+                return this.aByteArray180;
+            }
+        }
+
+        return null;
     }
 }
