@@ -99,24 +99,24 @@ public final class IsaacCipher {
     final void isaac() {
         this.mru += ++this.counter;
 
-        for (int var1 = 0; var1 < 256; ++var1) {
-            int var2 = this.state[var1];
-            if ((var1 & 2) == 0) {
-                if ((var1 & 1) == 0) {
+        for (int i = 0; i < 256; ++i) {
+            int state = this.state[i];
+            if ((i & 2) == 0) {
+                if ((i & 1) == 0) {
                     this.accumulator ^= this.accumulator << 13;
                 } else {
                     this.accumulator ^= this.accumulator >>> 6;
                 }
-            } else if ((var1 & 1) == 0) {
+            } else if ((i & 1) == 0) {
                 this.accumulator ^= this.accumulator << 2;
             } else {
                 this.accumulator ^= this.accumulator >>> 16;
             }
 
-            this.accumulator += this.state[var1 + 128 & 255];
+            this.accumulator += this.state[i + 128 & 255];
             int var3;
-            this.state[var1] = var3 = this.accumulator + this.state[(var2 & 1020) >> 2] + this.mru;
-            this.results[var1] = this.mru = var2 + this.state[(var3 >> 8 & 1020) >> 2];
+            this.state[i] = var3 = this.accumulator + this.state[(state & 1020) >> 2] + this.mru;
+            this.results[i] = this.mru = state + this.state[(var3 >> 8 & 1020) >> 2];
         }
 
     }

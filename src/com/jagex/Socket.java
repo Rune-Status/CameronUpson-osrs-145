@@ -17,9 +17,9 @@ public final class Socket implements Runnable {
     int anInt1419 = 0;
     boolean aBoolean1416 = false;
 
-    public Socket(java.net.Socket var1, Class108 var2) throws IOException {
+    public Socket(java.net.Socket socket, Class108 var2) throws IOException {
         this.aClass108_1420 = var2;
-        this.base = var1;
+        this.base = socket;
         this.base.setSoTimeout(30000);
         this.base.setTcpNoDelay(true);
         this.base.setReceiveBufferSize(16384);
