@@ -2,19 +2,19 @@ package com.jagex;
 
 public final class IsaacCipher {
 
-    int[] anIntArray1342 = new int[256]; //results or memory
+    int[] state = new int[256];
     int[] results = new int[256];
-    int anInt1338;
-    int anInt1343;
-    int anInt1341;
-    int anInt1339;
+    int count;
+    int accumulator;
+    int mru;
+    int counter;
 
     IsaacCipher(int[] seed) {
         for (int i = 0; i < seed.length; ++i) {
             this.results[i] = seed[i];
         }
 
-        method793();
+        initialize();
     }
 
     public static boolean method795(int var0) {
@@ -88,40 +88,40 @@ public final class IsaacCipher {
     }
 
     final int method792() {
-        if (--this.anInt1338 + 1 == 0) {
-            this.method796();
-            this.anInt1338 = 255;
+        if (--this.count + 1 == 0) {
+            this.isaac();
+            this.count = 255;
         }
 
-        return this.results[this.anInt1338];
+        return this.results[this.count];
     }
 
-    final void method796() {
-        this.anInt1341 += ++this.anInt1339;
+    final void isaac() {
+        this.mru += ++this.counter;
 
         for (int var1 = 0; var1 < 256; ++var1) {
-            int var2 = this.anIntArray1342[var1];
+            int var2 = this.state[var1];
             if ((var1 & 2) == 0) {
                 if ((var1 & 1) == 0) {
-                    this.anInt1343 ^= this.anInt1343 << 13;
+                    this.accumulator ^= this.accumulator << 13;
                 } else {
-                    this.anInt1343 ^= this.anInt1343 >>> 6;
+                    this.accumulator ^= this.accumulator >>> 6;
                 }
             } else if ((var1 & 1) == 0) {
-                this.anInt1343 ^= this.anInt1343 << 2;
+                this.accumulator ^= this.accumulator << 2;
             } else {
-                this.anInt1343 ^= this.anInt1343 >>> 16;
+                this.accumulator ^= this.accumulator >>> 16;
             }
 
-            this.anInt1343 += this.anIntArray1342[var1 + 128 & 255];
+            this.accumulator += this.state[var1 + 128 & 255];
             int var3;
-            this.anIntArray1342[var1] = var3 = this.anInt1343 + this.anIntArray1342[(var2 & 1020) >> 2] + this.anInt1341;
-            this.results[var1] = this.anInt1341 = var2 + this.anIntArray1342[(var3 >> 8 & 1020) >> 2];
+            this.state[var1] = var3 = this.accumulator + this.state[(var2 & 1020) >> 2] + this.mru;
+            this.results[var1] = this.mru = var2 + this.state[(var3 >> 8 & 1020) >> 2];
         }
 
     }
 
-    final void method793() {
+    final void initialize() {
         int var1 = -1640531527;
         int var2 = -1640531527;
         int var3 = -1640531527;
@@ -192,25 +192,25 @@ public final class IsaacCipher {
             var1 ^= var8 >>> 9;
             var6 += var1;
             var8 += var7;
-            this.anIntArray1342[var9] = var8;
-            this.anIntArray1342[var9 + 1] = var7;
-            this.anIntArray1342[var9 + 2] = var6;
-            this.anIntArray1342[var9 + 3] = var5;
-            this.anIntArray1342[var9 + 4] = var4;
-            this.anIntArray1342[var9 + 5] = var3;
-            this.anIntArray1342[var9 + 6] = var2;
-            this.anIntArray1342[var9 + 7] = var1;
+            this.state[var9] = var8;
+            this.state[var9 + 1] = var7;
+            this.state[var9 + 2] = var6;
+            this.state[var9 + 3] = var5;
+            this.state[var9 + 4] = var4;
+            this.state[var9 + 5] = var3;
+            this.state[var9 + 6] = var2;
+            this.state[var9 + 7] = var1;
         }
 
         for (var9 = 0; var9 < 256; var9 += 8) {
-            var8 += this.anIntArray1342[var9];
-            var7 += this.anIntArray1342[var9 + 1];
-            var6 += this.anIntArray1342[var9 + 2];
-            var5 += this.anIntArray1342[var9 + 3];
-            var4 += this.anIntArray1342[var9 + 4];
-            var3 += this.anIntArray1342[var9 + 5];
-            var2 += this.anIntArray1342[var9 + 6];
-            var1 += this.anIntArray1342[var9 + 7];
+            var8 += this.state[var9];
+            var7 += this.state[var9 + 1];
+            var6 += this.state[var9 + 2];
+            var5 += this.state[var9 + 3];
+            var4 += this.state[var9 + 4];
+            var3 += this.state[var9 + 5];
+            var2 += this.state[var9 + 6];
+            var1 += this.state[var9 + 7];
             var8 ^= var7 << 11;
             var5 += var8;
             var7 += var6;
@@ -235,17 +235,17 @@ public final class IsaacCipher {
             var1 ^= var8 >>> 9;
             var6 += var1;
             var8 += var7;
-            this.anIntArray1342[var9] = var8;
-            this.anIntArray1342[var9 + 1] = var7;
-            this.anIntArray1342[var9 + 2] = var6;
-            this.anIntArray1342[var9 + 3] = var5;
-            this.anIntArray1342[var9 + 4] = var4;
-            this.anIntArray1342[var9 + 5] = var3;
-            this.anIntArray1342[var9 + 6] = var2;
-            this.anIntArray1342[var9 + 7] = var1;
+            this.state[var9] = var8;
+            this.state[var9 + 1] = var7;
+            this.state[var9 + 2] = var6;
+            this.state[var9 + 3] = var5;
+            this.state[var9 + 4] = var4;
+            this.state[var9 + 5] = var3;
+            this.state[var9 + 6] = var2;
+            this.state[var9 + 7] = var1;
         }
 
-        this.method796();
-        this.anInt1338 = 256;
+        this.isaac();
+        this.count = 256;
     }
 }
