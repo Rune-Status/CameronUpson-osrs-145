@@ -32,7 +32,7 @@ public class Class84 {
     static void method486(int var0, int var1, int var2, int var3, int var4, int var5, int var6) {
         int[] var7 = SceneGraph.method697(var0, var1, var2);
         int[] var8 = SceneGraph.method697(var3, var4, var5);
-        Node_Sub21_Sub26.method1226(var7[0], var7[1], var8[0], var8[1], var6);
+        DrawingArea.method1226(var7[0], var7[1], var8[0], var8[1], var6);
     }
 
     public static String method484(CharSequence var0, Class188 var1) {

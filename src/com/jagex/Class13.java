@@ -504,7 +504,7 @@ public class Class13 {
             if (var6 > -1) {
                 int var7 = Class60.method367(var6, this.anInt101);
                 if (var3.aByteArrayArrayArray44[var5][var1][var2] == 0) {
-                    Node_Sub21_Sub26.method1223(var1 * this.anInt99, (63 - var2) * this.anInt99, this.anInt99, this.anInt99, var7);
+                    DrawingArea.method1223(var1 * this.anInt99, (63 - var2) * this.anInt99, this.anInt99, this.anInt99, var7);
                 } else {
                     var4.method53(var1 * this.anInt99, this.anInt99 * (63 - var2), 0, var7, this.anInt99, this.anInt99, var3.aByteArrayArrayArray44[var5][var1][var2], var3.aByteArrayArrayArray41[var5][var1][var2]);
                 }
@@ -642,19 +642,19 @@ public class Class13 {
 
                         if (Class163.aClass163_1979.anInt1960 == var8.x) {
                             if (var8.y == 0) {
-                                Node_Sub21_Sub26.method1214(var1 * this.anInt99, this.anInt99 * (63 - var2), 1, var10);
+                                DrawingArea.method1214(var1 * this.anInt99, this.anInt99 * (63 - var2), 1, var10);
                             }
 
                             if (var8.y == 1) {
-                                Node_Sub21_Sub26.method1214(this.anInt99 + this.anInt99 * var1 - 1, (63 - var2) * this.anInt99, 1, var10);
+                                DrawingArea.method1214(this.anInt99 + this.anInt99 * var1 - 1, (63 - var2) * this.anInt99, 1, var10);
                             }
 
                             if (var8.y == 2) {
-                                Node_Sub21_Sub26.method1214(this.anInt99 * var1 + this.anInt99 - 1, this.anInt99 * (63 - var2) + this.anInt99 - 1, 1, var10);
+                                DrawingArea.method1214(this.anInt99 * var1 + this.anInt99 - 1, this.anInt99 * (63 - var2) + this.anInt99 - 1, 1, var10);
                             }
 
                             if (var8.y == 3) {
-                                Node_Sub21_Sub26.method1214(this.anInt99 * var1, this.anInt99 + (63 - var2) * this.anInt99 - 1, 1, var10);
+                                DrawingArea.method1214(this.anInt99 * var1, this.anInt99 + (63 - var2) * this.anInt99 - 1, 1, var10);
                             }
                         }
 
@@ -663,11 +663,11 @@ public class Class13 {
                             int var12;
                             if (var11 == 0) {
                                 for (var12 = 0; var12 < this.anInt99; ++var12) {
-                                    Node_Sub21_Sub26.method1214(var1 * this.anInt99 + var12, (64 - var2) * this.anInt99 - 1 - var12, 1, var10);
+                                    DrawingArea.method1214(var1 * this.anInt99 + var12, (64 - var2) * this.anInt99 - 1 - var12, 1, var10);
                                 }
                             } else {
                                 for (var12 = 0; var12 < this.anInt99; ++var12) {
-                                    Node_Sub21_Sub26.method1214(var1 * this.anInt99 + var12, var12 + (63 - var2) * this.anInt99, 1, var10);
+                                    DrawingArea.method1214(var1 * this.anInt99 + var12, var12 + (63 - var2) * this.anInt99, 1, var10);
                                 }
                             }
                         }
@@ -795,8 +795,8 @@ public class Class13 {
         if (var6 != null) {
             var6.method1230(var2 - var6.width / 2, var3 - var6.height / 2);
             if (var4 % var5 < var5 / 2) {
-                Node_Sub21_Sub26.method1221(var2, var3, 15, 16776960, 128);
-                Node_Sub21_Sub26.method1221(var2, var3, 7, 16777215, 256);
+                DrawingArea.method1221(var2, var3, 15, 16776960, 128);
+                DrawingArea.method1221(var2, var3, 7, 16777215, 256);
             }
 
         }
@@ -860,19 +860,19 @@ public class Class13 {
     void method94(int var1, int var2, int var3, int var4) {
         var3 %= 4;
         if (var3 == 0) {
-            Node_Sub21_Sub26.method1220(this.anInt99 * var1, (63 - var2) * this.anInt99, this.anInt99, var4);
+            DrawingArea.method1220(this.anInt99 * var1, (63 - var2) * this.anInt99, this.anInt99, var4);
         }
 
         if (var3 == 1) {
-            Node_Sub21_Sub26.method1214(var1 * this.anInt99, (63 - var2) * this.anInt99, this.anInt99, var4);
+            DrawingArea.method1214(var1 * this.anInt99, (63 - var2) * this.anInt99, this.anInt99, var4);
         }
 
         if (var3 == 2) {
-            Node_Sub21_Sub26.method1220(this.anInt99 + this.anInt99 * var1 - 1, this.anInt99 * (63 - var2), this.anInt99, var4);
+            DrawingArea.method1220(this.anInt99 + this.anInt99 * var1 - 1, this.anInt99 * (63 - var2), this.anInt99, var4);
         }
 
         if (var3 == 3) {
-            Node_Sub21_Sub26.method1214(this.anInt99 * var1, (63 - var2) * this.anInt99 + this.anInt99 - 1, this.anInt99, var4);
+            DrawingArea.method1214(this.anInt99 * var1, (63 - var2) * this.anInt99 + this.anInt99 - 1, this.anInt99, var4);
         }
 
     }
@@ -1042,7 +1042,7 @@ public class Class13 {
         int var5 = var3.aShortArrayArrayArray47[0][var1][var2] - 1;
         int var6 = var3.aShortArrayArrayArray46[0][var1][var2] - 1;
         if (var5 == -1 && var6 == -1) {
-            Node_Sub21_Sub26.method1223(this.anInt99 * var1, (63 - var2) * this.anInt99, this.anInt99, this.anInt99, this.anInt101);
+            DrawingArea.method1223(this.anInt99 * var1, (63 - var2) * this.anInt99, this.anInt99, this.anInt99, this.anInt101);
         }
 
         int var7 = 16711935;
@@ -1051,11 +1051,11 @@ public class Class13 {
         }
 
         if (var6 > -1 && var3.aByteArrayArrayArray44[0][var1][var2] == 0) {
-            Node_Sub21_Sub26.method1223(this.anInt99 * var1, (63 - var2) * this.anInt99, this.anInt99, this.anInt99, var7);
+            DrawingArea.method1223(this.anInt99 * var1, (63 - var2) * this.anInt99, this.anInt99, this.anInt99, var7);
         } else {
             int var8 = this.method121(var1, var2, var3);
             if (var6 == -1) {
-                Node_Sub21_Sub26.method1223(var1 * this.anInt99, (63 - var2) * this.anInt99, this.anInt99, this.anInt99, var8);
+                DrawingArea.method1223(var1 * this.anInt99, (63 - var2) * this.anInt99, this.anInt99, this.anInt99, var8);
             } else {
                 var4.method53(var1 * this.anInt99, (63 - var2) * this.anInt99, var8, var7, this.anInt99, this.anInt99, var3.aByteArrayArrayArray44[0][var1][var2], var3.aByteArrayArrayArray41[0][var1][var2]);
             }

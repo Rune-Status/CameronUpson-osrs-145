@@ -1,44 +1,44 @@
 package com.jagex;
 
-public class Node_Sub21_Sub26 extends DoublyNode {
+public class DrawingArea extends DoublyNode {
     public static int anInt754 = 0;
-    public static int anInt749;
+    public static int drawingAreaWidth;
     public static int anInt748;
     public static int anInt1257 = 0;
     public static int anInt753 = 0;
-    public static int[] anIntArray953;
+    public static int[] drawingAreaPixels;
     protected static int anInt745 = 0;
 
     public static void method1211(int[] var0, int var1, int var2) {
-        anIntArray953 = var0;
-        anInt749 = var1;
+        drawingAreaPixels = var0;
+        drawingAreaWidth = var1;
         anInt748 = var2;
-        method1209(0, 0, var1, var2);
+        setClip(0, 0, var1, var2);
     }
 
-    static void method1222(int var0, int var1, int var2, int var3, int var4) {
-        if (var1 >= anInt1257 && var1 < anInt753) {
-            if (var0 < anInt754) {
-                var2 -= anInt754 - var0;
-                var0 = anInt754;
+    static void method1222(int x, int y, int height, int colour, int alpha) {
+        if (y >= anInt1257 && y < anInt753) {
+            if (x < anInt754) {
+                height -= anInt754 - x;
+                x = anInt754;
             }
 
-            if (var0 + var2 > anInt745) {
-                var2 = anInt745 - var0;
+            if (x + height > anInt745) {
+                height = anInt745 - x;
             }
 
-            int var5 = 256 - var4;
-            int var6 = (var3 >> 16 & 255) * var4;
-            int var7 = (var3 >> 8 & 255) * var4;
-            int var8 = (var3 & 255) * var4;
-            int var9 = var0 + var1 * anInt749;
+            int intensity = 256 - alpha;
+            int red = (colour >> 16 & 255) * alpha;
+            int green = (colour >> 8 & 255) * alpha;
+            int blue = (colour & 255) * alpha;
+            int offset = x + y * drawingAreaWidth;
 
-            for (int var10 = 0; var10 < var2; ++var10) {
-                int var11 = (anIntArray953[var9] >> 16 & 255) * var5;
-                int var12 = (anIntArray953[var9] >> 8 & 255) * var5;
-                int var13 = (anIntArray953[var9] & 255) * var5;
-                int var14 = (var6 + var11 >> 8 << 16) + (var7 + var12 >> 8 << 8) + (var8 + var13 >> 8);
-                anIntArray953[var9++] = var14;
+            for (int var10 = 0; var10 < height; ++var10) {
+                int r = (drawingAreaPixels[offset] >> 16 & 255) * intensity;
+                int g = (drawingAreaPixels[offset] >> 8 & 255) * intensity;
+                int b = (drawingAreaPixels[offset] & 255) * intensity;
+                int rgb = (red + r >> 8 << 16) + (green + g >> 8 << 8) + (blue + b >> 8);
+                drawingAreaPixels[offset++] = rgb;
             }
 
         }
@@ -74,22 +74,22 @@ public class Node_Sub21_Sub26 extends DoublyNode {
         int var15 = var12 * var6 >> 8;
         int var16 = var13 * var6 >> 8;
         int var17 = var14 * var6 >> 8;
-        int var18 = anInt749 - var2;
-        int var19 = var0 + var1 * anInt749;
+        int var18 = drawingAreaWidth - var2;
+        int var19 = var0 + var1 * drawingAreaWidth;
 
         for (int var20 = 0; var20 < var3; ++var20) {
             int var21;
             int var22;
             int var23;
             for (var21 = -var2; var21 < 0; ++var21) {
-                var22 = anIntArray953[var19];
+                var22 = drawingAreaPixels[var19];
                 var23 = var22 & 16711680;
                 int var24 = var23 <= var12 ? var23 : (var11 == 0 ? var12 : var15 + (var23 * var11 >> 8) & 16711680);
                 int var25 = var22 & '\uff00';
                 int var26 = var25 <= var13 ? var25 : (var11 == 0 ? var13 : var16 + (var25 * var11 >> 8) & '\uff00');
                 int var27 = var22 & 255;
                 int var28 = var27 <= var14 ? var27 : (var11 == 0 ? var14 : var17 + (var27 * var11 >> 8));
-                anIntArray953[var19++] = var24 + var26 + var28;
+                drawingAreaPixels[var19++] = var24 + var26 + var28;
             }
 
             if (var9 > 0) {
@@ -147,22 +147,22 @@ public class Node_Sub21_Sub26 extends DoublyNode {
         int var15 = var12 * var6 >> 8;
         int var16 = var13 * var6 >> 8;
         int var17 = var14 * var6 >> 8;
-        int var18 = anInt749 - var2;
-        int var19 = var0 + var1 * anInt749;
+        int var18 = drawingAreaWidth - var2;
+        int var19 = var0 + var1 * drawingAreaWidth;
 
         for (int var20 = 0; var20 < var3; ++var20) {
             int var21;
             int var22;
             int var23;
             for (var21 = -var2; var21 < 0; ++var21) {
-                var22 = anIntArray953[var19];
+                var22 = drawingAreaPixels[var19];
                 var23 = var22 & 16711680;
                 int var24 = var23 >= var12 ? var23 : (var11 == 0 ? var12 : var15 + (var23 * var11 >> 8) & 16711680);
                 int var25 = var22 & '\uff00';
                 int var26 = var25 >= var13 ? var25 : (var11 == 0 ? var13 : var16 + (var25 * var11 >> 8) & '\uff00');
                 int var27 = var22 & 255;
                 int var28 = var27 >= var14 ? var27 : (var11 == 0 ? var14 : var17 + (var27 * var11 >> 8));
-                anIntArray953[var19++] = var24 + var26 + var28;
+                drawingAreaPixels[var19++] = var24 + var26 + var28;
             }
 
             if (var9 > 0) {
@@ -222,22 +222,22 @@ public class Node_Sub21_Sub26 extends DoublyNode {
             var3 = anInt753 - var1;
         }
 
-        int var13 = anInt749 - var2;
-        int var14 = var0 + var1 * anInt749;
+        int var13 = drawingAreaWidth - var2;
+        int var14 = var0 + var1 * drawingAreaWidth;
 
         for (int var15 = -var3; var15 < 0; ++var15) {
             int var16;
             int var17;
             for (var16 = -var2; var16 < 0; ++var16) {
-                var17 = anIntArray953[var14];
+                var17 = drawingAreaPixels[var14];
                 int var18 = var12 + var17;
                 int var19 = (var12 & 16711935) + (var17 & 16711935);
                 int var20 = (var19 & 16777472) + (var18 - var19 & 65536);
                 if (var11 == 0) {
-                    anIntArray953[var14++] = var18 - var20 | var20 - (var20 >>> 8);
+                    drawingAreaPixels[var14++] = var18 - var20 | var20 - (var20 >>> 8);
                 } else {
                     int var21 = var18 - var20 | var20 - (var20 >>> 8);
-                    anIntArray953[var14++] = ((var21 & 16711935) * var10 >> 8 & 16711935) + ((var21 & '\uff00') * var10 >> 8 & '\uff00') + ((var17 & 16711935) * var11 >> 8 & 16711935) + ((var17 & '\uff00') * var11 >> 8 & '\uff00');
+                    drawingAreaPixels[var14++] = ((var21 & 16711935) * var10 >> 8 & 16711935) + ((var21 & '\uff00') * var10 >> 8 & '\uff00') + ((var17 & 16711935) * var11 >> 8 & 16711935) + ((var17 & '\uff00') * var11 >> 8 & '\uff00');
                 }
             }
 
@@ -308,10 +308,10 @@ public class Node_Sub21_Sub26 extends DoublyNode {
                     var13 = anInt745;
                 }
 
-                var14 = var12 + var6 * anInt749;
+                var14 = var12 + var6 * drawingAreaWidth;
 
                 for (var15 = var12; var15 < var13; ++var15) {
-                    anIntArray953[var14++] = var3;
+                    drawingAreaPixels[var14++] = var3;
                 }
 
                 ++var6;
@@ -340,10 +340,10 @@ public class Node_Sub21_Sub26 extends DoublyNode {
                     var13 = anInt745 - 1;
                 }
 
-                var14 = var12 + var6 * anInt749;
+                var14 = var12 + var6 * drawingAreaWidth;
 
                 for (var15 = var12; var15 <= var13; ++var15) {
-                    anIntArray953[var14++] = var3;
+                    drawingAreaPixels[var14++] = var3;
                 }
 
                 ++var6;
@@ -410,14 +410,14 @@ public class Node_Sub21_Sub26 extends DoublyNode {
                         var18 = anInt745;
                     }
 
-                    var19 = var17 + var11 * anInt749;
+                    var19 = var17 + var11 * drawingAreaWidth;
 
                     for (var20 = var17; var20 < var18; ++var20) {
-                        var21 = (anIntArray953[var19] >> 16 & 255) * var5;
-                        var22 = (anIntArray953[var19] >> 8 & 255) * var5;
-                        var23 = (anIntArray953[var19] & 255) * var5;
+                        var21 = (drawingAreaPixels[var19] >> 16 & 255) * var5;
+                        var22 = (drawingAreaPixels[var19] >> 8 & 255) * var5;
+                        var23 = (drawingAreaPixels[var19] & 255) * var5;
                         var24 = (var6 + var21 >> 8 << 16) + (var7 + var22 >> 8 << 8) + (var8 + var23 >> 8);
-                        anIntArray953[var19++] = var24;
+                        drawingAreaPixels[var19++] = var24;
                     }
 
                     ++var11;
@@ -446,14 +446,14 @@ public class Node_Sub21_Sub26 extends DoublyNode {
                         var18 = anInt745 - 1;
                     }
 
-                    var19 = var17 + var11 * anInt749;
+                    var19 = var17 + var11 * drawingAreaWidth;
 
                     for (var20 = var17; var20 <= var18; ++var20) {
-                        var21 = (anIntArray953[var19] >> 16 & 255) * var5;
-                        var22 = (anIntArray953[var19] >> 8 & 255) * var5;
-                        var23 = (anIntArray953[var19] & 255) * var5;
+                        var21 = (drawingAreaPixels[var19] >> 16 & 255) * var5;
+                        var22 = (drawingAreaPixels[var19] >> 8 & 255) * var5;
+                        var23 = (drawingAreaPixels[var19] & 255) * var5;
                         var24 = (var6 + var21 >> 8 << 16) + (var7 + var22 >> 8 << 8) + (var8 + var23 >> 8);
-                        anIntArray953[var19++] = var24;
+                        drawingAreaPixels[var19++] = var24;
                     }
 
                     ++var11;
@@ -485,14 +485,14 @@ public class Node_Sub21_Sub26 extends DoublyNode {
 
         var4 = ((var4 & 16711935) * var5 >> 8 & 16711935) + ((var4 & '\uff00') * var5 >> 8 & '\uff00');
         int var6 = 256 - var5;
-        int var7 = anInt749 - var2;
-        int var8 = var0 + var1 * anInt749;
+        int var7 = drawingAreaWidth - var2;
+        int var8 = var0 + var1 * drawingAreaWidth;
 
         for (int var9 = 0; var9 < var3; ++var9) {
             for (int var10 = -var2; var10 < 0; ++var10) {
-                int var11 = anIntArray953[var8];
+                int var11 = drawingAreaPixels[var8];
                 var11 = ((var11 & 16711935) * var6 >> 8 & 16711935) + ((var11 & '\uff00') * var6 >> 8 & '\uff00');
-                anIntArray953[var8++] = var4 + var11;
+                drawingAreaPixels[var8++] = var4 + var11;
             }
 
             var8 += var7;
@@ -519,12 +519,12 @@ public class Node_Sub21_Sub26 extends DoublyNode {
             var3 = anInt753 - var1;
         }
 
-        int var5 = anInt749 - var2;
-        int var6 = var0 + var1 * anInt749;
+        int var5 = drawingAreaWidth - var2;
+        int var6 = var0 + var1 * drawingAreaWidth;
 
         for (int var7 = -var3; var7 < 0; ++var7) {
             for (int var8 = -var2; var8 < 0; ++var8) {
-                anIntArray953[var6++] = var4;
+                drawingAreaPixels[var6++] = var4;
             }
 
             var6 += var5;
@@ -536,17 +536,17 @@ public class Node_Sub21_Sub26 extends DoublyNode {
         int var0 = 0;
 
         int var1;
-        for (var1 = anInt749 * anInt748 - 7; var0 < var1; anIntArray953[var0++] = 0) {
-            anIntArray953[var0++] = 0;
-            anIntArray953[var0++] = 0;
-            anIntArray953[var0++] = 0;
-            anIntArray953[var0++] = 0;
-            anIntArray953[var0++] = 0;
-            anIntArray953[var0++] = 0;
-            anIntArray953[var0++] = 0;
+        for (var1 = drawingAreaWidth * anInt748 - 7; var0 < var1; drawingAreaPixels[var0++] = 0) {
+            drawingAreaPixels[var0++] = 0;
+            drawingAreaPixels[var0++] = 0;
+            drawingAreaPixels[var0++] = 0;
+            drawingAreaPixels[var0++] = 0;
+            drawingAreaPixels[var0++] = 0;
+            drawingAreaPixels[var0++] = 0;
+            drawingAreaPixels[var0++] = 0;
         }
 
-        for (var1 += 7; var0 < var1; anIntArray953[var0++] = 0) {
+        for (var1 += 7; var0 < var1; drawingAreaPixels[var0++] = 0) {
         }
 
     }
@@ -573,8 +573,8 @@ public class Node_Sub21_Sub26 extends DoublyNode {
             var3 = anInt753 - var1;
         }
 
-        int var8 = anInt749 - var2;
-        int var9 = var0 + var1 * anInt749;
+        int var8 = drawingAreaWidth - var2;
+        int var9 = var0 + var1 * drawingAreaWidth;
 
         for (int var10 = -var3; var10 < 0; ++var10) {
             int var11 = 65536 - var6 >> 8;
@@ -582,7 +582,7 @@ public class Node_Sub21_Sub26 extends DoublyNode {
             int var13 = ((var4 & 16711935) * var11 + (var5 & 16711935) * var12 & -16711936) + ((var4 & '\uff00') * var11 + (var5 & '\uff00') * var12 & 16711680) >>> 8;
 
             for (int var14 = -var2; var14 < 0; ++var14) {
-                anIntArray953[var9++] = var13;
+                drawingAreaPixels[var9++] = var13;
             }
 
             var9 += var8;
@@ -593,7 +593,7 @@ public class Node_Sub21_Sub26 extends DoublyNode {
 
     public static void method1204(int var0, int var1, int var2, int var3, int var4, int var5, byte[] var6, int var7) {
         if (var0 + var2 >= 0 && var1 + var3 >= 0) {
-            if (var0 < anInt749 && var1 < anInt748) {
+            if (var0 < drawingAreaWidth && var1 < anInt748) {
                 int var8 = 0;
                 int var9 = 0;
                 if (var0 < 0) {
@@ -606,8 +606,8 @@ public class Node_Sub21_Sub26 extends DoublyNode {
                     var3 += var1;
                 }
 
-                if (var0 + var2 > anInt749) {
-                    var2 = anInt749 - var0;
+                if (var0 + var2 > drawingAreaWidth) {
+                    var2 = drawingAreaWidth - var0;
                 }
 
                 if (var1 + var3 > anInt748) {
@@ -615,7 +615,7 @@ public class Node_Sub21_Sub26 extends DoublyNode {
                 }
 
                 int var10 = var6.length / var7;
-                int var11 = anInt749 - var2;
+                int var11 = drawingAreaWidth - var2;
                 int var12 = var4 >>> 24;
                 int var13 = var5 >>> 24;
                 int var14;
@@ -624,23 +624,23 @@ public class Node_Sub21_Sub26 extends DoublyNode {
                 int var17;
                 int var18;
                 if (var12 == 255 && var13 == 255) {
-                    var14 = (var1 + var9) * anInt749 + var0 + var8;
+                    var14 = (var1 + var9) * drawingAreaWidth + var0 + var8;
 
                     for (var15 = var1 + var9; var15 < var1 + var9 + var3; ++var15) {
                         for (var16 = var0 + var8; var16 < var0 + var8 + var2; ++var16) {
                             var17 = (var15 - var1) % var10;
                             var18 = (var16 - var0) % var7;
                             if (var6[var17 * var7 + var18] != 0) {
-                                anIntArray953[var14++] = var5;
+                                drawingAreaPixels[var14++] = var5;
                             } else {
-                                anIntArray953[var14++] = var4;
+                                drawingAreaPixels[var14++] = var4;
                             }
                         }
 
                         var14 += var11;
                     }
                 } else {
-                    var14 = (var1 + var9) * anInt749 + var0 + var8;
+                    var14 = (var1 + var9) * drawingAreaWidth + var0 + var8;
 
                     for (var15 = var1 + var9; var15 < var1 + var9 + var3; ++var15) {
                         for (var16 = var0 + var8; var16 < var0 + var8 + var2; ++var16) {
@@ -653,9 +653,9 @@ public class Node_Sub21_Sub26 extends DoublyNode {
 
                             int var20 = var19 >>> 24;
                             int var21 = 255 - var20;
-                            int var22 = anIntArray953[var14];
+                            int var22 = drawingAreaPixels[var14];
                             int var23 = ((var19 & 16711935) * var20 + (var22 & 16711935) * var21 & -16711936) + ((var19 & '\uff00') * var20 + (var22 & '\uff00') * var21 & 16711680) >> 8;
-                            anIntArray953[var14++] = var23;
+                            drawingAreaPixels[var14++] = var23;
                         }
 
                         var14 += var11;
@@ -666,7 +666,7 @@ public class Node_Sub21_Sub26 extends DoublyNode {
         }
     }
 
-    public static void method1209(int var0, int var1, int var2, int var3) {
+    public static void setClip(int var0, int var1, int var2, int var3) {
         if (var0 < 0) {
             var0 = 0;
         }
@@ -675,8 +675,8 @@ public class Node_Sub21_Sub26 extends DoublyNode {
             var1 = 0;
         }
 
-        if (var2 > anInt749) {
-            var2 = anInt749;
+        if (var2 > drawingAreaWidth) {
+            var2 = drawingAreaWidth;
         }
 
         if (var3 > anInt748) {
@@ -700,10 +700,10 @@ public class Node_Sub21_Sub26 extends DoublyNode {
                 var2 = anInt745 - var0;
             }
 
-            int var4 = var0 + var1 * anInt749;
+            int var4 = var0 + var1 * drawingAreaWidth;
 
             for (int var5 = 0; var5 < var2; ++var5) {
-                anIntArray953[var4 + var5] = var3;
+                drawingAreaPixels[var4 + var5] = var3;
             }
 
         }
@@ -720,10 +720,10 @@ public class Node_Sub21_Sub26 extends DoublyNode {
                 var2 = anInt753 - var1;
             }
 
-            int var4 = var0 + var1 * anInt749;
+            int var4 = var0 + var1 * drawingAreaWidth;
 
             for (int var5 = 0; var5 < var2; ++var5) {
-                anIntArray953[var4 + var5 * anInt749] = var3;
+                drawingAreaPixels[var4 + var5 * drawingAreaWidth] = var3;
             }
 
         }
@@ -744,15 +744,15 @@ public class Node_Sub21_Sub26 extends DoublyNode {
             int var6 = (var3 >> 16 & 255) * var4;
             int var7 = (var3 >> 8 & 255) * var4;
             int var8 = (var3 & 255) * var4;
-            int var9 = var0 + var1 * anInt749;
+            int var9 = var0 + var1 * drawingAreaWidth;
 
             for (int var10 = 0; var10 < var2; ++var10) {
-                int var11 = (anIntArray953[var9] >> 16 & 255) * var5;
-                int var12 = (anIntArray953[var9] >> 8 & 255) * var5;
-                int var13 = (anIntArray953[var9] & 255) * var5;
+                int var11 = (drawingAreaPixels[var9] >> 16 & 255) * var5;
+                int var12 = (drawingAreaPixels[var9] >> 8 & 255) * var5;
+                int var13 = (drawingAreaPixels[var9] & 255) * var5;
                 int var14 = (var6 + var11 >> 8 << 16) + (var7 + var12 >> 8 << 8) + (var8 + var13 >> 8);
-                anIntArray953[var9] = var14;
-                var9 += anInt749;
+                drawingAreaPixels[var9] = var14;
+                var9 += drawingAreaWidth;
             }
 
         }
@@ -803,7 +803,7 @@ public class Node_Sub21_Sub26 extends DoublyNode {
                 while (var0 <= var2) {
                     var6 = var1 >> 16;
                     if (var6 >= anInt1257 && var6 < anInt753) {
-                        anIntArray953[var0 + var6 * anInt749] = var4;
+                        drawingAreaPixels[var0 + var6 * drawingAreaWidth] = var4;
                     }
 
                     var1 += var5;
@@ -827,7 +827,7 @@ public class Node_Sub21_Sub26 extends DoublyNode {
                 while (var1 <= var3) {
                     var6 = var0 >> 16;
                     if (var6 >= anInt754 && var6 < anInt745) {
-                        anIntArray953[var6 + var1 * anInt749] = var4;
+                        drawingAreaPixels[var6 + var1 * drawingAreaWidth] = var4;
                     }
 
                     var0 += var5;
@@ -840,21 +840,21 @@ public class Node_Sub21_Sub26 extends DoublyNode {
 
     static void method1224(int var0, int var1, int var2) {
         if (var0 >= anInt754 && var1 >= anInt1257 && var0 < anInt745 && var1 < anInt753) {
-            anIntArray953[var0 + var1 * anInt749] = var2;
+            drawingAreaPixels[var0 + var1 * drawingAreaWidth] = var2;
         }
     }
 
     public static void method1225(int var0, int var1, int var2, int[] var3, int[] var4) {
-        int var5 = var0 + var1 * anInt749;
+        int var5 = var0 + var1 * drawingAreaWidth;
 
         for (var1 = 0; var1 < var3.length; ++var1) {
             int var6 = var5 + var3[var1];
 
             for (var0 = -var4[var1]; var0 < 0; ++var0) {
-                anIntArray953[var6++] = var2;
+                drawingAreaPixels[var6++] = var2;
             }
 
-            var5 += anInt749;
+            var5 += drawingAreaWidth;
         }
 
     }
@@ -915,15 +915,15 @@ public class Node_Sub21_Sub26 extends DoublyNode {
         int var12 = var4 >> 16;
         int var13 = (var4 & '\uff00') >> 8;
         int var14 = var4 & 255;
-        int var15 = anInt749 - var2;
-        int var16 = var0 + var1 * anInt749;
+        int var15 = drawingAreaWidth - var2;
+        int var16 = var0 + var1 * drawingAreaWidth;
 
         for (int var17 = 0; var17 < var3; ++var17) {
             int var18;
             int var19;
             int var20;
             for (var18 = -var2; var18 < 0; ++var18) {
-                var19 = anIntArray953[var16];
+                var19 = drawingAreaPixels[var16];
                 var20 = var19 >> 16;
                 int var21 = (var19 & '\uff00') >> 8;
                 int var22 = var19 & 255;
@@ -940,7 +940,7 @@ public class Node_Sub21_Sub26 extends DoublyNode {
                     var25 = var22 < 127 ? (var14 * var22 * var10 >> 7) + var22 * var11 >> 8 : (255 - ((255 - var14) * (255 - var22) >> 7)) * var10 + var22 * var11 >> 8;
                 }
 
-                anIntArray953[var16++] = (var23 << 16) + (var24 << 8) + var25;
+                drawingAreaPixels[var16++] = (var23 << 16) + (var24 << 8) + var25;
             }
 
             if (var9 > 0) {
@@ -968,7 +968,7 @@ public class Node_Sub21_Sub26 extends DoublyNode {
     public static void method1206() {
         anInt754 = 0;
         anInt1257 = 0;
-        anInt745 = anInt749;
+        anInt745 = drawingAreaWidth;
         anInt753 = anInt748;
     }
 

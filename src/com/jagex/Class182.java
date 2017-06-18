@@ -14,7 +14,7 @@ public class Class182 {
         ScriptEvent.method273();
         Node_Sub21_Sub5 var4 = var0.method1025(false);
         if (var4 != null) {
-            Node_Sub21_Sub26.method1209(var1, var2, var1 + var4.anInt204, var2 + var4.anInt209);
+            DrawingArea.setClip(var1, var2, var1 + var4.anInt204, var2 + var4.anInt209);
             if (Client.anInt1698 != 2 && Client.anInt1698 != 5) {
                 int var5 = Client.mapRotation + Client.mapScale & 2047;
                 int var6 = Client.player.strictX / 32 + 48;
@@ -131,10 +131,10 @@ public class Class182 {
                 }
 
                 if (!Client.player.aBoolean215) {
-                    Node_Sub21_Sub26.method1223(var1 + var4.anInt204 / 2 - 1, var4.anInt209 / 2 + var2 - 1, 3, 3, 16777215);
+                    DrawingArea.method1223(var1 + var4.anInt204 / 2 - 1, var4.anInt209 / 2 + var2 - 1, 3, 3, 16777215);
                 }
             } else {
-                Node_Sub21_Sub26.method1225(var1, var2, 0, var4.anIntArray950, var4.anIntArray340);
+                DrawingArea.method1225(var1, var2, 0, var4.anIntArray950, var4.anIntArray340);
             }
 
             Client.aBooleanArray1674[var3] = true;

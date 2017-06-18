@@ -45,9 +45,9 @@ public class Class25 {
         int var2 = Class108.anInt1299;
         int var3 = Class3.anInt16;
         int var4 = 6116423;
-        Node_Sub21_Sub26.method1223(var0, var1, var2, var3, var4);
-        Node_Sub21_Sub26.method1223(var0 + 1, var1 + 1, var2 - 2, 16, 0);
-        Node_Sub21_Sub26.method1208(var0 + 1, var1 + 18, var2 - 2, var3 - 19, 0);
+        DrawingArea.method1223(var0, var1, var2, var3, var4);
+        DrawingArea.method1223(var0 + 1, var1 + 1, var2 - 2, 16, 0);
+        DrawingArea.method1208(var0 + 1, var1 + 18, var2 - 2, var3 - 19, 0);
         Class35.aFont313.method1170("Choose Option", var0 + 3, var1 + 14, var4, -1);
         int var5 = Class33.anInt261;
         int var6 = Class33.anInt260;

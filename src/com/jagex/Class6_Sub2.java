@@ -70,8 +70,8 @@ public class Class6_Sub2 extends Class6 {
             int var14 = var12 * var5 + 1 >> 17;
             int var15 = var5 * var11 >> 17;
             int var16 = var5 * var11 + 1 >> 17;
-            var0 -= Node_Sub21_Sub26.anInt754;
-            var1 -= Node_Sub21_Sub26.anInt1257;
+            var0 -= DrawingArea.anInt754;
+            var1 -= DrawingArea.anInt1257;
             int var17 = var0 + var13;
             int var18 = var0 - var14;
             int var19 = var0 + var6 - var14;

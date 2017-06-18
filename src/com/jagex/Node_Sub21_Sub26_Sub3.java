@@ -2,7 +2,7 @@ package com.jagex;
 
 import java.util.Random;
 
-public abstract class Node_Sub21_Sub26_Sub3 extends Node_Sub21_Sub26 {
+public abstract class Node_Sub21_Sub26_Sub3 extends DrawingArea {
     public static Node_Sub21_Sub26_Sub2[] aNode_Sub21_Sub26_Sub2Array2131;
     static int anInt235 = 0;
     static String[] aStringArray2132 = new String[100];
@@ -163,8 +163,8 @@ public abstract class Node_Sub21_Sub26_Sub3 extends Node_Sub21_Sub26 {
     }
 
     static void method1173(byte[] var0, int var1, int var2, int var3, int var4, int var5, int var6) {
-        int var7 = var1 + var2 * anInt749;
-        int var8 = anInt749 - var3;
+        int var7 = var1 + var2 * drawingAreaWidth;
+        int var8 = drawingAreaWidth - var3;
         int var9 = 0;
         int var10 = 0;
         int var11;
@@ -173,7 +173,7 @@ public abstract class Node_Sub21_Sub26_Sub3 extends Node_Sub21_Sub26 {
             var4 -= var11;
             var2 = anInt1257;
             var10 += var11 * var3;
-            var7 += var11 * anInt749;
+            var7 += var11 * drawingAreaWidth;
         }
 
         if (var2 + var4 > anInt753) {
@@ -198,7 +198,7 @@ public abstract class Node_Sub21_Sub26_Sub3 extends Node_Sub21_Sub26 {
         }
 
         if (var3 > 0 && var4 > 0) {
-            method1162(anIntArray953, var0, var5, var10, var7, var3, var4, var8, var9, var6);
+            method1162(drawingAreaPixels, var0, var5, var10, var7, var3, var4, var8, var9, var6);
         }
     }
 
@@ -223,8 +223,8 @@ public abstract class Node_Sub21_Sub26_Sub3 extends Node_Sub21_Sub26 {
     }
 
     static void method1171(byte[] var0, int var1, int var2, int var3, int var4, int var5) {
-        int var6 = var1 + var2 * anInt749;
-        int var7 = anInt749 - var3;
+        int var6 = var1 + var2 * drawingAreaWidth;
+        int var7 = drawingAreaWidth - var3;
         int var8 = 0;
         int var9 = 0;
         int var10;
@@ -233,7 +233,7 @@ public abstract class Node_Sub21_Sub26_Sub3 extends Node_Sub21_Sub26 {
             var4 -= var10;
             var2 = anInt1257;
             var9 += var10 * var3;
-            var6 += var10 * anInt749;
+            var6 += var10 * drawingAreaWidth;
         }
 
         if (var2 + var4 > anInt753) {
@@ -258,7 +258,7 @@ public abstract class Node_Sub21_Sub26_Sub3 extends Node_Sub21_Sub26 {
         }
 
         if (var3 > 0 && var4 > 0) {
-            method1175(anIntArray953, var0, var5, var9, var6, var3, var4, var7, var8);
+            method1175(drawingAreaPixels, var0, var5, var9, var6, var3, var4, var7, var8);
         }
     }
 

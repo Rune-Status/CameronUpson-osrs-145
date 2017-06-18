@@ -465,14 +465,14 @@ public class Key implements EnumOrdinal, Class187 {
             }
         }
 
-        int[] var14 = Node_Sub21_Sub26.anIntArray953;
-        int var15 = Node_Sub21_Sub26.anInt749;
-        int var16 = Node_Sub21_Sub26.anInt748;
+        int[] var14 = DrawingArea.drawingAreaPixels;
+        int var15 = DrawingArea.drawingAreaWidth;
+        int var16 = DrawingArea.anInt748;
         int[] var17 = new int[4];
-        Node_Sub21_Sub26.method1207(var17);
+        DrawingArea.method1207(var17);
         var8 = new Sprite(36, 32);
-        Node_Sub21_Sub26.method1211(var8.pixels, 36, 32);
-        Node_Sub21_Sub26.method1218();
+        DrawingArea.method1211(var8.pixels, 36, 32);
+        DrawingArea.method1218();
         Node_Sub21_Sub26_Sub1.method308();
         Node_Sub21_Sub26_Sub1.method641(16, 16);
         Node_Sub21_Sub26_Sub1.aBoolean1084 = false;
@@ -507,7 +507,7 @@ public class Key implements EnumOrdinal, Class187 {
             var8.method1240(var3);
         }
 
-        Node_Sub21_Sub26.method1211(var8.pixels, 36, 32);
+        DrawingArea.method1211(var8.pixels, 36, 32);
         if (var9.anInt1864 != -1) {
             var13.method1230(0, 0);
         }
@@ -520,8 +520,8 @@ public class Key implements EnumOrdinal, Class187 {
             ItemDefinition.aReferenceCache1891.put(var8, var6);
         }
 
-        Node_Sub21_Sub26.method1211(var14, var15, var16);
-        Node_Sub21_Sub26.method1213(var17);
+        DrawingArea.method1211(var14, var15, var16);
+        DrawingArea.method1213(var17);
         Node_Sub21_Sub26_Sub1.method308();
         Node_Sub21_Sub26_Sub1.aBoolean1084 = true;
         return var8;

@@ -1,6 +1,6 @@
 package com.jagex;
 
-public final class Sprite extends Node_Sub21_Sub26 {
+public final class Sprite extends DrawingArea {
     public int width;
     public int height;
     public int[] pixels;
@@ -307,11 +307,11 @@ public final class Sprite extends Node_Sub21_Sub26 {
     public void method1236(int var1, int var2, int var3, int var4) {
         var1 += this.anInt232;
         var2 += this.anInt327;
-        int var5 = var1 + var2 * anInt749;
+        int var5 = var1 + var2 * drawingAreaWidth;
         int var6 = 0;
         int var7 = this.height;
         int var8 = this.width;
-        int var9 = anInt749 - var8;
+        int var9 = drawingAreaWidth - var8;
         int var10 = 0;
         int var11;
         if (var2 < anInt1257) {
@@ -319,7 +319,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
             var7 -= var11;
             var2 = anInt1257;
             var6 += var11 * var8;
-            var5 += var11 * anInt749;
+            var5 += var11 * drawingAreaWidth;
         }
 
         if (var2 + var7 > anInt753) {
@@ -344,7 +344,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
         }
 
         if (var8 > 0 && var7 > 0) {
-            method1243(anIntArray953, this.pixels, 0, var6, var5, var8, var7, var9, var10, var3, var4);
+            method1243(drawingAreaPixels, this.pixels, 0, var6, var5, var8, var7, var9, var10, var3, var4);
         }
     }
 
@@ -358,7 +358,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
             var14 = var14 * var8 >> 8;
             int var15 = (var5 << 16) + var12 * var13 + var11 * var14;
             int var16 = (var6 << 16) + (var12 * var14 - var11 * var13);
-            int var17 = var1 + var2 * anInt749;
+            int var17 = var1 + var2 * drawingAreaWidth;
 
             for (var2 = 0; var2 < var4; ++var2) {
                 int var18 = var9[var2];
@@ -367,14 +367,14 @@ public final class Sprite extends Node_Sub21_Sub26 {
                 int var21 = var16 - var13 * var18;
 
                 for (var1 = -var10[var2]; var1 < 0; ++var1) {
-                    anIntArray953[var19++] = this.pixels[(var20 >> 16) + (var21 >> 16) * this.width];
+                    drawingAreaPixels[var19++] = this.pixels[(var20 >> 16) + (var21 >> 16) * this.width];
                     var20 += var14;
                     var21 -= var13;
                 }
 
                 var15 += var13;
                 var16 += var14;
-                var17 += anInt749;
+                var17 += drawingAreaWidth;
             }
         } catch (Exception var23) {
         }
@@ -410,11 +410,11 @@ public final class Sprite extends Node_Sub21_Sub26 {
     public void method1242(int var1, int var2) {
         var1 += this.anInt232;
         var2 += this.anInt327;
-        int var3 = var1 + var2 * anInt749;
+        int var3 = var1 + var2 * drawingAreaWidth;
         int var4 = 0;
         int var5 = this.height;
         int var6 = this.width;
-        int var7 = anInt749 - var6;
+        int var7 = drawingAreaWidth - var6;
         int var8 = 0;
         int var9;
         if (var2 < anInt1257) {
@@ -422,7 +422,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
             var5 -= var9;
             var2 = anInt1257;
             var4 += var9 * var6;
-            var3 += var9 * anInt749;
+            var3 += var9 * drawingAreaWidth;
         }
 
         if (var2 + var5 > anInt753) {
@@ -447,18 +447,18 @@ public final class Sprite extends Node_Sub21_Sub26 {
         }
 
         if (var6 > 0 && var5 > 0) {
-            method1239(anIntArray953, this.pixels, var4, var3, var6, var5, var7, var8);
+            method1239(drawingAreaPixels, this.pixels, var4, var3, var6, var5, var7, var8);
         }
     }
 
     public void method1230(int var1, int var2) {
         var1 += this.anInt232;
         var2 += this.anInt327;
-        int var3 = var1 + var2 * anInt749;
+        int var3 = var1 + var2 * drawingAreaWidth;
         int var4 = 0;
         int var5 = this.height;
         int var6 = this.width;
-        int var7 = anInt749 - var6;
+        int var7 = drawingAreaWidth - var6;
         int var8 = 0;
         int var9;
         if (var2 < anInt1257) {
@@ -466,7 +466,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
             var5 -= var9;
             var2 = anInt1257;
             var4 += var9 * var6;
-            var3 += var9 * anInt749;
+            var3 += var9 * drawingAreaWidth;
         }
 
         if (var2 + var5 > anInt753) {
@@ -491,7 +491,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
         }
 
         if (var6 > 0 && var5 > 0) {
-            method1235(anIntArray953, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+            method1235(drawingAreaPixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
         }
     }
 
@@ -598,7 +598,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
             if (var20 < 0) {
                 var22 = var21 - var22;
                 if (var22 < 0) {
-                    int var23 = var21 * anInt749 + var19;
+                    int var23 = var21 * drawingAreaWidth + var19;
                     double var24 = 1.6777216E7D / (double) var6;
                     int var26 = (int) Math.floor(Math.sin(var7) * var24 + 0.5D);
                     int var27 = (int) Math.floor(Math.cos(var7) * var24 + 0.5D);
@@ -615,7 +615,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                     int var38;
                     if (var27 == 0) {
                         if (var26 == 0) {
-                            for (var32 = var22; var32 < 0; var23 += anInt749) {
+                            for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
                                 var33 = var23;
                                 var34 = var30;
                                 var35 = var31;
@@ -624,7 +624,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                                     for (; var36 < 0; ++var36) {
                                         var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                         if (var38 != 0) {
-                                            anIntArray953[var33++] = var38;
+                                            drawingAreaPixels[var33++] = var38;
                                         } else {
                                             ++var33;
                                         }
@@ -634,7 +634,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                                 ++var32;
                             }
                         } else if (var26 < 0) {
-                            for (var32 = var22; var32 < 0; var23 += anInt749) {
+                            for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
                                 var33 = var23;
                                 var34 = var30;
                                 var35 = var31 + (var28 * var26 >> 4);
@@ -654,7 +654,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                                     while (var36 < 0) {
                                         var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                         if (var38 != 0) {
-                                            anIntArray953[var33++] = var38;
+                                            drawingAreaPixels[var33++] = var38;
                                         } else {
                                             ++var33;
                                         }
@@ -668,7 +668,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                                 var30 -= var26;
                             }
                         } else {
-                            for (var32 = var22; var32 < 0; var23 += anInt749) {
+                            for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
                                 var33 = var23;
                                 var34 = var30;
                                 var35 = var31 + (var28 * var26 >> 4);
@@ -688,7 +688,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                                     while (var36 < 0) {
                                         var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                         if (var38 != 0) {
-                                            anIntArray953[var33++] = var38;
+                                            drawingAreaPixels[var33++] = var38;
                                         } else {
                                             ++var33;
                                         }
@@ -704,7 +704,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                         }
                     } else if (var27 < 0) {
                         if (var26 == 0) {
-                            for (var32 = var22; var32 < 0; var23 += anInt749) {
+                            for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
                                 var33 = var23;
                                 var34 = var30 + (var28 * var27 >> 4);
                                 var35 = var31;
@@ -724,7 +724,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                                     while (var36 < 0) {
                                         var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                         if (var38 != 0) {
-                                            anIntArray953[var33++] = var38;
+                                            drawingAreaPixels[var33++] = var38;
                                         } else {
                                             ++var33;
                                         }
@@ -738,7 +738,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                                 var31 += var27;
                             }
                         } else if (var26 < 0) {
-                            for (var32 = var22; var32 < 0; var23 += anInt749) {
+                            for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
                                 var33 = var23;
                                 var34 = var30 + (var28 * var27 >> 4);
                                 var35 = var31 + (var28 * var26 >> 4);
@@ -770,7 +770,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                                 while (var36 < 0) {
                                     var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                     if (var38 != 0) {
-                                        anIntArray953[var33++] = var38;
+                                        drawingAreaPixels[var33++] = var38;
                                     } else {
                                         ++var33;
                                     }
@@ -785,7 +785,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                                 var31 += var27;
                             }
                         } else {
-                            for (var32 = var22; var32 < 0; var23 += anInt749) {
+                            for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
                                 var33 = var23;
                                 var34 = var30 + (var28 * var27 >> 4);
                                 var35 = var31 + (var28 * var26 >> 4);
@@ -817,7 +817,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                                 while (var36 < 0) {
                                     var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                     if (var38 != 0) {
-                                        anIntArray953[var33++] = var38;
+                                        drawingAreaPixels[var33++] = var38;
                                     } else {
                                         ++var33;
                                     }
@@ -833,7 +833,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                             }
                         }
                     } else if (var26 == 0) {
-                        for (var32 = var22; var32 < 0; var23 += anInt749) {
+                        for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
                             var33 = var23;
                             var34 = var30 + (var28 * var27 >> 4);
                             var35 = var31;
@@ -853,7 +853,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                                 while (var36 < 0) {
                                     var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                     if (var38 != 0) {
-                                        anIntArray953[var33++] = var38;
+                                        drawingAreaPixels[var33++] = var38;
                                     } else {
                                         ++var33;
                                     }
@@ -867,7 +867,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                             var31 += var27;
                         }
                     } else if (var26 < 0) {
-                        for (var32 = var22; var32 < 0; var23 += anInt749) {
+                        for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
                             var33 = var23;
                             var34 = var30 + (var28 * var27 >> 4);
                             var35 = var31 + (var28 * var26 >> 4);
@@ -899,7 +899,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                             while (var36 < 0) {
                                 var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                 if (var38 != 0) {
-                                    anIntArray953[var33++] = var38;
+                                    drawingAreaPixels[var33++] = var38;
                                 } else {
                                     ++var33;
                                 }
@@ -914,7 +914,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                             var31 += var27;
                         }
                     } else {
-                        for (var32 = var22; var32 < 0; var23 += anInt749) {
+                        for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
                             var33 = var23;
                             var34 = var30 + (var28 * var27 >> 4);
                             var35 = var31 + (var28 * var26 >> 4);
@@ -946,7 +946,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                             while (var36 < 0) {
                                 var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                 if (var38 != 0) {
-                                    anIntArray953[var33++] = var38;
+                                    drawingAreaPixels[var33++] = var38;
                                 } else {
                                     ++var33;
                                 }
@@ -970,11 +970,11 @@ public final class Sprite extends Node_Sub21_Sub26 {
     public void method1237(int var1, int var2, int var3) {
         var1 += this.anInt232;
         var2 += this.anInt327;
-        int var4 = var1 + var2 * anInt749;
+        int var4 = var1 + var2 * drawingAreaWidth;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
-        int var8 = anInt749 - var7;
+        int var8 = drawingAreaWidth - var7;
         int var9 = 0;
         int var10;
         if (var2 < anInt1257) {
@@ -982,7 +982,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
             var6 -= var10;
             var2 = anInt1257;
             var5 += var10 * var7;
-            var4 += var10 * anInt749;
+            var4 += var10 * drawingAreaWidth;
         }
 
         if (var2 + var6 > anInt753) {
@@ -1007,7 +1007,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
         }
 
         if (var7 > 0 && var6 > 0) {
-            method1233(anIntArray953, this.pixels, 0, var5, var4, var7, var6, var8, var9, var3);
+            method1233(drawingAreaPixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, var3);
         }
     }
 
@@ -1042,8 +1042,8 @@ public final class Sprite extends Node_Sub21_Sub26 {
                 var4 = ((var6 << 16) - var8 + var12 - 1) / var12;
             }
 
-            var13 = var1 + var2 * anInt749;
-            int var14 = anInt749 - var3;
+            var13 = var1 + var2 * drawingAreaWidth;
+            int var14 = drawingAreaWidth - var3;
             if (var2 + var4 > anInt753) {
                 var4 -= var2 + var4 - anInt753;
             }
@@ -1052,7 +1052,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
             if (var2 < anInt1257) {
                 var15 = anInt1257 - var2;
                 var4 -= var15;
-                var13 += var15 * anInt749;
+                var13 += var15 * drawingAreaWidth;
                 var8 += var12 * var15;
             }
 
@@ -1070,7 +1070,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                 var14 += var15;
             }
 
-            method1244(anIntArray953, this.pixels, 0, var7, var8, var13, var14, var3, var4, var11, var12, var5);
+            method1244(drawingAreaPixels, this.pixels, 0, var7, var8, var13, var14, var3, var4, var11, var12, var5);
         }
     }
 
@@ -1097,9 +1097,9 @@ public final class Sprite extends Node_Sub21_Sub26 {
             }
 
             if (var5 < var6 && var7 < var8) {
-                int var9 = var7 * anInt749 + var5;
-                int var10 = anInt749 - (var6 - var5);
-                if (var9 < anIntArray953.length) {
+                int var9 = var7 * drawingAreaWidth + var5;
+                int var10 = drawingAreaWidth - (var6 - var5);
+                if (var9 < drawingAreaPixels.length) {
                     for (int var11 = var7; var11 < var8; ++var11) {
                         for (int var12 = var5; var12 < var6; ++var12) {
                             int var13 = var12 - var1 << 4;
@@ -1178,7 +1178,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                                         var28 = 1;
                                     }
 
-                                    anIntArray953[var9] = var28;
+                                    drawingAreaPixels[var9] = var28;
                                 }
 
                                 ++var9;
@@ -1220,7 +1220,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
             var10000 = var5 - var1;
         }
 
-        int var13 = var3 + var1 + var11 + (var4 + var2 + var9) * anInt749;
+        int var13 = var3 + var1 + var11 + (var4 + var2 + var9) * drawingAreaWidth;
         int var14 = var2 + var9;
 
         for (int var15 = var9; var15 < var10; ++var15) {
@@ -1245,13 +1245,13 @@ public final class Sprite extends Node_Sub21_Sub26 {
             for (int var20 = var19; var20 < var12; ++var20) {
                 int var21 = this.pixels[var20 + var15 * this.width];
                 if (var21 != 0) {
-                    anIntArray953[var18++] = var21;
+                    drawingAreaPixels[var18++] = var21;
                 } else {
                     ++var18;
                 }
             }
 
-            var13 += anInt749;
+            var13 += drawingAreaWidth;
         }
 
     }
@@ -1266,7 +1266,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
             var13 = var13 * var9 >> 8;
             int var14 = (var5 << 16) + var11 * var12 + var10 * var13;
             int var15 = (var6 << 16) + (var11 * var13 - var10 * var12);
-            int var16 = var1 + var2 * anInt749;
+            int var16 = var1 + var2 * drawingAreaWidth;
 
             for (var2 = 0; var2 < var4; ++var2) {
                 int var17 = var16;
@@ -1276,7 +1276,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                 for (var1 = -var3; var1 < 0; ++var1) {
                     int var20 = this.pixels[(var18 >> 16) + (var19 >> 16) * this.width];
                     if (var20 != 0) {
-                        anIntArray953[var17++] = var20;
+                        drawingAreaPixels[var17++] = var20;
                     } else {
                         ++var17;
                     }
@@ -1287,7 +1287,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
 
                 var14 += var12;
                 var15 += var13;
-                var16 += anInt749;
+                var16 += drawingAreaWidth;
             }
         } catch (Exception var22) {
         }
@@ -1325,8 +1325,8 @@ public final class Sprite extends Node_Sub21_Sub26 {
                 var4 = ((var7 << 16) - var9 + var13 - 1) / var13;
             }
 
-            var14 = var1 + var2 * anInt749;
-            int var15 = anInt749 - var3;
+            var14 = var1 + var2 * drawingAreaWidth;
+            int var15 = drawingAreaWidth - var3;
             if (var2 + var4 > anInt753) {
                 var4 -= var2 + var4 - anInt753;
             }
@@ -1335,7 +1335,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
             if (var2 < anInt1257) {
                 var16 = anInt1257 - var2;
                 var4 -= var16;
-                var14 += var16 * anInt749;
+                var14 += var16 * drawingAreaWidth;
                 var9 += var13 * var16;
             }
 
@@ -1353,7 +1353,7 @@ public final class Sprite extends Node_Sub21_Sub26 {
                 var15 += var16;
             }
 
-            method1231(anIntArray953, this.pixels, 0, var8, var9, var14, var15, var3, var4, var12, var13, var6, var5);
+            method1231(drawingAreaPixels, this.pixels, 0, var8, var9, var14, var15, var3, var4, var12, var13, var6, var5);
         }
     }
 }

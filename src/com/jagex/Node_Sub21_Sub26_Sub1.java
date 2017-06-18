@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
+public class Node_Sub21_Sub26_Sub1 extends DrawingArea {
     public static boolean aBoolean1084 = true;
     public static int[] COS = new int[2048];
     public static int anInt228 = 512;
@@ -214,19 +214,19 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                             return;
                                         }
 
-                                        method636(anIntArray953, var0, 0, 0, var4 >> 14, var5 >> 14, var6, var19);
+                                        method636(drawingAreaPixels, var0, 0, 0, var4 >> 14, var5 >> 14, var6, var19);
                                         var5 += var17;
                                         var4 += var15;
                                         var6 += var20;
-                                        var0 += anInt749;
+                                        var0 += drawingAreaWidth;
                                     }
                                 }
 
-                                method636(anIntArray953, var0, 0, 0, var3 >> 14, var5 >> 14, var6, var19);
+                                method636(drawingAreaPixels, var0, 0, 0, var3 >> 14, var5 >> 14, var6, var19);
                                 var5 += var17;
                                 var3 += var16;
                                 var6 += var20;
-                                var0 += anInt749;
+                                var0 += drawingAreaWidth;
                             }
                         }
                         var2 -= var1;
@@ -242,19 +242,19 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method636(anIntArray953, var0, 0, 0, var5 >> 14, var4 >> 14, var6, var19);
+                                    method636(drawingAreaPixels, var0, 0, 0, var5 >> 14, var4 >> 14, var6, var19);
                                     var5 += var17;
                                     var4 += var15;
                                     var6 += var20;
-                                    var0 += anInt749;
+                                    var0 += drawingAreaWidth;
                                 }
                             }
 
-                            method636(anIntArray953, var0, 0, 0, var5 >> 14, var3 >> 14, var6, var19);
+                            method636(drawingAreaPixels, var0, 0, 0, var5 >> 14, var3 >> 14, var6, var19);
                             var5 += var17;
                             var3 += var16;
                             var6 += var20;
-                            var0 += anInt749;
+                            var0 += drawingAreaWidth;
                         }
                     }
                     var4 = var3 <<= 14;
@@ -285,19 +285,19 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method636(anIntArray953, var0, 0, 0, var5 >> 14, var3 >> 14, var6, var19);
+                                    method636(drawingAreaPixels, var0, 0, 0, var5 >> 14, var3 >> 14, var6, var19);
                                     var5 += var15;
                                     var3 += var16;
                                     var6 += var20;
-                                    var0 += anInt749;
+                                    var0 += drawingAreaWidth;
                                 }
                             }
 
-                            method636(anIntArray953, var0, 0, 0, var4 >> 14, var3 >> 14, var6, var19);
+                            method636(drawingAreaPixels, var0, 0, 0, var4 >> 14, var3 >> 14, var6, var19);
                             var4 += var17;
                             var3 += var16;
                             var6 += var20;
-                            var0 += anInt749;
+                            var0 += drawingAreaWidth;
                         }
                     }
                     var1 -= var2;
@@ -313,19 +313,19 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     return;
                                 }
 
-                                method636(anIntArray953, var0, 0, 0, var3 >> 14, var5 >> 14, var6, var19);
+                                method636(drawingAreaPixels, var0, 0, 0, var3 >> 14, var5 >> 14, var6, var19);
                                 var5 += var15;
                                 var3 += var16;
                                 var6 += var20;
-                                var0 += anInt749;
+                                var0 += drawingAreaWidth;
                             }
                         }
 
-                        method636(anIntArray953, var0, 0, 0, var3 >> 14, var4 >> 14, var6, var19);
+                        method636(drawingAreaPixels, var0, 0, 0, var3 >> 14, var4 >> 14, var6, var19);
                         var4 += var17;
                         var3 += var16;
                         var6 += var20;
-                        var0 += anInt749;
+                        var0 += drawingAreaWidth;
                     }
                 }
             } else if (var1 <= var2) {
@@ -368,19 +368,19 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                             return;
                                         }
 
-                                        method636(anIntArray953, var1, 0, 0, var5 >> 14, var3 >> 14, var7, var19);
+                                        method636(drawingAreaPixels, var1, 0, 0, var5 >> 14, var3 >> 14, var7, var19);
                                         var3 += var16;
                                         var5 += var17;
                                         var7 += var20;
-                                        var1 += anInt749;
+                                        var1 += drawingAreaWidth;
                                     }
                                 }
 
-                                method636(anIntArray953, var1, 0, 0, var4 >> 14, var3 >> 14, var7, var19);
+                                method636(drawingAreaPixels, var1, 0, 0, var4 >> 14, var3 >> 14, var7, var19);
                                 var3 += var16;
                                 var4 += var15;
                                 var7 += var20;
-                                var1 += anInt749;
+                                var1 += drawingAreaWidth;
                             }
                         }
                         var0 -= var2;
@@ -396,19 +396,19 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method636(anIntArray953, var1, 0, 0, var3 >> 14, var5 >> 14, var7, var19);
+                                    method636(drawingAreaPixels, var1, 0, 0, var3 >> 14, var5 >> 14, var7, var19);
                                     var3 += var16;
                                     var5 += var17;
                                     var7 += var20;
-                                    var1 += anInt749;
+                                    var1 += drawingAreaWidth;
                                 }
                             }
 
-                            method636(anIntArray953, var1, 0, 0, var3 >> 14, var4 >> 14, var7, var19);
+                            method636(drawingAreaPixels, var1, 0, 0, var3 >> 14, var4 >> 14, var7, var19);
                             var3 += var16;
                             var4 += var15;
                             var7 += var20;
-                            var1 += anInt749;
+                            var1 += drawingAreaWidth;
                         }
                     }
                     var5 = var4 <<= 14;
@@ -439,19 +439,19 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method636(anIntArray953, var1, 0, 0, var3 >> 14, var4 >> 14, var7, var19);
+                                    method636(drawingAreaPixels, var1, 0, 0, var3 >> 14, var4 >> 14, var7, var19);
                                     var3 += var17;
                                     var4 += var15;
                                     var7 += var20;
-                                    var1 += anInt749;
+                                    var1 += drawingAreaWidth;
                                 }
                             }
 
-                            method636(anIntArray953, var1, 0, 0, var5 >> 14, var4 >> 14, var7, var19);
+                            method636(drawingAreaPixels, var1, 0, 0, var5 >> 14, var4 >> 14, var7, var19);
                             var5 += var16;
                             var4 += var15;
                             var7 += var20;
-                            var1 += anInt749;
+                            var1 += drawingAreaWidth;
                         }
                     }
                     var2 -= var0;
@@ -467,19 +467,19 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     return;
                                 }
 
-                                method636(anIntArray953, var1, 0, 0, var4 >> 14, var3 >> 14, var7, var19);
+                                method636(drawingAreaPixels, var1, 0, 0, var4 >> 14, var3 >> 14, var7, var19);
                                 var3 += var17;
                                 var4 += var15;
                                 var7 += var20;
-                                var1 += anInt749;
+                                var1 += drawingAreaWidth;
                             }
                         }
 
-                        method636(anIntArray953, var1, 0, 0, var4 >> 14, var5 >> 14, var7, var19);
+                        method636(drawingAreaPixels, var1, 0, 0, var4 >> 14, var5 >> 14, var7, var19);
                         var5 += var16;
                         var4 += var15;
                         var7 += var20;
-                        var1 += anInt749;
+                        var1 += drawingAreaWidth;
                     }
                 }
             } else if (var2 < anInt235) {
@@ -521,19 +521,19 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method636(anIntArray953, var2, 0, 0, var4 >> 14, var3 >> 14, var8, var19);
+                                    method636(drawingAreaPixels, var2, 0, 0, var4 >> 14, var3 >> 14, var8, var19);
                                     var4 += var15;
                                     var3 += var16;
                                     var8 += var20;
-                                    var2 += anInt749;
+                                    var2 += drawingAreaWidth;
                                 }
                             }
 
-                            method636(anIntArray953, var2, 0, 0, var4 >> 14, var5 >> 14, var8, var19);
+                            method636(drawingAreaPixels, var2, 0, 0, var4 >> 14, var5 >> 14, var8, var19);
                             var4 += var15;
                             var5 += var17;
                             var8 += var20;
-                            var2 += anInt749;
+                            var2 += drawingAreaWidth;
                         }
                     }
                     var1 -= var0;
@@ -549,19 +549,19 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     return;
                                 }
 
-                                method636(anIntArray953, var2, 0, 0, var3 >> 14, var4 >> 14, var8, var19);
+                                method636(drawingAreaPixels, var2, 0, 0, var3 >> 14, var4 >> 14, var8, var19);
                                 var4 += var15;
                                 var3 += var16;
                                 var8 += var20;
-                                var2 += anInt749;
+                                var2 += drawingAreaWidth;
                             }
                         }
 
-                        method636(anIntArray953, var2, 0, 0, var5 >> 14, var4 >> 14, var8, var19);
+                        method636(drawingAreaPixels, var2, 0, 0, var5 >> 14, var4 >> 14, var8, var19);
                         var4 += var15;
                         var5 += var17;
                         var8 += var20;
-                        var2 += anInt749;
+                        var2 += drawingAreaWidth;
                     }
                 }
                 var3 = var5 <<= 14;
@@ -592,19 +592,19 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     return;
                                 }
 
-                                method636(anIntArray953, var2, 0, 0, var4 >> 14, var5 >> 14, var8, var19);
+                                method636(drawingAreaPixels, var2, 0, 0, var4 >> 14, var5 >> 14, var8, var19);
                                 var4 += var16;
                                 var5 += var17;
                                 var8 += var20;
-                                var2 += anInt749;
+                                var2 += drawingAreaWidth;
                             }
                         }
 
-                        method636(anIntArray953, var2, 0, 0, var3 >> 14, var5 >> 14, var8, var19);
+                        method636(drawingAreaPixels, var2, 0, 0, var3 >> 14, var5 >> 14, var8, var19);
                         var3 += var15;
                         var5 += var17;
                         var8 += var20;
-                        var2 += anInt749;
+                        var2 += drawingAreaWidth;
                     }
                 }
                 var0 -= var1;
@@ -620,19 +620,19 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                 return;
                             }
 
-                            method636(anIntArray953, var2, 0, 0, var5 >> 14, var4 >> 14, var8, var19);
+                            method636(drawingAreaPixels, var2, 0, 0, var5 >> 14, var4 >> 14, var8, var19);
                             var4 += var16;
                             var5 += var17;
                             var8 += var20;
-                            var2 += anInt749;
+                            var2 += drawingAreaWidth;
                         }
                     }
 
-                    method636(anIntArray953, var2, 0, 0, var5 >> 14, var3 >> 14, var8, var19);
+                    method636(drawingAreaPixels, var2, 0, 0, var5 >> 14, var3 >> 14, var8, var19);
                     var3 += var15;
                     var5 += var17;
                     var8 += var20;
-                    var2 += anInt749;
+                    var2 += drawingAreaWidth;
                 }
             }
         }
@@ -732,22 +732,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                                 return;
                                             }
 
-                                            method640(anIntArray953, var19, 0, 0, var0, var5 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                            method640(drawingAreaPixels, var19, 0, 0, var0, var5 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                             var5 += var28;
                                             var4 += var27;
                                             var6 += var31;
-                                            var0 += anInt749;
+                                            var0 += drawingAreaWidth;
                                             var32 += var34;
                                             var35 += var37;
                                             var38 += var40;
                                         }
                                     }
 
-                                    method640(anIntArray953, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                    method640(drawingAreaPixels, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                     var5 += var28;
                                     var3 += var26;
                                     var6 += var31;
-                                    var0 += anInt749;
+                                    var0 += drawingAreaWidth;
                                     var32 += var34;
                                     var35 += var37;
                                     var38 += var40;
@@ -766,22 +766,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                             return;
                                         }
 
-                                        method640(anIntArray953, var19, 0, 0, var0, var4 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                        method640(drawingAreaPixels, var19, 0, 0, var0, var4 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                         var5 += var28;
                                         var4 += var27;
                                         var6 += var31;
-                                        var0 += anInt749;
+                                        var0 += drawingAreaWidth;
                                         var32 += var34;
                                         var35 += var37;
                                         var38 += var40;
                                     }
                                 }
 
-                                method640(anIntArray953, var19, 0, 0, var0, var3 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                method640(drawingAreaPixels, var19, 0, 0, var0, var3 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                 var5 += var28;
                                 var3 += var26;
                                 var6 += var31;
-                                var0 += anInt749;
+                                var0 += drawingAreaWidth;
                                 var32 += var34;
                                 var35 += var37;
                                 var38 += var40;
@@ -819,22 +819,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                             return;
                                         }
 
-                                        method640(anIntArray953, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                        method640(drawingAreaPixels, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                         var5 += var27;
                                         var3 += var26;
                                         var6 += var31;
-                                        var0 += anInt749;
+                                        var0 += drawingAreaWidth;
                                         var32 += var34;
                                         var35 += var37;
                                         var38 += var40;
                                     }
                                 }
 
-                                method640(anIntArray953, var19, 0, 0, var0, var4 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                method640(drawingAreaPixels, var19, 0, 0, var0, var4 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                 var4 += var28;
                                 var3 += var26;
                                 var6 += var31;
-                                var0 += anInt749;
+                                var0 += drawingAreaWidth;
                                 var32 += var34;
                                 var35 += var37;
                                 var38 += var40;
@@ -853,22 +853,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method640(anIntArray953, var19, 0, 0, var0, var3 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                    method640(drawingAreaPixels, var19, 0, 0, var0, var3 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                     var5 += var27;
                                     var3 += var26;
                                     var6 += var31;
-                                    var0 += anInt749;
+                                    var0 += drawingAreaWidth;
                                     var32 += var34;
                                     var35 += var37;
                                     var38 += var40;
                                 }
                             }
 
-                            method640(anIntArray953, var19, 0, 0, var0, var3 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                            method640(drawingAreaPixels, var19, 0, 0, var0, var3 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                             var4 += var28;
                             var3 += var26;
                             var6 += var31;
-                            var0 += anInt749;
+                            var0 += drawingAreaWidth;
                             var32 += var34;
                             var35 += var37;
                             var38 += var40;
@@ -918,22 +918,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                                 return;
                                             }
 
-                                            method640(anIntArray953, var19, 0, 0, var1, var3 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                            method640(drawingAreaPixels, var19, 0, 0, var1, var3 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                             var3 += var26;
                                             var5 += var28;
                                             var7 += var31;
-                                            var1 += anInt749;
+                                            var1 += drawingAreaWidth;
                                             var32 += var34;
                                             var35 += var37;
                                             var38 += var40;
                                         }
                                     }
 
-                                    method640(anIntArray953, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                    method640(drawingAreaPixels, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                     var3 += var26;
                                     var4 += var27;
                                     var7 += var31;
-                                    var1 += anInt749;
+                                    var1 += drawingAreaWidth;
                                     var32 += var34;
                                     var35 += var37;
                                     var38 += var40;
@@ -952,22 +952,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                             return;
                                         }
 
-                                        method640(anIntArray953, var19, 0, 0, var1, var5 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                        method640(drawingAreaPixels, var19, 0, 0, var1, var5 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                         var3 += var26;
                                         var5 += var28;
                                         var7 += var31;
-                                        var1 += anInt749;
+                                        var1 += drawingAreaWidth;
                                         var32 += var34;
                                         var35 += var37;
                                         var38 += var40;
                                     }
                                 }
 
-                                method640(anIntArray953, var19, 0, 0, var1, var4 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                method640(drawingAreaPixels, var19, 0, 0, var1, var4 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                 var3 += var26;
                                 var4 += var27;
                                 var7 += var31;
-                                var1 += anInt749;
+                                var1 += drawingAreaWidth;
                                 var32 += var34;
                                 var35 += var37;
                                 var38 += var40;
@@ -1005,22 +1005,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                             return;
                                         }
 
-                                        method640(anIntArray953, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                        method640(drawingAreaPixels, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                         var3 += var28;
                                         var4 += var27;
                                         var7 += var31;
-                                        var1 += anInt749;
+                                        var1 += drawingAreaWidth;
                                         var32 += var34;
                                         var35 += var37;
                                         var38 += var40;
                                     }
                                 }
 
-                                method640(anIntArray953, var19, 0, 0, var1, var5 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                method640(drawingAreaPixels, var19, 0, 0, var1, var5 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                 var5 += var26;
                                 var4 += var27;
                                 var7 += var31;
-                                var1 += anInt749;
+                                var1 += drawingAreaWidth;
                                 var32 += var34;
                                 var35 += var37;
                                 var38 += var40;
@@ -1039,22 +1039,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method640(anIntArray953, var19, 0, 0, var1, var4 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                    method640(drawingAreaPixels, var19, 0, 0, var1, var4 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                     var3 += var28;
                                     var4 += var27;
                                     var7 += var31;
-                                    var1 += anInt749;
+                                    var1 += drawingAreaWidth;
                                     var32 += var34;
                                     var35 += var37;
                                     var38 += var40;
                                 }
                             }
 
-                            method640(anIntArray953, var19, 0, 0, var1, var4 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                            method640(drawingAreaPixels, var19, 0, 0, var1, var4 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                             var5 += var26;
                             var4 += var27;
                             var7 += var31;
-                            var1 += anInt749;
+                            var1 += drawingAreaWidth;
                             var32 += var34;
                             var35 += var37;
                             var38 += var40;
@@ -1103,22 +1103,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                             return;
                                         }
 
-                                        method640(anIntArray953, var19, 0, 0, var2, var4 >> 14, var3 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                        method640(drawingAreaPixels, var19, 0, 0, var2, var4 >> 14, var3 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                                         var4 += var27;
                                         var3 += var26;
                                         var8 += var31;
-                                        var2 += anInt749;
+                                        var2 += drawingAreaWidth;
                                         var32 += var34;
                                         var35 += var37;
                                         var38 += var40;
                                     }
                                 }
 
-                                method640(anIntArray953, var19, 0, 0, var2, var4 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                method640(drawingAreaPixels, var19, 0, 0, var2, var4 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                                 var4 += var27;
                                 var5 += var28;
                                 var8 += var31;
-                                var2 += anInt749;
+                                var2 += drawingAreaWidth;
                                 var32 += var34;
                                 var35 += var37;
                                 var38 += var40;
@@ -1137,22 +1137,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method640(anIntArray953, var19, 0, 0, var2, var3 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                    method640(drawingAreaPixels, var19, 0, 0, var2, var3 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                                     var4 += var27;
                                     var3 += var26;
                                     var8 += var31;
-                                    var2 += anInt749;
+                                    var2 += drawingAreaWidth;
                                     var32 += var34;
                                     var35 += var37;
                                     var38 += var40;
                                 }
                             }
 
-                            method640(anIntArray953, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                            method640(drawingAreaPixels, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                             var4 += var27;
                             var5 += var28;
                             var8 += var31;
-                            var2 += anInt749;
+                            var2 += drawingAreaWidth;
                             var32 += var34;
                             var35 += var37;
                             var38 += var40;
@@ -1190,22 +1190,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method640(anIntArray953, var19, 0, 0, var2, var4 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                    method640(drawingAreaPixels, var19, 0, 0, var2, var4 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                                     var4 += var26;
                                     var5 += var28;
                                     var8 += var31;
-                                    var2 += anInt749;
+                                    var2 += drawingAreaWidth;
                                     var32 += var34;
                                     var35 += var37;
                                     var38 += var40;
                                 }
                             }
 
-                            method640(anIntArray953, var19, 0, 0, var2, var3 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                            method640(drawingAreaPixels, var19, 0, 0, var2, var3 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                             var3 += var27;
                             var5 += var28;
                             var8 += var31;
-                            var2 += anInt749;
+                            var2 += drawingAreaWidth;
                             var32 += var34;
                             var35 += var37;
                             var38 += var40;
@@ -1224,22 +1224,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     return;
                                 }
 
-                                method640(anIntArray953, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                method640(drawingAreaPixels, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                                 var4 += var26;
                                 var5 += var28;
                                 var8 += var31;
-                                var2 += anInt749;
+                                var2 += drawingAreaWidth;
                                 var32 += var34;
                                 var35 += var37;
                                 var38 += var40;
                             }
                         }
 
-                        method640(anIntArray953, var19, 0, 0, var2, var5 >> 14, var3 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                        method640(drawingAreaPixels, var19, 0, 0, var2, var5 >> 14, var3 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                         var3 += var27;
                         var5 += var28;
                         var8 += var31;
-                        var2 += anInt749;
+                        var2 += drawingAreaWidth;
                         var32 += var34;
                         var35 += var37;
                         var38 += var40;
@@ -1343,22 +1343,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                                 return;
                                             }
 
-                                            method639(anIntArray953, var19, 0, 0, var0, var4 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                            method639(drawingAreaPixels, var19, 0, 0, var0, var4 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                             var5 += var28;
                                             var4 += var27;
                                             var6 += var31;
-                                            var0 += anInt749;
+                                            var0 += drawingAreaWidth;
                                             var32 += var34;
                                             var35 += var37;
                                             var38 += var40;
                                         }
                                     }
 
-                                    method639(anIntArray953, var19, 0, 0, var0, var3 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                    method639(drawingAreaPixels, var19, 0, 0, var0, var3 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                     var5 += var28;
                                     var3 += var26;
                                     var6 += var31;
-                                    var0 += anInt749;
+                                    var0 += drawingAreaWidth;
                                     var32 += var34;
                                     var35 += var37;
                                     var38 += var40;
@@ -1377,22 +1377,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                             return;
                                         }
 
-                                        method639(anIntArray953, var19, 0, 0, var0, var5 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                        method639(drawingAreaPixels, var19, 0, 0, var0, var5 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                         var5 += var28;
                                         var4 += var27;
                                         var6 += var31;
-                                        var0 += anInt749;
+                                        var0 += drawingAreaWidth;
                                         var32 += var34;
                                         var35 += var37;
                                         var38 += var40;
                                     }
                                 }
 
-                                method639(anIntArray953, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                method639(drawingAreaPixels, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                 var5 += var28;
                                 var3 += var26;
                                 var6 += var31;
-                                var0 += anInt749;
+                                var0 += drawingAreaWidth;
                                 var32 += var34;
                                 var35 += var37;
                                 var38 += var40;
@@ -1430,22 +1430,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                             return;
                                         }
 
-                                        method639(anIntArray953, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                        method639(drawingAreaPixels, var19, 0, 0, var0, var5 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                         var5 += var27;
                                         var3 += var26;
                                         var6 += var31;
-                                        var0 += anInt749;
+                                        var0 += drawingAreaWidth;
                                         var32 += var34;
                                         var35 += var37;
                                         var38 += var40;
                                     }
                                 }
 
-                                method639(anIntArray953, var19, 0, 0, var0, var4 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                method639(drawingAreaPixels, var19, 0, 0, var0, var4 >> 14, var3 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                 var4 += var28;
                                 var3 += var26;
                                 var6 += var31;
-                                var0 += anInt749;
+                                var0 += drawingAreaWidth;
                                 var32 += var34;
                                 var35 += var37;
                                 var38 += var40;
@@ -1464,22 +1464,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method639(anIntArray953, var19, 0, 0, var0, var3 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                                    method639(drawingAreaPixels, var19, 0, 0, var0, var3 >> 14, var5 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                                     var5 += var27;
                                     var3 += var26;
                                     var6 += var31;
-                                    var0 += anInt749;
+                                    var0 += drawingAreaWidth;
                                     var32 += var34;
                                     var35 += var37;
                                     var38 += var40;
                                 }
                             }
 
-                            method639(anIntArray953, var19, 0, 0, var0, var3 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
+                            method639(drawingAreaPixels, var19, 0, 0, var0, var3 >> 14, var4 >> 14, var6, var30, var32, var35, var38, var33, var36, var39);
                             var4 += var28;
                             var3 += var26;
                             var6 += var31;
-                            var0 += anInt749;
+                            var0 += drawingAreaWidth;
                             var32 += var34;
                             var35 += var37;
                             var38 += var40;
@@ -1529,22 +1529,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                                 return;
                                             }
 
-                                            method639(anIntArray953, var19, 0, 0, var1, var5 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                            method639(drawingAreaPixels, var19, 0, 0, var1, var5 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                             var3 += var26;
                                             var5 += var28;
                                             var7 += var31;
-                                            var1 += anInt749;
+                                            var1 += drawingAreaWidth;
                                             var32 += var34;
                                             var35 += var37;
                                             var38 += var40;
                                         }
                                     }
 
-                                    method639(anIntArray953, var19, 0, 0, var1, var4 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                    method639(drawingAreaPixels, var19, 0, 0, var1, var4 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                     var3 += var26;
                                     var4 += var27;
                                     var7 += var31;
-                                    var1 += anInt749;
+                                    var1 += drawingAreaWidth;
                                     var32 += var34;
                                     var35 += var37;
                                     var38 += var40;
@@ -1563,22 +1563,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                             return;
                                         }
 
-                                        method639(anIntArray953, var19, 0, 0, var1, var3 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                        method639(drawingAreaPixels, var19, 0, 0, var1, var3 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                         var3 += var26;
                                         var5 += var28;
                                         var7 += var31;
-                                        var1 += anInt749;
+                                        var1 += drawingAreaWidth;
                                         var32 += var34;
                                         var35 += var37;
                                         var38 += var40;
                                     }
                                 }
 
-                                method639(anIntArray953, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                method639(drawingAreaPixels, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                 var3 += var26;
                                 var4 += var27;
                                 var7 += var31;
-                                var1 += anInt749;
+                                var1 += drawingAreaWidth;
                                 var32 += var34;
                                 var35 += var37;
                                 var38 += var40;
@@ -1616,22 +1616,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                             return;
                                         }
 
-                                        method639(anIntArray953, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                        method639(drawingAreaPixels, var19, 0, 0, var1, var3 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                         var3 += var28;
                                         var4 += var27;
                                         var7 += var31;
-                                        var1 += anInt749;
+                                        var1 += drawingAreaWidth;
                                         var32 += var34;
                                         var35 += var37;
                                         var38 += var40;
                                     }
                                 }
 
-                                method639(anIntArray953, var19, 0, 0, var1, var5 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                method639(drawingAreaPixels, var19, 0, 0, var1, var5 >> 14, var4 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                 var5 += var26;
                                 var4 += var27;
                                 var7 += var31;
-                                var1 += anInt749;
+                                var1 += drawingAreaWidth;
                                 var32 += var34;
                                 var35 += var37;
                                 var38 += var40;
@@ -1650,22 +1650,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method639(anIntArray953, var19, 0, 0, var1, var4 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                                    method639(drawingAreaPixels, var19, 0, 0, var1, var4 >> 14, var3 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                                     var3 += var28;
                                     var4 += var27;
                                     var7 += var31;
-                                    var1 += anInt749;
+                                    var1 += drawingAreaWidth;
                                     var32 += var34;
                                     var35 += var37;
                                     var38 += var40;
                                 }
                             }
 
-                            method639(anIntArray953, var19, 0, 0, var1, var4 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
+                            method639(drawingAreaPixels, var19, 0, 0, var1, var4 >> 14, var5 >> 14, var7, var30, var32, var35, var38, var33, var36, var39);
                             var5 += var26;
                             var4 += var27;
                             var7 += var31;
-                            var1 += anInt749;
+                            var1 += drawingAreaWidth;
                             var32 += var34;
                             var35 += var37;
                             var38 += var40;
@@ -1714,22 +1714,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                             return;
                                         }
 
-                                        method639(anIntArray953, var19, 0, 0, var2, var4 >> 14, var3 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                        method639(drawingAreaPixels, var19, 0, 0, var2, var4 >> 14, var3 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                                         var4 += var27;
                                         var3 += var26;
                                         var8 += var31;
-                                        var2 += anInt749;
+                                        var2 += drawingAreaWidth;
                                         var32 += var34;
                                         var35 += var37;
                                         var38 += var40;
                                     }
                                 }
 
-                                method639(anIntArray953, var19, 0, 0, var2, var4 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                method639(drawingAreaPixels, var19, 0, 0, var2, var4 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                                 var4 += var27;
                                 var5 += var28;
                                 var8 += var31;
-                                var2 += anInt749;
+                                var2 += drawingAreaWidth;
                                 var32 += var34;
                                 var35 += var37;
                                 var38 += var40;
@@ -1748,22 +1748,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method639(anIntArray953, var19, 0, 0, var2, var3 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                    method639(drawingAreaPixels, var19, 0, 0, var2, var3 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                                     var4 += var27;
                                     var3 += var26;
                                     var8 += var31;
-                                    var2 += anInt749;
+                                    var2 += drawingAreaWidth;
                                     var32 += var34;
                                     var35 += var37;
                                     var38 += var40;
                                 }
                             }
 
-                            method639(anIntArray953, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                            method639(drawingAreaPixels, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                             var4 += var27;
                             var5 += var28;
                             var8 += var31;
-                            var2 += anInt749;
+                            var2 += drawingAreaWidth;
                             var32 += var34;
                             var35 += var37;
                             var38 += var40;
@@ -1801,22 +1801,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method639(anIntArray953, var19, 0, 0, var2, var4 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                    method639(drawingAreaPixels, var19, 0, 0, var2, var4 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                                     var4 += var26;
                                     var5 += var28;
                                     var8 += var31;
-                                    var2 += anInt749;
+                                    var2 += drawingAreaWidth;
                                     var32 += var34;
                                     var35 += var37;
                                     var38 += var40;
                                 }
                             }
 
-                            method639(anIntArray953, var19, 0, 0, var2, var3 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                            method639(drawingAreaPixels, var19, 0, 0, var2, var3 >> 14, var5 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                             var3 += var27;
                             var5 += var28;
                             var8 += var31;
-                            var2 += anInt749;
+                            var2 += drawingAreaWidth;
                             var32 += var34;
                             var35 += var37;
                             var38 += var40;
@@ -1835,22 +1835,22 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     return;
                                 }
 
-                                method639(anIntArray953, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                                method639(drawingAreaPixels, var19, 0, 0, var2, var5 >> 14, var4 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                                 var4 += var26;
                                 var5 += var28;
                                 var8 += var31;
-                                var2 += anInt749;
+                                var2 += drawingAreaWidth;
                                 var32 += var34;
                                 var35 += var37;
                                 var38 += var40;
                             }
                         }
 
-                        method639(anIntArray953, var19, 0, 0, var2, var5 >> 14, var3 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
+                        method639(drawingAreaPixels, var19, 0, 0, var2, var5 >> 14, var3 >> 14, var8, var30, var32, var35, var38, var33, var36, var39);
                         var3 += var27;
                         var5 += var28;
                         var8 += var31;
-                        var2 += anInt749;
+                        var2 += drawingAreaWidth;
                         var32 += var34;
                         var35 += var37;
                         var38 += var40;
@@ -2358,17 +2358,17 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method631(anIntArray953, var0, var6, 0, var5 >> 14, var4 >> 14);
+                                    method631(drawingAreaPixels, var0, var6, 0, var5 >> 14, var4 >> 14);
                                     var5 += var9;
                                     var4 += var8;
-                                    var0 += anInt749;
+                                    var0 += drawingAreaWidth;
                                 }
                             }
 
-                            method631(anIntArray953, var0, var6, 0, var5 >> 14, var3 >> 14);
+                            method631(drawingAreaPixels, var0, var6, 0, var5 >> 14, var3 >> 14);
                             var5 += var9;
                             var3 += var7;
-                            var0 += anInt749;
+                            var0 += drawingAreaWidth;
                         }
                     }
                     var2 -= var1;
@@ -2384,17 +2384,17 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     return;
                                 }
 
-                                method631(anIntArray953, var0, var6, 0, var4 >> 14, var5 >> 14);
+                                method631(drawingAreaPixels, var0, var6, 0, var4 >> 14, var5 >> 14);
                                 var5 += var9;
                                 var4 += var8;
-                                var0 += anInt749;
+                                var0 += drawingAreaWidth;
                             }
                         }
 
-                        method631(anIntArray953, var0, var6, 0, var3 >> 14, var5 >> 14);
+                        method631(drawingAreaPixels, var0, var6, 0, var3 >> 14, var5 >> 14);
                         var5 += var9;
                         var3 += var7;
-                        var0 += anInt749;
+                        var0 += drawingAreaWidth;
                     }
                 }
                 var4 = var3 <<= 14;
@@ -2424,17 +2424,17 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     return;
                                 }
 
-                                method631(anIntArray953, var0, var6, 0, var5 >> 14, var3 >> 14);
+                                method631(drawingAreaPixels, var0, var6, 0, var5 >> 14, var3 >> 14);
                                 var5 += var8;
                                 var3 += var7;
-                                var0 += anInt749;
+                                var0 += drawingAreaWidth;
                             }
                         }
 
-                        method631(anIntArray953, var0, var6, 0, var4 >> 14, var3 >> 14);
+                        method631(drawingAreaPixels, var0, var6, 0, var4 >> 14, var3 >> 14);
                         var4 += var9;
                         var3 += var7;
-                        var0 += anInt749;
+                        var0 += drawingAreaWidth;
                     }
                 }
                 var1 -= var2;
@@ -2450,17 +2450,17 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                 return;
                             }
 
-                            method631(anIntArray953, var0, var6, 0, var3 >> 14, var5 >> 14);
+                            method631(drawingAreaPixels, var0, var6, 0, var3 >> 14, var5 >> 14);
                             var5 += var8;
                             var3 += var7;
-                            var0 += anInt749;
+                            var0 += drawingAreaWidth;
                         }
                     }
 
-                    method631(anIntArray953, var0, var6, 0, var3 >> 14, var4 >> 14);
+                    method631(drawingAreaPixels, var0, var6, 0, var3 >> 14, var4 >> 14);
                     var4 += var9;
                     var3 += var7;
-                    var0 += anInt749;
+                    var0 += drawingAreaWidth;
                 }
             }
         } else if (var1 <= var2) {
@@ -2501,17 +2501,17 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                         return;
                                     }
 
-                                    method631(anIntArray953, var1, var6, 0, var3 >> 14, var5 >> 14);
+                                    method631(drawingAreaPixels, var1, var6, 0, var3 >> 14, var5 >> 14);
                                     var3 += var7;
                                     var5 += var9;
-                                    var1 += anInt749;
+                                    var1 += drawingAreaWidth;
                                 }
                             }
 
-                            method631(anIntArray953, var1, var6, 0, var3 >> 14, var4 >> 14);
+                            method631(drawingAreaPixels, var1, var6, 0, var3 >> 14, var4 >> 14);
                             var3 += var7;
                             var4 += var8;
-                            var1 += anInt749;
+                            var1 += drawingAreaWidth;
                         }
                     }
                     var0 -= var2;
@@ -2527,17 +2527,17 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     return;
                                 }
 
-                                method631(anIntArray953, var1, var6, 0, var5 >> 14, var3 >> 14);
+                                method631(drawingAreaPixels, var1, var6, 0, var5 >> 14, var3 >> 14);
                                 var3 += var7;
                                 var5 += var9;
-                                var1 += anInt749;
+                                var1 += drawingAreaWidth;
                             }
                         }
 
-                        method631(anIntArray953, var1, var6, 0, var4 >> 14, var3 >> 14);
+                        method631(drawingAreaPixels, var1, var6, 0, var4 >> 14, var3 >> 14);
                         var3 += var7;
                         var4 += var8;
-                        var1 += anInt749;
+                        var1 += drawingAreaWidth;
                     }
                 }
                 var5 = var4 <<= 14;
@@ -2567,17 +2567,17 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     return;
                                 }
 
-                                method631(anIntArray953, var1, var6, 0, var3 >> 14, var4 >> 14);
+                                method631(drawingAreaPixels, var1, var6, 0, var3 >> 14, var4 >> 14);
                                 var3 += var9;
                                 var4 += var8;
-                                var1 += anInt749;
+                                var1 += drawingAreaWidth;
                             }
                         }
 
-                        method631(anIntArray953, var1, var6, 0, var5 >> 14, var4 >> 14);
+                        method631(drawingAreaPixels, var1, var6, 0, var5 >> 14, var4 >> 14);
                         var5 += var7;
                         var4 += var8;
-                        var1 += anInt749;
+                        var1 += drawingAreaWidth;
                     }
                 }
                 var2 -= var0;
@@ -2593,17 +2593,17 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                 return;
                             }
 
-                            method631(anIntArray953, var1, var6, 0, var4 >> 14, var3 >> 14);
+                            method631(drawingAreaPixels, var1, var6, 0, var4 >> 14, var3 >> 14);
                             var3 += var9;
                             var4 += var8;
-                            var1 += anInt749;
+                            var1 += drawingAreaWidth;
                         }
                     }
 
-                    method631(anIntArray953, var1, var6, 0, var4 >> 14, var5 >> 14);
+                    method631(drawingAreaPixels, var1, var6, 0, var4 >> 14, var5 >> 14);
                     var5 += var7;
                     var4 += var8;
-                    var1 += anInt749;
+                    var1 += drawingAreaWidth;
                 }
             }
         } else if (var2 < anInt235) {
@@ -2643,17 +2643,17 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                     return;
                                 }
 
-                                method631(anIntArray953, var2, var6, 0, var4 >> 14, var3 >> 14);
+                                method631(drawingAreaPixels, var2, var6, 0, var4 >> 14, var3 >> 14);
                                 var4 += var8;
                                 var3 += var7;
-                                var2 += anInt749;
+                                var2 += drawingAreaWidth;
                             }
                         }
 
-                        method631(anIntArray953, var2, var6, 0, var4 >> 14, var5 >> 14);
+                        method631(drawingAreaPixels, var2, var6, 0, var4 >> 14, var5 >> 14);
                         var4 += var8;
                         var5 += var9;
-                        var2 += anInt749;
+                        var2 += drawingAreaWidth;
                     }
                 }
                 var1 -= var0;
@@ -2669,17 +2669,17 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                 return;
                             }
 
-                            method631(anIntArray953, var2, var6, 0, var3 >> 14, var4 >> 14);
+                            method631(drawingAreaPixels, var2, var6, 0, var3 >> 14, var4 >> 14);
                             var4 += var8;
                             var3 += var7;
-                            var2 += anInt749;
+                            var2 += drawingAreaWidth;
                         }
                     }
 
-                    method631(anIntArray953, var2, var6, 0, var5 >> 14, var4 >> 14);
+                    method631(drawingAreaPixels, var2, var6, 0, var5 >> 14, var4 >> 14);
                     var4 += var8;
                     var5 += var9;
-                    var2 += anInt749;
+                    var2 += drawingAreaWidth;
                 }
             }
             var3 = var5 <<= 14;
@@ -2709,17 +2709,17 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                                 return;
                             }
 
-                            method631(anIntArray953, var2, var6, 0, var4 >> 14, var5 >> 14);
+                            method631(drawingAreaPixels, var2, var6, 0, var4 >> 14, var5 >> 14);
                             var4 += var7;
                             var5 += var9;
-                            var2 += anInt749;
+                            var2 += drawingAreaWidth;
                         }
                     }
 
-                    method631(anIntArray953, var2, var6, 0, var3 >> 14, var5 >> 14);
+                    method631(drawingAreaPixels, var2, var6, 0, var3 >> 14, var5 >> 14);
                     var3 += var8;
                     var5 += var9;
-                    var2 += anInt749;
+                    var2 += drawingAreaWidth;
                 }
             }
             var0 -= var1;
@@ -2735,25 +2735,25 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
                             return;
                         }
 
-                        method631(anIntArray953, var2, var6, 0, var5 >> 14, var4 >> 14);
+                        method631(drawingAreaPixels, var2, var6, 0, var5 >> 14, var4 >> 14);
                         var4 += var7;
                         var5 += var9;
-                        var2 += anInt749;
+                        var2 += drawingAreaWidth;
                     }
                 }
 
-                method631(anIntArray953, var2, var6, 0, var5 >> 14, var3 >> 14);
+                method631(drawingAreaPixels, var2, var6, 0, var5 >> 14, var3 >> 14);
                 var3 += var8;
                 var5 += var9;
-                var2 += anInt749;
+                var2 += drawingAreaWidth;
             }
         }
     }
 
     public static void method641(int var0, int var1) {
         int var2 = anIntArray1082[0];
-        int var3 = var2 / anInt749;
-        int var4 = var2 - var3 * anInt749;
+        int var3 = var2 / drawingAreaWidth;
+        int var4 = var2 - var3 * drawingAreaWidth;
         viewportCenterX = var0 - var4;
         viewportCenterY = var1 - var3;
         anInt230 = -viewportCenterX;
@@ -3299,11 +3299,11 @@ public class Node_Sub21_Sub26_Sub1 extends Node_Sub21_Sub26 {
             anIntArray1082 = new int[RS3CopyPastedNodeTable.nextPowerOf2(anInt235)];
         }
 
-        int var4 = var1 * anInt749 + var0;
+        int var4 = var1 * drawingAreaWidth + var0;
 
         for (int var5 = 0; var5 < anInt235; ++var5) {
             anIntArray1082[var5] = var4;
-            var4 += anInt749;
+            var4 += drawingAreaWidth;
         }
 
     }

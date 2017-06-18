@@ -93,8 +93,8 @@ public class SceneGraph {
         var3 = var1 * pitchCos - var2 * pitchSin >> 16;
         var2 = var1 * pitchSin + var2 * pitchCos >> 16;
         var2 |= 1;
-        int var4 = Node_Sub21_Sub26_Sub1.viewportCenterX + var0 * Node_Sub21_Sub26_Sub1.anInt228 / var2 + Node_Sub21_Sub26.anInt754;
-        int var5 = Node_Sub21_Sub26_Sub1.viewportCenterY + var3 * Node_Sub21_Sub26_Sub1.anInt228 / var2 + Node_Sub21_Sub26.anInt1257;
+        int var4 = Node_Sub21_Sub26_Sub1.viewportCenterX + var0 * Node_Sub21_Sub26_Sub1.anInt228 / var2 + DrawingArea.anInt754;
+        int var5 = Node_Sub21_Sub26_Sub1.viewportCenterY + var3 * Node_Sub21_Sub26_Sub1.anInt228 / var2 + DrawingArea.anInt1257;
         return new int[]{var4, var5};
     }
 

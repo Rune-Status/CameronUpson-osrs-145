@@ -212,9 +212,9 @@ public class Class189 {
 
     public void method1298(int var1, int var2, int var3, int var4, int var5) {
         int[] var6 = new int[4];
-        Node_Sub21_Sub26.method1207(var6);
-        Node_Sub21_Sub26.method1209(var1, var2, var1 + var3, var2 + var4);
-        Node_Sub21_Sub26.method1223(var1, var2, var3, var4, -16777216);
+        DrawingArea.method1207(var6);
+        DrawingArea.setClip(var1, var2, var1 + var3, var2 + var4);
+        DrawingArea.method1223(var1, var2, var3, var4, -16777216);
         int var7 = this.aClass190_2229.method1308();
         if (var7 < 100) {
             this.method1304(var1, var2, var3, var4, var7);
@@ -253,7 +253,7 @@ public class Class189 {
 
             this.anInt2232 = var8;
             this.anInt2233 = var9;
-            Node_Sub21_Sub26.method1213(var6);
+            DrawingArea.method1213(var6);
         }
     }
 
@@ -278,9 +278,9 @@ public class Class189 {
         byte var6 = 20;
         int var7 = var3 / 2 + var1;
         int var8 = var4 / 2 + var2 - 18 - var6;
-        Node_Sub21_Sub26.method1223(var1, var2, var3, var4, -16777216);
-        Node_Sub21_Sub26.method1208(var7 - 152, var8, 304, 34, -65536);
-        Node_Sub21_Sub26.method1223(var7 - 150, var8 + 2, var5 * 3, 30, -65536);
+        DrawingArea.method1223(var1, var2, var3, var4, -16777216);
+        DrawingArea.method1208(var7 - 152, var8, 304, 34, -65536);
+        DrawingArea.method1223(var7 - 150, var8 + 2, var5 * 3, 30, -65536);
         this.aFont2225.method1161("Loading...", var7, var8 + var6, -1, -1);
     }
 

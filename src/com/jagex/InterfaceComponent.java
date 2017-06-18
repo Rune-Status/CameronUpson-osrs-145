@@ -225,7 +225,7 @@ public class InterfaceComponent extends Node {
             if (Client.anInt1698 < 3) {
                 Class122.aSprite1360.method1245(var1, var2, var4.anInt204, var4.anInt209, 25, 25, Client.mapRotation, 256, var4.anIntArray950, var4.anIntArray340);
             } else {
-                Node_Sub21_Sub26.method1225(var1, var2, 0, var4.anIntArray950, var4.anIntArray340);
+                DrawingArea.method1225(var1, var2, 0, var4.anIntArray950, var4.anIntArray340);
             }
 
         }

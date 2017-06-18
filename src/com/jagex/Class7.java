@@ -354,11 +354,11 @@ public final class Class7 {
     }
 
     public final void method30(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
-        int[] var9 = Node_Sub21_Sub26.anIntArray953;
-        int var10 = Node_Sub21_Sub26.anInt749;
-        int var11 = Node_Sub21_Sub26.anInt748;
+        int[] var9 = DrawingArea.drawingAreaPixels;
+        int var10 = DrawingArea.drawingAreaWidth;
+        int var11 = DrawingArea.anInt748;
         int[] var12 = new int[4];
-        Node_Sub21_Sub26.method1207(var12);
+        DrawingArea.method1207(var12);
         Class5 var13 = this.method29(var1, var2, var3, var4);
         float var14 = this.method28(var7 - var5, var3 - var1);
         int var15 = (int) Math.ceil((double) var14);
@@ -379,8 +379,8 @@ public final class Class7 {
             }
         }
 
-        Node_Sub21_Sub26.method1211(var9, var10, var11);
-        Node_Sub21_Sub26.method1213(var12);
+        DrawingArea.method1211(var9, var10, var11);
+        DrawingArea.method1213(var12);
         var17 = (int) (64.0F * var14);
         var18 = this.anInt51 + var1;
         int var19 = this.anInt58 + var2;
@@ -469,7 +469,7 @@ public final class Class7 {
                         Class24 var12 = (Class24) var11.next();
                         int var13 = var3 * (var12.aSceneOffset_167.x - this.anInt51) / this.anInt60;
                         int var14 = var4 - var4 * (var12.aSceneOffset_167.y - this.anInt58) / this.anInt57;
-                        Node_Sub21_Sub26.method1221(var13 + var1, var2 + var14, 2, 16776960, 256);
+                        DrawingArea.method1221(var13 + var1, var2 + var14, 2, 16776960, 256);
                     }
                 }
             }

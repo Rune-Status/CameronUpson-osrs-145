@@ -94,20 +94,20 @@ public class Hitbar extends Node {
                             var9 += var23;
                             if (var17 >= 0 && var17 < 255) {
                                 var13.method1237(var21, var22, var17);
-                                Node_Sub21_Sub26.method1228(var21, var22, var88 + var21, var23 + var22);
+                                DrawingArea.method1228(var21, var22, var88 + var21, var23 + var22);
                                 var14.method1237(var21, var22, var17);
                             } else {
                                 var13.method1230(var21, var22);
-                                Node_Sub21_Sub26.method1228(var21, var22, var21 + var88, var23 + var22);
+                                DrawingArea.method1228(var21, var22, var21 + var88, var23 + var22);
                                 var14.method1230(var21, var22);
                             }
 
-                            Node_Sub21_Sub26.method1209(var2, var3, var2 + var4, var5 + var3);
+                            DrawingArea.setClip(var2, var3, var2 + var4, var5 + var3);
                             var9 += 2;
                         } else {
                             if (Client.anInt1561 > -1) {
-                                Node_Sub21_Sub26.method1223(var21, var22, var88, 5, 65280);
-                                Node_Sub21_Sub26.method1223(var88 + var21, var22, var16 - var88, 5, 16711680);
+                                DrawingArea.method1223(var21, var22, var88, 5, 65280);
+                                DrawingArea.method1223(var88 + var21, var22, var16 - var88, 5, 16711680);
                             }
 
                             var9 += 7;

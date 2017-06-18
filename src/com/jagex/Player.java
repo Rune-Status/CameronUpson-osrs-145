@@ -77,9 +77,9 @@ public final class Player extends PathingEntity {
                 var8 = var6 * var3 * 512 / (var15 * 334);
                 var9 = (var2 - var8) / 2;
                 if (var4) {
-                    Node_Sub21_Sub26.method1206();
-                    Node_Sub21_Sub26.method1223(var0, var1, var9, var3, -16777216);
-                    Node_Sub21_Sub26.method1223(var0 + var2 - var9, var1, var9, var3, -16777216);
+                    DrawingArea.method1206();
+                    DrawingArea.method1223(var0, var1, var9, var3, -16777216);
+                    DrawingArea.method1223(var0 + var2 - var9, var1, var9, var3, -16777216);
                 }
 
                 var0 += var9;
@@ -93,9 +93,9 @@ public final class Player extends PathingEntity {
                 var8 = var2 * var15 * 334 / (var6 * 512);
                 var9 = (var3 - var8) / 2;
                 if (var4) {
-                    Node_Sub21_Sub26.method1206();
-                    Node_Sub21_Sub26.method1223(var0, var1, var2, var9, -16777216);
-                    Node_Sub21_Sub26.method1223(var0, var3 + var1 - var9, var2, var9, -16777216);
+                    DrawingArea.method1206();
+                    DrawingArea.method1223(var0, var1, var2, var9, -16777216);
+                    DrawingArea.method1223(var0, var3 + var1 - var9, var2, var9, -16777216);
                 }
 
                 var1 += var9;

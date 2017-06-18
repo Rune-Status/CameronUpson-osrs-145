@@ -36,7 +36,7 @@ public class Class93 {
 
         } else {
             Login.anInt701 = var3;
-            Node_Sub21_Sub26.method1218();
+            DrawingArea.method1218();
             byte[] var4 = var0.method1105("title.jpg", "");
             BufferedImage var5 = null;
 

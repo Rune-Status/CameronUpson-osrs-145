@@ -4885,7 +4885,7 @@ public final class Client extends Applet_Sub1 {
             Class122.method810(anInt1632, 0, 0, AxisAlignedBoundingBox.appletWidth, Class64.appletHeight, 0, 0, -1);
         }
 
-        Node_Sub21_Sub26.method1206();
+        DrawingArea.method1206();
         int var2;
         int var3;
         if (!menuOpen) {
@@ -4926,9 +4926,9 @@ public final class Client extends Applet_Sub1 {
         if (redrawMode == 3) {
             for (var1 = 0; var1 < anInt1673; ++var1) {
                 if (aBooleanArray1665[var1]) {
-                    Node_Sub21_Sub26.method1212(interfacePositionsX[var1], interfacePositionsY[var1], interfaceWidths[var1], interfaceHeights[var1], 16711935, 128);
+                    DrawingArea.method1212(interfacePositionsX[var1], interfacePositionsY[var1], interfaceWidths[var1], interfaceHeights[var1], 16711935, 128);
                 } else if (aBooleanArray1674[var1]) {
-                    Node_Sub21_Sub26.method1212(interfacePositionsX[var1], interfacePositionsY[var1], interfaceWidths[var1], interfaceHeights[var1], 16711680, 128);
+                    DrawingArea.method1212(interfacePositionsX[var1], interfacePositionsY[var1], interfaceWidths[var1], interfaceHeights[var1], 16711680, 128);
                 }
             }
         }

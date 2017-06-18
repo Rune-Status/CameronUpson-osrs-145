@@ -53,9 +53,9 @@ public class Class2 {
                 WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "sl_stars", "");
             }
 
-            Node_Sub21_Sub26.method1223(Login.anInt702, 23, 765, 480, 0);
-            Node_Sub21_Sub26.method1217(Login.anInt702, 0, 125, 23, 12425273, 9135624);
-            Node_Sub21_Sub26.method1217(Login.anInt702 + 125, 0, 640, 23, 5197647, 2697513);
+            DrawingArea.method1223(Login.anInt702, 23, 765, 480, 0);
+            DrawingArea.method1217(Login.anInt702, 0, 125, 23, 12425273, 9135624);
+            DrawingArea.method1217(Login.anInt702 + 125, 0, 640, 23, 5197647, 2697513);
             var0.method1161("Select a world", Login.anInt702 + 62, 15, 0, -1);
             if (WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85 != null) {
                 WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85[1].method1155(Login.anInt702 + 140, 1);
@@ -123,7 +123,7 @@ public class Class2 {
                 var0.method1170("Type", var7 + 32, 17, 16777215, -1);
             }
 
-            Node_Sub21_Sub26.method1223(Login.anInt702 + 708, 4, 50, 16, 0);
+            DrawingArea.method1223(Login.anInt702 + 708, 4, 50, 16, 0);
             var1.method1161("Cancel", Login.anInt702 + 708 + 25, 16, 16777215, -1);
             Login.anInt684 = -1;
             if (Class158.aSpriteArray1847 != null) {
@@ -231,8 +231,8 @@ public class Class2 {
                 if (var15) {
                     var16 = var1.getTextWidth(World.worlds[Login.anInt684].activity) + 6;
                     int var22 = var1.anInt221 + 8;
-                    Node_Sub21_Sub26.method1223(Class33.anInt261 - var16 / 2, Class33.anInt260 + 20 + 5, var16, var22, 16777120);
-                    Node_Sub21_Sub26.method1208(Class33.anInt261 - var16 / 2, Class33.anInt260 + 20 + 5, var16, var22, 0);
+                    DrawingArea.method1223(Class33.anInt261 - var16 / 2, Class33.anInt260 + 20 + 5, var16, var22, 16777120);
+                    DrawingArea.method1208(Class33.anInt261 - var16 / 2, Class33.anInt260 + 20 + 5, var16, var22, 0);
                     var1.method1161(World.worlds[Login.anInt684].activity, Class33.anInt261, Class33.anInt260 + 20 + 5 + var1.anInt221 + 4, 0, -1);
                 }
             }
@@ -249,10 +249,10 @@ public class Class2 {
                 var4 = 20;
                 var0.method1161("RuneScape is loading - please wait...", Login.anInt710 + 180, 245 - var4, 16777215, -1);
                 var5 = 253 - var4;
-                Node_Sub21_Sub26.method1208(Login.anInt710 + 180 - 152, var5, 304, 34, 9179409);
-                Node_Sub21_Sub26.method1208(Login.anInt710 + 180 - 151, var5 + 1, 302, 32, 0);
-                Node_Sub21_Sub26.method1223(Login.anInt710 + 180 - 150, var5 + 2, Login.anInt699 * 3, 30, 9179409);
-                Node_Sub21_Sub26.method1223(Login.anInt710 + 180 - 150 + Login.anInt699 * 3, var5 + 2, 300 - Login.anInt699 * 3, 30, 0);
+                DrawingArea.method1208(Login.anInt710 + 180 - 152, var5, 304, 34, 9179409);
+                DrawingArea.method1208(Login.anInt710 + 180 - 151, var5 + 1, 302, 32, 0);
+                DrawingArea.method1223(Login.anInt710 + 180 - 150, var5 + 2, Login.anInt699 * 3, 30, 9179409);
+                DrawingArea.method1223(Login.anInt710 + 180 - 150 + Login.anInt699 * 3, var5 + 2, 300 - Login.anInt699 * 3, 30, 0);
                 var0.method1161(Login.aString686, Login.anInt710 + 180, 276 - var4, 16777215, -1);
             }
 
@@ -465,9 +465,9 @@ public class Class2 {
                 }
             }
 
-            Node_Sub21_Sub26.method1209(Login.anInt702, 9, Login.anInt702 + 128, var25 + 7);
+            DrawingArea.setClip(Login.anInt702, 9, Login.anInt702 + 128, var25 + 7);
             Class3.aSprite17.method1242(Login.anInt702, 0);
-            Node_Sub21_Sub26.method1206();
+            DrawingArea.method1206();
             var5 = 0;
             var28 = World.graphicsProvider.anInt2180 * 9 + Login.anInt702;
 
@@ -496,9 +496,9 @@ public class Class2 {
                 var28 += var30 + World.graphicsProvider.anInt2180 - 128;
             }
 
-            Node_Sub21_Sub26.method1209(Login.anInt702 + 765 - 128, 9, Login.anInt702 + 765, var25 + 7);
+            DrawingArea.setClip(Login.anInt702 + 765 - 128, 9, Login.anInt702 + 765, var25 + 7);
             Login.aSprite697.method1242(Login.anInt702 + 382, 0);
-            Node_Sub21_Sub26.method1206();
+            DrawingArea.method1206();
             var5 = 0;
             var28 = Login.anInt702 + World.graphicsProvider.anInt2180 * 9 + 24 + 637;
 

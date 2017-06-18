@@ -16,7 +16,7 @@ public final class Class5 {
     }
 
     static void method19(InterfaceComponent[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
-        Node_Sub21_Sub26.method1209(var2, var3, var4, var5);
+        DrawingArea.setClip(var2, var3, var4, var5);
         Node_Sub21_Sub26_Sub1.method308();
 
         for (int var9 = 0; var9 < var0.length; ++var9) {
@@ -187,19 +187,19 @@ public final class Class5 {
                                 Client.anInt1617 = var13;
                                 Class49.method314(var12, var13, component.width, component.height);
                                 Client.aBooleanArray1656[component.boundsIndex] = true;
-                                Node_Sub21_Sub26.method1209(var2, var3, var4, var5);
+                                DrawingArea.setClip(var2, var3, var4, var5);
                                 continue;
                             }
 
                             if (component.contentType == 1338) {
                                 Class182.method1200(component, var12, var13, var11);
-                                Node_Sub21_Sub26.method1209(var2, var3, var4, var5);
+                                DrawingArea.setClip(var2, var3, var4, var5);
                                 continue;
                             }
 
                             if (component.contentType == 1339) {
                                 InterfaceComponent.method409(component, var12, var13, var11);
-                                Node_Sub21_Sub26.method1209(var2, var3, var4, var5);
+                                DrawingArea.setClip(var2, var3, var4, var5);
                                 continue;
                             }
 
@@ -237,7 +237,7 @@ public final class Class5 {
                                 Class122.method810(var19.id, var15, var16, var17, var18, var12, var13, var11);
                             }
 
-                            Node_Sub21_Sub26.method1209(var2, var3, var4, var5);
+                            DrawingArea.setClip(var2, var3, var4, var5);
                             Node_Sub21_Sub26_Sub1.method308();
                         }
 
@@ -251,22 +251,22 @@ public final class Class5 {
                                 var23 = component.viewportHeight;
                                 Class64.aNode_Sub21_Sub26_Sub2Array656[0].method1155(var22, var13);
                                 Class64.aNode_Sub21_Sub26_Sub2Array656[1].method1155(var22, var13 + var21 - 16);
-                                Node_Sub21_Sub26.method1223(var22, var13 + 16, 16, var21 - 32, Client.anInt1543);
+                                DrawingArea.method1223(var22, var13 + 16, 16, var21 - 32, Client.anInt1543);
                                 var24 = (var21 - 32) * var21 / var23;
                                 if (var24 < 8) {
                                     var24 = 8;
                                 }
 
                                 var25 = (var21 - 32 - var24) * var20 / (var23 - var21);
-                                Node_Sub21_Sub26.method1223(var22, var13 + 16 + var25, 16, var24, Client.anInt1545);
-                                Node_Sub21_Sub26.method1220(var22, var25 + var13 + 16, var24, Client.anInt1549);
-                                Node_Sub21_Sub26.method1220(var22 + 1, var13 + 16 + var25, var24, Client.anInt1549);
-                                Node_Sub21_Sub26.method1214(var22, var13 + 16 + var25, 16, Client.anInt1549);
-                                Node_Sub21_Sub26.method1214(var22, var25 + var13 + 17, 16, Client.anInt1549);
-                                Node_Sub21_Sub26.method1220(var22 + 15, var25 + var13 + 16, var24, Client.anInt1551);
-                                Node_Sub21_Sub26.method1220(var22 + 14, var25 + var13 + 17, var24 - 1, Client.anInt1551);
-                                Node_Sub21_Sub26.method1214(var22, var24 + var13 + 15 + var25, 16, Client.anInt1551);
-                                Node_Sub21_Sub26.method1214(var22 + 1, var24 + var13 + 14 + var25, 15, Client.anInt1551);
+                                DrawingArea.method1223(var22, var13 + 16 + var25, 16, var24, Client.anInt1545);
+                                DrawingArea.method1220(var22, var25 + var13 + 16, var24, Client.anInt1549);
+                                DrawingArea.method1220(var22 + 1, var13 + 16 + var25, var24, Client.anInt1549);
+                                DrawingArea.method1214(var22, var13 + 16 + var25, 16, Client.anInt1549);
+                                DrawingArea.method1214(var22, var25 + var13 + 17, 16, Client.anInt1549);
+                                DrawingArea.method1220(var22 + 15, var25 + var13 + 16, var24, Client.anInt1551);
+                                DrawingArea.method1220(var22 + 14, var25 + var13 + 17, var24 - 1, Client.anInt1551);
+                                DrawingArea.method1214(var22, var24 + var13 + 15 + var25, 16, Client.anInt1551);
+                                DrawingArea.method1214(var22 + 1, var24 + var13 + 14 + var25, 15, Client.anInt1551);
                             }
 
                             if (component.type != 1) {
@@ -326,8 +326,8 @@ public final class Class5 {
                                                             if (var1 != -1) {
                                                                 InterfaceComponent var34 = var0[var1 & '\uffff'];
                                                                 int var35;
-                                                                if (var26 + var24 < Node_Sub21_Sub26.anInt1257 && var34.insetY > 0) {
-                                                                    var35 = Client.anInt1544 * (Node_Sub21_Sub26.anInt1257 - var24 - var26) / 3;
+                                                                if (var26 + var24 < DrawingArea.anInt1257 && var34.insetY > 0) {
+                                                                    var35 = Client.anInt1544 * (DrawingArea.anInt1257 - var24 - var26) / 3;
                                                                     if (var35 > Client.anInt1544 * 10) {
                                                                         var35 = Client.anInt1544 * 10;
                                                                     }
@@ -341,8 +341,8 @@ public final class Class5 {
                                                                     ItemTable.method284(var34);
                                                                 }
 
-                                                                if (var26 + var24 + 32 > Node_Sub21_Sub26.anInt753 && var34.insetY < var34.viewportHeight - var34.height) {
-                                                                    var35 = Client.anInt1544 * (var26 + var24 + 32 - Node_Sub21_Sub26.anInt753) / 3;
+                                                                if (var26 + var24 + 32 > DrawingArea.anInt753 && var34.insetY < var34.viewportHeight - var34.height) {
+                                                                    var35 = Client.anInt1544 * (var26 + var24 + 32 - DrawingArea.anInt753) / 3;
                                                                     if (var35 > Client.anInt1544 * 10) {
                                                                         var35 = Client.anInt1544 * 10;
                                                                     }
@@ -386,28 +386,28 @@ public final class Class5 {
                                     if (component.aBoolean1861) {
                                         switch (component.aClass172_1865.index) {
                                             case 1:
-                                                Node_Sub21_Sub26.method1229(var12, var13, component.width, component.height, component.textColor, component.anInt761, 256 - (component.anInt1864 & 255), 256 - (component.anInt1860 & 255));
+                                                DrawingArea.method1229(var12, var13, component.width, component.height, component.textColor, component.anInt761, 256 - (component.anInt1864 & 255), 256 - (component.anInt1860 & 255));
                                                 break;
                                             case 2:
-                                                Node_Sub21_Sub26.method1210(var12, var13, component.width, component.height, component.textColor, component.anInt761, 256 - (component.anInt1864 & 255), 256 - (component.anInt1860 & 255));
+                                                DrawingArea.method1210(var12, var13, component.width, component.height, component.textColor, component.anInt761, 256 - (component.anInt1864 & 255), 256 - (component.anInt1860 & 255));
                                                 break;
                                             case 3:
-                                                Node_Sub21_Sub26.method1219(var12, var13, component.width, component.height, component.textColor, component.anInt761, 256 - (component.anInt1864 & 255), 256 - (component.anInt1860 & 255));
+                                                DrawingArea.method1219(var12, var13, component.width, component.height, component.textColor, component.anInt761, 256 - (component.anInt1864 & 255), 256 - (component.anInt1860 & 255));
                                                 break;
                                             case 4:
-                                                Node_Sub21_Sub26.method1205(var12, var13, component.width, component.height, component.textColor, component.anInt761, 256 - (component.anInt1864 & 255), 256 - (component.anInt1860 & 255));
+                                                DrawingArea.method1205(var12, var13, component.width, component.height, component.textColor, component.anInt761, 256 - (component.anInt1864 & 255), 256 - (component.anInt1860 & 255));
                                                 break;
                                             default:
                                                 if (var14 == 0) {
-                                                    Node_Sub21_Sub26.method1223(var12, var13, component.width, component.height, var22);
+                                                    DrawingArea.method1223(var12, var13, component.width, component.height, var22);
                                                 } else {
-                                                    Node_Sub21_Sub26.method1212(var12, var13, component.width, component.height, var22, 256 - (var14 & 255));
+                                                    DrawingArea.method1212(var12, var13, component.width, component.height, var22, 256 - (var14 & 255));
                                                 }
                                         }
                                     } else if (var14 == 0) {
-                                        Node_Sub21_Sub26.method1208(var12, var13, component.width, component.height, var22);
+                                        DrawingArea.method1208(var12, var13, component.width, component.height, var22);
                                     } else {
-                                        Node_Sub21_Sub26.method1215(var12, var13, component.width, component.height, var22, 256 - (var14 & 255));
+                                        DrawingArea.method1215(var12, var13, component.width, component.height, var22, 256 - (var14 & 255));
                                     }
                                 } else {
                                     Font var36;
@@ -494,7 +494,7 @@ public final class Class5 {
                                                         var37.method1247(var12, var13, component.width, component.height);
                                                     }
                                                 } else {
-                                                    Node_Sub21_Sub26.method1228(var12, var13, component.width + var12, component.height + var13);
+                                                    DrawingArea.method1228(var12, var13, component.width + var12, component.height + var13);
                                                     var23 = (component.width + (var20 - 1)) / var20;
                                                     var24 = (var21 - 1 + component.height) / var21;
 
@@ -510,7 +510,7 @@ public final class Class5 {
                                                         }
                                                     }
 
-                                                    Node_Sub21_Sub26.method1209(var2, var3, var4, var5);
+                                                    DrawingArea.setClip(var2, var3, var4, var5);
                                                 }
                                             }
                                         }
@@ -652,8 +652,8 @@ public final class Class5 {
                                                     var26 = var5 - var20;
                                                 }
 
-                                                Node_Sub21_Sub26.method1223(var25, var26, var22, var20, 16777120);
-                                                Node_Sub21_Sub26.method1208(var25, var26, var22, var20, 0);
+                                                DrawingArea.method1223(var25, var26, var22, var20, 16777120);
+                                                DrawingArea.method1208(var25, var26, var22, var20, 0);
                                                 var31 = component.text;
                                                 var27 = var26 + var29.anInt221 + 2;
 
@@ -685,7 +685,7 @@ public final class Class5 {
                                                 }
 
                                                 if (component.anInt1859 == 1) {
-                                                    Node_Sub21_Sub26.method1226(var22, var20, var21, var23, component.textColor);
+                                                    DrawingArea.method1226(var22, var20, var21, var23, component.textColor);
                                                 } else {
                                                     Class6_Sub2.method460(var22, var20, var21, var23, component.textColor, component.anInt1859);
                                                 }

@@ -540,7 +540,7 @@ public class Class9 {
         if (var7 != 0 && this.anInt65 != 0 && this.aByteArrayArrayArray66 != null) {
             var8 = this.method49(var8, var7);
             var7 = this.method47(var7);
-            Node_Sub21_Sub26.method1204(var1, var2, var5, var6, var3, var4, this.aByteArrayArrayArray66[var7 - 1][var8], this.anInt65);
+            DrawingArea.method1204(var1, var2, var5, var6, var3, var4, this.aByteArrayArrayArray66[var7 - 1][var8], this.anInt65);
         }
     }
 
