@@ -2,19 +2,19 @@ package com.jagex;
 
 public final class IsaacCipher {
 
-    int[] anIntArray1342 = new int[256];
-    int[] anIntArray1340 = new int[256];
+    int[] anIntArray1342 = new int[256]; //results or memory
+    int[] results = new int[256];
     int anInt1338;
     int anInt1343;
     int anInt1341;
     int anInt1339;
 
-    IsaacCipher(int[] var1) {
-        for (int var2 = 0; var2 < var1.length; ++var2) {
-            this.anIntArray1340[var2] = var1[var2];
+    IsaacCipher(int[] seed) {
+        for (int i = 0; i < seed.length; ++i) {
+            this.results[i] = seed[i];
         }
 
-        this.method793();
+        method793();
     }
 
     public static boolean method795(int var0) {
@@ -93,7 +93,7 @@ public final class IsaacCipher {
             this.anInt1338 = 255;
         }
 
-        return this.anIntArray1340[this.anInt1338];
+        return this.results[this.anInt1338];
     }
 
     final void method796() {
@@ -116,7 +116,7 @@ public final class IsaacCipher {
             this.anInt1343 += this.anIntArray1342[var1 + 128 & 255];
             int var3;
             this.anIntArray1342[var1] = var3 = this.anInt1343 + this.anIntArray1342[(var2 & 1020) >> 2] + this.anInt1341;
-            this.anIntArray1340[var1] = this.anInt1341 = var2 + this.anIntArray1342[(var3 >> 8 & 1020) >> 2];
+            this.results[var1] = this.anInt1341 = var2 + this.anIntArray1342[(var3 >> 8 & 1020) >> 2];
         }
 
     }
@@ -160,14 +160,14 @@ public final class IsaacCipher {
         }
 
         for (var9 = 0; var9 < 256; var9 += 8) {
-            var8 += this.anIntArray1340[var9];
-            var7 += this.anIntArray1340[var9 + 1];
-            var6 += this.anIntArray1340[var9 + 2];
-            var5 += this.anIntArray1340[var9 + 3];
-            var4 += this.anIntArray1340[var9 + 4];
-            var3 += this.anIntArray1340[var9 + 5];
-            var2 += this.anIntArray1340[var9 + 6];
-            var1 += this.anIntArray1340[var9 + 7];
+            var8 += this.results[var9];
+            var7 += this.results[var9 + 1];
+            var6 += this.results[var9 + 2];
+            var5 += this.results[var9 + 3];
+            var4 += this.results[var9 + 4];
+            var3 += this.results[var9 + 5];
+            var2 += this.results[var9 + 6];
+            var1 += this.results[var9 + 7];
             var8 ^= var7 << 11;
             var5 += var8;
             var7 += var6;
