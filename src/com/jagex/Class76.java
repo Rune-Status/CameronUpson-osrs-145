@@ -25,10 +25,10 @@ public class Class76 implements EnumOrdinal {
 
                 int var5;
                 if (Client.itemSelectionState == 1) {
-                    Class12_Sub1.method125("Use", Client.latestSelectedItemName + " " + "->" + " " + Class75.method449(16777215) + var4, 14, var1, var2, var3);
+                    WorldMapTransportation_Sub1.method125("Use", Client.latestSelectedItemName + " " + "->" + " " + Class75.method449(16777215) + var4, 14, var1, var2, var3);
                 } else if (Client.spellSelected) {
                     if ((Class162.anInt1957 & 8) == 8) {
-                        Class12_Sub1.method125(Client.aString1623, Client.aString1616 + " " + "->" + " " + Class75.method449(16777215) + var4, 15, var1, var2, var3);
+                        WorldMapTransportation_Sub1.method125(Client.aString1623, Client.aString1616 + " " + "->" + " " + Class75.method449(16777215) + var4, 15, var1, var2, var3);
                     }
                 } else {
                     for (var5 = 7; var5 >= 0; --var5) {
@@ -56,7 +56,7 @@ public class Class76 implements EnumOrdinal {
 
                             boolean var7 = false;
                             int var8 = Client.anIntArray1607[var5] + var6;
-                            Class12_Sub1.method125(Client.playerActions[var5], Class75.method449(16777215) + var4, var8, var1, var2, var3);
+                            WorldMapTransportation_Sub1.method125(Client.playerActions[var5], Class75.method449(16777215) + var4, var8, var1, var2, var3);
                         }
                     }
                 }

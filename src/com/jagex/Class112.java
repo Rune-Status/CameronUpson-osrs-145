@@ -9,7 +9,7 @@ public class Class112 {
 
     static void method773(InterfaceComponent var0, int var1, int var2) {
         if (var0.buttonType == 1) {
-            Class12_Sub1.method125(var0.aString1935, "", 24, 0, 0, var0.uid);
+            WorldMapTransportation_Sub1.method125(var0.aString1935, "", 24, 0, 0, var0.uid);
         }
 
         String var3;
@@ -23,24 +23,24 @@ public class Class112 {
             }
 
             if (var3 != null) {
-                Class12_Sub1.method125(var3, Class75.method449(65280) + var0.aString1925, 25, 0, -1, var0.uid);
+                WorldMapTransportation_Sub1.method125(var3, Class75.method449(65280) + var0.aString1925, 25, 0, -1, var0.uid);
             }
         }
 
         if (var0.buttonType == 3) {
-            Class12_Sub1.method125("Close", "", 26, 0, 0, var0.uid);
+            WorldMapTransportation_Sub1.method125("Close", "", 26, 0, 0, var0.uid);
         }
 
         if (var0.buttonType == 4) {
-            Class12_Sub1.method125(var0.aString1935, "", 28, 0, 0, var0.uid);
+            WorldMapTransportation_Sub1.method125(var0.aString1935, "", 28, 0, 0, var0.uid);
         }
 
         if (var0.buttonType == 5) {
-            Class12_Sub1.method125(var0.aString1935, "", 29, 0, 0, var0.uid);
+            WorldMapTransportation_Sub1.method125(var0.aString1935, "", 29, 0, 0, var0.uid);
         }
 
         if (var0.buttonType == 6 && Client.anInterfaceComponent1627 == null) {
-            Class12_Sub1.method125(var0.aString1935, "", 30, 0, -1, var0.uid);
+            WorldMapTransportation_Sub1.method125(var0.aString1935, "", 30, 0, -1, var0.uid);
         }
 
         int var5;
@@ -65,11 +65,11 @@ public class Class112 {
                             ItemDefinition var10 = Class149.method1001(var0.itemIds[var5] - 1);
                             if (Client.itemSelectionState == 1 && Class1.method3(Class75.method448(var0))) {
                                 if (var0.uid != Class2.anInt15 || var5 != Class55.anInt421) {
-                                    Class12_Sub1.method125("Use", Client.latestSelectedItemName + " " + "->" + " " + Class75.method449(16748608) + var10.name, 31, var10.id, var5, var0.uid);
+                                    WorldMapTransportation_Sub1.method125("Use", Client.latestSelectedItemName + " " + "->" + " " + Class75.method449(16748608) + var10.name, 31, var10.id, var5, var0.uid);
                                 }
                             } else if (Client.spellSelected && Class1.method3(Class75.method448(var0))) {
                                 if ((Class162.anInt1957 & 16) == 16) {
-                                    Class12_Sub1.method125(Client.aString1623, Client.aString1616 + " " + "->" + " " + Class75.method449(16748608) + var10.name, 32, var10.id, var5, var0.uid);
+                                    WorldMapTransportation_Sub1.method125(Client.aString1623, Client.aString1616 + " " + "->" + " " + Class75.method449(16748608) + var10.name, 32, var10.id, var5, var0.uid);
                                 }
                             } else {
                                 String[] var11 = var10.actions;
@@ -99,7 +99,7 @@ public class Class112 {
                                 }
 
                                 if (Class62.method378(Class75.method448(var0))) {
-                                    Class12_Sub1.method125("Use", Class75.method449(16748608) + var10.name, 38, var10.id, var5, var0.uid);
+                                    WorldMapTransportation_Sub1.method125("Use", Class75.method449(16748608) + var10.name, 38, var10.id, var5, var0.uid);
                                 }
 
                                 if (Class1.method3(Class75.method448(var0)) && var11 != null) {
@@ -153,12 +153,12 @@ public class Class112 {
                                                 var19 = 43;
                                             }
 
-                                            Class12_Sub1.method125(var11[var13], Class75.method449(16748608) + var10.name, var19, var10.id, var5, var0.uid);
+                                            WorldMapTransportation_Sub1.method125(var11[var13], Class75.method449(16748608) + var10.name, var19, var10.id, var5, var0.uid);
                                         }
                                     }
                                 }
 
-                                Class12_Sub1.method125("Examine", Class75.method449(16748608) + var10.name, 1005, var10.id, var5, var0.uid);
+                                WorldMapTransportation_Sub1.method125("Examine", Class75.method449(16748608) + var10.name, 1005, var10.id, var5, var0.uid);
                             }
                         }
                     }
@@ -171,7 +171,7 @@ public class Class112 {
         if (var0.aBoolean1173) {
             if (Client.spellSelected) {
                 if (Class153.method1008(Class75.method448(var0)) && (Class162.anInt1957 & 32) == 32) {
-                    Class12_Sub1.method125(Client.aString1623, Client.aString1616 + " " + "->" + " " + var0.aString1895, 58, 0, var0.componentIndex, var0.uid);
+                    WorldMapTransportation_Sub1.method125(Client.aString1623, Client.aString1616 + " " + "->" + " " + var0.aString1895, 58, 0, var0.componentIndex, var0.uid);
                 }
             } else {
                 boolean var18;
@@ -188,7 +188,7 @@ public class Class112 {
                     }
 
                     if (var4 != null) {
-                        Class12_Sub1.method125(var4, var0.aString1895, 1007, var5 + 1, var0.componentIndex, var0.uid);
+                        WorldMapTransportation_Sub1.method125(var4, var0.aString1895, 1007, var5 + 1, var0.componentIndex, var0.uid);
                     }
                 }
 
@@ -201,20 +201,20 @@ public class Class112 {
                 }
 
                 if (var3 != null) {
-                    Class12_Sub1.method125(var3, var0.aString1895, 25, 0, var0.componentIndex, var0.uid);
+                    WorldMapTransportation_Sub1.method125(var3, var0.aString1895, 25, 0, var0.componentIndex, var0.uid);
                 }
 
                 for (var7 = 4; var7 >= 0; --var7) {
                     String var17 = InterfaceComponent.method333(var0, var7);
                     if (var17 != null) {
-                        Class12_Sub1.method125(var17, var0.aString1895, 57, var7 + 1, var0.componentIndex, var0.uid);
+                        WorldMapTransportation_Sub1.method125(var17, var0.aString1895, 57, var7 + 1, var0.componentIndex, var0.uid);
                     }
                 }
 
                 var8 = Class75.method448(var0);
                 var18 = (var8 & 1) != 0;
                 if (var18) {
-                    Class12_Sub1.method125("Continue", "", 30, 0, var0.componentIndex, var0.uid);
+                    WorldMapTransportation_Sub1.method125("Continue", "", 30, 0, var0.componentIndex, var0.uid);
                 }
             }
         }

@@ -1,7 +1,7 @@
 package com.jagex;
 
 public interface Class16 {
-    void method1(Class12 var1);
+    void method1(WorldMapTransportation var1);
 
     int[] method2(int var1, int var2, int var3);
 

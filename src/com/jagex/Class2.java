@@ -49,18 +49,18 @@ public class Class2 {
                 Class22.aNode_Sub21_Sub26_Sub2Array147 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "sl_arrows", "");
             }
 
-            if (Class12.aNode_Sub21_Sub26_Sub2Array85 == null) {
-                Class12.aNode_Sub21_Sub26_Sub2Array85 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "sl_stars", "");
+            if (WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85 == null) {
+                WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "sl_stars", "");
             }
 
             Node_Sub21_Sub26.method1223(Login.anInt702, 23, 765, 480, 0);
             Node_Sub21_Sub26.method1217(Login.anInt702, 0, 125, 23, 12425273, 9135624);
             Node_Sub21_Sub26.method1217(Login.anInt702 + 125, 0, 640, 23, 5197647, 2697513);
             var0.method1161("Select a world", Login.anInt702 + 62, 15, 0, -1);
-            if (Class12.aNode_Sub21_Sub26_Sub2Array85 != null) {
-                Class12.aNode_Sub21_Sub26_Sub2Array85[1].method1155(Login.anInt702 + 140, 1);
+            if (WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85 != null) {
+                WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85[1].method1155(Login.anInt702 + 140, 1);
                 var1.method1170("Members only world", Login.anInt702 + 152, 10, 16777215, -1);
-                Class12.aNode_Sub21_Sub26_Sub2Array85[0].method1155(Login.anInt702 + 140, 12);
+                WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85[0].method1155(Login.anInt702 + 140, 12);
                 var1.method1170("Free world", Login.anInt702 + 152, 21, 16777215, -1);
             }
 

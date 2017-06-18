@@ -72,11 +72,11 @@ public class Login {
 
     static void method415(int var0, int var1, int var2, int var3) {
         if (Client.cursorState == 1) {
-            Class12_Sub1.aSpriteArray110[Client.anInt1585 / 100].method1230(Client.anInt1557 - 8, Client.anInt1577 - 8);
+            WorldMapTransportation_Sub1.aSpriteArray110[Client.anInt1585 / 100].method1230(Client.anInt1557 - 8, Client.anInt1577 - 8);
         }
 
         if (Client.cursorState == 2) {
-            Class12_Sub1.aSpriteArray110[Client.anInt1585 / 100 + 4].method1230(Client.anInt1557 - 8, Client.anInt1577 - 8);
+            WorldMapTransportation_Sub1.aSpriteArray110[Client.anInt1585 / 100 + 4].method1230(Client.anInt1557 - 8, Client.anInt1577 - 8);
         }
 
         Class171.method1153();

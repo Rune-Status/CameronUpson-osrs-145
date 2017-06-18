@@ -3,7 +3,7 @@ package com.jagex;
 import java.util.HashSet;
 import java.util.List;
 
-public class Class12_Sub1 extends Class12 {
+public class WorldMapTransportation_Sub1 extends WorldMapTransportation {
     static Sprite[] aSpriteArray110;
     HashSet aHashSet113;
     HashSet aHashSet111;
@@ -14,7 +14,7 @@ public class Class12_Sub1 extends Class12 {
     }
 
     void method126(Buffer var1, Buffer var2, Buffer var3, int var4, boolean var5) {
-        this.method75(var1, var4);
+        this.read(var1, var4);
         int var6 = var3.readUnsignedShort();
         this.aHashSet113 = new HashSet(var6);
 

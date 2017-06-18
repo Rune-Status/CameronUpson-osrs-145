@@ -326,7 +326,7 @@ public class ScriptEvent extends Node {
         } else if (var0 < 1300) {
             return Class119.method806(var0, var1, var2);
         } else if (var0 < 1400) {
-            return Class12.method69(var0, var1, var2);
+            return method69(var0, var1, var2);
         } else if (var0 < 1500) {
             return TileDecor.method613(var0, var1, var2);
         } else if (var0 < 1600) {
@@ -461,7 +461,7 @@ public class ScriptEvent extends Node {
         } else if (var0 < 2300) {
             return Class119.method806(var0, var1, var2);
         } else if (var0 < 2400) {
-            return Class12.method69(var0, var1, var2);
+            return method69(var0, var1, var2);
         } else if (var0 < 2500) {
             return TileDecor.method613(var0, var1, var2);
         } else if (var0 < 2600) {
@@ -1504,13 +1504,13 @@ public class ScriptEvent extends Node {
                                 InterfaceNode.method268().method1295(var3, var24, var5, true);
                                 var11 = 1;
                             } else {
-                                Class12 var41;
+                                WorldMapTransportation var41;
                                 if (var0 == 6601) {
                                     var3 = Class63.anIntArray645[--Class63.anInt644];
                                     var38 = "";
                                     var41 = InterfaceNode.method268().method1276(var3);
                                     if (var41 != null) {
-                                        var38 = var41.method73();
+                                        var38 = var41.getAreaName();
                                     }
 
                                     Class63.aStringArray640[++Class77.anInt828 - 1] = var38;
@@ -1552,14 +1552,14 @@ public class ScriptEvent extends Node {
                                         Class63.anIntArray645[++Class63.anInt644 - 1] = InterfaceNode.method268().method1254();
                                         var11 = 1;
                                     } else {
-                                        Class12 var42;
+                                        WorldMapTransportation var42;
                                         if (var0 == 6611) {
                                             var3 = Class63.anIntArray645[--Class63.anInt644];
                                             var42 = InterfaceNode.method268().method1276(var3);
                                             if (var42 == null) {
                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
                                             } else {
-                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.method62().getHash();
+                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.cloneOffset().getHash();
                                             }
 
                                             var11 = 1;
@@ -1570,8 +1570,8 @@ public class ScriptEvent extends Node {
                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
                                             } else {
-                                                Class63.anIntArray645[++Class63.anInt644 - 1] = (var42.method78() - var42.method80() + 1) * 64;
-                                                Class63.anIntArray645[++Class63.anInt644 - 1] = (var42.method77() - var42.method70() + 1) * 64;
+                                                Class63.anIntArray645[++Class63.anInt644 - 1] = (var42.getMaxX() - var42.getMinX() + 1) * 64;
+                                                Class63.anIntArray645[++Class63.anInt644 - 1] = (var42.getMaxY() - var42.getMinY() + 1) * 64;
                                             }
 
                                             var11 = 1;
@@ -1584,10 +1584,10 @@ public class ScriptEvent extends Node {
                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
                                             } else {
-                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.method80() * 64;
-                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.method70() * 64;
-                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.method78() * 64 + 64 - 1;
-                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.method77() * 64 + 64 - 1;
+                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.getMinX() * 64;
+                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.getMinY() * 64;
+                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.getMaxX() * 64 + 64 - 1;
+                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.getMaxY() * 64 + 64 - 1;
                                             }
 
                                             var11 = 1;
@@ -1597,7 +1597,7 @@ public class ScriptEvent extends Node {
                                             if (var42 == null) {
                                                 Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                             } else {
-                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.method67();
+                                                Class63.anIntArray645[++Class63.anInt644 - 1] = var42.getDefaultScale();
                                             }
 
                                             var11 = 1;
@@ -1694,7 +1694,7 @@ public class ScriptEvent extends Node {
                                                     if (var42 == null) {
                                                         Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                     } else {
-                                                        Class63.anIntArray645[++Class63.anInt644 - 1] = var42.method63();
+                                                        Class63.anIntArray645[++Class63.anInt644 - 1] = var42.getFileId();
                                                     }
 
                                                     var11 = 1;
@@ -2067,6 +2067,54 @@ public class ScriptEvent extends Node {
                     }
                 }
             }
+        }
+    }
+
+    static int method69(int var0, RuneScript var1, boolean var2) {
+        InterfaceComponent var3;
+        if (var0 >= 2000) {
+            var0 -= 1000;
+            var3 = Class161.method1016(Class63.anIntArray645[--Class63.anInt644]);
+        } else {
+            var3 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
+        }
+
+        int var4;
+        if (var0 == 1300) {
+            var4 = Class63.anIntArray645[--Class63.anInt644] - 1;
+            if (var4 >= 0 && var4 <= 9) {
+                var3.method1024(var4, Class63.aStringArray640[--Class77.anInt828]);
+                return 1;
+            } else {
+                --Class77.anInt828;
+                return 1;
+            }
+        } else if (var0 == 1301) {
+            Class63.anInt644 -= 2;
+            var4 = Class63.anIntArray645[Class63.anInt644];
+            int var5 = Class63.anIntArray645[Class63.anInt644 + 1];
+            var3.parent = Class127.method877(var4, var5);
+            return 1;
+        } else if (var0 == 1302) {
+            var3.aBoolean1882 = Class63.anIntArray645[--Class63.anInt644] == 1;
+            return 1;
+        } else if (var0 == 1303) {
+            var3.anInt1892 = Class63.anIntArray645[--Class63.anInt644];
+            return 1;
+        } else if (var0 == 1304) {
+            var3.anInt1889 = Class63.anIntArray645[--Class63.anInt644];
+            return 1;
+        } else if (var0 == 1305) {
+            var3.aString1895 = Class63.aStringArray640[--Class77.anInt828];
+            return 1;
+        } else if (var0 == 1306) {
+            var3.selectedAction = Class63.aStringArray640[--Class77.anInt828];
+            return 1;
+        } else if (var0 == 1307) {
+            var3.actions = null;
+            return 1;
+        } else {
+            return 2;
         }
     }
 

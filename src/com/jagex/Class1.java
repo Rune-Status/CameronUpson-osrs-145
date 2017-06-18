@@ -51,21 +51,21 @@ public class Class1 implements Class16 {
 
     }
 
-    public void method1(Class12 var1) {
-        if (var1.anInt89 > this.anInt4) {
-            var1.anInt89 = this.anInt4;
+    public void method1(WorldMapTransportation var1) {
+        if (var1.minX > this.anInt4) {
+            var1.minX = this.anInt4;
         }
 
-        if (var1.anInt88 < this.anInt4) {
-            var1.anInt88 = this.anInt4;
+        if (var1.maxX < this.anInt4) {
+            var1.maxX = this.anInt4;
         }
 
-        if (var1.anInt87 > this.anInt5) {
-            var1.anInt87 = this.anInt5;
+        if (var1.minY > this.anInt5) {
+            var1.minY = this.anInt5;
         }
 
-        if (var1.anInt84 < this.anInt5) {
-            var1.anInt84 = this.anInt5;
+        if (var1.maxY < this.anInt5) {
+            var1.maxY = this.anInt5;
         }
 
     }

@@ -17,7 +17,7 @@ public class Class180 {
 
     static void method1198(int var0, int var1, int var2, int var3) {
         if (Client.itemSelectionState == 0 && !Client.spellSelected) {
-            Class12_Sub1.method125("Walk here", "", 23, 0, var0 - var2, var1 - var3);
+            WorldMapTransportation_Sub1.method125("Walk here", "", 23, 0, var0 - var2, var1 - var3);
         }
 
         int var4 = -1;
@@ -44,10 +44,10 @@ public class Class180 {
                     }
 
                     if (Client.itemSelectionState == 1) {
-                        Class12_Sub1.method125("Use", Client.latestSelectedItemName + " " + "->" + " " + Class75.method449(65535) + var13.name, 1, var7, var8, var9);
+                        WorldMapTransportation_Sub1.method125("Use", Client.latestSelectedItemName + " " + "->" + " " + Class75.method449(65535) + var13.name, 1, var7, var8, var9);
                     } else if (Client.spellSelected) {
                         if ((Class162.anInt1957 & 4) == 4) {
-                            Class12_Sub1.method125(Client.aString1623, Client.aString1616 + " " + "->" + " " + Class75.method449(65535) + var13.name, 2, var7, var8, var9);
+                            WorldMapTransportation_Sub1.method125(Client.aString1623, Client.aString1616 + " " + "->" + " " + Class75.method449(65535) + var13.name, 2, var7, var8, var9);
                         }
                     } else {
                         String[] var14 = var13.actions;
@@ -79,12 +79,12 @@ public class Class180 {
                                         var16 = 1001;
                                     }
 
-                                    Class12_Sub1.method125(var14[var15], Class75.method449(65535) + var13.name, var16, var7, var8, var9);
+                                    WorldMapTransportation_Sub1.method125(var14[var15], Class75.method449(65535) + var13.name, var16, var7, var8, var9);
                                 }
                             }
                         }
 
-                        Class12_Sub1.method125("Examine", Class75.method449(65535) + var13.name, 1002, var13.id << 14, var8, var9);
+                        WorldMapTransportation_Sub1.method125("Examine", Class75.method449(65535) + var13.name, 1002, var13.id << 14, var8, var9);
                     }
                 }
 
@@ -159,10 +159,10 @@ public class Class180 {
                         for (PickableNode var26 = (PickableNode) var25.current(); var26 != null; var26 = (PickableNode) var25.method990()) {
                             ItemDefinition var29 = Class149.method1001(var26.id);
                             if (Client.itemSelectionState == 1) {
-                                Class12_Sub1.method125("Use", Client.latestSelectedItemName + " " + "->" + " " + Class75.method449(16748608) + var29.name, 16, var26.id, var8, var9);
+                                WorldMapTransportation_Sub1.method125("Use", Client.latestSelectedItemName + " " + "->" + " " + Class75.method449(16748608) + var29.name, 16, var26.id, var8, var9);
                             } else if (Client.spellSelected) {
                                 if ((Class162.anInt1957 & 1) == 1) {
-                                    Class12_Sub1.method125(Client.aString1623, Client.aString1616 + " " + "->" + " " + Class75.method449(16748608) + var29.name, 17, var26.id, var8, var9);
+                                    WorldMapTransportation_Sub1.method125(Client.aString1623, Client.aString1616 + " " + "->" + " " + Class75.method449(16748608) + var29.name, 17, var26.id, var8, var9);
                                 }
                             } else {
                                 String[] var20 = var29.groundActions;
@@ -193,13 +193,13 @@ public class Class180 {
                                             var22 = 22;
                                         }
 
-                                        Class12_Sub1.method125(var20[var21], Class75.method449(16748608) + var29.name, var22, var26.id, var8, var9);
+                                        WorldMapTransportation_Sub1.method125(var20[var21], Class75.method449(16748608) + var29.name, var22, var26.id, var8, var9);
                                     } else if (var21 == 2) {
-                                        Class12_Sub1.method125("Take", Class75.method449(16748608) + var29.name, 20, var26.id, var8, var9);
+                                        WorldMapTransportation_Sub1.method125("Take", Class75.method449(16748608) + var29.name, 20, var26.id, var8, var9);
                                     }
                                 }
 
-                                Class12_Sub1.method125("Examine", Class75.method449(16748608) + var29.name, 1004, var26.id, var8, var9);
+                                WorldMapTransportation_Sub1.method125("Examine", Class75.method449(16748608) + var29.name, 1004, var26.id, var8, var9);
                             }
                         }
                     }

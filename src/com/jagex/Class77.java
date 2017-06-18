@@ -285,8 +285,8 @@ public class Class77 {
                             ++var0;
                         }
 
-                        if (Class12_Sub1.aSpriteArray110 == null) {
-                            Class12_Sub1.aSpriteArray110 = RuntimeException_Sub1.method742(Class21.aCacheReferenceTable139, "cross", "");
+                        if (WorldMapTransportation_Sub1.aSpriteArray110 == null) {
+                            WorldMapTransportation_Sub1.aSpriteArray110 = RuntimeException_Sub1.method742(Class21.aCacheReferenceTable139, "cross", "");
                         } else {
                             ++var0;
                         }

@@ -7,7 +7,7 @@ public class Node_Sub21_Sub19 extends DoublyNode {
     public int anInt206 = 0;
 
     static void method1124(int var0, SceneOffset var1, boolean var2) {
-        Class12 var3 = InterfaceNode.method268().method1276(var0);
+        WorldMapTransportation var3 = InterfaceNode.method268().method1276(var0);
         int var4 = Client.player.combatLevel;
         int var5 = (Client.player.strictX >> 7) + Class62.anInt636;
         int var6 = (Client.player.strictY >> 7) + Class49.anInt377;

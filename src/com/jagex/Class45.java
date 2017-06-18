@@ -46,7 +46,7 @@ public class Class45 {
                     Class158.aSpriteArray1847 = null;
                     Login.aNode_Sub21_Sub26_Sub2Array708 = null;
                     Class22.aNode_Sub21_Sub26_Sub2Array147 = null;
-                    Class12.aNode_Sub21_Sub26_Sub2Array85 = null;
+                    WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85 = null;
                     Class108.aNode_Sub21_Sub26_Sub2_1296 = null;
                     Class20.anIntArray138 = null;
                     Class18.anIntArray133 = null;

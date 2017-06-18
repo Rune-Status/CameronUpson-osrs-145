@@ -620,6 +620,19 @@ public final class Client extends Applet_Sub1 {
 
     }
 
+    static boolean method66(int var0) {
+        if (var0 < 0) {
+            return false;
+        } else {
+            int var1 = menuOpcodes[var0];
+            if (var1 >= 2000) {
+                var1 -= 2000;
+            }
+
+            return var1 == 1007;
+        }
+    }
+
     protected final void method240() {
     }
 
@@ -1611,7 +1624,7 @@ public final class Client extends Applet_Sub1 {
                                         }
                                     }
 
-                                    if (!Class12.method66(var2)) {
+                                    if (!method66(var2)) {
                                         break label293;
                                     }
                                 }
@@ -1640,7 +1653,7 @@ public final class Client extends Applet_Sub1 {
 
                 if (Class118.anInterfaceComponent1348 != null && !aBoolean1576) {
                     var19 = Class158.method1013();
-                    if (anInt1610 != 1 && !Class12.method66(var19) && menuRowCount > 0) {
+                    if (anInt1610 != 1 && !method66(var19) && menuRowCount > 0) {
                         Node_Sub21_Sub1.method184(anInt1579, anInt1592);
                     }
                 }
@@ -1861,7 +1874,7 @@ public final class Client extends Applet_Sub1 {
                                         }
                                     }
 
-                                    if (!Class12.method66(var9)) {
+                                    if (!method66(var9)) {
                                         break label129;
                                     }
                                 }
@@ -2433,7 +2446,7 @@ public final class Client extends Applet_Sub1 {
                                                                                         }
                                                                                     }
 
-                                                                                    if (Class12.method66(var4)) {
+                                                                                    if (method66(var4)) {
                                                                                         break label1149;
                                                                                     }
                                                                                 }

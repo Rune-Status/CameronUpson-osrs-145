@@ -11,7 +11,7 @@ public final class Class7 {
     final HashMap aHashMap53;
     boolean aBoolean56 = false;
     int anInt60;
-    Class12_Sub1 aClass12_Sub1_52;
+    WorldMapTransportation_Sub1 aClass12_Sub1_52;
     Sprite aSprite61;
     HashMap aHashMap62;
     HashMap aHashMap55 = new HashMap();
@@ -296,7 +296,7 @@ public final class Class7 {
             Buffer var8 = new Buffer(var1.method1105(var2, Class10.aClass10_71.aString77));
             System.nanoTime();
             System.nanoTime();
-            this.aClass12_Sub1_52 = new Class12_Sub1();
+            this.aClass12_Sub1_52 = new WorldMapTransportation_Sub1();
 
             try {
                 this.aClass12_Sub1_52.method126(var6, var8, var7, var5, var3);
@@ -304,15 +304,15 @@ public final class Class7 {
                 return;
             }
 
-            this.aClass12_Sub1_52.method71();
-            this.aClass12_Sub1_52.method64();
-            this.aClass12_Sub1_52.method82();
-            this.anInt51 = this.aClass12_Sub1_52.method80() * 64;
-            this.anInt58 = this.aClass12_Sub1_52.method70() * 64;
-            this.anInt60 = (this.aClass12_Sub1_52.method78() - this.aClass12_Sub1_52.method80() + 1) * 64;
-            this.anInt57 = (this.aClass12_Sub1_52.method77() - this.aClass12_Sub1_52.method70() + 1) * 64;
-            int var9 = this.aClass12_Sub1_52.method78() - this.aClass12_Sub1_52.method80() + 1;
-            int var10 = this.aClass12_Sub1_52.method77() - this.aClass12_Sub1_52.method70() + 1;
+            this.aClass12_Sub1_52.getBaseX();
+            this.aClass12_Sub1_52.getFloorLevel();
+            this.aClass12_Sub1_52.getBaseY();
+            this.anInt51 = this.aClass12_Sub1_52.getMinX() * 64;
+            this.anInt58 = this.aClass12_Sub1_52.getMinY() * 64;
+            this.anInt60 = (this.aClass12_Sub1_52.getMaxX() - this.aClass12_Sub1_52.getMinX() + 1) * 64;
+            this.anInt57 = (this.aClass12_Sub1_52.getMaxY() - this.aClass12_Sub1_52.getMinY() + 1) * 64;
+            int var9 = this.aClass12_Sub1_52.getMaxX() - this.aClass12_Sub1_52.getMinX() + 1;
+            int var10 = this.aClass12_Sub1_52.getMaxY() - this.aClass12_Sub1_52.getMinY() + 1;
             System.nanoTime();
             System.nanoTime();
             this.aClass13ArrayArray63 = new Class13[var9][var10];
@@ -322,8 +322,8 @@ public final class Class7 {
                 Class6_Sub2 var12 = (Class6_Sub2) var11.next();
                 int var13 = var12.anInt40;
                 int var14 = var12.anInt49;
-                int var15 = var13 - this.aClass12_Sub1_52.method80();
-                int var16 = var14 - this.aClass12_Sub1_52.method70();
+                int var15 = var13 - this.aClass12_Sub1_52.getMinX();
+                int var16 = var14 - this.aClass12_Sub1_52.getMinY();
                 this.aClass13ArrayArray63[var15][var16] = new Class13(var13, var14, this.aClass12_Sub1_52.method61(), this.aHashMap53);
                 this.aClass13ArrayArray63[var15][var16].method104(var12, this.aClass12_Sub1_52.aList112);
             }
@@ -331,7 +331,7 @@ public final class Class7 {
             for (int var17 = 0; var17 < var9; ++var17) {
                 for (int var18 = 0; var18 < var10; ++var18) {
                     if (this.aClass13ArrayArray63[var17][var18] == null) {
-                        this.aClass13ArrayArray63[var17][var18] = new Class13(this.aClass12_Sub1_52.method80() + var17, this.aClass12_Sub1_52.method70() + var18, this.aClass12_Sub1_52.method61(), this.aHashMap53);
+                        this.aClass13ArrayArray63[var17][var18] = new Class13(this.aClass12_Sub1_52.getMinX() + var17, this.aClass12_Sub1_52.getMinY() + var18, this.aClass12_Sub1_52.method61(), this.aHashMap53);
                         this.aClass13ArrayArray63[var17][var18].method92(this.aClass12_Sub1_52.aHashSet111, this.aClass12_Sub1_52.aList112);
                     }
                 }
@@ -521,8 +521,8 @@ public final class Class7 {
         int var13 = var9 / 64;
         var5.anInt32 = var12 - var10 + 1;
         var5.anInt39 = var13 - var11 + 1;
-        var5.anInt34 = var10 - this.aClass12_Sub1_52.method80();
-        var5.anInt33 = var11 - this.aClass12_Sub1_52.method70();
+        var5.anInt34 = var10 - this.aClass12_Sub1_52.getMinX();
+        var5.anInt33 = var11 - this.aClass12_Sub1_52.getMinY();
         if (var5.anInt34 < 0) {
             var5.anInt32 += var5.anInt34;
             var5.anInt34 = 0;

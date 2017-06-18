@@ -543,14 +543,14 @@ public class Key implements EnumOrdinal, Class187 {
                         }
 
                         if (var0.aBoolean2019 && Client.resizableMode) {
-                            Class12_Sub1.method125("Examine", Class75.method449(16776960) + var4, 1003, var1, var2, var3);
+                            WorldMapTransportation_Sub1.method125("Examine", Class75.method449(16776960) + var4, 1003, var1, var2, var3);
                         }
 
                         if (Client.itemSelectionState == 1) {
-                            Class12_Sub1.method125("Use", Client.latestSelectedItemName + " " + "->" + " " + Class75.method449(16776960) + var4, 7, var1, var2, var3);
+                            WorldMapTransportation_Sub1.method125("Use", Client.latestSelectedItemName + " " + "->" + " " + Class75.method449(16776960) + var4, 7, var1, var2, var3);
                         } else if (Client.spellSelected) {
                             if ((Class162.anInt1957 & 2) == 2) {
-                                Class12_Sub1.method125(Client.aString1623, Client.aString1616 + " " + "->" + " " + Class75.method449(16776960) + var4, 8, var1, var2, var3);
+                                WorldMapTransportation_Sub1.method125(Client.aString1623, Client.aString1616 + " " + "->" + " " + Class75.method449(16776960) + var4, 8, var1, var2, var3);
                             }
                         } else {
                             int var5 = var0.aBoolean2019 && Client.resizableMode ? 2000 : 0;
@@ -585,7 +585,7 @@ public class Key implements EnumOrdinal, Class187 {
                                             var8 = var5 + 13;
                                         }
 
-                                        Class12_Sub1.method125(var6[var7], Class75.method449(16776960) + var4, var8, var1, var2, var3);
+                                        WorldMapTransportation_Sub1.method125(var6[var7], Class75.method449(16776960) + var4, var8, var1, var2, var3);
                                     }
                                 }
                             }
@@ -620,14 +620,14 @@ public class Key implements EnumOrdinal, Class187 {
                                                 var8 = var9 + 13;
                                             }
 
-                                            Class12_Sub1.method125(var6[var7], Class75.method449(16776960) + var4, var8, var1, var2, var3);
+                                            WorldMapTransportation_Sub1.method125(var6[var7], Class75.method449(16776960) + var4, var8, var1, var2, var3);
                                         }
                                     }
                                 }
                             }
 
                             if (!var0.aBoolean2019 || !Client.resizableMode) {
-                                Class12_Sub1.method125("Examine", Class75.method449(16776960) + var4, 1003, var1, var2, var3);
+                                WorldMapTransportation_Sub1.method125("Examine", Class75.method449(16776960) + var4, 1003, var1, var2, var3);
                             }
                         }
 
