@@ -1,2 +1,0 @@
-public interface Class187 {
-}
