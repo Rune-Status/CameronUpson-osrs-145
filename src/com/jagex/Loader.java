@@ -76,15 +76,15 @@ public final class Loader extends JFrame {
                     case "trans": {
                         if (num_args > 0) {
                             int id = Integer.parseInt(args[0]);
-                            if (Client.player != null && Client.player.appearance != null) {
-                                Client.player.appearance.transformedNpcId = id;
+                            if (Client.playerEntity != null && Client.playerEntity.appearance != null) {
+                                Client.playerEntity.appearance.transformedNpcId = id;
                             }
                         }
                         break;
                     }
                     case "untrans": {
-                        if (Client.player != null && Client.player.appearance != null) {
-                            Client.player.appearance.transformedNpcId = -1;
+                        if (Client.playerEntity != null && Client.playerEntity.appearance != null) {
+                            Client.playerEntity.appearance.transformedNpcId = -1;
                         }
                         break;
                     }

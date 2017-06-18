@@ -89,7 +89,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         if (Login.anInt691 > Class53.anIntArray411.length) {
             Login.anInt691 -= Class53.anIntArray411.length;
             var2 = (int) (Math.random() * 12.0D);
-            Entity.method659(Class17.aNode_Sub21_Sub26_Sub2Array126[var2]);
+            Entity.method659(Class17.aCompressedImageArray126[var2]);
         }
 
         var2 = 0;

@@ -19,7 +19,7 @@ public class Varps {
 
     static void method1047() {
         if (Class9.aClass189_68 != null) {
-            Class9.aClass189_68.method1295(Player.floorLevel, Class62.anInt636 + (Client.player.strictX >> 7), (Client.player.strictY >> 7) + Class49.anInt377, false);
+            Class9.aClass189_68.method1295(PlayerEntity.floorLevel, Class62.anInt636 + (Client.playerEntity.strictX >> 7), (Client.playerEntity.strictY >> 7) + Class49.anInt377, false);
             Class9.aClass189_68.method1301();
         }
 

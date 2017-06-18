@@ -204,7 +204,7 @@ public final class Sprite extends DrawingArea {
     }
 
     public void method335() {
-        method1211(this.pixels, this.width, this.height);
+        setTarget(this.pixels, this.width, this.height);
     }
 
     public void method935() {
@@ -307,44 +307,44 @@ public final class Sprite extends DrawingArea {
     public void method1236(int var1, int var2, int var3, int var4) {
         var1 += this.anInt232;
         var2 += this.anInt327;
-        int var5 = var1 + var2 * drawingAreaWidth;
+        int var5 = var1 + var2 * areaWidth;
         int var6 = 0;
         int var7 = this.height;
         int var8 = this.width;
-        int var9 = drawingAreaWidth - var8;
+        int var9 = areaWidth - var8;
         int var10 = 0;
         int var11;
-        if (var2 < anInt1257) {
-            var11 = anInt1257 - var2;
+        if (var2 < areaTop) {
+            var11 = areaTop - var2;
             var7 -= var11;
-            var2 = anInt1257;
+            var2 = areaTop;
             var6 += var11 * var8;
-            var5 += var11 * drawingAreaWidth;
+            var5 += var11 * areaWidth;
         }
 
-        if (var2 + var7 > anInt753) {
-            var7 -= var2 + var7 - anInt753;
+        if (var2 + var7 > areaBottom) {
+            var7 -= var2 + var7 - areaBottom;
         }
 
-        if (var1 < anInt754) {
-            var11 = anInt754 - var1;
+        if (var1 < areaLeft) {
+            var11 = areaLeft - var1;
             var8 -= var11;
-            var1 = anInt754;
+            var1 = areaLeft;
             var6 += var11;
             var5 += var11;
             var10 += var11;
             var9 += var11;
         }
 
-        if (var1 + var8 > anInt745) {
-            var11 = var1 + var8 - anInt745;
+        if (var1 + var8 > areaRight) {
+            var11 = var1 + var8 - areaRight;
             var8 -= var11;
             var10 += var11;
             var9 += var11;
         }
 
         if (var8 > 0 && var7 > 0) {
-            method1243(drawingAreaPixels, this.pixels, 0, var6, var5, var8, var7, var9, var10, var3, var4);
+            method1243(buffer, this.pixels, 0, var6, var5, var8, var7, var9, var10, var3, var4);
         }
     }
 
@@ -358,7 +358,7 @@ public final class Sprite extends DrawingArea {
             var14 = var14 * var8 >> 8;
             int var15 = (var5 << 16) + var12 * var13 + var11 * var14;
             int var16 = (var6 << 16) + (var12 * var14 - var11 * var13);
-            int var17 = var1 + var2 * drawingAreaWidth;
+            int var17 = var1 + var2 * areaWidth;
 
             for (var2 = 0; var2 < var4; ++var2) {
                 int var18 = var9[var2];
@@ -367,14 +367,14 @@ public final class Sprite extends DrawingArea {
                 int var21 = var16 - var13 * var18;
 
                 for (var1 = -var10[var2]; var1 < 0; ++var1) {
-                    drawingAreaPixels[var19++] = this.pixels[(var20 >> 16) + (var21 >> 16) * this.width];
+                    buffer[var19++] = this.pixels[(var20 >> 16) + (var21 >> 16) * this.width];
                     var20 += var14;
                     var21 -= var13;
                 }
 
                 var15 += var13;
                 var16 += var14;
-                var17 += drawingAreaWidth;
+                var17 += areaWidth;
             }
         } catch (Exception var23) {
         }
@@ -410,88 +410,88 @@ public final class Sprite extends DrawingArea {
     public void method1242(int var1, int var2) {
         var1 += this.anInt232;
         var2 += this.anInt327;
-        int var3 = var1 + var2 * drawingAreaWidth;
+        int var3 = var1 + var2 * areaWidth;
         int var4 = 0;
         int var5 = this.height;
         int var6 = this.width;
-        int var7 = drawingAreaWidth - var6;
+        int var7 = areaWidth - var6;
         int var8 = 0;
         int var9;
-        if (var2 < anInt1257) {
-            var9 = anInt1257 - var2;
+        if (var2 < areaTop) {
+            var9 = areaTop - var2;
             var5 -= var9;
-            var2 = anInt1257;
+            var2 = areaTop;
             var4 += var9 * var6;
-            var3 += var9 * drawingAreaWidth;
+            var3 += var9 * areaWidth;
         }
 
-        if (var2 + var5 > anInt753) {
-            var5 -= var2 + var5 - anInt753;
+        if (var2 + var5 > areaBottom) {
+            var5 -= var2 + var5 - areaBottom;
         }
 
-        if (var1 < anInt754) {
-            var9 = anInt754 - var1;
+        if (var1 < areaLeft) {
+            var9 = areaLeft - var1;
             var6 -= var9;
-            var1 = anInt754;
+            var1 = areaLeft;
             var4 += var9;
             var3 += var9;
             var8 += var9;
             var7 += var9;
         }
 
-        if (var1 + var6 > anInt745) {
-            var9 = var1 + var6 - anInt745;
+        if (var1 + var6 > areaRight) {
+            var9 = var1 + var6 - areaRight;
             var6 -= var9;
             var8 += var9;
             var7 += var9;
         }
 
         if (var6 > 0 && var5 > 0) {
-            method1239(drawingAreaPixels, this.pixels, var4, var3, var6, var5, var7, var8);
+            method1239(buffer, this.pixels, var4, var3, var6, var5, var7, var8);
         }
     }
 
     public void method1230(int var1, int var2) {
         var1 += this.anInt232;
         var2 += this.anInt327;
-        int var3 = var1 + var2 * drawingAreaWidth;
+        int var3 = var1 + var2 * areaWidth;
         int var4 = 0;
         int var5 = this.height;
         int var6 = this.width;
-        int var7 = drawingAreaWidth - var6;
+        int var7 = areaWidth - var6;
         int var8 = 0;
         int var9;
-        if (var2 < anInt1257) {
-            var9 = anInt1257 - var2;
+        if (var2 < areaTop) {
+            var9 = areaTop - var2;
             var5 -= var9;
-            var2 = anInt1257;
+            var2 = areaTop;
             var4 += var9 * var6;
-            var3 += var9 * drawingAreaWidth;
+            var3 += var9 * areaWidth;
         }
 
-        if (var2 + var5 > anInt753) {
-            var5 -= var2 + var5 - anInt753;
+        if (var2 + var5 > areaBottom) {
+            var5 -= var2 + var5 - areaBottom;
         }
 
-        if (var1 < anInt754) {
-            var9 = anInt754 - var1;
+        if (var1 < areaLeft) {
+            var9 = areaLeft - var1;
             var6 -= var9;
-            var1 = anInt754;
+            var1 = areaLeft;
             var4 += var9;
             var3 += var9;
             var8 += var9;
             var7 += var9;
         }
 
-        if (var1 + var6 > anInt745) {
-            var9 = var1 + var6 - anInt745;
+        if (var1 + var6 > areaRight) {
+            var9 = var1 + var6 - areaRight;
             var6 -= var9;
             var8 += var9;
             var7 += var9;
         }
 
         if (var6 > 0 && var5 > 0) {
-            method1235(drawingAreaPixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+            method1235(buffer, this.pixels, 0, var4, var3, var6, var5, var7, var8);
         }
     }
 
@@ -578,27 +578,27 @@ public final class Sprite extends DrawingArea {
             var20 = var20 + 15 >> 4;
             var21 >>= 4;
             var22 = var22 + 15 >> 4;
-            if (var19 < anInt754) {
-                var19 = anInt754;
+            if (var19 < areaLeft) {
+                var19 = areaLeft;
             }
 
-            if (var20 > anInt745) {
-                var20 = anInt745;
+            if (var20 > areaRight) {
+                var20 = areaRight;
             }
 
-            if (var21 < anInt1257) {
-                var21 = anInt1257;
+            if (var21 < areaTop) {
+                var21 = areaTop;
             }
 
-            if (var22 > anInt753) {
-                var22 = anInt753;
+            if (var22 > areaBottom) {
+                var22 = areaBottom;
             }
 
             var20 = var19 - var20;
             if (var20 < 0) {
                 var22 = var21 - var22;
                 if (var22 < 0) {
-                    int var23 = var21 * drawingAreaWidth + var19;
+                    int var23 = var21 * areaWidth + var19;
                     double var24 = 1.6777216E7D / (double) var6;
                     int var26 = (int) Math.floor(Math.sin(var7) * var24 + 0.5D);
                     int var27 = (int) Math.floor(Math.cos(var7) * var24 + 0.5D);
@@ -615,7 +615,7 @@ public final class Sprite extends DrawingArea {
                     int var38;
                     if (var27 == 0) {
                         if (var26 == 0) {
-                            for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
+                            for (var32 = var22; var32 < 0; var23 += areaWidth) {
                                 var33 = var23;
                                 var34 = var30;
                                 var35 = var31;
@@ -624,7 +624,7 @@ public final class Sprite extends DrawingArea {
                                     for (; var36 < 0; ++var36) {
                                         var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                         if (var38 != 0) {
-                                            drawingAreaPixels[var33++] = var38;
+                                            buffer[var33++] = var38;
                                         } else {
                                             ++var33;
                                         }
@@ -634,7 +634,7 @@ public final class Sprite extends DrawingArea {
                                 ++var32;
                             }
                         } else if (var26 < 0) {
-                            for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
+                            for (var32 = var22; var32 < 0; var23 += areaWidth) {
                                 var33 = var23;
                                 var34 = var30;
                                 var35 = var31 + (var28 * var26 >> 4);
@@ -654,7 +654,7 @@ public final class Sprite extends DrawingArea {
                                     while (var36 < 0) {
                                         var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                         if (var38 != 0) {
-                                            drawingAreaPixels[var33++] = var38;
+                                            buffer[var33++] = var38;
                                         } else {
                                             ++var33;
                                         }
@@ -668,7 +668,7 @@ public final class Sprite extends DrawingArea {
                                 var30 -= var26;
                             }
                         } else {
-                            for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
+                            for (var32 = var22; var32 < 0; var23 += areaWidth) {
                                 var33 = var23;
                                 var34 = var30;
                                 var35 = var31 + (var28 * var26 >> 4);
@@ -688,7 +688,7 @@ public final class Sprite extends DrawingArea {
                                     while (var36 < 0) {
                                         var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                         if (var38 != 0) {
-                                            drawingAreaPixels[var33++] = var38;
+                                            buffer[var33++] = var38;
                                         } else {
                                             ++var33;
                                         }
@@ -704,7 +704,7 @@ public final class Sprite extends DrawingArea {
                         }
                     } else if (var27 < 0) {
                         if (var26 == 0) {
-                            for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
+                            for (var32 = var22; var32 < 0; var23 += areaWidth) {
                                 var33 = var23;
                                 var34 = var30 + (var28 * var27 >> 4);
                                 var35 = var31;
@@ -724,7 +724,7 @@ public final class Sprite extends DrawingArea {
                                     while (var36 < 0) {
                                         var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                         if (var38 != 0) {
-                                            drawingAreaPixels[var33++] = var38;
+                                            buffer[var33++] = var38;
                                         } else {
                                             ++var33;
                                         }
@@ -738,7 +738,7 @@ public final class Sprite extends DrawingArea {
                                 var31 += var27;
                             }
                         } else if (var26 < 0) {
-                            for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
+                            for (var32 = var22; var32 < 0; var23 += areaWidth) {
                                 var33 = var23;
                                 var34 = var30 + (var28 * var27 >> 4);
                                 var35 = var31 + (var28 * var26 >> 4);
@@ -770,7 +770,7 @@ public final class Sprite extends DrawingArea {
                                 while (var36 < 0) {
                                     var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                     if (var38 != 0) {
-                                        drawingAreaPixels[var33++] = var38;
+                                        buffer[var33++] = var38;
                                     } else {
                                         ++var33;
                                     }
@@ -785,7 +785,7 @@ public final class Sprite extends DrawingArea {
                                 var31 += var27;
                             }
                         } else {
-                            for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
+                            for (var32 = var22; var32 < 0; var23 += areaWidth) {
                                 var33 = var23;
                                 var34 = var30 + (var28 * var27 >> 4);
                                 var35 = var31 + (var28 * var26 >> 4);
@@ -817,7 +817,7 @@ public final class Sprite extends DrawingArea {
                                 while (var36 < 0) {
                                     var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                     if (var38 != 0) {
-                                        drawingAreaPixels[var33++] = var38;
+                                        buffer[var33++] = var38;
                                     } else {
                                         ++var33;
                                     }
@@ -833,7 +833,7 @@ public final class Sprite extends DrawingArea {
                             }
                         }
                     } else if (var26 == 0) {
-                        for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
+                        for (var32 = var22; var32 < 0; var23 += areaWidth) {
                             var33 = var23;
                             var34 = var30 + (var28 * var27 >> 4);
                             var35 = var31;
@@ -853,7 +853,7 @@ public final class Sprite extends DrawingArea {
                                 while (var36 < 0) {
                                     var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                     if (var38 != 0) {
-                                        drawingAreaPixels[var33++] = var38;
+                                        buffer[var33++] = var38;
                                     } else {
                                         ++var33;
                                     }
@@ -867,7 +867,7 @@ public final class Sprite extends DrawingArea {
                             var31 += var27;
                         }
                     } else if (var26 < 0) {
-                        for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
+                        for (var32 = var22; var32 < 0; var23 += areaWidth) {
                             var33 = var23;
                             var34 = var30 + (var28 * var27 >> 4);
                             var35 = var31 + (var28 * var26 >> 4);
@@ -899,7 +899,7 @@ public final class Sprite extends DrawingArea {
                             while (var36 < 0) {
                                 var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                 if (var38 != 0) {
-                                    drawingAreaPixels[var33++] = var38;
+                                    buffer[var33++] = var38;
                                 } else {
                                     ++var33;
                                 }
@@ -914,7 +914,7 @@ public final class Sprite extends DrawingArea {
                             var31 += var27;
                         }
                     } else {
-                        for (var32 = var22; var32 < 0; var23 += drawingAreaWidth) {
+                        for (var32 = var22; var32 < 0; var23 += areaWidth) {
                             var33 = var23;
                             var34 = var30 + (var28 * var27 >> 4);
                             var35 = var31 + (var28 * var26 >> 4);
@@ -946,7 +946,7 @@ public final class Sprite extends DrawingArea {
                             while (var36 < 0) {
                                 var38 = this.pixels[(var35 >> 12) * this.width + (var34 >> 12)];
                                 if (var38 != 0) {
-                                    drawingAreaPixels[var33++] = var38;
+                                    buffer[var33++] = var38;
                                 } else {
                                     ++var33;
                                 }
@@ -970,44 +970,44 @@ public final class Sprite extends DrawingArea {
     public void method1237(int var1, int var2, int var3) {
         var1 += this.anInt232;
         var2 += this.anInt327;
-        int var4 = var1 + var2 * drawingAreaWidth;
+        int var4 = var1 + var2 * areaWidth;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
-        int var8 = drawingAreaWidth - var7;
+        int var8 = areaWidth - var7;
         int var9 = 0;
         int var10;
-        if (var2 < anInt1257) {
-            var10 = anInt1257 - var2;
+        if (var2 < areaTop) {
+            var10 = areaTop - var2;
             var6 -= var10;
-            var2 = anInt1257;
+            var2 = areaTop;
             var5 += var10 * var7;
-            var4 += var10 * drawingAreaWidth;
+            var4 += var10 * areaWidth;
         }
 
-        if (var2 + var6 > anInt753) {
-            var6 -= var2 + var6 - anInt753;
+        if (var2 + var6 > areaBottom) {
+            var6 -= var2 + var6 - areaBottom;
         }
 
-        if (var1 < anInt754) {
-            var10 = anInt754 - var1;
+        if (var1 < areaLeft) {
+            var10 = areaLeft - var1;
             var7 -= var10;
-            var1 = anInt754;
+            var1 = areaLeft;
             var5 += var10;
             var4 += var10;
             var9 += var10;
             var8 += var10;
         }
 
-        if (var1 + var7 > anInt745) {
-            var10 = var1 + var7 - anInt745;
+        if (var1 + var7 > areaRight) {
+            var10 = var1 + var7 - areaRight;
             var7 -= var10;
             var9 += var10;
             var8 += var10;
         }
 
         if (var7 > 0 && var6 > 0) {
-            method1233(drawingAreaPixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, var3);
+            method1233(buffer, this.pixels, 0, var5, var4, var7, var6, var8, var9, var3);
         }
     }
 
@@ -1042,35 +1042,35 @@ public final class Sprite extends DrawingArea {
                 var4 = ((var6 << 16) - var8 + var12 - 1) / var12;
             }
 
-            var13 = var1 + var2 * drawingAreaWidth;
-            int var14 = drawingAreaWidth - var3;
-            if (var2 + var4 > anInt753) {
-                var4 -= var2 + var4 - anInt753;
+            var13 = var1 + var2 * areaWidth;
+            int var14 = areaWidth - var3;
+            if (var2 + var4 > areaBottom) {
+                var4 -= var2 + var4 - areaBottom;
             }
 
             int var15;
-            if (var2 < anInt1257) {
-                var15 = anInt1257 - var2;
+            if (var2 < areaTop) {
+                var15 = areaTop - var2;
                 var4 -= var15;
-                var13 += var15 * drawingAreaWidth;
+                var13 += var15 * areaWidth;
                 var8 += var12 * var15;
             }
 
-            if (var1 + var3 > anInt745) {
-                var15 = var1 + var3 - anInt745;
+            if (var1 + var3 > areaRight) {
+                var15 = var1 + var3 - areaRight;
                 var3 -= var15;
                 var14 += var15;
             }
 
-            if (var1 < anInt754) {
-                var15 = anInt754 - var1;
+            if (var1 < areaLeft) {
+                var15 = areaLeft - var1;
                 var3 -= var15;
                 var13 += var15;
                 var7 += var11 * var15;
                 var14 += var15;
             }
 
-            method1244(drawingAreaPixels, this.pixels, 0, var7, var8, var13, var14, var3, var4, var11, var12, var5);
+            method1244(buffer, this.pixels, 0, var7, var8, var13, var14, var3, var4, var11, var12, var5);
         }
     }
 
@@ -1080,26 +1080,26 @@ public final class Sprite extends DrawingArea {
             int var6 = var1 + ((this.anInt232 + this.width) * var3 + this.anInt328 - 1) / this.anInt328;
             int var7 = var2 + this.anInt327 * var4 / this.anInt221;
             int var8 = var2 + ((this.anInt327 + this.height) * var4 + this.anInt221 - 1) / this.anInt221;
-            if (var5 < anInt754) {
-                var5 = anInt754;
+            if (var5 < areaLeft) {
+                var5 = areaLeft;
             }
 
-            if (var6 > anInt745) {
-                var6 = anInt745;
+            if (var6 > areaRight) {
+                var6 = areaRight;
             }
 
-            if (var7 < anInt1257) {
-                var7 = anInt1257;
+            if (var7 < areaTop) {
+                var7 = areaTop;
             }
 
-            if (var8 > anInt753) {
-                var8 = anInt753;
+            if (var8 > areaBottom) {
+                var8 = areaBottom;
             }
 
             if (var5 < var6 && var7 < var8) {
-                int var9 = var7 * drawingAreaWidth + var5;
-                int var10 = drawingAreaWidth - (var6 - var5);
-                if (var9 < drawingAreaPixels.length) {
+                int var9 = var7 * areaWidth + var5;
+                int var10 = areaWidth - (var6 - var5);
+                if (var9 < buffer.length) {
                     for (int var11 = var7; var11 < var8; ++var11) {
                         for (int var12 = var5; var12 < var6; ++var12) {
                             int var13 = var12 - var1 << 4;
@@ -1178,7 +1178,7 @@ public final class Sprite extends DrawingArea {
                                         var28 = 1;
                                     }
 
-                                    drawingAreaPixels[var9] = var28;
+                                    buffer[var9] = var28;
                                 }
 
                                 ++var9;
@@ -1220,7 +1220,7 @@ public final class Sprite extends DrawingArea {
             var10000 = var5 - var1;
         }
 
-        int var13 = var3 + var1 + var11 + (var4 + var2 + var9) * drawingAreaWidth;
+        int var13 = var3 + var1 + var11 + (var4 + var2 + var9) * areaWidth;
         int var14 = var2 + var9;
 
         for (int var15 = var9; var15 < var10; ++var15) {
@@ -1245,13 +1245,13 @@ public final class Sprite extends DrawingArea {
             for (int var20 = var19; var20 < var12; ++var20) {
                 int var21 = this.pixels[var20 + var15 * this.width];
                 if (var21 != 0) {
-                    drawingAreaPixels[var18++] = var21;
+                    buffer[var18++] = var21;
                 } else {
                     ++var18;
                 }
             }
 
-            var13 += drawingAreaWidth;
+            var13 += areaWidth;
         }
 
     }
@@ -1266,7 +1266,7 @@ public final class Sprite extends DrawingArea {
             var13 = var13 * var9 >> 8;
             int var14 = (var5 << 16) + var11 * var12 + var10 * var13;
             int var15 = (var6 << 16) + (var11 * var13 - var10 * var12);
-            int var16 = var1 + var2 * drawingAreaWidth;
+            int var16 = var1 + var2 * areaWidth;
 
             for (var2 = 0; var2 < var4; ++var2) {
                 int var17 = var16;
@@ -1276,7 +1276,7 @@ public final class Sprite extends DrawingArea {
                 for (var1 = -var3; var1 < 0; ++var1) {
                     int var20 = this.pixels[(var18 >> 16) + (var19 >> 16) * this.width];
                     if (var20 != 0) {
-                        drawingAreaPixels[var17++] = var20;
+                        buffer[var17++] = var20;
                     } else {
                         ++var17;
                     }
@@ -1287,7 +1287,7 @@ public final class Sprite extends DrawingArea {
 
                 var14 += var12;
                 var15 += var13;
-                var16 += drawingAreaWidth;
+                var16 += areaWidth;
             }
         } catch (Exception var22) {
         }
@@ -1325,35 +1325,35 @@ public final class Sprite extends DrawingArea {
                 var4 = ((var7 << 16) - var9 + var13 - 1) / var13;
             }
 
-            var14 = var1 + var2 * drawingAreaWidth;
-            int var15 = drawingAreaWidth - var3;
-            if (var2 + var4 > anInt753) {
-                var4 -= var2 + var4 - anInt753;
+            var14 = var1 + var2 * areaWidth;
+            int var15 = areaWidth - var3;
+            if (var2 + var4 > areaBottom) {
+                var4 -= var2 + var4 - areaBottom;
             }
 
             int var16;
-            if (var2 < anInt1257) {
-                var16 = anInt1257 - var2;
+            if (var2 < areaTop) {
+                var16 = areaTop - var2;
                 var4 -= var16;
-                var14 += var16 * drawingAreaWidth;
+                var14 += var16 * areaWidth;
                 var9 += var13 * var16;
             }
 
-            if (var1 + var3 > anInt745) {
-                var16 = var1 + var3 - anInt745;
+            if (var1 + var3 > areaRight) {
+                var16 = var1 + var3 - areaRight;
                 var3 -= var16;
                 var15 += var16;
             }
 
-            if (var1 < anInt754) {
-                var16 = anInt754 - var1;
+            if (var1 < areaLeft) {
+                var16 = areaLeft - var1;
                 var3 -= var16;
                 var14 += var16;
                 var8 += var12 * var16;
                 var15 += var16;
             }
 
-            method1231(drawingAreaPixels, this.pixels, 0, var8, var9, var14, var15, var3, var4, var12, var13, var6, var5);
+            method1231(buffer, this.pixels, 0, var8, var9, var14, var15, var3, var4, var12, var13, var6, var5);
         }
     }
 }

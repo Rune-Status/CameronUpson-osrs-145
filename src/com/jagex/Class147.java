@@ -43,7 +43,7 @@ public class Class147 implements Class157 {
     static void method999() {
         int var0 = Class5.anInt37 * 128 + 64;
         int var1 = Class51.anInt381 * 128 + 64;
-        int var2 = Class25.method175(var0, var1, Player.floorLevel) - Class23.anInt156;
+        int var2 = Class25.method175(var0, var1, PlayerEntity.floorLevel) - Class23.anInt156;
         if (Class53.cameraX < var0) {
             Class53.cameraX += (var0 - Class53.cameraX) * TileDecor.anInt1035 / 1000 + GrandExchangeOffer.anInt736;
             if (Class53.cameraX > var0) {
@@ -88,7 +88,7 @@ public class Class147 implements Class157 {
 
         var0 = PickableNode.anInt671 * 128 + 64;
         var1 = Class70.anInt714 * 128 + 64;
-        var2 = Class25.method175(var0, var1, Player.floorLevel) - RuntimeException_Sub1.anInt1284;
+        var2 = Class25.method175(var0, var1, PlayerEntity.floorLevel) - RuntimeException_Sub1.anInt1284;
         int var3 = var0 - Class53.cameraX;
         int var4 = var2 - Class85.cameraZ;
         int var5 = var1 - Class34.cameraY;

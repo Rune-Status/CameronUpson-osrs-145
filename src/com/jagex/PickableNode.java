@@ -10,7 +10,7 @@ public final class PickableNode extends Entity {
     static void method395(Packet var0) {
         for (int var1 = 0; var1 < Class71.anInt724; ++var1) {
             int var2 = Class71.anIntArray717[var1];
-            Player var3 = Client.players[var2];
+            PlayerEntity var3 = Client.playerEntities[var2];
             int var4 = var0.readUnsignedByte();
             if ((var4 & 1) != 0) {
                 var4 += var0.readUnsignedByte() << 8;

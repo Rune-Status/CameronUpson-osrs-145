@@ -2,13 +2,13 @@ package com.jagex;
 
 public class Login {
     static int anInt702 = 0;
-    static Node_Sub21_Sub26_Sub2 aNode_Sub21_Sub26_Sub2_690;
-    static Node_Sub21_Sub26_Sub2 aNode_Sub21_Sub26_Sub2_695;
-    static Node_Sub21_Sub26_Sub2[] aNode_Sub21_Sub26_Sub2Array708;
+    static CompressedImage aCompressedImage_690;
+    static CompressedImage aCompressedImage_695;
+    static CompressedImage[] aCompressedImageArray708;
     static Sprite aSprite697;
     static int anInt710;
     static boolean aBoolean706;
-    static Node_Sub21_Sub26_Sub2[] aNode_Sub21_Sub26_Sub2Array692;
+    static CompressedImage[] aCompressedImageArray692;
     static int anInt687;
     static int anInt691;
     static int anInt689;
@@ -30,7 +30,7 @@ public class Login {
     static String aString707;
     static int anInt684;
     static String aString686;
-    static Node_Sub21_Sub26_Sub2 aNode_Sub21_Sub26_Sub2_709;
+    static CompressedImage aCompressedImage_709;
 
     static {
         anInt710 = anInt702 + 202;
@@ -117,9 +117,9 @@ public class Login {
     }
 
     static void method412() {
-        if (Player.floorLevel != Client.anInt1705) {
-            Client.anInt1705 = Player.floorLevel;
-            EntityMarker.method652(Player.floorLevel);
+        if (PlayerEntity.floorLevel != Client.anInt1705) {
+            Client.anInt1705 = PlayerEntity.floorLevel;
+            EntityMarker.method652(PlayerEntity.floorLevel);
         }
 
     }

@@ -12,7 +12,7 @@ final class Class51 implements Class66 {
         }
 
         int var3 = var0.method788(2);
-        Player var4 = Client.players[var1];
+        PlayerEntity var4 = Client.playerEntities[var1];
         if (var3 == 0) {
             if (var2) {
                 var4.aBoolean237 = false;
@@ -27,7 +27,7 @@ final class Class51 implements Class66 {
                 }
 
                 Class71.anIntArray726[var1] = var4.targetIndex;
-                Client.players[var1] = null;
+                Client.playerEntities[var1] = null;
                 if (var0.method788(1) != 0) {
                     Class5.method18(var0, var1);
                 }
@@ -176,7 +176,7 @@ final class Class51 implements Class66 {
 
                     var4.combatLevel = (byte) (var4.combatLevel + var7 & 3);
                     if (Client.playerIndex == var1) {
-                        Player.floorLevel = var4.combatLevel;
+                        PlayerEntity.floorLevel = var4.combatLevel;
                     }
 
                 } else {
@@ -202,7 +202,7 @@ final class Class51 implements Class66 {
 
                     var4.combatLevel = (byte) (var4.combatLevel + var7 & 3);
                     if (Client.playerIndex == var1) {
-                        Player.floorLevel = var4.combatLevel;
+                        PlayerEntity.floorLevel = var4.combatLevel;
                     }
 
                 }
@@ -228,7 +228,7 @@ final class Class51 implements Class66 {
             int var7;
             int var9;
             for (var7 = 0; var7 < 32768; ++var7) {
-                Npc var8 = Client.npcs[var7];
+                NpcEntity var8 = Client.npcEntities[var7];
                 if (var8 != null) {
                     for (var9 = 0; var9 < 10; ++var9) {
                         var8.anIntArray800[var9] -= var5;
@@ -241,7 +241,7 @@ final class Class51 implements Class66 {
             }
 
             for (var7 = 0; var7 < 2048; ++var7) {
-                Player var21 = Client.players[var7];
+                PlayerEntity var21 = Client.playerEntities[var7];
                 if (var21 != null) {
                     for (var9 = 0; var9 < 10; ++var9) {
                         var21.anIntArray800[var9] -= var5;

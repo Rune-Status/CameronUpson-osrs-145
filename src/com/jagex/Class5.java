@@ -16,7 +16,7 @@ public final class Class5 {
     }
 
     static void method19(InterfaceComponent[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
-        DrawingArea.setClip(var2, var3, var4, var5);
+        DrawingArea.clip(var2, var3, var4, var5);
         Node_Sub21_Sub26_Sub1.method308();
 
         for (int var9 = 0; var9 < var0.length; ++var9) {
@@ -187,19 +187,19 @@ public final class Class5 {
                                 Client.anInt1617 = var13;
                                 Class49.method314(var12, var13, component.width, component.height);
                                 Client.aBooleanArray1656[component.boundsIndex] = true;
-                                DrawingArea.setClip(var2, var3, var4, var5);
+                                DrawingArea.clip(var2, var3, var4, var5);
                                 continue;
                             }
 
                             if (component.contentType == 1338) {
                                 Class182.method1200(component, var12, var13, var11);
-                                DrawingArea.setClip(var2, var3, var4, var5);
+                                DrawingArea.clip(var2, var3, var4, var5);
                                 continue;
                             }
 
                             if (component.contentType == 1339) {
                                 InterfaceComponent.method409(component, var12, var13, var11);
-                                DrawingArea.setClip(var2, var3, var4, var5);
+                                DrawingArea.clip(var2, var3, var4, var5);
                                 continue;
                             }
 
@@ -237,7 +237,7 @@ public final class Class5 {
                                 Class122.method810(var19.id, var15, var16, var17, var18, var12, var13, var11);
                             }
 
-                            DrawingArea.setClip(var2, var3, var4, var5);
+                            DrawingArea.clip(var2, var3, var4, var5);
                             Node_Sub21_Sub26_Sub1.method308();
                         }
 
@@ -245,12 +245,13 @@ public final class Class5 {
                             int var24;
                             int var25;
                             if (component.type == 0 && !component.aBoolean1173 && component.viewportHeight > component.height) {
+                                //draw scrollbar
                                 var22 = component.width + var12;
                                 var20 = component.insetY;
                                 var21 = component.height;
                                 var23 = component.viewportHeight;
-                                Class64.aNode_Sub21_Sub26_Sub2Array656[0].method1155(var22, var13);
-                                Class64.aNode_Sub21_Sub26_Sub2Array656[1].method1155(var22, var13 + var21 - 16);
+                                InterfaceComponent.scrollBarImages[0].method1155(var22, var13);
+                                InterfaceComponent.scrollBarImages[1].method1155(var22, var13 + var21 - 16);
                                 DrawingArea.method1223(var22, var13 + 16, 16, var21 - 32, Client.anInt1543);
                                 var24 = (var21 - 32) * var21 / var23;
                                 if (var24 < 8) {
@@ -259,14 +260,14 @@ public final class Class5 {
 
                                 var25 = (var21 - 32 - var24) * var20 / (var23 - var21);
                                 DrawingArea.method1223(var22, var13 + 16 + var25, 16, var24, Client.anInt1545);
-                                DrawingArea.method1220(var22, var25 + var13 + 16, var24, Client.anInt1549);
-                                DrawingArea.method1220(var22 + 1, var13 + 16 + var25, var24, Client.anInt1549);
-                                DrawingArea.method1214(var22, var13 + 16 + var25, 16, Client.anInt1549);
-                                DrawingArea.method1214(var22, var25 + var13 + 17, 16, Client.anInt1549);
-                                DrawingArea.method1220(var22 + 15, var25 + var13 + 16, var24, Client.anInt1551);
-                                DrawingArea.method1220(var22 + 14, var25 + var13 + 17, var24 - 1, Client.anInt1551);
-                                DrawingArea.method1214(var22, var24 + var13 + 15 + var25, 16, Client.anInt1551);
-                                DrawingArea.method1214(var22 + 1, var24 + var13 + 14 + var25, 15, Client.anInt1551);
+                                DrawingArea.drawVLine(var22, var25 + var13 + 16, var24, Client.anInt1549);
+                                DrawingArea.drawVLine(var22 + 1, var13 + 16 + var25, var24, Client.anInt1549);
+                                DrawingArea.drawHLine(var22, var13 + 16 + var25, 16, Client.anInt1549);
+                                DrawingArea.drawHLine(var22, var25 + var13 + 17, 16, Client.anInt1549);
+                                DrawingArea.drawVLine(var22 + 15, var25 + var13 + 16, var24, Client.anInt1551);
+                                DrawingArea.drawVLine(var22 + 14, var25 + var13 + 17, var24 - 1, Client.anInt1551);
+                                DrawingArea.drawHLine(var22, var24 + var13 + 15 + var25, 16, Client.anInt1551);
+                                DrawingArea.drawHLine(var22 + 1, var24 + var13 + 14 + var25, 15, Client.anInt1551);
                             }
 
                             if (component.type != 1) {
@@ -326,8 +327,8 @@ public final class Class5 {
                                                             if (var1 != -1) {
                                                                 InterfaceComponent var34 = var0[var1 & '\uffff'];
                                                                 int var35;
-                                                                if (var26 + var24 < DrawingArea.anInt1257 && var34.insetY > 0) {
-                                                                    var35 = Client.anInt1544 * (DrawingArea.anInt1257 - var24 - var26) / 3;
+                                                                if (var26 + var24 < DrawingArea.areaTop && var34.insetY > 0) {
+                                                                    var35 = Client.anInt1544 * (DrawingArea.areaTop - var24 - var26) / 3;
                                                                     if (var35 > Client.anInt1544 * 10) {
                                                                         var35 = Client.anInt1544 * 10;
                                                                     }
@@ -341,8 +342,8 @@ public final class Class5 {
                                                                     ItemTable.method284(var34);
                                                                 }
 
-                                                                if (var26 + var24 + 32 > DrawingArea.anInt753 && var34.insetY < var34.viewportHeight - var34.height) {
-                                                                    var35 = Client.anInt1544 * (var26 + var24 + 32 - DrawingArea.anInt753) / 3;
+                                                                if (var26 + var24 + 32 > DrawingArea.areaBottom && var34.insetY < var34.viewportHeight - var34.height) {
+                                                                    var35 = Client.anInt1544 * (var26 + var24 + 32 - DrawingArea.areaBottom) / 3;
                                                                     if (var35 > Client.anInt1544 * 10) {
                                                                         var35 = Client.anInt1544 * 10;
                                                                     }
@@ -405,7 +406,7 @@ public final class Class5 {
                                                 }
                                         }
                                     } else if (var14 == 0) {
-                                        DrawingArea.method1208(var12, var13, component.width, component.height, var22);
+                                        DrawingArea.drawRectangle(var12, var13, component.width, component.height, var22);
                                     } else {
                                         DrawingArea.method1215(var12, var13, component.width, component.height, var22, 256 - (var14 & 255));
                                     }
@@ -510,7 +511,7 @@ public final class Class5 {
                                                         }
                                                     }
 
-                                                    DrawingArea.setClip(var2, var3, var4, var5);
+                                                    DrawingArea.clip(var2, var3, var4, var5);
                                                 }
                                             }
                                         }
@@ -542,16 +543,16 @@ public final class Class5 {
                                                 if (component.modelId == 0) {
                                                     var42 = Client.aPlayerAppearance1455.getModel(null, -1, null, -1);
                                                 } else {
-                                                    var42 = Client.player.getModel();
+                                                    var42 = Client.playerEntity.getModel();
                                                 }
                                             } else if (var20 == -1) {
-                                                var42 = component.method1019(null, -1, var39, Client.player.appearance);
+                                                var42 = component.method1019(null, -1, var39, Client.playerEntity.appearance);
                                                 if (var42 == null && InterfaceComponent.aBoolean1174) {
                                                     ItemTable.method284(component);
                                                 }
                                             } else {
                                                 AnimationSequence var45 = AnimationSequence.get(var20);
-                                                var42 = component.method1019(var45, component.anInt1932, var39, Client.player.appearance);
+                                                var42 = component.method1019(var45, component.anInt1932, var39, Client.playerEntity.appearance);
                                                 if (var42 == null && InterfaceComponent.aBoolean1174) {
                                                     ItemTable.method284(component);
                                                 }
@@ -653,7 +654,7 @@ public final class Class5 {
                                                 }
 
                                                 DrawingArea.method1223(var25, var26, var22, var20, 16777120);
-                                                DrawingArea.method1208(var25, var26, var22, var20, 0);
+                                                DrawingArea.drawRectangle(var25, var26, var22, var20, 0);
                                                 var31 = component.text;
                                                 var27 = var26 + var29.anInt221 + 2;
 
@@ -744,10 +745,10 @@ public final class Class5 {
                 Class71.anIntArray717[++Class71.anInt724 - 1] = var1;
             }
 
-            if (Client.players[var1] != null) {
+            if (Client.playerEntities[var1] != null) {
                 throw new RuntimeException();
             }
-            Player var6 = Client.players[var1] = new Player();
+            PlayerEntity var6 = Client.playerEntities[var1] = new PlayerEntity();
             var6.anInt213 = var1;
             if (Class71.aBufferArray728[var1] != null) {
                 var6.method198(Class71.aBufferArray728[var1]);

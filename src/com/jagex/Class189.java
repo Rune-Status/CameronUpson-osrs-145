@@ -22,7 +22,7 @@ public class Class189 {
     WorldMapTransportation aWorldMapTransportation_2211;
     ReferenceTable aReferenceTable2215;
     HashMap aHashMap2227;
-    Node_Sub21_Sub26_Sub2[] aNode_Sub21_Sub26_Sub2Array2222;
+    CompressedImage[] aCompressedImageArray2222;
     HashMap aHashMap2202;
     HashSet aHashSet2238 = new HashSet();
     WorldMapTransportation aWorldMapTransportation_2234;
@@ -187,7 +187,7 @@ public class Class189 {
 
     void method1302(WorldMapTransportation var1) {
         this.aWorldMapTransportation_2234 = var1;
-        this.aClass7_2217 = new Class7(this.aNode_Sub21_Sub26_Sub2Array2222, this.aHashMap2227);
+        this.aClass7_2217 = new Class7(this.aCompressedImageArray2222, this.aHashMap2227);
         this.aClass190_2229.method1307(this.aWorldMapTransportation_2234.getFileName());
     }
 
@@ -213,7 +213,7 @@ public class Class189 {
     public void method1298(int var1, int var2, int var3, int var4, int var5) {
         int[] var6 = new int[4];
         DrawingArea.method1207(var6);
-        DrawingArea.setClip(var1, var2, var1 + var3, var2 + var4);
+        DrawingArea.clip(var1, var2, var1 + var3, var2 + var4);
         DrawingArea.method1223(var1, var2, var3, var4, -16777216);
         int var7 = this.aClass190_2229.method1308();
         if (var7 < 100) {
@@ -279,7 +279,7 @@ public class Class189 {
         int var7 = var3 / 2 + var1;
         int var8 = var4 / 2 + var2 - 18 - var6;
         DrawingArea.method1223(var1, var2, var3, var4, -16777216);
-        DrawingArea.method1208(var7 - 152, var8, 304, 34, -65536);
+        DrawingArea.drawRectangle(var7 - 152, var8, 304, 34, -65536);
         DrawingArea.method1223(var7 - 150, var8 + 2, var5 * 3, 30, -65536);
         this.aFont2225.method1161("Loading...", var7, var8 + var6, -1, -1);
     }
@@ -324,8 +324,8 @@ public class Class189 {
         return this.aClass190_2229.method1309();
     }
 
-    public void method1296(ReferenceTable var1, Font var2, HashMap var3, Node_Sub21_Sub26_Sub2[] var4) {
-        this.aNode_Sub21_Sub26_Sub2Array2222 = var4;
+    public void method1296(ReferenceTable var1, Font var2, HashMap var3, CompressedImage[] var4) {
+        this.aCompressedImageArray2222 = var4;
         this.aReferenceTable2215 = var1;
         this.aFont2225 = var2;
         this.aHashMap2227 = new HashMap();

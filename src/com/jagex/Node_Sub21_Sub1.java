@@ -34,7 +34,7 @@ public class Node_Sub21_Sub1 extends DoublyNode {
 
         for (var1 = 0; var1 < var0; ++var1) {
             int var2 = Client.npcIndices[var1];
-            Npc var3 = Client.npcs[var2];
+            NpcEntity var3 = Client.npcEntities[var2];
             int var4 = Client.aPacket1521.method788(1);
             if (var4 == 0) {
                 Client.npcIndices[++Client.anInt1501 - 1] = var2;
@@ -125,7 +125,7 @@ public class Node_Sub21_Sub1 extends DoublyNode {
         } else if (var0 == 18) {
             Class22.setLoginResponse("Account locked as we suspect it has been stolen.", "Press 'recover a locked account' on front page.", "");
         } else if (var0 == 19) {
-            Class22.setLoginResponse("This world is running a closed Beta.", "Sorry invited players only.", "Please use a different world.");
+            Class22.setLoginResponse("This world is running a closed Beta.", "Sorry invited playerEntities only.", "Please use a different world.");
         } else if (var0 == 20) {
             Class22.setLoginResponse("Invalid loginserver requested.", "Please try using a different world.", "");
         } else if (var0 == 22) {

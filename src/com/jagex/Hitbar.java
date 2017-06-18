@@ -17,8 +17,8 @@ public class Hitbar extends Node {
 
     static void method435(PathingEntity var0, int var1, int var2, int var3, int var4, int var5) {
         if (var0 != null && var0.method194()) {
-            if (var0 instanceof Npc) {
-                NpcDefinition var6 = ((Npc) var0).definition;
+            if (var0 instanceof NpcEntity) {
+                NpcDefinition var6 = ((NpcEntity) var0).definition;
                 if (var6.transformIds != null) {
                     var6 = var6.transform();
                 }
@@ -102,7 +102,7 @@ public class Hitbar extends Node {
                                 var14.method1230(var21, var22);
                             }
 
-                            DrawingArea.setClip(var2, var3, var2 + var4, var5 + var3);
+                            DrawingArea.clip(var2, var3, var2 + var4, var5 + var3);
                             var9 += 2;
                         } else {
                             if (Client.anInt1561 > -1) {
@@ -121,7 +121,7 @@ public class Hitbar extends Node {
             }
 
             if (var1 < var7) {
-                Player var85 = (Player) var0;
+                PlayerEntity var85 = (PlayerEntity) var0;
                 if (var85.aBoolean215) {
                     return;
                 }
@@ -148,7 +148,7 @@ public class Hitbar extends Node {
                     }
                 }
             } else {
-                NpcDefinition var86 = ((Npc) var0).definition;
+                NpcDefinition var86 = ((NpcEntity) var0).definition;
                 if (var86.transformIds != null) {
                     var86 = var86.transform();
                 }
@@ -168,7 +168,7 @@ public class Hitbar extends Node {
                 }
             }
 
-            if (var0.aString752 != null && (var1 >= var7 || !var0.aBoolean759 && (Client.anInt1689 == 4 || !var0.aBoolean750 && (Client.anInt1689 == 0 || Client.anInt1689 == 3 || Client.anInt1689 == 1 && Class112.method771(((Player) var0).name, false))))) {
+            if (var0.aString752 != null && (var1 >= var7 || !var0.aBoolean759 && (Client.anInt1689 == 4 || !var0.aBoolean750 && (Client.anInt1689 == 0 || Client.anInt1689 == 3 || Client.anInt1689 == 1 && Class112.method771(((PlayerEntity) var0).name, false))))) {
                 Node_Sub20.method971(var0, var0.anInt803);
                 if (Client.anInt1561 > -1 && Client.anInt1552 < Client.anInt1567) {
                     Client.anIntArray1554[Client.anInt1552] = Class35.aFont313.getTextWidth(var0.aString752) / 2;

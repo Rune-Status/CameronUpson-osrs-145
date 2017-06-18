@@ -71,7 +71,7 @@ public class Node_Sub16 extends Node {
         this.anIntArray1171 = new int[var5];
 
         for (int var6 = 0; var6 < this.anIntArray934.length; ++var6) {
-            Node_Sub21_Sub26_Sub2 var7 = Class181.method1199(var4, this.anIntArray934[var6]);
+            CompressedImage var7 = Class181.method1199(var4, this.anIntArray934[var6]);
             var7.method308();
             byte[] var8 = var7.aByteArray1361;
             int[] var9 = var7.anIntArray342;

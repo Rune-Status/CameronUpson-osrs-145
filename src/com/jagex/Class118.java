@@ -958,12 +958,12 @@ public class Class118 {
 
                 Class113_Sub1.method287(true);
                 var4 = Class26.anInt185;
-                if (var4 > Player.floorLevel) {
-                    var4 = Player.floorLevel;
+                if (var4 > PlayerEntity.floorLevel) {
+                    var4 = PlayerEntity.floorLevel;
                 }
 
-                if (var4 < Player.floorLevel - 1) {
-                    var4 = Player.floorLevel - 1;
+                if (var4 < PlayerEntity.floorLevel - 1) {
+                    var4 = PlayerEntity.floorLevel - 1;
                 }
 
                 if (Client.lowMemory) {

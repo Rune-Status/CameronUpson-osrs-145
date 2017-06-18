@@ -70,8 +70,8 @@ public class Class6_Sub2 extends Class6 {
             int var14 = var12 * var5 + 1 >> 17;
             int var15 = var5 * var11 >> 17;
             int var16 = var5 * var11 + 1 >> 17;
-            var0 -= DrawingArea.anInt754;
-            var1 -= DrawingArea.anInt1257;
+            var0 -= DrawingArea.areaLeft;
+            var1 -= DrawingArea.areaTop;
             int var17 = var0 + var13;
             int var18 = var0 - var14;
             int var19 = var0 + var6 - var14;
@@ -109,7 +109,7 @@ public class Class6_Sub2 extends Class6 {
             var12 = var5 >> 14 & 32767;
             ObjectDefinition var13 = Class5.method17(var12);
             if (var13.anInt1257 != -1) {
-                Node_Sub21_Sub26_Sub2 var14 = Client.aNode_Sub21_Sub26_Sub2Array1542[var13.anInt1257];
+                CompressedImage var14 = Client.aCompressedImageArray1542[var13.anInt1257];
                 if (var14 != null) {
                     int var15 = (var13.anInt230 * 4 - var14.anInt206) / 2;
                     int var16 = (var13.anInt222 * 4 - var14.anInt232) / 2;
@@ -187,7 +187,7 @@ public class Class6_Sub2 extends Class6 {
             ObjectDefinition var23 = Class5.method17(var9);
             int var18;
             if (var23.anInt1257 != -1) {
-                Node_Sub21_Sub26_Sub2 var17 = Client.aNode_Sub21_Sub26_Sub2Array1542[var23.anInt1257];
+                CompressedImage var17 = Client.aCompressedImageArray1542[var23.anInt1257];
                 if (var17 != null) {
                     var12 = (var23.anInt230 * 4 - var17.anInt206) / 2;
                     var18 = (var23.anInt222 * 4 - var17.anInt232) / 2;
@@ -220,7 +220,7 @@ public class Class6_Sub2 extends Class6 {
             var6 = var5 >> 14 & 32767;
             ObjectDefinition var19 = Class5.method17(var6);
             if (var19.anInt1257 != -1) {
-                Node_Sub21_Sub26_Sub2 var20 = Client.aNode_Sub21_Sub26_Sub2Array1542[var19.anInt1257];
+                CompressedImage var20 = Client.aCompressedImageArray1542[var19.anInt1257];
                 if (var20 != null) {
                     var9 = (var19.anInt230 * 4 - var20.anInt206) / 2;
                     int var21 = (var19.anInt222 * 4 - var20.anInt232) / 2;

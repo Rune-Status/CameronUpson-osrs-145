@@ -12,7 +12,7 @@ public class MapTile {
         this.y = y;
     }
 
-    static void method59(Player var0, int var1, int var2, byte var3) {
+    static void method59(PlayerEntity var0, int var1, int var2, byte var3) {
         int var4 = var0.anIntArray800[0];
         int var5 = var0.anIntArray804[0];
         int var6 = var0.method195();

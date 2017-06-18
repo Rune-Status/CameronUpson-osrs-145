@@ -77,9 +77,9 @@ public class Class94 {
             var2 -= 2000;
         }
 
-        Npc var8;
+        NpcEntity var8;
         if (var2 == 7) {
-            var8 = Client.npcs[var3];
+            var8 = Client.npcEntities[var3];
             if (var8 != null) {
                 Client.anInt1557 = var6;
                 Client.anInt1577 = var7;
@@ -154,9 +154,9 @@ public class Class94 {
             }
         }
 
-        Player var18;
+        PlayerEntity var18;
         if (var2 == 15) {
-            var18 = Client.players[var3];
+            var18 = Client.playerEntities[var3];
             if (var18 != null) {
                 Client.anInt1557 = var6;
                 Client.anInt1577 = var7;
@@ -212,7 +212,7 @@ public class Class94 {
 
         } else {
             if (var2 == 12) {
-                var8 = Client.npcs[var3];
+                var8 = Client.npcEntities[var3];
                 if (var8 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -227,7 +227,7 @@ public class Class94 {
             }
 
             if (var2 == 44) {
-                var18 = Client.players[var3];
+                var18 = Client.playerEntities[var3];
                 if (var18 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -242,7 +242,7 @@ public class Class94 {
             }
 
             if (var2 == 46) {
-                var18 = Client.players[var3];
+                var18 = Client.playerEntities[var3];
                 if (var18 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -271,7 +271,7 @@ public class Class94 {
             }
 
             if (var2 == 50) {
-                var18 = Client.players[var3];
+                var18 = Client.playerEntities[var3];
                 if (var18 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -286,7 +286,7 @@ public class Class94 {
             }
 
             if (var2 == 8) {
-                var8 = Client.npcs[var3];
+                var8 = Client.npcEntities[var3];
                 if (var8 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -353,7 +353,7 @@ public class Class94 {
             }
 
             if (var2 == 11) {
-                var8 = Client.npcs[var3];
+                var8 = Client.npcEntities[var3];
                 if (var8 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -378,7 +378,7 @@ public class Class94 {
             }
 
             if (var2 == 9) {
-                var8 = Client.npcs[var3];
+                var8 = Client.npcEntities[var3];
                 if (var8 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -417,7 +417,7 @@ public class Class94 {
             }
 
             if (var2 == 51) {
-                var18 = Client.players[var3];
+                var18 = Client.playerEntities[var3];
                 if (var18 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -432,7 +432,7 @@ public class Class94 {
             }
 
             if (var2 == 10) {
-                var8 = Client.npcs[var3];
+                var8 = Client.npcEntities[var3];
                 if (var8 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -521,7 +521,7 @@ public class Class94 {
             }
 
             if (var2 == 14) {
-                var18 = Client.players[var3];
+                var18 = Client.playerEntities[var3];
                 if (var18 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -602,7 +602,7 @@ public class Class94 {
             }
 
             if (var2 == 49) {
-                var18 = Client.players[var3];
+                var18 = Client.playerEntities[var3];
                 if (var18 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -637,7 +637,7 @@ public class Class94 {
             }
 
             if (var2 == 13) {
-                var8 = Client.npcs[var3];
+                var8 = Client.npcEntities[var3];
                 if (var8 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -662,7 +662,7 @@ public class Class94 {
             }
 
             if (var2 == 47) {
-                var18 = Client.players[var3];
+                var18 = Client.playerEntities[var3];
                 if (var18 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -758,7 +758,7 @@ public class Class94 {
             }
 
             if (var2 == 48) {
-                var18 = Client.players[var3];
+                var18 = Client.playerEntities[var3];
                 if (var18 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -787,7 +787,7 @@ public class Class94 {
             }
 
             if (var2 == 45) {
-                var18 = Client.players[var3];
+                var18 = Client.playerEntities[var3];
                 if (var18 != null) {
                     Client.anInt1557 = var6;
                     Client.anInt1577 = var7;
@@ -819,7 +819,7 @@ public class Class94 {
                     if (Client.menuOpen) {
                         Class60.aSceneGraph631.method673();
                     } else {
-                        Class60.aSceneGraph631.method676(Player.floorLevel, var0, var1, true);
+                        Class60.aSceneGraph631.method676(PlayerEntity.floorLevel, var0, var1, true);
                     }
                 }
 
@@ -828,7 +828,7 @@ public class Class94 {
                     Client.anInt1577 = var7;
                     Client.cursorState = 2;
                     Client.anInt1585 = 0;
-                    var8 = Client.npcs[var3];
+                    var8 = Client.npcEntities[var3];
                     if (var8 != null) {
                         NpcDefinition var10 = var8.definition;
                         if (var10.transformIds != null) {

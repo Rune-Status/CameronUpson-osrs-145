@@ -39,7 +39,7 @@ public final class Client extends Applet_Sub1 {
     static int anInt1472 = 0;
     static int hintArrowX = 0;
     static int hintArrowY = 0;
-    static Node_Sub21_Sub26_Sub2[] aNode_Sub21_Sub26_Sub2Array1542;
+    static CompressedImage[] aCompressedImageArray1542;
     static int anInt1494 = 0;
     static int[] menuPrimaryArgs;
     static Class55 aClass55_1491;
@@ -160,7 +160,7 @@ public final class Client extends Applet_Sub1 {
     static int menuRowCount;
     static int[] menuSecondaryArgs;
     static int[] menuTertiaryArgs;
-    static Player[] players;
+    static PlayerEntity[] playerEntities;
     static int anInt1571;
     static String[] menuActions;
     static String[] menuTargets;
@@ -269,7 +269,7 @@ public final class Client extends Applet_Sub1 {
     static int[] anIntArray1713;
     static int[] anIntArray1433;
     static int anInt1619;
-    static Npc[] npcs;
+    static NpcEntity[] npcEntities;
     static int anInt1541;
     static short aShort1435;
     static int anInt1470 = 0;
@@ -298,7 +298,7 @@ public final class Client extends Applet_Sub1 {
     static int anInt1551;
     static int anInt1487;
     static int anInt1671;
-    static Player player;
+    static PlayerEntity playerEntity;
     static long aLong682;
     static ClientPreferences preferences;
     static byte aByte1826;
@@ -315,7 +315,7 @@ public final class Client extends Applet_Sub1 {
         anInt1503 = 0;
         anInt1506 = 0;
         aByteArray1500 = null;
-        npcs = new Npc['耀'];
+        npcEntities = new NpcEntity['耀'];
         anInt1501 = 0;
         npcIndices = new int['耀'];
         anInt1508 = 0;
@@ -398,7 +398,7 @@ public final class Client extends Applet_Sub1 {
         aBoolean1576 = false;
         anInt1582 = 0;
         anInt1589 = 0;
-        players = new Player[2048];
+        playerEntities = new PlayerEntity[2048];
         playerIndex = -1;
         anInt1593 = 0;
         anInt1580 = 0;
@@ -1087,8 +1087,8 @@ public final class Client extends Applet_Sub1 {
                     Class105.aClass84_1244.method488();
                 }
 
-                if (Player.aClass84_231 != null) {
-                    Player.aClass84_231.method488();
+                if (PlayerEntity.aClass84_231 != null) {
+                    PlayerEntity.aClass84_231.method488();
                 }
 
                 var1 = InterfaceNode.aGameSocket317.method886();
@@ -1096,8 +1096,8 @@ public final class Client extends Applet_Sub1 {
                     Class105.aClass84_1244.method488();
                 }
 
-                if (Player.aClass84_231 != null) {
-                    Player.aClass84_231.method488();
+                if (PlayerEntity.aClass84_231 != null) {
+                    PlayerEntity.aClass84_231.method488();
                 }
 
                 if (var1 != 0) {
@@ -1395,11 +1395,11 @@ public final class Client extends Applet_Sub1 {
                         Class50.method317();
 
                         for (var1 = 0; var1 < 2048; ++var1) {
-                            players[var1] = null;
+                            playerEntities[var1] = null;
                         }
 
                         for (var1 = 0; var1 < 32768; ++var1) {
-                            npcs[var1] = null;
+                            npcEntities[var1] = null;
                         }
 
                         anInt1608 = -1;
@@ -1718,7 +1718,7 @@ public final class Client extends Applet_Sub1 {
             var9 = 0;
         }
 
-        Class60.aSceneGraph631.method676(Player.floorLevel, var1, var2, false);
+        Class60.aSceneGraph631.method676(PlayerEntity.floorLevel, var1, var2, false);
         menuOpen = true;
         Class84.anInt861 = var8;
         Class77.anInt833 = var9;
@@ -1971,8 +1971,8 @@ public final class Client extends Applet_Sub1 {
             Class105.aClass84_1244.method490();
         }
 
-        if (Player.aClass84_231 != null) {
-            Player.aClass84_231.method490();
+        if (PlayerEntity.aClass84_231 != null) {
+            PlayerEntity.aClass84_231.method490();
         }
 
         if (Class168.aGameSocket2082 != null) {
@@ -2204,13 +2204,13 @@ public final class Client extends Applet_Sub1 {
                                 if (anIntArray1429[var1] != 0) {
                                     var5 = (anIntArray1429[var1] & 255) * 128;
                                     var6 = anIntArray1429[var1] >> 16 & 255;
-                                    var7 = var6 * 128 + 64 - player.strictX;
+                                    var7 = var6 * 128 + 64 - playerEntity.strictX;
                                     if (var7 < 0) {
                                         var7 = -var7;
                                     }
 
                                     var8 = anIntArray1429[var1] >> 8 & 255;
-                                    var9 = var8 * 128 + 64 - player.strictY;
+                                    var9 = var8 * 128 + 64 - playerEntity.strictY;
                                     if (var9 < 0) {
                                         var9 = -var9;
                                     }
@@ -2286,7 +2286,7 @@ public final class Client extends Applet_Sub1 {
                         int[] var34 = Class71.anIntArray723;
 
                         for (var4 = 0; var4 < var1; ++var4) {
-                            Player var35 = players[var34[var4]];
+                            PlayerEntity var35 = playerEntities[var34[var4]];
                             if (var35 != null) {
                                 Class15.method133(var35, 1);
                             }
@@ -2296,7 +2296,7 @@ public final class Client extends Applet_Sub1 {
                         int[] var28 = Class71.anIntArray723;
 
                         for (var3 = 0; var3 < Class71.anInt729; ++var3) {
-                            Player var20 = players[var28[var3]];
+                            PlayerEntity var20 = playerEntities[var28[var3]];
                             if (var20 != null && var20.anInt761 > 0) {
                                 --var20.anInt761;
                                 if (var20.anInt761 == 0) {
@@ -2307,7 +2307,7 @@ public final class Client extends Applet_Sub1 {
 
                         for (var3 = 0; var3 < anInt1501; ++var3) {
                             var4 = npcIndices[var3];
-                            Npc var37 = npcs[var4];
+                            NpcEntity var37 = npcEntities[var4];
                             if (var37 != null && var37.anInt761 > 0) {
                                 --var37.anInt761;
                                 if (var37.anInt761 == 0) {
@@ -2517,8 +2517,8 @@ public final class Client extends Applet_Sub1 {
                                                                 --anInt1614;
                                                             }
 
-                                                            var4 = anInt1536 + player.strictX;
-                                                            var5 = player.strictY + anInt1537;
+                                                            var4 = anInt1536 + playerEntity.strictX;
+                                                            var5 = playerEntity.strictY + anInt1537;
                                                             if (Class45.anInt370 - var4 < -500 || Class45.anInt370 - var4 > 500 || BoundaryDecor.anInt1106 - var5 < -500 || BoundaryDecor.anInt1106 - var5 > 500) {
                                                                 Class45.anInt370 = var4;
                                                                 BoundaryDecor.anInt1106 = var5;
@@ -2572,12 +2572,12 @@ public final class Client extends Applet_Sub1 {
 
                                                             var6 = Class45.anInt370 >> 7;
                                                             var7 = BoundaryDecor.anInt1106 >> 7;
-                                                            var8 = Class25.method175(Class45.anInt370, BoundaryDecor.anInt1106, Player.floorLevel);
+                                                            var8 = Class25.method175(Class45.anInt370, BoundaryDecor.anInt1106, PlayerEntity.floorLevel);
                                                             var9 = 0;
                                                             if (var6 > 3 && var7 > 3 && var6 < 100 && var7 < 100) {
                                                                 for (var10 = var6 - 4; var10 <= var6 + 4; ++var10) {
                                                                     for (int var21 = var7 - 4; var21 <= var7 + 4; ++var21) {
-                                                                        int var22 = Player.floorLevel;
+                                                                        int var22 = PlayerEntity.floorLevel;
                                                                         if (var22 < 3 && (Class26.aByteArrayArrayArray189[1][var10][var21] & 2) == 2) {
                                                                             ++var22;
                                                                         }
@@ -2864,7 +2864,7 @@ public final class Client extends Applet_Sub1 {
             }
 
             if (anInt1511 == 71) {
-                PickableNode.aClass182_672 = Player.method197(aPacket1521.readUnsignedByte());
+                PickableNode.aClass182_672 = PlayerEntity.method197(aPacket1521.readUnsignedByte());
                 anInt1511 = -1;
                 return true;
             }
@@ -2984,7 +2984,7 @@ public final class Client extends Applet_Sub1 {
                 return true;
             }
 
-            Player var12;
+            PlayerEntity var12;
             int var30;
             Packet var76;
             if (anInt1511 == 82) {
@@ -3100,7 +3100,7 @@ public final class Client extends Applet_Sub1 {
 
                 for (var68 = 1; var68 < 2048; ++var68) {
                     Class71.aByteArray719[var68] = (byte) (Class71.aByteArray719[var68] >> 1);
-                    var12 = players[var68];
+                    var12 = playerEntities[var68];
                     if (var12 != null) {
                         Class71.anIntArray723[++Class71.anInt729 - 1] = var68;
                     } else {
@@ -3387,7 +3387,7 @@ public final class Client extends Applet_Sub1 {
                 var2 = aPacket1521.method852();
                 var78 = InterfaceComponent.method1016(var2);
                 var78.modelType = 3;
-                var78.modelId = player.appearance.method1036();
+                var78.modelId = playerEntity.appearance.method1036();
                 ItemTable.method284(var78);
                 anInt1511 = -1;
                 return true;
@@ -3717,15 +3717,15 @@ public final class Client extends Applet_Sub1 {
             }
 
             if (anInt1511 == 103) {
-                for (var2 = 0; var2 < players.length; ++var2) {
-                    if (players[var2] != null) {
-                        players[var2].animation = -1;
+                for (var2 = 0; var2 < playerEntities.length; ++var2) {
+                    if (playerEntities[var2] != null) {
+                        playerEntities[var2].animation = -1;
                     }
                 }
 
-                for (var2 = 0; var2 < npcs.length; ++var2) {
-                    if (npcs[var2] != null) {
-                        npcs[var2].animation = -1;
+                for (var2 = 0; var2 < npcEntities.length; ++var2) {
+                    if (npcEntities[var2] != null) {
+                        npcEntities[var2].animation = -1;
                     }
                 }
 
@@ -3765,7 +3765,7 @@ public final class Client extends Applet_Sub1 {
                     var111[var68].world = aPacket1521.readUnsignedShort();
                     var111[var68].rank = aPacket1521.method870();
                     aPacket1521.method819();
-                    if (var111[var68].aString227.equals(player.name)) {
+                    if (var111[var68].aString227.equals(playerEntity.name)) {
                         aByte1826 = var111[var68].rank;
                     }
                 }
@@ -3830,7 +3830,7 @@ public final class Client extends Applet_Sub1 {
                 Class50.method317();
 
                 for (var2 = 0; var2 < 2048; ++var2) {
-                    players[var2] = null;
+                    playerEntities[var2] = null;
                 }
 
                 Class36.method263(aPacket1521);
@@ -3848,7 +3848,7 @@ public final class Client extends Applet_Sub1 {
                 if (TileDecor.anInt1035 >= 100) {
                     Class53.cameraX = Class5.anInt37 * 128 + 64;
                     Class34.cameraY = Class51.anInt381 * 128 + 64;
-                    Class85.cameraZ = Class25.method175(Class53.cameraX, Class34.cameraY, Player.floorLevel) - Class23.anInt156;
+                    Class85.cameraZ = Class25.method175(Class53.cameraX, Class34.cameraY, PlayerEntity.floorLevel) - Class23.anInt156;
                 }
 
                 anInt1511 = -1;
@@ -4016,15 +4016,15 @@ public final class Client extends Applet_Sub1 {
 
                 for (var2 = Class23.anInt153; var2 < Class23.anInt153 + 8; ++var2) {
                     for (var3 = Class5.anInt35; var3 < Class5.anInt35 + 8; ++var3) {
-                        if (pickableNodes[Player.floorLevel][var2][var3] != null) {
-                            pickableNodes[Player.floorLevel][var2][var3] = null;
+                        if (pickableNodes[PlayerEntity.floorLevel][var2][var3] != null) {
+                            pickableNodes[PlayerEntity.floorLevel][var2][var3] = null;
                             Class22.method146(var2, var3);
                         }
                     }
                 }
 
                 for (PendingSpawn var91 = pendingSpawns.method995(); var91 != null; var91 = pendingSpawns.next()) {
-                    if (var91.sceneX >= Class23.anInt153 && var91.sceneX < Class23.anInt153 + 8 && var91.sceneY >= Class5.anInt35 && var91.sceneY < Class5.anInt35 + 8 && var91.level == Player.floorLevel) {
+                    if (var91.sceneX >= Class23.anInt153 && var91.sceneX < Class23.anInt153 + 8 && var91.sceneY >= Class5.anInt35 && var91.sceneY < Class5.anInt35 + 8 && var91.level == PlayerEntity.floorLevel) {
                         var91.hitpoints = 0;
                     }
                 }
@@ -4124,7 +4124,7 @@ public final class Client extends Applet_Sub1 {
                 if (Class77.anInt832 >= 100) {
                     var2 = PickableNode.anInt671 * 128 + 64;
                     var3 = Class70.anInt714 * 128 + 64;
-                    var62 = Class25.method175(var2, var3, Player.floorLevel) - RuntimeException_Sub1.anInt1284;
+                    var62 = Class25.method175(var2, var3, PlayerEntity.floorLevel) - RuntimeException_Sub1.anInt1284;
                     var63 = var2 - Class53.cameraX;
                     var68 = var62 - Class85.cameraZ;
                     var8 = var3 - Class34.cameraY;
@@ -4342,7 +4342,7 @@ public final class Client extends Applet_Sub1 {
 
                 for (var68 = 1; var68 < 2048; ++var68) {
                     Class71.aByteArray719[var68] = (byte) (Class71.aByteArray719[var68] >> 1);
-                    var12 = players[var68];
+                    var12 = playerEntities[var68];
                     if (var12 != null) {
                         Class71.anIntArray723[++Class71.anInt729 - 1] = var68;
                     } else {
@@ -4533,7 +4533,7 @@ public final class Client extends Applet_Sub1 {
 
                 for (var68 = 1; var68 < 2048; ++var68) {
                     Class71.aByteArray719[var68] = (byte) (Class71.aByteArray719[var68] >> 1);
-                    var12 = players[var68];
+                    var12 = playerEntities[var68];
                     if (var12 != null) {
                         Class71.anIntArray723[++Class71.anInt729 - 1] = var68;
                     } else {
@@ -4788,7 +4788,7 @@ public final class Client extends Applet_Sub1 {
                         if (var30 == 0) {
                             Class126.aClanMateArray1370[var8].world = var3;
                             Class126.aClanMateArray1370[var8].rank = var4;
-                            if (var11.equals(player.name)) {
+                            if (var11.equals(playerEntity.name)) {
                                 aByte1826 = var4;
                             }
 
@@ -4817,7 +4817,7 @@ public final class Client extends Applet_Sub1 {
 
                     Class126.aClanMateArray1370[var8 + 1] = var9;
                     ++GrandExchangeOffer.anInt738;
-                    if (var11.equals(player.name)) {
+                    if (var11.equals(playerEntity.name)) {
                         aByte1826 = var4;
                     }
                 }
@@ -4845,7 +4845,7 @@ public final class Client extends Applet_Sub1 {
                 InterfaceNode.aGameSocket317 = null;
             }
         } catch (Exception var61) {
-            var11 = "" + anInt1511 + "," + anInt1516 + "," + anInt1517 + "," + anInt1514 + "," + (player.anIntArray800[0] + Class62.anInt636) + "," + (Class49.anInt377 + player.anIntArray804[0]) + ",";
+            var11 = "" + anInt1511 + "," + anInt1516 + "," + anInt1517 + "," + anInt1514 + "," + (playerEntity.anIntArray800[0] + Class62.anInt636) + "," + (Class49.anInt377 + playerEntity.anIntArray804[0]) + ",";
 
             for (var3 = 0; var3 < anInt1514 && var3 < 50; ++var3) {
                 var11 = var11 + aPacket1521.payload[var3] + ",";
@@ -4933,9 +4933,9 @@ public final class Client extends Applet_Sub1 {
             }
         }
 
-        var1 = Player.floorLevel;
-        var2 = player.strictX;
-        var3 = player.strictY;
+        var1 = PlayerEntity.floorLevel;
+        var2 = playerEntity.strictX;
+        var3 = playerEntity.strictY;
         int var6 = anInt1544;
 
         for (Node_Sub7 var14 = Node_Sub7.aNodeDeque403.method995(); var14 != null; var14 = Node_Sub7.aNodeDeque403.next()) {

@@ -33,7 +33,7 @@ public class Class180 {
             int var11 = var7 >> 14 & 32767;
             if (var7 != var5) {
                 var5 = var7;
-                if (var10 == 2 && Class60.aSceneGraph631.method668(Player.floorLevel, var8, var9, var7) >= 0) {
+                if (var10 == 2 && Class60.aSceneGraph631.method668(PlayerEntity.floorLevel, var8, var9, var7) >= 0) {
                     ObjectDefinition var13 = Class5.method17(var11);
                     if (var13.transformIds != null) {
                         var13 = var13.method1073();
@@ -89,19 +89,19 @@ public class Class180 {
                 }
 
                 int var17;
-                Npc var18;
-                Player var19;
+                NpcEntity var18;
+                PlayerEntity var19;
                 int[] var27;
                 int var28;
                 if (var10 == 1) {
-                    Npc var23 = Client.npcs[var11];
+                    NpcEntity var23 = Client.npcEntities[var11];
                     if (var23 == null) {
                         continue;
                     }
 
                     if (var23.definition.anInt221 == 1 && (var23.strictX & 127) == 64 && (var23.strictY & 127) == 64) {
                         for (var17 = 0; var17 < Client.anInt1501; ++var17) {
-                            var18 = Client.npcs[Client.npcIndices[var17]];
+                            var18 = Client.npcEntities[Client.npcIndices[var17]];
                             if (var18 != null && var18 != var23 && var18.definition.anInt221 == 1 && var23.strictX == var18.strictX && var23.strictY == var18.strictY) {
                                 Key.method362(var18.definition, Client.npcIndices[var17], var8, var9);
                             }
@@ -111,7 +111,7 @@ public class Class180 {
                         var27 = Class71.anIntArray723;
 
                         for (var28 = 0; var28 < var17; ++var28) {
-                            var19 = Client.players[var27[var28]];
+                            var19 = Client.playerEntities[var27[var28]];
                             if (var19 != null && var23.strictX == var19.strictX && var23.strictY == var19.strictY) {
                                 Class76.method453(var19, var27[var28], var8, var9);
                             }
@@ -122,14 +122,14 @@ public class Class180 {
                 }
 
                 if (var10 == 0) {
-                    Player var24 = Client.players[var11];
+                    PlayerEntity var24 = Client.playerEntities[var11];
                     if (var24 == null) {
                         continue;
                     }
 
                     if ((var24.strictX & 127) == 64 && (var24.strictY & 127) == 64) {
                         for (var17 = 0; var17 < Client.anInt1501; ++var17) {
-                            var18 = Client.npcs[Client.npcIndices[var17]];
+                            var18 = Client.npcEntities[Client.npcIndices[var17]];
                             if (var18 != null && var18.definition.anInt221 == 1 && var18.strictX == var24.strictX && var24.strictY == var18.strictY) {
                                 Key.method362(var18.definition, Client.npcIndices[var17], var8, var9);
                             }
@@ -139,7 +139,7 @@ public class Class180 {
                         var27 = Class71.anIntArray723;
 
                         for (var28 = 0; var28 < var17; ++var28) {
-                            var19 = Client.players[var27[var28]];
+                            var19 = Client.playerEntities[var27[var28]];
                             if (var19 != null && var19 != var24 && var24.strictX == var19.strictX && var24.strictY == var19.strictY) {
                                 Class76.method453(var19, var27[var28], var8, var9);
                             }
@@ -154,7 +154,7 @@ public class Class180 {
                 }
 
                 if (var10 == 3) {
-                    NodeDeque var25 = Client.pickableNodes[Player.floorLevel][var8][var9];
+                    NodeDeque var25 = Client.pickableNodes[PlayerEntity.floorLevel][var8][var9];
                     if (var25 != null) {
                         for (PickableNode var26 = (PickableNode) var25.current(); var26 != null; var26 = (PickableNode) var25.method990()) {
                             ItemDefinition var29 = Class149.method1001(var26.id);
@@ -210,7 +210,7 @@ public class Class180 {
         if (var4 != -1) {
             var6 = var4 & 127;
             var7 = var4 >> 7 & 127;
-            Player var12 = Client.players[Client.anInt1608];
+            PlayerEntity var12 = Client.playerEntities[Client.anInt1608];
             Class76.method453(var12, Client.anInt1608, var6, var7);
         }
 

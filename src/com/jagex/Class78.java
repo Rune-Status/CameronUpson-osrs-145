@@ -101,9 +101,9 @@ final class Class78 implements Class66 {
             return 1;
         }
         if (var0 == 3308) {
-            var3 = Player.floorLevel;
-            var4 = (Client.player.strictX >> 7) + Class62.anInt636;
-            var10 = (Client.player.strictY >> 7) + Class49.anInt377;
+            var3 = PlayerEntity.floorLevel;
+            var4 = (Client.playerEntity.strictX >> 7) + Class62.anInt636;
+            var10 = (Client.playerEntity.strictY >> 7) + Class49.anInt377;
             Class63.anIntArray645[++Class63.anInt644 - 1] = (var3 << 28) + (var4 << 14) + var10;
             return 1;
         }
@@ -224,7 +224,7 @@ final class Class78 implements Class66 {
 
     static void method468(boolean var0) {
         for (int var1 = 0; var1 < Client.anInt1501; ++var1) {
-            Npc var2 = Client.npcs[Client.npcIndices[var1]];
+            NpcEntity var2 = Client.npcEntities[Client.npcIndices[var1]];
             int var3 = (Client.npcIndices[var1] << 14) + 536870912;
             if (var2 != null && var2.method194() && var0 == var2.definition.aBoolean2021 && var2.definition.transforms()) {
                 int var4 = var2.strictX >> 7;
@@ -242,7 +242,7 @@ final class Class78 implements Class66 {
                         var3 -= Integer.MIN_VALUE;
                     }
 
-                    Class60.aSceneGraph631.method698(Player.floorLevel, var2.strictX, var2.strictY, Class25.method175(var2.strictX + (var2.anInt753 * 64 - 64), var2.anInt753 * 64 - 64 + var2.strictY, Player.floorLevel), var2.anInt753 * 64 - 64 + 60, var2, var2.anInt748, var3, var2.aBoolean758);
+                    Class60.aSceneGraph631.method698(PlayerEntity.floorLevel, var2.strictX, var2.strictY, Class25.method175(var2.strictX + (var2.anInt753 * 64 - 64), var2.anInt753 * 64 - 64 + var2.strictY, PlayerEntity.floorLevel), var2.anInt753 * 64 - 64 + 60, var2, var2.anInt748, var3, var2.aBoolean758);
                 }
             }
         }

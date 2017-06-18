@@ -58,7 +58,7 @@ public class Class15 implements Class16 {
             var0.method441();
         }
 
-        if (var0 == Client.player && (var0.strictX < 1536 || var0.strictY < 1536 || var0.strictX >= 11776 || var0.strictY >= 11776)) {
+        if (var0 == Client.playerEntity && (var0.strictX < 1536 || var0.strictY < 1536 || var0.strictX >= 11776 || var0.strictY >= 11776)) {
             var0.animation = -1;
             var0.anInt771 = -1;
             var0.anInt775 = 0;

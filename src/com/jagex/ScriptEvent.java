@@ -40,8 +40,8 @@ public class ScriptEvent extends Node {
     }
 
     static void method273() {
-        if (Player.aClass84_231 != null) {
-            Player.aClass84_231.method491();
+        if (PlayerEntity.aClass84_231 != null) {
+            PlayerEntity.aClass84_231.method491();
         }
 
         if (Class105.aClass84_1244 != null) {
@@ -739,7 +739,7 @@ public class ScriptEvent extends Node {
                 Class77.anInt828 -= 2;
                 var40 = Class63.aStringArray640[Class77.anInt828];
                 var38 = Class63.aStringArray640[Class77.anInt828 + 1];
-                if (Client.player.appearance != null && Client.player.appearance.female) {
+                if (Client.playerEntity.appearance != null && Client.playerEntity.appearance.female) {
                     Class63.aStringArray640[++Class77.anInt828 - 1] = var38;
                 } else {
                     Class63.aStringArray640[++Class77.anInt828 - 1] = var40;
@@ -1056,7 +1056,7 @@ public class ScriptEvent extends Node {
             } else if (var0 == 5001) {
                 Class63.anInt644 -= 3;
                 Client.anInt1689 = Class63.anIntArray645[Class63.anInt644];
-                PickableNode.aClass182_672 = Player.method197(Class63.anIntArray645[Class63.anInt644 + 1]);
+                PickableNode.aClass182_672 = PlayerEntity.method197(Class63.anIntArray645[Class63.anInt644 + 1]);
                 if (PickableNode.aClass182_672 == null) {
                     PickableNode.aClass182_672 = Class182.aClass182_2158;
                 }
@@ -1263,8 +1263,8 @@ public class ScriptEvent extends Node {
                 Client.packet.method866(Client.packet.caret - var5);
                 var11 = 1;
             } else if (var0 == 5015) {
-                if (Client.player != null && Client.player.name != null) {
-                    var40 = Client.player.name;
+                if (Client.playerEntity != null && Client.playerEntity.name != null) {
+                    var40 = Client.playerEntity.name;
                 } else {
                     var40 = "";
                 }
@@ -1517,7 +1517,7 @@ public class ScriptEvent extends Node {
                 var11 = 1;
             } else if (var0 == 6203) {
                 if (Client.anInterfaceComponent1638 != null) {
-                    Player.method193(0, 0, Client.anInterfaceComponent1638.width, Client.anInterfaceComponent1638.height, false);
+                    PlayerEntity.method193(0, 0, Client.anInterfaceComponent1638.width, Client.anInterfaceComponent1638.height, false);
                     Class63.anIntArray645[++Class63.anInt644 - 1] = Client.viewportWidth;
                     Class63.anIntArray645[++Class63.anInt644 - 1] = Client.viewportHeight;
                 } else {
@@ -1544,9 +1544,9 @@ public class ScriptEvent extends Node {
         if (var0 >= 6600) {
             if (var0 < 6700) {
                 if (var0 == 6600) {
-                    var3 = Player.floorLevel;
-                    var24 = Class62.anInt636 + (Client.player.strictX >> 7);
-                    var5 = Class49.anInt377 + (Client.player.strictY >> 7);
+                    var3 = PlayerEntity.floorLevel;
+                    var24 = Class62.anInt636 + (Client.playerEntity.strictX >> 7);
+                    var5 = Class49.anInt377 + (Client.playerEntity.strictY >> 7);
                     InterfaceNode.method268().method1295(var3, var24, var5, true);
                     var11 = 1;
                 } else {
@@ -1706,9 +1706,9 @@ public class ScriptEvent extends Node {
                                         var3 = Class63.anIntArray645[Class63.anInt644];
                                         var46 = new SceneOffset(Class63.anIntArray645[Class63.anInt644 + 1]);
                                         var41 = InterfaceNode.method268().method1276(var3);
-                                        var47 = Client.player.combatLevel;
-                                        var16 = (Client.player.strictX >> 7) + Class62.anInt636;
-                                        var8 = Class49.anInt377 + (Client.player.strictY >> 7);
+                                        var47 = Client.playerEntity.combatLevel;
+                                        var16 = (Client.playerEntity.strictX >> 7) + Class62.anInt636;
+                                        var8 = Class49.anInt377 + (Client.playerEntity.strictY >> 7);
                                         SceneOffset var59 = new SceneOffset(var47, var16, var8);
                                         InterfaceNode.method268().method1299(var41, var59, var46, false);
                                         var11 = 1;

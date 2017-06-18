@@ -5,7 +5,7 @@ import java.util.Iterator;
 //name comes from this: http://i.imgur.com/F3PnKrJ.png
 public class WorldMapTransportation {
 
-    static Node_Sub21_Sub26_Sub2[] aNode_Sub21_Sub26_Sub2Array85;
+    static CompressedImage[] aCompressedImageArray85;
 
     int maxY = 0;
     int minX = Integer.MAX_VALUE;

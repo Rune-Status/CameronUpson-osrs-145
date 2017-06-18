@@ -22,7 +22,7 @@ public class Class119 {
             }
             if (var0 == 1202) {
                 var3.modelType = 3;
-                var3.modelId = Client.player.appearance.method1036();
+                var3.modelId = Client.playerEntity.appearance.method1036();
                 return 1;
             }
             return 2;

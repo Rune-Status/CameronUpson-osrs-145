@@ -18,16 +18,16 @@ public final class Class7 {
     int anInt58;
     boolean aBoolean59 = false;
     int anInt51;
-    Node_Sub21_Sub26_Sub2[] aNode_Sub21_Sub26_Sub2Array54;
+    CompressedImage[] aCompressedImageArray54;
     Class13[][] aClass13ArrayArray63;
     int anInt57;
 
-    public Class7(Node_Sub21_Sub26_Sub2[] var1, HashMap var2) {
-        this.aNode_Sub21_Sub26_Sub2Array54 = var1;
+    public Class7(CompressedImage[] var1, HashMap var2) {
+        this.aCompressedImageArray54 = var1;
         this.aHashMap53 = var2;
     }
 
-    static void method41(Packet var0, int var1, Player var2, int var3) {
+    static void method41(Packet var0, int var1, PlayerEntity var2, int var3) {
         byte var4 = -1;
         int var5;
         if ((var3 & 4) != 0) {
@@ -47,7 +47,7 @@ public final class Class7 {
             }
 
             var8 = var0.readUnsignedByte();
-            Player.method394(var2, var5, var8);
+            PlayerEntity.method394(var2, var5, var8);
         }
 
         if ((var3 & 8) != 0) {
@@ -62,7 +62,7 @@ public final class Class7 {
             if (var2.aString752.charAt(0) == '~') {
                 var2.aString752 = var2.aString752.substring(1);
                 Class78.addChatMessage(2, var2.name, var2.aString752);
-            } else if (var2 == Client.player) {
+            } else if (var2 == Client.playerEntity) {
                 Class78.addChatMessage(2, var2.name, var2.aString752);
             }
 
@@ -151,7 +151,7 @@ public final class Class7 {
                     var2.anInt767 = var5 & 255;
                     var2.anInt761 = 150;
                     var2.aBoolean750 = var22;
-                    var2.aBoolean759 = var2 != Client.player && var20.aBoolean1846 && "" != Client.aString1679 && var17.toLowerCase().indexOf(Client.aString1679) == -1;
+                    var2.aBoolean759 = var2 != Client.playerEntity && var20.aBoolean1846 && "" != Client.aString1679 && var17.toLowerCase().indexOf(Client.aString1679) == -1;
                     int var18;
                     if (var20.aBoolean1850) {
                         var18 = var22 ? 91 : 1;
@@ -354,9 +354,9 @@ public final class Class7 {
     }
 
     public final void method30(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
-        int[] var9 = DrawingArea.drawingAreaPixels;
-        int var10 = DrawingArea.drawingAreaWidth;
-        int var11 = DrawingArea.anInt748;
+        int[] var9 = DrawingArea.buffer;
+        int var10 = DrawingArea.areaWidth;
+        int var11 = DrawingArea.areaHeight;
         int[] var12 = new int[4];
         DrawingArea.method1207(var12);
         Class5 var13 = this.method29(var1, var2, var3, var4);
@@ -375,11 +375,11 @@ public final class Class7 {
         for (var17 = var13.anInt34; var17 < var13.anInt32 + var13.anInt34; ++var17) {
             for (var18 = var13.anInt33; var18 < var13.anInt39 + var13.anInt33; ++var18) {
                 this.method38(var17, var18, var22);
-                this.aClass13ArrayArray63[var17][var18].method124(var15, (Class9) this.aHashMap55.get(var15), var22, this.aNode_Sub21_Sub26_Sub2Array54);
+                this.aClass13ArrayArray63[var17][var18].method124(var15, (Class9) this.aHashMap55.get(var15), var22, this.aCompressedImageArray54);
             }
         }
 
-        DrawingArea.method1211(var9, var10, var11);
+        DrawingArea.setTarget(var9, var10, var11);
         DrawingArea.method1213(var12);
         var17 = (int) (64.0F * var14);
         var18 = this.anInt51 + var1;

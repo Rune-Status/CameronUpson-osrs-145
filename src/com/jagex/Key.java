@@ -465,13 +465,13 @@ public class Key implements EnumOrdinal, Class187 {
             }
         }
 
-        int[] var14 = DrawingArea.drawingAreaPixels;
-        int var15 = DrawingArea.drawingAreaWidth;
-        int var16 = DrawingArea.anInt748;
+        int[] var14 = DrawingArea.buffer;
+        int var15 = DrawingArea.areaWidth;
+        int var16 = DrawingArea.areaHeight;
         int[] var17 = new int[4];
         DrawingArea.method1207(var17);
         var8 = new Sprite(36, 32);
-        DrawingArea.method1211(var8.pixels, 36, 32);
+        DrawingArea.setTarget(var8.pixels, 36, 32);
         DrawingArea.method1218();
         Node_Sub21_Sub26_Sub1.method308();
         Node_Sub21_Sub26_Sub1.method641(16, 16);
@@ -507,7 +507,7 @@ public class Key implements EnumOrdinal, Class187 {
             var8.method1240(var3);
         }
 
-        DrawingArea.method1211(var8.pixels, 36, 32);
+        DrawingArea.setTarget(var8.pixels, 36, 32);
         if (var9.anInt1864 != -1) {
             var13.method1230(0, 0);
         }
@@ -520,7 +520,7 @@ public class Key implements EnumOrdinal, Class187 {
             ItemDefinition.aReferenceCache1891.put(var8, var6);
         }
 
-        DrawingArea.method1211(var14, var15, var16);
+        DrawingArea.setTarget(var14, var15, var16);
         DrawingArea.method1213(var17);
         Node_Sub21_Sub26_Sub1.method308();
         Node_Sub21_Sub26_Sub1.aBoolean1084 = true;
@@ -538,7 +538,7 @@ public class Key implements EnumOrdinal, Class187 {
                     if (!var0.aBoolean2019 || var1 == Client.anInt1641) {
                         String var4 = var0.name;
                         if (var0.anInt236 != 0) {
-                            var4 = var4 + Class76.method1007(var0.anInt236, Client.player.anInt221) + " " + " (" + "level-" + var0.anInt236 + ")";
+                            var4 = var4 + Class76.method1007(var0.anInt236, Client.playerEntity.anInt221) + " " + " (" + "level-" + var0.anInt236 + ")";
                         }
 
                         if (var0.aBoolean2019 && Client.resizableMode) {
@@ -594,7 +594,7 @@ public class Key implements EnumOrdinal, Class187 {
                                     if (var6[var7] != null && var6[var7].equalsIgnoreCase("Attack")) {
                                         short var9 = 0;
                                         if (Class55.aClass55_422 != Client.aClass55_1497) {
-                                            if (Class55.aClass55_425 == Client.aClass55_1497 || Client.aClass55_1497 == Class55.aClass55_420 && var0.anInt236 > Client.player.anInt221) {
+                                            if (Class55.aClass55_425 == Client.aClass55_1497 || Client.aClass55_1497 == Class55.aClass55_420 && var0.anInt236 > Client.playerEntity.anInt221) {
                                                 var9 = 2000;
                                             }
 

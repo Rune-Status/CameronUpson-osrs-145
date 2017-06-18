@@ -30,7 +30,7 @@ public class Class53 {
     static void method338() {
         for (int var0 = 0; var0 < Client.anInt1501; ++var0) {
             int var1 = Client.npcIndices[var0];
-            Npc var2 = Client.npcs[var1];
+            NpcEntity var2 = Client.npcEntities[var1];
             if (var2 != null) {
                 Class15.method133(var2, var2.definition.anInt221);
             }

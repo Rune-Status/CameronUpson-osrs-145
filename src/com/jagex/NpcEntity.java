@@ -1,6 +1,6 @@
 package com.jagex;
 
-public final class Npc extends PathingEntity {
+public final class NpcEntity extends PathingEntity {
     static int[] anIntArray661;
     NpcDefinition definition;
 

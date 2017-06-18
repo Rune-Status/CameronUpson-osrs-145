@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class TextureProviderImpl implements TextureProvider {
+
     NodeDeque<Node_Sub16> aNodeDeque885 = new NodeDeque<>();
     int anInt881;
     int anInt883 = 128;
@@ -129,7 +130,7 @@ public class TextureProviderImpl implements TextureProvider {
 
     }
 
-    public int[] method506(int var1) {
+    public int[] getPixels(int var1) {
         Node_Sub16 var2 = this.aNode_Sub16Array879[var1];
         if (var2 != null) {
             if (var2.anIntArray1171 != null) {

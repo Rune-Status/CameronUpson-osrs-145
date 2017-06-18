@@ -58,14 +58,14 @@ public class Class18 {
         return var3;
     }
 
-    static Node_Sub21_Sub26_Sub2[] method138(ReferenceTable var0, int var1, int var2) {
+    static CompressedImage[] method138(ReferenceTable var0, int var1, int var2) {
         if (!Class64.method381(var0, var1, var2)) {
             return null;
         }
-        Node_Sub21_Sub26_Sub2[] var3 = new Node_Sub21_Sub26_Sub2[Class191.anInt2244];
+        CompressedImage[] var3 = new CompressedImage[Class191.anInt2244];
 
         for (int var4 = 0; var4 < Class191.anInt2244; ++var4) {
-            Node_Sub21_Sub26_Sub2 var5 = var3[var4] = new Node_Sub21_Sub26_Sub2();
+            CompressedImage var5 = var3[var4] = new CompressedImage();
             var5.anInt221 = Class160.anInt1857;
             var5.anInt220 = Class191.anInt2246;
             var5.anInt327 = Class191.anIntArray2245[var4];

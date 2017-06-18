@@ -16,7 +16,7 @@ public class Class30 {
             return false;
         }
         for (int var1 = 0; var1 < var0.anIntArray1941.length; ++var1) {
-            int var2 = Player.method190(var0, var1);
+            int var2 = PlayerEntity.method190(var0, var1);
             int var3 = var0.anIntArray1940[var1];
             if (var0.anIntArray1941[var1] == 2) {
                 if (var2 >= var3) {

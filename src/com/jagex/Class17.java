@@ -3,7 +3,7 @@ package com.jagex;
 public class Class17 {
     static final Class17 aClass17_127 = new Class17(1);
     static final Class17 aClass17_124 = new Class17(0);
-    static Node_Sub21_Sub26_Sub2[] aNode_Sub21_Sub26_Sub2Array126;
+    static CompressedImage[] aCompressedImageArray126;
     final int anInt125;
 
     Class17(int var1) {

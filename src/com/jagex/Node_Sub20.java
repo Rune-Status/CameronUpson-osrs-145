@@ -107,7 +107,7 @@ public class Node_Sub20 extends Node {
                                     }
                                 }
 
-                                if (Class84.method484(Client.player.name, Class2.aClass188_13).equals(var14)) {
+                                if (Class84.method484(Client.playerEntity.name, Class2.aClass188_13).equals(var14)) {
                                     Class78.addChatMessage(30, "", "You can't insert yourself to your own friend list");
                                 } else {
                                     Client.packet.writeHeader(186);
@@ -307,7 +307,7 @@ public class Node_Sub20 extends Node {
             return 2;
         }
         var3 = Class63.anIntArray645[--Class63.anInt644];
-        if (Class126.aClanMateArray1370 != null && var3 < GrandExchangeOffer.anInt738 && Class126.aClanMateArray1370[var3].aString227.equalsIgnoreCase(Client.player.name)) {
+        if (Class126.aClanMateArray1370 != null && var3 < GrandExchangeOffer.anInt738 && Class126.aClanMateArray1370[var3].aString227.equalsIgnoreCase(Client.playerEntity.name)) {
             Class63.anIntArray645[++Class63.anInt644 - 1] = 1;
         } else {
             Class63.anIntArray645[++Class63.anInt644 - 1] = 0;

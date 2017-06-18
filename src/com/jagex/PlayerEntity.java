@@ -3,7 +3,7 @@ package com.jagex;
 import java.io.File;
 import java.io.RandomAccessFile;
 
-public final class Player extends PathingEntity {
+public final class PlayerEntity extends PathingEntity {
     static Class84 aClass84_231;
     static int floorLevel;
     PlayerAppearance appearance;
@@ -33,7 +33,7 @@ public final class Player extends PathingEntity {
     int anInt234;
     int anInt213;
 
-    Player() {
+    PlayerEntity() {
         for (int var1 = 0; var1 < 3; ++var1) {
             this.aStringArray238[var1] = "";
         }
@@ -183,7 +183,7 @@ public final class Player extends PathingEntity {
                     }
 
                     if (var6 == 8) {
-                        var7 = Client.player.anInt221;
+                        var7 = Client.playerEntity.anInt221;
                     }
 
                     if (var6 == 9) {
@@ -241,11 +241,11 @@ public final class Player extends PathingEntity {
                     }
 
                     if (var6 == 18) {
-                        var7 = (Client.player.strictX >> 7) + Class62.anInt636;
+                        var7 = (Client.playerEntity.strictX >> 7) + Class62.anInt636;
                     }
 
                     if (var6 == 19) {
-                        var7 = (Client.player.strictY >> 7) + Class49.anInt377;
+                        var7 = (Client.playerEntity.strictY >> 7) + Class49.anInt377;
                     }
 
                     if (var6 == 20) {
@@ -418,7 +418,7 @@ public final class Player extends PathingEntity {
         return null;
     }
 
-    static void method394(Player var0, int var1, int var2) {
+    static void method394(PlayerEntity var0, int var1, int var2) {
         if (var1 == var0.animation && var1 != -1) {
             int var3 = AnimationSequence.get(var1).replayMode;
             if (var3 == 1) {
@@ -642,7 +642,7 @@ public final class Player extends PathingEntity {
         }
 
         this.name = var1.method819();
-        if (this == Client.player) {
+        if (this == Client.playerEntity) {
             RuntimeException_Sub1.aString1288 = this.name;
         }
 

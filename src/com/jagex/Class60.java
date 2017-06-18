@@ -52,7 +52,7 @@ final class Class60 implements Comparator {
                         var3.population = var1.readShort();
                     }
 
-                    Player.method192(World.worlds, 0, World.worlds.length - 1, World.anIntArray385, World.anIntArray387);
+                    PlayerEntity.method192(World.worlds, 0, World.worlds.length - 1, World.anIntArray385, World.anIntArray387);
                     World.aClass25_384 = null;
                     return true;
                 }

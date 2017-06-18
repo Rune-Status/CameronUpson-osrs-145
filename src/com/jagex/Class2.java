@@ -4,7 +4,7 @@ public class Class2 {
     static CacheReferenceTable aCacheReferenceTable8;
     static int anInt9;
     static int anInt15;
-    static Node_Sub21_Sub26_Sub2[] aNode_Sub21_Sub26_Sub2Array12;
+    static CompressedImage[] aCompressedImageArray12;
     static Class188 aClass188_13;
     String aString7;
     int anInt14;
@@ -41,83 +41,83 @@ public class Class2 {
                 Class158.aSpriteArray1847 = RuntimeException_Sub1.method742(Class21.aCacheReferenceTable139, "sl_back", "");
             }
 
-            if (Login.aNode_Sub21_Sub26_Sub2Array708 == null) {
-                Login.aNode_Sub21_Sub26_Sub2Array708 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "sl_flags", "");
+            if (Login.aCompressedImageArray708 == null) {
+                Login.aCompressedImageArray708 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "sl_flags", "");
             }
 
-            if (Class22.aNode_Sub21_Sub26_Sub2Array147 == null) {
-                Class22.aNode_Sub21_Sub26_Sub2Array147 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "sl_arrows", "");
+            if (Class22.aCompressedImageArray147 == null) {
+                Class22.aCompressedImageArray147 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "sl_arrows", "");
             }
 
-            if (WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85 == null) {
-                WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "sl_stars", "");
+            if (WorldMapTransportation.aCompressedImageArray85 == null) {
+                WorldMapTransportation.aCompressedImageArray85 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "sl_stars", "");
             }
 
             DrawingArea.method1223(Login.anInt702, 23, 765, 480, 0);
             DrawingArea.method1217(Login.anInt702, 0, 125, 23, 12425273, 9135624);
             DrawingArea.method1217(Login.anInt702 + 125, 0, 640, 23, 5197647, 2697513);
             var0.method1161("Select a world", Login.anInt702 + 62, 15, 0, -1);
-            if (WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85 != null) {
-                WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85[1].method1155(Login.anInt702 + 140, 1);
+            if (WorldMapTransportation.aCompressedImageArray85 != null) {
+                WorldMapTransportation.aCompressedImageArray85[1].method1155(Login.anInt702 + 140, 1);
                 var1.method1170("Members only world", Login.anInt702 + 152, 10, 16777215, -1);
-                WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85[0].method1155(Login.anInt702 + 140, 12);
+                WorldMapTransportation.aCompressedImageArray85[0].method1155(Login.anInt702 + 140, 12);
                 var1.method1170("Free world", Login.anInt702 + 152, 21, 16777215, -1);
             }
 
-            if (Class22.aNode_Sub21_Sub26_Sub2Array147 != null) {
+            if (Class22.aCompressedImageArray147 != null) {
                 var26 = Login.anInt702 + 280;
                 if (World.anIntArray385[0] == 0 && World.anIntArray387[0] == 0) {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[2].method1155(var26, 4);
+                    Class22.aCompressedImageArray147[2].method1155(var26, 4);
                 } else {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[0].method1155(var26, 4);
+                    Class22.aCompressedImageArray147[0].method1155(var26, 4);
                 }
 
                 if (World.anIntArray385[0] == 0 && World.anIntArray387[0] == 1) {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[3].method1155(var26 + 15, 4);
+                    Class22.aCompressedImageArray147[3].method1155(var26 + 15, 4);
                 } else {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[1].method1155(var26 + 15, 4);
+                    Class22.aCompressedImageArray147[1].method1155(var26 + 15, 4);
                 }
 
                 var0.method1170("World", var26 + 32, 17, 16777215, -1);
                 var5 = Login.anInt702 + 390;
                 if (World.anIntArray385[0] == 1 && World.anIntArray387[0] == 0) {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[2].method1155(var5, 4);
+                    Class22.aCompressedImageArray147[2].method1155(var5, 4);
                 } else {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[0].method1155(var5, 4);
+                    Class22.aCompressedImageArray147[0].method1155(var5, 4);
                 }
 
                 if (World.anIntArray385[0] == 1 && World.anIntArray387[0] == 1) {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[3].method1155(var5 + 15, 4);
+                    Class22.aCompressedImageArray147[3].method1155(var5 + 15, 4);
                 } else {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[1].method1155(var5 + 15, 4);
+                    Class22.aCompressedImageArray147[1].method1155(var5 + 15, 4);
                 }
 
                 var0.method1170("Players", var5 + 32, 17, 16777215, -1);
                 var28 = Login.anInt702 + 500;
                 if (World.anIntArray385[0] == 2 && World.anIntArray387[0] == 0) {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[2].method1155(var28, 4);
+                    Class22.aCompressedImageArray147[2].method1155(var28, 4);
                 } else {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[0].method1155(var28, 4);
+                    Class22.aCompressedImageArray147[0].method1155(var28, 4);
                 }
 
                 if (World.anIntArray385[0] == 2 && World.anIntArray387[0] == 1) {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[3].method1155(var28 + 15, 4);
+                    Class22.aCompressedImageArray147[3].method1155(var28 + 15, 4);
                 } else {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[1].method1155(var28 + 15, 4);
+                    Class22.aCompressedImageArray147[1].method1155(var28 + 15, 4);
                 }
 
                 var0.method1170("Location", var28 + 32, 17, 16777215, -1);
                 var7 = Login.anInt702 + 610;
                 if (World.anIntArray385[0] == 3 && World.anIntArray387[0] == 0) {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[2].method1155(var7, 4);
+                    Class22.aCompressedImageArray147[2].method1155(var7, 4);
                 } else {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[0].method1155(var7, 4);
+                    Class22.aCompressedImageArray147[0].method1155(var7, 4);
                 }
 
                 if (World.anIntArray385[0] == 3 && World.anIntArray387[0] == 1) {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[3].method1155(var7 + 15, 4);
+                    Class22.aCompressedImageArray147[3].method1155(var7 + 15, 4);
                 } else {
-                    Class22.aNode_Sub21_Sub26_Sub2Array147[1].method1155(var7 + 15, 4);
+                    Class22.aCompressedImageArray147[1].method1155(var7 + 15, 4);
                 }
 
                 var0.method1170("Type", var7 + 32, 17, 16777215, -1);
@@ -213,8 +213,8 @@ public class Class2 {
                         Class158.aSpriteArray1847[var21].method1242(var13, var12);
                     }
 
-                    if (Login.aNode_Sub21_Sub26_Sub2Array708 != null) {
-                        Login.aNode_Sub21_Sub26_Sub2Array708[(var17.method327() ? 8 : 0) + var17.location].method1155(var13 + 29, var12);
+                    if (Login.aCompressedImageArray708 != null) {
+                        Login.aCompressedImageArray708[(var17.method327() ? 8 : 0) + var17.location].method1155(var13 + 29, var12);
                     }
 
                     var0.method1161(Integer.toString(var17.id), var13 + 15, var33 / 2 + var12 + 5, var20, -1);
@@ -232,7 +232,7 @@ public class Class2 {
                     var16 = var1.getTextWidth(World.worlds[Login.anInt684].activity) + 6;
                     int var22 = var1.anInt221 + 8;
                     DrawingArea.method1223(Class33.anInt261 - var16 / 2, Class33.anInt260 + 20 + 5, var16, var22, 16777120);
-                    DrawingArea.method1208(Class33.anInt261 - var16 / 2, Class33.anInt260 + 20 + 5, var16, var22, 0);
+                    DrawingArea.drawRectangle(Class33.anInt261 - var16 / 2, Class33.anInt260 + 20 + 5, var16, var22, 0);
                     var1.method1161(World.worlds[Login.anInt684].activity, Class33.anInt261, Class33.anInt260 + 20 + 5 + var1.anInt221 + 4, 0, -1);
                 }
             }
@@ -242,15 +242,15 @@ public class Class2 {
             if (var3) {
                 Class3.aSprite17.method1242(Login.anInt702, 0);
                 Login.aSprite697.method1242(Login.anInt702 + 382, 0);
-                Login.aNode_Sub21_Sub26_Sub2_695.method1155(Login.anInt702 + 382 - Login.aNode_Sub21_Sub26_Sub2_695.anInt206 / 2, 18);
+                Login.aCompressedImage_695.method1155(Login.anInt702 + 382 - Login.aCompressedImage_695.anInt206 / 2, 18);
             }
 
             if (Client.connectionState == 0 || Client.connectionState == 5) {
                 var4 = 20;
                 var0.method1161("RuneScape is loading - please wait...", Login.anInt710 + 180, 245 - var4, 16777215, -1);
                 var5 = 253 - var4;
-                DrawingArea.method1208(Login.anInt710 + 180 - 152, var5, 304, 34, 9179409);
-                DrawingArea.method1208(Login.anInt710 + 180 - 151, var5 + 1, 302, 32, 0);
+                DrawingArea.drawRectangle(Login.anInt710 + 180 - 152, var5, 304, 34, 9179409);
+                DrawingArea.drawRectangle(Login.anInt710 + 180 - 151, var5 + 1, 302, 32, 0);
                 DrawingArea.method1223(Login.anInt710 + 180 - 150, var5 + 2, Login.anInt699 * 3, 30, 9179409);
                 DrawingArea.method1223(Login.anInt710 + 180 - 150 + Login.anInt699 * 3, var5 + 2, 300 - Login.anInt699 * 3, 30, 0);
                 var0.method1161(Login.aString686, Login.anInt710 + 180, 276 - var4, 16777215, -1);
@@ -260,7 +260,7 @@ public class Class2 {
             short var25;
             short var27;
             if (Client.connectionState == 20) {
-                Login.aNode_Sub21_Sub26_Sub2_690.method1155(Login.anInt710 + 180 - Login.aNode_Sub21_Sub26_Sub2_690.anInt206 / 2, 271 - Login.aNode_Sub21_Sub26_Sub2_690.anInt232 / 2);
+                Login.aCompressedImage_690.method1155(Login.anInt710 + 180 - Login.aCompressedImage_690.anInt206 / 2, 271 - Login.aCompressedImage_690.anInt232 / 2);
                 var25 = 211;
                 var0.method1161(Login.loginResponseLine1, Login.anInt710 + 180, var25, 16776960, 0);
                 var26 = var25 + 15;
@@ -284,7 +284,7 @@ public class Class2 {
             }
 
             if (Client.connectionState == 10 || Client.connectionState == 11) {
-                Login.aNode_Sub21_Sub26_Sub2_690.method1155(Login.anInt710, 171);
+                Login.aCompressedImage_690.method1155(Login.anInt710, 171);
                 short var6;
                 if (Login.anInt701 == 0) {
                     var25 = 251;
@@ -292,10 +292,10 @@ public class Class2 {
                     var26 = var25 + 30;
                     var5 = Login.anInt710 + 180 - 80;
                     var6 = 291;
-                    Login.aNode_Sub21_Sub26_Sub2_709.method1155(var5 - 73, var6 - 20);
+                    Login.aCompressedImage_709.method1155(var5 - 73, var6 - 20);
                     var0.method1184("New User", var5 - 73, var6 - 20, 144, 40, 16777215, 0, 1, 1, 0);
                     var5 = Login.anInt710 + 180 + 80;
-                    Login.aNode_Sub21_Sub26_Sub2_709.method1155(var5 - 73, var6 - 20);
+                    Login.aCompressedImage_709.method1155(var5 - 73, var6 - 20);
                     var0.method1184("Existing User", var5 - 73, var6 - 20, 144, 40, 16777215, 0, 1, 1, 0);
                 } else if (Login.anInt701 == 1) {
                     var0.method1161(Login.aString707, Login.anInt710 + 180, 211, 16776960, 0);
@@ -308,10 +308,10 @@ public class Class2 {
                     var26 += 15;
                     var5 = Login.anInt710 + 180 - 80;
                     var6 = 321;
-                    Login.aNode_Sub21_Sub26_Sub2_709.method1155(var5 - 73, var6 - 20);
+                    Login.aCompressedImage_709.method1155(var5 - 73, var6 - 20);
                     var0.method1161("Continue", var5, var6 + 5, 16777215, 0);
                     var5 = Login.anInt710 + 180 + 80;
-                    Login.aNode_Sub21_Sub26_Sub2_709.method1155(var5 - 73, var6 - 20);
+                    Login.aCompressedImage_709.method1155(var5 - 73, var6 - 20);
                     var0.method1161("Cancel", var5, var6 + 5, 16777215, 0);
                 } else {
                     short var8;
@@ -336,10 +336,10 @@ public class Class2 {
                         var26 += 15;
                         var7 = Login.anInt710 + 180 - 80;
                         var8 = 321;
-                        Login.aNode_Sub21_Sub26_Sub2_709.method1155(var7 - 73, var8 - 20);
+                        Login.aCompressedImage_709.method1155(var7 - 73, var8 - 20);
                         var0.method1161("Login", var7, var8 + 5, 16777215, 0);
                         var7 = Login.anInt710 + 180 + 80;
-                        Login.aNode_Sub21_Sub26_Sub2_709.method1155(var7 - 73, var8 - 20);
+                        Login.aCompressedImage_709.method1155(var7 - 73, var8 - 20);
                         var0.method1161("Cancel", var7, var8 + 5, 16777215, 0);
                         var25 = 357;
                         var1.method1161("Forgotten your password? <col=ffffff>Click here.", Login.anInt710 + 180, var25, 16776960, 0);
@@ -353,11 +353,11 @@ public class Class2 {
                         var26 += 15;
                         var5 = Login.anInt710 + 180;
                         var6 = 276;
-                        Login.aNode_Sub21_Sub26_Sub2_709.method1155(var5 - 73, var6 - 20);
+                        Login.aCompressedImage_709.method1155(var5 - 73, var6 - 20);
                         var2.method1161("Try again", var5, var6 + 5, 16777215, 0);
                         var5 = Login.anInt710 + 180;
                         var6 = 326;
-                        Login.aNode_Sub21_Sub26_Sub2_709.method1155(var5 - 73, var6 - 20);
+                        Login.aCompressedImage_709.method1155(var5 - 73, var6 - 20);
                         var2.method1161("Forgotten password?", var5, var6 + 5, 16777215, 0);
                     } else if (Login.anInt701 == 4) {
                         var0.method1161("Authenticator", Login.anInt710 + 180, 211, 16776960, 0);
@@ -375,21 +375,21 @@ public class Class2 {
                         var0.method1170("for 30 days: ", Login.anInt710 + 180 - 9, var26, 16776960, 0);
                         var5 = Login.anInt710 + 180 - 9 + var0.getTextWidth("for 30 days: ") + 15;
                         var28 = var26 - var0.anInt221;
-                        Node_Sub21_Sub26_Sub2 var24;
+                        CompressedImage var24;
                         if (Login.aBoolean703) {
-                            var24 = AnimationSkin.aNode_Sub21_Sub26_Sub2_1290;
+                            var24 = AnimationSkin.aCompressedImage_1290;
                         } else {
-                            var24 = Class49.aNode_Sub21_Sub26_Sub2_375;
+                            var24 = Class49.aCompressedImage_375;
                         }
 
                         var24.method1155(var5, var28);
                         var26 += 15;
                         var29 = Login.anInt710 + 180 - 80;
                         short var9 = 321;
-                        Login.aNode_Sub21_Sub26_Sub2_709.method1155(var29 - 73, var9 - 20);
+                        Login.aCompressedImage_709.method1155(var29 - 73, var9 - 20);
                         var0.method1161("Continue", var29, var9 + 5, 16777215, 0);
                         var29 = Login.anInt710 + 180 + 80;
-                        Login.aNode_Sub21_Sub26_Sub2_709.method1155(var29 - 73, var9 - 20);
+                        Login.aCompressedImage_709.method1155(var29 - 73, var9 - 20);
                         var0.method1161("Cancel", var29, var9 + 5, 16777215, 0);
                         var1.method1161("<u=ff>Can't Log In?</u>", Login.anInt710 + 180, var9 + 36, 255, 0);
                     } else if (Login.anInt701 == 5) {
@@ -412,10 +412,10 @@ public class Class2 {
                         var26 += 15;
                         var7 = Login.anInt710 + 180 - 80;
                         var8 = 321;
-                        Login.aNode_Sub21_Sub26_Sub2_709.method1155(var7 - 73, var8 - 20);
+                        Login.aCompressedImage_709.method1155(var7 - 73, var8 - 20);
                         var0.method1161("Recover", var7, var8 + 5, 16777215, 0);
                         var7 = Login.anInt710 + 180 + 80;
-                        Login.aNode_Sub21_Sub26_Sub2_709.method1155(var7 - 73, var8 - 20);
+                        Login.aCompressedImage_709.method1155(var7 - 73, var8 - 20);
                         var0.method1161("Back", var7, var8 + 5, 16777215, 0);
                     } else if (Login.anInt701 == 6) {
                         var25 = 211;
@@ -427,7 +427,7 @@ public class Class2 {
                         var26 += 15;
                         var5 = Login.anInt710 + 180;
                         var6 = 321;
-                        Login.aNode_Sub21_Sub26_Sub2_709.method1155(var5 - 73, var6 - 20);
+                        Login.aCompressedImage_709.method1155(var5 - 73, var6 - 20);
                         var0.method1161("Back", var5, var6 + 5, 16777215, 0);
                     }
                 }
@@ -465,7 +465,7 @@ public class Class2 {
                 }
             }
 
-            DrawingArea.setClip(Login.anInt702, 9, Login.anInt702 + 128, var25 + 7);
+            DrawingArea.clip(Login.anInt702, 9, Login.anInt702 + 128, var25 + 7);
             Class3.aSprite17.method1242(Login.anInt702, 0);
             DrawingArea.method1206();
             var5 = 0;
@@ -496,7 +496,7 @@ public class Class2 {
                 var28 += var30 + World.graphicsProvider.anInt2180 - 128;
             }
 
-            DrawingArea.setClip(Login.anInt702 + 765 - 128, 9, Login.anInt702 + 765, var25 + 7);
+            DrawingArea.clip(Login.anInt702 + 765 - 128, 9, Login.anInt702 + 765, var25 + 7);
             Login.aSprite697.method1242(Login.anInt702 + 382, 0);
             DrawingArea.method1206();
             var5 = 0;
@@ -524,14 +524,14 @@ public class Class2 {
                 var28 += World.graphicsProvider.anInt2180 - var30 - var29;
             }
 
-            Login.aNode_Sub21_Sub26_Sub2Array692[Client.preferences.loginScreenAudioDisabled ? 1 : 0].method1155(Login.anInt702 + 765 - 40, 463);
+            Login.aCompressedImageArray692[Client.preferences.loginScreenAudioDisabled ? 1 : 0].method1155(Login.anInt702 + 765 - 40, 463);
             if (Client.connectionState > 5 && Client.anInt1463 == 0) {
-                if (Class108.aNode_Sub21_Sub26_Sub2_1296 != null) {
+                if (Class108.aCompressedImage_1296 != null) {
                     var26 = Login.anInt702 + 5;
                     var27 = 463;
                     byte var32 = 100;
                     byte var31 = 35;
-                    Class108.aNode_Sub21_Sub26_Sub2_1296.method1155(var26, var27);
+                    Class108.aCompressedImage_1296.method1155(var26, var27);
                     var0.method1161("World" + " " + Client.currentWorld, var32 / 2 + var26, var31 / 2 + var27 - 2, 16777215, 0);
                     if (World.aClass25_384 != null) {
                         var1.method1161("Loading...", var32 / 2 + var26, var31 / 2 + var27 + 12, 16777215, 0);
@@ -539,7 +539,7 @@ public class Class2 {
                         var1.method1161("Click to switch", var26 + var32 / 2, var27 + var31 / 2 + 12, 16777215, 0);
                     }
                 } else {
-                    Class108.aNode_Sub21_Sub26_Sub2_1296 = Class185.method1203(Class21.aCacheReferenceTable139, "sl_button", "");
+                    Class108.aCompressedImage_1296 = Class185.method1203(Class21.aCacheReferenceTable139, "sl_button", "");
                 }
             }
 

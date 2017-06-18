@@ -36,7 +36,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
                         break;
                     }
 
-                    var0 = var0.substring(0, var3) + Key.method361(Player.method190(var1, var2 - 1)) + var0.substring(var3 + 2);
+                    var0 = var0.substring(0, var3) + Key.method361(PlayerEntity.method190(var1, var2 - 1)) + var0.substring(var3 + 2);
                 }
             }
 
@@ -163,7 +163,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
 
                 if (var6 != null) {
                     var39 = new File(var6, "test.dat");
-                    if (!Player.method196(var39, true)) {
+                    if (!PlayerEntity.method196(var39, true)) {
                         var6 = null;
                     }
                 }
@@ -174,7 +174,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
                 for (int var13 = 0; var13 < ClientPreferences.aStringArray351.length; ++var13) {
                     for (int var14 = 0; var14 < Class85.aStringArray874.length; ++var14) {
                         File var15 = new File(Class85.aStringArray874[var14] + ClientPreferences.aStringArray351[var13] + File.separatorChar + var0 + File.separatorChar);
-                        if (var15.exists() && Player.method196(new File(var15, "test.dat"), true)) {
+                        if (var15.exists() && PlayerEntity.method196(new File(var15, "test.dat"), true)) {
                             var6 = var15.toString();
                             var8 = true;
                             break label269;
@@ -242,7 +242,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
 
                 for (int var22 = 0; var22 < var35.length; ++var22) {
                     File var23 = var35[var22];
-                    if (!Player.method196(var23, false)) {
+                    if (!PlayerEntity.method196(var23, false)) {
                         ++var4;
                         continue label295;
                     }
@@ -334,7 +334,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
 
     static void method219(int var0, int var1, int var2, int var3, int var4, int var5, int var6) {
         if (var2 >= 1 && var3 >= 1 && var2 <= 102 && var3 <= 102) {
-            if (Client.lowMemory && Player.floorLevel != var0) {
+            if (Client.lowMemory && PlayerEntity.floorLevel != var0) {
                 return;
             }
 

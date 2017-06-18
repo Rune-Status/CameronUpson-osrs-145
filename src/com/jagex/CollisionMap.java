@@ -20,9 +20,9 @@ public class CollisionMap {
             if (var0.targetIndex != -1) {
                 Object var1 = null;
                 if (var0.targetIndex < 32768) {
-                    var1 = Client.npcs[var0.targetIndex];
+                    var1 = Client.npcEntities[var0.targetIndex];
                 } else if (var0.targetIndex >= 32768) {
-                    var1 = Client.players[var0.targetIndex - '耀'];
+                    var1 = Client.playerEntities[var0.targetIndex - '耀'];
                 }
 
                 if (var1 != null) {

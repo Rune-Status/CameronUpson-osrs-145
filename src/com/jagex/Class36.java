@@ -4,7 +4,7 @@ public final class Class36 {
     static void method263(Packet var0) {
         var0.method790();
         int var1 = Client.playerIndex;
-        Player var2 = Client.player = Client.players[var1] = new Player();
+        PlayerEntity var2 = Client.playerEntity = Client.playerEntities[var1] = new PlayerEntity();
         var2.anInt213 = var1;
         int var3 = var0.method788(30);
         byte var4 = (byte) (var3 >> 28);
@@ -14,7 +14,7 @@ public final class Class36 {
         var2.strictX = (var2.anIntArray800[0] << 7) + (var2.method195() << 6);
         var2.anIntArray804[0] = var6 - Class49.anInt377;
         var2.strictY = (var2.anIntArray804[0] << 7) + (var2.method195() << 6);
-        Player.floorLevel = var2.combatLevel = var4;
+        PlayerEntity.floorLevel = var2.combatLevel = var4;
         if (Class71.aBufferArray728[var1] != null) {
             var2.method198(Class71.aBufferArray728[var1]);
         }

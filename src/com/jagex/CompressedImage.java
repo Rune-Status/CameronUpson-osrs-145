@@ -1,6 +1,6 @@
 package com.jagex;
 
-public final class Node_Sub21_Sub26_Sub2 extends DrawingArea {
+public final class CompressedImage extends DrawingArea {
     public byte[] aByteArray1361;
     public int[] anIntArray342;
     public int anInt206;
@@ -166,78 +166,78 @@ public final class Node_Sub21_Sub26_Sub2 extends DrawingArea {
             var4 = ((var6 << 16) - var8 + var12 - 1) / var12;
         }
 
-        var13 = var1 + var2 * drawingAreaWidth;
-        int var14 = drawingAreaWidth - var3;
-        if (var2 + var4 > anInt753) {
-            var4 -= var2 + var4 - anInt753;
+        var13 = var1 + var2 * areaWidth;
+        int var14 = areaWidth - var3;
+        if (var2 + var4 > areaBottom) {
+            var4 -= var2 + var4 - areaBottom;
         }
 
         int var15;
-        if (var2 < anInt1257) {
-            var15 = anInt1257 - var2;
+        if (var2 < areaTop) {
+            var15 = areaTop - var2;
             var4 -= var15;
-            var13 += var15 * drawingAreaWidth;
+            var13 += var15 * areaWidth;
             var8 += var12 * var15;
         }
 
-        if (var1 + var3 > anInt745) {
-            var15 = var1 + var3 - anInt745;
+        if (var1 + var3 > areaRight) {
+            var15 = var1 + var3 - areaRight;
             var3 -= var15;
             var14 += var15;
         }
 
-        if (var1 < anInt754) {
-            var15 = anInt754 - var1;
+        if (var1 < areaLeft) {
+            var15 = areaLeft - var1;
             var3 -= var15;
             var13 += var15;
             var7 += var11 * var15;
             var14 += var15;
         }
 
-        method1157(drawingAreaPixels, this.aByteArray1361, this.anIntArray342, var7, var8, var13, var14, var3, var4, var11, var12, var5);
+        method1157(buffer, this.aByteArray1361, this.anIntArray342, var7, var8, var13, var14, var3, var4, var11, var12, var5);
     }
 
     public void method1155(int var1, int var2) {
         var1 += this.anInt327;
         var2 += this.anInt328;
-        int var3 = var1 + var2 * drawingAreaWidth;
+        int var3 = var1 + var2 * areaWidth;
         int var4 = 0;
         int var5 = this.anInt232;
         int var6 = this.anInt206;
-        int var7 = drawingAreaWidth - var6;
+        int var7 = areaWidth - var6;
         int var8 = 0;
         int var9;
-        if (var2 < anInt1257) {
-            var9 = anInt1257 - var2;
+        if (var2 < areaTop) {
+            var9 = areaTop - var2;
             var5 -= var9;
-            var2 = anInt1257;
+            var2 = areaTop;
             var4 += var9 * var6;
-            var3 += var9 * drawingAreaWidth;
+            var3 += var9 * areaWidth;
         }
 
-        if (var2 + var5 > anInt753) {
-            var5 -= var2 + var5 - anInt753;
+        if (var2 + var5 > areaBottom) {
+            var5 -= var2 + var5 - areaBottom;
         }
 
-        if (var1 < anInt754) {
-            var9 = anInt754 - var1;
+        if (var1 < areaLeft) {
+            var9 = areaLeft - var1;
             var6 -= var9;
-            var1 = anInt754;
+            var1 = areaLeft;
             var4 += var9;
             var3 += var9;
             var8 += var9;
             var7 += var9;
         }
 
-        if (var1 + var6 > anInt745) {
-            var9 = var1 + var6 - anInt745;
+        if (var1 + var6 > areaRight) {
+            var9 = var1 + var6 - areaRight;
             var6 -= var9;
             var8 += var9;
             var7 += var9;
         }
 
         if (var6 > 0 && var5 > 0) {
-            method1154(drawingAreaPixels, this.aByteArray1361, this.anIntArray342, var4, var3, var6, var5, var7, var8);
+            method1154(buffer, this.aByteArray1361, this.anIntArray342, var4, var3, var6, var5, var7, var8);
         }
     }
 }

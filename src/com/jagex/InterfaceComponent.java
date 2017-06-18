@@ -9,6 +9,7 @@ public class InterfaceComponent extends Node {
     public static ReferenceCache aReferenceCache1873 = new ReferenceCache(20);
     static ReferenceTable aReferenceTable1878;
     static int[] anIntArray1271;
+    static CompressedImage[] scrollBarImages;
     public boolean aBoolean1926;
     public int config;
     public boolean aBoolean1882;

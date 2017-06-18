@@ -7,7 +7,7 @@ import java.net.URL;
 public class Class108 implements Runnable {
     public static String aString1292;
     public static String aString1298;
-    static Node_Sub21_Sub26_Sub2 aNode_Sub21_Sub26_Sub2_1296;
+    static CompressedImage aCompressedImage_1296;
     static int anInt1299;
     Class103 aClass103_1293 = null;
     Thread aThread1295;

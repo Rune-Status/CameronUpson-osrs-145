@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class49 {
     public static ReferenceTable aReferenceTable374;
-    static Node_Sub21_Sub26_Sub2 aNode_Sub21_Sub26_Sub2_375;
+    static CompressedImage aCompressedImage_375;
     static Thread aThread376;
     static int anInt377;
 
@@ -79,10 +79,10 @@ public class Class49 {
         Class78.method468(false);
 
         for (Projectile var8 = Client.projectiles.method995(); var8 != null; var8 = Client.projectiles.next()) {
-            if (Player.floorLevel == var8.anInt209 && Client.engineCycle <= var8.cycle) {
+            if (PlayerEntity.floorLevel == var8.anInt209 && Client.engineCycle <= var8.cycle) {
                 if (Client.engineCycle >= var8.anInt221) {
                     if (var8.targetIndex > 0) {
-                        Npc var34 = Client.npcs[var8.targetIndex - 1];
+                        NpcEntity var34 = Client.npcEntities[var8.targetIndex - 1];
                         if (var34 != null && var34.strictX >= 0 && var34.strictX < 13312 && var34.strictY >= 0 && var34.strictY < 13312) {
                             var8.method341(var34.strictX, var34.strictY, Class25.method175(var34.strictX, var34.strictY, var8.anInt209) - var8.anInt328, Client.engineCycle);
                         }
@@ -90,11 +90,11 @@ public class Class49 {
 
                     if (var8.targetIndex < 0) {
                         var7 = -var8.targetIndex - 1;
-                        Player var35;
+                        PlayerEntity var35;
                         if (Client.playerIndex == var7) {
-                            var35 = Client.player;
+                            var35 = Client.playerEntity;
                         } else {
-                            var35 = Client.players[var7];
+                            var35 = Client.playerEntities[var7];
                         }
 
                         if (var35 != null && var35.strictX >= 0 && var35.strictX < 13312 && var35.strictY >= 0 && var35.strictY < 13312) {
@@ -103,7 +103,7 @@ public class Class49 {
                     }
 
                     var8.method451(Client.anInt1544);
-                    Class60.aSceneGraph631.method698(Player.floorLevel, (int) var8.currentX, (int) var8.currentY, (int) var8.aDouble808, 60, var8, var8.xRotation, -1, false);
+                    Class60.aSceneGraph631.method698(PlayerEntity.floorLevel, (int) var8.currentX, (int) var8.currentY, (int) var8.aDouble808, 60, var8, var8.xRotation, -1, false);
                 }
             } else {
                 var8.unlink();
@@ -111,7 +111,7 @@ public class Class49 {
         }
 
         for (GraphicsObject var36 = Client.graphicsObjects.method995(); var36 != null; var36 = Client.graphicsObjects.next()) {
-            if (var36.level == Player.floorLevel && !var36.inanimate) {
+            if (var36.level == PlayerEntity.floorLevel && !var36.inanimate) {
                 if (Client.engineCycle >= var36.endCycle) {
                     var36.update(Client.anInt1544);
                     if (var36.inanimate) {
@@ -125,12 +125,12 @@ public class Class49 {
             }
         }
 
-        Player.method193(var0, var1, var2, var3, true);
+        PlayerEntity.method193(var0, var1, var2, var3, true);
         var0 = Client.anInt1437;
         var1 = Client.anInt1432;
         var2 = Client.viewportWidth;
         var3 = Client.viewportHeight;
-        DrawingArea.setClip(var0, var1, var2 + var0, var3 + var1);
+        DrawingArea.clip(var0, var1, var2 + var0, var3 + var1);
         Node_Sub21_Sub26_Sub1.method308();
         int var9;
         int var10;
@@ -155,7 +155,7 @@ public class Class49 {
 
             var9 = Client.mapRotation + Client.anInt1524 & 2047;
             var7 = Class45.anInt370;
-            var10 = Class25.method175(Client.player.strictX, Client.player.strictY, Player.floorLevel) - Client.anInt1573;
+            var10 = Class25.method175(Client.playerEntity.strictX, Client.playerEntity.strictY, PlayerEntity.floorLevel) - Client.anInt1573;
             var11 = BoundaryDecor.anInt1106;
             var12 = var5 * 3 + 600;
             var13 = 2048 - var5 & 2047;
@@ -189,7 +189,7 @@ public class Class49 {
 
         if (!Client.cameraLocked) {
             if (Client.preferences.roofsHidden) {
-                var9 = Player.floorLevel;
+                var9 = PlayerEntity.floorLevel;
             } else {
                 label717:
                 {
@@ -197,15 +197,15 @@ public class Class49 {
                     if (Class133.cameraPitch < 310) {
                         var10 = Class53.cameraX >> 7;
                         var11 = Class34.cameraY >> 7;
-                        var12 = Client.player.strictX >> 7;
-                        var13 = Client.player.strictY >> 7;
+                        var12 = Client.playerEntity.strictX >> 7;
+                        var13 = Client.playerEntity.strictY >> 7;
                         if (var10 < 0 || var11 < 0 || var10 >= 104 || var11 >= 104) {
-                            var9 = Player.floorLevel;
+                            var9 = PlayerEntity.floorLevel;
                             break label717;
                         }
 
-                        if ((Class26.aByteArrayArrayArray189[Player.floorLevel][var10][var11] & 4) != 0) {
-                            var7 = Player.floorLevel;
+                        if ((Class26.aByteArrayArrayArray189[PlayerEntity.floorLevel][var10][var11] & 4) != 0) {
+                            var7 = PlayerEntity.floorLevel;
                         }
 
                         if (var12 > var10) {
@@ -231,8 +231,8 @@ public class Class49 {
                                     --var10;
                                 }
 
-                                if ((Class26.aByteArrayArrayArray189[Player.floorLevel][var10][var11] & 4) != 0) {
-                                    var7 = Player.floorLevel;
+                                if ((Class26.aByteArrayArrayArray189[PlayerEntity.floorLevel][var10][var11] & 4) != 0) {
+                                    var7 = PlayerEntity.floorLevel;
                                 }
 
                                 var17 += var16;
@@ -244,8 +244,8 @@ public class Class49 {
                                         --var11;
                                     }
 
-                                    if ((Class26.aByteArrayArrayArray189[Player.floorLevel][var10][var11] & 4) != 0) {
-                                        var7 = Player.floorLevel;
+                                    if ((Class26.aByteArrayArrayArray189[PlayerEntity.floorLevel][var10][var11] & 4) != 0) {
+                                        var7 = PlayerEntity.floorLevel;
                                     }
                                 }
                             }
@@ -260,8 +260,8 @@ public class Class49 {
                                     --var11;
                                 }
 
-                                if ((Class26.aByteArrayArrayArray189[Player.floorLevel][var10][var11] & 4) != 0) {
-                                    var7 = Player.floorLevel;
+                                if ((Class26.aByteArrayArrayArray189[PlayerEntity.floorLevel][var10][var11] & 4) != 0) {
+                                    var7 = PlayerEntity.floorLevel;
                                 }
 
                                 var17 += var16;
@@ -273,22 +273,22 @@ public class Class49 {
                                         --var10;
                                     }
 
-                                    if ((Class26.aByteArrayArrayArray189[Player.floorLevel][var10][var11] & 4) != 0) {
-                                        var7 = Player.floorLevel;
+                                    if ((Class26.aByteArrayArrayArray189[PlayerEntity.floorLevel][var10][var11] & 4) != 0) {
+                                        var7 = PlayerEntity.floorLevel;
                                     }
                                 }
                             }
                         }
                     }
 
-                    if (Client.player.strictX >= 0 && Client.player.strictY >= 0 && Client.player.strictX < 13312 && Client.player.strictY < 13312) {
-                        if ((Class26.aByteArrayArrayArray189[Player.floorLevel][Client.player.strictX >> 7][Client.player.strictY >> 7] & 4) != 0) {
-                            var7 = Player.floorLevel;
+                    if (Client.playerEntity.strictX >= 0 && Client.playerEntity.strictY >= 0 && Client.playerEntity.strictX < 13312 && Client.playerEntity.strictY < 13312) {
+                        if ((Class26.aByteArrayArrayArray189[PlayerEntity.floorLevel][Client.playerEntity.strictX >> 7][Client.playerEntity.strictY >> 7] & 4) != 0) {
+                            var7 = PlayerEntity.floorLevel;
                         }
 
                         var9 = var7;
                     } else {
-                        var9 = Player.floorLevel;
+                        var9 = PlayerEntity.floorLevel;
                     }
                 }
             }
@@ -296,11 +296,11 @@ public class Class49 {
             var5 = var9;
         } else {
             if (Client.preferences.roofsHidden) {
-                var9 = Player.floorLevel;
+                var9 = PlayerEntity.floorLevel;
             } else {
-                var7 = Class25.method175(Class53.cameraX, Class34.cameraY, Player.floorLevel);
-                if (var7 - Class85.cameraZ < 800 && (Class26.aByteArrayArrayArray189[Player.floorLevel][Class53.cameraX >> 7][Class34.cameraY >> 7] & 4) != 0) {
-                    var9 = Player.floorLevel;
+                var7 = Class25.method175(Class53.cameraX, Class34.cameraY, PlayerEntity.floorLevel);
+                if (var7 - Class85.cameraZ < 800 && (Class26.aByteArrayArrayArray189[PlayerEntity.floorLevel][Class53.cameraX >> 7][Class34.cameraY >> 7] & 4) != 0) {
+                    var9 = PlayerEntity.floorLevel;
                 } else {
                     var9 = 3;
                 }
@@ -388,21 +388,21 @@ public class Class49 {
                 for (var20 = 0; var20 < var18 + Client.anInt1501; ++var20) {
                     Object var23;
                     if (var20 < var18) {
-                        var23 = Client.players[var22[var20]];
+                        var23 = Client.playerEntities[var22[var20]];
                         if (var22[var20] == Client.anInt1608) {
                             var37 = true;
                             var17 = var20;
                             continue;
                         }
                     } else {
-                        var23 = Client.npcs[Client.npcIndices[var20 - var18]];
+                        var23 = Client.npcEntities[Client.npcIndices[var20 - var18]];
                     }
 
                     Hitbar.method435((PathingEntity) var23, var20, var0, var1, var2, var3);
                 }
 
                 if (var37) {
-                    Hitbar.method435(Client.players[Client.anInt1608], var17, var0, var1, var2, var3);
+                    Hitbar.method435(Client.playerEntities[Client.anInt1608], var17, var0, var1, var2, var3);
                 }
 
                 for (var20 = 0; var20 < Client.anInt1552; ++var20) {
@@ -498,7 +498,7 @@ public class Class49 {
                             var32 = (150 - Client.anIntArray1556[var20]) * (Class35.aFont313.getTextWidth(var30) + 100) / 150;
                             DrawingArea.method1228(Client.anInt1561 + var0 - 50, var1, var0 + Client.anInt1561 + 50, var1 + var3);
                             Class35.aFont313.method1170(var30, var0 + Client.anInt1561 + 50 - var32, var1 + Client.anInt1571, var31, 0);
-                            DrawingArea.setClip(var0, var1, var2 + var0, var1 + var3);
+                            DrawingArea.clip(var0, var1, var2 + var0, var1 + var3);
                         }
 
                         if (Client.anIntArray1555[var20] == 5) {
@@ -512,7 +512,7 @@ public class Class49 {
 
                             DrawingArea.method1228(var0, var1 + Client.anInt1571 - Class35.aFont313.anInt221 - 1, var2 + var0, Client.anInt1571 + var1 + 5);
                             Class35.aFont313.method1161(var30, var0 + Client.anInt1561, var33 + Client.anInt1571 + var1, var31, 0);
-                            DrawingArea.setClip(var0, var1, var2 + var0, var1 + var3);
+                            DrawingArea.clip(var0, var1, var2 + var0, var1 + var3);
                         }
                     } else {
                         Class35.aFont313.method1161(var30, var0 + Client.anInt1561, var1 + Client.anInt1571, 16776960, 0);

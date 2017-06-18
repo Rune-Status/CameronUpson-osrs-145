@@ -150,7 +150,7 @@ public abstract class Entity extends DoublyNode {
         return 2;
     }
 
-    static void method659(Node_Sub21_Sub26_Sub2 var0) {
+    static void method659(CompressedImage var0) {
         short var1 = 256;
 
         int var2;

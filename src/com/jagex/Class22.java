@@ -3,7 +3,7 @@ package com.jagex;
 public class Class22 {
     static int anInt151;
     static int anInt149;
-    static Node_Sub21_Sub26_Sub2[] aNode_Sub21_Sub26_Sub2Array147;
+    static CompressedImage[] aCompressedImageArray147;
     static int anInt148;
     public SceneOffset aSceneOffset_146;
     public SceneOffset aSceneOffset_150;
@@ -427,9 +427,9 @@ public class Class22 {
     }
 
     static void method146(int var0, int var1) {
-        NodeDeque var2 = Client.pickableNodes[Player.floorLevel][var0][var1];
+        NodeDeque var2 = Client.pickableNodes[PlayerEntity.floorLevel][var0][var1];
         if (var2 == null) {
-            Class60.aSceneGraph631.method719(Player.floorLevel, var0, var1);
+            Class60.aSceneGraph631.method719(PlayerEntity.floorLevel, var0, var1);
         } else {
             long var3 = -99999999L;
             PickableNode var5 = null;
@@ -449,7 +449,7 @@ public class Class22 {
             }
 
             if (var5 == null) {
-                Class60.aSceneGraph631.method719(Player.floorLevel, var0, var1);
+                Class60.aSceneGraph631.method719(PlayerEntity.floorLevel, var0, var1);
             } else {
                 var2.method993(var5);
                 PickableNode var12 = null;
@@ -468,7 +468,7 @@ public class Class22 {
                 }
 
                 int var11 = var0 + (var1 << 7) + 1610612736;
-                Class60.aSceneGraph631.method700(Player.floorLevel, var0, var1, Class25.method175(var0 * 128 + 64, var1 * 128 + 64, Player.floorLevel), var5, var11, var12, var10);
+                Class60.aSceneGraph631.method700(PlayerEntity.floorLevel, var0, var1, Class25.method175(var0 * 128 + 64, var1 * 128 + 64, PlayerEntity.floorLevel), var5, var11, var12, var10);
             }
         }
     }

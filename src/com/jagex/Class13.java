@@ -48,7 +48,7 @@ public class Class13 {
             var5 = var3 & 3;
             var6 = Client.anIntArray1532[var4];
             if (var35 >= 0 && var2 >= 0 && var35 < 104 && var2 < 104) {
-                Class128.method880(Player.floorLevel, var35, var2, var6, -1, var4, var5, 0, -1);
+                Class128.method880(PlayerEntity.floorLevel, var35, var2, var6, -1, var4, var5, 0, -1);
             }
 
         } else {
@@ -72,11 +72,11 @@ public class Class13 {
                 var12 = Client.aPacket1521.method849();
                 int var13 = Client.aPacket1521.method856();
                 byte var14 = Client.aPacket1521.method870();
-                Player var15;
+                PlayerEntity var15;
                 if (var0 == Client.playerIndex) {
-                    var15 = Client.player;
+                    var15 = Client.playerEntity;
                 } else {
-                    var15 = Client.players[var0];
+                    var15 = Client.playerEntities[var0];
                 }
 
                 if (var15 != null) {
@@ -95,13 +95,13 @@ public class Class13 {
                     int var20 = var4 + (var17 + 1 >> 1);
                     int var21 = var5 + (var18 >> 1);
                     int var22 = (var18 + 1 >> 1) + var5;
-                    int[][] var23 = Class26.anIntArrayArrayArray191[Player.floorLevel];
+                    int[][] var23 = Class26.anIntArrayArrayArray191[PlayerEntity.floorLevel];
                     int var24 = var23[var19][var21] + var23[var20][var21] + var23[var19][var22] + var23[var20][var22] >> 2;
                     int var25 = (var17 << 6) + (var4 << 7);
                     int var26 = (var5 << 7) + (var18 << 6);
                     Model var27 = var16.method1070(var7, var8, var23, var25, var24, var26);
                     if (var27 != null) {
-                        Class128.method880(Player.floorLevel, var4, var5, var9, -1, 0, 0, var12 + 1, var2 + 1);
+                        Class128.method880(PlayerEntity.floorLevel, var4, var5, var9, -1, 0, 0, var12 + 1, var2 + 1);
                         var15.anInt214 = var12 + Client.engineCycle;
                         var15.anInt226 = var2 + Client.engineCycle;
                         var15.aModel218 = var27;
@@ -139,7 +139,7 @@ public class Class13 {
                 var6 = var4 & 3;
                 var7 = Client.anIntArray1532[var5];
                 if (var2 >= 0 && var3 >= 0 && var2 < 104 && var3 < 104) {
-                    Class128.method880(Player.floorLevel, var2, var3, var7, var0, var5, var6, 0, -1);
+                    Class128.method880(PlayerEntity.floorLevel, var2, var3, var7, var0, var5, var6, 0, -1);
                 }
 
             } else if (Client.anInt1511 == 66) {
@@ -150,7 +150,7 @@ public class Class13 {
                 var4 = Client.aPacket1521.readUnsignedShort();
                 var5 = Client.aPacket1521.readUnsignedShort();
                 if (var35 >= 0 && var2 >= 0 && var35 < 104 && var2 < 104) {
-                    NodeDeque var38 = Client.pickableNodes[Player.floorLevel][var35][var2];
+                    NodeDeque var38 = Client.pickableNodes[PlayerEntity.floorLevel][var35][var2];
                     if (var38 != null) {
                         for (PickableNode var30 = (PickableNode) var38.method995(); var30 != null; var30 = (PickableNode) var38.next()) {
                             if (var30.id == (var3 & 32767) && var4 == var30.stackSize) {
@@ -173,7 +173,7 @@ public class Class13 {
                 if (var35 >= 0 && var2 >= 0 && var35 < 104 && var2 < 104) {
                     var35 = var35 * 128 + 64;
                     var2 = var2 * 128 + 64;
-                    GraphicsObject var29 = new GraphicsObject(var3, Player.floorLevel, var35, var2, Class25.method175(var35, var2, Player.floorLevel) - var4, var5, Client.engineCycle);
+                    GraphicsObject var29 = new GraphicsObject(var3, PlayerEntity.floorLevel, var35, var2, Class25.method175(var35, var2, PlayerEntity.floorLevel) - var4, var5, Client.engineCycle);
                     Client.graphicsObjects.method997(var29);
                 }
 
@@ -189,7 +189,7 @@ public class Class13 {
                     var7 = Client.aPacket1521.readUnsignedByte();
                     if (var35 >= 0 && var2 >= 0 && var35 < 104 && var2 < 104) {
                         var8 = var5 + 1;
-                        if (Client.player.anIntArray800[0] >= var35 - var8 && Client.player.anIntArray800[0] <= var35 + var8 && Client.player.anIntArray804[0] >= var2 - var8 && Client.player.anIntArray804[0] <= var8 + var2 && Client.anInt1699 != 0 && var6 > 0 && Client.anInt1430 < 50) {
+                        if (Client.playerEntity.anIntArray800[0] >= var35 - var8 && Client.playerEntity.anIntArray800[0] <= var35 + var8 && Client.playerEntity.anIntArray804[0] >= var2 - var8 && Client.playerEntity.anIntArray804[0] <= var8 + var2 && Client.anInt1699 != 0 && var6 > 0 && Client.anInt1430 < 50) {
                             Client.anIntArray1709[Client.anInt1430] = var3;
                             Client.anIntArray1713[Client.anInt1430] = var6;
                             Client.anIntArray1712[Client.anInt1430] = var7;
@@ -211,52 +211,52 @@ public class Class13 {
                     var7 = (var5 & 7) + Class5.anInt35;
                     if (var6 >= 0 && var7 >= 0 && var6 < 103 && var7 < 103) {
                         if (var4 == 0) {
-                            Boundary var31 = Class60.aSceneGraph631.method715(Player.floorLevel, var6, var7);
+                            Boundary var31 = Class60.aSceneGraph631.method715(PlayerEntity.floorLevel, var6, var7);
                             if (var31 != null) {
                                 var9 = var31.uid >> 14 & 32767;
                                 if (var2 == 2) {
-                                    var31.entity = new DynamicObject(var9, 2, var3 + 4, Player.floorLevel, var6, var7, var0, false, var31.entity);
-                                    var31.anEntity1147 = new DynamicObject(var9, 2, var3 + 1 & 3, Player.floorLevel, var6, var7, var0, false, var31.anEntity1147);
+                                    var31.entity = new DynamicObject(var9, 2, var3 + 4, PlayerEntity.floorLevel, var6, var7, var0, false, var31.entity);
+                                    var31.anEntity1147 = new DynamicObject(var9, 2, var3 + 1 & 3, PlayerEntity.floorLevel, var6, var7, var0, false, var31.anEntity1147);
                                 } else {
-                                    var31.entity = new DynamicObject(var9, var2, var3, Player.floorLevel, var6, var7, var0, false, var31.entity);
+                                    var31.entity = new DynamicObject(var9, var2, var3, PlayerEntity.floorLevel, var6, var7, var0, false, var31.entity);
                                 }
                             }
                         }
 
                         if (var4 == 1) {
-                            BoundaryDecor var39 = Class60.aSceneGraph631.method688(Player.floorLevel, var6, var7);
+                            BoundaryDecor var39 = Class60.aSceneGraph631.method688(PlayerEntity.floorLevel, var6, var7);
                             if (var39 != null) {
                                 var9 = var39.uid >> 14 & 32767;
                                 if (var2 != 4 && var2 != 5) {
                                     if (var2 == 6) {
-                                        var39.entity = new DynamicObject(var9, 4, var3 + 4, Player.floorLevel, var6, var7, var0, false, var39.entity);
+                                        var39.entity = new DynamicObject(var9, 4, var3 + 4, PlayerEntity.floorLevel, var6, var7, var0, false, var39.entity);
                                     } else if (var2 == 7) {
-                                        var39.entity = new DynamicObject(var9, 4, (var3 + 2 & 3) + 4, Player.floorLevel, var6, var7, var0, false, var39.entity);
+                                        var39.entity = new DynamicObject(var9, 4, (var3 + 2 & 3) + 4, PlayerEntity.floorLevel, var6, var7, var0, false, var39.entity);
                                     } else if (var2 == 8) {
-                                        var39.entity = new DynamicObject(var9, 4, var3 + 4, Player.floorLevel, var6, var7, var0, false, var39.entity);
-                                        var39.anEntity1110 = new DynamicObject(var9, 4, (var3 + 2 & 3) + 4, Player.floorLevel, var6, var7, var0, false, var39.anEntity1110);
+                                        var39.entity = new DynamicObject(var9, 4, var3 + 4, PlayerEntity.floorLevel, var6, var7, var0, false, var39.entity);
+                                        var39.anEntity1110 = new DynamicObject(var9, 4, (var3 + 2 & 3) + 4, PlayerEntity.floorLevel, var6, var7, var0, false, var39.anEntity1110);
                                     }
                                 } else {
-                                    var39.entity = new DynamicObject(var9, 4, var3, Player.floorLevel, var6, var7, var0, false, var39.entity);
+                                    var39.entity = new DynamicObject(var9, 4, var3, PlayerEntity.floorLevel, var6, var7, var0, false, var39.entity);
                                 }
                             }
                         }
 
                         if (var4 == 2) {
-                            EntityMarker var40 = Class60.aSceneGraph631.method690(Player.floorLevel, var6, var7);
+                            EntityMarker var40 = Class60.aSceneGraph631.method690(PlayerEntity.floorLevel, var6, var7);
                             if (var2 == 11) {
                                 var2 = 10;
                             }
 
                             if (var40 != null) {
-                                var40.entity = new DynamicObject(var40.uid >> 14 & 32767, var2, var3, Player.floorLevel, var6, var7, var0, false, var40.entity);
+                                var40.entity = new DynamicObject(var40.uid >> 14 & 32767, var2, var3, PlayerEntity.floorLevel, var6, var7, var0, false, var40.entity);
                             }
                         }
 
                         if (var4 == 3) {
-                            TileDecor var41 = Class60.aSceneGraph631.method672(Player.floorLevel, var6, var7);
+                            TileDecor var41 = Class60.aSceneGraph631.method672(PlayerEntity.floorLevel, var6, var7);
                             if (var41 != null) {
-                                var41.entity = new DynamicObject(var41.uid >> 14 & 32767, 22, var3, Player.floorLevel, var6, var7, var0, false, var41.entity);
+                                var41.entity = new DynamicObject(var41.uid >> 14 & 32767, 22, var3, PlayerEntity.floorLevel, var6, var7, var0, false, var41.entity);
                             }
                         }
                     }
@@ -273,11 +273,11 @@ public class Class13 {
                             var32 = new PickableNode();
                             var32.id = var4;
                             var32.stackSize = var0;
-                            if (Client.pickableNodes[Player.floorLevel][var2][var3] == null) {
-                                Client.pickableNodes[Player.floorLevel][var2][var3] = new NodeDeque<>();
+                            if (Client.pickableNodes[PlayerEntity.floorLevel][var2][var3] == null) {
+                                Client.pickableNodes[PlayerEntity.floorLevel][var2][var3] = new NodeDeque<>();
                             }
 
-                            Client.pickableNodes[Player.floorLevel][var2][var3].method997(var32);
+                            Client.pickableNodes[PlayerEntity.floorLevel][var2][var3].method997(var32);
                             Class22.method146(var2, var3);
                         }
 
@@ -301,8 +301,8 @@ public class Class13 {
                                 var2 = var2 * 128 + 64;
                                 var3 = var3 * 128 + 64;
                                 var4 = var4 * 128 + 64;
-                                Projectile var34 = new Projectile(var6, Player.floorLevel, var35, var2, Class25.method175(var35, var2, Player.floorLevel) - var7, Client.engineCycle + var9, var36 + Client.engineCycle, var37, var12, var5, var8);
-                                var34.method341(var3, var4, Class25.method175(var3, var4, Player.floorLevel) - var8, Client.engineCycle + var9);
+                                Projectile var34 = new Projectile(var6, PlayerEntity.floorLevel, var35, var2, Class25.method175(var35, var2, PlayerEntity.floorLevel) - var7, Client.engineCycle + var9, var36 + Client.engineCycle, var37, var12, var5, var8);
+                                var34.method341(var3, var4, Class25.method175(var3, var4, PlayerEntity.floorLevel) - var8, Client.engineCycle + var9);
                                 Client.projectiles.method997(var34);
                             }
 
@@ -313,7 +313,7 @@ public class Class13 {
                         var2 = Class5.anInt35 + (var0 & 7);
                         var3 = Client.aPacket1521.method849();
                         if (var35 >= 0 && var2 >= 0 && var35 < 104 && var2 < 104) {
-                            NodeDeque var33 = Client.pickableNodes[Player.floorLevel][var35][var2];
+                            NodeDeque var33 = Client.pickableNodes[PlayerEntity.floorLevel][var35][var2];
                             if (var33 != null) {
                                 for (var32 = (PickableNode) var33.method995(); var32 != null; var32 = (PickableNode) var33.next()) {
                                     if ((var3 & 32767) == var32.id) {
@@ -323,7 +323,7 @@ public class Class13 {
                                 }
 
                                 if (var33.method995() == null) {
-                                    Client.pickableNodes[Player.floorLevel][var35][var2] = null;
+                                    Client.pickableNodes[PlayerEntity.floorLevel][var35][var2] = null;
                                 }
 
                                 Class22.method146(var35, var2);
@@ -395,7 +395,7 @@ public class Class13 {
 
     }
 
-    boolean method124(int var1, Class9 var2, Class13[] var3, Node_Sub21_Sub26_Sub2[] var4) {
+    boolean method124(int var1, Class9 var2, Class13[] var3, CompressedImage[] var4) {
         if (!this.method107(var1)) {
             return false;
         }
@@ -436,7 +436,7 @@ public class Class13 {
         this.method116(var1, var2, var3);
     }
 
-    void method87(int var1, int var2, Class6 var3, Node_Sub21_Sub26_Sub2[] var4) {
+    void method87(int var1, int var2, Class6 var3, CompressedImage[] var4) {
         for (int var5 = 0; var5 < var3.anInt48; ++var5) {
             MapTile[] var6 = var3.mapTiles[var5][var1][var2];
             if (var6 != null && var6.length != 0) {
@@ -467,7 +467,7 @@ public class Class13 {
 
     }
 
-    void method111(Class9 var1, Class13[] var2, Node_Sub21_Sub26_Sub2[] var3) {
+    void method111(Class9 var1, Class13[] var2, CompressedImage[] var3) {
         int var4;
         int var5;
         for (var4 = 0; var4 < 64; ++var4) {
@@ -642,19 +642,19 @@ public class Class13 {
 
                         if (Class163.aClass163_1979.anInt1960 == var8.x) {
                             if (var8.y == 0) {
-                                DrawingArea.method1214(var1 * this.anInt99, this.anInt99 * (63 - var2), 1, var10);
+                                DrawingArea.drawHLine(var1 * this.anInt99, this.anInt99 * (63 - var2), 1, var10);
                             }
 
                             if (var8.y == 1) {
-                                DrawingArea.method1214(this.anInt99 + this.anInt99 * var1 - 1, (63 - var2) * this.anInt99, 1, var10);
+                                DrawingArea.drawHLine(this.anInt99 + this.anInt99 * var1 - 1, (63 - var2) * this.anInt99, 1, var10);
                             }
 
                             if (var8.y == 2) {
-                                DrawingArea.method1214(this.anInt99 * var1 + this.anInt99 - 1, this.anInt99 * (63 - var2) + this.anInt99 - 1, 1, var10);
+                                DrawingArea.drawHLine(this.anInt99 * var1 + this.anInt99 - 1, this.anInt99 * (63 - var2) + this.anInt99 - 1, 1, var10);
                             }
 
                             if (var8.y == 3) {
-                                DrawingArea.method1214(this.anInt99 * var1, this.anInt99 + (63 - var2) * this.anInt99 - 1, 1, var10);
+                                DrawingArea.drawHLine(this.anInt99 * var1, this.anInt99 + (63 - var2) * this.anInt99 - 1, 1, var10);
                             }
                         }
 
@@ -663,11 +663,11 @@ public class Class13 {
                             int var12;
                             if (var11 == 0) {
                                 for (var12 = 0; var12 < this.anInt99; ++var12) {
-                                    DrawingArea.method1214(var1 * this.anInt99 + var12, (64 - var2) * this.anInt99 - 1 - var12, 1, var10);
+                                    DrawingArea.drawHLine(var1 * this.anInt99 + var12, (64 - var2) * this.anInt99 - 1 - var12, 1, var10);
                                 }
                             } else {
                                 for (var12 = 0; var12 < this.anInt99; ++var12) {
-                                    DrawingArea.method1214(var1 * this.anInt99 + var12, var12 + (63 - var2) * this.anInt99, 1, var10);
+                                    DrawingArea.drawHLine(var1 * this.anInt99 + var12, var12 + (63 - var2) * this.anInt99, 1, var10);
                                 }
                             }
                         }
@@ -860,19 +860,19 @@ public class Class13 {
     void method94(int var1, int var2, int var3, int var4) {
         var3 %= 4;
         if (var3 == 0) {
-            DrawingArea.method1220(this.anInt99 * var1, (63 - var2) * this.anInt99, this.anInt99, var4);
+            DrawingArea.drawVLine(this.anInt99 * var1, (63 - var2) * this.anInt99, this.anInt99, var4);
         }
 
         if (var3 == 1) {
-            DrawingArea.method1214(var1 * this.anInt99, (63 - var2) * this.anInt99, this.anInt99, var4);
+            DrawingArea.drawHLine(var1 * this.anInt99, (63 - var2) * this.anInt99, this.anInt99, var4);
         }
 
         if (var3 == 2) {
-            DrawingArea.method1220(this.anInt99 + this.anInt99 * var1 - 1, this.anInt99 * (63 - var2), this.anInt99, var4);
+            DrawingArea.drawVLine(this.anInt99 + this.anInt99 * var1 - 1, this.anInt99 * (63 - var2), this.anInt99, var4);
         }
 
         if (var3 == 3) {
-            DrawingArea.method1214(this.anInt99 * var1, (63 - var2) * this.anInt99 + this.anInt99 - 1, this.anInt99, var4);
+            DrawingArea.drawHLine(this.anInt99 * var1, (63 - var2) * this.anInt99 + this.anInt99 - 1, this.anInt99, var4);
         }
 
     }
@@ -953,7 +953,7 @@ public class Class13 {
 
     }
 
-    void method86(int var1, int var2, Class6 var3, Class9 var4, Node_Sub21_Sub26_Sub2[] var5) {
+    void method86(int var1, int var2, Class6 var3, Class9 var4, CompressedImage[] var5) {
         this.method123(var1, var2, var3);
         this.method87(var1, var2, var3, var5);
     }
@@ -1007,7 +1007,7 @@ public class Class13 {
 
     }
 
-    void method106(Class9 var1, Node_Sub21_Sub26_Sub2[] var2) {
+    void method106(Class9 var1, CompressedImage[] var2) {
         Iterator var3 = this.aLinkedList103.iterator();
 
         Class6_Sub1 var4;

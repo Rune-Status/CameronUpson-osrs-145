@@ -98,7 +98,7 @@ public final class Canvas extends java.awt.Canvas {
                 Login.aBoolean694 = false;
                 Class3.aSprite17.method1242(Login.anInt702, 0);
                 Login.aSprite697.method1242(Login.anInt702 + 382, 0);
-                Login.aNode_Sub21_Sub26_Sub2_695.method1155(Login.anInt702 + 382 - Login.aNode_Sub21_Sub26_Sub2_695.anInt206 / 2, 18);
+                Login.aCompressedImage_695.method1155(Login.anInt702 + 382 - Login.aCompressedImage_695.anInt206 / 2, 18);
                 return;
             }
 
@@ -108,7 +108,7 @@ public final class Canvas extends java.awt.Canvas {
                 Login.aBoolean694 = false;
                 Class3.aSprite17.method1242(Login.anInt702, 0);
                 Login.aSprite697.method1242(Login.anInt702 + 382, 0);
-                Login.aNode_Sub21_Sub26_Sub2_695.method1155(Login.anInt702 + 382 - Login.aNode_Sub21_Sub26_Sub2_695.anInt206 / 2, 18);
+                Login.aCompressedImage_695.method1155(Login.anInt702 + 382 - Login.aCompressedImage_695.anInt206 / 2, 18);
             }
         }
 

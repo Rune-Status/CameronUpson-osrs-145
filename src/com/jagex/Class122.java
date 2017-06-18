@@ -65,7 +65,7 @@ public abstract class Class122 {
         int var5 = Boundary.aFont1150.method1178(var0, 250);
         int var6 = Boundary.aFont1150.method1168(var0, 250) * 13;
         DrawingArea.method1223(var3 - var2, var4 - var2, var2 + var5 + var2, var2 + var6 + var2, 0);
-        DrawingArea.method1208(var3 - var2, var4 - var2, var2 + var2 + var5, var6 + var2 + var2, 16777215);
+        DrawingArea.drawRectangle(var3 - var2, var4 - var2, var2 + var2 + var5, var6 + var2 + var2, 16777215);
         Boundary.aFont1150.method1184(var0, var3, var4, var5, var6, 16777215, -1, 1, 1, 0);
         Class50.method319(var3 - var2, var4 - var2, var2 + var2 + var5, var2 + var6 + var2);
         if (var1) {

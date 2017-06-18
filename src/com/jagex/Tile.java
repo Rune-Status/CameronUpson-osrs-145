@@ -50,13 +50,13 @@ public final class Tile extends Node {
 
         int var0;
         for (var0 = 0; var0 < 2048; ++var0) {
-            Client.players[var0] = null;
+            Client.playerEntities[var0] = null;
         }
 
-        Client.player = null;
+        Client.playerEntity = null;
 
-        for (var0 = 0; var0 < Client.npcs.length; ++var0) {
-            Npc var1 = Client.npcs[var0];
+        for (var0 = 0; var0 < Client.npcEntities.length; ++var0) {
+            NpcEntity var1 = Client.npcEntities[var0];
             if (var1 != null) {
                 var1.targetIndex = -1;
                 var1.aBoolean789 = false;

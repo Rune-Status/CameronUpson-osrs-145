@@ -64,7 +64,7 @@ public final class EntityMarker {
 
         for (var5 = 0; var5 < 104; ++var5) {
             for (var6 = 0; var6 < 104; ++var6) {
-                int var7 = Class60.aSceneGraph631.method678(Player.floorLevel, var5, var6);
+                int var7 = Class60.aSceneGraph631.method678(PlayerEntity.floorLevel, var5, var6);
                 if (var7 != 0) {
                     var7 = var7 >> 14 & 32767;
                     int var8 = Class5.method17(var7).mapFunction;
@@ -72,7 +72,7 @@ public final class EntityMarker {
                         int var9 = var5;
                         int var10 = var6;
                         if (var8 != 22 && var8 != 29 && var8 != 34 && var8 != 36 && var8 != 46 && var8 != 47 && var8 != 48) {
-                            int[][] var11 = Client.collisionMaps[Player.floorLevel].flags;
+                            int[][] var11 = Client.collisionMaps[PlayerEntity.floorLevel].flags;
 
                             for (int var12 = 0; var12 < 10; ++var12) {
                                 int var13 = (int) (Math.random() * 4.0D);

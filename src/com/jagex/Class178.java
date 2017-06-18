@@ -22,7 +22,7 @@ public class Class178 {
         }
         if (var0 == 3101) {
             Class63.anInt644 -= 2;
-            Player.method394(Client.player, Class63.anIntArray645[Class63.anInt644], Class63.anIntArray645[Class63.anInt644 + 1]);
+            PlayerEntity.method394(Client.playerEntity, Class63.anIntArray645[Class63.anInt644], Class63.anIntArray645[Class63.anInt644 + 1]);
             return 1;
         }
         if (var0 == 3103) {
@@ -132,8 +132,8 @@ public class Class178 {
         boolean var9 = false;
 
         for (int var10 = 0; var10 < var7; ++var10) {
-            Player var11 = Client.players[var8[var10]];
-            if (var11 != null && var11 != Client.player && var11.name != null && var11.name.equalsIgnoreCase(var6)) {
+            PlayerEntity var11 = Client.playerEntities[var8[var10]];
+            if (var11 != null && var11 != Client.playerEntity && var11.name != null && var11.name.equalsIgnoreCase(var6)) {
                 if (var5 == 1) {
                     Client.packet.writeHeader(187);
                     Client.packet.method853(var8[var10]);

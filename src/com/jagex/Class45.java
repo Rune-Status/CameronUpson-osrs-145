@@ -34,20 +34,20 @@ public class Class45 {
                 } else if (var0 == 11) {
                     Class93.method601(Class82.aCacheReferenceTable848, Class21.aCacheReferenceTable139, false, 4);
                 } else if (Login.aBoolean706) {
-                    Login.aNode_Sub21_Sub26_Sub2_690 = null;
-                    Login.aNode_Sub21_Sub26_Sub2_709 = null;
-                    Class17.aNode_Sub21_Sub26_Sub2Array126 = null;
+                    Login.aCompressedImage_690 = null;
+                    Login.aCompressedImage_709 = null;
+                    Class17.aCompressedImageArray126 = null;
                     Class3.aSprite17 = null;
                     Login.aSprite697 = null;
-                    Login.aNode_Sub21_Sub26_Sub2_695 = null;
-                    Login.aNode_Sub21_Sub26_Sub2Array692 = null;
-                    Class49.aNode_Sub21_Sub26_Sub2_375 = null;
-                    AnimationSkin.aNode_Sub21_Sub26_Sub2_1290 = null;
+                    Login.aCompressedImage_695 = null;
+                    Login.aCompressedImageArray692 = null;
+                    Class49.aCompressedImage_375 = null;
+                    AnimationSkin.aCompressedImage_1290 = null;
                     Class158.aSpriteArray1847 = null;
-                    Login.aNode_Sub21_Sub26_Sub2Array708 = null;
-                    Class22.aNode_Sub21_Sub26_Sub2Array147 = null;
-                    WorldMapTransportation.aNode_Sub21_Sub26_Sub2Array85 = null;
-                    Class108.aNode_Sub21_Sub26_Sub2_1296 = null;
+                    Login.aCompressedImageArray708 = null;
+                    Class22.aCompressedImageArray147 = null;
+                    WorldMapTransportation.aCompressedImageArray85 = null;
+                    Class108.aCompressedImage_1296 = null;
                     Class20.anIntArray138 = null;
                     Class18.anIntArray133 = null;
                     ClanMate.anIntArray240 = null;

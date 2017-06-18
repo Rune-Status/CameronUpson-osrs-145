@@ -3,7 +3,7 @@ package com.jagex;
 public class Class181 {
     static Class118 aClass118_2154;
 
-    public static Node_Sub21_Sub26_Sub2 method1199(ReferenceTable var0, int var1) {
+    public static CompressedImage method1199(ReferenceTable var0, int var1) {
         byte[] var2 = var0.method1093(var1);
         boolean var3;
         if (var2 == null) {
@@ -16,7 +16,7 @@ public class Class181 {
         if (!var3) {
             return null;
         }
-        Node_Sub21_Sub26_Sub2 var4 = new Node_Sub21_Sub26_Sub2();
+        CompressedImage var4 = new CompressedImage();
         var4.anInt221 = Class160.anInt1857;
         var4.anInt220 = Class191.anInt2246;
         var4.anInt327 = Class191.anIntArray2245[0];

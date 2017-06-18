@@ -19,12 +19,12 @@ public class InterfaceNode extends Node {
                 int var1 = Client.aPacket1521.method788(15);
                 if (var1 != 32767) {
                     boolean var2 = false;
-                    if (Client.npcs[var1] == null) {
-                        Client.npcs[var1] = new Npc();
+                    if (Client.npcEntities[var1] == null) {
+                        Client.npcEntities[var1] = new NpcEntity();
                         var2 = true;
                     }
 
-                    Npc var3 = Client.npcs[var1];
+                    NpcEntity var3 = Client.npcEntities[var1];
                     Client.npcIndices[++Client.anInt1501 - 1] = var1;
                     var3.anInt769 = Client.engineCycle;
                     int var4;
@@ -78,7 +78,7 @@ public class InterfaceNode extends Node {
                     var3.anInt754 = var3.definition.anInt214;
                     var3.anInt745 = var3.definition.anInt226;
                     var3.anInt755 = var3.definition.anInt228;
-                    var3.method385(Client.player.anIntArray800[0] + var4, var8 + Client.player.anIntArray804[0], var7 == 1);
+                    var3.method385(Client.playerEntity.anIntArray800[0] + var4, var8 + Client.playerEntity.anIntArray804[0], var7 == 1);
                     continue;
                 }
             }
@@ -156,7 +156,7 @@ public class InterfaceNode extends Node {
         return 1;
     }
 
-    public static Node_Sub21_Sub26_Sub2[] method267(ReferenceTable var0, String var1, String var2) {
+    public static CompressedImage[] method267(ReferenceTable var0, String var1, String var2) {
         int var3 = var0.method1084(var1);
         int var4 = var0.method1104(var3, var2);
         return Class18.method138(var0, var3, var4);

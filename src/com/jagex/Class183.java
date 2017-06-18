@@ -94,8 +94,8 @@ public class Class183 {
                                         var25 = var25 * (Client.mapOffset + 256) >> 8;
                                         var26 = var38 * var24 + var25 * var37 >> 11;
                                         var27 = var38 * var25 - var37 * var24 >> 11;
-                                        int var28 = Client.player.strictX + var26 >> 7;
-                                        int var29 = Client.player.strictY - var27 >> 7;
+                                        int var28 = Client.playerEntity.strictX + var26 >> 7;
+                                        int var29 = Client.playerEntity.strictY - var27 >> 7;
                                         Client.packet.writeHeader(220);
                                         Client.packet.method451(18);
                                         Client.packet.method845(var28 + Class62.anInt636);
@@ -108,8 +108,8 @@ public class Class183 {
                                         Client.packet.method451(Client.mapScale);
                                         Client.packet.method451(Client.mapOffset);
                                         Client.packet.method451(89);
-                                        Client.packet.method755(Client.player.strictX);
-                                        Client.packet.method755(Client.player.strictY);
+                                        Client.packet.method755(Client.playerEntity.strictX);
+                                        Client.packet.method755(Client.playerEntity.strictY);
                                         Client.packet.method451(63);
                                         Client.destinationX = var28;
                                         Client.destinationY = var29;

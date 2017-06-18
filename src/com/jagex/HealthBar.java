@@ -12,7 +12,7 @@ public class HealthBar extends Node {
     }
 
     static void method342(Class34 var0) {
-        if (Client.player.strictX >> 7 == Client.destinationX && Client.player.strictY >> 7 == Client.destinationY) {
+        if (Client.playerEntity.strictX >> 7 == Client.destinationX && Client.playerEntity.strictY >> 7 == Client.destinationY) {
             Client.destinationX = 0;
         }
 
@@ -24,16 +24,16 @@ public class HealthBar extends Node {
         }
 
         for (int var4 = 0; var4 < var3; ++var4) {
-            Player var5;
+            PlayerEntity var5;
             int var6;
             if (var0 == Class34.aClass34_273) {
-                var5 = Client.player;
-                var6 = Client.player.anInt213 << 14;
+                var5 = Client.playerEntity;
+                var6 = Client.playerEntity.anInt213 << 14;
             } else if (var0 == Class34.aClass34_278) {
-                var5 = Client.players[Client.anInt1608];
+                var5 = Client.playerEntities[Client.anInt1608];
                 var6 = Client.anInt1608 << 14;
             } else {
-                var5 = Client.players[var2[var4]];
+                var5 = Client.playerEntities[var2[var4]];
                 var6 = var2[var4] << 14;
                 if (var0 == Class34.aClass34_275 && Client.anInt1608 == var2[var4]) {
                     continue;
@@ -48,8 +48,8 @@ public class HealthBar extends Node {
                 if (var7 >= 0 && var7 < 104 && var8 >= 0 && var8 < 104) {
                     if (var5.aModel218 != null && Client.engineCycle >= var5.anInt214 && Client.engineCycle < var5.anInt226) {
                         var5.aBoolean223 = false;
-                        var5.anInt217 = Class25.method175(var5.strictX, var5.strictY, Player.floorLevel);
-                        Class60.aSceneGraph631.method703(Player.floorLevel, var5.strictX, var5.strictY, var5.anInt217, 60, var5, var5.anInt748, var6, var5.anInt235, var5.anInt230, var5.anInt222, var5.anInt229);
+                        var5.anInt217 = Class25.method175(var5.strictX, var5.strictY, PlayerEntity.floorLevel);
+                        Class60.aSceneGraph631.method703(PlayerEntity.floorLevel, var5.strictX, var5.strictY, var5.anInt217, 60, var5, var5.anInt748, var6, var5.anInt235, var5.anInt230, var5.anInt222, var5.anInt229);
                     } else {
                         if ((var5.strictX & 127) == 64 && (var5.strictY & 127) == 64) {
                             if (Client.anInt1565 == Client.anIntArrayArray1559[var7][var8]) {
@@ -59,8 +59,8 @@ public class HealthBar extends Node {
                             Client.anIntArrayArray1559[var7][var8] = Client.anInt1565;
                         }
 
-                        var5.anInt217 = Class25.method175(var5.strictX, var5.strictY, Player.floorLevel);
-                        Class60.aSceneGraph631.method698(Player.floorLevel, var5.strictX, var5.strictY, var5.anInt217, 60, var5, var5.anInt748, var6, var5.aBoolean758);
+                        var5.anInt217 = Class25.method175(var5.strictX, var5.strictY, PlayerEntity.floorLevel);
+                        Class60.aSceneGraph631.method698(PlayerEntity.floorLevel, var5.strictX, var5.strictY, var5.anInt217, 60, var5, var5.anInt748, var6, var5.aBoolean758);
                     }
                 }
             }

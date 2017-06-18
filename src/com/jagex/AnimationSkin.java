@@ -6,7 +6,7 @@ import java.net.URI;
 
 public class AnimationSkin extends Node {
     static int anInt919;
-    static Node_Sub21_Sub26_Sub2 aNode_Sub21_Sub26_Sub2_1290;
+    static CompressedImage aCompressedImage_1290;
     int count;
     int[] transforms;
     int[][] labels;

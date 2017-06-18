@@ -13,12 +13,12 @@ public class Class76 implements EnumOrdinal {
         this.anInt157 = var2;
     }
 
-    static void method453(Player var0, int var1, int var2, int var3) {
-        if (Client.player != var0) {
+    static void method453(PlayerEntity var0, int var1, int var2, int var3) {
+        if (Client.playerEntity != var0) {
             if (Client.menuRowCount < 400) {
                 String var4;
                 if (var0.totalLevel == 0) {
-                    var4 = var0.aStringArray238[0] + var0.name + var0.aStringArray238[1] + method1007(var0.anInt221, Client.player.anInt221) + " " + " (" + "level-" + var0.anInt221 + ")" + var0.aStringArray238[2];
+                    var4 = var0.aStringArray238[0] + var0.name + var0.aStringArray238[1] + method1007(var0.anInt221, Client.playerEntity.anInt221) + " " + " (" + "level-" + var0.anInt221 + ")" + var0.aStringArray238[2];
                 } else {
                     var4 = var0.aStringArray238[0] + var0.name + var0.aStringArray238[1] + " " + " (" + "skill-" + var0.totalLevel + ")" + var0.aStringArray238[2];
                 }
@@ -39,12 +39,12 @@ public class Class76 implements EnumOrdinal {
                                     continue;
                                 }
 
-                                if (Class55.aClass55_425 == Client.aClass55_1491 || Client.aClass55_1491 == Class55.aClass55_420 && var0.anInt221 > Client.player.anInt221) {
+                                if (Class55.aClass55_425 == Client.aClass55_1491 || Client.aClass55_1491 == Class55.aClass55_420 && var0.anInt221 > Client.playerEntity.anInt221) {
                                     var6 = 2000;
                                 }
 
-                                if (Client.player.anInt219 != 0 && var0.anInt219 != 0) {
-                                    if (var0.anInt219 == Client.player.anInt219) {
+                                if (Client.playerEntity.anInt219 != 0 && var0.anInt219 != 0) {
+                                    if (var0.anInt219 == Client.playerEntity.anInt219) {
                                         var6 = 2000;
                                     } else {
                                         var6 = 0;

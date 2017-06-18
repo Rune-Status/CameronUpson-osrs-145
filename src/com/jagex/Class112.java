@@ -233,7 +233,7 @@ public class Class112 {
             }
         }
 
-        return var2.equalsIgnoreCase(Class84.method484(Client.player.name, Class2.aClass188_13));
+        return var2.equalsIgnoreCase(Class84.method484(Client.playerEntity.name, Class2.aClass188_13));
     }
 
     public static String method772(Buffer var0, int var1) {

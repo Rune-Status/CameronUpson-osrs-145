@@ -3,7 +3,7 @@ package com.jagex;
 import java.util.Random;
 
 public abstract class Node_Sub21_Sub26_Sub3 extends DrawingArea {
-    public static Node_Sub21_Sub26_Sub2[] aNode_Sub21_Sub26_Sub2Array2131;
+    public static CompressedImage[] aCompressedImageArray2131;
     static int anInt235 = 0;
     static String[] aStringArray2132 = new String[100];
     static int anInt981 = 0;
@@ -163,42 +163,42 @@ public abstract class Node_Sub21_Sub26_Sub3 extends DrawingArea {
     }
 
     static void method1173(byte[] var0, int var1, int var2, int var3, int var4, int var5, int var6) {
-        int var7 = var1 + var2 * drawingAreaWidth;
-        int var8 = drawingAreaWidth - var3;
+        int var7 = var1 + var2 * areaWidth;
+        int var8 = areaWidth - var3;
         int var9 = 0;
         int var10 = 0;
         int var11;
-        if (var2 < anInt1257) {
-            var11 = anInt1257 - var2;
+        if (var2 < areaTop) {
+            var11 = areaTop - var2;
             var4 -= var11;
-            var2 = anInt1257;
+            var2 = areaTop;
             var10 += var11 * var3;
-            var7 += var11 * drawingAreaWidth;
+            var7 += var11 * areaWidth;
         }
 
-        if (var2 + var4 > anInt753) {
-            var4 -= var2 + var4 - anInt753;
+        if (var2 + var4 > areaBottom) {
+            var4 -= var2 + var4 - areaBottom;
         }
 
-        if (var1 < anInt754) {
-            var11 = anInt754 - var1;
+        if (var1 < areaLeft) {
+            var11 = areaLeft - var1;
             var3 -= var11;
-            var1 = anInt754;
+            var1 = areaLeft;
             var10 += var11;
             var7 += var11;
             var9 += var11;
             var8 += var11;
         }
 
-        if (var1 + var3 > anInt745) {
-            var11 = var1 + var3 - anInt745;
+        if (var1 + var3 > areaRight) {
+            var11 = var1 + var3 - areaRight;
             var3 -= var11;
             var9 += var11;
             var8 += var11;
         }
 
         if (var3 > 0 && var4 > 0) {
-            method1162(drawingAreaPixels, var0, var5, var10, var7, var3, var4, var8, var9, var6);
+            method1162(buffer, var0, var5, var10, var7, var3, var4, var8, var9, var6);
         }
     }
 
@@ -223,42 +223,42 @@ public abstract class Node_Sub21_Sub26_Sub3 extends DrawingArea {
     }
 
     static void method1171(byte[] var0, int var1, int var2, int var3, int var4, int var5) {
-        int var6 = var1 + var2 * drawingAreaWidth;
-        int var7 = drawingAreaWidth - var3;
+        int var6 = var1 + var2 * areaWidth;
+        int var7 = areaWidth - var3;
         int var8 = 0;
         int var9 = 0;
         int var10;
-        if (var2 < anInt1257) {
-            var10 = anInt1257 - var2;
+        if (var2 < areaTop) {
+            var10 = areaTop - var2;
             var4 -= var10;
-            var2 = anInt1257;
+            var2 = areaTop;
             var9 += var10 * var3;
-            var6 += var10 * drawingAreaWidth;
+            var6 += var10 * areaWidth;
         }
 
-        if (var2 + var4 > anInt753) {
-            var4 -= var2 + var4 - anInt753;
+        if (var2 + var4 > areaBottom) {
+            var4 -= var2 + var4 - areaBottom;
         }
 
-        if (var1 < anInt754) {
-            var10 = anInt754 - var1;
+        if (var1 < areaLeft) {
+            var10 = areaLeft - var1;
             var3 -= var10;
-            var1 = anInt754;
+            var1 = areaLeft;
             var9 += var10;
             var6 += var10;
             var8 += var10;
             var7 += var10;
         }
 
-        if (var1 + var3 > anInt745) {
-            var10 = var1 + var3 - anInt745;
+        if (var1 + var3 > areaRight) {
+            var10 = var1 + var3 - areaRight;
             var3 -= var10;
             var8 += var10;
             var7 += var10;
         }
 
         if (var3 > 0 && var4 > 0) {
-            method1175(drawingAreaPixels, var0, var5, var9, var6, var3, var4, var7, var8);
+            method1175(buffer, var0, var5, var9, var6, var3, var4, var7, var8);
         }
     }
 
@@ -322,7 +322,7 @@ public abstract class Node_Sub21_Sub26_Sub3 extends DrawingArea {
                     } else if (var17.startsWith("img=")) {
                         try {
                             int var18 = Class85.method495(var17.substring(4));
-                            var4 += aNode_Sub21_Sub26_Sub2Array2131[var18].anInt221;
+                            var4 += aCompressedImageArray2131[var18].anInt221;
                             var11 = 0;
                         } catch (Exception var20) {
                         }
@@ -575,7 +575,7 @@ public abstract class Node_Sub21_Sub26_Sub3 extends DrawingArea {
                                 if (var8.startsWith("img=")) {
                                     try {
                                         var10 = Class85.method495(var8.substring(4));
-                                        Node_Sub21_Sub26_Sub2 var12 = aNode_Sub21_Sub26_Sub2Array2131[var10];
+                                        CompressedImage var12 = aCompressedImageArray2131[var10];
                                         var12.method1155(var2, var3 + this.anInt221 - var12.anInt220);
                                         var2 += var12.anInt221;
                                         var5 = -1;
@@ -624,11 +624,11 @@ public abstract class Node_Sub21_Sub26_Sub3 extends DrawingArea {
 
                         int var11 = this.anIntArray342[var7];
                         if (anInt228 != -1) {
-                            method1214(var2, var3 + (int) ((double) this.anInt221 * 0.7D), var11, anInt228);
+                            drawHLine(var2, var3 + (int) ((double) this.anInt221 * 0.7D), var11, anInt228);
                         }
 
                         if (anInt225 != -1) {
-                            method1214(var2, var3 + this.anInt221 + 1, var11, anInt225);
+                            drawHLine(var2, var3 + this.anInt221 + 1, var11, anInt225);
                         }
 
                         var2 += var11;
@@ -678,7 +678,7 @@ public abstract class Node_Sub21_Sub26_Sub3 extends DrawingArea {
 
                                         ++var8;
                                         var15 = Class85.method495(var11.substring(4));
-                                        Node_Sub21_Sub26_Sub2 var17 = aNode_Sub21_Sub26_Sub2Array2131[var15];
+                                        CompressedImage var17 = aCompressedImageArray2131[var15];
                                         var17.method1155(var2 + var13, var3 + this.anInt221 - var17.anInt220 + var14);
                                         var2 += var17.anInt221;
                                         var7 = -1;
@@ -740,11 +740,11 @@ public abstract class Node_Sub21_Sub26_Sub3 extends DrawingArea {
 
                         int var16 = this.anIntArray342[var10];
                         if (anInt228 != -1) {
-                            method1214(var2, var3 + (int) ((double) this.anInt221 * 0.7D), var16, anInt228);
+                            drawHLine(var2, var3 + (int) ((double) this.anInt221 * 0.7D), var16, anInt228);
                         }
 
                         if (anInt225 != -1) {
-                            method1214(var2, var3 + this.anInt221, var16, anInt225);
+                            drawHLine(var2, var3 + this.anInt221, var16, anInt225);
                         }
 
                         var2 += var16;
@@ -805,7 +805,7 @@ public abstract class Node_Sub21_Sub26_Sub3 extends DrawingArea {
                             if (var7.startsWith("img=")) {
                                 try {
                                     int var8 = Class85.method495(var7.substring(4));
-                                    var4 += aNode_Sub21_Sub26_Sub2Array2131[var8].anInt221;
+                                    var4 += aCompressedImageArray2131[var8].anInt221;
                                     var3 = -1;
                                 } catch (Exception var10) {
                                 }

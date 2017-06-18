@@ -74,8 +74,8 @@ public class ClanMate extends Node {
                 var0.anInt768 = var8;
                 int var9 = 4;
                 boolean var10 = true;
-                if (var0 instanceof Npc) {
-                    var10 = ((Npc) var0).definition.aBoolean2016;
+                if (var0 instanceof NpcEntity) {
+                    var10 = ((NpcEntity) var0).definition.aBoolean2016;
                 }
 
                 if (var10) {

@@ -20,6 +20,6 @@ public final class Legacy2DBoundingBox extends BoundingBox {
     }
 
     public final void draw() {
-        DrawingArea.method1208(DrawingArea.anInt754 + this.minX, DrawingArea.anInt1257 + this.minY, this.maxX - this.minX, this.maxY - this.minY, this.color);
+        DrawingArea.drawRectangle(DrawingArea.areaLeft + this.minX, DrawingArea.areaTop + this.minY, this.maxX - this.minX, this.maxY - this.minY, this.color);
     }
 }

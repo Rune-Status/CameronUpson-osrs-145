@@ -11,6 +11,6 @@ public abstract class Class186 {
     public abstract void method172(int var1, int var2);
 
     public final void method1251() {
-        DrawingArea.method1211(this.anIntArray2181, this.anInt2180, this.anInt2182);
+        DrawingArea.setTarget(this.anIntArray2181, this.anInt2180, this.anInt2182);
     }
 }

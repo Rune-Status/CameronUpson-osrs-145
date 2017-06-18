@@ -146,9 +146,9 @@ public class Class77 {
                         Class133.aReferenceTable1729 = var7;
                         Class133.aReferenceTable1724 = var8;
                         Class133.aNode_Sub10_Sub3_1723 = var27;
-                        Player.aClass84_231 = Class7.method39(Client.aClass108_301, 1, 2048);
+                        PlayerEntity.aClass84_231 = Class7.method39(Client.aClass108_301, 1, 2048);
                         Class15.aNode_Sub10_Sub1_123 = new Node_Sub10_Sub1();
-                        Player.aClass84_231.method480(Class15.aNode_Sub10_Sub1_123);
+                        PlayerEntity.aClass84_231.method480(Class15.aNode_Sub10_Sub1_123);
                         Class33.aClass94_254 = new Class94(22050, Class84.anInt870);
                         Login.aString686 = "Prepared sound engine";
                         Login.anInt699 = 35;
@@ -254,8 +254,8 @@ public class Class77 {
                             ++var0;
                         }
 
-                        if (Client.aNode_Sub21_Sub26_Sub2Array1542 == null) {
-                            Client.aNode_Sub21_Sub26_Sub2Array1542 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "mapscene", "");
+                        if (Client.aCompressedImageArray1542 == null) {
+                            Client.aCompressedImageArray1542 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "mapscene", "");
                         } else {
                             ++var0;
                         }
@@ -296,14 +296,14 @@ public class Class77 {
                             ++var0;
                         }
 
-                        if (Class64.aNode_Sub21_Sub26_Sub2Array656 == null) {
-                            Class64.aNode_Sub21_Sub26_Sub2Array656 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "scrollbar", "");
+                        if (InterfaceComponent.scrollBarImages == null) {
+                            InterfaceComponent.scrollBarImages = InterfaceNode.method267(Class21.aCacheReferenceTable139, "scrollbar", "");
                         } else {
                             ++var0;
                         }
 
-                        if (Class2.aNode_Sub21_Sub26_Sub2Array12 == null) {
-                            Class2.aNode_Sub21_Sub26_Sub2Array12 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "mod_icons", "");
+                        if (Class2.aCompressedImageArray12 == null) {
+                            Class2.aCompressedImageArray12 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "mod_icons", "");
                         } else {
                             ++var0;
                         }
@@ -312,13 +312,13 @@ public class Class77 {
                             Login.aString686 = "Loading sprites - " + var0 * 100 / 12 + "%";
                             Login.anInt699 = 70;
                         } else {
-                            Node_Sub21_Sub26_Sub3.aNode_Sub21_Sub26_Sub2Array2131 = Class2.aNode_Sub21_Sub26_Sub2Array12;
+                            Node_Sub21_Sub26_Sub3.aCompressedImageArray2131 = Class2.aCompressedImageArray12;
                             Class75.aSprite805.method935();
                             var2 = (int) (Math.random() * 21.0D) - 10;
                             var3 = (int) (Math.random() * 21.0D) - 10;
                             var4 = (int) (Math.random() * 21.0D) - 10;
                             var5 = (int) (Math.random() * 41.0D) - 20;
-                            Client.aNode_Sub21_Sub26_Sub2Array1542[0].method1158(var5 + var2, var5 + var3, var5 + var4);
+                            Client.aCompressedImageArray1542[0].method1158(var5 + var2, var5 + var3, var5 + var4);
                             Login.aString686 = "Loaded sprites";
                             Login.anInt699 = 70;
                             Client.anInt1492 = 90;
@@ -373,7 +373,7 @@ public class Class77 {
                         } else {
                             if (Class9.aClass189_68 == null) {
                                 Class9.aClass189_68 = new Class189();
-                                Class9.aClass189_68.method1296(Class73.aCacheReferenceTable740, Class35.aFont313, Client.aHashMap1513, Client.aNode_Sub21_Sub26_Sub2Array1542);
+                                Class9.aClass189_68.method1296(Class73.aCacheReferenceTable740, Class35.aFont313, Client.aHashMap1513, Client.aCompressedImageArray1542);
                             }
 
                             var0 = Class9.aClass189_68.method1293();

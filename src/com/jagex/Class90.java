@@ -52,7 +52,7 @@ public final class Class90 {
                         }
                     }
 
-                    if (Class84.method484(Client.player.name, Class2.aClass188_13).equals(var2)) {
+                    if (Class84.method484(Client.playerEntity.name, Class2.aClass188_13).equals(var2)) {
                         Class78.addChatMessage(31, "", "You can't insert yourself to your own ignore list");
                     } else {
                         Client.packet.writeHeader(148);

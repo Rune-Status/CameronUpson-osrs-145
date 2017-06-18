@@ -28,7 +28,7 @@ public final class Class114 {
         int var2 = var0.anInt1382;
         int var3 = var0.anInt1407;
         int var4 = var0.anInt1383;
-        int[] var5 = Npc.anIntArray661;
+        int[] var5 = NpcEntity.anIntArray661;
         int var6 = var0.anInt1389;
         byte[] var7 = var0.aByteArray1376;
         int var8 = var0.anInt1394;
@@ -143,7 +143,7 @@ public final class Class114 {
         var0.anInt1382 = var2;
         var0.anInt1407 = var3;
         var0.anInt1383 = var4;
-        Npc.anIntArray661 = var5;
+        NpcEntity.anIntArray661 = var5;
         var0.anInt1389 = var6;
         var0.aByteArray1376 = var7;
         var0.anInt1394 = var8;
@@ -174,8 +174,8 @@ public final class Class114 {
         int[] var21 = null;
         int[] var22 = null;
         var0.anInt1387 = 1;
-        if (Npc.anIntArray661 == null) {
-            Npc.anIntArray661 = new int[var0.anInt1387 * 100000];
+        if (NpcEntity.anIntArray661 == null) {
+            NpcEntity.anIntArray661 = new int[var0.anInt1387 * 100000];
         }
 
         boolean var23 = true;
@@ -408,7 +408,7 @@ public final class Class114 {
                             }
 
                             ++var0.anIntArray1377[var0.aByteArray1379[var24 & 255] & 255];
-                            Npc.anIntArray661[var47] = var0.aByteArray1379[var24 & 255] & 255;
+                            NpcEntity.anIntArray661[var47] = var0.aByteArray1379[var24 & 255] & 255;
                             ++var47;
                             if (var45 == 0) {
                                 ++var43;
@@ -466,7 +466,7 @@ public final class Class114 {
                             var24 = var0.aByteArray1379[var0.aByteArray1378[var0.anIntArray1395[0]] & 255];
 
                             for (var0.anIntArray1377[var24 & 255] += var48; var48 > 0; --var48) {
-                                Npc.anIntArray661[var47] = var24 & 255;
+                                NpcEntity.anIntArray661[var47] = var24 & 255;
                                 ++var47;
                             }
                         }
@@ -485,14 +485,14 @@ public final class Class114 {
                     }
 
                     for (var36 = 0; var36 < var47; ++var36) {
-                        var24 = (byte) (Npc.anIntArray661[var36] & 255);
-                        Npc.anIntArray661[var0.anIntArray1374[var24 & 255]] |= var36 << 8;
+                        var24 = (byte) (NpcEntity.anIntArray661[var36] & 255);
+                        NpcEntity.anIntArray661[var0.anIntArray1374[var24 & 255]] |= var36 << 8;
                         ++var0.anIntArray1374[var24 & 255];
                     }
 
-                    var0.anInt1389 = Npc.anIntArray661[var0.anInt1399] >> 8;
+                    var0.anInt1389 = NpcEntity.anIntArray661[var0.anInt1399] >> 8;
                     var0.anInt1407 = 0;
-                    var0.anInt1389 = Npc.anIntArray661[var0.anInt1389];
+                    var0.anInt1389 = NpcEntity.anIntArray661[var0.anInt1389];
                     var0.anInt1383 = (byte) (var0.anInt1389 & 255);
                     var0.anInt1389 >>= 8;
                     ++var0.anInt1407;

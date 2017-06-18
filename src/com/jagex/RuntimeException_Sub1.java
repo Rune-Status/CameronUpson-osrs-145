@@ -63,7 +63,7 @@ public class RuntimeException_Sub1 extends RuntimeException {
 
     static void method741(int var0, int var1, int var2) {
         if (var0 >= 128 && var1 >= 128 && var0 <= 13056 && var1 <= 13056) {
-            int var3 = Class25.method175(var0, var1, Player.floorLevel) - var2;
+            int var3 = Class25.method175(var0, var1, PlayerEntity.floorLevel) - var2;
             var0 -= Class53.cameraX;
             var3 -= Class85.cameraZ;
             var1 -= Class34.cameraY;

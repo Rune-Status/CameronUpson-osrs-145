@@ -10,7 +10,6 @@ public class Class64 {
     static final Class64 aClass64_654 = new Class64(6);
     protected static int appletHeight;
     static java.awt.Font aFont652;
-    static Node_Sub21_Sub26_Sub2[] aNode_Sub21_Sub26_Sub2Array656;
     final int anInt655;
 
     Class64(int var1) {
@@ -27,7 +26,7 @@ public class Class64 {
         int var2;
         for (var1 = 0; var1 < Client.anInt1508; ++var1) {
             var2 = Client.anIntArray1507[var1];
-            Npc var3 = Client.npcs[var2];
+            NpcEntity var3 = Client.npcEntities[var2];
             int var4 = Client.aPacket1521.readUnsignedByte();
             int var5;
             int var6;
@@ -160,9 +159,9 @@ public class Class64 {
 
         for (var1 = 0; var1 < Client.anInt1580; ++var1) {
             var2 = Client.anIntArray1584[var1];
-            if (Client.npcs[var2].anInt769 != Client.engineCycle) {
-                Client.npcs[var2].definition = null;
-                Client.npcs[var2] = null;
+            if (Client.npcEntities[var2].anInt769 != Client.engineCycle) {
+                Client.npcEntities[var2].definition = null;
+                Client.npcEntities[var2] = null;
             }
         }
 
@@ -170,7 +169,7 @@ public class Class64 {
             throw new RuntimeException(Client.aPacket1521.caret + "," + Client.anInt1514);
         }
         for (var1 = 0; var1 < Client.anInt1501; ++var1) {
-            if (Client.npcs[Client.npcIndices[var1]] == null) {
+            if (Client.npcEntities[Client.npcIndices[var1]] == null) {
                 throw new RuntimeException(var1 + "," + Client.anInt1501);
             }
         }

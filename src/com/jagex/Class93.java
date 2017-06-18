@@ -64,17 +64,17 @@ public class Class93 {
             Class3.aSprite17 = var10;
             Login.aSprite697 = Class3.aSprite17.method1241();
             if ((Client.currentWorldMask & 536870912) != 0) {
-                Login.aNode_Sub21_Sub26_Sub2_695 = Class185.method1203(var1, "logo_deadman_mode", "");
+                Login.aCompressedImage_695 = Class185.method1203(var1, "logo_deadman_mode", "");
             } else {
-                Login.aNode_Sub21_Sub26_Sub2_695 = Class185.method1203(var1, "logo", "");
+                Login.aCompressedImage_695 = Class185.method1203(var1, "logo", "");
             }
 
-            Login.aNode_Sub21_Sub26_Sub2_690 = Class185.method1203(var1, "titlebox", "");
-            Login.aNode_Sub21_Sub26_Sub2_709 = Class185.method1203(var1, "titlebutton", "");
-            Class17.aNode_Sub21_Sub26_Sub2Array126 = InterfaceNode.method267(var1, "runes", "");
-            Login.aNode_Sub21_Sub26_Sub2Array692 = InterfaceNode.method267(var1, "title_mute", "");
-            Class49.aNode_Sub21_Sub26_Sub2_375 = Class185.method1203(var1, "options_radio_buttons,0", "");
-            AnimationSkin.aNode_Sub21_Sub26_Sub2_1290 = Class185.method1203(var1, "options_radio_buttons,2", "");
+            Login.aCompressedImage_690 = Class185.method1203(var1, "titlebox", "");
+            Login.aCompressedImage_709 = Class185.method1203(var1, "titlebutton", "");
+            Class17.aCompressedImageArray126 = InterfaceNode.method267(var1, "runes", "");
+            Login.aCompressedImageArray692 = InterfaceNode.method267(var1, "title_mute", "");
+            Class49.aCompressedImage_375 = Class185.method1203(var1, "options_radio_buttons,0", "");
+            AnimationSkin.aCompressedImage_1290 = Class185.method1203(var1, "options_radio_buttons,2", "");
             Class20.anIntArray138 = new int[256];
 
             int var11;
@@ -172,7 +172,7 @@ public class Class93 {
             Login.anInt710 = Login.anInt702 + 202;
             Class3.aSprite17.method1242(Login.anInt702, 0);
             Login.aSprite697.method1242(Login.anInt702 + 382, 0);
-            Login.aNode_Sub21_Sub26_Sub2_695.method1155(Login.anInt702 + 382 - Login.aNode_Sub21_Sub26_Sub2_695.anInt206 / 2, 18);
+            Login.aCompressedImage_695.method1155(Login.anInt702 + 382 - Login.aCompressedImage_695.anInt206 / 2, 18);
         }
     }
 

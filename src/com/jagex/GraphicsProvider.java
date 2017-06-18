@@ -39,8 +39,8 @@ public final class GraphicsProvider extends Class186 {
     final void drawGame(Graphics gameGraphics, int x, int y) {
         try {
             Graphics paint = image.getGraphics().create();
-            if (Client.connectionState == 30 && Client.player != null) {
-                Model model = Client.player.getModel();
+            if (Client.connectionState == 30 && Client.playerEntity != null) {
+                Model model = Client.playerEntity.getModel();
                 if (model != null) {
                     BoundingBox bb = model.boundingBox;
                     if (bb != null) {
