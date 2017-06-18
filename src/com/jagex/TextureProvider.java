@@ -7,5 +7,5 @@ public interface TextureProvider {
 
     boolean method500(int var1);
 
-    int[] method506(int var1);
+    int[] getPixels(int var1);
 }
