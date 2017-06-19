@@ -101,7 +101,7 @@ public class Class22 {
                         }
 
                         if (var8.anInt229 != 0 && var7 != null) {
-                            var7.method761(var1, var2, var9, var10, var8.aBoolean223);
+                            var7.flagSolidEntity(var1, var2, var9, var10, var8.aBoolean223);
                         }
 
                     } else if (var5 == 0) {
@@ -151,7 +151,7 @@ public class Class22 {
                         }
 
                         if (var8.anInt229 != 0 && var7 != null) {
-                            var7.method766(var1, var2, var5, var4, var8.aBoolean223);
+                            var7.flagWall(var1, var2, var5, var4, var8.aBoolean223);
                         }
 
                         if (var8.anInt233 != 16) {
@@ -179,7 +179,7 @@ public class Class22 {
                         }
 
                         if (var8.anInt229 != 0 && var7 != null) {
-                            var7.method766(var1, var2, var5, var4, var8.aBoolean223);
+                            var7.flagWall(var1, var2, var5, var4, var8.aBoolean223);
                         }
 
                     } else {
@@ -214,7 +214,7 @@ public class Class22 {
                             }
 
                             if (var8.anInt229 != 0 && var7 != null) {
-                                var7.method766(var1, var2, var5, var4, var8.aBoolean223);
+                                var7.flagWall(var1, var2, var5, var4, var8.aBoolean223);
                             }
 
                             if (var8.anInt233 != 16) {
@@ -242,7 +242,7 @@ public class Class22 {
                             }
 
                             if (var8.anInt229 != 0 && var7 != null) {
-                                var7.method766(var1, var2, var5, var4, var8.aBoolean223);
+                                var7.flagWall(var1, var2, var5, var4, var8.aBoolean223);
                             }
 
                         } else if (var5 == 9) {
@@ -254,7 +254,7 @@ public class Class22 {
 
                             var6.method708(var0, var1, var2, var16, 1, 1, (Entity) var21, 0, var19, var20);
                             if (var8.anInt229 != 0 && var7 != null) {
-                                var7.method761(var1, var2, var9, var10, var8.aBoolean223);
+                                var7.flagSolidEntity(var1, var2, var9, var10, var8.aBoolean223);
                             }
 
                             if (var8.anInt233 != 16) {
@@ -352,7 +352,7 @@ public class Class22 {
                     }
 
                     if (var8.anInt229 != 0 && var7 != null) {
-                        var7.method761(var1, var2, var9, var10, var8.aBoolean223);
+                        var7.flagSolidEntity(var1, var2, var9, var10, var8.aBoolean223);
                     }
 
                 }

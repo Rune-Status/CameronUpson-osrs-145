@@ -104,13 +104,13 @@ public class CollisionMap {
 
     }
 
-    public void method760(int var1, int var2) {
-        var1 -= this.insetX;
-        var2 -= this.insetY;
-        this.flags[var1][var2] |= 2097152;
+    public void flagBlocked(int x, int y) {
+        x -= this.insetX;
+        y -= this.insetY;
+        this.flags[x][y] |= 2097152;
     }
 
-    public void method761(int var1, int var2, int var3, int var4, boolean var5) {
+    public void flagSolidEntity(int var1, int var2, int var3, int var4, boolean var5) {
         int var6 = 256;
         if (var5) {
             var6 += 131072;
@@ -123,7 +123,7 @@ public class CollisionMap {
             if (var7 >= 0 && var7 < this.width) {
                 for (int var8 = var2; var8 < var2 + var4; ++var8) {
                     if (var8 >= 0 && var8 < this.height) {
-                        this.method763(var7, var8, var6);
+                        this.addFlag(var7, var8, var6);
                     }
                 }
             }
@@ -137,8 +137,8 @@ public class CollisionMap {
         this.flags[var1][var2] |= 262144;
     }
 
-    void method763(int var1, int var2, int var3) {
-        this.flags[var1][var2] |= var3;
+    void addFlag(int i, int ii, int iii) {
+        this.flags[i][ii] |= iii;
     }
 
     public void method759(int var1, int var2, int var3, int var4, int var5, boolean var6) {
@@ -160,7 +160,7 @@ public class CollisionMap {
             if (var8 >= 0 && var8 < this.width) {
                 for (int var9 = var2; var9 < var4 + var2; ++var9) {
                     if (var9 >= 0 && var9 < this.height) {
-                        this.method767(var8, var9, var7);
+                        this.removeFlag(var8, var9, var7);
                     }
                 }
             }
@@ -168,304 +168,304 @@ public class CollisionMap {
 
     }
 
-    void method767(int var1, int var2, int var3) {
-        this.flags[var1][var2] &= ~var3;
+    void removeFlag(int i, int ii, int iii) {
+        this.flags[i][ii] &= ~iii;
     }
 
-    public void method758(int var1, int var2) {
-        var1 -= this.insetX;
-        var2 -= this.insetY;
-        this.flags[var1][var2] &= -262145;
+    public void markBlocked(int x, int y) {
+        x -= this.insetX;
+        y -= this.insetY;
+        this.flags[x][y] &= -262145;
     }
 
-    public void method766(int var1, int var2, int var3, int var4, boolean var5) {
-        var1 -= this.insetX;
-        var2 -= this.insetY;
+    public void flagWall(int x, int y, int var3, int type, boolean var5) {
+        x -= this.insetX;
+        y -= this.insetY;
         if (var3 == 0) {
-            if (var4 == 0) {
-                this.method763(var1, var2, 128);
-                this.method763(var1 - 1, var2, 8);
+            if (type == 0) {
+                this.addFlag(x, y, 128);
+                this.addFlag(x - 1, y, 8);
             }
 
-            if (var4 == 1) {
-                this.method763(var1, var2, 2);
-                this.method763(var1, var2 + 1, 32);
+            if (type == 1) {
+                this.addFlag(x, y, 2);
+                this.addFlag(x, y + 1, 32);
             }
 
-            if (var4 == 2) {
-                this.method763(var1, var2, 8);
-                this.method763(var1 + 1, var2, 128);
+            if (type == 2) {
+                this.addFlag(x, y, 8);
+                this.addFlag(x + 1, y, 128);
             }
 
-            if (var4 == 3) {
-                this.method763(var1, var2, 32);
-                this.method763(var1, var2 - 1, 2);
+            if (type == 3) {
+                this.addFlag(x, y, 32);
+                this.addFlag(x, y - 1, 2);
             }
         }
 
         if (var3 == 1 || var3 == 3) {
-            if (var4 == 0) {
-                this.method763(var1, var2, 1);
-                this.method763(var1 - 1, var2 + 1, 16);
+            if (type == 0) {
+                this.addFlag(x, y, 1);
+                this.addFlag(x - 1, y + 1, 16);
             }
 
-            if (var4 == 1) {
-                this.method763(var1, var2, 4);
-                this.method763(var1 + 1, var2 + 1, 64);
+            if (type == 1) {
+                this.addFlag(x, y, 4);
+                this.addFlag(x + 1, y + 1, 64);
             }
 
-            if (var4 == 2) {
-                this.method763(var1, var2, 16);
-                this.method763(var1 + 1, var2 - 1, 1);
+            if (type == 2) {
+                this.addFlag(x, y, 16);
+                this.addFlag(x + 1, y - 1, 1);
             }
 
-            if (var4 == 3) {
-                this.method763(var1, var2, 64);
-                this.method763(var1 - 1, var2 - 1, 4);
+            if (type == 3) {
+                this.addFlag(x, y, 64);
+                this.addFlag(x - 1, y - 1, 4);
             }
         }
 
         if (var3 == 2) {
-            if (var4 == 0) {
-                this.method763(var1, var2, 130);
-                this.method763(var1 - 1, var2, 8);
-                this.method763(var1, var2 + 1, 32);
+            if (type == 0) {
+                this.addFlag(x, y, 130);
+                this.addFlag(x - 1, y, 8);
+                this.addFlag(x, y + 1, 32);
             }
 
-            if (var4 == 1) {
-                this.method763(var1, var2, 10);
-                this.method763(var1, var2 + 1, 32);
-                this.method763(var1 + 1, var2, 128);
+            if (type == 1) {
+                this.addFlag(x, y, 10);
+                this.addFlag(x, y + 1, 32);
+                this.addFlag(x + 1, y, 128);
             }
 
-            if (var4 == 2) {
-                this.method763(var1, var2, 40);
-                this.method763(var1 + 1, var2, 128);
-                this.method763(var1, var2 - 1, 2);
+            if (type == 2) {
+                this.addFlag(x, y, 40);
+                this.addFlag(x + 1, y, 128);
+                this.addFlag(x, y - 1, 2);
             }
 
-            if (var4 == 3) {
-                this.method763(var1, var2, 160);
-                this.method763(var1, var2 - 1, 2);
-                this.method763(var1 - 1, var2, 8);
+            if (type == 3) {
+                this.addFlag(x, y, 160);
+                this.addFlag(x, y - 1, 2);
+                this.addFlag(x - 1, y, 8);
             }
         }
 
         if (var5) {
             if (var3 == 0) {
-                if (var4 == 0) {
-                    this.method763(var1, var2, 65536);
-                    this.method763(var1 - 1, var2, 4096);
+                if (type == 0) {
+                    this.addFlag(x, y, 65536);
+                    this.addFlag(x - 1, y, 4096);
                 }
 
-                if (var4 == 1) {
-                    this.method763(var1, var2, 1024);
-                    this.method763(var1, var2 + 1, 16384);
+                if (type == 1) {
+                    this.addFlag(x, y, 1024);
+                    this.addFlag(x, y + 1, 16384);
                 }
 
-                if (var4 == 2) {
-                    this.method763(var1, var2, 4096);
-                    this.method763(var1 + 1, var2, 65536);
+                if (type == 2) {
+                    this.addFlag(x, y, 4096);
+                    this.addFlag(x + 1, y, 65536);
                 }
 
-                if (var4 == 3) {
-                    this.method763(var1, var2, 16384);
-                    this.method763(var1, var2 - 1, 1024);
+                if (type == 3) {
+                    this.addFlag(x, y, 16384);
+                    this.addFlag(x, y - 1, 1024);
                 }
             }
 
             if (var3 == 1 || var3 == 3) {
-                if (var4 == 0) {
-                    this.method763(var1, var2, 512);
-                    this.method763(var1 - 1, var2 + 1, 8192);
+                if (type == 0) {
+                    this.addFlag(x, y, 512);
+                    this.addFlag(x - 1, y + 1, 8192);
                 }
 
-                if (var4 == 1) {
-                    this.method763(var1, var2, 2048);
-                    this.method763(var1 + 1, var2 + 1, 32768);
+                if (type == 1) {
+                    this.addFlag(x, y, 2048);
+                    this.addFlag(x + 1, y + 1, 32768);
                 }
 
-                if (var4 == 2) {
-                    this.method763(var1, var2, 8192);
-                    this.method763(var1 + 1, var2 - 1, 512);
+                if (type == 2) {
+                    this.addFlag(x, y, 8192);
+                    this.addFlag(x + 1, y - 1, 512);
                 }
 
-                if (var4 == 3) {
-                    this.method763(var1, var2, 32768);
-                    this.method763(var1 - 1, var2 - 1, 2048);
+                if (type == 3) {
+                    this.addFlag(x, y, 32768);
+                    this.addFlag(x - 1, y - 1, 2048);
                 }
             }
 
             if (var3 == 2) {
-                if (var4 == 0) {
-                    this.method763(var1, var2, 66560);
-                    this.method763(var1 - 1, var2, 4096);
-                    this.method763(var1, var2 + 1, 16384);
+                if (type == 0) {
+                    this.addFlag(x, y, 66560);
+                    this.addFlag(x - 1, y, 4096);
+                    this.addFlag(x, y + 1, 16384);
                 }
 
-                if (var4 == 1) {
-                    this.method763(var1, var2, 5120);
-                    this.method763(var1, var2 + 1, 16384);
-                    this.method763(var1 + 1, var2, 65536);
+                if (type == 1) {
+                    this.addFlag(x, y, 5120);
+                    this.addFlag(x, y + 1, 16384);
+                    this.addFlag(x + 1, y, 65536);
                 }
 
-                if (var4 == 2) {
-                    this.method763(var1, var2, 20480);
-                    this.method763(var1 + 1, var2, 65536);
-                    this.method763(var1, var2 - 1, 1024);
+                if (type == 2) {
+                    this.addFlag(x, y, 20480);
+                    this.addFlag(x + 1, y, 65536);
+                    this.addFlag(x, y - 1, 1024);
                 }
 
-                if (var4 == 3) {
-                    this.method763(var1, var2, 81920);
-                    this.method763(var1, var2 - 1, 1024);
-                    this.method763(var1 - 1, var2, 4096);
+                if (type == 3) {
+                    this.addFlag(x, y, 81920);
+                    this.addFlag(x, y - 1, 1024);
+                    this.addFlag(x - 1, y, 4096);
                 }
             }
         }
 
     }
 
-    public void method764(int var1, int var2, int var3, int var4, boolean var5) {
-        var1 -= this.insetX;
-        var2 -= this.insetY;
+    public void unflagWall(int x, int y, int var3, int type, boolean var5) {
+        x -= this.insetX;
+        y -= this.insetY;
         if (var3 == 0) {
-            if (var4 == 0) {
-                this.method767(var1, var2, 128);
-                this.method767(var1 - 1, var2, 8);
+            if (type == 0) {
+                this.removeFlag(x, y, 128);
+                this.removeFlag(x - 1, y, 8);
             }
 
-            if (var4 == 1) {
-                this.method767(var1, var2, 2);
-                this.method767(var1, var2 + 1, 32);
+            if (type == 1) {
+                this.removeFlag(x, y, 2);
+                this.removeFlag(x, y + 1, 32);
             }
 
-            if (var4 == 2) {
-                this.method767(var1, var2, 8);
-                this.method767(var1 + 1, var2, 128);
+            if (type == 2) {
+                this.removeFlag(x, y, 8);
+                this.removeFlag(x + 1, y, 128);
             }
 
-            if (var4 == 3) {
-                this.method767(var1, var2, 32);
-                this.method767(var1, var2 - 1, 2);
+            if (type == 3) {
+                this.removeFlag(x, y, 32);
+                this.removeFlag(x, y - 1, 2);
             }
         }
 
         if (var3 == 1 || var3 == 3) {
-            if (var4 == 0) {
-                this.method767(var1, var2, 1);
-                this.method767(var1 - 1, var2 + 1, 16);
+            if (type == 0) {
+                this.removeFlag(x, y, 1);
+                this.removeFlag(x - 1, y + 1, 16);
             }
 
-            if (var4 == 1) {
-                this.method767(var1, var2, 4);
-                this.method767(var1 + 1, var2 + 1, 64);
+            if (type == 1) {
+                this.removeFlag(x, y, 4);
+                this.removeFlag(x + 1, y + 1, 64);
             }
 
-            if (var4 == 2) {
-                this.method767(var1, var2, 16);
-                this.method767(var1 + 1, var2 - 1, 1);
+            if (type == 2) {
+                this.removeFlag(x, y, 16);
+                this.removeFlag(x + 1, y - 1, 1);
             }
 
-            if (var4 == 3) {
-                this.method767(var1, var2, 64);
-                this.method767(var1 - 1, var2 - 1, 4);
+            if (type == 3) {
+                this.removeFlag(x, y, 64);
+                this.removeFlag(x - 1, y - 1, 4);
             }
         }
 
         if (var3 == 2) {
-            if (var4 == 0) {
-                this.method767(var1, var2, 130);
-                this.method767(var1 - 1, var2, 8);
-                this.method767(var1, var2 + 1, 32);
+            if (type == 0) {
+                this.removeFlag(x, y, 130);
+                this.removeFlag(x - 1, y, 8);
+                this.removeFlag(x, y + 1, 32);
             }
 
-            if (var4 == 1) {
-                this.method767(var1, var2, 10);
-                this.method767(var1, var2 + 1, 32);
-                this.method767(var1 + 1, var2, 128);
+            if (type == 1) {
+                this.removeFlag(x, y, 10);
+                this.removeFlag(x, y + 1, 32);
+                this.removeFlag(x + 1, y, 128);
             }
 
-            if (var4 == 2) {
-                this.method767(var1, var2, 40);
-                this.method767(var1 + 1, var2, 128);
-                this.method767(var1, var2 - 1, 2);
+            if (type == 2) {
+                this.removeFlag(x, y, 40);
+                this.removeFlag(x + 1, y, 128);
+                this.removeFlag(x, y - 1, 2);
             }
 
-            if (var4 == 3) {
-                this.method767(var1, var2, 160);
-                this.method767(var1, var2 - 1, 2);
-                this.method767(var1 - 1, var2, 8);
+            if (type == 3) {
+                this.removeFlag(x, y, 160);
+                this.removeFlag(x, y - 1, 2);
+                this.removeFlag(x - 1, y, 8);
             }
         }
 
         if (var5) {
             if (var3 == 0) {
-                if (var4 == 0) {
-                    this.method767(var1, var2, 65536);
-                    this.method767(var1 - 1, var2, 4096);
+                if (type == 0) {
+                    this.removeFlag(x, y, 65536);
+                    this.removeFlag(x - 1, y, 4096);
                 }
 
-                if (var4 == 1) {
-                    this.method767(var1, var2, 1024);
-                    this.method767(var1, var2 + 1, 16384);
+                if (type == 1) {
+                    this.removeFlag(x, y, 1024);
+                    this.removeFlag(x, y + 1, 16384);
                 }
 
-                if (var4 == 2) {
-                    this.method767(var1, var2, 4096);
-                    this.method767(var1 + 1, var2, 65536);
+                if (type == 2) {
+                    this.removeFlag(x, y, 4096);
+                    this.removeFlag(x + 1, y, 65536);
                 }
 
-                if (var4 == 3) {
-                    this.method767(var1, var2, 16384);
-                    this.method767(var1, var2 - 1, 1024);
+                if (type == 3) {
+                    this.removeFlag(x, y, 16384);
+                    this.removeFlag(x, y - 1, 1024);
                 }
             }
 
             if (var3 == 1 || var3 == 3) {
-                if (var4 == 0) {
-                    this.method767(var1, var2, 512);
-                    this.method767(var1 - 1, var2 + 1, 8192);
+                if (type == 0) {
+                    this.removeFlag(x, y, 512);
+                    this.removeFlag(x - 1, y + 1, 8192);
                 }
 
-                if (var4 == 1) {
-                    this.method767(var1, var2, 2048);
-                    this.method767(var1 + 1, var2 + 1, 32768);
+                if (type == 1) {
+                    this.removeFlag(x, y, 2048);
+                    this.removeFlag(x + 1, y + 1, 32768);
                 }
 
-                if (var4 == 2) {
-                    this.method767(var1, var2, 8192);
-                    this.method767(var1 + 1, var2 - 1, 512);
+                if (type == 2) {
+                    this.removeFlag(x, y, 8192);
+                    this.removeFlag(x + 1, y - 1, 512);
                 }
 
-                if (var4 == 3) {
-                    this.method767(var1, var2, 32768);
-                    this.method767(var1 - 1, var2 - 1, 2048);
+                if (type == 3) {
+                    this.removeFlag(x, y, 32768);
+                    this.removeFlag(x - 1, y - 1, 2048);
                 }
             }
 
             if (var3 == 2) {
-                if (var4 == 0) {
-                    this.method767(var1, var2, 66560);
-                    this.method767(var1 - 1, var2, 4096);
-                    this.method767(var1, var2 + 1, 16384);
+                if (type == 0) {
+                    this.removeFlag(x, y, 66560);
+                    this.removeFlag(x - 1, y, 4096);
+                    this.removeFlag(x, y + 1, 16384);
                 }
 
-                if (var4 == 1) {
-                    this.method767(var1, var2, 5120);
-                    this.method767(var1, var2 + 1, 16384);
-                    this.method767(var1 + 1, var2, 65536);
+                if (type == 1) {
+                    this.removeFlag(x, y, 5120);
+                    this.removeFlag(x, y + 1, 16384);
+                    this.removeFlag(x + 1, y, 65536);
                 }
 
-                if (var4 == 2) {
-                    this.method767(var1, var2, 20480);
-                    this.method767(var1 + 1, var2, 65536);
-                    this.method767(var1, var2 - 1, 1024);
+                if (type == 2) {
+                    this.removeFlag(x, y, 20480);
+                    this.removeFlag(x + 1, y, 65536);
+                    this.removeFlag(x, y - 1, 1024);
                 }
 
-                if (var4 == 3) {
-                    this.method767(var1, var2, 81920);
-                    this.method767(var1, var2 - 1, 1024);
-                    this.method767(var1 - 1, var2, 4096);
+                if (type == 3) {
+                    this.removeFlag(x, y, 81920);
+                    this.removeFlag(x, y - 1, 1024);
+                    this.removeFlag(x - 1, y, 4096);
                 }
             }
         }

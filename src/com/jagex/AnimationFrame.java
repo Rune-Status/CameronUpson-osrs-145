@@ -15,7 +15,7 @@ public class AnimationFrame extends DoublyNode {
             int var11 = (var9[0] & 255) << 8 | var9[1] & 255;
 
             for (AnimationSkin var12 = var5.method995(); var12 != null; var12 = var5.next()) {
-                if (var12.anInt204 == var11) {
+                if (var12.id == var11) {
                     var10 = var12;
                     break;
                 }

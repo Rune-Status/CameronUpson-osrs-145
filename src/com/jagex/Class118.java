@@ -550,7 +550,7 @@ public class Class118 {
                                 }
 
                                 if (var62 >= 0) {
-                                    var69[var62].method760(var5, var10);
+                                    var69[var62].flagBlocked(var5, var10);
                                 }
                             }
                         }

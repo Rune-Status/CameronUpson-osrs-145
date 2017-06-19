@@ -369,7 +369,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
                     Class60.aSceneGraph631.method706(var0, var2, var3);
                     var12 = ObjectDefinition.get(var34);
                     if (var12.anInt229 != 0) {
-                        Client.collisionMaps[var0].method764(var2, var3, var35, var36, var12.aBoolean223);
+                        Client.collisionMaps[var0].unflagWall(var2, var3, var35, var36, var12.aBoolean223);
                     }
                 }
 
@@ -393,7 +393,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
                     Class60.aSceneGraph631.method699(var0, var2, var3);
                     var12 = ObjectDefinition.get(var34);
                     if (var12.anInt229 == 1) {
-                        Client.collisionMaps[var0].method758(var2, var3);
+                        Client.collisionMaps[var0].markBlocked(var2, var3);
                     }
                 }
             }
@@ -473,7 +473,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
 
                         var37.method708(var0, var2, var3, var22, 1, 1, (Entity) var27, 0, var25, var26);
                         if (var14.anInt229 != 0) {
-                            var13.method761(var2, var3, var15, var16, var14.aBoolean223);
+                            var13.flagSolidEntity(var2, var3, var15, var16, var14.aBoolean223);
                         }
                     } else if (var6 == 0) {
                         if (var14.anInt818 == -1 && var14.transformIds == null) {
@@ -484,7 +484,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
 
                         var37.method709(var0, var2, var3, var22, (Entity) var27, null, Class26.anIntArray192[var5], 0, var25, var26);
                         if (var14.anInt229 != 0) {
-                            var13.method766(var2, var3, var6, var5, var14.aBoolean223);
+                            var13.flagWall(var2, var3, var6, var5, var14.aBoolean223);
                         }
                     } else if (var6 == 1) {
                         if (var14.anInt818 == -1 && var14.transformIds == null) {
@@ -495,7 +495,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
 
                         var37.method709(var0, var2, var3, var22, (Entity) var27, null, Class26.anIntArray188[var5], 0, var25, var26);
                         if (var14.anInt229 != 0) {
-                            var13.method766(var2, var3, var6, var5, var14.aBoolean223);
+                            var13.flagWall(var2, var3, var6, var5, var14.aBoolean223);
                         }
                     } else {
                         int var28;
@@ -513,7 +513,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
 
                             var37.method709(var0, var2, var3, var22, (Entity) var29, (Entity) var30, Class26.anIntArray192[var5], Class26.anIntArray192[var28], var25, var26);
                             if (var14.anInt229 != 0) {
-                                var13.method766(var2, var3, var6, var5, var14.aBoolean223);
+                                var13.flagWall(var2, var3, var6, var5, var14.aBoolean223);
                             }
                         } else if (var6 == 3) {
                             if (var14.anInt818 == -1 && var14.transformIds == null) {
@@ -524,7 +524,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
 
                             var37.method709(var0, var2, var3, var22, (Entity) var27, null, Class26.anIntArray188[var5], 0, var25, var26);
                             if (var14.anInt229 != 0) {
-                                var13.method766(var2, var3, var6, var5, var14.aBoolean223);
+                                var13.flagWall(var2, var3, var6, var5, var14.aBoolean223);
                             }
                         } else if (var6 == 9) {
                             if (var14.anInt818 == -1 && var14.transformIds == null) {
@@ -535,7 +535,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
 
                             var37.method708(var0, var2, var3, var22, 1, 1, (Entity) var27, 0, var25, var26);
                             if (var14.anInt229 != 0) {
-                                var13.method761(var2, var3, var15, var16, var14.aBoolean223);
+                                var13.flagSolidEntity(var2, var3, var15, var16, var14.aBoolean223);
                             }
                         } else if (var6 == 4) {
                             if (var14.anInt818 == -1 && var14.transformIds == null) {
@@ -617,7 +617,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
                     }
 
                     if (var14.anInt229 != 0) {
-                        var13.method761(var2, var3, var15, var16, var14.aBoolean223);
+                        var13.flagSolidEntity(var2, var3, var15, var16, var14.aBoolean223);
                     }
                 }
             }

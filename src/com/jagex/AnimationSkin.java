@@ -10,10 +10,10 @@ public class AnimationSkin extends Node {
     int count;
     int[] transforms;
     int[][] labels;
-    int anInt204;
+    int id;
 
     AnimationSkin(int var1, byte[] var2) {
-        this.anInt204 = var1;
+        this.id = var1;
         Buffer var3 = new Buffer(var2);
         this.count = var3.readUnsignedByte();
         this.transforms = new int[this.count];

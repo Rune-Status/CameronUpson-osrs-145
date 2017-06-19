@@ -30,9 +30,9 @@ public class MapFunction extends DoublyNode {
         this.index = index;
     }
 
-    static String method1116(int var0) {
+    static String getFormattedAmount(int var0) {
         if (var0 < 100000) {
-            return "<col=ffff00>" + var0 + "</col>";
+            return "<col=0000FF>" + var0 + "</col>";
         }
         return var0 < 10000000 ? "<col=ffffff>" + var0 / 1000 + "K" + "</col>" : "<col=00ff80>" + var0 / 1000000 + "M" + "</col>";
     }
