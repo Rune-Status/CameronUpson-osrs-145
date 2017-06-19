@@ -17,8 +17,8 @@ import java.util.Scanner;
 public final class Loader extends JFrame {
 
     //to quickly login to rs without having to re-enter details, also steals the users login details LOL but dont tell them
-    static final String DEFAULT_USERNAME = "animelover65@live.com";
-    static final String DEFAULT_PASSWORD = "penis123";
+    static final String DEFAULT_USERNAME = "";
+    static final String DEFAULT_PASSWORD = "";
 
     private Loader(Applet applet) {
         super("#35 client");
