@@ -175,7 +175,7 @@ public class WorldMapTransportation {
     Class16 method72(Buffer var1) {
         int var2 = var1.readUnsignedByte();
         Class23[] var3 = new Class23[]{Class23.aClass23_152, Class23.aClass23_155, Class23.aClass23_154, Class23.aClass23_159};
-        Class23 var4 = (Class23) Canvas.method185(var3, var2);
+        Class23 var4 = (Class23) EnumOrdinal.getByOrdinal(var3, var2);
         Object var5 = null;
         switch (var4.anInt157) {
             case 0:

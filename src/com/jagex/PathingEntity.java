@@ -64,8 +64,8 @@ public abstract class PathingEntity extends Entity {
     int anInt799 = 0;
 
     final void method441() {
-        this.queueSize = 0;
-        this.anInt799 = 0;
+        queueSize = 0;
+        anInt799 = 0;
     }
 
     final void method440(int var1, int var2, int var3, int var4, int var5, int var6) {
@@ -74,7 +74,7 @@ public abstract class PathingEntity extends Entity {
 
         int var9;
         for (var9 = 0; var9 < 4; ++var9) {
-            if (this.hitsplatCycles[var9] > var5) {
+            if (hitsplatCycles[var9] > var5) {
                 var7 = false;
             } else {
                 var8 = false;
@@ -99,20 +99,20 @@ public abstract class PathingEntity extends Entity {
             var9 = 0;
             var13 = 0;
             if (var10 == 0) {
-                var13 = this.hitsplatCycles[0];
+                var13 = hitsplatCycles[0];
             } else if (var10 == 1) {
-                var13 = this.hitsplats[0];
+                var13 = hitsplats[0];
             }
 
             for (int var14 = 1; var14 < 4; ++var14) {
                 if (var10 == 0) {
-                    if (this.hitsplatCycles[var14] < var13) {
+                    if (hitsplatCycles[var14] < var13) {
                         var9 = var14;
-                        var13 = this.hitsplatCycles[var14];
+                        var13 = hitsplatCycles[var14];
                     }
-                } else if (var10 == 1 && this.hitsplats[var14] < var13) {
+                } else if (var10 == 1 && hitsplats[var14] < var13) {
                     var9 = var14;
-                    var13 = this.hitsplats[var14];
+                    var13 = hitsplats[var14];
                 }
             }
 
@@ -121,13 +121,13 @@ public abstract class PathingEntity extends Entity {
             }
         } else {
             if (var7) {
-                this.hitCount = 0;
+                hitCount = 0;
             }
 
             for (var13 = 0; var13 < 4; ++var13) {
-                byte var15 = this.hitCount;
-                this.hitCount = (byte) ((this.hitCount + 1) % 4);
-                if (this.hitsplatCycles[var15] <= var5) {
+                byte var15 = hitCount;
+                hitCount = (byte) ((hitCount + 1) % 4);
+                if (hitsplatCycles[var15] <= var5) {
                     var9 = var15;
                     break;
                 }
@@ -135,27 +135,27 @@ public abstract class PathingEntity extends Entity {
         }
 
         if (var9 >= 0) {
-            this.hitsplatTypes[var9] = var1;
-            this.hitsplats[var9] = var2;
-            this.hitsplatIds[var9] = var3;
-            this.specialHitsplats[var9] = var4;
-            this.hitsplatCycles[var9] = var11 + var5 + var6;
+            hitsplatTypes[var9] = var1;
+            hitsplats[var9] = var2;
+            hitsplatIds[var9] = var3;
+            specialHitsplats[var9] = var4;
+            hitsplatCycles[var9] = var11 + var5 + var6;
         }
     }
 
     final void method439(int var1, int var2, int var3, int var4, int var5, int var6) {
-        HealthBarDefinition var7 = (HealthBarDefinition) HealthBarDefinition.aReferenceCache2008.get((long) var1);
+        HealthBarDefinition var7 = HealthBarDefinition.healthBars.get((long) var1);
         HealthBarDefinition var8;
         if (var7 != null) {
             var8 = var7;
         } else {
-            byte[] var9 = HealthBarDefinition.aReferenceTable2012.unpack(33, var1);
+            byte[] var9 = HealthBarDefinition.healthBarTable.unpack(33, var1);
             var7 = new HealthBarDefinition();
             if (var9 != null) {
                 var7.method1052(new Buffer(var9));
             }
 
-            HealthBarDefinition.aReferenceCache2008.put(var7, (long) var1);
+            HealthBarDefinition.healthBars.put(var7, (long) var1);
             var8 = var7;
         }
 
@@ -166,7 +166,7 @@ public abstract class PathingEntity extends Entity {
         int var12 = 0;
 
         HealthBar var13;
-        for (var13 = this.healthBars.method909(); var13 != null; var13 = this.healthBars.method911()) {
+        for (var13 = healthBars.method909(); var13 != null; var13 = healthBars.method911()) {
             ++var12;
             if (var7.anInt327 == var13.definition.anInt327) {
                 var13.method341(var4 + var2, var5, var6, var3);
@@ -186,7 +186,7 @@ public abstract class PathingEntity extends Entity {
         if (var10 != null || var12 < 4) {
             var13 = new HealthBar(var7);
             if (var14 == null) {
-                this.healthBars.method912(var13);
+                healthBars.method912(var13);
             } else {
                 LinkedList.method908(var13, var14);
             }
@@ -200,24 +200,24 @@ public abstract class PathingEntity extends Entity {
     }
 
     final void method442(int var1) {
-        HealthBarDefinition var2 = (HealthBarDefinition) HealthBarDefinition.aReferenceCache2008.get((long) var1);
+        HealthBarDefinition var2 = HealthBarDefinition.healthBars.get((long) var1);
         HealthBarDefinition var3;
         if (var2 != null) {
             var3 = var2;
         } else {
-            byte[] var4 = HealthBarDefinition.aReferenceTable2012.unpack(33, var1);
+            byte[] var4 = HealthBarDefinition.healthBarTable.unpack(33, var1);
             var2 = new HealthBarDefinition();
             if (var4 != null) {
                 var2.method1052(new Buffer(var4));
             }
 
-            HealthBarDefinition.aReferenceCache2008.put(var2, (long) var1);
+            HealthBarDefinition.healthBars.put(var2, (long) var1);
             var3 = var2;
         }
 
         var2 = var3;
 
-        for (HealthBar var5 = this.healthBars.method909(); var5 != null; var5 = this.healthBars.method911()) {
+        for (HealthBar var5 = healthBars.method909(); var5 != null; var5 = healthBars.method911()) {
             if (var2 == var5.definition) {
                 var5.unlink();
                 return;

@@ -1,8 +1,8 @@
 package com.jagex;
 
 public class DefinitionProperty extends DoublyNode {
-    public static ReferenceCache aReferenceCache2025 = new ReferenceCache(64);
-    public static ReferenceTable aReferenceTable2012;
+    public static ReferenceCache<DefinitionProperty> propertyCache = new ReferenceCache<>(64);
+    public static ReferenceTable propertyTable;
 
     public int defaultInteger;
     public String defaultString;

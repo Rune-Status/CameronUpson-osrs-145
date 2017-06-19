@@ -347,6 +347,13 @@ public class InterfaceComponent extends Node {
 
     }
 
+    static String getFormattedAmount(int var0) {
+        if (var0 < 100000) {
+            return "<col=0000FF>" + var0 + "</col>";
+        }
+        return var0 < 10000000 ? "<col=ffffff>" + var0 / 1000 + "K" + "</col>" : "<col=00ff80>" + var0 / 1000000 + "M" + "</col>";
+    }
+
     public Sprite method1017(int var1) {
         aBoolean1174 = false;
         if (var1 >= 0 && var1 < this.anIntArray1883.length) {

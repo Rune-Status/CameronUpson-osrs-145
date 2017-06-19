@@ -99,7 +99,7 @@ public class Node_Sub21_Sub1 extends DoublyNode {
         } else if (var0 == 4) {
             Class22.setLoginResponse("Your account has been disabled.", "Please check your message-centre for details.", "");
         } else if (var0 == 5) {
-            Class22.setLoginResponse("Your account has not logged out from its last", "session or the server is too busy rightSpriteId now.", "Please try again in a few minutes.");
+            Class22.setLoginResponse("Your account has not logged out from its last", "session or the server is too busy right now.", "Please try again in a few minutes.");
         } else if (var0 == 6) {
             Class22.setLoginResponse("RuneScape has been updated!", "Please reload this page.", "");
         } else if (var0 == 7) {

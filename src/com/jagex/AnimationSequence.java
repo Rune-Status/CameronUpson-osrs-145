@@ -149,7 +149,7 @@ public class AnimationSequence extends DoublyNode {
         if (var3 == null) {
             return var1.method726(true);
         }
-        Model var4 = var1.method726(!var3.method626(var2));
+        Model var4 = var1.method726(!var3.isValid(var2));
         var4.method727(var3, var2);
         return var4;
     }
@@ -161,7 +161,7 @@ public class AnimationSequence extends DoublyNode {
         if (frame == null) {
             return base.method732(true);
         }
-        Model animated = base.method732(!frame.method626(frameId));
+        Model animated = base.method732(!frame.isValid(frameId));
         animated.method727(frame, frameId);
         return animated;
     }
@@ -183,12 +183,12 @@ public class AnimationSequence extends DoublyNode {
 
         Model var7;
         if (var5 != null && var6 != 65535) {
-            var7 = var1.method726(!var4.method626(var3) & !var5.method626(var6));
+            var7 = var1.method726(!var4.isValid(var3) & !var5.isValid(var6));
             var7.method727(var4, var3);
             var7.method727(var5, var6);
             return var7;
         }
-        var7 = var1.method726(!var4.method626(var3));
+        var7 = var1.method726(!var4.isValid(var3));
         var7.method727(var4, var3);
         return var7;
     }
@@ -205,11 +205,11 @@ public class AnimationSequence extends DoublyNode {
         var4 &= 65535;
         Model var7;
         if (var6 == null) {
-            var7 = var1.method726(!var5.method626(var2));
+            var7 = var1.method726(!var5.isValid(var2));
             var7.method727(var5, var2);
             return var7;
         }
-        var7 = var1.method726(!var5.method626(var2) & !var6.method626(var4));
+        var7 = var1.method726(!var5.isValid(var2) & !var6.isValid(var4));
         var7.method735(var5, var2, var6, var4, this.interleaveOrder);
         return var7;
     }
@@ -221,7 +221,7 @@ public class AnimationSequence extends DoublyNode {
         if (var4 == null) {
             return var1.method726(true);
         }
-        Model var5 = var1.method726(!var4.method626(var2));
+        Model var5 = var1.method726(!var4.isValid(var2));
         var3 &= 3;
         if (var3 == 1) {
             var5.method540();

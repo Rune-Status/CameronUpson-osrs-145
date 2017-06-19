@@ -10,7 +10,7 @@ public final class Bzip2Decompressor {
             aClass127_1336.anInt1384 = var4;
             aClass127_1336.aByteArray1376 = var0;
             aClass127_1336.anInt1394 = 0;
-            aClass127_1336.anInt1397 = var1;
+            aClass127_1336.anInt1397 = var1;//
             aClass127_1336.anInt1400 = 0;
             aClass127_1336.anInt1404 = 0;
             aClass127_1336.anInt1381 = 0;

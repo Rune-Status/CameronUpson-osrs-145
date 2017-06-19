@@ -729,7 +729,7 @@ public final class Client extends Applet_Sub1 {
                            membersWorld = var5.equalsIgnoreCase("true");
                             break;
                         case 9:
-                            aClass162_1468 = (Class162) Canvas.method185(Key.method364(), Integer.parseInt(var5));
+                            aClass162_1468 = (Class162) EnumOrdinal.getByOrdinal(Key.method364(), Integer.parseInt(var5));
                             if (Class162.aClass162_1956 == aClass162_1468) {
                                 Class2.aClass188_13 = Class188.aClass188_2190;
                             } else {
@@ -1301,7 +1301,7 @@ public final class Client extends Applet_Sub1 {
 
             if (anInt1505 == 8) {
                 anInt1499 = 0;
-                Class22.setLoginResponse("You have only just leftSpriteId another world.", "Your profile will be transferred in:", anInt1506 / 60 + " seconds.");
+                Class22.setLoginResponse("You have only just left another world.", "Your profile will be transferred in:", anInt1506 / 60 + " seconds.");
                 if (--anInt1506 <= 0) {
                     anInt1505 = 0;
                 }
@@ -4215,7 +4215,7 @@ public final class Client extends Applet_Sub1 {
                 var46 = (long) aPacket1521.readUnsignedShort();
                 var36 = (long) aPacket1521.method868();
                 Class158[] var116 = new Class158[]{Class158.aClass158_1849, Class158.aClass158_1855, Class158.aClass158_1845, Class158.aClass158_1853, Class158.aClass158_1848, Class158.aClass158_1851};
-                Class158 var15 = (Class158) Canvas.method185(var116, aPacket1521.readUnsignedByte());
+                Class158 var15 = (Class158) EnumOrdinal.getByOrdinal(var116, aPacket1521.readUnsignedByte());
                 var40 = var36 + (var46 << 32);
                 boolean var19 = false;
 
@@ -4252,7 +4252,7 @@ public final class Client extends Applet_Sub1 {
                 var44 = (long) aPacket1521.readUnsignedShort();
                 var46 = (long) aPacket1521.method868();
                 Class158[] var85 = new Class158[]{Class158.aClass158_1849, Class158.aClass158_1855, Class158.aClass158_1845, Class158.aClass158_1853, Class158.aClass158_1848, Class158.aClass158_1851};
-                Class158 var93 = (Class158) Canvas.method185(var85, aPacket1521.readUnsignedByte());
+                Class158 var93 = (Class158) EnumOrdinal.getByOrdinal(var85, aPacket1521.readUnsignedByte());
                 var38 = var46 + (var44 << 32);
                 boolean var16 = false;
 
