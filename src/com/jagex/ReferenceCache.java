@@ -39,11 +39,11 @@ public final class ReferenceCache<T extends DoublyNode> { //TODO generics here a
         HitsplatDefinition.definitionCache.clear();
         HitsplatDefinition.spriteCache.clear();
         HitsplatDefinition.fontCache.clear();
-        HealthBarDefinition.aReferenceCache2008.clear();
-        HealthBarDefinition.aReferenceCache2013.clear();
+        HealthBarDefinition.healthBars.clear();
+        HealthBarDefinition.sprites.clear();
         Class40.method288();
         DefinitionProperty.aReferenceCache2025.clear();
-        MapFunction.aReferenceCache2013.clear();
+        MapFunction.sprites.clear();
         PlayerAppearance.aReferenceCache1985.clear();
         InterfaceComponent.aReferenceCache1891.clear();
         InterfaceComponent.aReferenceCache1886.clear();

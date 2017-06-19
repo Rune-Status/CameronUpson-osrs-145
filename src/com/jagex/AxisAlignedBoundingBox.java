@@ -26,19 +26,19 @@ public final class AxisAlignedBoundingBox extends BoundingBox {
 
     public final void draw() {
         for (int var1 = 0; var1 < 8; ++var1) {
-            int var2 = (var1 & 1) == 0 ? this.x1 : this.x2;
-            int var3 = (var1 & 2) == 0 ? this.z1 : this.z2;
-            int var4 = (var1 & 4) == 0 ? this.y1 : this.y2;
+            int var2 = (var1 & 1) == 0 ? x1 : x2;
+            int var3 = (var1 & 2) == 0 ? z1 : z2;
+            int var4 = (var1 & 4) == 0 ? y1 : y2;
             if ((var1 & 1) == 0) {
-                Class84.method486(var2, var3, var4, this.x2, var3, var4, this.color);
+                Class84.method486(var2, var3, var4, x2, var3, var4, color);
             }
 
             if ((var1 & 2) == 0) {
-                Class84.method486(var2, var3, var4, var2, this.z2, var4, this.color);
+                Class84.method486(var2, var3, var4, var2, z2, var4, color);
             }
 
             if ((var1 & 4) == 0) {
-                Class84.method486(var2, var3, var4, var2, var3, this.y2, this.color);
+                Class84.method486(var2, var3, var4, var2, var3, y2, color);
             }
         }
 

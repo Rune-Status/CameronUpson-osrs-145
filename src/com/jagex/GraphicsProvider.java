@@ -40,13 +40,7 @@ public final class GraphicsProvider extends Class186 {
         try {
             Graphics paint = image.getGraphics().create();
             if (Client.connectionState == 30 && Client.playerEntity != null) {
-                Model model = Client.playerEntity.getModel();
-                if (model != null) {
-                    BoundingBox bb = model.boundingBox;
-                    if (bb != null) {
-                        bb.draw();
-                    }
-                }
+
             }
             gameGraphics.drawImage(this.image, x, y, this.aComponent172);
         } catch (Exception var5) {

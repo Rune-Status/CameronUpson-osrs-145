@@ -73,8 +73,6 @@ public class Model extends Entity {
     byte aByte1275 = 0;
     int[] anIntArray932;
 
-    public BoundingBox boundingBox;
-
     public Model(Model[] var1, int var2) {
         boolean var3 = false;
         boolean var4 = false;
@@ -495,7 +493,7 @@ public class Model extends Entity {
     public void method727(AnimationFrame var1, int var2) {
         if (this.anIntArrayArray1282 != null) {
             if (var2 != -1) {
-                Identikit var3 = var1.anIdentikitArray1075[var2];
+                Identikit var3 = var1.identikits[var2];
                 AnimationSkin var4 = var3.aAnimationSkin_1312;
                 anInt783 = 0;
                 anInt781 = 0;
@@ -673,8 +671,8 @@ public class Model extends Entity {
     public void method735(AnimationFrame var1, int var2, AnimationFrame var3, int var4, int[] var5) {
         if (var2 != -1) {
             if (var5 != null && var4 != -1) {
-                Identikit var6 = var1.anIdentikitArray1075[var2];
-                Identikit var7 = var3.anIdentikitArray1075[var4];
+                Identikit var6 = var1.identikits[var2];
+                Identikit var7 = var3.identikits[var4];
                 AnimationSkin var8 = var6.aAnimationSkin_1312;
                 anInt783 = 0;
                 anInt781 = 0;

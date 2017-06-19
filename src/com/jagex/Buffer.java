@@ -45,18 +45,18 @@ public class Buffer extends Node {
     public byte[] payload;
 
     public Buffer(byte[] var1) {
-        this.payload = var1;
-        this.caret = 0;
+        payload = var1;
+        caret = 0;
     }
 
     public Buffer(int var1) {
-        this.payload = Class128.method878(var1);
-        this.caret = 0;
+        payload = Class128.method878(var1);
+        caret = 0;
     }
 
     public int method841() {
-        this.caret += 2;
-        int var1 = ((this.payload[this.caret - 1] & 255) << 8) + (this.payload[this.caret - 2] - 128 & 255);
+        caret += 2;
+        int var1 = ((payload[caret - 1] & 255) << 8) + (payload[caret - 2] - 128 & 255);
         if (var1 > 32767) {
             var1 -= 65536;
         }
@@ -65,41 +65,41 @@ public class Buffer extends Node {
     }
 
     public void method867(int var1) {
-        this.payload[++this.caret - 1] = (byte) (var1 >> 16);
-        this.payload[++this.caret - 1] = (byte) (var1 >> 8);
-        this.payload[++this.caret - 1] = (byte) var1;
+        payload[++caret - 1] = (byte) (var1 >> 16);
+        payload[++caret - 1] = (byte) (var1 >> 8);
+        payload[++caret - 1] = (byte) var1;
     }
 
     public void method869(int var1) {
-        this.payload[++this.caret - 1] = (byte) (var1 >> 24);
-        this.payload[++this.caret - 1] = (byte) (var1 >> 16);
-        this.payload[++this.caret - 1] = (byte) (var1 >> 8);
-        this.payload[++this.caret - 1] = (byte) var1;
+        payload[++caret - 1] = (byte) (var1 >> 24);
+        payload[++caret - 1] = (byte) (var1 >> 16);
+        payload[++caret - 1] = (byte) (var1 >> 8);
+        payload[++caret - 1] = (byte) var1;
     }
 
     public void method872(long var1) {
-        this.payload[++this.caret - 1] = (byte) ((int) (var1 >> 40));
-        this.payload[++this.caret - 1] = (byte) ((int) (var1 >> 32));
-        this.payload[++this.caret - 1] = (byte) ((int) (var1 >> 24));
-        this.payload[++this.caret - 1] = (byte) ((int) (var1 >> 16));
-        this.payload[++this.caret - 1] = (byte) ((int) (var1 >> 8));
-        this.payload[++this.caret - 1] = (byte) ((int) var1);
+        payload[++caret - 1] = (byte) ((int) (var1 >> 40));
+        payload[++caret - 1] = (byte) ((int) (var1 >> 32));
+        payload[++caret - 1] = (byte) ((int) (var1 >> 24));
+        payload[++caret - 1] = (byte) ((int) (var1 >> 16));
+        payload[++caret - 1] = (byte) ((int) (var1 >> 8));
+        payload[++caret - 1] = (byte) ((int) var1);
     }
 
     public int method840() {
-        this.caret += 2;
-        return ((this.payload[this.caret - 2] & 255) << 8) + (this.payload[this.caret - 1] - 128 & 255);
+        caret += 2;
+        return ((payload[caret - 2] & 255) << 8) + (payload[caret - 1] - 128 & 255);
     }
 
     public void method861(long var1) {
-        this.payload[++this.caret - 1] = (byte) ((int) (var1 >> 56));
-        this.payload[++this.caret - 1] = (byte) ((int) (var1 >> 48));
-        this.payload[++this.caret - 1] = (byte) ((int) (var1 >> 40));
-        this.payload[++this.caret - 1] = (byte) ((int) (var1 >> 32));
-        this.payload[++this.caret - 1] = (byte) ((int) (var1 >> 24));
-        this.payload[++this.caret - 1] = (byte) ((int) (var1 >> 16));
-        this.payload[++this.caret - 1] = (byte) ((int) (var1 >> 8));
-        this.payload[++this.caret - 1] = (byte) ((int) var1);
+        payload[++caret - 1] = (byte) ((int) (var1 >> 56));
+        payload[++caret - 1] = (byte) ((int) (var1 >> 48));
+        payload[++caret - 1] = (byte) ((int) (var1 >> 40));
+        payload[++caret - 1] = (byte) ((int) (var1 >> 32));
+        payload[++caret - 1] = (byte) ((int) (var1 >> 24));
+        payload[++caret - 1] = (byte) ((int) (var1 >> 16));
+        payload[++caret - 1] = (byte) ((int) (var1 >> 8));
+        payload[++caret - 1] = (byte) ((int) var1);
     }
 
     public void method864(String var1) {
@@ -107,32 +107,32 @@ public class Buffer extends Node {
         if (var2 >= 0) {
             throw new IllegalArgumentException("");
         }
-        this.payload[++this.caret - 1] = 0;
-        this.caret += Node_Sub21_Sub20.method1125(var1, 0, var1.length(), this.payload, this.caret);
-        this.payload[++this.caret - 1] = 0;
+        payload[++caret - 1] = 0;
+        caret += Node_Sub21_Sub20.method1125(var1, 0, var1.length(), payload, caret);
+        payload[++caret - 1] = 0;
     }
 
     public int readInt() {
-        this.caret += 4;
-        return (this.payload[this.caret - 1] & 255) + ((this.payload[this.caret - 4] & 255) << 24) + ((this.payload[this.caret - 3] & 255) << 16) + ((this.payload[this.caret - 2] & 255) << 8);
+        caret += 4;
+        return (payload[caret - 1] & 255) + ((payload[caret - 4] & 255) << 24) + ((payload[caret - 3] & 255) << 16) + ((payload[caret - 2] & 255) << 8);
     }
 
     public void method860(byte[] var1, int var2, int var3) {
         for (int var4 = var2; var4 < var3 + var2; ++var4) {
-            this.payload[++this.caret - 1] = var1[var4];
+            payload[++caret - 1] = var1[var4];
         }
 
     }
 
     public void method862(int var1) {
-        this.payload[this.caret - var1 - 1] = (byte) var1;
+        payload[caret - var1 - 1] = (byte) var1;
     }
 
     public void method547(int var1) {
         if (var1 >= 0 && var1 < 128) {
-            this.method451(var1);
+            method451(var1);
         } else if (var1 >= 0 && var1 < 32768) {
-            this.method755(var1 + '耀');
+            method755(var1 + '耀');
         } else {
             throw new IllegalArgumentException();
         }
@@ -143,90 +143,90 @@ public class Buffer extends Node {
             if ((var1 & -16384) != 0) {
                 if ((var1 & -2097152) != 0) {
                     if ((var1 & -268435456) != 0) {
-                        this.method451(var1 >>> 28 | 128);
+                        method451(var1 >>> 28 | 128);
                     }
 
-                    this.method451(var1 >>> 21 | 128);
+                    method451(var1 >>> 21 | 128);
                 }
 
-                this.method451(var1 >>> 14 | 128);
+                method451(var1 >>> 14 | 128);
             }
 
-            this.method451(var1 >>> 7 | 128);
+            method451(var1 >>> 7 | 128);
         }
 
-        this.method451(var1 & 127);
+        method451(var1 & 127);
     }
 
     public int readUnsignedByte() {
-        return this.payload[++this.caret - 1] & 255;
+        return payload[++caret - 1] & 255;
     }
 
     public byte method870() {
-        return this.payload[++this.caret - 1];
+        return payload[++caret - 1];
     }
 
     public long method837() {
-        long var1 = (long) this.readInt() & 4294967295L;
-        long var3 = (long) this.readInt() & 4294967295L;
+        long var1 = (long) readInt() & 4294967295L;
+        long var3 = (long) readInt() & 4294967295L;
         return var3 + (var1 << 32);
     }
 
     public String method820() {
-        if (this.payload[this.caret] == 0) {
-            ++this.caret;
+        if (payload[caret] == 0) {
+            ++caret;
             return null;
         }
-        return this.method819();
+        return method819();
     }
 
     public String method819() {
-        int var1 = this.caret;
+        int var1 = caret;
 
-        while (this.payload[++this.caret - 1] != 0) {
+        while (payload[++caret - 1] != 0) {
         }
 
-        int var2 = this.caret - var1 - 1;
-        return var2 == 0 ? "" : Class6_Sub2.method458(this.payload, var1, var2);
+        int var2 = caret - var1 - 1;
+        return var2 == 0 ? "" : Class6_Sub2.method458(payload, var1, var2);
     }
 
     public String readPrefixedString() {
-        byte var1 = this.payload[++this.caret - 1];
+        byte var1 = payload[++caret - 1];
         if (var1 != 0) {
             throw new IllegalStateException("");
         }
-        int var2 = this.caret;
+        int var2 = caret;
 
-        while (this.payload[++this.caret - 1] != 0) {
+        while (payload[++caret - 1] != 0) {
         }
 
-        int var3 = this.caret - var2 - 1;
-        return var3 == 0 ? "" : Class6_Sub2.method458(this.payload, var2, var3);
+        int var3 = caret - var2 - 1;
+        return var3 == 0 ? "" : Class6_Sub2.method458(payload, var2, var3);
     }
 
     public int method541() {
-        int var1 = this.payload[this.caret] & 255;
-        return var1 < 128 ? this.readUnsignedByte() : this.readUnsignedShort() - '耀';
+        int var1 = payload[caret] & 255;
+        return var1 < 128 ? readUnsignedByte() : readUnsignedShort() - '耀';
     }
 
     public int readUnsignedShort() {
-        this.caret += 2;
-        return ((this.payload[this.caret - 2] & 255) << 8) + (this.payload[this.caret - 1] & 255);
+        caret += 2;
+        return ((payload[caret - 2] & 255) << 8) + (payload[caret - 1] & 255);
     }
 
     public int readSmart32() {
-        if (this.payload[this.caret] < 0) {
-            return this.readInt() & Integer.MAX_VALUE;
+        if (payload[caret] < 0) {
+            return readInt() & Integer.MAX_VALUE;
         }
-        int var1 = this.readUnsignedShort();
+        int var1 = readUnsignedShort();
         return var1 == 32767 ? -1 : var1;
     }
 
     public int method817() {
-        byte var1 = this.payload[++this.caret - 1];
+        byte var1 = payload[++caret - 1];
 
         int var2;
-        for (var2 = 0; var1 < 0; var1 = this.payload[++this.caret - 1]) {
+        for (var2 = 0; var1 < 0; var1 = payload[++caret - 1]) {
             var2 = (var2 | var1 & 127) << 7;
         }
 
@@ -234,12 +234,12 @@ public class Buffer extends Node {
     }
 
     public void method815(int[] var1) {
-        int var2 = this.caret / 8;
-        this.caret = 0;
+        int var2 = caret / 8;
+        caret = 0;
 
         for (int var3 = 0; var3 < var2; ++var3) {
-            int var4 = this.readInt();
-            int var5 = this.readInt();
+            int var4 = readInt();
+            int var5 = readInt();
             int var6 = 0;
             int var7 = -1640531527;
 
@@ -248,21 +248,21 @@ public class Buffer extends Node {
                 var6 += var7;
             }
 
-            this.caret -= 8;
-            this.method869(var4);
-            this.method869(var5);
+            caret -= 8;
+            method869(var4);
+            method869(var5);
         }
 
     }
 
     public void method824(int[] var1, int var2, int var3) {
-        int var4 = this.caret;
-        this.caret = var2;
+        int var4 = caret;
+        caret = var2;
         int var5 = (var3 - var2) / 8;
 
         for (int var6 = 0; var6 < var5; ++var6) {
-            int var7 = this.readInt();
-            int var8 = this.readInt();
+            int var7 = readInt();
+            int var8 = readInt();
             int var9 = 0;
             int var10 = -1640531527;
 
@@ -271,22 +271,22 @@ public class Buffer extends Node {
                 var9 += var10;
             }
 
-            this.caret -= 8;
-            this.method869(var7);
-            this.method869(var8);
+            caret -= 8;
+            method869(var7);
+            method869(var8);
         }
 
-        this.caret = var4;
+        caret = var4;
     }
 
     public void method821(int[] var1, int var2, int var3) {
-        int var4 = this.caret;
-        this.caret = var2;
+        int var4 = caret;
+        caret = var2;
         int var5 = (var3 - var2) / 8;
 
         for (int var6 = 0; var6 < var5; ++var6) {
-            int var7 = this.readInt();
-            int var8 = this.readInt();
+            int var7 = readInt();
+            int var8 = readInt();
             int var9 = -957401312;
             int var10 = -1640531527;
 
@@ -295,36 +295,36 @@ public class Buffer extends Node {
                 var9 -= var10;
             }
 
-            this.caret -= 8;
-            this.method869(var7);
-            this.method869(var8);
+            caret -= 8;
+            method869(var7);
+            method869(var8);
         }
 
-        this.caret = var4;
+        caret = var4;
     }
 
     public void method830(BigInteger var1, BigInteger var2) {
-        int var3 = this.caret;
-        this.caret = 0;
+        int var3 = caret;
+        caret = 0;
         byte[] var4 = new byte[var3];
-        this.read(var4, 0, var3);
+        read(var4, 0, var3);
         BigInteger var5 = new BigInteger(var4);
         BigInteger var6 = var5.modPow(var1, var2);
         byte[] var7 = var6.toByteArray();
-        this.caret = 0;
-        this.method755(var7.length);
-        this.method860(var7, 0, var7.length);
+        caret = 0;
+        method755(var7.length);
+        method860(var7, 0, var7.length);
     }
 
     public int method868() {
-        this.caret += 3;
-        return ((this.payload[this.caret - 2] & 255) << 8) + ((this.payload[this.caret - 3] & 255) << 16) + (this.payload[this.caret - 1] & 255);
+        caret += 3;
+        return ((payload[caret - 2] & 255) << 8) + ((payload[caret - 3] & 255) << 16) + (payload[caret - 1] & 255);
     }
 
     public boolean method827() {
-        this.caret -= 4;
-        byte[] var1 = this.payload;
-        int var2 = this.caret;
+        caret -= 4;
+        byte[] var1 = payload;
+        int var2 = caret;
         int var3 = -1;
 
         int var4;
@@ -333,65 +333,65 @@ public class Buffer extends Node {
         }
 
         var3 = ~var3;
-        var4 = this.readInt();
+        var4 = readInt();
         return var3 == var4;
     }
 
     public void method855(int var1) {
-        this.payload[++this.caret - 1] = (byte) var1;
-        this.payload[++this.caret - 1] = (byte) (var1 >> 8);
-        this.payload[++this.caret - 1] = (byte) (var1 >> 16);
-        this.payload[++this.caret - 1] = (byte) (var1 >> 24);
+        payload[++caret - 1] = (byte) var1;
+        payload[++caret - 1] = (byte) (var1 >> 8);
+        payload[++caret - 1] = (byte) (var1 >> 16);
+        payload[++caret - 1] = (byte) (var1 >> 24);
     }
 
     public void method836(int var1) {
-        this.payload[++this.caret - 1] = (byte) (128 - var1);
+        payload[++caret - 1] = (byte) (128 - var1);
     }
 
     public int method834() {
-        return this.payload[++this.caret - 1] - 128 & 255;
+        return payload[++caret - 1] - 128 & 255;
     }
 
     public int method818() {
-        return 128 - this.payload[++this.caret - 1] & 255;
+        return 128 - payload[++caret - 1] & 255;
     }
 
     public byte method833() {
-        return (byte) (this.payload[++this.caret - 1] - 128);
+        return (byte) (payload[++caret - 1] - 128);
     }
 
     public void method843(int var1) {
-        this.payload[++this.caret - 1] = (byte) var1;
-        this.payload[++this.caret - 1] = (byte) (var1 >> 8);
+        payload[++caret - 1] = (byte) var1;
+        payload[++caret - 1] = (byte) (var1 >> 8);
     }
 
     public void method845(int var1) {
-        this.payload[++this.caret - 1] = (byte) (var1 >> 8);
-        this.payload[++this.caret - 1] = (byte) (var1 + 128);
+        payload[++caret - 1] = (byte) (var1 >> 8);
+        payload[++caret - 1] = (byte) (var1 + 128);
     }
 
     public void method853(int var1) {
-        this.payload[++this.caret - 1] = (byte) (var1 + 128);
-        this.payload[++this.caret - 1] = (byte) (var1 >> 8);
+        payload[++caret - 1] = (byte) (var1 + 128);
+        payload[++caret - 1] = (byte) (var1 >> 8);
     }
 
     public int method856() {
-        this.caret += 2;
-        return (this.payload[this.caret - 2] & 255) + ((this.payload[this.caret - 1] & 255) << 8);
+        caret += 2;
+        return (payload[caret - 2] & 255) + ((payload[caret - 1] & 255) << 8);
     }
 
     public void method839(int var1) {
-        this.payload[++this.caret - 1] = (byte) (var1 + 128);
+        payload[++caret - 1] = (byte) (var1 + 128);
     }
 
     public int method849() {
-        this.caret += 2;
-        return ((this.payload[this.caret - 1] & 255) << 8) + (this.payload[this.caret - 2] - 128 & 255);
+        caret += 2;
+        return ((payload[caret - 1] & 255) << 8) + (payload[caret - 2] - 128 & 255);
     }
 
     public int method847() {
-        this.caret += 2;
-        int var1 = ((this.payload[this.caret - 1] & 255) << 8) + (this.payload[this.caret - 2] & 255);
+        caret += 2;
+        int var1 = ((payload[caret - 1] & 255) << 8) + (payload[caret - 2] & 255);
         if (var1 > 32767) {
             var1 -= 65536;
         }
@@ -400,28 +400,28 @@ public class Buffer extends Node {
     }
 
     public void method842(int var1) {
-        this.payload[++this.caret - 1] = (byte) (var1 >> 16);
-        this.payload[++this.caret - 1] = (byte) (var1 >> 24);
-        this.payload[++this.caret - 1] = (byte) var1;
-        this.payload[++this.caret - 1] = (byte) (var1 >> 8);
+        payload[++caret - 1] = (byte) (var1 >> 16);
+        payload[++caret - 1] = (byte) (var1 >> 24);
+        payload[++caret - 1] = (byte) var1;
+        payload[++caret - 1] = (byte) (var1 >> 8);
     }
 
     public int method848() {
-        this.caret += 4;
-        return (this.payload[this.caret - 4] & 255) + ((this.payload[this.caret - 2] & 255) << 16) + ((this.payload[this.caret - 1] & 255) << 24) + ((this.payload[this.caret - 3] & 255) << 8);
+        caret += 4;
+        return (payload[caret - 4] & 255) + ((payload[caret - 2] & 255) << 16) + ((payload[caret - 1] & 255) << 24) + ((payload[caret - 3] & 255) << 8);
     }
 
     public String method825() {
-        byte var1 = this.payload[++this.caret - 1];
+        byte var1 = payload[++caret - 1];
         if (var1 != 0) {
             throw new IllegalStateException("");
         }
-        int var2 = this.method817();
-        if (var2 + this.caret > this.payload.length) {
+        int var2 = method817();
+        if (var2 + caret > payload.length) {
             throw new IllegalStateException("");
         }
-        byte[] var3 = this.payload;
-        int var4 = this.caret;
+        byte[] var3 = payload;
+        int var4 = caret;
         char[] var5 = new char[var2];
         int var6 = 0;
         int var7 = var4;
@@ -472,13 +472,13 @@ public class Buffer extends Node {
         }
 
         String var11 = new String(var5, 0, var6);
-        this.caret += var2;
+        caret += var2;
         return var11;
     }
 
     public int method832(int var1) {
-        byte[] var2 = this.payload;
-        int var3 = this.caret;
+        byte[] var2 = payload;
+        int var3 = caret;
         int var4 = -1;
 
         for (int var5 = var1; var5 < var3; ++var5) {
@@ -486,20 +486,20 @@ public class Buffer extends Node {
         }
 
         var4 = ~var4;
-        this.method869(var4);
+        method869(var4);
         return var4;
     }
 
     public void method850(int var1) {
-        this.payload[++this.caret - 1] = (byte) (var1 >> 8);
-        this.payload[++this.caret - 1] = (byte) var1;
-        this.payload[++this.caret - 1] = (byte) (var1 >> 24);
-        this.payload[++this.caret - 1] = (byte) (var1 >> 16);
+        payload[++caret - 1] = (byte) (var1 >> 8);
+        payload[++caret - 1] = (byte) var1;
+        payload[++caret - 1] = (byte) (var1 >> 24);
+        payload[++caret - 1] = (byte) (var1 >> 16);
     }
 
     public int method852() {
-        this.caret += 4;
-        return ((this.payload[this.caret - 3] & 255) << 24) + ((this.payload[this.caret - 4] & 255) << 16) + ((this.payload[this.caret - 1] & 255) << 8) + (this.payload[this.caret - 2] & 255);
+        caret += 4;
+        return ((payload[caret - 3] & 255) << 24) + ((payload[caret - 4] & 255) << 16) + ((payload[caret - 1] & 255) << 8) + (payload[caret - 2] & 255);
     }
 
     public void method865(String var1) {
@@ -507,58 +507,58 @@ public class Buffer extends Node {
         if (var2 >= 0) {
             throw new IllegalArgumentException("");
         }
-        this.caret += Node_Sub21_Sub20.method1125(var1, 0, var1.length(), this.payload, this.caret);
-        this.payload[++this.caret - 1] = 0;
+        caret += Node_Sub21_Sub20.method1125(var1, 0, var1.length(), payload, caret);
+        payload[++caret - 1] = 0;
     }
 
     public void method854(int var1) {
-        this.payload[++this.caret - 1] = (byte) (var1 >> 16);
-        this.payload[++this.caret - 1] = (byte) var1;
-        this.payload[++this.caret - 1] = (byte) (var1 >> 8);
+        payload[++caret - 1] = (byte) (var1 >> 16);
+        payload[++caret - 1] = (byte) var1;
+        payload[++caret - 1] = (byte) (var1 >> 8);
     }
 
     public int method816() {
-        int var1 = this.payload[this.caret] & 255;
-        return var1 < 128 ? this.readUnsignedByte() - 64 : this.readUnsignedShort() - '쀀';
+        int var1 = payload[caret] & 255;
+        return var1 < 128 ? readUnsignedByte() - 64 : readUnsignedShort() - '쀀';
     }
 
     public void method857(CharSequence var1) {
         int var2 = Class54.method347(var1);
-        this.payload[++this.caret - 1] = 0;
-        this.method863(var2);
-        this.caret += Class17.method135(this.payload, this.caret, var1);
+        payload[++caret - 1] = 0;
+        method863(var2);
+        caret += Class17.method135(payload, caret, var1);
     }
 
     public int method831() {
-        return this.payload[this.caret] < 0 ? this.readInt() & Integer.MAX_VALUE : this.readUnsignedShort();
+        return payload[caret] < 0 ? readInt() & Integer.MAX_VALUE : readUnsignedShort();
     }
 
     public void method866(int var1) {
-        this.payload[this.caret - var1 - 2] = (byte) (var1 >> 8);
-        this.payload[this.caret - var1 - 1] = (byte) var1;
+        payload[caret - var1 - 2] = (byte) (var1 >> 8);
+        payload[caret - var1 - 1] = (byte) var1;
     }
 
     public int method846() {
-        this.caret += 4;
-        return ((this.payload[this.caret - 1] & 255) << 16) + ((this.payload[this.caret - 2] & 255) << 24) + ((this.payload[this.caret - 4] & 255) << 8) + (this.payload[this.caret - 3] & 255);
+        caret += 4;
+        return ((payload[caret - 1] & 255) << 16) + ((payload[caret - 2] & 255) << 24) + ((payload[caret - 4] & 255) << 8) + (payload[caret - 3] & 255);
     }
 
     public byte method844() {
-        return (byte) (0 - this.payload[++this.caret - 1]);
+        return (byte) (0 - payload[++caret - 1]);
     }
 
     public void method755(int var1) {
-        this.payload[++this.caret - 1] = (byte) (var1 >> 8);
-        this.payload[++this.caret - 1] = (byte) var1;
+        payload[++caret - 1] = (byte) (var1 >> 8);
+        payload[++caret - 1] = (byte) var1;
     }
 
     public void method838(int[] var1) {
-        int var2 = this.caret / 8;
-        this.caret = 0;
+        int var2 = caret / 8;
+        caret = 0;
 
         for (int var3 = 0; var3 < var2; ++var3) {
-            int var4 = this.readInt();
-            int var5 = this.readInt();
+            int var4 = readInt();
+            int var5 = readInt();
             int var6 = -957401312;
             int var7 = -1640531527;
 
@@ -567,24 +567,24 @@ public class Buffer extends Node {
                 var6 -= var7;
             }
 
-            this.caret -= 8;
-            this.method869(var4);
-            this.method869(var5);
+            caret -= 8;
+            method869(var4);
+            method869(var5);
         }
 
     }
 
     public void method451(int var1) {
-        this.payload[++this.caret - 1] = (byte) var1;
+        payload[++caret - 1] = (byte) var1;
     }
 
     public void method823(int var1) {
-        this.payload[++this.caret - 1] = (byte) (0 - var1);
+        payload[++caret - 1] = (byte) (0 - var1);
     }
 
     public int method851() {
-        this.caret += 2;
-        int var1 = (this.payload[this.caret - 1] - 128 & 255) + ((this.payload[this.caret - 2] & 255) << 8);
+        caret += 2;
+        int var1 = (payload[caret - 1] - 128 & 255) + ((payload[caret - 2] & 255) << 8);
         if (var1 > 32767) {
             var1 -= 65536;
         }
@@ -593,19 +593,19 @@ public class Buffer extends Node {
     }
 
     public int method822() {
-        return 0 - this.payload[++this.caret - 1] & 255;
+        return 0 - payload[++caret - 1] & 255;
     }
 
     public void method578(int var1) {
-        this.payload[this.caret - var1 - 4] = (byte) (var1 >> 24);
-        this.payload[this.caret - var1 - 3] = (byte) (var1 >> 16);
-        this.payload[this.caret - var1 - 2] = (byte) (var1 >> 8);
-        this.payload[this.caret - var1 - 1] = (byte) var1;
+        payload[caret - var1 - 4] = (byte) (var1 >> 24);
+        payload[caret - var1 - 3] = (byte) (var1 >> 16);
+        payload[caret - var1 - 2] = (byte) (var1 >> 8);
+        payload[caret - var1 - 1] = (byte) var1;
     }
 
     public int readShort() {
-        this.caret += 2;
-        int var1 = (this.payload[this.caret - 1] & 255) + ((this.payload[this.caret - 2] & 255) << 8);
+        caret += 2;
+        int var1 = (payload[caret - 1] & 255) + ((payload[caret - 2] & 255) << 8);
         if (var1 > 32767) {
             var1 -= 65536;
         }
@@ -615,7 +615,7 @@ public class Buffer extends Node {
 
     public void read(byte[] var1, int var2, int var3) {
         for (int var4 = var2; var4 < var2 + var3; ++var4) {
-            var1[var4] = this.payload[++this.caret - 1];
+            var1[var4] = payload[++caret - 1];
         }
 
     }

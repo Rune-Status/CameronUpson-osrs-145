@@ -35,7 +35,7 @@ public class Class6_Sub1 extends Class6 {
     }
 
     public static boolean method159(ReferenceTable var0, ReferenceTable var1) {
-        MapFunction.aReferenceTable2012 = var1;
+        MapFunction.spriteTable = var1;
         if (!var0.method1088()) {
             return false;
         }
@@ -46,7 +46,7 @@ public class Class6_Sub1 extends Class6 {
             byte[] var3 = var0.unpack(35, var2);
             if (var3 != null) {
                 MapFunction.mapFunctions[var2] = new MapFunction(var2);
-                MapFunction.mapFunctions[var2].method1052(new Buffer(var3));
+                MapFunction.mapFunctions[var2].decode(new Buffer(var3));
                 MapFunction.mapFunctions[var2].method935();
             }
         }

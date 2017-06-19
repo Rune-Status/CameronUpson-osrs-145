@@ -269,7 +269,7 @@ final class Class78 implements Class66 {
     }
 
     public static void method466(ReferenceTable var0, ReferenceTable var1) {
-        HealthBarDefinition.aReferenceTable2012 = var0;
+        HealthBarDefinition.healthBarTable = var0;
         Class171.aReferenceTable2125 = var1;
     }
 

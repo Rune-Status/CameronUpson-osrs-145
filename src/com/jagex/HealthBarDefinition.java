@@ -1,9 +1,10 @@
 package com.jagex;
 
 public class HealthBarDefinition extends DoublyNode {
-    public static ReferenceTable aReferenceTable2012;
-    public static ReferenceCache aReferenceCache2013 = new ReferenceCache(64);
-    public static ReferenceCache aReferenceCache2008 = new ReferenceCache(64);
+
+    public static ReferenceTable healthBarTable;
+    public static ReferenceCache<Sprite> sprites = new ReferenceCache<>(64);
+    public static ReferenceCache<HealthBarDefinition> healthBars = new ReferenceCache<>(64);
     public int anInt327;
     public int anInt220 = 255;
     public int anInt217 = 255;
@@ -34,13 +35,13 @@ public class HealthBarDefinition extends DoublyNode {
         if (this.anInt212 < 0) {
             return null;
         }
-        Sprite var1 = (Sprite) aReferenceCache2013.get((long) this.anInt212);
+        Sprite var1 = sprites.get((long) this.anInt212);
         if (var1 != null) {
             return var1;
         }
         var1 = Class176.method1188(Class171.aReferenceTable2125, this.anInt212, 0);
         if (var1 != null) {
-            aReferenceCache2013.put(var1, (long) this.anInt212);
+            sprites.put(var1, (long) this.anInt212);
         }
 
         return var1;
@@ -50,13 +51,13 @@ public class HealthBarDefinition extends DoublyNode {
         if (this.anInt225 < 0) {
             return null;
         }
-        Sprite var1 = (Sprite) aReferenceCache2013.get((long) this.anInt225);
+        Sprite var1 = sprites.get((long) this.anInt225);
         if (var1 != null) {
             return var1;
         }
         var1 = Class176.method1188(Class171.aReferenceTable2125, this.anInt225, 0);
         if (var1 != null) {
-            aReferenceCache2013.put(var1, (long) this.anInt225);
+            sprites.put(var1, (long) this.anInt225);
         }
 
         return var1;

@@ -11,7 +11,7 @@ public class Identikit {
     int[] anIntArray1313;
     int[] anIntArray1315;
     int[] anIntArray1308;
-    boolean showing = false;
+    boolean valid = false;
 
     Identikit(byte[] var1, AnimationSkin var2) {
         this.aAnimationSkin_1312 = var2;
@@ -67,7 +67,7 @@ public class Identikit {
                 var6 = var8;
                 ++var7;
                 if (this.aAnimationSkin_1312.transforms[var8] == 5) {
-                    this.showing = true;
+                    this.valid = true;
                 }
             }
         }

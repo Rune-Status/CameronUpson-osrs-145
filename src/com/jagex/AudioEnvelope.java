@@ -14,53 +14,53 @@ public class AudioEnvelope {
     int max;
 
     AudioEnvelope() {
-        this.anIntArray895[0] = 0;
-        this.anIntArray895[1] = 65535;
-        this.phases[0] = 0;
-        this.phases[1] = 65535;
+        anIntArray895[0] = 0;
+        anIntArray895[1] = 65535;
+        phases[0] = 0;
+        phases[1] = 65535;
     }
 
     final void method507(Buffer var1) {
-        this.anInt893 = var1.readUnsignedByte();
-        this.start = var1.readInt();
-        this.end = var1.readInt();
-        this.method510(var1);
+        anInt893 = var1.readUnsignedByte();
+        start = var1.readInt();
+        end = var1.readInt();
+        method510(var1);
     }
 
     final void method509() {
-        this.ticks = 0;
-        this.phaseIndex = 0;
-        this.step = 0;
-        this.amplitude = 0;
-        this.max = 0;
+        ticks = 0;
+        phaseIndex = 0;
+        step = 0;
+        amplitude = 0;
+        max = 0;
     }
 
     final int method508(int var1) {
-        if (this.max >= this.ticks) {
-            this.amplitude = this.phases[this.phaseIndex++] << 15;
-            if (this.phaseIndex >= this.anInt886) {
-                this.phaseIndex = this.anInt886 - 1;
+        if (max >= ticks) {
+            amplitude = phases[phaseIndex++] << 15;
+            if (phaseIndex >= anInt886) {
+                phaseIndex = anInt886 - 1;
             }
 
-            this.ticks = (int) ((double) this.anIntArray895[this.phaseIndex] / 65536.0D * (double) var1);
-            if (this.ticks > this.max) {
-                this.step = ((this.phases[this.phaseIndex] << 15) - this.amplitude) / (this.ticks - this.max);
+            ticks = (int) ((double) anIntArray895[phaseIndex] / 65536.0D * (double) var1);
+            if (ticks > max) {
+                step = ((phases[phaseIndex] << 15) - amplitude) / (ticks - max);
             }
         }
 
-        this.amplitude += this.step;
-        ++this.max;
-        return this.amplitude - this.step >> 15;
+        amplitude += step;
+        ++max;
+        return amplitude - step >> 15;
     }
 
     final void method510(Buffer var1) {
-        this.anInt886 = var1.readUnsignedByte();
-        this.anIntArray895 = new int[this.anInt886];
-        this.phases = new int[this.anInt886];
+        anInt886 = var1.readUnsignedByte();
+        anIntArray895 = new int[anInt886];
+        phases = new int[anInt886];
 
-        for (int var2 = 0; var2 < this.anInt886; ++var2) {
-            this.anIntArray895[var2] = var1.readUnsignedShort();
-            this.phases[var2] = var1.readUnsignedShort();
+        for (int var2 = 0; var2 < anInt886; ++var2) {
+            anIntArray895[var2] = var1.readUnsignedShort();
+            phases[var2] = var1.readUnsignedShort();
         }
 
     }

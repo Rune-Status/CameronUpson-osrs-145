@@ -13,24 +13,24 @@ public class AnimationSkin extends Node {
     int id;
 
     AnimationSkin(int var1, byte[] var2) {
-        this.id = var1;
+        id = var1;
         Buffer var3 = new Buffer(var2);
-        this.count = var3.readUnsignedByte();
-        this.transforms = new int[this.count];
-        this.labels = new int[this.count][];
+        count = var3.readUnsignedByte();
+        transforms = new int[count];
+        labels = new int[count][];
 
         int var4;
-        for (var4 = 0; var4 < this.count; ++var4) {
-            this.transforms[var4] = var3.readUnsignedByte();
+        for (var4 = 0; var4 < count; ++var4) {
+            transforms[var4] = var3.readUnsignedByte();
         }
 
-        for (var4 = 0; var4 < this.count; ++var4) {
-            this.labels[var4] = new int[var3.readUnsignedByte()];
+        for (var4 = 0; var4 < count; ++var4) {
+            labels[var4] = new int[var3.readUnsignedByte()];
         }
 
-        for (var4 = 0; var4 < this.count; ++var4) {
-            for (int var5 = 0; var5 < this.labels[var4].length; ++var5) {
-                this.labels[var4][var5] = var3.readUnsignedByte();
+        for (var4 = 0; var4 < count; ++var4) {
+            for (int var5 = 0; var5 < labels[var4].length; ++var5) {
+                labels[var4][var5] = var3.readUnsignedByte();
             }
         }
 

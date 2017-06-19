@@ -1,12 +1,12 @@
 package com.jagex;
 
 public class AnimationFrame extends DoublyNode {
-    Identikit[] anIdentikitArray1075;
+    Identikit[] identikits;
 
     AnimationFrame(ReferenceTable var1, ReferenceTable var2, int var3, boolean var4) {
         NodeDeque<AnimationSkin> var5 = new NodeDeque<>();
         int var6 = var1.method1101(var3);
-        this.anIdentikitArray1075 = new Identikit[var6];
+        identikits = new Identikit[var6];
         int[] var7 = var1.method1087(var3);
 
         for (int var8 = 0; var8 < var7.length; ++var8) {
@@ -33,12 +33,12 @@ public class AnimationFrame extends DoublyNode {
                 var5.method997(var10);
             }
 
-            this.anIdentikitArray1075[var7[var8]] = new Identikit(var9, var10);
+            identikits[var7[var8]] = new Identikit(var9, var10);
         }
 
     }
 
-    public boolean method626(int var1) {
-        return this.anIdentikitArray1075[var1].showing;
+    public boolean isValid(int kit) {
+        return identikits[kit].valid;
     }
 }
