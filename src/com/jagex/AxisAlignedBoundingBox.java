@@ -6,7 +6,7 @@ public final class AxisAlignedBoundingBox extends BoundingBox {
     final int x2;
     final int z1;
     final int y1;
-    final int color; //0xffff00ff if com.jagex.Node_Sub21_Sub6.calcAxisAlignedBoundingBox returned true, else 0xff0000ff
+    final int color;
     final int y2;
     final int z2;
     final int x1;
