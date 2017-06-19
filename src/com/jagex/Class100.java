@@ -1,7 +1,7 @@
 package com.jagex;
 
 public class Class100 {
-    static CacheReferenceTable aCacheReferenceTable1119;
+    static CacheReferenceTable midi;
     int anInt1118;
     int anInt1120;
     int anInt1117;

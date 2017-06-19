@@ -18,7 +18,7 @@ public class Class25 {
     Class25(Class108 var1, URL var2) {
         this.aClass103_182 = var1.method752(var2);
         this.anInt174 = 0;
-        this.aLong179 = Class124.currentTime() + 30000L;
+        this.aLong179 = GzipDecompresser.currentTime() + 30000L;
     }
 
     static int method175(int var0, int var1, int var2) {
@@ -48,7 +48,7 @@ public class Class25 {
         DrawingArea.method1223(var0, var1, var2, var3, var4);
         DrawingArea.method1223(var0 + 1, var1 + 1, var2 - 2, 16, 0);
         DrawingArea.drawRectangle(var0 + 1, var1 + 18, var2 - 2, var3 - 19, 0);
-        Class35.aFont313.method1170("Choose Option", var0 + 3, var1 + 14, var4, -1);
+        Class35.font_b12_full.method1170("Choose Option", var0 + 3, var1 + 14, var4, -1);
         int var5 = Class33.anInt261;
         int var6 = Class33.anInt260;
 
@@ -62,7 +62,7 @@ public class Class25 {
                 var9 = 16776960;
             }
 
-            Font var10 = Class35.aFont313;
+            Font var10 = Class35.font_b12_full;
             String var11;
             if (var7 < 0) {
                 var11 = "";
@@ -93,7 +93,7 @@ public class Class25 {
     }
 
     byte[] method173() throws IOException {
-        if (Class124.currentTime() > this.aLong179) {
+        if (GzipDecompresser.currentTime() > this.aLong179) {
             throw new IOException();
         }
         if (this.anInt174 == 0) {
@@ -110,7 +110,7 @@ public class Class25 {
         if (this.anInt174 == 1) {
             this.anInt178 += this.aDataInputStream176.read(this.aByteArray175, this.anInt178, this.aByteArray175.length - this.anInt178);
             if (this.anInt178 == 4) {
-                int var1 = (new Buffer(this.aByteArray175)).method835();
+                int var1 = (new Buffer(this.aByteArray175)).readInt();
                 this.aByteArray180 = new byte[var1];
                 this.anInt174 = 2;
             }

@@ -25,8 +25,8 @@ public class WorldMapTransportation {
         this.fileId = var2;
         this.fileName = var1.method819();
         this.areaName = var1.method819();
-        this.offset = new SceneOffset(var1.method835());
-        this.anInt94 = var1.method835();
+        this.offset = new SceneOffset(var1.readInt());
+        this.anInt94 = var1.readInt();
         var1.readUnsignedByte();
         this.onSurface = var1.readUnsignedByte() == 1;
         this.defaultScale = var1.readUnsignedByte(); //default world map zoom for this area

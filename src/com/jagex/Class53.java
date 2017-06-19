@@ -15,8 +15,8 @@ public class Class53 {
         this.aString410 = var1.method819();
         this.anInt406 = var1.readUnsignedShort();
         this.aLong412 = var1.method837();
-        int var4 = var1.method835();
-        int var5 = var1.method835();
+        int var4 = var1.readInt();
+        int var5 = var1.readInt();
         this.aGrandExchangeOffer408 = new GrandExchangeOffer();
         this.aGrandExchangeOffer408.method420(2);
         this.aGrandExchangeOffer408.method422(var2);

@@ -14,10 +14,10 @@ public class GrandExchangeOffer {
     public GrandExchangeOffer(Buffer var1, boolean var2) {
         this.state = var1.method870();
         this.itemId = var1.readUnsignedShort();
-        this.itemPrice = var1.method835();
-        this.itemQuantity = var1.method835();
-        this.transferred = var1.method835();
-        this.spent = var1.method835();
+        this.itemPrice = var1.readInt();
+        this.itemQuantity = var1.readInt();
+        this.transferred = var1.readInt();
+        this.spent = var1.readInt();
     }
 
     public GrandExchangeOffer() {

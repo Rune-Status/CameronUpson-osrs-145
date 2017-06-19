@@ -5,7 +5,7 @@ import java.util.Date;
 public class ScriptEvent extends Node {
     public static ReferenceTable aReferenceTable1843;
     static Class176 aClass176_329;
-    static CacheReferenceTable aCacheReferenceTable322;
+    static CacheReferenceTable runescripts;
     static Class103 aClass103_330;
     Object[] args;
     InterfaceComponent source;
@@ -198,7 +198,7 @@ public class ScriptEvent extends Node {
         if (var0 == 3923) {
             var3 = Class63.anIntArray645[--Class63.anInt644];
             var5 = (Class53) Client.aClass43_1459.aList359.get(var3);
-            long var6 = Class124.currentTime() - Tile.aLong1166 - var5.aLong412;
+            long var6 = GzipDecompresser.currentTime() - Tile.aLong1166 - var5.aLong412;
             int var8 = (int) (var6 / 3600000L);
             int var9 = (int) ((var6 - (long) (var8 * 3600000)) / 60000L);
             int var10 = (int) ((var6 - (long) (var8 * 3600000) - (long) (var9 * '\uea60')) / 1000L);
@@ -661,7 +661,7 @@ public class ScriptEvent extends Node {
                     Class133.anInt1725 = 1;
                     Class133.aReferenceTable1727 = null;
                 } else if (var3 != -1 && var3 != Client.anInt1703 && Client.anInt1694 != 0 && !Client.aBoolean1707) {
-                    CacheReferenceTable var63 = Class100.aCacheReferenceTable1119;
+                    CacheReferenceTable var63 = Class100.midi;
                     var5 = Client.anInt1694;
                     Class133.anInt1725 = 1;
                     Class133.aReferenceTable1727 = var63;
@@ -774,7 +774,7 @@ public class ScriptEvent extends Node {
                     Class63.anInt644 -= 2;
                     var24 = Class63.anIntArray645[Class63.anInt644];
                     var5 = Class63.anIntArray645[Class63.anInt644 + 1];
-                    var27 = Class2.aCacheReferenceTable8.unpack(var5, 0);
+                    var27 = Class2.fontMetrics.unpack(var5, 0);
                     var32 = new Font(var27);
                     Class63.anIntArray645[++Class63.anInt644 - 1] = var32.method1168(var40, var24);
                     var11 = 1;
@@ -783,7 +783,7 @@ public class ScriptEvent extends Node {
                     Class63.anInt644 -= 2;
                     var24 = Class63.anIntArray645[Class63.anInt644];
                     var5 = Class63.anIntArray645[Class63.anInt644 + 1];
-                    var27 = Class2.aCacheReferenceTable8.unpack(var5, 0);
+                    var27 = Class2.fontMetrics.unpack(var5, 0);
                     var32 = new Font(var27);
                     Class63.anIntArray645[++Class63.anInt644 - 1] = var32.method1178(var40, var24);
                     var11 = 1;
@@ -1367,7 +1367,7 @@ public class ScriptEvent extends Node {
 
                     if (var40.equalsIgnoreCase("clientdrop")) {
                         if (Client.specialScript > 0) {
-                            TextureProviderImpl.method499();
+                            Client.method499();
                         } else {
                             Class45.method304(40);
                             Class154.aGameSocket1833 = InterfaceNode.aGameSocket317;

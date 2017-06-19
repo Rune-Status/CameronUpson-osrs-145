@@ -2,14 +2,15 @@ package com.jagex;
 
 import java.util.zip.Inflater;
 
-public class Class124 {
-    Inflater anInflater1364;
+public class GzipDecompresser {
 
-    public Class124() {
+    Inflater inflater;
+
+    public GzipDecompresser() {
         this(-1, 1000000, 1000000);
     }
 
-    Class124(int var1, int var2, int var3) {
+    GzipDecompresser(int var1, int var2, int var3) {
     }
 
     public static synchronized long currentTime() {
@@ -22,21 +23,21 @@ public class Class124 {
         return var0 + Class125.aLong1367;
     }
 
-    public void method874(Buffer var1, byte[] var2) {
+    public void decompress(Buffer var1, byte[] var2) {
         if (var1.payload[var1.caret] == 31 && var1.payload[var1.caret + 1] == -117) {
-            if (this.anInflater1364 == null) {
-                this.anInflater1364 = new Inflater(true);
+            if (this.inflater == null) {
+                this.inflater = new Inflater(true);
             }
 
             try {
-                this.anInflater1364.setInput(var1.payload, var1.caret + 10, var1.payload.length - (var1.caret + 10 + 8));
-                this.anInflater1364.inflate(var2);
+                this.inflater.setInput(var1.payload, var1.caret + 10, var1.payload.length - (var1.caret + 10 + 8));
+                this.inflater.inflate(var2);
             } catch (Exception var4) {
-                this.anInflater1364.reset();
+                this.inflater.reset();
                 throw new RuntimeException("");
             }
 
-            this.anInflater1364.reset();
+            this.inflater.reset();
         } else {
             throw new RuntimeException("");
         }

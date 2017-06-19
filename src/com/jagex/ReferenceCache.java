@@ -51,18 +51,18 @@ public final class ReferenceCache<T extends DoublyNode> { //TODO generics here a
         InterfaceComponent.aReferenceCache1880.clear();
         ((TextureProviderImpl) Node_Sub21_Sub26_Sub1.aTextureProvider1085).method504();
         RuneScript.aReferenceCache664.clear();
-        Client.aCacheReferenceTable1493.method1096();
-        Client.aCacheReferenceTable1496.method1096();
-        BoundingBox.aCacheReferenceTable372.method1096();
-        Class34.aCacheReferenceTable274.method1096();
-        Class126.aCacheReferenceTable1368.method1096();
-        Class100.aCacheReferenceTable1119.method1096();
-        Class76.aCacheReferenceTable823.method1096();
-        Class21.aCacheReferenceTable139.method1096();
-        Class60.aCacheReferenceTable630.method1096();
-        Class82.aCacheReferenceTable848.method1096();
-        Applet_Sub1.aCacheReferenceTable681.method1096();
-        ScriptEvent.aCacheReferenceTable322.method1096();
+        Client.skeletons.method1096();
+        Client.mesh.method1096();
+        BoundingBox.interfaceComponents.method1096();
+        Class34.audioEffects.method1096();
+        Class126.landscapes.method1096();
+        Class100.midi.method1096();
+        Class76.models.method1096();
+        Class21.materials.method1096();
+        Class60.textures.method1096();
+        Class82.binary.method1096();
+        Applet_Sub1.midi2.method1096();
+        ScriptEvent.runescripts.method1096();
     }
 
     public void method976(long var1) {

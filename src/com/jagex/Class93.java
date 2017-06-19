@@ -146,7 +146,7 @@ public class Class93 {
             Login.aBoolean703 = true;
             Login.aBoolean694 = false;
             if (!Client.preferences.loginScreenAudioDisabled) {
-                CacheReferenceTable var15 = Class100.aCacheReferenceTable1119;
+                CacheReferenceTable var15 = Class100.midi;
                 var6 = var15.method1084("scape main");
                 var7 = var15.method1104(var6, "");
                 Class133.anInt1725 = 1;

@@ -23,8 +23,8 @@ public class CacheReferenceTable extends ReferenceTable {
         int var8 = this.anInt2101;
         if (Class168.aBuffer2078 != null) {
             Class168.aBuffer2078.caret = var8 * 8 + 5;
-            int var9 = Class168.aBuffer2078.method835();
-            int var10 = Class168.aBuffer2078.method835();
+            int var9 = Class168.aBuffer2078.readInt();
+            int var10 = Class168.aBuffer2078.readInt();
             this.method1134(var9, var10);
         } else {
             method310(null, 255, 255, 0, (byte) 0, true);
@@ -120,7 +120,7 @@ public class CacheReferenceTable extends ReferenceTable {
                 this.method1131(var2, var1, var9, true);
             }
         } else {
-            method310(this, this.anInt2101, var1, this.anIntArray2063[var1], (byte) 2, true);
+            method310(this, this.anInt2101, var1, this.entryCrcs[var1], (byte) 2, true);
         }
 
     }
@@ -147,7 +147,7 @@ public class CacheReferenceTable extends ReferenceTable {
             aCRC32_2103.reset();
             aCRC32_2103.update(var3, 0, var3.length);
             var5 = (int) aCRC32_2103.getValue();
-            Buffer var7 = new Buffer(ReferenceTable.method1003(var3));
+            Buffer var7 = new Buffer(ReferenceTable.decodeContainer(var3));
             int var8 = var7.readUnsignedByte();
             if (var8 != 5 && var8 != 6) {
                 throw new RuntimeException(var8 + "," + this.anInt2101 + "," + var2);
@@ -155,7 +155,7 @@ public class CacheReferenceTable extends ReferenceTable {
 
             int var9 = 0;
             if (var8 >= 6) {
-                var9 = var7.method835();
+                var9 = var7.readInt();
             }
 
             if (var5 != this.anInt2104 || this.anInt2105 != var9) {
@@ -163,7 +163,7 @@ public class CacheReferenceTable extends ReferenceTable {
                 return;
             }
 
-            this.method1094(var3);
+            this.decode(var3);
             this.method1133();
         } else {
             if (!var4 && var2 == this.anInt2102) {
@@ -173,7 +173,7 @@ public class CacheReferenceTable extends ReferenceTable {
             if (var3 == null || var3.length <= 2) {
                 this.aBooleanArray2108[var2] = false;
                 if (this.aBoolean2100 || var4) {
-                    method310(this, this.anInt2101, var2, this.anIntArray2063[var2], (byte) 2, var4);
+                    method310(this, this.anInt2101, var2, this.entryCrcs[var2], (byte) 2, var4);
                 }
 
                 return;
@@ -183,10 +183,10 @@ public class CacheReferenceTable extends ReferenceTable {
             aCRC32_2103.update(var3, 0, var3.length - 2);
             var5 = (int) aCRC32_2103.getValue();
             int var6 = (var3[var3.length - 1] & 255) + ((var3[var3.length - 2] & 255) << 8);
-            if (this.anIntArray2063[var2] != var5 || this.anIntArray2064[var2] != var6) {
+            if (this.entryCrcs[var2] != var5 || this.entryVersions[var2] != var6) {
                 this.aBooleanArray2108[var2] = false;
                 if (this.aBoolean2100 || var4) {
-                    method310(this, this.anInt2101, var2, this.anIntArray2063[var2], (byte) 2, var4);
+                    method310(this, this.anInt2101, var2, this.entryCrcs[var2], (byte) 2, var4);
                 }
 
                 return;
@@ -214,7 +214,7 @@ public class CacheReferenceTable extends ReferenceTable {
             this.anInt2102 = -1;
 
             for (var1 = 0; var1 < this.aBooleanArray2108.length; ++var1) {
-                if (this.anIntArray2054[var1] > 0) {
+                if (this.childCounts[var1] > 0) {
                     ReferenceTable.method408(var1, this.aCacheIndex2109, this);
                     this.anInt2102 = var1;
                 }
@@ -233,7 +233,7 @@ public class CacheReferenceTable extends ReferenceTable {
 
         int var3;
         for (var3 = 0; var3 < this.anObjectArray2057.length; ++var3) {
-            if (this.anIntArray2054[var3] > 0) {
+            if (this.childCounts[var3] > 0) {
                 var1 += 100;
                 var2 += this.method1083(var3);
             }
@@ -278,11 +278,11 @@ public class CacheReferenceTable extends ReferenceTable {
                 }
             }
 
-            this.method1094(var2);
+            this.decode(var2);
             this.method1133();
         } else {
-            var2[var2.length - 2] = (byte) (this.anIntArray2064[var1] >> 8);
-            var2[var2.length - 1] = (byte) this.anIntArray2064[var1];
+            var2[var2.length - 2] = (byte) (this.entryVersions[var1] >> 8);
+            var2[var2.length - 1] = (byte) this.entryVersions[var1];
             if (this.aCacheIndex2109 != null) {
                 CacheIndex var9 = this.aCacheIndex2109;
                 CacheFile var18 = new CacheFile();

@@ -1,9 +1,9 @@
 package com.jagex;
 
-public final class Class114 {
+public final class Bzip2Decompressor {
     static Class127 aClass127_1336 = new Class127();
 
-    public static int method776(byte[] var0, int var1, byte[] var2, int var3, int var4) {
+    public static int decompress(byte[] var0, int var1, byte[] var2, int var3, int var4) {
         Class127 var5 = aClass127_1336;
         synchronized (aClass127_1336) {
             aClass127_1336.aByteArray1386 = var2;

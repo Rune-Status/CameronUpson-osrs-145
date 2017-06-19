@@ -22,8 +22,8 @@ public class AudioEnvelope {
 
     final void method507(Buffer var1) {
         this.anInt893 = var1.readUnsignedByte();
-        this.start = var1.method835();
-        this.end = var1.method835();
+        this.start = var1.readInt();
+        this.end = var1.readInt();
         this.method510(var1);
     }
 

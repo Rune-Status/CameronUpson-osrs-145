@@ -25,7 +25,7 @@ public class Class6_Sub1 extends Class6 {
         if (var1 != null) {
             return var1;
         }
-        byte[] var2 = ScriptEvent.aCacheReferenceTable322.unpack(var0, 0);
+        byte[] var2 = ScriptEvent.runescripts.unpack(var0, 0);
         if (var2 == null) {
             return null;
         }

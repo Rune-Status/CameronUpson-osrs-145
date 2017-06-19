@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 
 public final class Class82 {
-    static CacheReferenceTable aCacheReferenceTable848;
+    static CacheReferenceTable binary;
     static ReferenceTable aReferenceTable851;
     long aLong850;
     long aLong849;

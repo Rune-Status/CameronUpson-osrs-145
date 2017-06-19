@@ -70,7 +70,7 @@ public class Class14 {
 
                 if (Client.anInt1694 != var3) {
                     if (Client.anInt1694 == 0 && Client.anInt1703 != -1) {
-                        Class43.method298(Class100.aCacheReferenceTable1119, Client.anInt1703, 0, var3, false);
+                        Class43.method298(Class100.midi, Client.anInt1703, 0, var3, false);
                         Client.aBoolean1707 = false;
                     } else if (var3 == 0) {
                         Class133.aNode_Sub10_Sub3_1723.method916();

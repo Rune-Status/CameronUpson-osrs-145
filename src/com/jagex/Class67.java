@@ -11,8 +11,8 @@ public class Class67 {
     long aLong677;
 
     Class67() {
-        this.anIntArray676 = new int[Class73.aCacheReferenceTable741.method1101(19)];
-        this.aStringArray678 = new String[Class73.aCacheReferenceTable741.method1101(15)];
+        this.anIntArray676 = new int[Class73.config.method1101(19)];
+        this.aStringArray678 = new String[Class73.config.method1101(15)];
         this.aBooleanArray675 = new boolean[this.anIntArray676.length];
 
         int var1;
@@ -141,7 +141,7 @@ public class Class67 {
         }
 
         this.aBoolean679 = false;
-        this.aLong677 = Class124.currentTime();
+        this.aLong677 = GzipDecompresser.currentTime();
     }
 
     void method400() {
@@ -171,7 +171,7 @@ public class Class67 {
                         int var10;
                         for (var8 = 0; var8 < var7; ++var8) {
                             var9 = var5.readUnsignedShort();
-                            var10 = var5.method835();
+                            var10 = var5.readInt();
                             if (this.aBooleanArray675[var9]) {
                                 this.anIntArray676[var9] = var10;
                             }
@@ -214,7 +214,7 @@ public class Class67 {
     }
 
     void method407() {
-        if (this.aBoolean679 && this.aLong677 < Class124.currentTime() - 60000L) {
+        if (this.aBoolean679 && this.aLong677 < GzipDecompresser.currentTime() - 60000L) {
             this.method404();
         }
 
@@ -225,7 +225,7 @@ public class Class67 {
     }
 
     Class82 method405(boolean var1) {
-        return TextureProviderImpl.method502("2", Client.aClass162_1468.aString1955, var1);
+        return Client.method502("2", Client.aClass162_1468.aString1955, var1);
     }
 
     int method406(int var1) {

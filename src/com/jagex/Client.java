@@ -2,6 +2,7 @@ package com.jagex;
 
 import netscape.javascript.JSObject;
 
+import java.io.File;
 import java.io.IOException;
 import java.lang.management.GarbageCollectorMXBean;
 import java.lang.management.ManagementFactory;
@@ -49,7 +50,7 @@ public final class Client extends Applet_Sub1 {
     static int[] menuOpcodes;
     static long aLong1489;
     static BefriendedPlayer[] befriendedPlayers;
-    static CacheReferenceTable aCacheReferenceTable1496;
+    static CacheReferenceTable mesh;
     static int anInt1502;
     static int anInt1505;
     static int anInt1499;
@@ -104,7 +105,7 @@ public final class Client extends Applet_Sub1 {
     static short aShort1434;
     static boolean aBoolean1628;
     static int mapRotation;
-    static CacheReferenceTable aCacheReferenceTable1493;
+    static CacheReferenceTable skeletons;
     static int anInt1563;
     static int anInt1440;
     static int anInt1558;
@@ -164,7 +165,7 @@ public final class Client extends Applet_Sub1 {
     static int anInt1571;
     static String[] menuActions;
     static String[] menuTargets;
-    static HashMap aHashMap1513;
+    static HashMap fonts;
     static int anInt1624;
     static int[] interfacePositionsX;
     static boolean lowMemory = false;
@@ -332,7 +333,7 @@ public final class Client extends Applet_Sub1 {
         anInt1517 = 0;
         specialScript = 0;
         aBoolean1512 = false;
-        aHashMap1513 = new HashMap();
+        fonts = new HashMap();
         anInt1510 = 0;
         anInt1527 = 1;
         anInt1540 = 0;
@@ -633,6 +634,67 @@ public final class Client extends Applet_Sub1 {
         return var1 == 1007;
     }
 
+    public static Class82 method502(String var0, String var1, boolean var2) {
+        File var3 = new File(HealthBar.aFile416, "preferences" + var0 + ".dat");
+        if (var3.exists()) {
+            try {
+                return new Class82(var3, "rw", 10000L);
+            } catch (IOException var9) {
+            }
+        }
+
+        String var4 = "";
+        if (Class102.anInt1151 == 33) {
+            var4 = "_rc";
+        } else if (Class102.anInt1151 == 34) {
+            var4 = "_wip";
+        }
+
+        File var5 = new File(Class10.aString76, "jagex_" + var1 + "_preferences" + var0 + var4 + ".dat");
+        Class82 var6;
+        if (!var2 && var5.exists()) {
+            try {
+                var6 = new Class82(var5, "rw", 10000L);
+                return var6;
+            } catch (IOException var8) {
+            }
+        }
+
+        try {
+            var6 = new Class82(var3, "rw", 10000L);
+            return var6;
+        } catch (IOException var7) {
+            throw new RuntimeException();
+        }
+    }
+
+    static void method499() {
+        if (InterfaceNode.aGameSocket317 != null) {
+            InterfaceNode.aGameSocket317.method882();
+            InterfaceNode.aGameSocket317 = null;
+        }
+
+        ReferenceCache.clearCaches();
+        Class60.aSceneGraph631.method710();
+
+        for (int var0 = 0; var0 < 4; ++var0) {
+            collisionMaps[var0].method757();
+        }
+
+        System.gc();
+        Class133.anInt1725 = 1;
+        Class133.aReferenceTable1727 = null;
+        Class133.anInt1728 = -1;
+        Class5.anInt38 = -1;
+        Class141.anInt1784 = 0;
+        Class46.aBoolean371 = false;
+        CollisionMap.anInt1323 = 2;
+        anInt1703 = -1;
+        aBoolean1707 = false;
+        Class34.method223();
+        Class45.method304(10);
+    }
+
     protected final void method240() {
     }
 
@@ -893,7 +955,7 @@ public final class Client extends Applet_Sub1 {
             Class105.aClass84_1244.method489();
         }
 
-        if ((connectionState == 10 || connectionState == 20 || connectionState == 30) && 0L != aLong1691 && Class124.currentTime() > aLong1691) {
+        if ((connectionState == 10 || connectionState == 20 || connectionState == 30) && 0L != aLong1691 && GzipDecompresser.currentTime() > aLong1691) {
             Class1.method4(Node_Sub21_Sub20.method1126());
         }
 
@@ -907,10 +969,10 @@ public final class Client extends Applet_Sub1 {
         if (connectionState == 0) {
             this.method238(Login.anInt699, Login.aString686, var1);
         } else if (connectionState == 5) {
-            Class2.method12(Class35.aFont313, Class78.aFont838, Boundary.aFont1150, var1);
+            Class2.method12(Class35.font_b12_full, Class78.aFont838, Boundary.aFont1150, var1);
         } else if (connectionState != 10 && connectionState != 11) {
             if (connectionState == 20) {
-                Class2.method12(Class35.aFont313, Class78.aFont838, Boundary.aFont1150, var1);
+                Class2.method12(Class35.font_b12_full, Class78.aFont838, Boundary.aFont1150, var1);
             } else if (connectionState == 25) {
                 if (anInt1539 == 1) {
                     if (anInt1510 > anInt1527) {
@@ -937,7 +999,7 @@ public final class Client extends Applet_Sub1 {
                 Class122.method811("Please wait...", false);
             }
         } else {
-            Class2.method12(Class35.aFont313, Class78.aFont838, Boundary.aFont1150, var1);
+            Class2.method12(Class35.font_b12_full, Class78.aFont838, Boundary.aFont1150, var1);
         }
 
         if (connectionState == 30 && redrawMode == 0 && !var1) {
@@ -1008,12 +1070,12 @@ public final class Client extends Applet_Sub1 {
                         var1.method869(145);
                         Class51.aGameSocket380.method885(var1.payload, 0, 5);
                         ++anInt1487;
-                        aLong1489 = Class124.currentTime();
+                        aLong1489 = GzipDecompresser.currentTime();
                     }
 
                     if (anInt1487 == 3) {
                         if (connectionState > 5 && Class51.aGameSocket380.method884() <= 0) {
-                            if (Class124.currentTime() - aLong1489 > 30000L) {
+                            if (GzipDecompresser.currentTime() - aLong1489 > 30000L) {
                                 this.method901(-2);
                                 return;
                             }
@@ -1180,23 +1242,23 @@ public final class Client extends Applet_Sub1 {
                 aPacket1522.method860(var5.payload, 0, var5.payload.length);
                 aPacket1522.method451(Class54.anInt418);
                 aPacket1522.method869(0);
-                aPacket1522.method869(aCacheReferenceTable1493.anInt2048);
-                aPacket1522.method869(aCacheReferenceTable1496.anInt2048);
-                aPacket1522.method869(Class73.aCacheReferenceTable741.anInt2048);
-                aPacket1522.method869(BoundingBox.aCacheReferenceTable372.anInt2048);
-                aPacket1522.method869(Class34.aCacheReferenceTable274.anInt2048);
-                aPacket1522.method869(Class126.aCacheReferenceTable1368.anInt2048);
-                aPacket1522.method869(Class100.aCacheReferenceTable1119.anInt2048);
-                aPacket1522.method869(Class76.aCacheReferenceTable823.anInt2048);
-                aPacket1522.method869(Class21.aCacheReferenceTable139.anInt2048);
-                aPacket1522.method869(Class60.aCacheReferenceTable630.anInt2048);
-                aPacket1522.method869(Class82.aCacheReferenceTable848.anInt2048);
-                aPacket1522.method869(Applet_Sub1.aCacheReferenceTable681.anInt2048);
-                aPacket1522.method869(ScriptEvent.aCacheReferenceTable322.anInt2048);
-                aPacket1522.method869(Class2.aCacheReferenceTable8.anInt2048);
-                aPacket1522.method869(Class147.aCacheReferenceTable1810.anInt2048);
-                aPacket1522.method869(Class119.aCacheReferenceTable1357.anInt2048);
-                aPacket1522.method869(Class73.aCacheReferenceTable740.anInt2048);
+                aPacket1522.method869(skeletons.anInt2048);
+                aPacket1522.method869(mesh.anInt2048);
+                aPacket1522.method869(Class73.config.anInt2048);
+                aPacket1522.method869(BoundingBox.interfaceComponents.anInt2048);
+                aPacket1522.method869(Class34.audioEffects.anInt2048);
+                aPacket1522.method869(Class126.landscapes.anInt2048);
+                aPacket1522.method869(Class100.midi.anInt2048);
+                aPacket1522.method869(Class76.models.anInt2048);
+                aPacket1522.method869(Class21.materials.anInt2048);
+                aPacket1522.method869(Class60.textures.anInt2048);
+                aPacket1522.method869(Class82.binary.anInt2048);
+                aPacket1522.method869(Applet_Sub1.midi2.anInt2048);
+                aPacket1522.method869(ScriptEvent.runescripts.anInt2048);
+                aPacket1522.method869(Class2.fontMetrics.anInt2048);
+                aPacket1522.method869(Class147.vorbis.anInt2048);
+                aPacket1522.method869(Class119.instruments.anInt2048);
+                aPacket1522.method869(Class73.worldMap.anInt2048);
                 aPacket1522.method824(var2, var4, aPacket1522.caret);
                 aPacket1522.method866(aPacket1522.caret - var3);
                 InterfaceNode.aGameSocket317.method885(aPacket1522.payload, 0, aPacket1522.caret);
@@ -1678,11 +1740,11 @@ public final class Client extends Applet_Sub1 {
     }
 
     final void method897(int var1, int var2) {
-        int var3 = Class35.aFont313.getTextWidth("Choose Option");
+        int var3 = Class35.font_b12_full.getTextWidth("Choose Option");
 
         int var4;
         for (var4 = 0; var4 < menuRowCount; ++var4) {
-            Font var5 = Class35.aFont313;
+            Font var5 = Class35.font_b12_full;
             String var6;
             if (var4 < 0) {
                 var6 = "";
@@ -1758,7 +1820,7 @@ public final class Client extends Applet_Sub1 {
         ClientPreferences var2 = new ClientPreferences();
 
         try {
-            var1 = TextureProviderImpl.method502("", aClass162_1468.aString1955, false);
+            var1 = method502("", aClass162_1468.aString1955, false);
             byte[] var3 = new byte[(int) var1.method475()];
 
             int var5;
@@ -1995,7 +2057,7 @@ public final class Client extends Applet_Sub1 {
         if (aBoolean1512) {
             aBoolean1512 = false;
             if (specialScript > 0) {
-                TextureProviderImpl.method499();
+                method499();
             } else {
                 Class45.method304(40);
                 Class154.aGameSocket1833 = InterfaceNode.aGameSocket317;
@@ -2137,7 +2199,7 @@ public final class Client extends Applet_Sub1 {
                     packet.writeHeader(172);
                     packet.method755(0);
                     var1 = packet.caret;
-                    long var13 = Class124.currentTime();
+                    long var13 = GzipDecompresser.currentTime();
 
                     for (var5 = 0; var5 < Class4.anInt19; ++var5) {
                         long var15 = var13 - aLong1684;
@@ -2191,7 +2253,7 @@ public final class Client extends Applet_Sub1 {
                             AudioEffect var17 = audioEffects[var1];
                             if (var17 == null) {
                                 Object var10000 = null;
-                                var17 = AudioEffect.method606(Class34.aCacheReferenceTable274, anIntArray1709[var1], 0);
+                                var17 = AudioEffect.method606(Class34.audioEffects, anIntArray1709[var1], 0);
                                 if (var17 == null) {
                                     continue;
                                 }
@@ -2264,7 +2326,7 @@ public final class Client extends Applet_Sub1 {
 
                         if (!var30) {
                             if (anInt1694 != 0 && anInt1703 != -1) {
-                                Class43.method298(Class100.aCacheReferenceTable1119, anInt1703, 0, anInt1694, false);
+                                Class43.method298(Class100.midi, anInt1703, 0, anInt1694, false);
                             }
 
                             aBoolean1707 = false;
@@ -2274,7 +2336,7 @@ public final class Client extends Applet_Sub1 {
                     ++anInt1518;
                     if (anInt1518 > 750) {
                         if (specialScript > 0) {
-                            TextureProviderImpl.method499();
+                            method499();
                         } else {
                             Class45.method304(40);
                             Class154.aGameSocket1833 = InterfaceNode.aGameSocket317;
@@ -2693,7 +2755,7 @@ public final class Client extends Applet_Sub1 {
                                                             }
 
                                                             for (FriendLogin var24 = (FriendLogin) friendLogins.head(); var24 != null; var24 = (FriendLogin) friendLogins.next()) {
-                                                                if ((long) var24.time < Class124.currentTime() / 1000L - 5L) {
+                                                                if ((long) var24.time < GzipDecompresser.currentTime() / 1000L - 5L) {
                                                                     if (var24.world > 0) {
                                                                         Class78.addChatMessage(5, "", var24.name + " has logged in.");
                                                                     }
@@ -2719,7 +2781,7 @@ public final class Client extends Applet_Sub1 {
                                                                 }
                                                             } catch (IOException var26) {
                                                                 if (specialScript > 0) {
-                                                                    TextureProviderImpl.method499();
+                                                                    method499();
                                                                 } else {
                                                                     Class45.method304(40);
                                                                     Class154.aGameSocket1833 = InterfaceNode.aGameSocket317;
@@ -2873,7 +2935,7 @@ public final class Client extends Applet_Sub1 {
             if (anInt1511 == 101) {
                 var103 = aPacket1521.readUnsignedByte() == 1;
                 if (var103) {
-                    Tile.aLong1166 = Class124.currentTime() - aPacket1521.method837();
+                    Tile.aLong1166 = GzipDecompresser.currentTime() - aPacket1521.method837();
                     aClass43_1459 = new Class43(aPacket1521, true);
                 } else {
                     aClass43_1459 = null;
@@ -2901,7 +2963,7 @@ public final class Client extends Applet_Sub1 {
             int var8;
             int var68;
             if (anInt1511 == 33) {
-                var2 = aPacket1521.method835();
+                var2 = aPacket1521.readInt();
                 var3 = aPacket1521.readUnsignedShort();
                 if (var2 < -70000) {
                     var3 += 32768;
@@ -2920,7 +2982,7 @@ public final class Client extends Applet_Sub1 {
                     if (var68 != 0) {
                         var8 = aPacket1521.readUnsignedByte();
                         if (var8 == 255) {
-                            var8 = aPacket1521.method835();
+                            var8 = aPacket1521.readInt();
                         }
                     }
 
@@ -3126,7 +3188,7 @@ public final class Client extends Applet_Sub1 {
                 var3 = anInt1514;
                 ClassStructure var88 = new ClassStructure();
                 var88.anInt206 = var86.readUnsignedByte();
-                var88.anInt204 = var86.method835();
+                var88.anInt204 = var86.readInt();
                 var88.anIntArray950 = new int[var88.anInt206];
                 var88.anIntArray2134 = new int[var88.anInt206];
                 var88.fields = new Field[var88.anInt206];
@@ -3153,9 +3215,9 @@ public final class Client extends Applet_Sub1 {
                                 byte[][] var102 = new byte[var14][];
                                 if (var68 == 3) {
                                     for (int var104 = 0; var104 < var14; ++var104) {
-                                        var20 = var86.method835();
+                                        var20 = var86.readInt();
                                         var102[var104] = new byte[var20];
-                                        var86.method826(var102[var104], 0, var20);
+                                        var86.read(var102[var104], 0, var20);
                                     }
                                 }
 
@@ -3199,7 +3261,7 @@ public final class Client extends Applet_Sub1 {
                             var98 = var86.method819();
                             var14 = 0;
                             if (var68 == 1) {
-                                var14 = var86.method835();
+                                var14 = var86.readInt();
                             }
 
                             var88.anIntArray950[var63] = var68;
@@ -3278,7 +3340,7 @@ public final class Client extends Applet_Sub1 {
                     if (var63 > 0) {
                         aPacket1521.method819();
                         aPacket1521.readUnsignedByte();
-                        aPacket1521.method835();
+                        aPacket1521.readInt();
                     }
 
                     aPacket1521.method819();
@@ -3452,7 +3514,7 @@ public final class Client extends Applet_Sub1 {
                     if (var11.length() == 0) {
                         var112 = var112 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     } else {
-                        var112 = var112 + "; Expires=" + Class94.method615(Class124.currentTime() + 94608000000L) + "; Max-Age=" + 94608000L;
+                        var112 = var112 + "; Expires=" + Class94.method615(GzipDecompresser.currentTime() + 94608000000L) + "; Max-Age=" + 94608000L;
                     }
 
                     Client var79 = Class160.aClient1856;
@@ -3467,7 +3529,7 @@ public final class Client extends Applet_Sub1 {
 
             if (anInt1511 == 158) {
                 var2 = aPacket1521.readUnsignedShort();
-                var3 = aPacket1521.method835();
+                var3 = aPacket1521.readInt();
                 var62 = var2 >> 10 & 31;
                 var63 = var2 >> 5 & 31;
                 var68 = var2 & 31;
@@ -3506,7 +3568,7 @@ public final class Client extends Applet_Sub1 {
             }
 
             if (anInt1511 == 141) {
-                var2 = aPacket1521.method835();
+                var2 = aPacket1521.readInt();
                 var3 = aPacket1521.readUnsignedShort();
                 if (var2 < -70000) {
                     var3 += 32768;
@@ -3574,8 +3636,8 @@ public final class Client extends Applet_Sub1 {
             long var38;
             long var40;
             if (anInt1511 == 1) {
-                var2 = aPacket1521.method835();
-                var3 = aPacket1521.method835();
+                var2 = aPacket1521.readInt();
+                var3 = aPacket1521.readInt();
                 if (Class60.aGarbageCollectorMXBean629 == null || !Class60.aGarbageCollectorMXBean629.isValid()) {
                     try {
                         Iterator var75 = ManagementFactory.getGarbageCollectorMXBeans().iterator();
@@ -3592,7 +3654,7 @@ public final class Client extends Applet_Sub1 {
                     }
                 }
 
-                long var34 = Class124.currentTime();
+                long var34 = GzipDecompresser.currentTime();
                 var68 = -1;
                 if (Class60.aGarbageCollectorMXBean629 != null) {
                     var36 = Class60.aGarbageCollectorMXBean629.getCollectionTime();
@@ -3797,7 +3859,7 @@ public final class Client extends Applet_Sub1 {
             }
 
             if (anInt1511 == 207) {
-                var2 = aPacket1521.method835();
+                var2 = aPacket1521.readInt();
                 InterfaceNode var82 = interfaceNodes.lookup((long) var2);
                 if (var82 != null) {
                     InterfaceNode.method216(var82, true);
@@ -3896,7 +3958,7 @@ public final class Client extends Applet_Sub1 {
                     Class133.anInt1725 = 1;
                     Class133.aReferenceTable1727 = null;
                 } else if (var2 != -1 && var2 != anInt1703 && anInt1694 != 0 && !aBoolean1707) {
-                    CacheReferenceTable var80 = Class100.aCacheReferenceTable1119;
+                    CacheReferenceTable var80 = Class100.midi;
                     var62 = anInt1694;
                     Class133.anInt1725 = 1;
                     Class133.aReferenceTable1727 = var80;
@@ -3925,7 +3987,7 @@ public final class Client extends Applet_Sub1 {
             }
 
             if (anInt1511 == 210) {
-                var2 = aPacket1521.method835();
+                var2 = aPacket1521.readInt();
                 var66 = aPacket1521.method834() == 1;
                 var6 = InterfaceComponent.method1016(var2);
                 if (var6.explicitlyHidden != var66) {
@@ -3938,7 +4000,7 @@ public final class Client extends Applet_Sub1 {
             }
 
             if (anInt1511 == 239) {
-                TextureProviderImpl.method499();
+                method499();
                 anInt1511 = -1;
                 return false;
             }
@@ -3949,7 +4011,7 @@ public final class Client extends Applet_Sub1 {
                     var2 = -1;
                 }
 
-                var3 = aPacket1521.method835();
+                var3 = aPacket1521.readInt();
                 var62 = aPacket1521.method848();
                 var31 = InterfaceComponent.method1016(var3);
                 ItemDefinition var73;
@@ -4382,7 +4444,7 @@ public final class Client extends Applet_Sub1 {
 
                 InterfaceNode var13;
                 for (; var62-- > 0; var13.aBoolean316 = true) {
-                    var63 = aPacket1521.method835();
+                    var63 = aPacket1521.readInt();
                     var68 = aPacket1521.readUnsignedShort();
                     var8 = aPacket1521.readUnsignedByte();
                     var13 = interfaceNodes.lookup((long) var63);
@@ -4407,10 +4469,10 @@ public final class Client extends Applet_Sub1 {
                 interfaceConfigs = new NodeTable(512);
 
                 while (aPacket1521.caret < var2) {
-                    var63 = aPacket1521.method835();
+                    var63 = aPacket1521.readInt();
                     var68 = aPacket1521.readUnsignedShort();
                     var8 = aPacket1521.readUnsignedShort();
-                    var30 = aPacket1521.method835();
+                    var30 = aPacket1521.readInt();
 
                     for (var14 = var68; var14 <= var8; ++var14) {
                         long var50 = (long) var14 + ((long) var63 << 32);
@@ -4558,11 +4620,11 @@ public final class Client extends Applet_Sub1 {
                     if (var11.charAt(var62) == 's') {
                         var74[var62 + 1] = aPacket1521.method819();
                     } else {
-                        var74[var62 + 1] = new Integer(aPacket1521.method835());
+                        var74[var62 + 1] = new Integer(aPacket1521.readInt());
                     }
                 }
 
-                var74[0] = new Integer(aPacket1521.method835());
+                var74[0] = new Integer(aPacket1521.readInt());
                 ScriptEvent var65 = new ScriptEvent();
                 var65.args = var74;
                 Class25.method174(var65);
@@ -4594,7 +4656,7 @@ public final class Client extends Applet_Sub1 {
             }
 
             if (anInt1511 == 121) {
-                var2 = aPacket1521.method835();
+                var2 = aPacket1521.readInt();
                 var3 = aPacket1521.method846();
                 InterfaceNode var64 = interfaceNodes.lookup((long) var3);
                 var110 = interfaceNodes.lookup((long) var2);
@@ -4671,7 +4733,7 @@ public final class Client extends Applet_Sub1 {
                 World var84 = new World();
                 var84.domain = aPacket1521.method819();
                 var84.id = aPacket1521.readUnsignedShort();
-                var3 = aPacket1521.method835();
+                var3 = aPacket1521.readInt();
                 var84.mask = var3;
                 Class45.method304(45);
                 InterfaceNode.aGameSocket317.method882();
@@ -4683,7 +4745,7 @@ public final class Client extends Applet_Sub1 {
 
             if (anInt1511 == 62) {
                 var2 = aPacket1521.method841();
-                var3 = aPacket1521.method835();
+                var3 = aPacket1521.readInt();
                 var6 = InterfaceComponent.method1016(var3);
                 if (var2 != var6.anInt784 || var2 == -1) {
                     var6.anInt784 = var2;
@@ -4835,10 +4897,10 @@ public final class Client extends Applet_Sub1 {
             }
 
             method332("" + anInt1511 + "," + anInt1516 + "," + anInt1517 + "," + anInt1514, null);
-            TextureProviderImpl.method499();
+            method499();
         } catch (IOException var60) {
             if (specialScript > 0) {
-                TextureProviderImpl.method499();
+                method499();
             } else {
                 Class45.method304(40);
                 Class154.aGameSocket1833 = InterfaceNode.aGameSocket317;
@@ -4852,7 +4914,7 @@ public final class Client extends Applet_Sub1 {
             }
 
             method332(var11, var61);
-            TextureProviderImpl.method499();
+            method499();
         }
 
         return true;
@@ -4916,7 +4978,7 @@ public final class Client extends Applet_Sub1 {
                         var4 = var4 + Class75.method449(16777215) + " " + '/' + " " + (menuRowCount - 2) + " more options";
                     }
 
-                    Class35.aFont313.method1165(var4, var1 + 4, var2 + 15, 16777215, 0, engineCycle / 1000);
+                    Class35.font_b12_full.method1165(var4, var1 + 4, var2 + 15, 16777215, 0, engineCycle / 1000);
                 }
             }
         } else {
@@ -4964,7 +5026,7 @@ public final class Client extends Applet_Sub1 {
                     if (var14.aNode_Sub10_Sub2_401 == null) {
                         if (var14.anInt220 >= 0) {
                             var10000 = null;
-                            AudioEffect var9 = AudioEffect.method606(Class34.aCacheReferenceTable274, var14.anInt220, 0);
+                            AudioEffect var9 = AudioEffect.method606(Class34.audioEffects, var14.anInt220, 0);
                             if (var9 != null) {
                                 Node_Sub11_Sub1 var10 = var9.method609().method473(Class33.aClass94_254);
                                 Node_Sub10_Sub2 var11 = Node_Sub10_Sub2.method535(var10, 100, var8);
@@ -4981,7 +5043,7 @@ public final class Client extends Applet_Sub1 {
                         if (var14.anIntArray404 != null && (var14.anInt225 -= var6) <= 0) {
                             int var12 = (int) (Math.random() * (double) var14.anIntArray404.length);
                             var10000 = null;
-                            AudioEffect var15 = AudioEffect.method606(Class34.aCacheReferenceTable274, var14.anIntArray404[var12], 0);
+                            AudioEffect var15 = AudioEffect.method606(Class34.audioEffects, var14.anIntArray404[var12], 0);
                             if (var15 != null) {
                                 Node_Sub11_Sub1 var16 = var15.method609().method473(Class33.aClass94_254);
                                 Node_Sub10_Sub2 var13 = Node_Sub10_Sub2.method535(var16, 100, var8);
@@ -5015,7 +5077,7 @@ public final class Client extends Applet_Sub1 {
     }
 
     protected final void method259() {
-        aLong1691 = Class124.currentTime() + 500L;
+        aLong1691 = GzipDecompresser.currentTime() + 500L;
         this.method903();
         if (anInt1632 != -1) {
             this.method896(true);

@@ -38,8 +38,8 @@ public class ClientPreferences {
                     int var3 = var1.readUnsignedByte();
 
                     for (int var4 = 0; var4 < var3; ++var4) {
-                        int var5 = var1.method835();
-                        int var6 = var1.method835();
+                        int var5 = var1.readInt();
+                        int var6 = var1.readInt();
                         this.properties.put(var5, var6);
                     }
                 }

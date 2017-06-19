@@ -634,7 +634,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
             anInt263 = 0;
             anInt256 = var1.getX();
             anInt266 = var1.getY();
-            aLong268 = Class124.currentTime();
+            aLong268 = GzipDecompresser.currentTime();
             if (var1.isAltDown()) {
                 anInt258 = 4;
                 anInt257 = 4;

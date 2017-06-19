@@ -403,12 +403,12 @@ public class InterfaceComponent extends Node {
         }
 
         if (this.type == 5) {
-            this.materialId = var1.method835();
+            this.materialId = var1.readInt();
             this.spriteId = var1.readUnsignedShort();
             this.aBoolean789 = var1.readUnsignedByte() == 1;
             this.anInt1864 = var1.readUnsignedByte();
             this.borderThickness = var1.readUnsignedByte();
-            this.shadowColor = var1.method835();
+            this.shadowColor = var1.readInt();
             this.flippedVertically = var1.readUnsignedByte() == 1;
             this.flippedHorizontally = var1.readUnsignedByte() == 1;
         }
@@ -453,18 +453,18 @@ public class InterfaceComponent extends Node {
             this.anInt796 = var1.readUnsignedByte();
             this.anInt795 = var1.readUnsignedByte();
             this.textShadowed = var1.readUnsignedByte() == 1;
-            this.textColor = var1.method835();
+            this.textColor = var1.readInt();
         }
 
         if (this.type == 3) {
-            this.textColor = var1.method835();
+            this.textColor = var1.readInt();
             this.aBoolean1861 = var1.readUnsignedByte() == 1;
             this.anInt1864 = var1.readUnsignedByte();
         }
 
         if (this.type == 9) {
             this.anInt1859 = var1.readUnsignedByte();
-            this.textColor = var1.method835();
+            this.textColor = var1.readInt();
             this.aBoolean1863 = var1.readUnsignedByte() == 1;
         }
 
@@ -516,7 +516,7 @@ public class InterfaceComponent extends Node {
         for (int var4 = 0; var4 < var2; ++var4) {
             int var5 = var1.readUnsignedByte();
             if (var5 == 0) {
-                var3[var4] = var1.method835();
+                var3[var4] = var1.readInt();
             } else if (var5 == 1) {
                 var3[var4] = var1.method819();
             }
@@ -534,7 +534,7 @@ public class InterfaceComponent extends Node {
         int[] var3 = new int[var2];
 
         for (int var4 = 0; var4 < var2; ++var4) {
-            var3[var4] = var1.method835();
+            var3[var4] = var1.readInt();
         }
 
         return var3;
@@ -858,7 +858,7 @@ public class InterfaceComponent extends Node {
                 if (var9 == 1) {
                     this.anIntArray1881[var8] = var1.readShort();
                     this.anIntArray1885[var8] = var1.readShort();
-                    this.anIntArray1883[var8] = var1.method835();
+                    this.anIntArray1883[var8] = var1.readInt();
                 } else {
                     this.anIntArray1883[var8] = -1;
                 }
@@ -897,18 +897,18 @@ public class InterfaceComponent extends Node {
         }
 
         if (this.type == 1 || this.type == 3 || this.type == 4) {
-            this.textColor = var1.method835();
+            this.textColor = var1.readInt();
         }
 
         if (this.type == 3 || this.type == 4) {
-            this.anInt761 = var1.method835();
-            this.anInt756 = var1.method835();
-            this.anInt767 = var1.method835();
+            this.anInt761 = var1.readInt();
+            this.anInt756 = var1.readInt();
+            this.anInt767 = var1.readInt();
         }
 
         if (this.type == 5) {
-            this.materialId = var1.method835();
-            this.enabledMaterialId = var1.method835();
+            this.materialId = var1.readInt();
+            this.enabledMaterialId = var1.readInt();
         }
 
         if (this.type == 6) {
@@ -949,7 +949,7 @@ public class InterfaceComponent extends Node {
             }
 
             this.textShadowed = var1.readUnsignedByte() == 1;
-            this.textColor = var1.method835();
+            this.textColor = var1.readInt();
             this.xPadding = var1.readShort();
             this.yPadding = var1.readShort();
             var4 = var1.readUnsignedByte();

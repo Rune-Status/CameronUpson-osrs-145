@@ -90,7 +90,7 @@ public class ItemDefinition extends DoublyNode {
         } else if (var2 == 11) {
             this.stackable = 1;
         } else if (var2 == 12) {
-            this.value = var1.method835();
+            this.value = var1.readInt();
         } else if (var2 == 16) {
             this.aBoolean1731 = true;
         } else if (var2 == 23) {

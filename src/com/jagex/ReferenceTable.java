@@ -1,22 +1,22 @@
 package com.jagex;
 
 public abstract class ReferenceTable {
-    static int anInt2060 = 0;
-    static Class124 aClass124_2056 = new Class124();
+    static int maxContainerSize = 0;
+    static GzipDecompresser aGzipDecompresser_2056 = new GzipDecompresser();
     public int anInt2048;
     boolean aBoolean2062;
-    IdentityTable entry;
-    IdentityTable[] children;
-    int[] anIntArray2064;
-    int[] anIntArray2054;
-    int[] anIntArray2063;
-    int[][] anIntArrayArray2051;
+    LookupTable entry;
+    LookupTable[] children;
+    int[] entryVersions;
+    int[] childCounts;
+    int[] entryCrcs;
+    int[][] childNames;
     int[] anIntArray2050;
     Object[] anObjectArray2057;
     Object[][] buffer;
-    int anInt2058;
-    int[][] anIntArrayArray2053;
-    int[] anIntArray2055;
+    int entryCount;
+    int[][] childIndices;
+    int[] entryIndices;
     boolean aBoolean2052;
 
     ReferenceTable(boolean var1, boolean var2) {
@@ -38,33 +38,64 @@ public abstract class ReferenceTable {
         Class85.method497();
     }
 
-    static byte[] method1003(byte[] var0) {
-        Buffer var1 = new Buffer(var0);
-        int var2 = var1.readUnsignedByte();
-        int var3 = var1.method835();
-        if (var3 < 0 || anInt2060 != 0 && var3 > anInt2060) {
+    static byte[] decodeContainer(byte[] var0) {
+        Buffer buffer = new Buffer(var0);
+        int type = buffer.readUnsignedByte();
+        int compressed = buffer.readInt();
+        if (compressed < 0 || maxContainerSize != 0 && compressed > maxContainerSize) {
             throw new RuntimeException();
         }
-        if (var2 == 0) {
-            byte[] var4 = new byte[var3];
-            var1.method826(var4, 0, var3);
-            return var4;
+        if (type == 0) {
+            byte[] data = new byte[compressed];
+            buffer.read(data, 0, compressed);
+            return data;
         }
-        int var5 = var1.method835();
-        if (var5 >= 0 && (anInt2060 == 0 || var5 <= anInt2060)) {
-            byte[] var6 = new byte[var5];
-            if (var2 == 1) {
-                Class114.method776(var6, var5, var0, var3, 9);
+        int len = buffer.readInt();
+        if (len >= 0 && (maxContainerSize == 0 || len <= maxContainerSize)) {
+            byte[] data = new byte[len];
+            if (type == 1) {
+                Bzip2Decompressor.decompress(data, len, var0, compressed, 9);
             } else {
-                aClass124_2056.method874(var1, var6);
+                aGzipDecompresser_2056.decompress(buffer, data);
             }
 
-            return var6;
+            return data;
         }
         throw new RuntimeException();
     }
 
-    void method1094(byte[] var1) {
+    public static CompressedImage readCompressedImage(ReferenceTable var0, int var1) {
+        byte[] var2 = var0.method1093(var1);
+        boolean var3;
+        if (var2 == null) {
+            var3 = false;
+        } else {
+            IsaacCipher.method794(var2);
+            var3 = true;
+        }
+
+        if (!var3) {
+            return null;
+        }
+        CompressedImage var4 = new CompressedImage();
+        var4.anInt221 = Class160.anInt1857;
+        var4.anInt220 = Class191.anInt2246;
+        var4.anInt327 = Class191.anIntArray2245[0];
+        var4.anInt328 = Class191.anIntArray2248[0];
+        var4.anInt206 = Class191.anIntArray2249[0];
+        var4.anInt232 = Class109.anIntArray1305[0];
+        var4.anIntArray342 = Class94.anIntArray1043;
+        var4.aByteArray1361 = Class191.aByteArrayArray2247[0];
+        Class191.anIntArray2245 = null;
+        Class191.anIntArray2248 = null;
+        Class191.anIntArray2249 = null;
+        Class109.anIntArray1305 = null;
+        Class94.anIntArray1043 = null;
+        Class191.aByteArrayArray2247 = null;
+        return var4;
+    }
+
+    void decode(byte[] var1) {
         int var2 = var1.length;
         int var3 = -1;
 
@@ -75,66 +106,66 @@ public abstract class ReferenceTable {
 
         var3 = ~var3;
         this.anInt2048 = var3;
-        Buffer var7 = new Buffer(method1003(var1));
+        Buffer var7 = new Buffer(decodeContainer(var1));
         var3 = var7.readUnsignedByte();
         if (var3 >= 5 && var3 <= 7) {
             if (var3 >= 6) {
-                var7.method835();
+                var7.readInt();
             }
 
             var4 = var7.readUnsignedByte();
             if (var3 >= 7) {
-                this.anInt2058 = var7.method831();
+                this.entryCount = var7.method831();
             } else {
-                this.anInt2058 = var7.readUnsignedShort();
+                this.entryCount = var7.readUnsignedShort();
             }
 
             int var8 = 0;
             int var9 = -1;
-            this.anIntArray2055 = new int[this.anInt2058];
+            this.entryIndices = new int[this.entryCount];
             int var10;
             if (var3 >= 7) {
-                for (var10 = 0; var10 < this.anInt2058; ++var10) {
-                    this.anIntArray2055[var10] = var8 += var7.method831();
-                    if (this.anIntArray2055[var10] > var9) {
-                        var9 = this.anIntArray2055[var10];
+                for (var10 = 0; var10 < this.entryCount; ++var10) {
+                    this.entryIndices[var10] = var8 += var7.method831();
+                    if (this.entryIndices[var10] > var9) {
+                        var9 = this.entryIndices[var10];
                     }
                 }
             } else {
-                for (var10 = 0; var10 < this.anInt2058; ++var10) {
-                    this.anIntArray2055[var10] = var8 += var7.readUnsignedShort();
-                    if (this.anIntArray2055[var10] > var9) {
-                        var9 = this.anIntArray2055[var10];
+                for (var10 = 0; var10 < this.entryCount; ++var10) {
+                    this.entryIndices[var10] = var8 += var7.readUnsignedShort();
+                    if (this.entryIndices[var10] > var9) {
+                        var9 = this.entryIndices[var10];
                     }
                 }
             }
 
-            this.anIntArray2063 = new int[var9 + 1];
-            this.anIntArray2064 = new int[var9 + 1];
-            this.anIntArray2054 = new int[var9 + 1];
-            this.anIntArrayArray2053 = new int[var9 + 1][];
+            this.entryCrcs = new int[var9 + 1];
+            this.entryVersions = new int[var9 + 1];
+            this.childCounts = new int[var9 + 1];
+            this.childIndices = new int[var9 + 1][];
             this.anObjectArray2057 = new Object[var9 + 1];
             this.buffer = new Object[var9 + 1][];
             if (var4 != 0) {
                 this.anIntArray2050 = new int[var9 + 1];
 
-                for (var10 = 0; var10 < this.anInt2058; ++var10) {
-                    this.anIntArray2050[this.anIntArray2055[var10]] = var7.method835();
+                for (var10 = 0; var10 < this.entryCount; ++var10) {
+                    this.anIntArray2050[this.entryIndices[var10]] = var7.readInt();
                 }
 
-                this.entry = new IdentityTable(this.anIntArray2050);
+                this.entry = new LookupTable(this.anIntArray2050);
             }
 
-            for (var10 = 0; var10 < this.anInt2058; ++var10) {
-                this.anIntArray2063[this.anIntArray2055[var10]] = var7.method835();
+            for (var10 = 0; var10 < this.entryCount; ++var10) {
+                this.entryCrcs[this.entryIndices[var10]] = var7.readInt();
             }
 
-            for (var10 = 0; var10 < this.anInt2058; ++var10) {
-                this.anIntArray2064[this.anIntArray2055[var10]] = var7.method835();
+            for (var10 = 0; var10 < this.entryCount; ++var10) {
+                this.entryVersions[this.entryIndices[var10]] = var7.readInt();
             }
 
-            for (var10 = 0; var10 < this.anInt2058; ++var10) {
-                this.anIntArray2054[this.anIntArray2055[var10]] = var7.readUnsignedShort();
+            for (var10 = 0; var10 < this.entryCount; ++var10) {
+                this.childCounts[this.entryIndices[var10]] = var7.readUnsignedShort();
             }
 
             int var11;
@@ -143,15 +174,15 @@ public abstract class ReferenceTable {
             int var14;
             int var15;
             if (var3 >= 7) {
-                for (var10 = 0; var10 < this.anInt2058; ++var10) {
-                    var11 = this.anIntArray2055[var10];
-                    var12 = this.anIntArray2054[var11];
+                for (var10 = 0; var10 < this.entryCount; ++var10) {
+                    var11 = this.entryIndices[var10];
+                    var12 = this.childCounts[var11];
                     var8 = 0;
                     var13 = -1;
-                    this.anIntArrayArray2053[var11] = new int[var12];
+                    this.childIndices[var11] = new int[var12];
 
                     for (var14 = 0; var14 < var12; ++var14) {
-                        var15 = this.anIntArrayArray2053[var11][var14] = var8 += var7.method831();
+                        var15 = this.childIndices[var11][var14] = var8 += var7.method831();
                         if (var15 > var13) {
                             var13 = var15;
                         }
@@ -160,15 +191,15 @@ public abstract class ReferenceTable {
                     this.buffer[var11] = new Object[var13 + 1];
                 }
             } else {
-                for (var10 = 0; var10 < this.anInt2058; ++var10) {
-                    var11 = this.anIntArray2055[var10];
-                    var12 = this.anIntArray2054[var11];
+                for (var10 = 0; var10 < this.entryCount; ++var10) {
+                    var11 = this.entryIndices[var10];
+                    var12 = this.childCounts[var11];
                     var8 = 0;
                     var13 = -1;
-                    this.anIntArrayArray2053[var11] = new int[var12];
+                    this.childIndices[var11] = new int[var12];
 
                     for (var14 = 0; var14 < var12; ++var14) {
-                        var15 = this.anIntArrayArray2053[var11][var14] = var8 += var7.readUnsignedShort();
+                        var15 = this.childIndices[var11][var14] = var8 += var7.readUnsignedShort();
                         if (var15 > var13) {
                             var13 = var15;
                         }
@@ -179,19 +210,19 @@ public abstract class ReferenceTable {
             }
 
             if (var4 != 0) {
-                this.anIntArrayArray2051 = new int[var9 + 1][];
-                this.children = new IdentityTable[var9 + 1];
+                this.childNames = new int[var9 + 1][];
+                this.children = new LookupTable[var9 + 1];
 
-                for (var10 = 0; var10 < this.anInt2058; ++var10) {
-                    var11 = this.anIntArray2055[var10];
-                    var12 = this.anIntArray2054[var11];
-                    this.anIntArrayArray2051[var11] = new int[this.buffer[var11].length];
+                for (var10 = 0; var10 < this.entryCount; ++var10) {
+                    var11 = this.entryIndices[var10];
+                    var12 = this.childCounts[var11];
+                    this.childNames[var11] = new int[this.buffer[var11].length];
 
                     for (var13 = 0; var13 < var12; ++var13) {
-                        this.anIntArrayArray2051[var11][this.anIntArrayArray2053[var11][var13]] = var7.method835();
+                        this.childNames[var11][this.childIndices[var11][var13]] = var7.readInt();
                     }
 
-                    this.children[var11] = new IdentityTable(this.anIntArrayArray2051[var11]);
+                    this.children[var11] = new LookupTable(this.childNames[var11]);
                 }
             }
 
@@ -251,8 +282,8 @@ public abstract class ReferenceTable {
     public boolean method1088() {
         boolean var1 = true;
 
-        for (int var2 = 0; var2 < this.anIntArray2055.length; ++var2) {
-            int var3 = this.anIntArray2055[var2];
+        for (int var2 = 0; var2 < this.entryIndices.length; ++var2) {
+            int var3 = this.entryIndices[var2];
             if (this.anObjectArray2057[var3] == null) {
                 this.method1081(var3);
                 if (this.anObjectArray2057[var3] == null) {
@@ -278,7 +309,7 @@ public abstract class ReferenceTable {
         throw new RuntimeException();
     }
 
-    public byte[] method1095(int var1, int var2) {
+    public byte[] get(int var1, int var2) {
         if (var1 >= 0 && var1 < this.buffer.length && this.buffer[var1] != null && var2 >= 0 && var2 < this.buffer[var1].length) {
             if (this.buffer[var1][var2] == null) {
                 boolean var3 = this.method1090(var1, null);
@@ -296,12 +327,12 @@ public abstract class ReferenceTable {
         return null;
     }
 
-    public byte[] method1092(int var1) {
+    public byte[] get(int var1) {
         if (this.buffer.length == 1) {
-            return this.method1095(0, var1);
+            return this.get(0, var1);
         }
         if (this.buffer[var1].length == 1) {
-            return this.method1095(var1, 0);
+            return this.get(var1, 0);
         }
         throw new RuntimeException();
     }
@@ -310,7 +341,7 @@ public abstract class ReferenceTable {
     }
 
     public int[] method1087(int var1) {
-        return this.anIntArrayArray2053[var1];
+        return this.childIndices[var1];
     }
 
     public int method1097() {
@@ -340,8 +371,8 @@ public abstract class ReferenceTable {
         if (this.anObjectArray2057[var1] == null) {
             return false;
         }
-        int var3 = this.anIntArray2054[var1];
-        int[] var4 = this.anIntArrayArray2053[var1];
+        int var3 = this.childCounts[var1];
+        int[] var4 = this.childIndices[var1];
         Object[] var5 = this.buffer[var1];
         boolean var6 = true;
 
@@ -364,7 +395,7 @@ public abstract class ReferenceTable {
             var8 = Class148.method1000(this.anObjectArray2057[var1], false);
         }
 
-        byte[] var20 = method1003(var8);
+        byte[] var20 = decodeContainer(var8);
         if (this.aBoolean2052) {
             this.anObjectArray2057[var1] = null;
         }
@@ -384,7 +415,7 @@ public abstract class ReferenceTable {
                 var15 = 0;
 
                 for (var16 = 0; var16 < var3; ++var16) {
-                    var15 += var12.method835();
+                    var15 += var12.readInt();
                     var13[var16] += var15;
                 }
             }
@@ -403,7 +434,7 @@ public abstract class ReferenceTable {
                 int var18 = 0;
 
                 for (int var19 = 0; var19 < var3; ++var19) {
-                    var18 += var12.method835();
+                    var18 += var12.readInt();
                     System.arraycopy(var20, var15, var17[var19], var13[var19], var18);
                     var13[var19] += var18;
                     var15 += var18;

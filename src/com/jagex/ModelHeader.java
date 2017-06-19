@@ -767,7 +767,7 @@ public class ModelHeader extends Entity {
             var2.readUnsignedShort();
             var2.readUnsignedShort();
             var2.readUnsignedShort();
-            var2.method835();
+            var2.readInt();
         }
 
     }

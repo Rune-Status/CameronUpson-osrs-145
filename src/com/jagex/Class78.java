@@ -253,7 +253,7 @@ final class Class78 implements Class66 {
         Class82 var0 = null;
 
         try {
-            var0 = TextureProviderImpl.method502("", Client.aClass162_1468.aString1955, true);
+            var0 = Client.method502("", Client.aClass162_1468.aString1955, true);
             Buffer var1 = Client.preferences.writeBuffer();
             var0.method478(var1.payload, 0, var1.caret);
         } catch (Exception var3) {

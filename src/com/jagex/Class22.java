@@ -367,7 +367,7 @@ public class Class22 {
         int var3 = var2.readUnsignedShort();
         int var4 = var2.payload.length - 2 - var3 - 12;
         var2.caret = var4;
-        int var5 = var2.method835();
+        int var5 = var2.readInt();
         var1.anInt327 = var2.readUnsignedShort();
         var1.anInt328 = var2.readUnsignedShort();
         var1.anInt221 = var2.readUnsignedShort();
@@ -384,8 +384,8 @@ public class Class22 {
                 var1.aIterableNodeTableArray667[var7] = var9;
 
                 while (var8-- > 0) {
-                    int var10 = var2.method835();
-                    int var11 = var2.method835();
+                    int var10 = var2.readInt();
+                    int var11 = var2.readInt();
                     var9.put(new IntegerNode(var11), (long) var10);
                 }
             }
@@ -402,7 +402,7 @@ public class Class22 {
             if (var8 == 3) {
                 var1.aStringArray665[var7] = var2.method819();
             } else if (var8 < 100 && var8 != 21 && var8 != 38 && var8 != 39) {
-                var1.anIntArray340[var7] = var2.method835();
+                var1.anIntArray340[var7] = var2.readInt();
             } else {
                 var1.anIntArray340[var7] = var2.readUnsignedByte();
             }

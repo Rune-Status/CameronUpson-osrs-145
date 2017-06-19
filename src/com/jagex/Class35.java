@@ -1,7 +1,7 @@
 package com.jagex;
 
 public class Class35 {
-    static Font aFont313;
+    static Font font_b12_full;
     static InterfaceComponent[] anInterfaceComponentArray314;
 
     static void method262(Node_Sub10 var0) {

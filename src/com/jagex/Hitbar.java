@@ -171,8 +171,8 @@ public class Hitbar extends Node {
             if (var0.aString752 != null && (var1 >= var7 || !var0.aBoolean759 && (Client.anInt1689 == 4 || !var0.aBoolean750 && (Client.anInt1689 == 0 || Client.anInt1689 == 3 || Client.anInt1689 == 1 && Class112.method771(((PlayerEntity) var0).name, false))))) {
                 Node_Sub20.method971(var0, var0.anInt803);
                 if (Client.anInt1561 > -1 && Client.anInt1552 < Client.anInt1567) {
-                    Client.anIntArray1554[Client.anInt1552] = Class35.aFont313.getTextWidth(var0.aString752) / 2;
-                    Client.anIntArray1568[Client.anInt1552] = Class35.aFont313.anInt221;
+                    Client.anIntArray1554[Client.anInt1552] = Class35.font_b12_full.getTextWidth(var0.aString752) / 2;
+                    Client.anIntArray1568[Client.anInt1552] = Class35.font_b12_full.anInt221;
                     Client.anIntArray1572[Client.anInt1552] = Client.anInt1561;
                     Client.anIntArray1560[Client.anInt1552] = Client.anInt1571;
                     Client.anIntArray1566[Client.anInt1552] = var0.anInt756;

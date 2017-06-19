@@ -204,11 +204,11 @@ public final class Class5 {
                             }
 
                             if (component.contentType == 1400) {
-                                Class9.aClass189_68.method1298(var12, var13, component.width, component.height, Client.engineCycle);
+                                Class9.worldMap.method1298(var12, var13, component.width, component.height, Client.engineCycle);
                             }
 
                             if (component.contentType == 1401) {
-                                Class9.aClass189_68.method1292(var12, var13, component.width, component.height);
+                                Class9.worldMap.method1292(var12, var13, component.width, component.height);
                             }
                         }
 

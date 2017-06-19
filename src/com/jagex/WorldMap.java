@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
-public class Class189 {
+public class WorldMap {
     static final Class180 aClass180_2213;
     static final Class180 aClass180_2210;
     static final Class180 aClass180_2206;
@@ -20,7 +20,7 @@ public class Class189 {
     int anInt2219 = -1;
     Class190 aClass190_2229;
     WorldMapTransportation aWorldMapTransportation_2211;
-    ReferenceTable aReferenceTable2215;
+    ReferenceTable table;
     HashMap aHashMap2227;
     CompressedImage[] aCompressedImageArray2222;
     HashMap aHashMap2202;
@@ -51,7 +51,7 @@ public class Class189 {
     int anInt2214 = 0;
     List aList2230;
     Iterator anIterator2221;
-    Font aFont2225;
+    Font font_b12_full;
 
     public void method1288(int var1, int var2, boolean var3, int var4, int var5, int var6, int var7) {
         if (this.aClass190_2229.method1309()) {
@@ -220,7 +220,7 @@ public class Class189 {
             this.method1304(var1, var2, var3, var4, var7);
         } else {
             if (!this.aClass7_2217.method34()) {
-                this.aClass7_2217.method35(this.aReferenceTable2215, this.aWorldMapTransportation_2234.getFileName(), Client.membersWorld);
+                this.aClass7_2217.method35(this.table, this.aWorldMapTransportation_2234.getFileName(), Client.membersWorld);
                 if (!this.aClass7_2217.method34()) {
                     return;
                 }
@@ -260,7 +260,7 @@ public class Class189 {
     public void method1292(int var1, int var2, int var3, int var4) {
         if (this.aClass190_2229.method1309()) {
             if (!this.aClass7_2217.method34()) {
-                this.aClass7_2217.method35(this.aReferenceTable2215, this.aWorldMapTransportation_2234.getFileName(), Client.membersWorld);
+                this.aClass7_2217.method35(this.table, this.aWorldMapTransportation_2234.getFileName(), Client.membersWorld);
                 if (!this.aClass7_2217.method34()) {
                     return;
                 }
@@ -281,7 +281,7 @@ public class Class189 {
         DrawingArea.method1223(var1, var2, var3, var4, -16777216);
         DrawingArea.drawRectangle(var7 - 152, var8, 304, 34, -65536);
         DrawingArea.method1223(var7 - 150, var8 + 2, var5 * 3, 30, -65536);
-        this.aFont2225.method1161("Loading...", var7, var8 + var6, -1, -1);
+        this.font_b12_full.method1161("Loading...", var7, var8 + var6, -1, -1);
     }
 
     float method1285(int var1) {
@@ -324,21 +324,21 @@ public class Class189 {
         return this.aClass190_2229.method1309();
     }
 
-    public void method1296(ReferenceTable var1, Font var2, HashMap var3, CompressedImage[] var4) {
+    public void initialize(ReferenceTable table, Font b12_full, HashMap fonts, CompressedImage[] var4) {
         this.aCompressedImageArray2222 = var4;
-        this.aReferenceTable2215 = var1;
-        this.aFont2225 = var2;
+        this.table = table;
+        this.font_b12_full = b12_full;
         this.aHashMap2227 = new HashMap();
-        this.aHashMap2227.put(Class77.aClass77_827, var3.get(aClass180_2213));
-        this.aHashMap2227.put(Class77.aClass77_837, var3.get(aClass180_2210));
-        this.aHashMap2227.put(Class77.aClass77_830, var3.get(aClass180_2206));
-        this.aClass190_2229 = new Class190(var1);
-        int var5 = this.aReferenceTable2215.method1084(Class10.aClass10_70.aString77);
-        int[] var6 = this.aReferenceTable2215.method1087(var5);
+        this.aHashMap2227.put(Class77.aClass77_827, fonts.get(aClass180_2213));
+        this.aHashMap2227.put(Class77.aClass77_837, fonts.get(aClass180_2210));
+        this.aHashMap2227.put(Class77.aClass77_830, fonts.get(aClass180_2206));
+        this.aClass190_2229 = new Class190(table);
+        int var5 = this.table.method1084(Class10.aClass10_70.aString77);
+        int[] var6 = this.table.method1087(var5);
         this.aHashMap2202 = new HashMap(var6.length);
 
         for (int var7 = 0; var7 < var6.length; ++var7) {
-            Buffer var8 = new Buffer(this.aReferenceTable2215.unpack(var5, var6[var7]));
+            Buffer var8 = new Buffer(this.table.unpack(var5, var6[var7]));
             WorldMapTransportation var9 = new WorldMapTransportation();
             var9.read(var8, var6[var7]);
             this.aHashMap2202.put(var9.getFileName(), var9);
@@ -692,8 +692,8 @@ public class Class189 {
             this.anInt2236 = -1;
         }
     }
-
-    public int method1293() {
-        return this.aReferenceTable2215.method1100(this.aWorldMapTransportation_2211.getFileName(), Class10.aClass10_71.aString77) ? 100 : this.aReferenceTable2215.method1086(this.aWorldMapTransportation_2211.getFileName());
+    
+    public int getPercentLoaded() {
+        return this.table.method1100(this.aWorldMapTransportation_2211.getFileName(), Class10.aClass10_71.aString77) ? 100 : this.table.method1086(this.aWorldMapTransportation_2211.getFileName());
     }
 }

@@ -1,7 +1,7 @@
 package com.jagex;
 
 public class Class2 {
-    static CacheReferenceTable aCacheReferenceTable8;
+    static CacheReferenceTable fontMetrics;
     static int anInt9;
     static int anInt15;
     static CompressedImage[] aCompressedImageArray12;
@@ -38,19 +38,19 @@ public class Class2 {
         int var30;
         if (Login.aBoolean694) {
             if (Class158.aSpriteArray1847 == null) {
-                Class158.aSpriteArray1847 = RuntimeException_Sub1.method742(Class21.aCacheReferenceTable139, "sl_back", "");
+                Class158.aSpriteArray1847 = RuntimeException_Sub1.method742(Class21.materials, "sl_back", "");
             }
 
             if (Login.aCompressedImageArray708 == null) {
-                Login.aCompressedImageArray708 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "sl_flags", "");
+                Login.aCompressedImageArray708 = InterfaceNode.method267(Class21.materials, "sl_flags", "");
             }
 
             if (Class22.aCompressedImageArray147 == null) {
-                Class22.aCompressedImageArray147 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "sl_arrows", "");
+                Class22.aCompressedImageArray147 = InterfaceNode.method267(Class21.materials, "sl_arrows", "");
             }
 
             if (WorldMapTransportation.aCompressedImageArray85 == null) {
-                WorldMapTransportation.aCompressedImageArray85 = InterfaceNode.method267(Class21.aCacheReferenceTable139, "sl_stars", "");
+                WorldMapTransportation.aCompressedImageArray85 = InterfaceNode.method267(Class21.materials, "sl_stars", "");
             }
 
             DrawingArea.method1223(Login.anInt702, 23, 765, 480, 0);
@@ -539,7 +539,7 @@ public class Class2 {
                         var1.method1161("Click to switch", var26 + var32 / 2, var27 + var31 / 2 + 12, 16777215, 0);
                     }
                 } else {
-                    Class108.aCompressedImage_1296 = Class185.method1203(Class21.aCacheReferenceTable139, "sl_button", "");
+                    Class108.aCompressedImage_1296 = Class185.method1203(Class21.materials, "sl_button", "");
                 }
             }
 

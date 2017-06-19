@@ -13,23 +13,23 @@ public class Node_Sub16 extends Node {
     int[] anIntArray1171;
     boolean aBoolean1318 = false;
 
-    Node_Sub16(Buffer var1) {
-        this.anInt327 = var1.readUnsignedShort();
-        this.aBoolean994 = var1.readUnsignedByte() == 1;
-        int var2 = var1.readUnsignedByte();
+    Node_Sub16(Buffer buffer) {
+        this.anInt327 = buffer.readUnsignedShort();
+        this.aBoolean994 = buffer.readUnsignedByte() == 1;
+        int var2 = buffer.readUnsignedByte();
         if (var2 >= 1 && var2 <= 4) {
             this.anIntArray934 = new int[var2];
 
             int var3;
             for (var3 = 0; var3 < var2; ++var3) {
-                this.anIntArray934[var3] = var1.readUnsignedShort();
+                this.anIntArray934[var3] = buffer.readUnsignedShort();
             }
 
             if (var2 > 1) {
                 this.anIntArray932 = new int[var2 - 1];
 
                 for (var3 = 0; var3 < var2 - 1; ++var3) {
-                    this.anIntArray932[var3] = var1.readUnsignedByte();
+                    this.anIntArray932[var3] = buffer.readUnsignedByte();
                 }
             }
 
@@ -37,18 +37,18 @@ public class Node_Sub16 extends Node {
                 this.anIntArray1319 = new int[var2 - 1];
 
                 for (var3 = 0; var3 < var2 - 1; ++var3) {
-                    this.anIntArray1319[var3] = var1.readUnsignedByte();
+                    this.anIntArray1319[var3] = buffer.readUnsignedByte();
                 }
             }
 
             this.anIntArray1271 = new int[var2];
 
             for (var3 = 0; var3 < var2; ++var3) {
-                this.anIntArray1271[var3] = var1.method835();
+                this.anIntArray1271[var3] = buffer.readInt();
             }
 
-            this.anInt226 = var1.readUnsignedByte();
-            this.anInt228 = var1.readUnsignedByte();
+            this.anInt226 = buffer.readUnsignedByte();
+            this.anInt228 = buffer.readUnsignedByte();
             this.anIntArray1171 = null;
         } else {
             throw new RuntimeException();
@@ -59,10 +59,10 @@ public class Node_Sub16 extends Node {
         this.anIntArray1171 = null;
     }
 
-    boolean method754(double var1, int var3, ReferenceTable var4) {
+    boolean method754(double var1, int var3, ReferenceTable table) {
         int var5;
         for (var5 = 0; var5 < this.anIntArray934.length; ++var5) {
-            if (var4.method1092(this.anIntArray934[var5]) == null) {
+            if (table.get(this.anIntArray934[var5]) == null) {
                 return false;
             }
         }
@@ -71,12 +71,12 @@ public class Node_Sub16 extends Node {
         this.anIntArray1171 = new int[var5];
 
         for (int var6 = 0; var6 < this.anIntArray934.length; ++var6) {
-            CompressedImage var7 = Class181.method1199(var4, this.anIntArray934[var6]);
+            CompressedImage var7 = ReferenceTable.readCompressedImage(table, this.anIntArray934[var6]);
             var7.method308();
             byte[] var8 = var7.aByteArray1361;
             int[] var9 = var7.anIntArray342;
             int var10 = this.anIntArray1271[var6];
-            if ((var10 & -16777216) == 16777216) {
+            if ((var10 & 0xff000000) == 16777216) {
             }
 
             if ((var10 & -16777216) == 33554432) {

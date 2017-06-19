@@ -30,9 +30,9 @@ public class Class45 {
 
             if (var0 != 5 && var0 != 10) {
                 if (var0 == 20) {
-                    Class93.method601(Class82.aCacheReferenceTable848, Class21.aCacheReferenceTable139, true, Client.connectionState == 11 ? 4 : 0);
+                    Class93.method601(Class82.binary, Class21.materials, true, Client.connectionState == 11 ? 4 : 0);
                 } else if (var0 == 11) {
-                    Class93.method601(Class82.aCacheReferenceTable848, Class21.aCacheReferenceTable139, false, 4);
+                    Class93.method601(Class82.binary, Class21.materials, false, 4);
                 } else if (Login.aBoolean706) {
                     Login.aCompressedImage_690 = null;
                     Login.aCompressedImage_709 = null;
@@ -67,7 +67,7 @@ public class Class45 {
                     Login.aBoolean706 = false;
                 }
             } else {
-                Class93.method601(Class82.aCacheReferenceTable848, Class21.aCacheReferenceTable139, true, 0);
+                Class93.method601(Class82.binary, Class21.materials, true, 0);
             }
 
             Client.connectionState = var0;
@@ -90,7 +90,7 @@ public class Class45 {
 
             for (var4 = 0; var4 < var3; ++var4) {
                 for (var5 = 0; var5 < 4; ++var5) {
-                    Class14.anIntArrayArray118[var4][var5] = Client.aPacket1521.method835();
+                    Class14.anIntArrayArray118[var4][var5] = Client.aPacket1521.readInt();
                 }
             }
 
@@ -115,8 +115,8 @@ public class Class45 {
                     var7 = var6 + (var5 << 8);
                     if (!var15 || var6 != 49 && var6 != 149 && var6 != 147 && var5 != 50 && (var5 != 49 || var6 != 47)) {
                         Class43.anIntArray364[var3] = var7;
-                        Boundary.anIntArray1148[var3] = Class126.aCacheReferenceTable1368.method1084("m" + var5 + "_" + var6);
-                        Class121.anIntArray1359[var3] = Class126.aCacheReferenceTable1368.method1084("l" + var5 + "_" + var6);
+                        Boundary.anIntArray1148[var3] = Class126.landscapes.method1084("m" + var5 + "_" + var6);
+                        Class121.anIntArray1359[var3] = Class126.landscapes.method1084("l" + var5 + "_" + var6);
                         ++var3;
                     }
                 }
@@ -149,7 +149,7 @@ public class Class45 {
 
             for (var5 = 0; var5 < var4; ++var5) {
                 for (var6 = 0; var6 < 4; ++var6) {
-                    Class14.anIntArrayArray118[var5][var6] = Client.aPacket1521.method835();
+                    Class14.anIntArrayArray118[var5][var6] = Client.aPacket1521.readInt();
                 }
             }
 
@@ -181,8 +181,8 @@ public class Class45 {
                                 Class43.anIntArray364[var4] = var11;
                                 var12 = var11 >> 8 & 255;
                                 int var13 = var11 & 255;
-                                Boundary.anIntArray1148[var4] = Class126.aCacheReferenceTable1368.method1084("m" + var12 + "_" + var13);
-                                Class121.anIntArray1359[var4] = Class126.aCacheReferenceTable1368.method1084("l" + var12 + "_" + var13);
+                                Boundary.anIntArray1148[var4] = Class126.landscapes.method1084("m" + var12 + "_" + var13);
+                                Class121.anIntArray1359[var4] = Class126.landscapes.method1084("l" + var12 + "_" + var13);
                                 ++var4;
                             }
                         }

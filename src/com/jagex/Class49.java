@@ -479,25 +479,25 @@ public class Class49 {
                         }
 
                         if (Client.anIntArray1555[var20] == 0) {
-                            Class35.aFont313.method1161(var30, var0 + Client.anInt1561, Client.anInt1571 + var1, var31, 0);
+                            Class35.font_b12_full.method1161(var30, var0 + Client.anInt1561, Client.anInt1571 + var1, var31, 0);
                         }
 
                         if (Client.anIntArray1555[var20] == 1) {
-                            Class35.aFont313.method1180(var30, var0 + Client.anInt1561, var1 + Client.anInt1571, var31, 0, Client.anInt1565);
+                            Class35.font_b12_full.method1180(var30, var0 + Client.anInt1561, var1 + Client.anInt1571, var31, 0, Client.anInt1565);
                         }
 
                         if (Client.anIntArray1555[var20] == 2) {
-                            Class35.aFont313.method1179(var30, var0 + Client.anInt1561, var1 + Client.anInt1571, var31, 0, Client.anInt1565);
+                            Class35.font_b12_full.method1179(var30, var0 + Client.anInt1561, var1 + Client.anInt1571, var31, 0, Client.anInt1565);
                         }
 
                         if (Client.anIntArray1555[var20] == 3) {
-                            Class35.aFont313.method1182(var30, var0 + Client.anInt1561, Client.anInt1571 + var1, var31, 0, Client.anInt1565, 150 - Client.anIntArray1556[var20]);
+                            Class35.font_b12_full.method1182(var30, var0 + Client.anInt1561, Client.anInt1571 + var1, var31, 0, Client.anInt1565, 150 - Client.anIntArray1556[var20]);
                         }
 
                         if (Client.anIntArray1555[var20] == 4) {
-                            var32 = (150 - Client.anIntArray1556[var20]) * (Class35.aFont313.getTextWidth(var30) + 100) / 150;
+                            var32 = (150 - Client.anIntArray1556[var20]) * (Class35.font_b12_full.getTextWidth(var30) + 100) / 150;
                             DrawingArea.method1228(Client.anInt1561 + var0 - 50, var1, var0 + Client.anInt1561 + 50, var1 + var3);
-                            Class35.aFont313.method1170(var30, var0 + Client.anInt1561 + 50 - var32, var1 + Client.anInt1571, var31, 0);
+                            Class35.font_b12_full.method1170(var30, var0 + Client.anInt1561 + 50 - var32, var1 + Client.anInt1571, var31, 0);
                             DrawingArea.clip(var0, var1, var2 + var0, var1 + var3);
                         }
 
@@ -510,12 +510,12 @@ public class Class49 {
                                 var33 = var32 - 125;
                             }
 
-                            DrawingArea.method1228(var0, var1 + Client.anInt1571 - Class35.aFont313.anInt221 - 1, var2 + var0, Client.anInt1571 + var1 + 5);
-                            Class35.aFont313.method1161(var30, var0 + Client.anInt1561, var33 + Client.anInt1571 + var1, var31, 0);
+                            DrawingArea.method1228(var0, var1 + Client.anInt1571 - Class35.font_b12_full.anInt221 - 1, var2 + var0, Client.anInt1571 + var1 + 5);
+                            Class35.font_b12_full.method1161(var30, var0 + Client.anInt1561, var33 + Client.anInt1571 + var1, var31, 0);
                             DrawingArea.clip(var0, var1, var2 + var0, var1 + var3);
                         }
                     } else {
-                        Class35.aFont313.method1161(var30, var0 + Client.anInt1561, var1 + Client.anInt1571, 16776960, 0);
+                        Class35.font_b12_full.method1161(var30, var0 + Client.anInt1561, var1 + Client.anInt1571, 16776960, 0);
                     }
                 }
 

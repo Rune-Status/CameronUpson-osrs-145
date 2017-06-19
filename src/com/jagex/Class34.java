@@ -5,7 +5,7 @@ public class Class34 {
     static final Class34 aClass34_276 = new Class34();
     static final Class34 aClass34_273 = new Class34();
     static final Class34 aClass34_278 = new Class34();
-    static CacheReferenceTable aCacheReferenceTable274;
+    static CacheReferenceTable audioEffects;
     static int cameraY;
     static Class67 aClass67_277;
 

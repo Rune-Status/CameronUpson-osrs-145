@@ -23,7 +23,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     static int anInt284 = 1;
     static Image anImage296;
     static int anInt304 = 500;
-    static CacheReferenceTable aCacheReferenceTable681;
+    static CacheReferenceTable midi2;
     final EventQueue anEventQueue306;
     protected int anInt293;
     protected int anInt305;
@@ -205,7 +205,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     static void method226(int var0, int var1) {
         if (Client.anInt1694 != 0 && var0 != -1) {
-            Class43.method298(aCacheReferenceTable681, var0, 0, Client.anInt1694, false);
+            Class43.method298(midi2, var0, 0, Client.anInt1694, false);
             Client.aBoolean1707 = true;
         }
 
@@ -219,7 +219,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
                 Client.preferences.loginScreenAudioDisabled = !Client.preferences.loginScreenAudioDisabled;
                 Class78.method467();
                 if (!Client.preferences.loginScreenAudioDisabled) {
-                    Class120.method807(Class100.aCacheReferenceTable1119, "scape main", "", 255, false);
+                    Class120.method807(Class100.midi, "scape main", "", 255, false);
                 } else {
                     Class133.aNode_Sub10_Sub3_1723.method916();
                     Class133.anInt1725 = 1;
@@ -657,7 +657,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     }
 
     void method243() {
-        long var1 = Class124.currentTime();
+        long var1 = GzipDecompresser.currentTime();
         long var3 = aLongArray310[Class138.anInt1760];
         aLongArray310[Class138.anInt1760] = var1;
         Class138.anInt1760 = Class138.anInt1760 + 1 & 31;
@@ -841,7 +841,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
             aClass122_303 = (Class122) var8;
 
-            while (aLong307 == 0L || Class124.currentTime() < aLong307) {
+            while (aLong307 == 0L || GzipDecompresser.currentTime() < aLong307) {
                 anInt290 = aClass122_303.method666(anInt287, anInt284);
 
                 for (int var4 = 0; var4 < anInt290; ++var4) {
@@ -861,7 +861,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     void method231() {
         Container var1 = this.method244();
-        long var2 = Class124.currentTime();
+        long var2 = GzipDecompresser.currentTime();
         long var4 = aLongArray282[AnimationSkin.anInt919];
         aLongArray282[AnimationSkin.anInt919] = var2;
         AnimationSkin.anInt919 = AnimationSkin.anInt919 + 1 & 31;
@@ -943,13 +943,13 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     public final void stop() {
         if (anApplet_Sub1_297 == this && !aBoolean312) {
-            aLong307 = Class124.currentTime() + 4000L;
+            aLong307 = GzipDecompresser.currentTime() + 4000L;
         }
     }
 
     public final void destroy() {
         if (this == anApplet_Sub1_297 && !aBoolean312) {
-            aLong307 = Class124.currentTime();
+            aLong307 = GzipDecompresser.currentTime();
             Class127.method875(5000L);
             this.method235();
         }
@@ -962,7 +962,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     public final synchronized void method225(Graphics var1) {
         if (anApplet_Sub1_297 == this && !aBoolean312) {
             this.aBoolean281 = true;
-            if (Class124.currentTime() - this.aLong280 > 1000L) {
+            if (GzipDecompresser.currentTime() - this.aLong280 > 1000L) {
                 Rectangle var2 = var1.getClipBounds();
                 if (var2 == null || var2.width >= AxisAlignedBoundingBox.appletWidth && var2.height >= Class64.appletHeight) {
                     this.aBoolean283 = true;
@@ -1195,7 +1195,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         }
 
         this.aBoolean283 = false;
-        this.aLong280 = Class124.currentTime();
+        this.aLong280 = GzipDecompresser.currentTime();
     }
 
     void method257() {

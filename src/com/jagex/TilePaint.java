@@ -52,7 +52,7 @@ public final class TilePaint {
     }
 
     public static boolean method662() {
-        long var0 = Class124.currentTime();
+        long var0 = GzipDecompresser.currentTime();
         int var2 = (int) (var0 - Class168.aLong2072);
         Class168.aLong2072 = var0;
         if (var2 > 200) {
@@ -140,7 +140,7 @@ public final class TilePaint {
                         var9 = Class168.aBuffer2074.readUnsignedByte();
                         var10 = Class168.aBuffer2074.readUnsignedShort();
                         int var11 = Class168.aBuffer2074.readUnsignedByte();
-                        var12 = Class168.aBuffer2074.method835();
+                        var12 = Class168.aBuffer2074.readInt();
                         long var13 = (long) ((var9 << 16) + var10);
                         Node_Sub21_Sub6 var15 = Class168.aNodeTable2089.lookup(var13);
                         Class117.aBoolean1345 = true;
@@ -196,8 +196,8 @@ public final class TilePaint {
                                 CacheReferenceTable var17 = Class168.aCacheReferenceTableArray2075[var10];
                                 if (var17 != null) {
                                     Class168.aBuffer2078.caret = var10 * 8 + 5;
-                                    var12 = Class168.aBuffer2078.method835();
-                                    int var18 = Class168.aBuffer2078.method835();
+                                    var12 = Class168.aBuffer2078.readInt();
+                                    int var18 = Class168.aBuffer2078.readInt();
                                     var17.method1134(var12, var18);
                                 }
                             }

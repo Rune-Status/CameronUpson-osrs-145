@@ -31,7 +31,7 @@ public class Node_Sub21_Sub13 extends DoublyNode {
         } else if (var2 == 3) {
             this.aString207 = var1.method819();
         } else if (var2 == 4) {
-            this.anInt328 = var1.method835();
+            this.anInt328 = var1.readInt();
         } else {
             int var3;
             if (var2 == 5) {
@@ -40,7 +40,7 @@ public class Node_Sub21_Sub13 extends DoublyNode {
                 this.aStringArray2065 = new String[this.anInt221];
 
                 for (var3 = 0; var3 < this.anInt221; ++var3) {
-                    this.anIntArray932[var3] = var1.method835();
+                    this.anIntArray932[var3] = var1.readInt();
                     this.aStringArray2065[var3] = var1.method819();
                 }
             } else if (var2 == 6) {
@@ -49,8 +49,8 @@ public class Node_Sub21_Sub13 extends DoublyNode {
                 this.anIntArray1319 = new int[this.anInt221];
 
                 for (var3 = 0; var3 < this.anInt221; ++var3) {
-                    this.anIntArray932[var3] = var1.method835();
-                    this.anIntArray1319[var3] = var1.method835();
+                    this.anIntArray932[var3] = var1.readInt();
+                    this.anIntArray1319[var3] = var1.readInt();
                 }
             }
         }

@@ -29,8 +29,8 @@ public class Class135 {
         int var3;
         int var5;
         for (var3 = 0; var3 < var2; this.aBuffer1741.caret += var5) {
-            int var4 = this.aBuffer1741.method835();
-            var5 = this.aBuffer1741.method835();
+            int var4 = this.aBuffer1741.readInt();
+            var5 = this.aBuffer1741.readInt();
             if (var4 == 1297379947) {
                 this.anIntArray1744[var3] = this.aBuffer1741.caret;
                 ++var3;

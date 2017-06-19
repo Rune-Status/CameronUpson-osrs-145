@@ -482,7 +482,7 @@ public class Class94 {
             }
 
             if (var2 == 1008 || var2 == 1009 || var2 == 1010 || var2 == 1011 || var2 == 1012) {
-                Class9.aClass189_68.method1281(var2, var3, new SceneOffset(var0), new SceneOffset(var1));
+                Class9.worldMap.method1281(var2, var3, new SceneOffset(var0), new SceneOffset(var1));
             }
 
             if (var2 == 6) {

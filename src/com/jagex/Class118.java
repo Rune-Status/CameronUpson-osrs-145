@@ -97,7 +97,7 @@ public class Class118 {
         int var1;
         for (var1 = 0; var1 < InterfaceNode.aByteArrayArray318.length; ++var1) {
             if (Boundary.anIntArray1148[var1] != -1 && InterfaceNode.aByteArrayArray318[var1] == null) {
-                InterfaceNode.aByteArrayArray318[var1] = Class126.aCacheReferenceTable1368.unpack(Boundary.anIntArray1148[var1], 0);
+                InterfaceNode.aByteArrayArray318[var1] = Class126.landscapes.unpack(Boundary.anIntArray1148[var1], 0);
                 if (InterfaceNode.aByteArrayArray318[var1] == null) {
                     var0 = false;
                     ++Client.anInt1510;
@@ -105,7 +105,7 @@ public class Class118 {
             }
 
             if (Class121.anIntArray1359[var1] != -1 && Class10.aByteArrayArray72[var1] == null) {
-                Class10.aByteArrayArray72[var1] = Class126.aCacheReferenceTable1368.unpack(Class121.anIntArray1359[var1], 0, Class14.anIntArrayArray118[var1]);
+                Class10.aByteArrayArray72[var1] = Class126.landscapes.unpack(Class121.anIntArray1359[var1], 0, Class14.anIntArrayArray118[var1]);
                 if (Class10.aByteArrayArray72[var1] == null) {
                     var0 = false;
                     ++Client.anInt1510;
@@ -1004,8 +1004,8 @@ public class Class118 {
                     for (var8 = var5 - 1; var8 <= var10 + 1; ++var8) {
                         for (var9 = var62 - 1; var9 <= var26 + 1; ++var9) {
                             if (var8 < var5 || var8 > var10 || var9 < var62 || var9 > var26) {
-                                Class126.aCacheReferenceTable1368.method1103("m" + var8 + "_" + var9);
-                                Class126.aCacheReferenceTable1368.method1103("l" + var8 + "_" + var9);
+                                Class126.landscapes.method1103("m" + var8 + "_" + var9);
+                                Class126.landscapes.method1103("l" + var8 + "_" + var9);
                             }
                         }
                     }

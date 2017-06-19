@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class9 {
     public static Class85 aClass85_67;
-    static Class189 aClass189_68;
+    static WorldMap worldMap;
     int anInt65;
     byte[][][] aByteArrayArrayArray66;
 
@@ -53,13 +53,13 @@ public class Class9 {
                 var11 = var10;
             } else {
                 var25 = String.valueOf(var9);
-                var26 = ScriptEvent.aCacheReferenceTable322.method1084(var25);
+                var26 = ScriptEvent.runescripts.method1084(var25);
                 if (var26 == -1) {
                     var11 = null;
                 } else {
                     label597:
                     {
-                        byte[] var18 = ScriptEvent.aCacheReferenceTable322.method1093(var26);
+                        byte[] var18 = ScriptEvent.runescripts.method1093(var26);
                         if (var18 != null) {
                             if (var18.length <= 1) {
                                 var11 = null;
@@ -90,13 +90,13 @@ public class Class9 {
                     var19 = var38;
                 } else {
                     String var24 = String.valueOf(var17);
-                    var21 = ScriptEvent.aCacheReferenceTable322.method1084(var24);
+                    var21 = ScriptEvent.runescripts.method1084(var24);
                     if (var21 == -1) {
                         var19 = null;
                     } else {
                         label531:
                         {
-                            byte[] var28 = ScriptEvent.aCacheReferenceTable322.method1093(var21);
+                            byte[] var28 = ScriptEvent.runescripts.method1093(var21);
                             if (var28 != null) {
                                 if (var28.length <= 1) {
                                     var19 = null;

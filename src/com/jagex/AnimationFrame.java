@@ -24,9 +24,9 @@ public class AnimationFrame extends DoublyNode {
             if (var10 == null) {
                 byte[] var13;
                 if (var4) {
-                    var13 = var2.method1095(0, var11);
+                    var13 = var2.get(0, var11);
                 } else {
-                    var13 = var2.method1095(var11, 0);
+                    var13 = var2.get(var11, 0);
                 }
 
                 var10 = new AnimationSkin(var11, var13);

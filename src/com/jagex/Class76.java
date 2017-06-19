@@ -4,7 +4,7 @@ public class Class76 implements EnumOrdinal {
     static final Class76 aClass76_822 = new Class76(2, 1, Long.class, new Class73());
     static final Class76 aClass76_821 = new Class76(1, 2, String.class, new Class78());
     static final Class76 aClass76_819 = new Class76(0, 0, Integer.class, new Class51());
-    static CacheReferenceTable aCacheReferenceTable823;
+    static CacheReferenceTable models;
     final int anInt820;
     final int anInt157;
 

@@ -9,8 +9,8 @@ public class InterfaceNode extends Node {
     boolean aBoolean316 = false;
     int id;
 
-    static Class189 method268() {
-        return Class9.aClass189_68;
+    static WorldMap method268() {
+        return Class9.worldMap;
     }
 
     static void method265(boolean var0) {

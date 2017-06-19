@@ -44,7 +44,7 @@ public final class RS3CopyPastedNodeTable implements Iterable {
             if (object) {
                 node = new ObjectNode(buffer.method819());
             } else {
-                node = new IntegerNode(buffer.method835());
+                node = new IntegerNode(buffer.readInt());
             }
 
             table.put((Node) node, (long) var5);

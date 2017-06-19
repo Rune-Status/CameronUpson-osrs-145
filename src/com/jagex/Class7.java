@@ -34,7 +34,7 @@ public final class Class7 {
             var5 = var0.readUnsignedByte();
             byte[] var6 = new byte[var5];
             Buffer var7 = new Buffer(var6);
-            var0.method826(var6, 0, var5);
+            var0.read(var6, 0, var5);
             Class71.aBufferArray728[var1] = var7;
             var2.method198(var7);
         }
@@ -141,7 +141,7 @@ public final class Class7 {
 
                 if (!var23 && Client.anInt1589 == 0 && !var2.aBoolean215) {
                     Class71.aBuffer721.caret = 0;
-                    var0.method826(Class71.aBuffer721.payload, 0, var10);
+                    var0.read(Class71.aBuffer721.payload, 0, var10);
                     Class71.aBuffer721.caret = 0;
                     Buffer var15 = Class71.aBuffer721;
                     String var16 = Class112.method772(var15, 32767);
@@ -172,7 +172,7 @@ public final class Class7 {
 
         if ((var3 & 2048) != 0) {
             var2.anInt771 = var0.readUnsignedShort();
-            var5 = var0.method835();
+            var5 = var0.readInt();
             var2.anInt787 = var5 >> 16;
             var2.anInt786 = Client.engineCycle + (var5 & '\uffff');
             var2.anInt782 = 0;

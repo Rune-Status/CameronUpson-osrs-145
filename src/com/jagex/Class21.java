@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class21 implements Class16 {
     public static Class93[] aClass93Array141;
-    static CacheReferenceTable aCacheReferenceTable139;
+    static CacheReferenceTable materials;
     int anInt143;
     int anInt6;
     int anInt3;

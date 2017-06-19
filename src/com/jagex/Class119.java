@@ -1,7 +1,7 @@
 package com.jagex;
 
 public class Class119 {
-    static CacheReferenceTable aCacheReferenceTable1357;
+    static CacheReferenceTable instruments;
     static int anInt1356;
 
     static int method806(int var0, RuneScript var1, boolean var2) {

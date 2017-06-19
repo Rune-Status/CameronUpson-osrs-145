@@ -72,13 +72,13 @@ public class Node_Sub21_Sub15 extends DoublyNode {
                     this.anIntArray315[var4] = var1.readShort();
                 }
 
-                var1.method835();
+                var1.readInt();
                 var4 = var1.readUnsignedByte();
                 this.anIntArray1082 = new int[var4];
 
                 int var5;
                 for (var5 = 0; var5 < this.anIntArray1082.length; ++var5) {
-                    this.anIntArray1082[var5] = var1.method835();
+                    this.anIntArray1082[var5] = var1.readInt();
                 }
 
                 this.aByteArray2090 = new byte[var3];
@@ -94,9 +94,9 @@ public class Node_Sub21_Sub15 extends DoublyNode {
                 } else if (var2 == 19) {
                     this.anInt236 = var1.readUnsignedShort();
                 } else if (var2 == 21) {
-                    var1.method835();
+                    var1.readInt();
                 } else if (var2 == 22) {
-                    var1.method835();
+                    var1.readInt();
                 } else if (var2 == 23) {
                     var1.readUnsignedByte();
                     var1.readUnsignedByte();

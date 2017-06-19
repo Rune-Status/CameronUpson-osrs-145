@@ -28,7 +28,7 @@ public class DefinitionProperty extends DoublyNode {
         if (var2 == 1) {
             this.propertyType = Node_Sub10_Sub3.method927(var1.method870());
         } else if (var2 == 2) {
-            this.defaultInteger = var1.method835();
+            this.defaultInteger = var1.readInt();
         } else if (var2 == 4) {
             this.deleteOnUse = false;
         } else if (var2 == 5) {

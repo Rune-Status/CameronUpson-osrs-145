@@ -226,16 +226,16 @@ public class Node_Sub13 extends Node {
 
     void method592(byte[] var1) {
         Buffer var2 = new Buffer(var1);
-        this.anInt209 = var2.method835();
-        this.anInt206 = var2.method835();
-        this.anInt232 = var2.method835();
-        this.anInt327 = var2.method835();
+        this.anInt209 = var2.readInt();
+        this.anInt206 = var2.readInt();
+        this.anInt232 = var2.readInt();
+        this.anInt327 = var2.readInt();
         if (this.anInt327 < 0) {
             this.anInt327 = ~this.anInt327;
             this.aBoolean994 = true;
         }
 
-        int var3 = var2.method835();
+        int var3 = var2.readInt();
         this.aByteArrayArray984 = new byte[var3][];
 
         for (int var4 = 0; var4 < var3; ++var4) {
@@ -248,7 +248,7 @@ public class Node_Sub13 extends Node {
             } while (var6 >= 255);
 
             byte[] var7 = new byte[var5];
-            var2.method826(var7, 0, var5);
+            var2.read(var7, 0, var5);
             this.aByteArrayArray984[var4] = var7;
         }
 

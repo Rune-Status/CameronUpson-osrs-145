@@ -16,7 +16,7 @@ public class Class84 {
     long aLong872 = 0L;
     int anInt854 = 0;
     int anInt869 = 32;
-    long aLong867 = Class124.currentTime();
+    long aLong867 = GzipDecompresser.currentTime();
     int anInt863;
     int anInt866;
     int anInt865;
@@ -299,7 +299,7 @@ public class Class84 {
 
     public final synchronized void method491() {
         if (this.anIntArray853 != null) {
-            long var1 = Class124.currentTime();
+            long var1 = GzipDecompresser.currentTime();
 
             try {
                 if (0L != this.aLong859) {
@@ -509,7 +509,7 @@ public class Class84 {
             this.aNode_Sub10_858.method429(var1, 0, var2);
         }
 
-        this.aLong867 = Class124.currentTime();
+        this.aLong867 = GzipDecompresser.currentTime();
     }
 
     protected void method277() throws Exception {
@@ -580,7 +580,7 @@ public class Class84 {
             this.method281();
         } catch (Exception var2) {
             this.method280();
-            this.aLong859 = Class124.currentTime() + 2000L;
+            this.aLong859 = GzipDecompresser.currentTime() + 2000L;
         }
 
     }

@@ -11,7 +11,7 @@ public class Class147 implements Class157 {
     public static final Class147 aClass147_1803;
     public static final Class147 aClass147_1806;
     static final Class147 aClass147_1805;
-    static CacheReferenceTable aCacheReferenceTable1810;
+    static CacheReferenceTable vorbis;
     static String aString1808;
 
     static {

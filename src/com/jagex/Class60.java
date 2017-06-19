@@ -6,7 +6,7 @@ import java.util.Comparator;
 
 final class Class60 implements Comparator {
     static GarbageCollectorMXBean aGarbageCollectorMXBean629;
-    static CacheReferenceTable aCacheReferenceTable630;
+    static CacheReferenceTable textures;
     static SceneGraph aSceneGraph631;
 
     static int method367(int var0, int var1) {
@@ -45,7 +45,7 @@ final class Class60 implements Comparator {
                     for (int var2 = 0; var2 < World.anInt397; var3.anInt394 = var2++) {
                         var3 = World.worlds[var2] = new World();
                         var3.id = var1.readUnsignedShort();
-                        var3.mask = var1.method835();
+                        var3.mask = var1.readInt();
                         var3.domain = var1.method819();
                         var3.activity = var1.method819();
                         var3.location = var1.readUnsignedByte();

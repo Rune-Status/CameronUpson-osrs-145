@@ -112,7 +112,7 @@ public class Buffer extends Node {
         this.payload[++this.caret - 1] = 0;
     }
 
-    public int method835() {
+    public int readInt() {
         this.caret += 4;
         return (this.payload[this.caret - 1] & 255) + ((this.payload[this.caret - 4] & 255) << 24) + ((this.payload[this.caret - 3] & 255) << 16) + ((this.payload[this.caret - 2] & 255) << 8);
     }
@@ -167,8 +167,8 @@ public class Buffer extends Node {
     }
 
     public long method837() {
-        long var1 = (long) this.method835() & 4294967295L;
-        long var3 = (long) this.method835() & 4294967295L;
+        long var1 = (long) this.readInt() & 4294967295L;
+        long var3 = (long) this.readInt() & 4294967295L;
         return var3 + (var1 << 32);
     }
 
@@ -216,7 +216,7 @@ public class Buffer extends Node {
 
     public int readSmart32() {
         if (this.payload[this.caret] < 0) {
-            return this.method835() & Integer.MAX_VALUE;
+            return this.readInt() & Integer.MAX_VALUE;
         }
         int var1 = this.readUnsignedShort();
         return var1 == 32767 ? -1 : var1;
@@ -238,8 +238,8 @@ public class Buffer extends Node {
         this.caret = 0;
 
         for (int var3 = 0; var3 < var2; ++var3) {
-            int var4 = this.method835();
-            int var5 = this.method835();
+            int var4 = this.readInt();
+            int var5 = this.readInt();
             int var6 = 0;
             int var7 = -1640531527;
 
@@ -261,8 +261,8 @@ public class Buffer extends Node {
         int var5 = (var3 - var2) / 8;
 
         for (int var6 = 0; var6 < var5; ++var6) {
-            int var7 = this.method835();
-            int var8 = this.method835();
+            int var7 = this.readInt();
+            int var8 = this.readInt();
             int var9 = 0;
             int var10 = -1640531527;
 
@@ -285,8 +285,8 @@ public class Buffer extends Node {
         int var5 = (var3 - var2) / 8;
 
         for (int var6 = 0; var6 < var5; ++var6) {
-            int var7 = this.method835();
-            int var8 = this.method835();
+            int var7 = this.readInt();
+            int var8 = this.readInt();
             int var9 = -957401312;
             int var10 = -1640531527;
 
@@ -307,7 +307,7 @@ public class Buffer extends Node {
         int var3 = this.caret;
         this.caret = 0;
         byte[] var4 = new byte[var3];
-        this.method826(var4, 0, var3);
+        this.read(var4, 0, var3);
         BigInteger var5 = new BigInteger(var4);
         BigInteger var6 = var5.modPow(var1, var2);
         byte[] var7 = var6.toByteArray();
@@ -333,7 +333,7 @@ public class Buffer extends Node {
         }
 
         var3 = ~var3;
-        var4 = this.method835();
+        var4 = this.readInt();
         return var3 == var4;
     }
 
@@ -530,7 +530,7 @@ public class Buffer extends Node {
     }
 
     public int method831() {
-        return this.payload[this.caret] < 0 ? this.method835() & Integer.MAX_VALUE : this.readUnsignedShort();
+        return this.payload[this.caret] < 0 ? this.readInt() & Integer.MAX_VALUE : this.readUnsignedShort();
     }
 
     public void method866(int var1) {
@@ -557,8 +557,8 @@ public class Buffer extends Node {
         this.caret = 0;
 
         for (int var3 = 0; var3 < var2; ++var3) {
-            int var4 = this.method835();
-            int var5 = this.method835();
+            int var4 = this.readInt();
+            int var5 = this.readInt();
             int var6 = -957401312;
             int var7 = -1640531527;
 
@@ -613,7 +613,7 @@ public class Buffer extends Node {
         return var1;
     }
 
-    public void method826(byte[] var1, int var2, int var3) {
+    public void read(byte[] var1, int var2, int var3) {
         for (int var4 = var2; var4 < var2 + var3; ++var4) {
             var1[var4] = this.payload[++this.caret - 1];
         }

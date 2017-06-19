@@ -118,12 +118,12 @@ public class Class183 {
                             }
                         } else {
                             if (var9.contentType == 1400) {
-                                Class9.aClass189_68.method1288(Class33.anInt261, Class33.anInt260, var34, var10, var11, var9.width, var9.height);
+                                Class9.worldMap.method1288(Class33.anInt261, Class33.anInt260, var34, var10, var11, var9.width, var9.height);
                             }
 
                             if (!Client.menuOpen && var34) {
                                 if (var9.contentType == 1400) {
-                                    Class9.aClass189_68.method1280(var10, var11, var9.width, var9.height, var16, var17);
+                                    Class9.worldMap.method1280(var10, var11, var9.width, var9.height, var16, var17);
                                 } else {
                                     Class112.method773(var9, var16 - var10, var17 - var11);
                                 }
@@ -217,7 +217,7 @@ public class Class183 {
                                 }
 
                                 if (var9.contentType == 1400) {
-                                    Class9.aClass189_68.method1300(Class33.anInt261, Class33.anInt260, var34 & var35);
+                                    Class9.worldMap.method1300(Class33.anInt261, Class33.anInt260, var34 & var35);
                                 }
 
                                 if (Client.anInterfaceComponent1647 != null && Client.anInterfaceComponent1647 != var9 && var34) {
