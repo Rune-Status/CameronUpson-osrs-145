@@ -1324,18 +1324,18 @@ public class ScriptEvent extends Node {
 
                 if (var40.equalsIgnoreCase("clickbox")) {
                     BoundingBoxInfo.useAxisAlignedBoundingBoxes = false;
-                    Class78.addChatMessage(99, "", "Clickbox Mode: " + (BoundingBoxInfo.useAxisAlignedBoundingBoxes ? "LEGACY_2D" : "Legacy"));
+                    Class78.addChatMessage(99, "", "Clickbox Mode: " + (BoundingBoxInfo.useAxisAlignedBoundingBoxes ? "ALL" : "Legacy"));
                 }
 
                 if (Client.rights >= 2) {
                     if (var40.equalsIgnoreCase("aabb")) {
                         if (!BoundingBoxInfo.drawAxisAlignedBoundingBoxes) {
                             BoundingBoxInfo.drawAxisAlignedBoundingBoxes = true;
-                            BoundingBoxInfo.currentBoundingBoxType = BoundingBoxType.LEGACY_2D;
+                            BoundingBoxInfo.currentBoundingBoxDrawType = BoundingBoxDrawType.ALL;
                             Class78.addChatMessage(99, "", "AABB boxes: All");
-                        } else if (BoundingBoxInfo.currentBoundingBoxType == BoundingBoxType.LEGACY_2D) {
+                        } else if (BoundingBoxInfo.currentBoundingBoxDrawType == BoundingBoxDrawType.ALL) {
                             BoundingBoxInfo.drawAxisAlignedBoundingBoxes = true;
-                            BoundingBoxInfo.currentBoundingBoxType = BoundingBoxType.AABB;
+                            BoundingBoxInfo.currentBoundingBoxDrawType = BoundingBoxDrawType.MOUSE_OVER;
                             Class78.addChatMessage(99, "", "AABB boxes: Mouse Over");
                         } else {
                             BoundingBoxInfo.drawAxisAlignedBoundingBoxes = false;

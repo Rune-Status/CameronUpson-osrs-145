@@ -226,7 +226,7 @@ public class Class77 {
                             Login.method411(Class73.config);
                             Node_Sub21_Sub16.aReferenceTable2012 = Class73.config;
                             Class15.method131(Class73.config);
-                            DefinitionProperty.aReferenceTable2012 = Class73.config;
+                            DefinitionProperty.propertyTable = Class73.config;
                             Class34.aClass67_277 = new Class67();
                             CacheReferenceTable var20 = Class73.config;
                             CacheReferenceTable var21 = Class21.materials;
@@ -309,7 +309,7 @@ public class Class77 {
                         }
 
                         if (var0 < 11) {
-                            Login.aString686 = "Loading sprites - " + var0 * 100 / 12 + "%";
+                            Login.aString686 = "Loading spriteCache - " + var0 * 100 / 12 + "%";
                             Login.anInt699 = 70;
                         } else {
                             Node_Sub21_Sub26_Sub3.aCompressedImageArray2131 = Class2.aCompressedImageArray12;
@@ -319,7 +319,7 @@ public class Class77 {
                             var4 = (int) (Math.random() * 21.0D) - 10;
                             var5 = (int) (Math.random() * 41.0D) - 20;
                             Client.aCompressedImageArray1542[0].method1158(var5 + var2, var5 + var3, var5 + var4);
-                            Login.aString686 = "Loaded sprites";
+                            Login.aString686 = "Loaded spriteCache";
                             Login.anInt699 = 70;
                             Client.anInt1492 = 90;
                         }

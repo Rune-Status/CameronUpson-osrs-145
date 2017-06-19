@@ -843,7 +843,7 @@ public class Model extends Entity {
                             if (BoundingBoxInfo.drawAxisAlignedBoundingBoxes && uid > 0) {
                                 if (Node_Sub21_Sub6.calcAxisAlignedBoundingBox(this, x, z, y)) {
                                     BoundingBoxInfo.boundingBoxes.method905(new AxisAlignedBoundingBox(this, x, z, y, 0xffff00ff));
-                                } else if (BoundingBoxInfo.currentBoundingBoxType == BoundingBoxType.LEGACY_2D) {
+                                } else if (BoundingBoxInfo.currentBoundingBoxDrawType == BoundingBoxDrawType.ALL) {
                                     BoundingBoxInfo.boundingBoxes.method905(new AxisAlignedBoundingBox(this, x, z, y, 0xff0000ff));
                                 }
                             }

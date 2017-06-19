@@ -14,18 +14,6 @@ public final class Canvas extends java.awt.Canvas {
         this.aComponent211 = var1;
     }
 
-    public static EnumOrdinal method185(EnumOrdinal[] var0, int var1) {
-
-        for (int var3 = 0; var3 < var0.length; ++var3) {
-            EnumOrdinal var4 = var0[var3];
-            if (var1 == var4.ordinal()) {
-                return var4;
-            }
-        }
-
-        return null;
-    }
-
     public static Sprite method186(byte[] var0) {
         BufferedImage var1 = null;
 

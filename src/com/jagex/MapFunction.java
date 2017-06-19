@@ -1,7 +1,7 @@
 package com.jagex;
 
 public class MapFunction extends DoublyNode {
-    public static ReferenceCache<Sprite> sprites = new ReferenceCache<>(256);
+    public static ReferenceCache<Sprite> spriteCache = new ReferenceCache<>(256);
     public static MapFunction[] mapFunctions;
     static ReferenceTable spriteTable;
     public final int index;
@@ -28,13 +28,6 @@ public class MapFunction extends DoublyNode {
         aClass166_2092 = Class166.aClass166_2024;
         anInt236 = -1;
         this.index = index;
-    }
-
-    static String getFormattedAmount(int var0) {
-        if (var0 < 100000) {
-            return "<col=0000FF>" + var0 + "</col>";
-        }
-        return var0 < 10000000 ? "<col=ffffff>" + var0 / 1000 + "K" + "</col>" : "<col=00ff80>" + var0 / 1000000 + "M" + "</col>";
     }
 
     void decode(Buffer var1, int var2) {
@@ -109,10 +102,10 @@ public class MapFunction extends DoublyNode {
                 } else if (var2 == 28) {
                     var1.readUnsignedByte();
                 } else if (var2 == 29) {
-                    aClass167_2096 = (Class167) Canvas.method185(Class167.method354(), var1.readUnsignedByte());
+                    aClass167_2096 = (Class167) EnumOrdinal.getByOrdinal(Class167.method354(), var1.readUnsignedByte());
                 } else if (var2 == 30) {
                     Class166[] var6 = new Class166[]{Class166.aClass166_2024, Class166.aClass166_2023, Class166.aClass166_2022};
-                    aClass166_2092 = (Class166) Canvas.method185(var6, var1.readUnsignedByte());
+                    aClass166_2092 = (Class166) EnumOrdinal.getByOrdinal(var6, var1.readUnsignedByte());
                 }
             }
         }
@@ -156,13 +149,13 @@ public class MapFunction extends DoublyNode {
         if (id < 0) {
             return null;
         }
-        Sprite var2 = sprites.get((long) id);
+        Sprite var2 = spriteCache.get((long) id);
         if (var2 != null) {
             return var2;
         }
         var2 = Class176.method1188(spriteTable, id, 0);
         if (var2 != null) {
-            sprites.put(var2, (long) id);
+            spriteCache.put(var2, (long) id);
         }
 
         return var2;

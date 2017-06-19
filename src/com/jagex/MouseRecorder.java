@@ -200,7 +200,7 @@ public class MouseRecorder implements Runnable {
         }
         if (var0 == 1125) {
             var8 = Class63.anIntArray645[--Class63.anInt644];
-            Class172 var7 = (Class172) Canvas.method185(Class33.method221(), var8);
+            Class172 var7 = (Class172) EnumOrdinal.getByOrdinal(Class33.method221(), var8);
             if (var7 != null) {
                 var4.aClass172_1865 = var7;
                 ItemTable.method284(var4);

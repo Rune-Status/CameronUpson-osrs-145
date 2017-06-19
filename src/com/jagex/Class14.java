@@ -148,7 +148,7 @@ public class Class14 {
             Class55[] var4;
             if (var1 == 18) {
                 var4 = new Class55[]{Class55.aClass55_423, Class55.aClass55_420, Class55.aClass55_425, Class55.aClass55_422};
-                Client.aClass55_1491 = (Class55) Canvas.method185(var4, var2);
+                Client.aClass55_1491 = (Class55) EnumOrdinal.getByOrdinal(var4, var2);
                 if (Client.aClass55_1491 == null) {
                     Client.aClass55_1491 = Class55.aClass55_420;
                 }
@@ -164,7 +164,7 @@ public class Class14 {
 
             if (var1 == 22) {
                 var4 = new Class55[]{Class55.aClass55_423, Class55.aClass55_420, Class55.aClass55_425, Class55.aClass55_422};
-                Client.aClass55_1497 = (Class55) Canvas.method185(var4, var2);
+                Client.aClass55_1497 = (Class55) EnumOrdinal.getByOrdinal(var4, var2);
                 if (Client.aClass55_1497 == null) {
                     Client.aClass55_1497 = Class55.aClass55_420;
                 }

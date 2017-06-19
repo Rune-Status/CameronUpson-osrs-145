@@ -129,7 +129,7 @@ public final class Class7 {
         if ((var3 & 16) != 0) {
             var5 = var0.readUnsignedShort();
             Class158[] var19 = new Class158[]{Class158.aClass158_1849, Class158.aClass158_1855, Class158.aClass158_1845, Class158.aClass158_1853, Class158.aClass158_1848, Class158.aClass158_1851};
-            Class158 var20 = (Class158) Canvas.method185(var19, var0.readUnsignedByte());
+            Class158 var20 = (Class158) EnumOrdinal.getByOrdinal(var19, var0.readUnsignedByte());
             boolean var22 = var0.readUnsignedByte() == 1;
             var10 = var0.readUnsignedByte();
             var11 = var0.caret;
