@@ -186,7 +186,7 @@ public class Class77 {
                         }
                     } else if (Client.anInt1492 == 70) {
                         if (!Class73.config.method1088()) {
-                            Login.aString686 = "Loading config - " + Class73.config.method1132() + "%";
+                            Login.aString686 = "Loading config - " + Class73.config.getPercentLoaded() + "%";
                             Login.anInt699 = 60;
                         } else {
                             Node_Sub21_Sub12.aReferenceTable2012 = Class73.config;
@@ -325,7 +325,7 @@ public class Class77 {
                         }
                     } else if (Client.anInt1492 == 90) {
                         if (!Class60.textures.method1088()) {
-                            Login.aString686 = "Loading textures - " + Class60.textures.method1132() + "%";
+                            Login.aString686 = "Loading textures - " + Class60.textures.getPercentLoaded() + "%";
                             Login.anInt699 = 90;
                         } else {
                             TextureProviderImpl var24 = new TextureProviderImpl(Class60.textures, Class21.materials, 20, 0.8D, Client.lowMemory ? 64 : 128);
@@ -354,13 +354,13 @@ public class Class77 {
                         }
                     } else if (Client.anInt1492 == 130) {
                         if (!BoundingBox.interfaceComponents.method1088()) {
-                            Login.aString686 = "Loading interfaces - " + BoundingBox.interfaceComponents.method1132() * 4 / 5 + "%";
+                            Login.aString686 = "Loading interfaces - " + BoundingBox.interfaceComponents.getPercentLoaded() * 4 / 5 + "%";
                             Login.anInt699 = 100;
                         } else if (!ScriptEvent.runescripts.method1088()) {
-                            Login.aString686 = "Loading interfaces - " + (ScriptEvent.runescripts.method1132() / 6 + 80) + "%";
+                            Login.aString686 = "Loading interfaces - " + (ScriptEvent.runescripts.getPercentLoaded() / 6 + 80) + "%";
                             Login.anInt699 = 100;
                         } else if (!Class2.fontMetrics.method1088()) {
-                            Login.aString686 = "Loading interfaces - " + (Class2.fontMetrics.method1132() / 50 + 96) + "%";
+                            Login.aString686 = "Loading interfaces - " + (Class2.fontMetrics.getPercentLoaded() / 50 + 96) + "%";
                             Login.anInt699 = 100;
                         } else {
                             Login.aString686 = "Loaded interfaces";

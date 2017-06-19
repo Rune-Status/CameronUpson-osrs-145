@@ -10,10 +10,10 @@ public class Class13 {
     static final SceneOffset A_SCENE_OFFSET___100 = new SceneOffset();
     static int anInt102;
     final HashMap aHashMap97;
-    int anInt107;
+    int x;
     int[][] anIntArrayArray98;
     java.util.LinkedList aLinkedList103;
-    int anInt108;
+    int y;
     Class6_Sub2 aClass6_Sub2_109;
     int anInt101;
     HashMap aHashMap104;
@@ -22,8 +22,8 @@ public class Class13 {
     int anInt99;
 
     Class13(int var1, int var2, int var3, HashMap var4) {
-        this.anInt107 = var1;
-        this.anInt108 = var2;
+        this.x = var1;
+        this.y = var2;
         this.aLinkedList103 = new java.util.LinkedList();
         this.aList106 = new java.util.LinkedList();
         this.aHashMap104 = new HashMap();
@@ -361,7 +361,7 @@ public class Class13 {
                             MapTile var13 = var10[var12];
                             Node_Sub21_Sub15 var14 = this.method105(var13.z);
                             if (var14 != null) {
-                                SceneOffset var15 = new SceneOffset(var9, var6 + this.anInt107 * 64, this.anInt108 * 64 + var7);
+                                SceneOffset var15 = new SceneOffset(var9, var6 + this.x * 64, this.y * 64 + var7);
                                 SceneOffset var16 = null;
                                 if (this.aClass6_Sub2_109 != null) {
                                     var16 = new SceneOffset(var9 + this.aClass6_Sub2_109.anInt45, this.aClass6_Sub2_109.anInt40 * 64 + var6, this.aClass6_Sub2_109.anInt49 * 64 + var7);
@@ -387,8 +387,8 @@ public class Class13 {
 
         while (var2.hasNext()) {
             Class74 var3 = (Class74) var2.next();
-            if (this.anInt107 == var3.aSceneOffset_743.x >> 6 && var3.aSceneOffset_743.y >> 6 == this.anInt108) {
-                Class24 var4 = new Class24(var3.anInt742, var3.aSceneOffset_743, var3.aSceneOffset_743, this.method88(var3.anInt742));
+            if (this.x == var3.offset.x >> 6 && var3.offset.y >> 6 == this.y) {
+                Class24 var4 = new Class24(var3.anInt742, var3.offset, var3.offset, this.method88(var3.anInt742));
                 this.aList106.add(var4);
             }
         }
@@ -707,7 +707,7 @@ public class Class13 {
 
         while (var3.hasNext()) {
             Class6_Sub1 var4 = (Class6_Sub1) var3.next();
-            if (var4.method25() == this.anInt107 && var4.method21() == this.anInt108) {
+            if (var4.method25() == this.x && var4.method21() == this.y) {
                 this.aLinkedList103.add(var4);
                 this.method115(var4.method164() * 8, var4.method165() * 8, 8, 8, var4);
             }
@@ -902,7 +902,7 @@ public class Class13 {
                             return;
                         }
 
-                        SceneOffset var11 = new SceneOffset(var4, this.anInt107 * 64 + x, y + this.anInt108 * 64);
+                        SceneOffset var11 = new SceneOffset(var4, this.x * 64 + x, y + this.y * 64);
                         SceneOffset var13 = null;
                         if (this.aClass6_Sub2_109 != null) {
                             var13 = new SceneOffset(this.aClass6_Sub2_109.anInt45 + var4, this.aClass6_Sub2_109.anInt40 * 64 + x, y + this.aClass6_Sub2_109.anInt49 * 64);

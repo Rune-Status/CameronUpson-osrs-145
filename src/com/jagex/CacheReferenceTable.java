@@ -227,7 +227,7 @@ public class CacheReferenceTable extends ReferenceTable {
         }
     }
 
-    public int method1132() {
+    public int getPercentLoaded() {
         int var1 = 0;
         int var2 = 0;
 

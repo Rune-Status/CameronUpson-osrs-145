@@ -4,11 +4,11 @@ import java.io.IOException;
 
 public class Class74 {
     int anInt742;
-    SceneOffset aSceneOffset_743;
+    SceneOffset offset;
 
     Class74(int var1, SceneOffset var2) {
         this.anInt742 = var1;
-        this.aSceneOffset_743 = var2;
+        this.offset = var2;
     }
 
     public static byte[] method437() {

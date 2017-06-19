@@ -387,7 +387,7 @@ public final class Class7 {
 
         for (int var20 = var13.anInt34; var20 < var13.anInt32 + var13.anInt34; ++var20) {
             for (int var21 = var13.anInt33; var21 < var13.anInt39 + var13.anInt33; ++var21) {
-                this.aClass13ArrayArray63[var20][var21].method109(var5 + (this.aClass13ArrayArray63[var20][var21].anInt107 * 64 - var18) * var17 / 64, var8 - var17 * (this.aClass13ArrayArray63[var20][var21].anInt108 * 64 - var19 + 64) / 64, var17);
+                this.aClass13ArrayArray63[var20][var21].method109(var5 + (this.aClass13ArrayArray63[var20][var21].x * 64 - var18) * var17 / 64, var8 - var17 * (this.aClass13ArrayArray63[var20][var21].y * 64 - var19 + 64) / 64, var17);
             }
         }
 
@@ -408,7 +408,7 @@ public final class Class7 {
                     this.aClass13ArrayArray63[var19][var20].method100();
                 }
 
-                this.aClass13ArrayArray63[var19][var20].method97(var5 + (this.aClass13ArrayArray63[var19][var20].anInt107 * 64 - var17) * var16 / 64, var8 - (this.aClass13ArrayArray63[var19][var20].anInt108 * 64 - var18 + 64) * var16 / 64, var16, var9);
+                this.aClass13ArrayArray63[var19][var20].method97(var5 + (this.aClass13ArrayArray63[var19][var20].x * 64 - var17) * var16 / 64, var8 - (this.aClass13ArrayArray63[var19][var20].y * 64 - var18 + 64) * var16 / 64, var16, var9);
             }
         }
 
@@ -575,7 +575,7 @@ public final class Class7 {
 
         for (int var17 = var12.anInt34; var17 < var12.anInt34 + var12.anInt32; ++var17) {
             for (int var18 = var12.anInt33; var18 < var12.anInt39 + var12.anInt33; ++var18) {
-                List var19 = this.aClass13ArrayArray63[var17][var18].method122(var5 + (this.aClass13ArrayArray63[var17][var18].anInt107 * 64 - var15) * var14 / 64, var6 + var8 - var14 * (this.aClass13ArrayArray63[var17][var18].anInt108 * 64 - var16 + 64) / 64, var14, var9, var10);
+                List var19 = this.aClass13ArrayArray63[var17][var18].method122(var5 + (this.aClass13ArrayArray63[var17][var18].x * 64 - var15) * var14 / 64, var6 + var8 - var14 * (this.aClass13ArrayArray63[var17][var18].y * 64 - var16 + 64) / 64, var14, var9, var10);
                 if (!var19.isEmpty()) {
                     var11.addAll(var19);
                 }
