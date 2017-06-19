@@ -171,7 +171,7 @@ public class Class118 {
                                 var20 = var3 + var18;
                                 var21 = var4 + var17;
                                 if (var20 > 0 && var21 > 0 && var20 < 103 && var21 < 103) {
-                                    ObjectDefinition var22 = Class5.method17(var8);
+                                    ObjectDefinition var22 = ObjectDefinition.get(var8);
                                     if (var19 != 22 || !Client.lowMemory || var22.anInt219 != 0 || var22.anInt229 == 1 || var22.aBoolean2037) {
                                         if (!var22.method1079()) {
                                             ++Client.anInt1540;
@@ -507,7 +507,7 @@ public class Class118 {
                                                     var40 = var39 >> 2;
                                                     var41 = var39 & 3;
                                                     if (var10 == var42 && var38 >= var18 && var38 < var18 + 8 && var37 >= var19 && var37 < var19 + 8) {
-                                                        ObjectDefinition var44 = Class5.method17(var30);
+                                                        ObjectDefinition var44 = ObjectDefinition.get(var30);
                                                         var45 = var13 + Class112.method774(var38 & 7, var37 & 7, var62, var44.anInt230, var44.anInt222, var41);
                                                         var46 = var17 + Class113.method775(var38 & 7, var37 & 7, var62, var44.anInt230, var44.anInt222, var41);
                                                         if (var45 > 0 && var46 > 0 && var45 < 103 && var46 < 103) {

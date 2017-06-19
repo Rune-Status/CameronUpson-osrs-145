@@ -367,7 +367,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
                 ObjectDefinition var12;
                 if (var1 == 0) {
                     Class60.aSceneGraph631.method706(var0, var2, var3);
-                    var12 = Class5.method17(var34);
+                    var12 = ObjectDefinition.get(var34);
                     if (var12.anInt229 != 0) {
                         Client.collisionMaps[var0].method764(var2, var3, var35, var36, var12.aBoolean223);
                     }
@@ -379,7 +379,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
 
                 if (var1 == 2) {
                     Class60.aSceneGraph631.method718(var0, var2, var3);
-                    var12 = Class5.method17(var34);
+                    var12 = ObjectDefinition.get(var34);
                     if (var12.anInt230 + var2 > 103 || var3 + var12.anInt230 > 103 || var12.anInt222 + var2 > 103 || var3 + var12.anInt222 > 103) {
                         return;
                     }
@@ -391,7 +391,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
 
                 if (var1 == 3) {
                     Class60.aSceneGraph631.method699(var0, var2, var3);
-                    var12 = Class5.method17(var34);
+                    var12 = ObjectDefinition.get(var34);
                     if (var12.anInt229 == 1) {
                         Client.collisionMaps[var0].method758(var2, var3);
                     }
@@ -406,7 +406,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
 
                 SceneGraph var37 = Class60.aSceneGraph631;
                 CollisionMap var13 = Client.collisionMaps[var0];
-                ObjectDefinition var14 = Class5.method17(var4);
+                ObjectDefinition var14 = ObjectDefinition.get(var4);
                 int var15;
                 int var16;
                 if (var5 != 1 && var5 != 3) {
@@ -551,7 +551,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
                                 var28 = 16;
                                 var31 = var37.method671(var0, var2, var3);
                                 if (var31 != 0) {
-                                    var28 = Class5.method17(var31 >> 14 & 32767).anInt233;
+                                    var28 = ObjectDefinition.get(var31 >> 14 & 32767).anInt233;
                                 }
 
                                 if (var14.anInt818 == -1 && var14.transformIds == null) {
@@ -565,7 +565,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
                                 var28 = 8;
                                 var31 = var37.method671(var0, var2, var3);
                                 if (var31 != 0) {
-                                    var28 = Class5.method17(var31 >> 14 & 32767).anInt233 / 2;
+                                    var28 = ObjectDefinition.get(var31 >> 14 & 32767).anInt233 / 2;
                                 }
 
                                 if (var14.anInt818 == -1 && var14.transformIds == null) {
@@ -588,7 +588,7 @@ public class Class33 implements MouseListener, MouseMotionListener, FocusListene
                                 var28 = 8;
                                 var31 = var37.method671(var0, var2, var3);
                                 if (var31 != 0) {
-                                    var28 = Class5.method17(var31 >> 14 & 32767).anInt233 / 2;
+                                    var28 = ObjectDefinition.get(var31 >> 14 & 32767).anInt233 / 2;
                                 }
 
                                 int var32 = var5 + 2 & 3;

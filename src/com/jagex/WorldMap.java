@@ -415,9 +415,9 @@ public class WorldMap {
         this.anInt2216 = 0;
         this.anInt2218 = 0;
 
-        for (int var2 = 0; var2 < Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093.length; ++var2) {
-            if (Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var2] != null && var1 == Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var2].anInt236) {
-                this.aHashSet2224.add(Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var2].anInt327);
+        for (int var2 = 0; var2 < MapFunction.mapFunctions.length; ++var2) {
+            if (MapFunction.mapFunctions[var2] != null && var1 == MapFunction.mapFunctions[var2].anInt236) {
+                this.aHashSet2224.add(MapFunction.mapFunctions[var2].index);
             }
         }
 
@@ -448,9 +448,9 @@ public class WorldMap {
             this.aHashSet2223.remove(var1);
         }
 
-        for (int var3 = 0; var3 < Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093.length; ++var3) {
-            if (Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var3] != null && Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var3].anInt236 == var1) {
-                int var4 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var3].anInt327;
+        for (int var3 = 0; var3 < MapFunction.mapFunctions.length; ++var3) {
+            if (MapFunction.mapFunctions[var3] != null && MapFunction.mapFunctions[var3].anInt236 == var1) {
+                int var4 = MapFunction.mapFunctions[var3].index;
                 if (!var2) {
                     this.aHashSet2205.add(var4);
                 } else {
@@ -491,7 +491,7 @@ public class WorldMap {
                     }
 
                     Class24 var11 = (Class24) var10.next();
-                    Node_Sub21_Sub15 var12 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var11.anInt160];
+                    MapFunction var12 = MapFunction.mapFunctions[var11.anInt160];
                     var13 = false;
 
                     for (int var14 = this.anIntArray2226.length - 1; var14 >= 0; --var14) {

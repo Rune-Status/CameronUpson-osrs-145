@@ -1,17 +1,17 @@
 package com.jagex;
 
-public class Node_Sub21_Sub15 extends DoublyNode {
+public class MapFunction extends DoublyNode {
     public static ReferenceCache aReferenceCache2013 = new ReferenceCache(256);
-    public static Node_Sub21_Sub15[] aNode_Sub21_Sub15Array2093;
+    public static MapFunction[] mapFunctions;
     static ReferenceTable aReferenceTable2012;
-    public final int anInt327;
+    public final int index;
     public String aString2091;
     public int anInt217;
     public int anInt236;
     public String[] aStringArray2095 = new String[5];
     public String aString2094;
     public Class166 aClass166_2092;
-    public int anInt328 = -1;
+    public int spriteId = -1;
     public Class167 aClass167_2096;
     public int anInt214 = 0;
     int anInt919 = Integer.MAX_VALUE;
@@ -23,11 +23,11 @@ public class Node_Sub21_Sub15 extends DoublyNode {
     int[] anIntArray1082;
     byte[] aByteArray2090;
 
-    Node_Sub21_Sub15(int var1) {
+    MapFunction(int index) {
         this.aClass167_2096 = Class167.aClass167_2029;
         this.aClass166_2092 = Class166.aClass166_2024;
         this.anInt236 = -1;
-        this.anInt327 = var1;
+        this.index = index;
     }
 
     static String method1116(int var0) {
@@ -39,7 +39,7 @@ public class Node_Sub21_Sub15 extends DoublyNode {
 
     void method1051(Buffer var1, int var2) {
         if (var2 == 1) {
-            this.anInt328 = var1.readSmart32();
+            this.spriteId = var1.readSmart32();
         } else if (var2 == 2) {
             this.anInt221 = var1.readSmart32();
         } else if (var2 == 3) {
@@ -139,7 +139,7 @@ public class Node_Sub21_Sub15 extends DoublyNode {
     }
 
     public int method1118() {
-        return this.anInt327;
+        return this.index;
     }
 
     void method1052(Buffer var1) {
@@ -153,24 +153,24 @@ public class Node_Sub21_Sub15 extends DoublyNode {
         }
     }
 
-    Sprite method1119(int var1) {
-        if (var1 < 0) {
+    Sprite getSprite(int id) {
+        if (id < 0) {
             return null;
         }
-        Sprite var2 = (Sprite) aReferenceCache2013.get((long) var1);
+        Sprite var2 = (Sprite) aReferenceCache2013.get((long) id);
         if (var2 != null) {
             return var2;
         }
-        var2 = Class176.method1188(aReferenceTable2012, var1, 0);
+        var2 = Class176.method1188(aReferenceTable2012, id, 0);
         if (var2 != null) {
-            aReferenceCache2013.put(var2, (long) var1);
+            aReferenceCache2013.put(var2, (long) id);
         }
 
         return var2;
     }
 
-    public Sprite method1117(boolean var1) {
-        int var2 = this.anInt328;
-        return this.method1119(var2);
+    public Sprite getSprite(boolean var1) {
+        int id = this.spriteId;
+        return this.getSprite(id);
     }
 }

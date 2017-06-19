@@ -67,34 +67,34 @@ public final class EntityMarker {
                 int var7 = Class60.aSceneGraph631.method678(PlayerEntity.floorLevel, var5, var6);
                 if (var7 != 0) {
                     var7 = var7 >> 14 & 32767;
-                    int var8 = Class5.method17(var7).mapFunction;
-                    if (var8 >= 0) {
+                    int mapFunction = ObjectDefinition.get(var7).mapFunction;
+                    if (mapFunction >= 0) {
                         int var9 = var5;
                         int var10 = var6;
-                        if (var8 != 22 && var8 != 29 && var8 != 34 && var8 != 36 && var8 != 46 && var8 != 47 && var8 != 48) {
-                            int[][] var11 = Client.collisionMaps[PlayerEntity.floorLevel].flags;
+                        if (mapFunction != 22 && mapFunction != 29 && mapFunction != 34 && mapFunction != 36 && mapFunction != 46 && mapFunction != 47 && mapFunction != 48) {
+                            int[][] flags = Client.collisionMaps[PlayerEntity.floorLevel].flags;
 
                             for (int var12 = 0; var12 < 10; ++var12) {
                                 int var13 = (int) (Math.random() * 4.0D);
-                                if (var13 == 0 && var9 > 0 && var9 > var5 - 3 && (var11[var9 - 1][var10] & 19136776) == 0) {
+                                if (var13 == 0 && var9 > 0 && var9 > var5 - 3 && (flags[var9 - 1][var10] & 0x1240108) == 0) {
                                     --var9;
                                 }
 
-                                if (var13 == 1 && var9 < 103 && var9 < var5 + 3 && (var11[var9 + 1][var10] & 19136896) == 0) {
+                                if (var13 == 1 && var9 < 103 && var9 < var5 + 3 && (flags[var9 + 1][var10] & 0x1240180) == 0) {
                                     ++var9;
                                 }
 
-                                if (var13 == 2 && var10 > 0 && var10 > var6 - 3 && (var11[var9][var10 - 1] & 19136770) == 0) {
+                                if (var13 == 2 && var10 > 0 && var10 > var6 - 3 && (flags[var9][var10 - 1] & 0x1240102) == 0) {
                                     --var10;
                                 }
 
-                                if (var13 == 3 && var10 < 103 && var10 < var6 + 3 && (var11[var9][var10 + 1] & 19136800) == 0) {
+                                if (var13 == 3 && var10 < 103 && var10 < var6 + 3 && (flags[var9][var10 + 1] & 0x1240120) == 0) {
                                     ++var10;
                                 }
                             }
                         }
 
-                        Client.aSpriteArray1706[Client.anInt1693] = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var8].method1117(false);
+                        Client.aSpriteArray1706[Client.anInt1693] = MapFunction.mapFunctions[mapFunction].getSprite(false);
                         Client.anIntArray1696[Client.anInt1693] = var9;
                         Client.anIntArray1700[Client.anInt1693] = var10;
                         ++Client.anInt1693;

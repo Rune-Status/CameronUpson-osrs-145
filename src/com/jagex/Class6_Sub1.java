@@ -35,19 +35,19 @@ public class Class6_Sub1 extends Class6 {
     }
 
     public static boolean method159(ReferenceTable var0, ReferenceTable var1) {
-        Node_Sub21_Sub15.aReferenceTable2012 = var1;
+        MapFunction.aReferenceTable2012 = var1;
         if (!var0.method1088()) {
             return false;
         }
         Class126.anInt1369 = var0.method1101(35);
-        Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093 = new Node_Sub21_Sub15[Class126.anInt1369];
+        MapFunction.mapFunctions = new MapFunction[Class126.anInt1369];
 
         for (int var2 = 0; var2 < Class126.anInt1369; ++var2) {
             byte[] var3 = var0.unpack(35, var2);
             if (var3 != null) {
-                Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var2] = new Node_Sub21_Sub15(var2);
-                Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var2].method1052(new Buffer(var3));
-                Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var2].method935();
+                MapFunction.mapFunctions[var2] = new MapFunction(var2);
+                MapFunction.mapFunctions[var2].method1052(new Buffer(var3));
+                MapFunction.mapFunctions[var2].method935();
             }
         }
 
@@ -60,7 +60,7 @@ public class Class6_Sub1 extends Class6 {
             throw new IllegalStateException("");
         }
         this.anInt45 = var2.readUnsignedByte();
-        this.anInt48 = var2.readUnsignedByte();
+        this.floorLevel = var2.readUnsignedByte();
         this.anInt40 = var2.readUnsignedShort();
         this.anInt49 = var2.readUnsignedShort();
         this.anInt169 = var2.readUnsignedByte();
@@ -69,12 +69,12 @@ public class Class6_Sub1 extends Class6 {
         this.anInt42 = var2.readUnsignedShort();
         this.anInt168 = var2.readUnsignedByte();
         this.anInt170 = var2.readUnsignedByte();
-        this.anInt48 = Math.min(this.anInt48, 4);
+        this.floorLevel = Math.min(this.floorLevel, 4);
         this.aShortArrayArrayArray47 = new short[1][64][64];
-        this.aShortArrayArrayArray46 = new short[this.anInt48][64][64];
-        this.aByteArrayArrayArray44 = new byte[this.anInt48][64][64];
-        this.aByteArrayArrayArray41 = new byte[this.anInt48][64][64];
-        this.mapTiles = new MapTile[this.anInt48][64][64][];
+        this.aShortArrayArrayArray46 = new short[this.floorLevel][64][64];
+        this.aByteArrayArrayArray44 = new byte[this.floorLevel][64][64];
+        this.aByteArrayArrayArray41 = new byte[this.floorLevel][64][64];
+        this.worldMapObjects = new WorldMapObject[this.floorLevel][64][64][];
         var3 = var1.readUnsignedByte();
         if (Class17.aClass17_127.anInt125 != var3) {
             throw new IllegalStateException("");

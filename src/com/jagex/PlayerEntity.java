@@ -514,7 +514,7 @@ public final class PlayerEntity extends PathingEntity {
         if (var1 >= 0 && var1 < 104 && var2 >= 0 && var2 < 104) {
             if (this.anIntArray800[0] >= 0 && this.anIntArray800[0] < 104 && this.anIntArray804[0] >= 0 && this.anIntArray804[0] < 104) {
                 if (var3 == 2) {
-                    MapTile.method59(this, var1, var2, (byte) 2);
+                    WorldMapObject.method59(this, var1, var2, (byte) 2);
                 }
 
                 this.method201(var1, var2, var3);

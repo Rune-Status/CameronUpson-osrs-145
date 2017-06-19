@@ -13,7 +13,7 @@ public class RuntimeException_Sub1 extends RuntimeException {
     public static Sprite[] method742(ReferenceTable var0, String var1, String var2) {
         int var3 = var0.method1084(var1);
         int var4 = var0.method1104(var3, var2);
-        return MapTile.method60(var0, var3, var4);
+        return WorldMapObject.method60(var0, var3, var4);
     }
 
     static void method743(InterfaceComponent var0, int var1, int var2) {

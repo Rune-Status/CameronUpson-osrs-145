@@ -22,7 +22,7 @@ public class Class101 {
             var0 -= 1000;
             var3 = InterfaceComponent.method1016(Class63.anIntArray645[--Class63.anInt644]);
         } else {
-            var3 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
+            var3 = var2 ? Class18.anInterfaceComponent129 : WorldMapObject.anInterfaceComponent83;
         }
 
         if (var0 == 1927) {

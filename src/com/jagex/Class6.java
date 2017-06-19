@@ -10,8 +10,8 @@ public abstract class Class6 {
     short[][][] aShortArrayArrayArray47;
     byte[][][] aByteArrayArrayArray44;
     byte[][][] aByteArrayArrayArray41;
-    MapTile[][][][] mapTiles;
-    int anInt48;
+    WorldMapObject[][][][] worldMapObjects;
+    int floorLevel;
 
     Class6() {
         new java.util.LinkedList();
@@ -72,12 +72,12 @@ public abstract class Class6 {
             for (var8 = 0; var8 < var5; ++var8) {
                 var9 = var3.readUnsignedByte();
                 if (var9 != 0) {
-                    MapTile[] var12 = this.mapTiles[var8][var1][var2] = new MapTile[var9];
+                    WorldMapObject[] var12 = this.worldMapObjects[var8][var1][var2] = new WorldMapObject[var9];
 
                     for (var11 = 0; var11 < var9; ++var11) {
-                        int var13 = var3.readSmart32();
-                        int var14 = var3.readUnsignedByte();
-                        var12[var11] = new MapTile(var13, var14 >> 2, var14 & 3);
+                        int objectId = var3.readSmart32();
+                        int xy = var3.readUnsignedByte();
+                        var12[var11] = new WorldMapObject(objectId, xy >> 2, xy & 3);
                     }
                 }
             }

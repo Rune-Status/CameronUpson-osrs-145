@@ -2,12 +2,12 @@ package com.jagex;
 
 public class ObjectDefinition extends DoublyNode {
     public static ReferenceCache aReferenceCache2042 = new ReferenceCache(30);
-    public static ReferenceTable aReferenceTable2017;
+    public static ReferenceTable definitionTable;
     public static ReferenceCache aReferenceCache2047 = new ReferenceCache(30);
     public static ReferenceCache aReferenceCache2045 = new ReferenceCache(500);
     public static ReferenceTable aReferenceTable2039;
     public static boolean aBoolean1083 = false;
-    public static ReferenceCache aReferenceCache2013 = new ReferenceCache(4096);
+    public static ReferenceCache definitionCache = new ReferenceCache(4096);
     static ModelHeader[] aModelHeaderArray2041 = new ModelHeader[4];
     public int anInt1864 = 0;
     public int anInt219 = -1;
@@ -20,7 +20,7 @@ public class ObjectDefinition extends DoublyNode {
     public boolean aBoolean223 = true;
     public String[] actions = new String[5];
     public int mapFunction = -1;
-    public int anInt1257 = -1;
+    public int mapIconIndex = -1;
     public boolean clipped = true;
     public int anInt767 = -1;
     public int anInt233 = 16;
@@ -69,13 +69,35 @@ public class ObjectDefinition extends DoublyNode {
         }
     }
 
+    public static ObjectDefinition get(int var0) {
+        ObjectDefinition var1 = (ObjectDefinition) definitionCache.get((long) var0);
+        if (var1 != null) {
+            return var1;
+        }
+        byte[] var2 = definitionTable.unpack(6, var0);
+        var1 = new ObjectDefinition();
+        var1.id = var0;
+        if (var2 != null) {
+            var1.method1066(new Buffer(var2));
+        }
+
+        var1.method756();
+        if (var1.aBoolean2033) {
+            var1.anInt229 = 0;
+            var1.aBoolean223 = false;
+        }
+
+        definitionCache.put(var1, (long) var0);
+        return var1;
+    }
+
     public boolean method1077() {
         if (this.transformIds == null) {
             return this.anInt767 != -1 || this.anIntArray751 != null;
         }
         for (int var1 = 0; var1 < this.transformIds.length; ++var1) {
             if (this.transformIds[var1] != -1) {
-                ObjectDefinition var2 = Class5.method17(this.transformIds[var1]);
+                ObjectDefinition var2 = get(this.transformIds[var1]);
                 if (var2.anInt767 != -1 || var2.anIntArray751 != null) {
                     return true;
                 }
@@ -448,7 +470,7 @@ public class ObjectDefinition extends DoublyNode {
         } else if (var2 == 67) {
             this.anInt760 = var1.readUnsignedShort();
         } else if (var2 == 68) {
-            this.anInt1257 = var1.readUnsignedShort();
+            this.mapIconIndex = var1.readUnsignedShort();
         } else if (var2 == 69) {
             var1.readUnsignedByte();
         } else if (var2 == 70) {
@@ -522,7 +544,7 @@ public class ObjectDefinition extends DoublyNode {
         return RS3CopyPastedNodeTable.getOrDefault(this.properties, var1, var2);
     }
 
-    public final ObjectDefinition method1073() {
+    public final ObjectDefinition transform() {
         int var1 = -1;
         if (this.varpbitIndex != -1) {
             var1 = Varpbit.getValue(this.varpbitIndex);
@@ -537,7 +559,7 @@ public class ObjectDefinition extends DoublyNode {
             var2 = this.transformIds[this.transformIds.length - 1];
         }
 
-        return var2 != -1 ? Class5.method17(var2) : null;
+        return var2 != -1 ? get(var2) : null;
     }
 
     public final boolean method1078(int var1) {

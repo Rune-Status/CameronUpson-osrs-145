@@ -24,7 +24,7 @@ public class MouseRecorder implements Runnable {
             var3 = Class63.anIntArray645[--Class63.anInt644];
             var4 = InterfaceComponent.method1016(var3);
         } else {
-            var4 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
+            var4 = var2 ? Class18.anInterfaceComponent129 : WorldMapObject.anInterfaceComponent83;
         }
 
         if (var0 == 1100) {

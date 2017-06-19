@@ -80,7 +80,7 @@ public class Class13 {
                 }
 
                 if (var15 != null) {
-                    ObjectDefinition var16 = Class5.method17(var13);
+                    ObjectDefinition var16 = ObjectDefinition.get(var13);
                     int var17;
                     int var18;
                     if (var8 != 1 && var8 != 3) {
@@ -353,13 +353,13 @@ public class Class13 {
             for (int var7 = var2; var7 < var4 + var2; ++var7) {
                 SceneOffset var8 = new SceneOffset(0, var6, var7);
 
-                for (int var9 = 0; var9 < var5.anInt48; ++var9) {
-                    MapTile[] var10 = var5.mapTiles[var9][var6][var7];
+                for (int var9 = 0; var9 < var5.floorLevel; ++var9) {
+                    WorldMapObject[] var10 = var5.worldMapObjects[var9][var6][var7];
                     if (var10 != null && var10.length != 0) {
 
                         for (int var12 = 0; var12 < var10.length; ++var12) {
-                            MapTile var13 = var10[var12];
-                            Node_Sub21_Sub15 var14 = this.method105(var13.z);
+                            WorldMapObject var13 = var10[var12];
+                            MapFunction var14 = this.getFunctionForObject(var13.id);
                             if (var14 != null) {
                                 SceneOffset var15 = new SceneOffset(var9, var6 + this.x * 64, this.y * 64 + var7);
                                 SceneOffset var16 = null;
@@ -370,7 +370,7 @@ public class Class13 {
                                     var16 = new SceneOffset(var17.anInt45 + var9, var17.anInt40 * 64 + var6 + var17.method161() * 8, var7 + var17.anInt49 * 64 + var17.method160() * 8);
                                 }
 
-                                Class24 var18 = new Class24(var14.anInt327, var16, var15, this.method84(var14));
+                                Class24 var18 = new Class24(var14.index, var16, var15, this.method84(var14));
                                 this.aHashMap104.put(var8, var18);
                                 continue label55;
                             }
@@ -428,7 +428,7 @@ public class Class13 {
         while (var4.hasNext()) {
             Class24 var5 = (Class24) var4.next();
             if (var1.contains(var5.anInt160)) {
-                Node_Sub21_Sub15 var6 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var5.anInt160];
+                MapFunction var6 = MapFunction.mapFunctions[var5.anInt160];
                 this.method120(var6, var5.anInt165, var5.anInt164, var2, var3);
             }
         }
@@ -437,12 +437,12 @@ public class Class13 {
     }
 
     void method87(int var1, int var2, Class6 var3, CompressedImage[] var4) {
-        for (int var5 = 0; var5 < var3.anInt48; ++var5) {
-            MapTile[] var6 = var3.mapTiles[var5][var1][var2];
+        for (int var5 = 0; var5 < var3.floorLevel; ++var5) {
+            WorldMapObject[] var6 = var3.worldMapObjects[var5][var1][var2];
             if (var6 != null && var6.length != 0) {
 
                 for (int var8 = 0; var8 < var6.length; ++var8) {
-                    MapTile var9 = var6[var8];
+                    WorldMapObject var9 = var6[var8];
                     int var10 = var9.x;
                     boolean var11 = var10 >= Class163.aClass163_1967.anInt1960 && var10 <= Class163.aClass163_1962.anInt1960;
                     if (!var11) {
@@ -453,12 +453,12 @@ public class Class13 {
                         }
                     }
 
-                    ObjectDefinition var14 = Class5.method17(var9.z);
-                    if (var14.anInt1257 != -1) {
-                        if (var14.anInt1257 != 46 && var14.anInt1257 != 52) {
-                            var4[var14.anInt1257].method1156(this.anInt99 * var1, this.anInt99 * (63 - var2), this.anInt99 * 2, this.anInt99 * 2);
+                    ObjectDefinition var14 = ObjectDefinition.get(var9.id);
+                    if (var14.mapIconIndex != -1) {
+                        if (var14.mapIconIndex != 46 && var14.mapIconIndex != 52) {
+                            var4[var14.mapIconIndex].method1156(this.anInt99 * var1, this.anInt99 * (63 - var2), this.anInt99 * 2, this.anInt99 * 2);
                         } else {
-                            var4[var14.anInt1257].method1156(var1 * this.anInt99, this.anInt99 * (63 - var2), this.anInt99 * 2 + 1, this.anInt99 * 2 + 1);
+                            var4[var14.mapIconIndex].method1156(var1 * this.anInt99, this.anInt99 * (63 - var2), this.anInt99 * 2 + 1, this.anInt99 * 2 + 1);
                         }
                     }
                 }
@@ -490,7 +490,7 @@ public class Class13 {
 
         while (var4.hasNext()) {
             Class24 var5 = (Class24) var4.next();
-            Node_Sub21_Sub15 var6 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var5.anInt160];
+            MapFunction var6 = MapFunction.mapFunctions[var5.anInt160];
             if (var6 != null && var1.contains(var6.method1118())) {
                 this.method120(var6, var5.anInt165, var5.anInt164, var2, var3);
             }
@@ -499,7 +499,7 @@ public class Class13 {
     }
 
     void method118(int var1, int var2, Class6 var3, Class9 var4) {
-        for (int var5 = 1; var5 < var3.anInt48; ++var5) {
+        for (int var5 = 1; var5 < var3.floorLevel; ++var5) {
             int var6 = var3.aShortArrayArrayArray46[var5][var1][var2] - 1;
             if (var6 > -1) {
                 int var7 = Class60.method367(var6, this.anInt101);
@@ -622,14 +622,14 @@ public class Class13 {
     }
 
     void method123(int var1, int var2, Class6 var3) {
-        for (int var4 = 0; var4 < var3.anInt48; ++var4) {
-            MapTile[] var5 = var3.mapTiles[var4][var1][var2];
+        for (int var4 = 0; var4 < var3.floorLevel; ++var4) {
+            WorldMapObject[] var5 = var3.worldMapObjects[var4][var1][var2];
             if (var5 != null && var5.length != 0) {
 
                 for (int var7 = 0; var7 < var5.length; ++var7) {
-                    MapTile var8 = var5[var7];
+                    WorldMapObject var8 = var5[var7];
                     if (IsaacCipher.method795(var8.x)) {
-                        ObjectDefinition var9 = Class5.method17(var8.z);
+                        ObjectDefinition var9 = ObjectDefinition.get(var8.id);
                         int var10 = var9.anInt219 != 0 ? -3407872 : -3355444;
                         if (Class163.aClass163_1975.anInt1960 == var8.x) {
                             this.method94(var1, var2, var8.y, var10);
@@ -692,7 +692,7 @@ public class Class13 {
             if (var12 != null) {
                 var12.anInt165 = var10;
                 var12.anInt164 = var11;
-                Node_Sub21_Sub15 var13 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var12.anInt160];
+                MapFunction var13 = MapFunction.mapFunctions[var12.anInt160];
                 if (!var3.contains(var13.method1118())) {
                     this.method93(var12, var10, var11, var5);
                 }
@@ -716,7 +716,7 @@ public class Class13 {
         this.method119(var2);
     }
 
-    Class2 method84(Node_Sub21_Sub15 var1) {
+    Class2 method84(MapFunction var1) {
         if (var1.aString2091 != null && this.aHashMap97 != null && this.aHashMap97.get(Class77.aClass77_827) != null) {
             Class77 var2 = Class77.method465(var1.anInt214);
             if (var2 == null) {
@@ -746,7 +746,7 @@ public class Class13 {
     }
 
     void method93(Class24 var1, int var2, int var3, float var4) {
-        Node_Sub21_Sub15 var5 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var1.anInt160];
+        MapFunction var5 = MapFunction.mapFunctions[var1.anInt160];
         this.method91(var5, var2, var3);
         this.method108(var1, var5, var2, var3, var4);
     }
@@ -773,25 +773,25 @@ public class Class13 {
         }
     }
 
-    Node_Sub21_Sub15 method105(int var1) {
-        ObjectDefinition var2 = Class5.method17(var1);
+    MapFunction getFunctionForObject(int id) {
+        ObjectDefinition var2 = ObjectDefinition.get(id);
         if (var2.transformIds != null) {
-            var2 = var2.method1073();
+            var2 = var2.transform();
             if (var2 == null) {
                 return null;
             }
         }
 
-        return var2.mapFunction != -1 ? Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var2.mapFunction] : null;
+        return var2.mapFunction != -1 ? MapFunction.mapFunctions[var2.mapFunction] : null;
     }
 
     Class2 method88(int var1) {
-        Node_Sub21_Sub15 var2 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var1];
+        MapFunction var2 = MapFunction.mapFunctions[var1];
         return this.method84(var2);
     }
 
-    void method120(Node_Sub21_Sub15 var1, int var2, int var3, int var4, int var5) {
-        Sprite var6 = var1.method1117(false);
+    void method120(MapFunction var1, int var2, int var3, int var4, int var5) {
+        Sprite var6 = var1.getSprite(false);
         if (var6 != null) {
             var6.method1230(var2 - var6.width / 2, var3 - var6.height / 2);
             if (var4 % var5 < var5 / 2) {
@@ -880,18 +880,18 @@ public class Class13 {
     void method85(int x, int y, Class6 var3) {
         A_SCENE_OFFSET___100.set(0, x, y);
 
-        for (int var4 = 0; var4 < var3.anInt48; ++var4) {
-            MapTile[] var5 = var3.mapTiles[var4][x][y];
+        for (int var4 = 0; var4 < var3.floorLevel; ++var4) {
+            WorldMapObject[] var5 = var3.worldMapObjects[var4][x][y];
             if (var5 != null && var5.length != 0) {
 
                 for (int var7 = 0; var7 < var5.length; ++var7) {
-                    MapTile var8 = var5[var7];
-                    Node_Sub21_Sub15 var9 = this.method105(var8.z);
+                    WorldMapObject var8 = var5[var7];
+                    MapFunction var9 = this.getFunctionForObject(var8.id);
                     if (var9 != null) {
                         Class24 var10 = (Class24) this.aHashMap104.get(A_SCENE_OFFSET___100);
                         if (var10 != null) {
-                            if (var10.anInt160 != var9.anInt327) {
-                                Class24 var16 = new Class24(var9.anInt327, var10.aSceneOffset_162, var10.aSceneOffset_167, this.method84(var9));
+                            if (var10.anInt160 != var9.index) {
+                                Class24 var16 = new Class24(var9.index, var10.aSceneOffset_162, var10.aSceneOffset_167, this.method84(var9));
                                 this.aHashMap104.put(new SceneOffset(A_SCENE_OFFSET___100), var16);
                                 var10 = var16;
                             }
@@ -919,7 +919,7 @@ public class Class13 {
                         }
 
                         if (var13 != null) {
-                            var10 = new Class24(var9.anInt327, var13, var11, this.method84(var9));
+                            var10 = new Class24(var9.index, var13, var11, this.method84(var9));
                             this.aHashMap104.put(new SceneOffset(A_SCENE_OFFSET___100), var10);
                             return;
                         }
@@ -965,7 +965,7 @@ public class Class13 {
         this.method119(var2);
     }
 
-    void method108(Class24 var1, Node_Sub21_Sub15 var2, int var3, int var4, float var5) {
+    void method108(Class24 var1, MapFunction var2, int var3, int var4, float var5) {
         if (var1.aClass2_166 != null) {
             if (var1.aClass2_166.aClass77_10.method461(var5)) {
                 Font var6 = (Font) this.aHashMap97.get(var1.aClass2_166.aClass77_10);
@@ -974,8 +974,8 @@ public class Class13 {
         }
     }
 
-    void method91(Node_Sub21_Sub15 var1, int var2, int var3) {
-        Sprite var4 = var1.method1117(false);
+    void method91(MapFunction var1, int var2, int var3) {
+        Sprite var4 = var1.getSprite(false);
         if (var4 != null) {
             int var5 = this.method102(var4, var1.aClass167_2096);
             int var6 = this.method112(var4, var1.aClass166_2092);

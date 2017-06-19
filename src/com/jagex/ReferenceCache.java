@@ -22,7 +22,7 @@ public final class ReferenceCache<T extends DoublyNode> { //TODO generics here a
         HealthBarDefinition.method1123();
         Node_Sub21_Sub24.aReferenceCache2025.clear();
         ClientPreferences.method291();
-        ObjectDefinition.aReferenceCache2013.clear();
+        ObjectDefinition.definitionCache.clear();
         ObjectDefinition.aReferenceCache2045.clear();
         ObjectDefinition.aReferenceCache2047.clear();
         ObjectDefinition.aReferenceCache2042.clear();
@@ -43,7 +43,7 @@ public final class ReferenceCache<T extends DoublyNode> { //TODO generics here a
         HealthBarDefinition.aReferenceCache2013.clear();
         Class40.method288();
         DefinitionProperty.aReferenceCache2025.clear();
-        Node_Sub21_Sub15.aReferenceCache2013.clear();
+        MapFunction.aReferenceCache2013.clear();
         PlayerAppearance.aReferenceCache1985.clear();
         InterfaceComponent.aReferenceCache1891.clear();
         InterfaceComponent.aReferenceCache1886.clear();

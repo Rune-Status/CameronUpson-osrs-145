@@ -41,7 +41,7 @@ public final class Node_Sub7 extends Node {
 
     void method335() {
         int var1 = this.anInt220;
-        ObjectDefinition var2 = this.anObjectDefinition402.method1073();
+        ObjectDefinition var2 = this.anObjectDefinition402.transform();
         if (var2 != null) {
             this.anInt220 = var2.anInt767;
             this.anInt221 = var2.anInt2032 * 128;

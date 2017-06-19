@@ -1,13 +1,13 @@
 package com.jagex;
 
-public class MapTile {
+public class WorldMapObject {
     static InterfaceComponent anInterfaceComponent83;
     final int x;
     final int y;
-    final int z;
+    final int id;
 
-    MapTile(int z, int x, int y) {
-        this.z = z;
+    WorldMapObject(int id, int x, int y) {
+        this.id = id;
         this.x = x;
         this.y = y;
     }

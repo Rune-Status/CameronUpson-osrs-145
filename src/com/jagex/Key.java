@@ -513,7 +513,7 @@ public class Key implements EnumOrdinal, Class187 {
         }
 
         if (var4 == 1 || var4 == 2 && var9.stackable == 1) {
-            Class53.aFont413.method1170(Node_Sub21_Sub15.method1116(var1), 0, 9, 16776960, 1);
+            Class53.aFont413.method1170(MapFunction.method1116(var1), 0, 9, 16776960, 1);
         }
 
         if (!var5) {

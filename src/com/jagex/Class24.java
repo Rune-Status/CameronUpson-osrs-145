@@ -15,8 +15,8 @@ public class Class24 {
         this.aSceneOffset_162 = var2;
         this.aSceneOffset_167 = var3;
         this.aClass2_166 = var4;
-        Node_Sub21_Sub15 var5 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[this.anInt160];
-        Sprite var6 = var5.method1117(false);
+        MapFunction var5 = MapFunction.mapFunctions[this.anInt160];
+        Sprite var6 = var5.getSprite(false);
         if (var6 != null) {
             this.anInt161 = var6.width;
             this.anInt163 = var6.height;
@@ -28,7 +28,7 @@ public class Class24 {
     }
 
     boolean method156(int var1, int var2) {
-        Node_Sub21_Sub15 var3 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[this.anInt160];
+        MapFunction var3 = MapFunction.mapFunctions[this.anInt160];
         switch (var3.aClass167_2096.anInt820) {
             case 0:
                 if (var1 >= this.anInt165 - this.anInt161 / 2 && var1 <= this.anInt161 / 2 + this.anInt165) {

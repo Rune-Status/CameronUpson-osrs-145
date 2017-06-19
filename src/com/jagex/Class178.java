@@ -72,7 +72,7 @@ public class Class178 {
                 Class63.anInt644 -= 2;
                 var5 = Class63.anIntArray645[Class63.anInt644];
                 var13 = Class63.anIntArray645[Class63.anInt644 + 1];
-                InterfaceComponent var15 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
+                InterfaceComponent var15 = var2 ? Class18.anInterfaceComponent129 : WorldMapObject.anInterfaceComponent83;
                 Class38.method283(var15, var5, var13);
                 return 1;
             }

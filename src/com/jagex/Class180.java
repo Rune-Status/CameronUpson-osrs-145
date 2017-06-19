@@ -34,9 +34,9 @@ public class Class180 {
             if (var7 != var5) {
                 var5 = var7;
                 if (var10 == 2 && Class60.aSceneGraph631.method668(PlayerEntity.floorLevel, var8, var9, var7) >= 0) {
-                    ObjectDefinition var13 = Class5.method17(var11);
+                    ObjectDefinition var13 = ObjectDefinition.get(var11);
                     if (var13.transformIds != null) {
-                        var13 = var13.method1073();
+                        var13 = var13.transform();
                     }
 
                     if (var13 == null) {

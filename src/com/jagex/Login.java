@@ -58,7 +58,7 @@ public class Login {
     }
 
     static boolean method413(int var0, int var1) {
-        ObjectDefinition var2 = Class5.method17(var0);
+        ObjectDefinition var2 = ObjectDefinition.get(var0);
         if (var1 == 11) {
             var1 = 10;
         }

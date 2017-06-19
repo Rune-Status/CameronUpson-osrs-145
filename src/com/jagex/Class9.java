@@ -42,9 +42,9 @@ public class Class9 {
         int var26;
         if (var4) {
             Class125.aClass22_1366 = (Class22) var2[0];
-            Node_Sub21_Sub15 var5 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[Class125.aClass22_1366.anInt145];
+            MapFunction var5 = MapFunction.mapFunctions[Class125.aClass22_1366.anInt145];
             Class147 var6 = var0.aClass147_326;
-            var7 = var5.anInt327;
+            var7 = var5.index;
             var8 = var5.anInt236;
             var9 = Class60.method370(var7, var6);
             RuneScript var10 = (RuneScript) RuneScript.aReferenceCache664.get((long) (var9 << 16));

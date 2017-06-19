@@ -107,9 +107,9 @@ public class Class6_Sub2 extends Class6 {
             int[] var10 = PathingEntity.aSprite794.pixels;
             var11 = (103 - var2) * 2048 + var1 * 4 + 24624;
             var12 = var5 >> 14 & 32767;
-            ObjectDefinition var13 = Class5.method17(var12);
-            if (var13.anInt1257 != -1) {
-                CompressedImage var14 = Client.aCompressedImageArray1542[var13.anInt1257];
+            ObjectDefinition var13 = ObjectDefinition.get(var12);
+            if (var13.mapIconIndex != -1) {
+                CompressedImage var14 = Client.aCompressedImageArray1542[var13.mapIconIndex];
                 if (var14 != null) {
                     int var15 = (var13.anInt230 * 4 - var14.anInt206) / 2;
                     int var16 = (var13.anInt222 * 4 - var14.anInt232) / 2;
@@ -184,10 +184,10 @@ public class Class6_Sub2 extends Class6 {
             var7 = var6 >> 6 & 3;
             var8 = var6 & 31;
             var9 = var5 >> 14 & 32767;
-            ObjectDefinition var23 = Class5.method17(var9);
+            ObjectDefinition var23 = ObjectDefinition.get(var9);
             int var18;
-            if (var23.anInt1257 != -1) {
-                CompressedImage var17 = Client.aCompressedImageArray1542[var23.anInt1257];
+            if (var23.mapIconIndex != -1) {
+                CompressedImage var17 = Client.aCompressedImageArray1542[var23.mapIconIndex];
                 if (var17 != null) {
                     var12 = (var23.anInt230 * 4 - var17.anInt206) / 2;
                     var18 = (var23.anInt222 * 4 - var17.anInt232) / 2;
@@ -218,9 +218,9 @@ public class Class6_Sub2 extends Class6 {
         var5 = Class60.aSceneGraph631.method678(var0, var1, var2);
         if (var5 != 0) {
             var6 = var5 >> 14 & 32767;
-            ObjectDefinition var19 = Class5.method17(var6);
-            if (var19.anInt1257 != -1) {
-                CompressedImage var20 = Client.aCompressedImageArray1542[var19.anInt1257];
+            ObjectDefinition var19 = ObjectDefinition.get(var6);
+            if (var19.mapIconIndex != -1) {
+                CompressedImage var20 = Client.aCompressedImageArray1542[var19.mapIconIndex];
                 if (var20 != null) {
                     var9 = (var19.anInt230 * 4 - var20.anInt206) / 2;
                     int var21 = (var19.anInt222 * 4 - var20.anInt232) / 2;
@@ -249,17 +249,17 @@ public class Class6_Sub2 extends Class6 {
             throw new IllegalStateException("");
         }
         this.anInt45 = var2.readUnsignedByte();
-        this.anInt48 = var2.readUnsignedByte();
+        this.floorLevel = var2.readUnsignedByte();
         this.anInt40 = var2.readUnsignedShort();
         this.anInt49 = var2.readUnsignedShort();
         this.anInt43 = var2.readUnsignedShort();
         this.anInt42 = var2.readUnsignedShort();
-        this.anInt48 = Math.min(this.anInt48, 4);
+        this.floorLevel = Math.min(this.floorLevel, 4);
         this.aShortArrayArrayArray47 = new short[1][64][64];
-        this.aShortArrayArrayArray46 = new short[this.anInt48][64][64];
-        this.aByteArrayArrayArray44 = new byte[this.anInt48][64][64];
-        this.aByteArrayArrayArray41 = new byte[this.anInt48][64][64];
-        this.mapTiles = new MapTile[this.anInt48][64][64][];
+        this.aShortArrayArrayArray46 = new short[this.floorLevel][64][64];
+        this.aByteArrayArrayArray44 = new byte[this.floorLevel][64][64];
+        this.aByteArrayArrayArray41 = new byte[this.floorLevel][64][64];
+        this.worldMapObjects = new WorldMapObject[this.floorLevel][64][64][];
         var3 = var1.readUnsignedByte();
         if (Class17.aClass17_124.anInt125 != var3) {
             throw new IllegalStateException("");

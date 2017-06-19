@@ -21,7 +21,7 @@ public class Class22 {
                 Class26.anInt185 = var0;
             }
 
-            ObjectDefinition var8 = Class5.method17(var3);
+            ObjectDefinition var8 = ObjectDefinition.get(var3);
             int var9;
             int var10;
             if (var4 != 1 && var4 != 3) {
@@ -273,7 +273,7 @@ public class Class22 {
                             var25 = 16;
                             var22 = var6.method671(var0, var1, var2);
                             if (var22 != 0) {
-                                var25 = Class5.method17(var22 >> 14 & 32767).anInt233;
+                                var25 = ObjectDefinition.get(var22 >> 14 & 32767).anInt233;
                             }
 
                             if (var8.anInt818 == -1 && var8.transformIds == null) {
@@ -287,7 +287,7 @@ public class Class22 {
                             var25 = 8;
                             var22 = var6.method671(var0, var1, var2);
                             if (var22 != 0) {
-                                var25 = Class5.method17(var22 >> 14 & 32767).anInt233 / 2;
+                                var25 = ObjectDefinition.get(var22 >> 14 & 32767).anInt233 / 2;
                             }
 
                             if (var8.anInt818 == -1 && var8.transformIds == null) {
@@ -310,7 +310,7 @@ public class Class22 {
                             var25 = 8;
                             var22 = var6.method671(var0, var1, var2);
                             if (var22 != 0) {
-                                var25 = Class5.method17(var22 >> 14 & 32767).anInt233 / 2;
+                                var25 = ObjectDefinition.get(var22 >> 14 & 32767).anInt233 / 2;
                             }
 
                             int var28 = var4 + 2 & 3;

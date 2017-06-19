@@ -147,9 +147,9 @@ public class DynamicObject extends Entity {
             this.anInt217 = Client.engineCycle - var1;
         }
 
-        ObjectDefinition var2 = Class5.method17(this.id);
+        ObjectDefinition var2 = ObjectDefinition.get(this.id);
         if (var2.transformIds != null) {
-            var2 = var2.method1073();
+            var2 = var2.transform();
         }
 
         if (var2 == null) {

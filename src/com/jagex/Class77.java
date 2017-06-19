@@ -199,7 +199,7 @@ public class Class77 {
                             var8 = Class73.config;
                             CacheReferenceTable var9 = Class76.models;
                             boolean var10 = Client.lowMemory;
-                            ObjectDefinition.aReferenceTable2017 = var8;
+                            ObjectDefinition.definitionTable = var8;
                             ObjectDefinition.aReferenceTable2039 = var9;
                             ObjectDefinition.aBoolean1083 = var10;
                             Node_Sub21_Sub10.method1064(Class73.config, Class76.models);

@@ -281,13 +281,13 @@ public class ScriptEvent extends Node {
                 if (var2) {
                     Class18.anInterfaceComponent129 = var35;
                 } else {
-                    MapTile.anInterfaceComponent83 = var35;
+                    WorldMapObject.anInterfaceComponent83 = var35;
                 }
 
                 ItemTable.method284(var29);
                 var11 = 1;
             } else if (var0 == 101) {
-                var67 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
+                var67 = var2 ? Class18.anInterfaceComponent129 : WorldMapObject.anInterfaceComponent83;
                 InterfaceComponent var65 = InterfaceComponent.method1016(var67.uid);
                 var65.components[var67.componentIndex] = null;
                 ItemTable.method284(var65);
@@ -307,7 +307,7 @@ public class ScriptEvent extends Node {
                     if (var2) {
                         Class18.anInterfaceComponent129 = var52;
                     } else {
-                        MapTile.anInterfaceComponent83 = var52;
+                        WorldMapObject.anInterfaceComponent83 = var52;
                     }
                 } else {
                     Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
@@ -321,7 +321,7 @@ public class ScriptEvent extends Node {
                     if (var2) {
                         Class18.anInterfaceComponent129 = var67;
                     } else {
-                        MapTile.anInterfaceComponent83 = var67;
+                        WorldMapObject.anInterfaceComponent83 = var67;
                     }
                 } else {
                     Class63.anIntArray645[++Class63.anInt644 - 1] = 0;
@@ -350,7 +350,7 @@ public class ScriptEvent extends Node {
             return TileDecor.method613(var0, var1, var2);
         }
         if (var0 < 1600) {
-            var29 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
+            var29 = var2 ? Class18.anInterfaceComponent129 : WorldMapObject.anInterfaceComponent83;
             if (var0 == 1500) {
                 Class63.anIntArray645[++Class63.anInt644 - 1] = var29.relativeX;
                 var11 = 1;
@@ -376,7 +376,7 @@ public class ScriptEvent extends Node {
             return var11;
         }
         if (var0 < 1700) {
-            var67 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
+            var67 = var2 ? Class18.anInterfaceComponent129 : WorldMapObject.anInterfaceComponent83;
             if (var0 == 1600) {
                 Class63.anIntArray645[++Class63.anInt644 - 1] = var67.insetX;
                 var11 = 1;
@@ -426,7 +426,7 @@ public class ScriptEvent extends Node {
             return var11;
         }
         if (var0 < 1800) {
-            var29 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
+            var29 = var2 ? Class18.anInterfaceComponent129 : WorldMapObject.anInterfaceComponent83;
             if (var0 == 1700) {
                 Class63.anIntArray645[++Class63.anInt644 - 1] = var29.itemId;
                 var11 = 1;
@@ -448,7 +448,7 @@ public class ScriptEvent extends Node {
             return var11;
         }
         if (var0 < 1900) {
-            var67 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
+            var67 = var2 ? Class18.anInterfaceComponent129 : WorldMapObject.anInterfaceComponent83;
             if (var0 == 1800) {
                 Class63.anIntArray645[++Class63.anInt644 - 1] = Class15.method130(Class75.method448(var67));
                 var11 = 1;
@@ -1837,10 +1837,10 @@ public class ScriptEvent extends Node {
 
                                                 var11 = 1;
                                             } else {
-                                                Node_Sub21_Sub15 var51;
+                                                MapFunction var51;
                                                 if (var0 == 6693) {
                                                     var3 = Class63.anIntArray645[--Class63.anInt644];
-                                                    var51 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var3];
+                                                    var51 = MapFunction.mapFunctions[var3];
                                                     if (var51.aString2091 == null) {
                                                         Class63.aStringArray640[++Class77.anInt828 - 1] = "";
                                                     } else {
@@ -1850,12 +1850,12 @@ public class ScriptEvent extends Node {
                                                     var11 = 1;
                                                 } else if (var0 == 6694) {
                                                     var3 = Class63.anIntArray645[--Class63.anInt644];
-                                                    var51 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var3];
+                                                    var51 = MapFunction.mapFunctions[var3];
                                                     Class63.anIntArray645[++Class63.anInt644 - 1] = var51.anInt214;
                                                     var11 = 1;
                                                 } else if (var0 == 6695) {
                                                     var3 = Class63.anIntArray645[--Class63.anInt644];
-                                                    var51 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var3];
+                                                    var51 = MapFunction.mapFunctions[var3];
                                                     if (var51 == null) {
                                                         Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                     } else {
@@ -1865,11 +1865,11 @@ public class ScriptEvent extends Node {
                                                     var11 = 1;
                                                 } else if (var0 == 6696) {
                                                     var3 = Class63.anIntArray645[--Class63.anInt644];
-                                                    var51 = Node_Sub21_Sub15.aNode_Sub21_Sub15Array2093[var3];
+                                                    var51 = MapFunction.mapFunctions[var3];
                                                     if (var51 == null) {
                                                         Class63.anIntArray645[++Class63.anInt644 - 1] = -1;
                                                     } else {
-                                                        Class63.anIntArray645[++Class63.anInt644 - 1] = var51.anInt328;
+                                                        Class63.anIntArray645[++Class63.anInt644 - 1] = var51.spriteId;
                                                     }
 
                                                     var11 = 1;
@@ -2035,9 +2035,9 @@ public class ScriptEvent extends Node {
                     var24 = Class63.anIntArray645[Class63.anInt644 + 1];
                     var12 = Class158.method1012(var24);
                     if (var12.isString()) {
-                        Class63.aStringArray640[++Class77.anInt828 - 1] = Class5.method17(var3).method1071(var24, var12.defaultString);
+                        Class63.aStringArray640[++Class77.anInt828 - 1] = ObjectDefinition.get(var3).method1071(var24, var12.defaultString);
                     } else {
-                        Class63.anIntArray645[++Class63.anInt644 - 1] = Class5.method17(var3).method1069(var24, var12.defaultInteger);
+                        Class63.anIntArray645[++Class63.anInt644 - 1] = ObjectDefinition.get(var3).method1069(var24, var12.defaultInteger);
                     }
 
                     var11 = 1;
@@ -2117,7 +2117,7 @@ public class ScriptEvent extends Node {
             var0 -= 1000;
             var3 = InterfaceComponent.method1016(Class63.anIntArray645[--Class63.anInt644]);
         } else {
-            var3 = var2 ? Class18.anInterfaceComponent129 : MapTile.anInterfaceComponent83;
+            var3 = var2 ? Class18.anInterfaceComponent129 : WorldMapObject.anInterfaceComponent83;
         }
 
         int var4;
